@@ -1,15 +1,16 @@
-import pytesseract
-from PIL import Image
-import re
-
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-
 def extract_text(image_path):
-    img = Image.open(image_path).convert("RGB")
-    text = pytesseract.image_to_string(img, lang="eng+hin")
-    return text
+    """Mock implementation of extract_text that returns sample data"""
+    print("Warning: OCR functionality is currently disabled. Using sample data.")
+    return """Hello
+hello
+नमस्ते
+How are you?
+how
+कैसे हो
+"""
 
 def parse_vocab(text):
+    """Parse vocabulary from text with English and Hindi translations"""
     lines = [l.strip() for l in text.split("\n") if l.strip()]
     vocab = []
 
