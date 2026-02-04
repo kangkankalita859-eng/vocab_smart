@@ -50,12 +50,14 @@ export default function SessionNav({
 
       {/* RIGHT : MODES */}
       <div style={right}>
-        <button
-          style={mode === "Read" ? activeBtn : linkBtn}
-          onClick={onGoRead}
-        >
-          📘 Vocab List
-        </button>
+        {mode !== "Read" && (
+          <button
+            style={mode === "Read" ? activeBtn : linkBtn}
+            onClick={onGoRead}
+          >
+            📘 Vocab List
+          </button>
+        )}
         <button
           style={mode === "Cards" ? activeBtn : linkBtn}
           onClick={onGoCards}

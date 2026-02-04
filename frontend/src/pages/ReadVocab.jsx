@@ -16,11 +16,14 @@ export default function ReadVocab({
   useEffect(() => {
     // Ensure we have a valid config
     const safeConfig = config || { start: 0, limit: 20 };
+    console.log('ReadVocab config:', safeConfig);
     
     setLoading(true);
     fetchVocab(safeConfig.start, safeConfig.limit)
       .then((data) => {
+        console.log('ReadVocab API response:', data);
         if (data.status === 'success') {
+          console.log('Setting vocab with', data.data.length, 'items');
           setVocab(data.data);
         } else {
           console.error('API Error:', data.message);

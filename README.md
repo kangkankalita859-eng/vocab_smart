@@ -13,15 +13,44 @@ A vocabulary learning application with flashcards and reading modes.
 ```bash
 cd backend
 pip install -r requirements.txt
-uvicorn app.main:app --reload
+uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
 ### Frontend
 ```bash
 cd frontend
 npm install
-npm run dev
+npm run dev -- --host  # Accessible from other devices
 ```
+
+## Multi-Machine Development
+
+When developing on different machines on the same network:
+
+1. **Find backend machine IP:**
+   ```bash
+   # On backend machine
+   ipconfig  # Windows
+   ifconfig  # Mac/Linux
+   ```
+
+2. **Update frontend .env.local:**
+   ```
+   VITE_API_URL=http://BACKEND_MACHINE_IP:8000
+   ```
+
+3. **Start services:**
+   ```bash
+   # Backend (on backend machine)
+   uvicorn app.main:app --host 0.0.0.0 --port 8000
+   
+   # Frontend (on frontend machine)
+   npm run dev -- --host
+   ```
+
+4. **Access from other devices:**
+   - Frontend: `http://FRONTEND_MACHINE_IP:5173`
+   - Backend API: `http://BACKEND_MACHINE_IP:8000`
 
 ## Environment Variables
 
