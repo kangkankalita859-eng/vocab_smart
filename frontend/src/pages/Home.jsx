@@ -19,6 +19,17 @@ export default function Home({ onStart }) {
           <span style={activeTag}>Available</span>
         </div>
 
+        <div
+          style={{ ...card, borderColor: "#388e3c" }}
+          onClick={() =>
+            onStart({ start: 0, limit: 250 })
+          }
+        >
+          <h3>📖 Read All Vocabulary</h3>
+          <p>View complete vocabulary list with meanings</p>
+          <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Direct Access</span>
+        </div>
+
         {/* COMING SOON MODULES */}
         <Module title="Synonyms" />
         <Module title="Antonyms" />

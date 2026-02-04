@@ -6,7 +6,7 @@ import Complete from "./pages/Complete";
 import TestAPI from "./TestAPI";
 
 export default function App() {
-  const [stage, setStage] = useState("test"); // Start with test for debugging
+  const [stage, setStage] = useState("home"); // Back to normal
   const [config, setConfig] = useState({ start: 0, limit: 20 });
 
   if (stage === "test") return <TestAPI />;
@@ -17,7 +17,12 @@ export default function App() {
       <Home
         onStart={(c) => {
           setConfig(c);
-          setStage("session");
+          // If limit is 250, go directly to read mode
+          if (c.limit === 250) {
+            setStage("read");
+          } else {
+            setStage("session");
+          }
         }}
       />
     );
