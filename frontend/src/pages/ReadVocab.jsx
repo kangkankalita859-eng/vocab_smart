@@ -18,7 +18,7 @@ export default function ReadVocab({
     setLoading(true);
 
     fetch(
-      `http://127.0.0.1:8000/api/vocab?start=${config.start}&limit=${config.limit}`
+      `${import.meta.env.VITE_API_URL}/api/vocab?start=${config.start}&limit=${config.limit}`
     )
       .then((res) => res.json())
       .then((data) => {
