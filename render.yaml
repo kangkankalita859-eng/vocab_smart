@@ -16,7 +16,7 @@ services:
       - key: DEBUG
         value: false
       - key: ALLOWED_ORIGINS
-        value: https://vocab-smart-frontend.onrender.com,http://localhost:5173
+        value: "*"
       - key: API_PREFIX
         value: /api
 
