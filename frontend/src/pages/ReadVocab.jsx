@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SessionNav from "../components/SessionNav";
+import { fetchVocab } from "../services/vocabService";
 
 export default function ReadVocab({
   config,
@@ -17,12 +18,17 @@ export default function ReadVocab({
 
     setLoading(true);
 
-    fetch(
-      `${import.meta.env.VITE_API_URL}/api/vocab?start=${config.start}&limit=${config.limit}`
-    )
-      .then((res) => res.json())
+    fetchVocab(config.start, config.limit)
       .then((data) => {
-        setVocab(data);
+        if (data.status === 'success') {
+          setVocab(data.data);
+        } else {
+          console.error('API Error:', data.message);
+        }
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error);
         setLoading(false);
       });
   }, [config]);

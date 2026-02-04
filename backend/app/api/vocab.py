@@ -1,11 +1,11 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Query
 import json
 import os
 
 router = APIRouter()
 
 @router.get("/vocab")
-def get_vocab():
+def get_vocab(start: int = Query(0, ge=0), limit: int = Query(None, ge=1)):
     try:
         # Get the path to vocab.json
         current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -14,10 +14,18 @@ def get_vocab():
         with open(vocab_path, "r", encoding="utf-8") as f:
             vocab_data = json.load(f)
         
+        # Apply pagination
+        total_count = len(vocab_data)
+        end_index = start + limit if limit else total_count
+        paginated_data = vocab_data[start:end_index]
+        
         return {
             "status": "success",
-            "count": len(vocab_data),
-            "data": vocab_data
+            "count": len(paginated_data),
+            "total": total_count,
+            "start": start,
+            "limit": limit,
+            "data": paginated_data
         }
     except Exception as e:
         return {

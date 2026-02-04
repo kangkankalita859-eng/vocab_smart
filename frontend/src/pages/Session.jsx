@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FlashCard from "../components/FlashCard";
 import SessionNav from "../components/SessionNav";
+import { fetchVocab } from "../services/vocabService";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -52,15 +53,20 @@ export default function Session({
     if (!config) return;
 
     setLoading(true);
-    fetch(
-      `${import.meta.env.VITE_API_URL}/api/vocab?start=${config.start}&limit=${config.limit}`
-    )
-      .then((res) => res.json())
+    fetchVocab(config.start, config.limit)
       .then((data) => {
-        setActiveDeck(data);
-        setOriginalDeck(data);
+        if (data.status === 'success') {
+          setActiveDeck(data.data);
+          setOriginalDeck(data.data);
+        } else {
+          console.error('API Error:', data.message);
+        }
         setKnownDeck([]);
         setUnknownDeck([]);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error);
         setLoading(false);
       });
   }, [config]);
