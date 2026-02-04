@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.vocab import router as vocab_router
+from api.vocab import router as vocab_router
 import os
 from dotenv import load_dotenv
 
