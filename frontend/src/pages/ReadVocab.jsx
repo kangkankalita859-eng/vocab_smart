@@ -14,13 +14,18 @@ export default function ReadVocab({
   /* -------- FETCH VOCAB BASED ON RANGE -------- */
 
   useEffect(() => {
-    if (!config) return;
-
+    // Ensure we have a valid config
+    const safeConfig = config || { start: 0, limit: 20 };
+    console.log('ReadVocab useEffect triggered with config:', safeConfig);
+    
     setLoading(true);
+    console.log('Fetching vocab with start:', safeConfig.start, 'limit:', safeConfig.limit);
 
-    fetchVocab(config.start, config.limit)
+    fetchVocab(safeConfig.start, safeConfig.limit)
       .then((data) => {
+        console.log('API Response:', data);
         if (data.status === 'success') {
+          console.log('Setting vocab data:', data.data);
           setVocab(data.data);
         } else {
           console.error('API Error:', data.message);

@@ -50,12 +50,19 @@ export default function Session({
   /* ---------------- FETCH VOCAB ---------------- */
 
   useEffect(() => {
-    if (!config) return;
+    console.log('Session useEffect triggered with config:', config);
+    if (!config) {
+      console.log('No config provided, returning');
+      return;
+    }
 
     setLoading(true);
+    console.log('Session fetching vocab with start:', config.start, 'limit:', config.limit);
     fetchVocab(config.start, config.limit)
       .then((data) => {
+        console.log('Session API Response:', data);
         if (data.status === 'success') {
+          console.log('Session setting active deck with', data.data.length, 'items');
           setActiveDeck(data.data);
           setOriginalDeck(data.data);
         } else {
