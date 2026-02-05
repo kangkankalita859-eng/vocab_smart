@@ -9,25 +9,14 @@ export default function Home({ onStart }) {
       <div style={grid}>
         {/* ACTIVE MODULE */}
         <div
-          style={{ ...card, borderColor: "#1976d2" }}
-          onClick={() =>
-            onStart({ start: 0, limit: 20 })
-          }
-        >
-          <h3>One Word Substitution</h3>
-          <p>Practice OWS asked in competitive exams</p>
-          <span style={activeTag}>Available</span>
-        </div>
-
-        <div
           style={{ ...card, borderColor: "#388e3c" }}
           onClick={() =>
             onStart({ start: 0, limit: 250 })
           }
         >
-          <h3>📖 Read All Vocabulary</h3>
+          <h3>📖 One Word Substitution</h3>
           <p>View complete vocabulary list with meanings</p>
-          <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Direct Access</span>
+          <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Available</span>
         </div>
 
         {/* COMING SOON MODULES */}
