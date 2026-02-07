@@ -1,4 +1,4 @@
-export default function SimpleSidebar() {
+export default function Sidebar() {
   return (
     <div style={{
       width: "250px",
