@@ -19,7 +19,7 @@ const subjects = {
   }
 };
 
-export default function SidebarFixed({ selectedSubject, selectedTopic, onSubjectSelect, onTopicSelect }) {
+export default function Sidebar({ selectedSubject, selectedTopic, onSubjectSelect, onTopicSelect }) {
   const [expandedSubjects, setExpandedSubjects] = useState({});
 
   const toggleSubject = (subject) => {
