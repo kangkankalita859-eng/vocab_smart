@@ -8,16 +8,21 @@ export default function Home({ onStart }) {
   const handleSubjectSelect = (subject) => {
     setSelectedSubject(subject);
     setSelectedTopic(""); // Reset topic when changing subject
+    console.log('Selected subject:', subject);
   };
 
   const handleTopicSelect = (topic) => {
     setSelectedTopic(topic);
+    console.log('Selected topic:', topic);
   };
 
   return (
     <div style={mainContainer}>
       {/* SIDEBAR */}
-      <Sidebar />
+      <Sidebar 
+        onSubjectSelect={handleSubjectSelect}
+        onSubtopicSelect={handleTopicSelect}
+      />
 
       {/* MAIN CONTENT */}
       <div style={content}>
@@ -25,6 +30,29 @@ export default function Home({ onStart }) {
         <p style={subtitle}>
           Choose a section to start your preparation
         </p>
+
+        {/* Display selected subject and topic */}
+        {(selectedSubject || selectedTopic) && (
+          <div style={{
+            backgroundColor: "#f0f8ff",
+            border: "1px solid #2196f3",
+            borderRadius: "8px",
+            padding: "16px",
+            marginBottom: "24px",
+            textAlign: "center"
+          }}>
+            {selectedSubject && (
+              <p style={{ margin: "0", fontSize: "16px", color: "#1976d2" }}>
+                <strong>Selected Subject:</strong> {selectedSubject.charAt(0).toUpperCase() + selectedSubject.slice(1)}
+              </p>
+            )}
+            {selectedTopic && (
+              <p style={{ margin: "8px 0 0 0", fontSize: "16px", color: "#7b1fa2" }}>
+                <strong>Selected Topic:</strong> {selectedTopic}
+              </p>
+            )}
+          </div>
+        )}
 
         <div style={grid}>
           {/* ACTIVE MODULE */}
