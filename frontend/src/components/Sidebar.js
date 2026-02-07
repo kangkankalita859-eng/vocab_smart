@@ -25,7 +25,8 @@ function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
   const [selectedSubtopic, setSelectedSubtopic] = useState(null);
 
   const handleSubjectClick = (subjectKey) => {
-    setExpandedSubject(subjectKey); // Always expand the clicked subject
+    //setExpandedSubject(subjectKey); // Always expand the clicked subject
+    setExpandedSubject(expandedSubject === subjectKey ? null : subjectKey);
     if (onSubjectSelect) {
       onSubjectSelect(subjectKey);
     }
