@@ -1,30 +1,55 @@
+import Sidebar from "../components/Sidebar";
+
 export default function Home({ onStart }) {
+  const [selectedSubject, setSelectedSubject] = useState("");
+  const [selectedTopic, setSelectedTopic] = useState("");
+
+  const handleSubjectSelect = (subject) => {
+    setSelectedSubject(subject);
+    setSelectedTopic(""); // Reset topic when changing subject
+  };
+
+  const handleTopicSelect = (topic) => {
+    setSelectedTopic(topic);
+  };
+
   return (
-    <div style={container}>
-      <h1 style={title}>Smart Vocabulary Trainer</h1>
-      <p style={subtitle}>
-        Choose a section to start your preparation
-      </p>
+    <div style={mainContainer}>
+      {/* SIDEBAR */}
+      <Sidebar
+        selectedSubject={selectedSubject}
+        selectedTopic={selectedTopic}
+        onSubjectSelect={handleSubjectSelect}
+        onTopicSelect={handleTopicSelect}
+      />
 
-      <div style={grid}>
-        {/* ACTIVE MODULE */}
-        <div
-          style={{ ...card, borderColor: "#388e3c" }}
-          onClick={() =>
-            onStart({ start: 0, limit: 250 })
-          }
-        >
-          <h3>📖 One Word Substitution</h3>
-          <p>View complete vocabulary list with meanings</p>
-          <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Available</span>
+      {/* MAIN CONTENT */}
+      <div style={content}>
+        <h1 style={title}>Smart Vocabulary Trainer</h1>
+        <p style={subtitle}>
+          Choose a section to start your preparation
+        </p>
+
+        <div style={grid}>
+          {/* ACTIVE MODULE */}
+          <div
+            style={{ ...card, borderColor: "#388e3c" }}
+            onClick={() =>
+              onStart({ start: 0, limit: 250 })
+            }
+          >
+            <h3>📖 One Word Substitution</h3>
+            <p>View complete vocabulary list with meanings</p>
+            <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Available</span>
+          </div>
+
+          {/* COMING SOON MODULES */}
+          <Module title="Synonyms" />
+          <Module title="Antonyms" />
+          <Module title="Idioms & Phrases" />
+          <Module title="Homonyms" />
+          <Module title="Spelling" />
         </div>
-
-        {/* COMING SOON MODULES */}
-        <Module title="Synonyms" />
-        <Module title="Antonyms" />
-        <Module title="Idioms & Phrases" />
-        <Module title="Homonyms" />
-        <Module title="Spelling" />
       </div>
     </div>
   );
@@ -44,22 +69,30 @@ function Module({ title }) {
 
 /* ---------- STYLES ---------- */
 
-const container = {
-  minHeight: "100vh",
-  padding: "60px 40px",
-  background: "#f9fafb",
+const mainContainer = {
+  display: "flex",
+  height: "100vh"
+};
+
+const content = {
+  flex: 1,
+  padding: "40px",
+  overflowY: "auto"
 };
 
 const title = {
-  textAlign: "center",
   fontSize: "32px",
-  marginBottom: "8px",
+  fontWeight: "700",
+  color: "#2c3e50",
+  marginBottom: "16px",
+  textAlign: "center"
 };
 
 const subtitle = {
+  fontSize: "18px",
+  color: "#6c757d",
   textAlign: "center",
-  color: "#555",
-  marginBottom: "40px",
+  marginBottom: "40px"
 };
 
 const grid = {
@@ -81,24 +114,23 @@ const card = {
 };
 
 const activeTag = {
-  position: "absolute",
-  top: "16px",
-  right: "16px",
-  background: "#1976d2",
-  color: "#fff",
-  padding: "4px 10px",
-  borderRadius: "12px",
+  display: "inline-block",
+  padding: "6px 12px",
+  backgroundColor: "#388e3c",
+  color: "white",
+  borderRadius: "20px",
   fontSize: "12px",
+  fontWeight: "600",
+  marginTop: "12px"
 };
 
 const soonTag = {
-  position: "absolute",
-  top: "16px",
-  right: "16px",
-  background: "#999",
-  color: "#fff",
-  padding: "4px 10px",
-  borderRadius: "12px",
+  display: "inline-block",
+  padding: "6px 12px",
+  backgroundColor: "#6c757d",
+  color: "white",
+  borderRadius: "20px",
   fontSize: "12px",
+  fontWeight: "600",
+  marginTop: "12px"
 };
-
