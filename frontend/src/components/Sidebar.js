@@ -44,7 +44,7 @@ export default function Sidebar({ selectedSubject, selectedTopic, onSubjectSelec
         marginBottom: "20px",
         color: "#2c3e50",
         paddingLeft: "16px"
-      }}>Subjects</h3>
+      }}>📚 Subjects</h3>
       
       {Object.entries(subjects).map(([subject, data]) => (
         <div key={subject} style={{ marginBottom: "10px" }}>
