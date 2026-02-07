@@ -1,6 +1,126 @@
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 
+// Data structure for subject-specific content
+const subjectContent = {
+  maths: {
+    title: "Mathematics Preparation",
+    modules: [
+      {
+        title: "📝 PYQ",
+        description: "Previous Year Questions with solutions",
+        status: "available",
+        color: "#ff6b6b"
+      },
+      {
+        title: "📋 Formulas", 
+        description: "Important formulas and shortcuts",
+        status: "available",
+        color: "#4ecdc4"
+      },
+      {
+        title: "🧪 Test",
+        description: "Practice tests and quizzes",
+        status: "available", 
+        color: "#45b7d1"
+      },
+      {
+        title: "📚 Study Material",
+        description: "Comprehensive study notes",
+        status: "coming-soon",
+        color: "#96ceb4"
+      }
+    ]
+  },
+  english: {
+    title: "English Preparation", 
+    modules: [
+      {
+        title: "📖 Vocabulary",
+        description: "Build your vocabulary with words and meanings",
+        status: "available",
+        color: "#388e3c"
+      },
+      {
+        title: "📝 Grammar",
+        description: "Grammar rules and exercises",
+        status: "available",
+        color: "#7b1fa2"
+      },
+      {
+        title: "🧪 Test",
+        description: "English comprehension and grammar tests",
+        status: "available",
+        color: "#45b7d1"
+      },
+      {
+        title: "📚 Reading Material",
+        description: "Reading passages and comprehension",
+        status: "coming-soon",
+        color: "#96ceb4"
+      }
+    ]
+  },
+  reasoning: {
+    title: "Reasoning Preparation",
+    modules: [
+      {
+        title: "🧩 Logical Reasoning",
+        description: "Logical and analytical reasoning problems",
+        status: "available",
+        color: "#ff9800"
+      },
+      {
+        title: "📈 Data Interpretation",
+        description: "Data analysis and interpretation skills",
+        status: "available",
+        color: "#9c27b0"
+      },
+      {
+        title: "🧪 Test",
+        description: "Reasoning ability tests",
+        status: "available",
+        color: "#45b7d1"
+      },
+      {
+        title: "📚 Practice Sets",
+        description: "Additional practice questions",
+        status: "coming-soon",
+        color: "#96ceb4"
+      }
+    ]
+  },
+  gs: {
+    title: "General Studies Preparation",
+    modules: [
+      {
+        title: "📚 Current Affairs",
+        description: "Latest current affairs and news",
+        status: "available",
+        color: "#f44336"
+      },
+      {
+        title: "🌍 Geography",
+        description: "Indian and World Geography",
+        status: "available",
+        color: "#2196f3"
+      },
+      {
+        title: "📜 History",
+        description: "Indian History and Culture",
+        status: "available",
+        color: "#795548"
+      },
+      {
+        title: "🧪 Test",
+        description: "General Studies mock tests",
+        status: "coming-soon",
+        color: "#96ceb4"
+      }
+    ]
+  }
+};
+
 export default function Home({ onStart }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
@@ -16,6 +136,17 @@ export default function Home({ onStart }) {
     console.log('Selected topic:', topic);
   };
 
+  const handleModuleClick = (module) => {
+    console.log('Clicked module:', module);
+    // Handle different module types
+    if (module.title.includes('Vocabulary') || module.title.includes('One Word')) {
+      onStart({ start: 0, limit: 250 });
+    } else {
+      // For other modules, you can add different handling
+      alert(`${module.title} functionality will be implemented soon!`);
+    }
+  };
+
   return (
     <div style={mainContainer}>
       {/* SIDEBAR */}
@@ -26,9 +157,17 @@ export default function Home({ onStart }) {
 
       {/* MAIN CONTENT */}
       <div style={content}>
-        <h1 style={title}>Smart Vocabulary Trainer</h1>
+        <h1 style={title}>
+          {selectedSubject && subjectContent[selectedSubject] 
+            ? subjectContent[selectedSubject].title 
+            : "Smart Vocabulary Trainer"
+          }
+        </h1>
         <p style={subtitle}>
-          Choose a section to start your preparation
+          {selectedSubject 
+            ? `Choose a ${selectedTopic ? 'resource for ' + selectedTopic : 'resource'} to start your preparation`
+            : "Choose a section to start your preparation"
+          }
         </p>
 
         {/* Display selected subject and topic */}
@@ -55,24 +194,52 @@ export default function Home({ onStart }) {
         )}
 
         <div style={grid}>
-          {/* ACTIVE MODULE */}
-          <div
-            style={{ ...card, borderColor: "#388e3c" }}
-            onClick={() =>
-              onStart({ start: 0, limit: 250 })
-            }
-          >
-            <h3>📖 One Word Substitution</h3>
-            <p>View complete vocabulary list with meanings</p>
-            <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Available</span>
-          </div>
+          {selectedSubject && subjectContent[selectedSubject] ? (
+            // Show subject-specific modules
+            subjectContent[selectedSubject].modules.map((module, index) => (
+              <div
+                key={index}
+                style={{
+                  ...card,
+                  borderColor: module.status === "available" ? module.color : "#e0e0e0",
+                  opacity: module.status === "available" ? 1 : 0.6,
+                  cursor: module.status === "available" ? "pointer" : "not-allowed"
+                }}
+                onClick={() => module.status === "available" && handleModuleClick(module)}
+              >
+                <h3>{module.title}</h3>
+                <p>{module.description}</p>
+                <span style={{
+                  ...activeTag,
+                  backgroundColor: module.status === "available" ? module.color : "#6c757d"
+                }}>
+                  {module.status === "available" ? "Available" : "Coming Soon"}
+                </span>
+              </div>
+            ))
+          ) : (
+            // Show default vocabulary modules
+            <>
+              {/* ACTIVE MODULE */}
+              <div
+                style={{ ...card, borderColor: "#388e3c" }}
+                onClick={() =>
+                  onStart({ start: 0, limit: 250 })
+                }
+              >
+                <h3>📖 One Word Substitution</h3>
+                <p>View complete vocabulary list with meanings</p>
+                <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Available</span>
+              </div>
 
-          {/* COMING SOON MODULES */}
-          <Module title="Synonyms" />
-          <Module title="Antonyms" />
-          <Module title="Idioms & Phrases" />
-          <Module title="Homonyms" />
-          <Module title="Spelling" />
+              {/* COMING SOON MODULES */}
+              <Module title="Synonyms" />
+              <Module title="Antonyms" />
+              <Module title="Idioms & Phrases" />
+              <Module title="Homonyms" />
+              <Module title="Spelling" />
+            </>
+          )}
         </div>
       </div>
     </div>
