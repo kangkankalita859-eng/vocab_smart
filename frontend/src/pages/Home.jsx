@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sidebar from "../components/Sidebar";
+import SimpleSidebar from "../components/SimpleSidebar";
 
 export default function Home({ onStart }) {
   const [selectedSubject, setSelectedSubject] = useState("");
@@ -17,12 +17,7 @@ export default function Home({ onStart }) {
   return (
     <div style={mainContainer}>
       {/* SIDEBAR */}
-      <Sidebar
-        selectedSubject={selectedSubject}
-        selectedTopic={selectedTopic}
-        onSubjectSelect={handleSubjectSelect}
-        onTopicSelect={handleTopicSelect}
-      />
+      <SimpleSidebar />
 
       {/* MAIN CONTENT */}
       <div style={content}>
