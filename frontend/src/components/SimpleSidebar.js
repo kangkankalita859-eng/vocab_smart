@@ -12,7 +12,7 @@ export default function SimpleSidebar() {
         fontWeight: "600",
         marginBottom: "20px",
         color: "#2c3e50"
-      }}>📚 Subjects</h3>
+      }}>📚 Subjects (v2)</h3>
       
       <div style={{ marginBottom: "10px" }}>
         <div style={{
