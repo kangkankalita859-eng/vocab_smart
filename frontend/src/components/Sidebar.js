@@ -19,7 +19,7 @@ const subjects = {
   }
 };
 
-export default function Sidebar({ selectedSubject, selectedTopic, onSubjectSelect, onTopicSelect }) {
+export default function SidebarFixed({ selectedSubject, selectedTopic, onSubjectSelect, onTopicSelect }) {
   const [expandedSubjects, setExpandedSubjects] = useState({});
 
   const toggleSubject = (subject) => {
@@ -81,8 +81,7 @@ export default function Sidebar({ selectedSubject, selectedTopic, onSubjectSelec
                     padding: "10px 16px",
                     cursor: "pointer",
                     borderLeft: "3px solid transparent",
-                    backgroundColor: selectedSubject === subject && selectedTopic === topic ? "#e3f2fd" : "transparent",
-                    borderLeftColor: selectedSubject === subject && selectedTopic === topic ? "#007bff" : "transparent"
+                    backgroundColor: selectedSubject === subject && selectedTopic === topic ? "#e3f2fd" : "transparent"
                   }}
                   onClick={() => {
                     onSubjectSelect(subject);

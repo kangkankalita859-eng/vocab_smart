@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SidebarFixed from "../components/SidebarFixed";
+import Sidebar from "../components/Sidebar";
 
 export default function Home({ onStart }) {
   const [selectedSubject, setSelectedSubject] = useState("");
@@ -17,7 +17,7 @@ export default function Home({ onStart }) {
   return (
     <div style={mainContainer}>
       {/* SIDEBAR */}
-      <SidebarFixed
+      <Sidebar
         selectedSubject={selectedSubject}
         selectedTopic={selectedTopic}
         onSubjectSelect={handleSubjectSelect}
