@@ -1,4 +1,6 @@
-export default function Sidebar() {
+import React from 'react';
+
+function Sidebar() {
   return (
     <div style={{
       width: "250px",
@@ -12,7 +14,7 @@ export default function Sidebar() {
         fontWeight: "600",
         marginBottom: "20px",
         color: "#2c3e50"
-      }}>📚 Subjects (v2)</h3>
+      }}>📚 Subjects</h3>
       
       <div style={{ marginBottom: "10px" }}>
         <div style={{
@@ -64,3 +66,5 @@ export default function Sidebar() {
     </div>
   );
 }
+
+export default Sidebar;
