@@ -129,6 +129,11 @@ export default function Home({ onStart }) {
     setSelectedSubject(subject);
     setSelectedTopic(""); // Reset topic when changing subject
     console.log('Selected subject:', subject);
+    // Scroll down when subject is selected
+    window.scrollTo({
+      top: 200,
+      behavior: 'smooth'
+    });
   };
 
   const handleTopicSelect = (topic) => {
@@ -158,14 +163,16 @@ export default function Home({ onStart }) {
       {/* MAIN CONTENT */}
       <div style={content}>
         <h1 style={title}>
-          {selectedSubject && subjectContent[selectedSubject] 
+          {selectedSubject && selectedTopic && subjectContent[selectedSubject] 
             ? subjectContent[selectedSubject].title 
             : "Smart Vocabulary Trainer"
           }
         </h1>
         <p style={subtitle}>
-          {selectedSubject 
-            ? `Choose a ${selectedTopic ? 'resource for ' + selectedTopic : 'resource'} to start your preparation`
+          {selectedSubject && selectedTopic
+            ? `Choose a resource for ${selectedTopic} to start your preparation`
+            : selectedSubject 
+            ? "Select a topic to see available resources"
             : "Choose a section to start your preparation"
           }
         </p>
@@ -194,8 +201,8 @@ export default function Home({ onStart }) {
         )}
 
         <div style={grid}>
-          {selectedSubject && subjectContent[selectedSubject] ? (
-            // Show subject-specific modules
+          {selectedSubject && selectedTopic && subjectContent[selectedSubject] ? (
+            // Show subject-specific modules only when both subject and topic are selected
             subjectContent[selectedSubject].modules.map((module, index) => (
               <div
                 key={index}
@@ -218,7 +225,7 @@ export default function Home({ onStart }) {
               </div>
             ))
           ) : (
-            // Show default vocabulary modules
+            // Show default vocabulary modules when no subject/topic is selected
             <>
               {/* ACTIVE MODULE */}
               <div
