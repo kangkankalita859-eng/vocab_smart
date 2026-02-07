@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
+import PYQDisplay from "../components/PYQDisplay";
 
 // Data structure for subject-specific content
 const subjectContent = {
@@ -124,6 +125,7 @@ const subjectContent = {
 export default function Home({ onStart }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
+  const [showPYQ, setShowPYQ] = useState(false);
 
   const handleSubjectSelect = (subject) => {
     setSelectedSubject(subject);
@@ -146,10 +148,16 @@ export default function Home({ onStart }) {
     // Handle different module types
     if (module.title.includes('Vocabulary') || module.title.includes('One Word')) {
       onStart({ start: 0, limit: 250 });
+    } else if (module.title.includes('PYQ')) {
+      setShowPYQ(true);
     } else {
       // For other modules, you can add different handling
       alert(`${module.title} functionality will be implemented soon!`);
     }
+  };
+
+  const handleBackToModules = () => {
+    setShowPYQ(false);
   };
 
   return (
@@ -162,92 +170,102 @@ export default function Home({ onStart }) {
 
       {/* MAIN CONTENT */}
       <div style={content}>
-        <h1 style={title}>
-          {selectedSubject && selectedTopic && subjectContent[selectedSubject] 
-            ? subjectContent[selectedSubject].title 
-            : "Smart Vocabulary Trainer"
-          }
-        </h1>
-        <p style={subtitle}>
-          {selectedSubject && selectedTopic
-            ? `Choose a resource for ${selectedTopic} to start your preparation`
-            : selectedSubject 
-            ? "Select a topic to see available resources"
-            : "Choose a section to start your preparation"
-          }
-        </p>
+        {showPYQ ? (
+          <PYQDisplay 
+            subject={selectedSubject}
+            topic={selectedTopic}
+            onBack={handleBackToModules}
+          />
+        ) : (
+          <>
+            <h1 style={title}>
+              {selectedSubject && selectedTopic && subjectContent[selectedSubject] 
+                ? subjectContent[selectedSubject].title 
+                : "Smart Vocabulary Trainer"
+              }
+            </h1>
+            <p style={subtitle}>
+              {selectedSubject && selectedTopic
+                ? `Choose a resource for ${selectedTopic} to start your preparation`
+                : selectedSubject 
+                ? "Select a topic to see available resources"
+                : "Choose a section to start your preparation"
+              }
+            </p>
 
-        {/* Display selected subject and topic */}
-        {(selectedSubject || selectedTopic) && (
-          <div style={{
-            backgroundColor: "#f0f8ff",
-            border: "1px solid #2196f3",
-            borderRadius: "8px",
-            padding: "16px",
-            marginBottom: "24px",
-            textAlign: "center"
-          }}>
-            {selectedSubject && (
-              <p style={{ margin: "0", fontSize: "16px", color: "#1976d2" }}>
-                <strong>Selected Subject:</strong> {selectedSubject.charAt(0).toUpperCase() + selectedSubject.slice(1)}
-              </p>
+            {/* Display selected subject and topic */}
+            {(selectedSubject || selectedTopic) && (
+              <div style={{
+                backgroundColor: "#f0f8ff",
+                border: "1px solid #2196f3",
+                borderRadius: "8px",
+                padding: "16px",
+                marginBottom: "24px",
+                textAlign: "center"
+              }}>
+                {selectedSubject && (
+                  <p style={{ margin: "0", fontSize: "16px", color: "#1976d2" }}>
+                    <strong>Selected Subject:</strong> {selectedSubject.charAt(0).toUpperCase() + selectedSubject.slice(1)}
+                  </p>
+                )}
+                {selectedTopic && (
+                  <p style={{ margin: "8px 0 0 0", fontSize: "16px", color: "#7b1fa2" }}>
+                    <strong>Selected Topic:</strong> {selectedTopic}
+                  </p>
+                )}
+              </div>
             )}
-            {selectedTopic && (
-              <p style={{ margin: "8px 0 0 0", fontSize: "16px", color: "#7b1fa2" }}>
-                <strong>Selected Topic:</strong> {selectedTopic}
-              </p>
-            )}
-          </div>
+
+            <div style={grid}>
+              {selectedSubject && selectedTopic && subjectContent[selectedSubject] ? (
+                // Show subject-specific modules only when both subject and topic are selected
+                subjectContent[selectedSubject].modules.map((module, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      ...card,
+                      borderColor: module.status === "available" ? module.color : "#e0e0e0",
+                      opacity: module.status === "available" ? 1 : 0.6,
+                      cursor: module.status === "available" ? "pointer" : "not-allowed"
+                    }}
+                    onClick={() => module.status === "available" && handleModuleClick(module)}
+                  >
+                    <h3>{module.title}</h3>
+                    <p>{module.description}</p>
+                    <span style={{
+                      ...activeTag,
+                      backgroundColor: module.status === "available" ? module.color : "#6c757d"
+                    }}>
+                      {module.status === "available" ? "Available" : "Coming Soon"}
+                    </span>
+                  </div>
+                ))
+              ) : (
+                // Show default vocabulary modules when no subject/topic is selected
+                <>
+                  {/* ACTIVE MODULE */}
+                  <div
+                    style={{ ...card, borderColor: "#388e3c" }}
+                    onClick={() =>
+                      onStart({ start: 0, limit: 250 })
+                    }
+                  >
+                    <h3>📖 One Word Substitution</h3>
+                    <p>View complete vocabulary list with meanings</p>
+                    <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Available</span>
+                  </div>
+
+                  {/* COMING SOON MODULES */}
+                  <Module title="Synonyms" />
+                  <Module title="Antonyms" />
+                  <Module title="Idioms & Phrases" />
+                  <Module title="Homonyms" />
+                  <Module title="Spelling" />
+                </>
+              )}
+            </div>
+          </>
         )}
-
-        <div style={grid}>
-          {selectedSubject && selectedTopic && subjectContent[selectedSubject] ? (
-            // Show subject-specific modules only when both subject and topic are selected
-            subjectContent[selectedSubject].modules.map((module, index) => (
-              <div
-                key={index}
-                style={{
-                  ...card,
-                  borderColor: module.status === "available" ? module.color : "#e0e0e0",
-                  opacity: module.status === "available" ? 1 : 0.6,
-                  cursor: module.status === "available" ? "pointer" : "not-allowed"
-                }}
-                onClick={() => module.status === "available" && handleModuleClick(module)}
-              >
-                <h3>{module.title}</h3>
-                <p>{module.description}</p>
-                <span style={{
-                  ...activeTag,
-                  backgroundColor: module.status === "available" ? module.color : "#6c757d"
-                }}>
-                  {module.status === "available" ? "Available" : "Coming Soon"}
-                </span>
-              </div>
-            ))
-          ) : (
-            // Show default vocabulary modules when no subject/topic is selected
-            <>
-              {/* ACTIVE MODULE */}
-              <div
-                style={{ ...card, borderColor: "#388e3c" }}
-                onClick={() =>
-                  onStart({ start: 0, limit: 250 })
-                }
-              >
-                <h3>📖 One Word Substitution</h3>
-                <p>View complete vocabulary list with meanings</p>
-                <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Available</span>
-              </div>
-
-              {/* COMING SOON MODULES */}
-              <Module title="Synonyms" />
-              <Module title="Antonyms" />
-              <Module title="Idioms & Phrases" />
-              <Module title="Homonyms" />
-              <Module title="Spelling" />
-            </>
-          )}
-        </div>
       </div>
     </div>
   );
