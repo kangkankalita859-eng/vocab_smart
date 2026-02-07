@@ -126,6 +126,7 @@ export default function Home({ onStart }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const [showPYQ, setShowPYQ] = useState(false);
+  const [sidebarVisible, setSidebarVisible] = useState(true);
 
   const handleSubjectSelect = (subject) => {
     setSelectedSubject(subject);
@@ -160,16 +161,44 @@ export default function Home({ onStart }) {
     setShowPYQ(false);
   };
 
+  const toggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
+  };
+
   return (
     <div style={mainContainer}>
       {/* SIDEBAR */}
-      <Sidebar 
-        onSubjectSelect={handleSubjectSelect}
-        onSubtopicSelect={handleTopicSelect}
-      />
+      {sidebarVisible && (
+        <Sidebar 
+          onSubjectSelect={handleSubjectSelect}
+          onSubtopicSelect={handleTopicSelect}
+        />
+      )}
 
       {/* MAIN CONTENT */}
-      <div style={content}>
+      <div style={{...content, marginLeft: sidebarVisible ? "0" : "-250px"}}>
+        {/* HAMBURGER MENU BUTTON */}
+        <button
+          style={{
+            position: "fixed",
+            top: "20px",
+            left: sidebarVisible ? "260px" : "20px",
+            backgroundColor: "#3498db",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            padding: "12px 16px",
+            cursor: "pointer",
+            zIndex: 1000,
+            fontSize: "18px",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+            transition: "all 0.3s ease"
+          }}
+          onClick={toggleSidebar}
+        >
+          {sidebarVisible ? "☰" : "☰"}
+        </button>
+
         {showPYQ ? (
           <PYQDisplay 
             subject={selectedSubject}
