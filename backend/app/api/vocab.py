@@ -9,7 +9,7 @@ def get_vocab(start: int = Query(0, ge=0), limit: int = Query(None, ge=1)):
     try:
         # Get the path to vocab.json
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        vocab_path = os.path.join(current_dir, "..", "data", "vocab.json")
+        vocab_path = os.path.join(current_dir, "..", "data", "english", "vocab.json")
         
         with open(vocab_path, "r", encoding="utf-8") as f:
             vocab_data = json.load(f)
@@ -37,7 +37,7 @@ def get_vocab(start: int = Query(0, ge=0), limit: int = Query(None, ge=1)):
 def get_vocab_by_id(word_id: int):
     try:
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        vocab_path = os.path.join(current_dir, "..", "data", "vocab.json")
+        vocab_path = os.path.join(current_dir, "..", "data", "english", "vocab.json")
         
         with open(vocab_path, "r", encoding="utf-8") as f:
             vocab_data = json.load(f)
