@@ -114,6 +114,10 @@ app.include_router(pyq_router, prefix=api_prefix)
 
 
 
+app.include_router(idioms_router, prefix=api_prefix)
+
+
+
 
 
 
