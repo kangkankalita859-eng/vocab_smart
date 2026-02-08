@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
+import MobileSidebar from "../components/MobileSidebar";
 import PYQDisplay from "../components/PYQDisplay";
+import useMobile from "../hooks/useMobile";
 
 // Data structure for subject-specific content
 const subjectContent = {
@@ -126,6 +128,8 @@ export default function Home({ onStart, onIdioms }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const [showPYQ, setShowPYQ] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isMobile } = useMobile();
 
   const handleSubjectSelect = (subject) => {
     setSelectedSubject(subject);
@@ -167,11 +171,20 @@ export default function Home({ onStart, onIdioms }) {
 
   return (
     <div style={mainContainer}>
-      {/* SIDEBAR */}
-      <Sidebar 
-        onSubjectSelect={handleSubjectSelect}
-        onSubtopicSelect={handleTopicSelect}
-      />
+      {/* SIDEBAR - Desktop or Mobile */}
+      {isMobile ? (
+        <MobileSidebar
+          isOpen={mobileMenuOpen}
+          onClose={() => setMobileMenuOpen(false)}
+          onSubjectSelect={handleSubjectSelect}
+          onSubtopicSelect={handleTopicSelect}
+        />
+      ) : (
+        <Sidebar 
+          onSubjectSelect={handleSubjectSelect}
+          onSubtopicSelect={handleTopicSelect}
+        />
+      )}
 
       {/* MAIN CONTENT */}
       <div style={content}>
@@ -303,14 +316,16 @@ function Module({ title }) {
 
 const mainContainer = {
   display: "flex",
-  height: "100vh"
+  height: "100vh",
+  position: "relative"
 };
 
 const content = {
   flex: 1,
   padding: "40px",
   paddingTop: "80px", // Add padding for fixed navbar
-  overflowY: "auto"
+  overflowY: "auto",
+  marginLeft: "0px", // No margin on mobile
 };
 
 const title = {
@@ -332,7 +347,7 @@ const grid = {
   maxWidth: "900px",
   margin: "0 auto",
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
   gap: "24px",
 };
 
@@ -344,6 +359,7 @@ const card = {
   boxShadow: "0 10px 20px rgba(0,0,0,0.08)",
   cursor: "pointer",
   position: "relative",
+  minHeight: "140px",
 };
 
 const activeTag = {

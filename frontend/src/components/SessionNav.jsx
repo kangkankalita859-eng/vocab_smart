@@ -5,15 +5,25 @@ export default function SessionNav({
   onGoRead,
   onGoCards,
   onGoHome,
+  isMobile,
+  onMenuToggle,
 }) {
   return (
     <div style={nav}>
       {/* LEFT : HOME + MODE */}
       <div style={left}>
+        {isMobile && (
+          <button 
+            style={{...homeBtn, marginRight: "8px"}} 
+            onClick={() => onMenuToggle && onMenuToggle()}
+          >
+            ☰
+          </button>
+        )}
         <button style={homeBtn} onClick={() => onGoHome && onGoHome()}>
           🏠 Home
         </button>
-        <strong style={{ marginLeft: "12px" }}>{mode}</strong>
+        {!isMobile && <strong style={{ marginLeft: "12px" }}>{mode}</strong>}
       </div>
 
       {/* CENTER : RANGE SELECT */}
@@ -97,6 +107,8 @@ const center = {
   display: "flex",
   gap: "8px",
   alignItems: "center",
+  flex: 1,
+  justifyContent: "center",
 };
 
 const right = {
@@ -126,6 +138,7 @@ const linkBtn = {
   border: "1px solid #ccc",
   background: "#fff",
   cursor: "pointer",
+  fontSize: "12px",
 };
 
 const activeBtn = {
@@ -141,6 +154,9 @@ const homeBtn = {
   border: "1px solid #ccc",
   background: "#fff",
   cursor: "pointer",
+  fontSize: "14px",
+  minWidth: "44px", // Touch-friendly size
+  minHeight: "44px",
 };
 
 

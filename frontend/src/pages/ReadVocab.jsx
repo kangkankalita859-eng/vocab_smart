@@ -4,6 +4,8 @@ import SessionNav from "../components/SessionNav";
 
 import { fetchVocab } from "../services/vocabService";
 
+import useMobile from "../hooks/useMobile";
+
 
 
 export default function ReadVocab({
@@ -21,6 +23,8 @@ export default function ReadVocab({
   const [vocab, setVocab] = useState([]);
 
   const [loading, setLoading] = useState(true);
+
+  const { isMobile } = useMobile();
 
 
 
@@ -103,6 +107,8 @@ export default function ReadVocab({
         onGoCards={onGoCards}
 
         onGoHome={onGoHome}
+
+        isMobile={isMobile}
 
       />
 
