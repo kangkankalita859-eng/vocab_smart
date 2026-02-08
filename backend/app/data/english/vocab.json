@@ -3465,5 +3465,1789 @@
   "example": "He is a cynic about politics.",
   "sscCount": 2,
   "otherExamCount": 3
-}        
+},
+{
+  "id": 436,
+  "word": "Cynophobia",
+  "hindiMeaning": "कुत्तों से असाधारण भय (N.)",
+  "meaning": "Extreme fear of dogs",
+  "example": "He suffers from cynophobia.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 437,
+  "word": "Cynosure",
+  "hindiMeaning": "आकर्षण-बिंदु (N.)",
+  "meaning": "Centre of attraction",
+  "example": "She became the cynosure of all eyes.",
+  "sscCount": 3,
+  "otherExamCount": 3
+},
+{
+  "id": 438,
+  "word": "Cipher",
+  "hindiMeaning": "गुप्त लिखावट (N.)",
+  "meaning": "A secret or disguised way of writing",
+  "example": "The message was written in cipher.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 439,
+  "word": "Cytology",
+  "hindiMeaning": "कोशिका विज्ञान (N.)",
+  "meaning": "Dealing with cells",
+  "example": "He studies cytology.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 440,
+  "word": "Daredevil",
+  "hindiMeaning": "साहसी व्यक्ति (N.)",
+  "meaning": "A person who enjoys doing dangerous things",
+  "example": "He is a daredevil biker.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 441,
+  "word": "Deadlock",
+  "hindiMeaning": "गतिरोध (N.)",
+  "meaning": "A situation when no progress is possible",
+  "example": "Talks ended in deadlock.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 442,
+  "word": "Deaf",
+  "hindiMeaning": "बहरा (Adj.)",
+  "meaning": "One who cannot hear",
+  "example": "He is deaf in one ear.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 443,
+  "word": "Decade",
+  "hindiMeaning": "दशक (N.)",
+  "meaning": "A period of ten years",
+  "example": "He worked here for a decade.",
+  "sscCount": 3,
+  "otherExamCount": 1
+},
+{
+  "id": 444,
+  "word": "Decoding",
+  "hindiMeaning": "कूट भाषा को सुलझाना (V.)",
+  "meaning": "Changing secret messages into readable form",
+  "example": "He is decoding the message.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 445,
+  "word": "Defamation",
+  "hindiMeaning": "मानहानि (N.)",
+  "meaning": "Act of injuring reputation by slander",
+  "example": "He filed a defamation case.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 446,
+  "word": "Defame",
+  "hindiMeaning": "बदनाम करना (V.)",
+  "meaning": "To injure one’s reputation",
+  "example": "Do not defame others.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 447,
+  "word": "Defend",
+  "hindiMeaning": "बचाव करना (V.)",
+  "meaning": "To protect from harm or danger",
+  "example": "He defended his country.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 448,
+  "word": "Defiance",
+  "hindiMeaning": "अवज्ञा (N.)",
+  "meaning": "Open refusal to obey orders",
+  "example": "He showed defiance to authority.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 449,
+  "word": "Deficiency",
+  "hindiMeaning": "पोषक तत्वों की कमी (N.)",
+  "meaning": "Shortage of vitamins or minerals",
+  "example": "Iron deficiency causes weakness.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 450,
+  "word": "Delegate",
+  "hindiMeaning": "प्रतिनिधि (V.)",
+  "meaning": "To give one’s authority to another",
+  "example": "He delegated his power.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 451,
+  "word": "Deliberation",
+  "hindiMeaning": "सोच समझ कर निर्णय (N.)",
+  "meaning": "Slow and careful thought",
+  "example": "After deliberation, he agreed.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 452,
+  "word": "Delinquency",
+  "hindiMeaning": "कर्तव्य में चूक (N.)",
+  "meaning": "Omission of duty",
+  "example": "He was punished for delinquency.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 453,
+  "word": "Delinquent",
+  "hindiMeaning": "अपराधी (Adj.)",
+  "meaning": "A young person tending to commit crime",
+  "example": "He is a delinquent boy.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 454,
+  "word": "Deliquesce",
+  "hindiMeaning": "पिघलना/गलना (V.)",
+  "meaning": "Become liquid during decomposition",
+  "example": "Salt deliquesces in air.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 455,
+  "word": "Delirium",
+  "hindiMeaning": "बेहोशी में बोलना (N.)",
+  "meaning": "Disturbed state of mind due to illness",
+  "example": "He was in delirium.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 456,
+  "word": "Demagogue",
+  "hindiMeaning": "जनोत्तेजक नेता (N.)",
+  "meaning": "A leader who sways followers by speech",
+  "example": "He is a political demagogue.",
+  "sscCount": 2,
+  "otherExamCount": 4
+},
+{
+  "id": 457,
+  "word": "Democracy",
+  "hindiMeaning": "लोकतंत्र (N.)",
+  "meaning": "Government by the people",
+  "example": "India is a democracy.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 458,
+  "word": "Demography",
+  "hindiMeaning": "जनसांख्यिकी (N.)",
+  "meaning": "Study of population",
+  "example": "He studies demography.",
+  "sscCount": 5,
+  "otherExamCount": 1
+},
+{
+  "id": 459,
+  "word": "Den",
+  "hindiMeaning": "मांद (N.)",
+  "meaning": "A lion’s home",
+  "example": "The lion stayed in its den.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 460,
+  "word": "Denature",
+  "hindiMeaning": "विकृत करना (V.)",
+  "meaning": "Take away natural qualities",
+  "example": "Heat denatures proteins.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 461,
+  "word": "Denigrate",
+  "hindiMeaning": "बदनाम करना (V.)",
+  "meaning": "Criticize unfairly",
+  "example": "Do not denigrate others.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 462,
+  "word": "Depict",
+  "hindiMeaning": "वर्णन करना (V.)",
+  "meaning": "Portray in words",
+  "example": "The novel depicts village life.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 463,
+  "word": "Deponent",
+  "hindiMeaning": "गवाह (N.)",
+  "meaning": "Person who gives written testimony",
+  "example": "The deponent signed the statement.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 464,
+  "word": "Depraved",
+  "hindiMeaning": "भ्रष्ट (Adj.)",
+  "meaning": "Morally corrupt",
+  "example": "He lived a depraved life.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 465,
+  "word": "Deprecate",
+  "hindiMeaning": "विरोध करना (V.)",
+  "meaning": "Express strong disapproval",
+  "example": "We deprecate violence.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 466,
+  "word": "Depreciate",
+  "hindiMeaning": "मूल्य कम करना (V.)",
+  "meaning": "Become less valuable over time",
+  "example": "Cars depreciate quickly.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 467,
+  "word": "Deputy",
+  "hindiMeaning": "उप N.",
+  "meaning": "One appointed to act in place of another",
+  "example": "He is the deputy manager.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 468,
+  "word": "Deranged",
+  "hindiMeaning": "विक्षिप्त/पागल Adj.",
+  "meaning": "Unable to think clearly because of mental illness",
+  "example": "He behaved in a deranged manner.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 469,
+  "word": "Derelict",
+  "hindiMeaning": "आवारा व्यक्ति N.",
+  "meaning": "A person without a home, a job or property",
+  "example": "He lived like a derelict.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 470,
+  "word": "Dereliction",
+  "hindiMeaning": "कर्तव्य का त्याग N.",
+  "meaning": "Failing to discharge one's duty",
+  "example": "He was punished for dereliction of duty.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 471,
+  "word": "Deride",
+  "hindiMeaning": "उपहास करना V.",
+  "meaning": "To laugh at something in a cruel way",
+  "example": "They derided his efforts.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 472,
+  "word": "Dermatologist",
+  "hindiMeaning": "त्वचा विशेषज्ञ N.",
+  "meaning": "A doctor who studies and treats skin diseases",
+  "example": "She consulted a dermatologist.",
+  "sscCount": 3,
+  "otherExamCount": 4
+},
+{
+  "id": 473,
+  "word": "Dermatology",
+  "hindiMeaning": "त्वचाविज्ञान N.",
+  "meaning": "The scientific study of skin diseases",
+  "example": "He studies dermatology.",
+  "sscCount": 7,
+  "otherExamCount": 1
+},
+{
+  "id": 474,
+  "word": "Desertion",
+  "hindiMeaning": "परित्याग N.",
+  "meaning": "The abandonment of one's country or cause",
+  "example": "He was charged with desertion.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 475,
+  "word": "Destitute",
+  "hindiMeaning": "दरिद्र Adj.",
+  "meaning": "A person without money, food and necessities",
+  "example": "He helped destitute people.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 476,
+  "word": "Detective",
+  "hindiMeaning": "जासूस N.",
+  "meaning": "One who investigates and solves crimes",
+  "example": "The detective solved the case.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 477,
+  "word": "Deterrence",
+  "hindiMeaning": "रुकावट डालना N.",
+  "meaning": "Discouraging an action by fear of consequences",
+  "example": "Strict laws act as deterrence.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 478,
+  "word": "Devious",
+  "hindiMeaning": "धूर्त Adj.",
+  "meaning": "Showing underhand tactics to achieve goals",
+  "example": "He used devious methods.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 479,
+  "word": "Dexterous",
+  "hindiMeaning": "निपुण Adj.",
+  "meaning": "Skillful with your hands",
+  "example": "She is dexterous in painting.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 480,
+  "word": "Diagnose",
+  "hindiMeaning": "रोग पहचानना V.",
+  "meaning": "Determine the nature of disease",
+  "example": "The doctor diagnosed malaria.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 481,
+  "word": "Diagnosis",
+  "hindiMeaning": "रोग की पहचान N.",
+  "meaning": "Process of deciding the nature of disease",
+  "example": "Early diagnosis saves lives.",
+  "sscCount": 3,
+  "otherExamCount": 1
+},
+{
+  "id": 482,
+  "word": "Dialect",
+  "hindiMeaning": "बोली N.",
+  "meaning": "A form of language of a region",
+  "example": "Assamese is a dialect.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 483,
+  "word": "Diarchy",
+  "hindiMeaning": "द्वैध शासन N.",
+  "meaning": "Government by two rulers",
+  "example": "The country had diarchy.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 484,
+  "word": "Diatribe",
+  "hindiMeaning": "उग्र भाषण N.",
+  "meaning": "Bitter and violent attack in words",
+  "example": "He delivered a diatribe.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 485,
+  "word": "Dictator",
+  "hindiMeaning": "तानाशाह N.",
+  "meaning": "A ruler with total power",
+  "example": "The dictator ruled strictly.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 486,
+  "word": "Dictatorial",
+  "hindiMeaning": "तानाशाही Adj.",
+  "meaning": "Giving orders permitting no refusal",
+  "example": "He has a dictatorial nature.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 487,
+  "word": "Dictionary",
+  "hindiMeaning": "शब्दकोश N.",
+  "meaning": "A book giving meanings of words",
+  "example": "Use a dictionary daily.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 488,
+  "word": "Diffuse",
+  "hindiMeaning": "फैला हुआ Adj.",
+  "meaning": "Spread over a wide area",
+  "example": "Light was diffused.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 489,
+  "word": "Dilemma",
+  "hindiMeaning": "दुविधा N.",
+  "meaning": "Choice between two undesirable options",
+  "example": "He was in a dilemma.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 490,
+  "word": "Dilettante",
+  "hindiMeaning": "शौकिया N.",
+  "meaning": "A dabbler in art or literature",
+  "example": "He is a dilettante writer.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 491,
+  "word": "Diligent",
+  "hindiMeaning": "मेहनती Adj.",
+  "meaning": "Showing care and effort",
+  "example": "She is a diligent student.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 492,
+  "word": "Dipsomania",
+  "hindiMeaning": "शराब की लत N.",
+  "meaning": "Irresistible craving for alcohol",
+  "example": "He suffers from dipsomania.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 493,
+  "word": "Directory",
+  "hindiMeaning": "नाम-पते की पुस्तक N.",
+  "meaning": "A book of names and addresses",
+  "example": "Find his number in directory.",
+  "sscCount": 2,
+  "otherExamCount": 2
+},
+{
+  "id": 494,
+  "word": "Dirge",
+  "hindiMeaning": "शोकगीत N.",
+  "meaning": "A song sung at a funeral",
+  "example": "They sang a dirge.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 495,
+  "word": "Disaster",
+  "hindiMeaning": "आपदा N.",
+  "meaning": "An act with disastrous consequences",
+  "example": "The flood was a disaster.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 496,
+  "word": "Discus",
+  "hindiMeaning": "चक्र फेंक प्रतियोगिता (N.)",
+  "meaning": "A heavy round plate of metal thrown by an athlete",
+  "example": "He won gold in discus.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 497,
+  "word": "Disenfranchisement",
+  "hindiMeaning": "मताधिकार से वंचित करना (N.)",
+  "meaning": "Depriving of the right to vote",
+  "example": "Disenfranchisement is unfair.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 498,
+  "word": "Disgraceful",
+  "hindiMeaning": "शर्मनाक (Adj.)",
+  "meaning": "Making one feel morally bad or ashamed",
+  "example": "His behavior was disgraceful.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 499,
+  "word": "Disgruntled",
+  "hindiMeaning": "असंतुष्ट (Adj.)",
+  "meaning": "Disappointed and annoyed",
+  "example": "Workers were disgruntled.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 500,
+  "word": "Disguise",
+  "hindiMeaning": "भेष बदलना (V.)",
+  "meaning": "Change appearance to deceive",
+  "example": "He disguised himself.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 501,
+  "word": "Disintegrate",
+  "hindiMeaning": "विघटित हो जाना (V.)",
+  "meaning": "Break into small parts",
+  "example": "The building disintegrated.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 502,
+  "word": "Dismal",
+  "hindiMeaning": "निराशाजनक (Adj.)",
+  "meaning": "Causing gloom or depression",
+  "example": "It was a dismal day.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 503,
+  "word": "Disrupt",
+  "hindiMeaning": "तितर-बितर करना (V.)",
+  "meaning": "Throw into confusion",
+  "example": "The protest disrupted traffic.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 504,
+  "word": "Diversity",
+  "hindiMeaning": "विविधता (N.)",
+  "meaning": "A range of different things",
+  "example": "India has cultural diversity.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 505,
+  "word": "Divisible",
+  "hindiMeaning": "भाज्य (Adj.)",
+  "meaning": "That can be divided",
+  "example": "10 is divisible by 5.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 506,
+  "word": "Divisor",
+  "hindiMeaning": "भाजक (N.)",
+  "meaning": "A number used to divide another",
+  "example": "2 is a divisor of 10.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 507,
+  "word": "Divulge",
+  "hindiMeaning": "प्रकट करना (V.)",
+  "meaning": "Reveal a secret",
+  "example": "He divulged the truth.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 508,
+  "word": "Domicile",
+  "hindiMeaning": "मूल निवास (N.)",
+  "meaning": "Permanent home",
+  "example": "Delhi is his domicile.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 509,
+  "word": "Dominion",
+  "hindiMeaning": "अधिराज्य (N.)",
+  "meaning": "Area controlled by a ruler",
+  "example": "He expanded his dominion.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 510,
+  "word": "Dormant",
+  "hindiMeaning": "निष्क्रिय (Adj.)",
+  "meaning": "Not active",
+  "example": "The volcano is dormant.",
+  "sscCount": 5,
+  "otherExamCount": 1
+},
+{
+  "id": 511,
+  "word": "Dormitory",
+  "hindiMeaning": "शयनागार (N.)",
+  "meaning": "Large bedroom for many people",
+  "example": "Students live in dormitory.",
+  "sscCount": 5,
+  "otherExamCount": 1
+},
+{
+  "id": 512,
+  "word": "Dorsal",
+  "hindiMeaning": "पीठ सम्बन्धी (Adj.)",
+  "meaning": "Situated on back",
+  "example": "The fish has dorsal fins.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 513,
+  "word": "Double down",
+  "hindiMeaning": "दोहरा प्रयास करना (V.)",
+  "meaning": "Increase commitment",
+  "example": "He doubled down on studies.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 514,
+  "word": "Downpour",
+  "hindiMeaning": "मूसलाधार बारिश (N.)",
+  "meaning": "Heavy sudden rainfall",
+  "example": "A downpour flooded roads.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 515,
+  "word": "Draw",
+  "hindiMeaning": "अनिर्णीत (V.)",
+  "meaning": "A game in which no one wins",
+  "example": "The match was a draw.",
+  "sscCount": 6,
+  "otherExamCount": 0
+},
+{
+  "id": 516,
+  "word": "Drey",
+  "hindiMeaning": "गिलहरी का घोंसला (N.)",
+  "meaning": "Nest of a squirrel",
+  "example": "The squirrel made a drey.",
+  "sscCount": 1,
+  "otherExamCount": 3
+},
+{
+  "id": 517,
+  "word": "Drizzle",
+  "hindiMeaning": "बूंदा-बांदी होना (V.)",
+  "meaning": "Light rain",
+  "example": "It began to drizzle.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 518,
+  "word": "Dromomania",
+  "hindiMeaning": "यात्रा की धुन (N.)",
+  "meaning": "Mania for travel",
+  "example": "He suffers from dromomania.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 519,
+  "word": "Drought",
+  "hindiMeaning": "सूखा (N.)",
+  "meaning": "Dry weather with no rainfall",
+  "example": "Drought destroyed crops.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 520,
+  "word": "Drove",
+  "hindiMeaning": "झुंड (N.)",
+  "meaning": "A herd of animals",
+  "example": "A drove of cattle passed.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 521,
+  "word": "Ductile",
+  "hindiMeaning": "तन्य (Adj.)",
+  "meaning": "Capable of being bent",
+  "example": "Gold is ductile.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 522,
+  "word": "Duel",
+  "hindiMeaning": "द्वंद युद्ध (N.)",
+  "meaning": "Contest between two people",
+  "example": "They fought a duel.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 523,
+  "word": "Dumb",
+  "hindiMeaning": "गूंगा, मूक (Adj.)",
+  "meaning": "One who can’t speak",
+  "example": "He is deaf and dumb.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 524,
+  "word": "Durable",
+  "hindiMeaning": "टिकाऊ (Adj.)",
+  "meaning": "Strong and long-lasting",
+  "example": "This bag is durable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 525,
+  "word": "Dwarf",
+  "hindiMeaning": "बौना (N.)",
+  "meaning": "A person, animal or plant much below the usual height",
+  "example": "He is a dwarf by birth.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 526,
+  "word": "Dyke",
+  "hindiMeaning": "बांध (N.)",
+  "meaning": "A wall built to prevent flooding",
+  "example": "A dyke protects the village.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 527,
+  "word": "Dynasty",
+  "hindiMeaning": "राजवंश (N.)",
+  "meaning": "Succession of rulers of one family",
+  "example": "The Mughal dynasty ruled India.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 528,
+  "word": "Dyslexia",
+  "hindiMeaning": "पढ़ने में कठिनाई (N.)",
+  "meaning": "Disorder involving difficulty in reading",
+  "example": "He suffers from dyslexia.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 529,
+  "word": "Easel",
+  "hindiMeaning": "चित्र बनाने का स्टैंड (N.)",
+  "meaning": "A wooden frame for holding an artist's work",
+  "example": "The painter used an easel.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 530,
+  "word": "Eavesdropper",
+  "hindiMeaning": "छिपकर बातें सुनने वाला (N.)",
+  "meaning": "One who listens secretly to private conversation",
+  "example": "He was caught as an eavesdropper.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 531,
+  "word": "Eccentric",
+  "hindiMeaning": "विचित्र (Adj.)",
+  "meaning": "A man with abnormal habits",
+  "example": "He has eccentric behavior.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 532,
+  "word": "Echo",
+  "hindiMeaning": "प्रतिध्वनि (N.)",
+  "meaning": "Repetition of sound by reflection",
+  "example": "We heard an echo.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 533,
+  "word": "Ecologist",
+  "hindiMeaning": "पर्यावरण वैज्ञानिक (N.)",
+  "meaning": "One who studies environment",
+  "example": "She is an ecologist.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 534,
+  "word": "Ecology",
+  "hindiMeaning": "पर्यावरण विज्ञान (N.)",
+  "meaning": "Study of interaction of people with environment",
+  "example": "Ecology is important today.",
+  "sscCount": 3,
+  "otherExamCount": 2
+},
+{
+  "id": 535,
+  "word": "Economical",
+  "hindiMeaning": "किफायती (Adj.)",
+  "meaning": "Careful in spending",
+  "example": "He is economical.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 536,
+  "word": "Ecstatic",
+  "hindiMeaning": "अत्यंत प्रसन्न (Adj.)",
+  "meaning": "Feeling great happiness",
+  "example": "She was ecstatic with joy.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 537,
+  "word": "Edible",
+  "hindiMeaning": "खाद्य (Adj.)",
+  "meaning": "Fit to be eaten",
+  "example": "These fruits are edible.",
+  "sscCount": 6,
+  "otherExamCount": 1
+},
+{
+  "id": 538,
+  "word": "Edify",
+  "hindiMeaning": "उपदेश देना (V.)",
+  "meaning": "Improve morally or intellectually",
+  "example": "His words edified us.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 539,
+  "word": "Edit",
+  "hindiMeaning": "संपादन करना (V.)",
+  "meaning": "Prepare material for publication",
+  "example": "She edits magazines.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 540,
+  "word": "Efface",
+  "hindiMeaning": "मिटाना (V.)",
+  "meaning": "Rub or wipe out",
+  "example": "He effaced the mark.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 541,
+  "word": "Effect",
+  "hindiMeaning": "प्रभाव (N.)",
+  "meaning": "Result of an action",
+  "example": "Medicine had good effect.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 542,
+  "word": "Effeminate",
+  "hindiMeaning": "नारी जैसा (Adj.)",
+  "meaning": "Man behaving like a woman",
+  "example": "He was mocked as effeminate.",
+  "sscCount": 6,
+  "otherExamCount": 3
+},
+{
+  "id": 543,
+  "word": "Effervescent",
+  "hindiMeaning": "बुलबुले छोड़ने वाला (Adj.)",
+  "meaning": "Give off gas bubbles",
+  "example": "The drink is effervescent.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 544,
+  "word": "Efficient",
+  "hindiMeaning": "कुशल (Adj.)",
+  "meaning": "Productive with minimum waste",
+  "example": "He is an efficient worker.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 545,
+  "word": "Egalitarian",
+  "hindiMeaning": "समानतावादी (Adj.)",
+  "meaning": "Believing in equality of people",
+  "example": "He has egalitarian views.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 546,
+  "word": "Egoist",
+  "hindiMeaning": "अहंकारी (N.)",
+  "meaning": "One who thinks only of himself",
+  "example": "He is an egoist.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 547,
+  "word": "Egotist",
+  "hindiMeaning": "अहंवादी (N.)",
+  "meaning": "One who praises himself",
+  "example": "He behaves like an egotist.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 548,
+  "word": "Egregious",
+  "hindiMeaning": "बेहद खराब (Adj.)",
+  "meaning": "Outrageous and disgraceful",
+  "example": "It was an egregious mistake.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 549,
+  "word": "Electorate",
+  "hindiMeaning": "मतदाता (N.)",
+  "meaning": "All people entitled to vote",
+  "example": "The electorate chose wisely.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 550,
+  "word": "Elegy",
+  "hindiMeaning": "शोकगीत (N.)",
+  "meaning": "A poem that expresses lament for the dead",
+  "example": "He wrote an elegy for his friend.",
+  "sscCount": 5,
+  "otherExamCount": 4
+},
+{
+  "id": 551,
+  "word": "Elf",
+  "hindiMeaning": "परियों जैसा छोटा जीव (N.)",
+  "meaning": "A small mischievous fairy",
+  "example": "The story had an elf character.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 552,
+  "word": "Elocution",
+  "hindiMeaning": "वाक्पटुता (N.)",
+  "meaning": "Art of effective speaking",
+  "example": "She won the elocution contest.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 553,
+  "word": "Elope",
+  "hindiMeaning": "भाग जाना (V.)",
+  "meaning": "To run away secretly with a romantic partner",
+  "example": "They decided to elope.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 554,
+  "word": "Eloquent",
+  "hindiMeaning": "प्रभावशाली (Adj.)",
+  "meaning": "Fluent and persuasive in speaking",
+  "example": "He gave an eloquent speech.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 555,
+  "word": "Elucidate",
+  "hindiMeaning": "स्पष्ट करना (V.)",
+  "meaning": "Make something clear",
+  "example": "Please elucidate your point.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+
+
+  "id": 556,
+  "word": "Elysium",
+  "hindiMeaning": "स्वर्ग (N.)",
+  "meaning": "A paradise with perfect bliss",
+  "example": "He imagined heaven as Elysium.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 557,
+  "word": "Emancipate",
+  "hindiMeaning": "बंधमुक्त करना (V.)",
+  "meaning": "To free from restraint",
+  "example": "The law emancipated slaves.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 558,
+  "word": "Emancipation",
+  "hindiMeaning": "मुक्ति (N.)",
+  "meaning": "Act of setting free from bondage",
+  "example": "Emancipation brought freedom.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 559,
+  "word": "Embargo",
+  "hindiMeaning": "व्यापार प्रतिबंध (N.)",
+  "meaning": "Official ban on trade",
+  "example": "The country imposed an embargo.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 560,
+  "word": "Embed",
+  "hindiMeaning": "अंतःस्थापित करना (V.)",
+  "meaning": "Fix firmly in something",
+  "example": "The nail was embedded in wood.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 561,
+  "word": "Ember",
+  "hindiMeaning": "अंगार (N.)",
+  "meaning": "A small piece of burning coal",
+  "example": "The embers were still hot.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 562,
+  "word": "Embezzle",
+  "hindiMeaning": "गबन करना (V.)",
+  "meaning": "Steal money dishonestly",
+  "example": "He embezzled company funds.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 563,
+  "word": "Embezzlement",
+  "hindiMeaning": "गबन (N.)",
+  "meaning": "Act of misappropriating money",
+  "example": "He was jailed for embezzlement.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 564,
+  "word": "Embody",
+  "hindiMeaning": "मूर्त रूप देना (V.)",
+  "meaning": "Give visible form to an idea",
+  "example": "She embodies kindness.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 565,
+  "word": "Emeritus",
+  "hindiMeaning": "अवकाश प्राप्त (Adj.)",
+  "meaning": "Honorably retired from service",
+  "example": "He is a professor emeritus.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 566,
+  "word": "Emetic",
+  "hindiMeaning": "वमनकारी औषध (N.)",
+  "meaning": "Medicine that causes vomiting",
+  "example": "The doctor gave an emetic.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 567,
+  "word": "Emigrant",
+  "hindiMeaning": "देश छोड़ने वाला (N.)",
+  "meaning": "One who leaves his country",
+  "example": "He became an emigrant.",
+  "sscCount": 9,
+  "otherExamCount": 1
+},
+{
+  "id": 568,
+  "word": "Emissary",
+  "hindiMeaning": "गुप्तचर (N.)",
+  "meaning": "One sent on secret mission",
+  "example": "The king sent an emissary.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 569,
+  "word": "Empathy",
+  "hindiMeaning": "संवेदना (N.)",
+  "meaning": "Ability to understand others' feelings",
+  "example": "She showed empathy.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 570,
+  "word": "Employer",
+  "hindiMeaning": "काम देने वाला (N.)",
+  "meaning": "One who employs",
+  "example": "The employer was kind.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 571,
+  "word": "Encyclopedia",
+  "hindiMeaning": "विश्वकोश (N.)",
+  "meaning": "Book giving knowledge of all fields",
+  "example": "I read an encyclopedia.",
+  "sscCount": 5,
+  "otherExamCount": 1
+},
+{
+  "id": 572,
+  "word": "Endeavour",
+  "hindiMeaning": "प्रयास करना (V.)",
+  "meaning": "Try hard to achieve",
+  "example": "He endeavoured to succeed.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 573,
+  "word": "Endemic",
+  "hindiMeaning": "स्थानीय रोग (Adj.)",
+  "meaning": "Regularly found in a region",
+  "example": "Malaria is endemic here.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 574,
+  "word": "Engulf",
+  "hindiMeaning": "निगल जाना (V.)",
+  "meaning": "Cover completely",
+  "example": "The fire engulfed the house.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 575,
+  "word": "Enigmatic",
+  "hindiMeaning": "रहस्यमय (Adj.)",
+  "meaning": "Difficult to understand",
+  "example": "He has an enigmatic smile.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 576,
+  "word": "Ennui",
+  "hindiMeaning": "ऊब/उदासी (N.)",
+  "meaning": "A state of mental weariness from lack of occupation",
+  "example": "He felt ennui during the holidays.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 577,
+  "word": "Ensemble",
+  "hindiMeaning": "कलाकार मंडली (N.)",
+  "meaning": "A group of performers",
+  "example": "The ensemble performed well.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 578,
+  "word": "Enshrine",
+  "hindiMeaning": "संरक्षित करना (V.)",
+  "meaning": "Preserve and protect",
+  "example": "The law enshrines freedom.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 579,
+  "word": "Entomologist",
+  "hindiMeaning": "कीटविज्ञानी (N.)",
+  "meaning": "A scientist who studies insects",
+  "example": "He is an entomologist.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 580,
+  "word": "Entomology",
+  "hindiMeaning": "कीटविज्ञान (N.)",
+  "meaning": "Study of insects",
+  "example": "She studies entomology.",
+  "sscCount": 9,
+  "otherExamCount": 3
+},
+{
+  "id": 581,
+  "word": "Enviable",
+  "hindiMeaning": "ईर्ष्या के योग्य (Adj.)",
+  "meaning": "Likely to arouse envy",
+  "example": "He has an enviable job.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 582,
+  "word": "Ephemeral",
+  "hindiMeaning": "क्षणिक (Adj.)",
+  "meaning": "Lasting for a very short time",
+  "example": "Fame is ephemeral.",
+  "sscCount": 6,
+  "otherExamCount": 4
+},
+{
+  "id": 583,
+  "word": "Epic",
+  "hindiMeaning": "महाकाव्य (N.)",
+  "meaning": "A long poem on a noble theme",
+  "example": "Ramayana is an epic.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 584,
+  "word": "Epicurean",
+  "hindiMeaning": "भोगवादी (Adj.)",
+  "meaning": "Devoted to pleasure",
+  "example": "He lives an epicurean life.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 585,
+  "word": "Epidemic",
+  "hindiMeaning": "महामारी (N.)",
+  "meaning": "Widespread outbreak of disease",
+  "example": "The epidemic spread fast.",
+  "sscCount": 5,
+  "otherExamCount": 2
+},
+{
+  "id": 586,
+  "word": "Epilepsy",
+  "hindiMeaning": "मिर्गी (N.)",
+  "meaning": "Disease causing unconsciousness",
+  "example": "He suffers from epilepsy.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 587,
+  "word": "Epilogue",
+  "hindiMeaning": "उपसंहार (N.)",
+  "meaning": "A speech at the end of a play",
+  "example": "The epilogue was emotional.",
+  "sscCount": 6,
+  "otherExamCount": 3
+},
+{
+  "id": 588,
+  "word": "Epistle",
+  "hindiMeaning": "काव्यपत्र (N.)",
+  "meaning": "A verse letter",
+  "example": "He wrote an epistle.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 589,
+  "word": "Epitaph",
+  "hindiMeaning": "समाधि-लेख (N.)",
+  "meaning": "Inscription on a tombstone",
+  "example": "The epitaph was touching.",
+  "sscCount": 14,
+  "otherExamCount": 8
+},
+{
+  "id": 590,
+  "word": "Epitome",
+  "hindiMeaning": "उत्कृष्ट उदाहरण (N.)",
+  "meaning": "Perfect example",
+  "example": "She is the epitome of beauty.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 591,
+  "word": "Equator",
+  "hindiMeaning": "भूमध्य रेखा (N.)",
+  "meaning": "Imaginary line dividing Earth",
+  "example": "The equator divides the earth.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 592,
+  "word": "Equilibrium",
+  "hindiMeaning": "संतुलन (N.)",
+  "meaning": "State of perfect balance",
+  "example": "Maintain equilibrium.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 593,
+  "word": "Equinox",
+  "hindiMeaning": "दिन-रात समान (N.)",
+  "meaning": "Equal day and night",
+  "example": "March brings equinox.",
+  "sscCount": 2,
+  "otherExamCount": 2
+},
+{
+  "id": 594,
+  "word": "Eradicable",
+  "hindiMeaning": "उन्मूलनीय (Adj.)",
+  "meaning": "Which can be rooted out",
+  "example": "This disease is eradicable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 595,
+  "word": "Erase",
+  "hindiMeaning": "मिटाना (V.)",
+  "meaning": "Rub out writing",
+  "example": "Erase the mistake.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 596,
+  "word": "Ergomania",
+  "hindiMeaning": "अत्यधिक कार्य-इच्छा (N.)",
+  "meaning": "Excessive desire to work",
+  "example": "He suffers from ergomania.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 597,
+  "word": "Ergophile",
+  "hindiMeaning": "काम का प्रेमी (N.)",
+  "meaning": "A lover of work",
+  "example": "She is an ergophile.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 598,
+  "word": "Erratum",
+  "hindiMeaning": "त्रुटि (N.)",
+  "meaning": "A mistake in a book",
+  "example": "Check the erratum.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 599,
+  "word": "Erudition",
+  "hindiMeaning": "पांडित्य (N.)",
+  "meaning": "Profound scholarly knowledge",
+  "example": "He is known for erudition.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 600,
+  "word": "Escort",
+  "hindiMeaning": "मार्गरक्षक (N.)",
+  "meaning": "One who accompanies for protection",
+  "example": "The officer gave an escort.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 601,
+  "word": "Esteem",
+  "hindiMeaning": "आदर (N.)",
+  "meaning": "Condition of being honoured",
+  "example": "He is held in high esteem.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 602,
+  "word": "Eternal",
+  "hindiMeaning": "अनंत (Adj.)",
+  "meaning": "Lasting forever",
+  "example": "Soul is eternal.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 603,
+  "word": "Eternity",
+  "hindiMeaning": "अनंतकाल (N.)",
+  "meaning": "Endless time",
+  "example": "Love lasts for eternity.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 604,
+  "word": "Ethics",
+  "hindiMeaning": "नैतिकता (N.)",
+  "meaning": "Study of moral values",
+  "example": "He teaches ethics.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 605,
+  "word": "Ethnology",
+  "hindiMeaning": "मानव जाति विज्ञान (N.)",
+  "meaning": "Science of races of mankind",
+  "example": "She studies ethnology.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+  {
+    "id": 606,
+    "word": "Etiolate",
+    "hindiMeaning": "पीला करना (V.)",
+    "meaning": "Make pale by excluding light",
+    "example": "Plants etiolate in darkness.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 607,
+    "word": "Etiquette",
+    "hindiMeaning": "शिष्टाचार (N.)",
+    "meaning": "The customary code of polite behaviour",
+    "example": "Good etiquette is important.",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 608,
+    "word": "Etymology",
+    "hindiMeaning": "शब्दों के उद्गम का शास्त्र (N.)",
+    "meaning": "Study of origin and history of words",
+    "example": "He studies etymology.",
+    "sscCount": 2,
+    "otherExamCount": 1
+  },
+  {
+    "id": 609,
+    "word": "Eugenics",
+    "hindiMeaning": "मनुष्यों की नस्ल सुधार का अध्ययन (N.)",
+    "meaning": "Science of race and human development",
+    "example": "Eugenics is controversial.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 610,
+    "word": "Eulogise",
+    "hindiMeaning": "प्रशंसा करना (V.)",
+    "meaning": "Praise highly in speech or writing",
+    "example": "He eulogised his teacher.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 611,
+    "word": "Eulogy",
+    "hindiMeaning": "प्रशंसा भाषण (N.)",
+    "meaning": "Formal expression of praise",
+    "example": "She gave a eulogy.",
+    "sscCount": 3,
+    "otherExamCount": 1
+  },
+  {
+    "id": 612,
+    "word": "Euphemism",
+    "hindiMeaning": "कोमल अभिव्यक्ति (N.)",
+    "meaning": "Mild expression for blunt words",
+    "example": "He used a euphemism.",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 613,
+    "word": "Euphonic",
+    "hindiMeaning": "सुरीला (Adj.)",
+    "meaning": "Pleasing and sweet sound",
+    "example": "Her voice is euphonic.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 614,
+    "word": "Euphoria",
+    "hindiMeaning": "परम सुख बोध (N.)",
+    "meaning": "Feeling of great happiness",
+    "example": "He felt euphoria.",
+    "sscCount": 2,
+    "otherExamCount": 1
+  },
+  {
+    "id": 615,
+    "word": "Euthanasia",
+    "hindiMeaning": "इच्छामृत्यु (N.)",
+    "meaning": "Gentle and painless death",
+    "example": "Euthanasia is debated.",
+    "sscCount": 4,
+    "otherExamCount": 0
+  },
+  {
+    "id": 616,
+    "word": "Evacuated",
+    "hindiMeaning": "बाहर निकालना (V.)",
+    "meaning": "Removed people from a place",
+    "example": "People were evacuated.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 617,
+    "word": "Evanescent",
+    "hindiMeaning": "क्षणिक (Adj.)",
+    "meaning": "Soon passing out",
+    "example": "Life is evanescent.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 618,
+    "word": "Evict",
+    "hindiMeaning": "बेदखल करना (V.)",
+    "meaning": "Expel from property",
+    "example": "They evicted tenants.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 619,
+    "word": "Evolved",
+    "hindiMeaning": "विकसित (V.)",
+    "meaning": "Develop gradually",
+    "example": "Society evolved slowly.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 620,
+    "word": "Exaggerate",
+    "hindiMeaning": "बढ़ा चढ़ा कर कहना (V.)",
+    "meaning": "Represent larger than reality",
+    "example": "Don’t exaggerate facts.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 621,
+    "word": "Examinee",
+    "hindiMeaning": "परीक्षार्थी (N.)",
+    "meaning": "A person who is examined",
+    "example": "The examinee waited.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 622,
+    "word": "Excerpt",
+    "hindiMeaning": "भाग/अंश (N.)",
+    "meaning": "Short piece from longer work",
+    "example": "Read this excerpt.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 623,
+    "word": "Excursion",
+    "hindiMeaning": "पर्यटन (N.)",
+    "meaning": "Short journey for pleasure",
+    "example": "We went on excursion.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 624,
+    "word": "Exegesis",
+    "hindiMeaning": "व्याख्या (N.)",
+    "meaning": "Critical explanation of text",
+    "example": "He wrote an exegesis.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 625,
+    "word": "Exhilaration",
+    "hindiMeaning": "हर्षोल्लास (N.)",
+    "meaning": "Feeling of excitement",
+    "example": "He felt exhilaration.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 626,
+    "word": "Exigency",
+    "hindiMeaning": "तत्कालिक आवश्यकता (N.)",
+    "meaning": "Urgent need",
+    "example": "Meet the exigency.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 627,
+    "word": "Exit Poll",
+    "hindiMeaning": "निर्गम मत सर्वेक्षण (N.)",
+    "meaning": "Poll of voters leaving booths",
+    "example": "Exit poll predicted result.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 628,
+    "word": "Exodus",
+    "hindiMeaning": "पलायन/निर्गमन (N.)",
+    "meaning": "Mass departure",
+    "example": "There was an exodus.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 629,
+    "word": "Exonerate",
+    "hindiMeaning": "दोषमुक्त करना (V.)",
+    "meaning": "Free from blame",
+    "example": "He was exonerated.",
+    "sscCount": 7,
+    "otherExamCount": 3
+  },
+  {
+    "id": 630,
+    "word": "Exorbitant",
+    "hindiMeaning": "अत्यधिक (Adj.)",
+    "meaning": "Extremely high",
+    "example": "Price is exorbitant.",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 631,
+    "word": "Expanse",
+    "hindiMeaning": "विस्तार (N.)",
+    "meaning": "Large open area",
+    "example": "Wide expanse of land.",
+    "sscCount": 1,
+    "otherExamCount": 1
+  },
+  {
+    "id": 632,
+    "word": "Expatriate",
+    "hindiMeaning": "निर्वासित (N.)",
+    "meaning": "Person living outside native country",
+    "example": "He is an expatriate.",
+    "sscCount": 1,
+    "otherExamCount": 1
+  },
+  {
+    "id": 633,
+    "word": "Expedition",
+    "hindiMeaning": "अभियान (N.)",
+    "meaning": "Journey for special purpose",
+    "example": "They went on expedition.",
+    "sscCount": 1,
+    "otherExamCount": 1
+  }
 ]
