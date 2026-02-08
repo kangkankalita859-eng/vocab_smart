@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 
 import SessionNav from "../components/SessionNav";
+import MobileSidebar from "../components/MobileSidebar";
+import Sidebar from "../components/Sidebar";
 
 import { fetchIdioms } from "../services/idiomsService";
+
+import useMobile from "../hooks/useMobile";
 
 export default function ReadIdioms({
   config,
@@ -12,6 +16,8 @@ export default function ReadIdioms({
 }) {
   const [idioms, setIdioms] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { isMobile } = useMobile();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   /* -------- FETCH IDIOMS BASED ON RANGE -------- */
 
@@ -45,6 +51,21 @@ export default function ReadIdioms({
 
   return (
     <>
+      {/* SIDEBAR - Desktop or Mobile */}
+      {isMobile ? (
+        <MobileSidebar
+          isOpen={mobileMenuOpen}
+          onClose={() => setMobileMenuOpen(false)}
+          onSubjectSelect={() => {}}
+          onSubtopicSelect={() => {}}
+        />
+      ) : (
+        <Sidebar 
+          onSubjectSelect={() => {}}
+          onSubtopicSelect={() => {}}
+        />
+      )}
+
       {/* NAV BAR */}
       <SessionNav
         mode="Read Idioms"
@@ -53,6 +74,8 @@ export default function ReadIdioms({
         onGoRead={() => {}}
         onGoCards={onGoCards}
         onGoHome={onGoHome}
+        isMobile={isMobile}
+        onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
       <div style={page}>

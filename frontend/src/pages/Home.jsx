@@ -188,6 +188,47 @@ export default function Home({ onStart, onIdioms }) {
 
       {/* MAIN CONTENT */}
       <div style={content}>
+        {/* Mobile Navigation Bar */}
+        {isMobile && (
+          <div style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: '60px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0 16px',
+            backgroundColor: '#ffffff',
+            borderBottom: '1px solid #e0e0e0',
+            zIndex: 1000,
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+          }}>
+            <button
+              style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '6px',
+                border: '1px solid #ccc',
+                backgroundColor: '#fff',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '18px'
+              }}
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              ☰
+            </button>
+            <span style={{ fontSize: '16px', fontWeight: '600' }}>
+              Smart Vocabulary Trainer
+            </span>
+            <div style={{ width: '44px' }} />
+          </div>
+        )}
+
         {showPYQ ? (
           <PYQDisplay 
             subject={selectedSubject}
