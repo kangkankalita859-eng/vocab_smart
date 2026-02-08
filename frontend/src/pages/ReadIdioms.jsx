@@ -141,6 +141,7 @@ const page = {
   justifyContent: "center",
   alignItems: "flex-start",
   paddingTop: "80px", // Add padding for fixed navbar
+  marginLeft: "0px", // Remove sidebar margin on desktop
 };
 
 const container = {

@@ -180,19 +180,13 @@ export default function ReadVocab({
 
 
 const page = {
-
   minHeight: "calc(100vh - 60px)",
-
   background: "#f5f5f5",
-
   display: "flex",
-
   justifyContent: "center",
-
   alignItems: "flex-start",
-
   paddingTop: "80px", // Add padding for fixed navbar
-
+  marginLeft: "0px", // Remove sidebar margin on desktop
 };
 
 

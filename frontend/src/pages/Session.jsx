@@ -339,6 +339,7 @@ const container = {
   height: "calc(100vh - 120px)",
   padding: 40,
   paddingTop: "80px", // Add padding for fixed navbar
+  marginLeft: "0px", // Remove sidebar margin on desktop
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
