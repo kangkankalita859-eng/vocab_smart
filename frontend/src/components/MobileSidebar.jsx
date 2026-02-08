@@ -36,13 +36,13 @@ function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
     if (onSubtopicSelect) {
       onSubtopicSelect(subtopic);
     }
-    onClose(); // Close sidebar after selection
+    onClose();
   };
 
   if (!isOpen) return null;
 
-  return React.createElement('div', {
-    style: {
+  return (
+    <div style={{
       position: 'fixed',
       top: 0,
       left: 0,
@@ -51,22 +51,16 @@ function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
       zIndex: 2000,
       display: 'flex'
-    }
-  }, [
-    // Overlay
-    React.createElement('div', {
-      key: 'overlay',
-      style: {
-        flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        onClick: onClose
-      }
-    }),
-    
-    // Sidebar content
-    React.createElement('div', {
-      key: 'sidebar',
-      style: {
+    }}>
+      <div
+        style={{
+          flex: 1,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        }}
+        onClick={onClose}
+      />
+      
+      <div style={{
         width: '280px',
         height: '100vh',
         backgroundColor: '#f8f9fa',
@@ -75,91 +69,87 @@ function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
         overflowY: 'auto',
         transform: 'translateX(0)',
         transition: 'transform 0.3s ease'
-      }
-    }, [
-      // Header with close button
-      React.createElement('div', {
-        key: 'header',
-        style: {
+      }}>
+        <div style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           marginBottom: '20px'
-        }
-      }, [
-        React.createElement('h3', {
-          key: 'title',
-          style: {
+        }}>
+          <h3 style={{
             fontSize: '18px',
             fontWeight: '600',
             color: '#2c3e50',
             margin: 0
-          }
-        }, '📚 Subjects'),
-        
-        React.createElement('button', {
-          key: 'close',
-          style: {
-            width: '32px',
-            height: '32px',
-            borderRadius: '50%',
-            border: '1px solid #ddd',
-            backgroundColor: '#fff',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '16px'
-          },
-          onClick: onClose
-        }, '✕')
-      ]),
-      
-      // Render subjects dynamically
-      ...Object.keys(subjectsData).map(subjectKey => {
-        const subject = subjectsData[subjectKey];
-        const isExpanded = expandedSubject === subjectKey;
-        
-        return [
-          // Subject button
-          React.createElement('div', {
-            key: subjectKey,
-            style: { marginBottom: '10px' }
-          }, React.createElement('div', {
-            style: {
-              padding: '14px',
-              backgroundColor: isExpanded ? '#e3f2fd' : '#fff',
-              border: isExpanded ? '1px solid #2196f3' : '1px solid #e9ecef',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              transition: 'all 0.2s ease',
-              fontSize: '16px'
-            },
-            onClick: () => handleSubjectClick(subjectKey)
-          }, subject.name)),
+          }}>
+            📚 Subjects
+          </h3>
           
-          // Subtopics (shown when subject is expanded)
-          ...(isExpanded ? subject.subtopics.map((subtopic, index) => 
-            React.createElement('div', {
-              key: `${subjectKey}-subtopic-${index}`,
-              style: {
-                marginLeft: '10px',
-                marginTop: '5px',
-                padding: '12px',
-                backgroundColor: selectedSubtopic === subtopic ? '#f3e5f5' : '#fff',
-                border: selectedSubtopic === subtopic ? '1px solid #9c27b0' : '1px solid #e0e0e0',
-                borderRadius: '6px',
-                cursor: 'pointer',
-                fontSize: '14px',
-                transition: 'all 0.2s ease'
-              },
-              onClick: () => handleSubtopicClick(subtopic)
-            }, `• ${subtopic}`)
-          ) : [])
-        ];
-      }).flat())
-    ])
-  ]);
+          <button
+            style={{
+              width: '32px',
+              height: '32px',
+              borderRadius: '50%',
+              border: '1px solid #ddd',
+              backgroundColor: '#fff',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '16px'
+            }}
+            onClick={onClose}
+          >
+            ✕
+          </button>
+        </div>
+        
+        {Object.keys(subjectsData).map(subjectKey => {
+          const subject = subjectsData[subjectKey];
+          const isExpanded = expandedSubject === subjectKey;
+          
+          return (
+            <div key={subjectKey} style={{ marginBottom: '10px' }}>
+              <div
+                style={{
+                  padding: '14px',
+                  backgroundColor: isExpanded ? '#e3f2fd' : '#fff',
+                  border: isExpanded ? '1px solid #2196f3' : '1px solid #e9ecef',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  fontSize: '16px'
+                }}
+                onClick={() => handleSubjectClick(subjectKey)}
+              >
+                {subject.name}
+              </div>
+              
+              {isExpanded && subject.subtopics.map((subtopic, index) => (
+                <div
+                  key={`${subjectKey}-subtopic-${index}`}
+                  style={{
+                    marginLeft: '10px',
+                    marginTop: '5px',
+                    padding: '12px',
+                    backgroundColor: selectedSubtopic === subtopic ? '#f3e5f5' : '#fff',
+                    border: selectedSubtopic === subtopic ? '1px solid #9c27b0' : '1px solid #e0e0e0',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontSize: '14px',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onClick={() => handleSubtopicClick(subtopic)}
+                >
+                  • {subtopic}
+                </div>
+              ))}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default MobileSidebar;
