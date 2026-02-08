@@ -117,7 +117,7 @@ const page = {
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-start",
-  paddingTop: "20px",
+  paddingTop: "80px", // Add padding for fixed navbar
 };
 
 const container = {

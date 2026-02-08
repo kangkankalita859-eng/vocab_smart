@@ -224,7 +224,7 @@ const page = {
 
   alignItems: "flex-start",
 
-  paddingTop: "20px",
+  paddingTop: "80px", // Add padding for fixed navbar
 
 };
 

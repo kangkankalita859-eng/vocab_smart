@@ -23,6 +23,7 @@ const subjectsData = {
 function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
   const [expandedSubject, setExpandedSubject] = useState(null);
   const [selectedSubtopic, setSelectedSubtopic] = useState(null);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleSubjectClick = (subjectKey) => {
     //setExpandedSubject(subjectKey); // Always expand the clicked subject
@@ -39,16 +40,48 @@ function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
     }
     console.log('Selected subtopic:', subtopic);
   };
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return React.createElement('div', {
     style: {
-      width: "250px",
+      width: isCollapsed ? "60px" : "250px",
       height: "100vh",
       backgroundColor: "#f8f9fa",
       borderRight: "1px solid #e9ecef",
-      padding: "20px"
+      padding: isCollapsed ? "10px" : "20px",
+      transition: "all 0.3s ease",
+      position: "relative",
+      overflow: "hidden"
     }
   }, [
-    React.createElement('h3', {
+    // Toggle button
+    React.createElement('button', {
+      key: 'toggle-btn',
+      style: {
+        position: "absolute",
+        top: "20px",
+        right: "10px",
+        width: "30px",
+        height: "30px",
+        borderRadius: "50%",
+        border: "1px solid #ddd",
+        backgroundColor: "#fff",
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: "14px",
+        zIndex: 10,
+        transition: "all 0.2s ease"
+      },
+      onClick: toggleCollapse
+    }, isCollapsed ? '▶' : '◀'),
+
+    // Title (only show when not collapsed)
+    !isCollapsed && React.createElement('h3', {
       key: 'title',
       style: {
         fontSize: "18px",
@@ -59,7 +92,7 @@ function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
     }, '📚 Subjects'),
     
     // Render subjects dynamically
-    ...Object.keys(subjectsData).map(subjectKey => {
+    ...(isCollapsed ? [] : Object.keys(subjectsData).map(subjectKey => {
       const subject = subjectsData[subjectKey];
       const isExpanded = expandedSubject === subjectKey;
       
@@ -99,7 +132,7 @@ function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
           }, `• ${subtopic}`)
         ) : [])
       ];
-    }).flat()
+    }).flat())
   ]);
 }
 

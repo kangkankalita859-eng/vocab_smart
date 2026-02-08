@@ -309,6 +309,7 @@ const mainContainer = {
 const content = {
   flex: 1,
   padding: "40px",
+  paddingTop: "80px", // Add padding for fixed navbar
   overflowY: "auto"
 };
 

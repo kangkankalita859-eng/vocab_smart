@@ -72,6 +72,10 @@ export default function SessionNav({
 /* ---------------- STYLES ---------------- */
 
 const nav = {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
   height: "60px",
   display: "flex",
   alignItems: "center",
@@ -79,6 +83,8 @@ const nav = {
   padding: "0 24px",
   borderBottom: "1px solid #e0e0e0",
   background: "#ffffff",
+  zIndex: 1000,
+  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
 };
 
 const left = {

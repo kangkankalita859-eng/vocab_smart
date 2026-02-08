@@ -338,6 +338,7 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
+  paddingTop: "80px", // Add padding for fixed navbar
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
