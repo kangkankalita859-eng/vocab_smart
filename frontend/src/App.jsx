@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Session from "./pages/Session";
 import ReadVocab from "./pages/ReadVocab";
 import ReadIdioms from "./pages/ReadIdioms";
+import IdiomSession from "./pages/IdiomSession";
 import Complete from "./pages/Complete";
 import TestAPI from "./TestAPI";
 
@@ -58,7 +59,17 @@ export default function App() {
     return (
       <ReadIdioms
         config={config}
-        onGoCards={() => setStage("session")}
+        onGoCards={() => setStage("idiom-session")}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "idiom-session")
+    return (
+      <IdiomSession
+        config={config}
+        onGoRead={() => setStage("read-idioms")}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
       />
