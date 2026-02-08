@@ -122,7 +122,7 @@ const subjectContent = {
   }
 };
 
-export default function Home({ onStart }) {
+export default function Home({ onStart, onIdioms }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const [showPYQ, setShowPYQ] = useState(false);
@@ -148,6 +148,8 @@ export default function Home({ onStart }) {
     // Handle different module types
     if (module.title.includes('Vocabulary') || module.title.includes('One Word')) {
       onStart({ start: 0, limit: 250 });
+    } else if (module.title.includes('Idioms & Phrases')) {
+      onIdioms({ start: 0, limit: 250 });
     } else if (module.title.includes('PYQ')) {
       setShowPYQ(true);
     } else if (module.title.includes('Grammar')) {
@@ -258,10 +260,21 @@ export default function Home({ onStart }) {
                     <span style={{ ...activeTag, backgroundColor: "#388e3c" }}>Available</span>
                   </div>
 
+                  {/* IDIOMS & PHRASES MODULE */}
+                  <div
+                    style={{ ...card, borderColor: "#e67e22" }}
+                    onClick={() =>
+                      onIdioms({ start: 0, limit: 250 })
+                    }
+                  >
+                    <h3>🎭 Idioms & Phrases</h3>
+                    <p>Learn idioms and phrases with SSC exam counts</p>
+                    <span style={{ ...activeTag, backgroundColor: "#e67e22" }}>Available</span>
+                  </div>
+
                   {/* COMING SOON MODULES */}
                   <Module title="Synonyms" />
                   <Module title="Antonyms" />
-                  <Module title="Idioms & Phrases" />
                   <Module title="Homonyms" />
                   <Module title="Spelling" />
                 </>

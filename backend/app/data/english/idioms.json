@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "phrase": "A bolt from the blue",
+    "meaning": "A sudden and unexpected event",
+    "hindiMeaning": "अचानक और अप्रत्याशित घटना",
+    "sscCount": 8,
+    "example": "The news of his resignation came like a bolt from the blue."
+  },
+  {
+    "id": 2,
+    "phrase": "A piece of cake",
+    "meaning": "Something very easy to do",
+    "hindiMeaning": "बहुत आसान काम",
+    "sscCount": 12,
+    "example": "The mathematics test was a piece of cake for him."
+  },
+  {
+    "id": 3,
+    "phrase": "Break the ice",
+    "meaning": "To initiate conversation in a social setting",
+    "hindiMeaning": "बातचीत शुरू करना",
+    "sscCount": 6,
+    "example": "He told a joke to break the ice at the party."
+  },
+  {
+    "id": 4,
+    "phrase": "Call it a day",
+    "meaning": "To stop working for the day",
+    "hindiMeaning": "काम बंद करना",
+    "sscCount": 4,
+    "example": "After working for ten hours, we decided to call it a day."
+  },
+  {
+    "id": 5,
+    "phrase": "Hit the nail on the head",
+    "meaning": "To be exactly right about something",
+    "hindiMeaning": "सटीक कहना",
+    "sscCount": 7,
+    "example": "You hit the nail on the head with that analysis."
+  },
+  {
+    "id": 6,
+    "phrase": "Let the cat out of the bag",
+    "meaning": "To reveal a secret accidentally",
+    "hindiMeaning": "राज खोल देना",
+    "sscCount": 9,
+    "example": "She let the cat out of the bag about the surprise party."
+  },
+  {
+    "id": 7,
+    "phrase": "Once in a blue moon",
+    "meaning": "Very rarely",
+    "hindiMeaning": "बहुत कम बार",
+    "sscCount": 5,
+    "example": "I see my cousin once in a blue moon."
+  },
+  {
+    "id": 8,
+    "phrase": "Spill the beans",
+    "meaning": "To reveal secret information",
+    "hindiMeaning": "भेद खोलना",
+    "sscCount": 6,
+    "example": "The detective threatened to spill the beans about the conspiracy."
+  },
+  {
+    "id": 9,
+    "phrase": "Take with a pinch of salt",
+    "meaning": "To not believe something completely",
+    "hindiMeaning": "संदेह के साथ सुनना",
+    "sscCount": 3,
+    "example": "You should take his stories with a pinch of salt."
+  },
+  {
+    "id": 10,
+    "phrase": "Under the weather",
+    "meaning": "Feeling ill or unwell",
+    "hindiMeaning": "बीमार महसूस करना",
+    "sscCount": 8,
+    "example": "She's feeling under the weather today."
+  },
+  {
+    "id": 11,
+    "phrase": "Burn the midnight oil",
+    "meaning": "To work late into the night",
+    "hindiMeaning": "रात भर जागकर काम करना",
+    "sscCount": 7,
+    "example": "Students often burn the midnight oil before exams."
+  },
+  {
+    "id": 12,
+    "phrase": "Cost an arm and a leg",
+    "meaning": "To be very expensive",
+    "hindiMeaning": "बहुत महंगा होना",
+    "sscCount": 10,
+    "example": "The new car cost him an arm and a leg."
+  },
+  {
+    "id": 13,
+    "phrase": "Face the music",
+    "meaning": "To accept criticism or punishment",
+    "hindiMeaning": "स्थिति का सामना करना",
+    "sscCount": 4,
+    "example": "After cheating, he had to face the music."
+  },
+  {
+    "id": 14,
+    "phrase": "Get cold feet",
+    "meaning": "To become nervous or frightened",
+    "hindiMeaning": "डर जाना",
+    "sscCount": 5,
+    "example": "He got cold feet just before the wedding."
+  },
+  {
+    "id": 15,
+    "phrase": "Hold your horses",
+    "meaning": "Wait or be patient",
+    "hindiMeaning": "धीरज रखना",
+    "sscCount": 6,
+    "example": "Hold your horses! Let me finish speaking first."
+  }
+]

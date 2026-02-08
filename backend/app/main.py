@@ -6,6 +6,8 @@ from api.vocab import router as vocab_router
 
 from api.pyq import router as pyq_router
 
+from api.idioms import router as idioms_router
+
 import os
 
 from dotenv import load_dotenv
@@ -53,6 +55,8 @@ api_prefix = os.getenv("API_PREFIX", "/api")
 app.include_router(vocab_router, prefix=api_prefix)
 
 app.include_router(pyq_router, prefix=api_prefix)
+
+app.include_router(idioms_router, prefix=api_prefix)
 
 
 

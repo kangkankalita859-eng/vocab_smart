@@ -2,6 +2,7 @@ import { useState } from "react";
 import Home from "./pages/Home";
 import Session from "./pages/Session";
 import ReadVocab from "./pages/ReadVocab";
+import ReadIdioms from "./pages/ReadIdioms";
 import Complete from "./pages/Complete";
 import TestAPI from "./TestAPI";
 
@@ -24,6 +25,10 @@ export default function App() {
             setStage("session");
           }
         }}
+        onIdioms={(c) => {
+          setConfig(c);
+          setStage("read-idioms");
+        }}
       />
     );
 
@@ -42,6 +47,16 @@ export default function App() {
   if (stage === "read")
     return (
       <ReadVocab
+        config={config}
+        onGoCards={() => setStage("session")}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "read-idioms")
+    return (
+      <ReadIdioms
         config={config}
         onGoCards={() => setStage("session")}
         onUpdateConfig={(c) => setConfig(c)}
