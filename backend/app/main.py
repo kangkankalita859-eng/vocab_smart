@@ -2,9 +2,9 @@ from fastapi import FastAPI
 
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.vocab import router as vocab_router
+from app.api.vocab import router as vocab_router
 
-from api.pyq import router as pyq_router
+from app.api.pyq import router as pyq_router
 
 import os
 
