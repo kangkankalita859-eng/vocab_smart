@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
-import Sidebar from "../components/Sidebar";
 
 import { fetchIdioms } from "../services/idiomsService";
 
@@ -51,21 +50,6 @@ export default function ReadIdioms({
 
   return (
     <>
-      {/* SIDEBAR - Desktop or Mobile */}
-      {isMobile ? (
-        <MobileSidebar
-          isOpen={mobileMenuOpen}
-          onClose={() => setMobileMenuOpen(false)}
-          onSubjectSelect={() => {}}
-          onSubtopicSelect={() => {}}
-        />
-      ) : (
-        <Sidebar 
-          onSubjectSelect={() => {}}
-          onSubtopicSelect={() => {}}
-        />
-      )}
-
       {/* NAV BAR */}
       <SessionNav
         mode="Read Idioms"
@@ -128,6 +112,16 @@ export default function ReadIdioms({
           )}
         </div>
       </div>
+
+      {/* Mobile sidebar only - no desktop sidebar */}
+      {isMobile && (
+        <MobileSidebar
+          isOpen={mobileMenuOpen}
+          onClose={() => setMobileMenuOpen(false)}
+          onSubjectSelect={() => {}}
+          onSubtopicSelect={() => {}}
+        />
+      )}
     </>
   );
 }

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
-import Sidebar from "../components/Sidebar";
 
 import { fetchVocab } from "../services/vocabService";
 
@@ -94,22 +93,6 @@ export default function ReadVocab({
 
   return (
     <>
-
-      {/* SIDEBAR - Desktop or Mobile */}
-      {isMobile ? (
-        <MobileSidebar
-          isOpen={mobileMenuOpen}
-          onClose={() => setMobileMenuOpen(false)}
-          onSubjectSelect={() => {}}
-          onSubtopicSelect={() => {}}
-        />
-      ) : (
-        <Sidebar 
-          onSubjectSelect={() => {}}
-          onSubtopicSelect={() => {}}
-        />
-      )}
-
       {/* NAV BAR */}
       <SessionNav
         mode="Read"
@@ -168,8 +151,17 @@ export default function ReadVocab({
           )}
         </div>
       </div>
-    </>
 
+      {/* Mobile sidebar only - no desktop sidebar */}
+      {isMobile && (
+        <MobileSidebar
+          isOpen={mobileMenuOpen}
+          onClose={() => setMobileMenuOpen(false)}
+          onSubjectSelect={() => {}}
+          onSubtopicSelect={() => {}}
+        />
+      )}
+    </>
   );
 
 }
