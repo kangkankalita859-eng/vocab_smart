@@ -7,9 +7,15 @@ router = APIRouter()
 @router.get("/pyq")
 def get_pyq(subject: str = Query(None), topic: str = Query(None), start: int = Query(0, ge=0), limit: int = Query(None, ge=1)):
     try:
-        # Get the path to pyq.json - use single file approach
+        # Get the path to pyq.json - use subject-specific folders
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        pyq_path = os.path.join(current_dir, "..", "data", "pyq.json")
+        
+        if subject and topic:
+            # Look in subject/topic specific folder
+            pyq_path = os.path.join(current_dir, "..", "data", subject.lower(), topic.lower().replace(" ", "-"), "pyq.json")
+        else:
+            # Use general pyq.json
+            pyq_path = os.path.join(current_dir, "..", "data", "pyq.json")
         
         with open(pyq_path, "r", encoding="utf-8") as f:
             pyq_data = json.load(f)
