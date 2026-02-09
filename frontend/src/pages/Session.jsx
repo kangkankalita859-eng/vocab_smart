@@ -41,6 +41,9 @@ export default function Session({
   const [knownDeck, setKnownDeck] = useState([]);
   const [unknownDeck, setUnknownDeck] = useState([]);
 
+  const [savedDecks, setSavedDecks] = useState([]);
+  const [selectedDeckIds, setSelectedDeckIds] = useState([]);
+
   const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
 
@@ -118,10 +121,53 @@ export default function Session({
   const handleAddDeck = () => {
     if (unknownDeck.length === 0) return;
 
+    setSavedDecks((p) => [
+      ...p,
+      { id: Date.now(), unknownCards: [...unknownDeck] },
+    ]);
+
     setActiveDeck([]);
     setOriginalDeck([]);
     setKnownDeck([]);
     setUnknownDeck([]);
+  };
+
+  /* ---------------- SAVED DECK REVISION ---------------- */
+
+  const reviseSingleDeck = (deck) => {
+    setActiveDeck(deck.unknownCards);
+    setOriginalDeck(deck.unknownCards);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+
+    setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
+    setSelectedDeckIds([]);
+  };
+
+  const reviseSelectedDecks = () => {
+    const cards = savedDecks
+      .filter((d) => selectedDeckIds.includes(d.id))
+      .flatMap((d) => d.unknownCards);
+
+    setActiveDeck(cards);
+    setOriginalDeck(cards);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+
+    setSavedDecks((p) =>
+      p.filter((d) => !selectedDeckIds.includes(d.id))
+    );
+    setSelectedDeckIds([]);
+  };
+
+  const reviseAllDecks = () => {
+    const cards = savedDecks.flatMap((d) => d.unknownCards);
+    setActiveDeck(cards);
+    setOriginalDeck(cards);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+    setSavedDecks([]);
+    setSelectedDeckIds([]);
   };
 
   /* ---------------- RANGE APPLY ---------------- */
@@ -176,6 +222,51 @@ export default function Session({
         onGoHome={onGoHome}
       />
 
+      {savedDecks.length > 0 && (
+        <div style={deckPanel}>
+          {savedDecks.map((d, i) => (
+            <div key={d.id} style={deckChip}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={selectedDeckIds.includes(d.id)}
+                  onChange={(e) =>
+                    setSelectedDeckIds((p) =>
+                      e.target.checked
+                        ? [...p, d.id]
+                        : p.filter((id) => id !== d.id)
+                    )
+                  }
+                />
+                <strong style={{ marginLeft: 6 }}>Deck {i + 1}</strong>
+              </label>
+
+              <div style={{ fontSize: 12 }}>❌ {d.unknownCards.length}</div>
+
+              <button
+                style={{ ...secondaryBtn, marginTop: 6 }}
+                onClick={() => reviseSingleDeck(d)}
+              >
+                ▶ Revise
+              </button>
+            </div>
+          ))}
+
+          <div style={{ marginLeft: "auto", display: "flex", gap: 10 }}>
+            <button
+              style={secondaryBtn}
+              disabled={!selectedDeckIds.length}
+              onClick={reviseSelectedDecks}
+            >
+              🔀 Revise Selected
+            </button>
+            <button style={primaryBtn} onClick={reviseAllDecks}>
+              🔁 Revise All
+            </button>
+          </div>
+        </div>
+      )}
+
       <div style={container}>
         <MiniStack title="❌ Unknown" count={unknownDeck.length} />
 
@@ -226,6 +317,23 @@ export default function Session({
 }
 
 /* ---------------- STYLES ---------------- */
+
+const deckPanel = {
+  display: "flex",
+  gap: 10,
+  padding: "10px 24px",
+  borderBottom: "1px solid #ddd",
+  background: "#fafafa",
+  alignItems: "center",
+};
+
+const deckChip = {
+  padding: "6px 10px",
+  borderRadius: 6,
+  background: "#e3f2fd",
+  fontSize: 12,
+  minWidth: 120,
+};
 
 const container = {
   display: "flex",
