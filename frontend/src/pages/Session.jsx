@@ -3,6 +3,32 @@ import FlashCard from "../components/FlashCard";
 import SessionNav from "../components/SessionNav";
 import { fetchVocab } from "../services/vocabService";
 
+/* ---------------- MINI STACK ---------------- */
+
+function MiniStack({ title, count }) {
+  return (
+    <div style={miniStack}>
+      <h4>{title}</h4>
+      <div style={{ position: "relative", height: "90px", margin: "8px 0" }}>
+        {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
+          <div
+            key={i}
+            style={{
+              ...miniCard,
+              top: i * 6,
+              left: i * 4,
+              zIndex: i,
+            }}
+          />
+        ))}
+      </div>
+      <p>{count}</p>
+    </div>
+  );
+}
+
+/* ---------------- MAIN SESSION ---------------- */
+
 export default function Session({
   config,
   onComplete,
@@ -11,7 +37,14 @@ export default function Session({
   onUpdateConfig,
 }) {
   const [activeDeck, setActiveDeck] = useState([]);
+  const [originalDeck, setOriginalDeck] = useState([]);
+  const [knownDeck, setKnownDeck] = useState([]);
+  const [unknownDeck, setUnknownDeck] = useState([]);
+
   const [loading, setLoading] = useState(true);
+  const [isShuffling, setIsShuffling] = useState(false);
+
+  /* ---------------- FETCH VOCAB ---------------- */
 
   useEffect(() => {
     if (!config) return;
@@ -19,12 +52,14 @@ export default function Session({
     setLoading(true);
     fetchVocab(config.start, config.limit)
       .then((data) => {
-        console.log('Fetched data:', data);
         if (data.status === 'success') {
           setActiveDeck(data.data);
+          setOriginalDeck(data.data);
         } else {
           console.error('API Error:', data.message);
         }
+        setKnownDeck([]);
+        setUnknownDeck([]);
         setLoading(false);
       })
       .catch((error) => {
@@ -33,34 +68,221 @@ export default function Session({
       });
   }, [config]);
 
-  if (loading) return <div style={{ textAlign: "center", padding: "50px" }}>Loading…</div>;
+  /* ---------------- CARD ACTIONS ---------------- */
 
-  if (activeDeck.length === 0) {
-    return <div style={{ textAlign: "center", padding: "50px" }}>No cards available</div>;
+  const handleKnown = () => {
+    const card = activeDeck[0];
+    setKnownDeck((p) => [...p, card]);
+    setActiveDeck((p) => p.slice(1));
+  };
+
+  const handleUnknown = () => {
+    const card = activeDeck[0];
+    setUnknownDeck((p) => [...p, card]);
+    setActiveDeck((p) => p.slice(1));
+  };
+
+  /* ---------------- SHUFFLE (ANIMATED) ---------------- */
+
+  const shuffleDeck = () => {
+    if (activeDeck.length <= 1) return;
+
+    setIsShuffling(true);
+
+    setTimeout(() => {
+      const shuffled = [...activeDeck];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      setActiveDeck(shuffled);
+      setIsShuffling(false);
+    }, 650);
+  };
+
+  const unshuffleDeck = () => {
+    setActiveDeck(originalDeck);
+  };
+
+  /* ---------------- REVISION ---------------- */
+
+  const handleReviseUnknown = () => {
+    setActiveDeck(unknownDeck);
+    setOriginalDeck(unknownDeck);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+  };
+
+  /* ---------------- SAVE DECK ---------------- */
+
+  const handleAddDeck = () => {
+    if (unknownDeck.length === 0) return;
+
+    setActiveDeck([]);
+    setOriginalDeck([]);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+  };
+
+  /* ---------------- RANGE APPLY ---------------- */
+
+  const handleApplyRange = (c) => onUpdateConfig(c);
+
+  /* ---------------- LOADING ---------------- */
+
+  if (loading) return <p style={{ textAlign: "center" }}>Loading…</p>;
+
+  /* ---------------- DECK FINISHED ---------------- */
+
+  if (activeDeck.length === 0 && originalDeck.length > 0) {
+    return (
+      <>
+        <SessionNav
+          mode="Cards"
+          config={config}
+          onApplyRange={handleApplyRange}
+          onGoRead={onGoRead}
+          onGoHome={onGoHome}
+        />
+
+        <div style={center}>
+          <h2>Deck Finished</h2>
+          <p>Known: {knownDeck.length} | Unknown: {unknownDeck.length}</p>
+
+          <div style={{ display: "flex", gap: "14px" }}>
+            {unknownDeck.length > 0 && (
+              <button style={secondaryBtn} onClick={handleReviseUnknown}>
+                🔁 Revise Unknown
+              </button>
+            )}
+            <button style={primaryBtn} onClick={handleAddDeck}>
+              ➕ Add Deck
+            </button>
+          </div>
+        </div>
+      </>
+    );
   }
 
+  /* ---------------- UI ---------------- */
+
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>Flashcard Session (Debug Mode)</h2>
-      <p>Cards loaded: {activeDeck.length}</p>
-      
-      <div style={{ 
-        width: "320px", 
-        height: "210px", 
-        margin: "20px auto",
-        border: "2px solid red",
-        background: "yellow"
-      }}>
-        <FlashCard
-          card={activeDeck[0]}
-          onKnown={() => console.log('Known clicked')}
-          onUnknown={() => console.log('Unknown clicked')}
-          showActions={true}
-        />
+    <>
+      <SessionNav
+        mode="Cards"
+        config={config}
+        onApplyRange={handleApplyRange}
+        onGoRead={onGoRead}
+        onGoHome={onGoHome}
+      />
+
+      <div style={container}>
+        <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+
+        <div style={deckWrapper}>
+          <div style={deckArea}>
+            {activeDeck.slice(0, 6).map((card, index) => (
+              <div
+                key={card.id}
+                style={{
+                  position: "absolute",
+                  top: index * 10 + (isShuffling ? Math.random() * 12 : 0),
+                  left: index * 8 + (isShuffling ? Math.random() * 24 - 12 : 0),
+                  transform: isShuffling
+                    ? `rotate(${Math.random() * 20 - 10}deg)`
+                    : "rotate(0deg)",
+                  transition: "all 0.65s cubic-bezier(.4,0,.2,1)",
+                  zIndex: 100 - index,
+                  pointerEvents: index === 0 ? "auto" : "none",
+                }}
+              >
+                <FlashCard
+                  card={card}
+                  onKnown={handleKnown}
+                  onUnknown={handleUnknown}
+                  showActions={index === 0}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div style={shuffleBar}>
+            <button style={secondaryBtn} onClick={shuffleDeck}>
+              🔀 Shuffle
+            </button>
+            <button style={secondaryBtn} onClick={unshuffleDeck}>
+              ↩️ Unshuffle
+            </button>
+          </div>
+        </div>
+
+        <div style={stats}>
+          <MiniStack title="Known" count={knownDeck.length} />
+          <MiniStack title="Remaining" count={activeDeck.length} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
+
+/* ---------------- STYLES ---------------- */
+
+const container = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  height: "calc(100vh - 120px)",
+  padding: 40,
+  paddingTop: "80px",
+};
+
+const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
+
+const deckArea = { position: "relative", width: 340, height: 440 };
+
+const shuffleBar = { marginTop: 18, display: "flex", gap: 12 };
+
+const miniStack = { width: 140, textAlign: "center" };
+
+const miniCard = {
+  position: "absolute",
+  width: 70,
+  height: 45,
+  background: "#e0e0e0",
+  borderRadius: 6,
+  boxShadow: "0 3px 8px rgba(0,0,0,.2)",
+};
+
+const center = {
+  height: "calc(100vh - 60px)",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+};
+
+const primaryBtn = {
+  padding: "12px 20px",
+  borderRadius: 8,
+  border: "none",
+  background: "#1976d2",
+  color: "#fff",
+  cursor: "pointer",
+};
+
+const secondaryBtn = {
+  padding: "8px 14px",
+  borderRadius: 6,
+  border: "1px solid #aaa",
+  background: "#fff",
+  cursor: "pointer",
+};
+
+const stats = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 20,
+};
 
 
 
