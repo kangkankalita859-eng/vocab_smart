@@ -342,7 +342,7 @@ const container = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  height: "calc(100vh - 120px)",
+  height: "calc(100vh - 60px)",
   padding: 40,
   paddingTop: "80px",
 };
