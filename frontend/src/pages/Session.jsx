@@ -295,25 +295,14 @@ export default function Session({
             {activeDeck.slice(0, 6).map((card, index) => (
               <div
                 key={card.id}
+                className={isShuffling ? "flashcard shuffle" : "flashcard"}
                 style={{
                   position: "absolute",
                   top: index * 10 + (isShuffling ? Math.random() * 12 : 0),
                   left: index * 8 + (isShuffling ? Math.random() * 24 - 12 : 0),
-                  transform: `rotate(${isShuffling ? Math.random() * 8 - 4 : 0}deg)`,
-                  transition: isShuffling ? "all 0.6s ease-in-out" : "none",
                   zIndex: index,
-                  width: 220,
-                  height: 120,
-                  background: "#fff",
-                  borderRadius: 8,
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                  border: "1px solid #e0e0e0",
-                  padding: 12,
-                  fontSize: 12,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  width: 320,
+                  height: 210,
                 }}
               >
                 {index === 0 ? (
@@ -324,8 +313,26 @@ export default function Session({
                     showActions={true}
                   />
                 ) : (
-                  <div style={{ textAlign: "center" }}>
-                    <strong>{card.word}</strong>
+                  <div style={{
+                    width: "100%",
+                    height: "100%",
+                    background: "linear-gradient(180deg, #ffffff 0%, #fafafa 100%)",
+                    borderRadius: "16px",
+                    border: "1px solid #e6e6e6",
+                    boxShadow: "0 10px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "24px",
+                    textAlign: "center",
+                    backfaceVisibility: "hidden",
+                  }}>
+                    <h2 style={{
+                      fontSize: "30px",
+                      fontWeight: "600",
+                      letterSpacing: "0.4px",
+                      color: "#111",
+                    }}>{card.word}</h2>
                   </div>
                 )}
               </div>
@@ -401,7 +408,7 @@ const container = {
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
 
-const deckArea = { position: "relative", width: 340, height: 440 };
+const deckArea = { position: "relative", width: 320, height: 210 };
 
 const shuffleBar = { marginTop: 18, display: "flex", gap: 12 };
 
