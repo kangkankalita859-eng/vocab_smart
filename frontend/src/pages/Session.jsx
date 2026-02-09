@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FlashCard from "../components/FlashCard";
 import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
@@ -6,6 +6,7 @@ import useFlashcards from "../hooks/useFlashcards";
 import useAuth from "../hooks/useAuth";
 import LoginModal from "../components/LoginModal";
 import useMobile from "../hooks/useMobile";
+import { fetchVocab } from "../services/vocabService";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -40,38 +41,155 @@ export default function Session({
   onGoHome,
   onUpdateConfig,
 }) {
+  const [activeDeck, setActiveDeck] = useState([]);
+  const [originalDeck, setOriginalDeck] = useState([]);
+  const [knownDeck, setKnownDeck] = useState([]);
+  const [unknownDeck, setUnknownDeck] = useState([]);
+  const [savedDecks, setSavedDecks] = useState([]);
+  const [selectedDeckIds, setSelectedDeckIds] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [isShuffling, setIsShuffling] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile } = useMobile();
-  
-  const {
-    cards,
-    known,
-    unknown,
-    currentIndex,
-    loading,
-    user,
-    markKnown,
-    markUnknown,
-    reviseUnknown,
-    reset,
-    isComplete,
-    currentCard,
-    remainingCards,
-    progressLoaded
-  } = useFlashcards(config);
+  const { user, showLoginModal, setShowLoginModal, requireAuth } = useAuth();
 
-  const { showLoginModal, setShowLoginModal, login, logout, requireAuth } = useAuth();
+  /* ---------------- FETCH VOCAB ---------------- */
+
+  useEffect(() => {
+    if (!config) return;
+
+    setLoading(true);
+    fetchVocab(config.start, config.limit)
+      .then((data) => {
+        if (data.status === 'success') {
+          setActiveDeck(data.data);
+          setOriginalDeck(data.data);
+        } else {
+          console.error('API Error:', data.message);
+        }
+        setKnownDeck([]);
+        setUnknownDeck([]);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error);
+        setLoading(false);
+      });
+  }, [config]);
+
+  /* ---------------- CARD ACTIONS ---------------- */
+
+  const handleKnown = () => {
+    const card = activeDeck[0];
+    setKnownDeck((p) => [...p, card]);
+    setActiveDeck((p) => p.slice(1));
+  };
+
+  const handleUnknown = () => {
+    const card = activeDeck[0];
+    setUnknownDeck((p) => [...p, card]);
+    setActiveDeck((p) => p.slice(1));
+  };
 
   // Require authentication for flashcard progress saving
   const handleCardAction = (action) => {
     if (!requireAuth()) return;
     
     if (action === 'known') {
-      markKnown();
+      handleKnown();
     } else if (action === 'unknown') {
-      markUnknown();
+      handleUnknown();
     }
   };
+
+  /* ---------------- SHUFFLE (ANIMATED) ---------------- */
+
+  const shuffleDeck = () => {
+    if (activeDeck.length <= 1) return;
+
+    setIsShuffling(true);
+
+    setTimeout(() => {
+      const shuffled = [...activeDeck];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      setActiveDeck(shuffled);
+      setIsShuffling(false);
+    }, 650); // ⬅ animation duration
+  };
+
+  const unshuffleDeck = () => {
+    setActiveDeck(originalDeck);
+  };
+
+  /* ---------------- REVISION ---------------- */
+
+  const handleReviseUnknown = () => {
+    setActiveDeck(unknownDeck);
+    setOriginalDeck(unknownDeck);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+  };
+
+  /* ---------------- SAVE DECK ---------------- */
+
+  const handleAddDeck = () => {
+    if (unknownDeck.length === 0) return;
+
+    setSavedDecks((p) => [
+      ...p,
+      { id: Date.now(), unknownCards: [...unknownDeck] },
+    ]);
+
+    setActiveDeck([]);
+    setOriginalDeck([]);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+  };
+
+  /* ---------------- SAVED DECK REVISION ---------------- */
+
+  const reviseSingleDeck = (deck) => {
+    setActiveDeck(deck.unknownCards);
+    setOriginalDeck(deck.unknownCards);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+
+    setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
+    setSelectedDeckIds([]);
+  };
+
+  const reviseSelectedDecks = () => {
+    const cards = savedDecks
+      .filter((d) => selectedDeckIds.includes(d.id))
+      .flatMap((d) => d.unknownCards);
+
+    setActiveDeck(cards);
+    setOriginalDeck(cards);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+
+    setSavedDecks((p) =>
+      p.filter((d) => !selectedDeckIds.includes(d.id))
+    );
+    setSelectedDeckIds([]);
+  };
+
+  const reviseAllDecks = () => {
+    const cards = savedDecks.flatMap((d) => d.unknownCards);
+    setActiveDeck(cards);
+    setOriginalDeck(cards);
+    setKnownDeck([]);
+    setUnknownDeck([]);
+    setSavedDecks([]);
+    setSelectedDeckIds([]);
+  };
+
+  /* ---------------- RANGE APPLY ---------------- */
+
+  const handleApplyRange = (c) => onUpdateConfig(c);
 
   /* ---------------- LOADING ---------------- */
 
@@ -79,44 +197,32 @@ export default function Session({
 
   /* ---------------- DECK FINISHED ---------------- */
 
-  if (isComplete && cards.length > 0) {
+  if (activeDeck.length === 0 && originalDeck.length > 0) {
     return (
       <>
         <SessionNav
           mode="Cards"
           config={config}
-          onApplyRange={onUpdateConfig}
+          onApplyRange={handleApplyRange}
           onGoRead={onGoRead}
           onGoHome={onGoHome}
-          isMobile={isMobile}
-          onMenuToggle={() => setMobileMenuOpen(true)}
         />
 
-        <div style={container}>
+        <div style={center}>
           <h2>Deck Finished</h2>
-          <p>Known: {known.length} | Unknown: {unknown.length}</p>
+          <p>Known: {knownDeck.length} | Unknown: {unknownDeck.length}</p>
 
           <div style={{ display: "flex", gap: "14px" }}>
-            {unknown.length > 0 && (
-              <button style={secondaryBtn} onClick={reviseUnknown}>
-                🔁 Revise Unknown ({unknown.length})
+            {unknownDeck.length > 0 && (
+              <button style={secondaryBtn} onClick={handleReviseUnknown}>
+                🔁 Revise Unknown
               </button>
             )}
-            <button style={primaryBtn} onClick={reset}>
-              🔄 Restart Deck
+            <button style={primaryBtn} onClick={handleAddDeck}>
+              ➕ Add Deck
             </button>
           </div>
         </div>
-
-        {/* Mobile sidebar only */}
-        {isMobile && (
-          <MobileSidebar
-            isOpen={mobileMenuOpen}
-            onClose={() => setMobileMenuOpen(false)}
-            onSubjectSelect={() => {}}
-            onSubtopicSelect={() => {}}
-          />
-        )}
       </>
     );
   }
@@ -128,49 +234,83 @@ export default function Session({
       <SessionNav
         mode="Cards"
         config={config}
-        onApplyRange={onUpdateConfig}
+        onApplyRange={handleApplyRange}
         onGoRead={onGoRead}
         onGoHome={onGoHome}
-        isMobile={isMobile}
-        onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
+      {savedDecks.length > 0 && (
+        <div style={deckPanel}>
+          {savedDecks.map((d, i) => (
+            <div key={d.id} style={deckChip}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={selectedDeckIds.includes(d.id)}
+                  onChange={(e) =>
+                    setSelectedDeckIds((p) =>
+                      e.target.checked
+                        ? [...p, d.id]
+                        : p.filter((id) => id !== d.id)
+                    )
+                  }
+                />
+                <strong style={{ marginLeft: 6 }}>Deck {i + 1}</strong>
+              </label>
+
+              <div style={{ fontSize: 12 }}>❌ {d.unknownCards.length}</div>
+
+              <button
+                style={{ ...secondaryBtn, marginTop: 6 }}
+                onClick={() => reviseSingleDeck(d)}
+              >
+                ▶ Revise
+              </button>
+            </div>
+          ))}
+
+          <div style={{ marginLeft: "auto", display: "flex", gap: 10 }}>
+            <button
+              style={secondaryBtn}
+              disabled={!selectedDeckIds.length}
+              onClick={reviseSelectedDecks}
+            >
+              🔀 Revise Selected
+            </button>
+            <button style={primaryBtn} onClick={reviseAllDecks}>
+              🔁 Revise All
+            </button>
+          </div>
+        </div>
+      )}
+
       <div style={container}>
+        <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+
         <div style={deckWrapper}>
           <div style={deckArea}>
-            {currentCard ? (
-              <FlashCard
-                card={currentCard}
-                onKnown={() => handleCardAction('known')}
-                onUnknown={() => handleCardAction('unknown')}
-                showActions={!!user}
-              />
-            ) : (
-              <div style={emptyDeck}>
-                <h3>No cards available</h3>
-                <button style={primaryBtn} onClick={reset}>
-                  🔄 Restart
-                </button>
+            {activeDeck.slice(0, 6).map((card, index) => (
+              <div
+                key={card.id}
+                style={{
               </div>
             )}
           </div>
 
           <div style={shuffleBar}>
-            <button style={secondaryBtn} onClick={reset}>
-              🔄 Restart
+            <button style={secondaryBtn} onClick={shuffleDeck} disabled={isShuffling}>
+              🔀 Shuffle
             </button>
-            {unknown.length > 0 && (
-              <button style={secondaryBtn} onClick={reviseUnknown}>
-                🔁 Revise Unknown ({unknown.length})
-              </button>
-            )}
+            <button style={secondaryBtn} onClick={unshuffleDeck}>
+              ↩️ Unshuffle
+            </button>
           </div>
         </div>
 
         <div style={stats}>
-          <MiniStack title="Known" count={known.length} />
-          <MiniStack title="Unknown" count={unknown.length} />
-          <MiniStack title="Remaining" count={remainingCards} />
+          <MiniStack title="Known" count={knownDeck.length} />
+          <MiniStack title="Unknown" count={unknownDeck.length} />
+          <MiniStack title="Remaining" count={activeDeck.length} />
         </div>
       </div>
 
@@ -190,7 +330,6 @@ export default function Session({
         onClose={() => setShowLoginModal(false)}
         onLoginSuccess={(userData) => {
           console.log('User logged in:', userData);
-          setShowLoginModal(false);
         }}
       />
     </>
@@ -199,19 +338,21 @@ export default function Session({
 
 /* ---------------- STYLES ---------------- */
 
-const miniCard = {
-  width: "60px",
-  height: "80px",
-  background: "#fff",
-  border: "1px solid #ccc",
-  borderRadius: "6px",
-  position: "absolute",
-  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+const deckPanel = {
+  display: "flex",
+  gap: 10,
+  padding: "10px 24px",
+  borderBottom: "1px solid #ddd",
+  background: "#fafafa",
+  alignItems: "center",
 };
 
-const miniStack = {
-  width: "140px",
-  textAlign: "center",
+const deckChip = {
+  padding: "6px 10px",
+  borderRadius: 6,
+  background: "#e3f2fd",
+  fontSize: 12,
+  minWidth: 120,
 };
 
 const container = {
@@ -220,8 +361,8 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "80px",
-  marginLeft: "0px",
+  paddingTop: "80px", // Add padding for fixed navbar
+  marginLeft: "0px", // Remove sidebar margin on desktop
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
@@ -230,36 +371,45 @@ const deckArea = { position: "relative", width: 340, height: 440 };
 
 const shuffleBar = { marginTop: 18, display: "flex", gap: 12 };
 
-const stats = {
+const miniStack = { width: 140, textAlign: "center" };
+
+const miniCard = {
+  position: "absolute",
+  width: 70,
+  height: 45,
+  background: "#e0e0e0",
+  borderRadius: 6,
+  boxShadow: "0 3px 8px rgba(0,0,0,.2)",
+};
+
+const center = {
+  height: "calc(100vh - 60px)",
   display: "flex",
   flexDirection: "column",
-  gap: 20,
+  justifyContent: "center",
+  alignItems: "center",
 };
 
 const primaryBtn = {
-  padding: "10px 20px",
-  borderRadius: "8px",
+  padding: "12px 20px",
+  borderRadius: 8,
   border: "none",
   background: "#1976d2",
   color: "#fff",
   cursor: "pointer",
-  fontSize: "14px",
 };
 
 const secondaryBtn = {
-  padding: "10px 20px",
-  borderRadius: "8px",
-  border: "1px solid #ccc",
+  padding: "8px 14px",
+  borderRadius: 6,
+  border: "1px solid #aaa",
   background: "#fff",
   cursor: "pointer",
-  fontSize: "14px",
 };
 
-const emptyDeck = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "100%",
-  gap: "20px",
-};
+
+
+
+
+
+

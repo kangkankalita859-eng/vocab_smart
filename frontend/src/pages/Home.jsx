@@ -2,6 +2,8 @@ import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import MobileSidebar from "../components/MobileSidebar";
 import PYQDisplay from "../components/PYQDisplay";
+import LoginModal from "../components/LoginModal";
+import useAuth from "../hooks/useAuth";
 import useMobile from "../hooks/useMobile";
 
 // Data structure for subject-specific content
@@ -130,6 +132,7 @@ export default function Home({ onStart, onIdioms }) {
   const [showPYQ, setShowPYQ] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile } = useMobile();
+  const { user, showLoginModal, setShowLoginModal, login, logout } = useAuth();
 
   const handleSubjectSelect = (subject) => {
     setSelectedSubject(subject);
@@ -226,6 +229,58 @@ export default function Home({ onStart, onIdioms }) {
               Smart Vocabulary Trainer
             </span>
             <div style={{ width: '44px' }} />
+          </div>
+        )}
+
+        {/* Desktop Sign In/Out Button */}
+        {!isMobile && (
+          <div style={{
+            position: 'fixed',
+            top: '80px',
+            right: '20px',
+            zIndex: 1000,
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px'
+          }}>
+            {user ? (
+              <>
+                <span style={{ fontSize: '14px', color: '#666' }}>
+                  👋 {user.email}
+                </span>
+                <button
+                  style={{
+                    padding: '8px 16px',
+                    borderRadius: '6px',
+                    border: '1px solid #dc3545',
+                    backgroundColor: '#dc3545',
+                    color: '#fff',
+                    cursor: 'pointer',
+                    fontSize: '14px',
+                    fontWeight: '500'
+                  }}
+                  onClick={logout}
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <button
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: '6px',
+                  border: '1px solid #007bff',
+                  backgroundColor: '#007bff',
+                  color: '#fff',
+                  cursor: 'pointer',
+                  fontSize: '14px',
+                  fontWeight: '500'
+                }}
+                onClick={() => setShowLoginModal(true)}
+              >
+                Sign In
+              </button>
+            )}
           </div>
         )}
 
@@ -337,6 +392,15 @@ export default function Home({ onStart, onIdioms }) {
           </>
         )}
       </div>
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        onLoginSuccess={(userData) => {
+          console.log('User logged in:', userData);
+        }}
+      />
     </div>
   );
 }
