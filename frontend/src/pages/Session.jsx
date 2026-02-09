@@ -301,8 +301,6 @@ export default function Session({
                   top: index * 10 + (isShuffling ? Math.random() * 12 : 0),
                   left: index * 8 + (isShuffling ? Math.random() * 24 - 12 : 0),
                   zIndex: index,
-                  width: 320,
-                  height: 210,
                 }}
               >
                 {index === 0 ? (
@@ -314,8 +312,8 @@ export default function Session({
                   />
                 ) : (
                   <div style={{
-                    width: "100%",
-                    height: "100%",
+                    width: "320px",
+                    height: "210px",
                     background: "linear-gradient(180deg, #ffffff 0%, #fafafa 100%)",
                     borderRadius: "16px",
                     border: "1px solid #e6e6e6",
@@ -351,7 +349,6 @@ export default function Session({
 
         <div style={stats}>
           <MiniStack title="❌ Unknown" count={unknownDeck.length} />
-          <MiniStack title="Remaining" count={activeDeck.length} />
         </div>
       </div>
 
