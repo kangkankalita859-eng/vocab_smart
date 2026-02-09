@@ -325,6 +325,7 @@ const deckPanel = {
   borderBottom: "1px solid #ddd",
   background: "#fafafa",
   alignItems: "center",
+  marginTop: "0px", // Add margin to prevent overlap with nav
 };
 
 const deckChip = {
@@ -341,7 +342,7 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "80px",
+  paddingTop: "100px", // Increase top padding to avoid nav overlap
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
