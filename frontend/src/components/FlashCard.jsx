@@ -3,8 +3,7 @@ import "../styles/flashcard.css";
 
 export default function FlashCard({ card, onKnown, onUnknown, showActions }) {
   const [flipped, setFlipped] = useState(false);
-  const [animating, setAnimating] = useState(null); 
-  // null | "known" | "unknown"
+  const [animating, setAnimating] = useState(null); // null | "known" | "unknown"
 
   const handleKnown = () => {
     setAnimating("known");
