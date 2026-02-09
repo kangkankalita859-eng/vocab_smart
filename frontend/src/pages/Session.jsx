@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import FlashCard from "../components/FlashCard";
 import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
-import useFlashcards from "../hooks/useFlashcards";
 import useAuth from "../hooks/useAuth";
 import LoginModal from "../components/LoginModal";
 import useMobile from "../hooks/useMobile";
@@ -45,8 +44,10 @@ export default function Session({
   const [originalDeck, setOriginalDeck] = useState([]);
   const [knownDeck, setKnownDeck] = useState([]);
   const [unknownDeck, setUnknownDeck] = useState([]);
+
   const [savedDecks, setSavedDecks] = useState([]);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
+
   const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -117,7 +118,7 @@ export default function Session({
       }
       setActiveDeck(shuffled);
       setIsShuffling(false);
-    }, 650);
+    }, 650); // ⬅ animation duration
   };
 
   const unshuffleDeck = () => {
@@ -206,8 +207,6 @@ export default function Session({
           onApplyRange={handleApplyRange}
           onGoRead={onGoRead}
           onGoHome={onGoHome}
-          isMobile={isMobile}
-          onMenuToggle={() => setMobileMenuOpen(true)}
         />
 
         <div style={center}>
@@ -225,16 +224,6 @@ export default function Session({
             </button>
           </div>
         </div>
-
-        {/* Mobile sidebar only */}
-        {isMobile && (
-          <MobileSidebar
-            isOpen={mobileMenuOpen}
-            onClose={() => setMobileMenuOpen(false)}
-            onSubjectSelect={() => {}}
-            onSubtopicSelect={() => {}}
-          />
-        )}
       </>
     );
   }
@@ -299,23 +288,48 @@ export default function Session({
       )}
 
       <div style={container}>
+        <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+
         <div style={deckWrapper}>
           <div style={deckArea}>
-            {activeDeck.length > 0 ? (
-              <FlashCard
-                card={activeDeck[0]}
-                onKnown={() => handleCardAction('known')}
-                onUnknown={() => handleCardAction('unknown')}
-                showActions={true}
-              />
-            ) : (
-              <div style={emptyDeck}>
-                <h3>No cards available</h3>
-                <button style={primaryBtn} onClick={() => window.location.reload()}>
-                  🔄 Restart
-                </button>
+            {activeDeck.slice(0, 6).map((card, index) => (
+              <div
+                key={card.id}
+                style={{
+                  position: "absolute",
+                  top: index * 10 + (isShuffling ? Math.random() * 12 : 0),
+                  left: index * 8 + (isShuffling ? Math.random() * 24 - 12 : 0),
+                  transform: `rotate(${isShuffling ? Math.random() * 8 - 4 : 0}deg)`,
+                  transition: isShuffling ? "all 0.6s ease-in-out" : "none",
+                  zIndex: index,
+                  width: 220,
+                  height: 120,
+                  background: "#fff",
+                  borderRadius: 8,
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                  border: "1px solid #e0e0e0",
+                  padding: 12,
+                  fontSize: 12,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                {index === 0 ? (
+                  <FlashCard
+                    card={card}
+                    onKnown={() => handleCardAction('known')}
+                    onUnknown={() => handleCardAction('unknown')}
+                    showActions={true}
+                  />
+                ) : (
+                  <div style={{ textAlign: "center" }}>
+                    <strong>{card.word}</strong>
+                  </div>
+                )}
               </div>
-            )}
+            ))}
           </div>
 
           <div style={shuffleBar}>
@@ -382,8 +396,7 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "80px",
-  marginLeft: "0px",
+  paddingTop: "80px", // Add padding for fixed navbar
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
@@ -428,17 +441,15 @@ const secondaryBtn = {
   cursor: "pointer",
 };
 
-const emptyDeck = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "100%",
-  gap: "20px",
-};
-
 const stats = {
   display: "flex",
   flexDirection: "column",
   gap: 20,
 };
+
+
+
+
+
+
+
