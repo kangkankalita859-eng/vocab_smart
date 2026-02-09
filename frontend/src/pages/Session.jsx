@@ -342,7 +342,8 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "100px", // Increase top padding to avoid nav overlap
+  paddingTop: "80px", // This should be enough to clear the 60px nav
+  marginTop: "60px", // Add explicit margin to clear fixed nav
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
