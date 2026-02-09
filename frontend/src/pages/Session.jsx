@@ -325,7 +325,7 @@ const deckPanel = {
   borderBottom: "1px solid #ddd",
   background: "#fafafa",
   alignItems: "center",
-  marginTop: "0px", // Add margin to prevent overlap with nav
+  marginTop: "0px", // Remove margin completely
 };
 
 const deckChip = {
@@ -342,8 +342,8 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "80px", // This should be enough to clear the 60px nav
-  marginTop: "60px", // Add explicit margin to clear fixed nav
+  paddingTop: "70px", // Just enough to clear the nav
+  marginTop: "0px", // Remove all margins
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
