@@ -117,7 +117,7 @@ export default function Session({
       }
       setActiveDeck(shuffled);
       setIsShuffling(false);
-    }, 650); // ⬅ animation duration
+    }, 650);
   };
 
   const unshuffleDeck = () => {
@@ -206,6 +206,8 @@ export default function Session({
           onApplyRange={handleApplyRange}
           onGoRead={onGoRead}
           onGoHome={onGoHome}
+          isMobile={isMobile}
+          onMenuToggle={() => setMobileMenuOpen(true)}
         />
 
         <div style={center}>
@@ -223,6 +225,16 @@ export default function Session({
             </button>
           </div>
         </div>
+
+        {/* Mobile sidebar only */}
+        {isMobile && (
+          <MobileSidebar
+            isOpen={mobileMenuOpen}
+            onClose={() => setMobileMenuOpen(false)}
+            onSubjectSelect={() => {}}
+            onSubtopicSelect={() => {}}
+          />
+        )}
       </>
     );
   }
@@ -237,6 +249,8 @@ export default function Session({
         onApplyRange={handleApplyRange}
         onGoRead={onGoRead}
         onGoHome={onGoHome}
+        isMobile={isMobile}
+        onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
       {savedDecks.length > 0 && (
@@ -285,14 +299,21 @@ export default function Session({
       )}
 
       <div style={container}>
-        <MiniStack title="❌ Unknown" count={unknownDeck.length} />
-
         <div style={deckWrapper}>
           <div style={deckArea}>
-            {activeDeck.slice(0, 6).map((card, index) => (
-              <div
-                key={card.id}
-                style={{
+            {activeDeck.length > 0 ? (
+              <FlashCard
+                card={activeDeck[0]}
+                onKnown={() => handleCardAction('known')}
+                onUnknown={() => handleCardAction('unknown')}
+                showActions={true}
+              />
+            ) : (
+              <div style={emptyDeck}>
+                <h3>No cards available</h3>
+                <button style={primaryBtn} onClick={() => window.location.reload()}>
+                  🔄 Restart
+                </button>
               </div>
             )}
           </div>
@@ -361,8 +382,8 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "80px", // Add padding for fixed navbar
-  marginLeft: "0px", // Remove sidebar margin on desktop
+  paddingTop: "80px",
+  marginLeft: "0px",
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
@@ -407,9 +428,17 @@ const secondaryBtn = {
   cursor: "pointer",
 };
 
+const emptyDeck = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100%",
+  gap: "20px",
+};
 
-
-
-
-
-
+const stats = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 20,
+};
