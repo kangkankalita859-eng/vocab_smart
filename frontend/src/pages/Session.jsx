@@ -314,18 +314,6 @@ export default function Session({
                   transform: `rotate(${isShuffling ? Math.random() * 8 - 4 : 0}deg)`,
                   transition: isShuffling ? "all 0.6s ease-in-out" : "none",
                   zIndex: index,
-                  width: 220,
-                  height: 120,
-                  background: "#fff",
-                  borderRadius: 8,
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                  border: "1px solid #e0e0e0",
-                  padding: 12,
-                  fontSize: 12,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
                 }}
               >
                 {index === 0 ? (
@@ -336,7 +324,20 @@ export default function Session({
                     showActions={true}
                   />
                 ) : (
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{
+                    width: "220px",
+                    height: "120px",
+                    background: "#fff",
+                    borderRadius: 8,
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                    border: "1px solid #e0e0e0",
+                    padding: 12,
+                    fontSize: 12,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}>
                     <strong>{card.word}</strong>
                   </div>
                 )}
