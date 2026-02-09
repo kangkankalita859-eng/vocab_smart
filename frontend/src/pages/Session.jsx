@@ -222,6 +222,7 @@ export default function Session({
         onGoHome={onGoHome}
       />
 
+      {/* DECK PANEL - OUTSIDE CONTAINER */}
       {savedDecks.length > 0 && (
         <div style={deckPanel}>
           {savedDecks.map((d, i) => (
@@ -267,6 +268,7 @@ export default function Session({
         </div>
       )}
 
+      {/* MAIN CONTAINER */}
       <div style={container}>
         <MiniStack title="❌ Unknown" count={unknownDeck.length} />
 
@@ -325,7 +327,7 @@ const deckPanel = {
   borderBottom: "1px solid #ddd",
   background: "#fafafa",
   alignItems: "center",
-  marginTop: "0px", // Remove margin completely
+  marginTop: "0px",
 };
 
 const deckChip = {
@@ -342,8 +344,7 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "80px", // Much more space to clear nav and shadow
-  marginTop: "0px", // Remove all margins
+  paddingTop: "80px",
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
@@ -393,10 +394,3 @@ const stats = {
   flexDirection: "column",
   gap: 20,
 };
-
-
-
-
-
-
-
