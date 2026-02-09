@@ -288,7 +288,7 @@ export default function Session({
       )}
 
       <div style={container}>
-        <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+        <MiniStack title="✅ Known" count={knownDeck.length} />
 
         <div style={deckWrapper}>
           <div style={deckArea}>
@@ -325,7 +325,7 @@ export default function Session({
                     justifyContent: "center",
                     padding: "24px",
                     textAlign: "center",
-                    backfaceVisibility: "hidden",
+                    cursor: "pointer",
                   }}>
                     <h2 style={{
                       fontSize: "30px",
@@ -350,8 +350,7 @@ export default function Session({
         </div>
 
         <div style={stats}>
-          <MiniStack title="Known" count={knownDeck.length} />
-          <MiniStack title="Unknown" count={unknownDeck.length} />
+          <MiniStack title="❌ Unknown" count={unknownDeck.length} />
           <MiniStack title="Remaining" count={activeDeck.length} />
         </div>
       </div>
