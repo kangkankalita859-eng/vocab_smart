@@ -1,26 +1,16 @@
 from fastapi import FastAPI
 
-
-
 from fastapi.middleware.cors import CORSMiddleware
-
-
 
 from api.vocab import router as vocab_router
 
-
-
 from api.pyq import router as pyq_router
-
-
 
 from api.idioms import router as idioms_router
 
-
+from api.auth import router as auth_router
 
 import os
-
-
 
 from dotenv import load_dotenv
 
@@ -115,6 +105,10 @@ app.include_router(pyq_router, prefix=api_prefix)
 
 
 app.include_router(idioms_router, prefix=api_prefix)
+
+
+
+app.include_router(auth_router, prefix=api_prefix)
 
 
 
