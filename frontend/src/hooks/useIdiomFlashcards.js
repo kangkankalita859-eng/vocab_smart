@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { fetchIdioms } from "../services/idiomsService";
-import { authService } from "../services/authService";
+import { loadUnknownDeck, saveUnknownDeck } from "../services/deckPersistenceService";
 import shuffle from "../utils/shuffle";
 
 export default function useIdiomFlashcards(config) {
@@ -9,23 +9,20 @@ export default function useIdiomFlashcards(config) {
   const [unknown, setUnknown] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(null);
   const [progressLoaded, setProgressLoaded] = useState(false);
 
-  // Load user and progress
+  // Load persisted unknown deck on mount
   useEffect(() => {
-    const currentUser = authService.getCurrentUser();
-    if (currentUser) {
-      setUser(currentUser);
-      loadUserProgress(currentUser.id);
-    } else {
-      setLoading(false);
+    const persistedUnknown = loadUnknownDeck();
+    if (persistedUnknown.length > 0) {
+      setUnknown(persistedUnknown);
     }
+    setProgressLoaded(true);
   }, []);
 
   // Load flashcard data
   useEffect(() => {
-    if (!user && !progressLoaded) return;
+    if (!progressLoaded) return;
     
     const start = config?.start || 0;
     const limit = config?.limit || 20;
@@ -36,46 +33,20 @@ export default function useIdiomFlashcards(config) {
         setLoading(false);
       }
     });
-  }, [config?.start, config?.limit, user, progressLoaded]);
+  }, [config?.start, config?.limit, progressLoaded]);
 
-  // Load user progress
-  const loadUserProgress = async (userId) => {
-    try {
-      const result = await authService.getUserProgress(userId);
-      if (result.success) {
-        setKnown(result.progress.idioms_known || []);
-        setUnknown(result.progress.idioms_unknown || []);
-        setProgressLoaded(true);
-      }
-    } catch (error) {
-      console.error('Failed to load progress:', error);
-      setProgressLoaded(true);
-    }
-  };
+  // Save unknown deck to localStorage
+  const saveUnknownDeckToStorage = useCallback(() => {
+    saveUnknownDeck(unknown);
+  }, [unknown]);
 
-  // Save user progress
-  const saveProgress = useCallback(async () => {
-    if (!user) return;
-    
-    try {
-      await authService.updateUserProgress(user.id, {
-        vocab_known: [],
-        vocab_unknown: [],
-        idioms_known: known,
-        idioms_unknown: unknown
-      });
-    } catch (error) {
-      console.error('Failed to save progress:', error);
-    }
-  }, [user, known, unknown]);
-
-  // Auto-save progress when it changes
+  // Auto-save unknown deck when it changes
   useEffect(() => {
-    if (user && progressLoaded) {
-      const timeoutId = setTimeout(saveProgress, 1000); // Save after 1 second
+    if (progressLoaded && unknown.length > 0) {
+      const timeoutId = setTimeout(saveUnknownDeckToStorage, 1000);
       return () => clearTimeout(timeoutId);
     }
-  }, [known, unknown, saveProgress, user, progressLoaded]);
+  }, [unknown, saveUnknownDeckToStorage, progressLoaded]);
 
   const markKnown = useCallback(() => {
     const card = cards[currentIndex];
@@ -97,6 +68,8 @@ export default function useIdiomFlashcards(config) {
     setCards(shuffle(unknown));
     setUnknown([]);
     setCurrentIndex(0);
+    // Clear persisted unknown deck since we're now using it
+    saveUnknownDeck([]);
   };
 
   const reset = () => {
@@ -112,7 +85,6 @@ export default function useIdiomFlashcards(config) {
     unknown,
     currentIndex,
     loading,
-    user,
     markKnown,
     markUnknown,
     reviseUnknown,

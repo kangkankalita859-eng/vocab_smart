@@ -2,6 +2,14 @@ import { useEffect, useState } from "react";
 import FlashCard from "../components/FlashCard";
 import SessionNav from "../components/SessionNav";
 import { fetchVocab } from "../services/vocabService";
+import {
+  saveUnknownDeck,
+  loadUnknownDeck,
+  saveSavedDecks,
+  loadSavedDecks,
+  clearUnknownDeck,
+  hasPersistedData
+} from "../services/deckPersistenceService";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -46,6 +54,44 @@ export default function Session({
 
   const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
+  const [showPersistedNotification, setShowPersistedNotification] = useState(false);
+
+  /* ---------------- LOAD PERSISTED DATA ---------------- */
+
+  useEffect(() => {
+    // Load persisted data on component mount
+    const persistedUnknownDeck = loadUnknownDeck();
+    const persistedSavedDecks = loadSavedDecks();
+    
+    if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
+      setUnknownDeck(persistedUnknownDeck);
+      setSavedDecks(persistedSavedDecks);
+      setShowPersistedNotification(true);
+      
+      // Hide notification after 5 seconds
+      setTimeout(() => {
+        setShowPersistedNotification(false);
+      }, 5000);
+    }
+  }, []);
+
+  /* ---------------- AUTO-SAVE UNKNOWN DECK ---------------- */
+
+  useEffect(() => {
+    // Auto-save unknown deck whenever it changes
+    if (unknownDeck.length > 0) {
+      saveUnknownDeck(unknownDeck);
+    }
+  }, [unknownDeck]);
+
+  /* ---------------- AUTO-SAVE SAVED DECKS ---------------- */
+
+  useEffect(() => {
+    // Auto-save saved decks whenever they change
+    if (savedDecks.length > 0) {
+      saveSavedDecks(savedDecks);
+    }
+  }, [savedDecks]);
 
   /* ---------------- FETCH VOCAB ---------------- */
 
@@ -81,8 +127,11 @@ export default function Session({
 
   const handleUnknown = () => {
     const card = activeDeck[0];
-    setUnknownDeck((p) => [...p, card]);
+    const newUnknownDeck = [...unknownDeck, card];
+    setUnknownDeck(newUnknownDeck);
     setActiveDeck((p) => p.slice(1));
+    
+    // Auto-save is handled by useEffect
   };
 
   /* ---------------- SHUFFLE (ANIMATED) ---------------- */
@@ -114,6 +163,9 @@ export default function Session({
     setOriginalDeck(unknownDeck);
     setKnownDeck([]);
     setUnknownDeck([]);
+    
+    // Clear persisted unknown deck since we're now using it
+    clearUnknownDeck();
   };
 
   /* ---------------- SAVE DECK ---------------- */
@@ -121,15 +173,22 @@ export default function Session({
   const handleAddDeck = () => {
     if (unknownDeck.length === 0) return;
 
-    setSavedDecks((p) => [
-      ...p,
+    const newSavedDecks = [
+      ...savedDecks,
       { id: Date.now(), unknownCards: [...unknownDeck] },
-    ]);
-
+    ];
+    
+    setSavedDecks(newSavedDecks);
+    
     setActiveDeck([]);
     setOriginalDeck([]);
     setKnownDeck([]);
     setUnknownDeck([]);
+    
+    // Clear persisted unknown deck since it's now saved
+    clearUnknownDeck();
+    
+    // Auto-save is handled by useEffect
   };
 
   /* ---------------- SAVED DECK REVISION ---------------- */
@@ -221,6 +280,19 @@ export default function Session({
         onGoRead={onGoRead}
         onGoHome={onGoHome}
       />
+
+      {/* PERSISTED DATA NOTIFICATION */}
+      {showPersistedNotification && (
+        <div style={notification}>
+          <span>📚 Previous unknown deck data restored!</span>
+          <button 
+            style={notificationClose}
+            onClick={() => setShowPersistedNotification(false)}
+          >
+            ✕
+          </button>
+        </div>
+      )}
 
       {/* DECK PANEL - OUTSIDE CONTAINER */}
       {savedDecks.length > 0 && (
@@ -393,4 +465,33 @@ const stats = {
   display: "flex",
   flexDirection: "column",
   gap: 20,
+};
+
+const notification = {
+  position: "fixed",
+  top: "70px",
+  left: "50%",
+  transform: "translateX(-50%)",
+  background: "#4caf50",
+  color: "white",
+  padding: "12px 20px",
+  borderRadius: "8px",
+  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+  zIndex: 1001,
+  display: "flex",
+  alignItems: "center",
+  gap: "12px",
+  fontSize: "14px",
+  fontWeight: "500",
+};
+
+const notificationClose = {
+  background: "rgba(255,255,255,0.2)",
+  border: "none",
+  color: "white",
+  borderRadius: "4px",
+  padding: "4px 8px",
+  cursor: "pointer",
+  fontSize: "12px",
+  fontWeight: "bold",
 };

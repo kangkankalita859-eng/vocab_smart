@@ -4,6 +4,7 @@ import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
 
 import { fetchVocab } from "../services/vocabService";
+import { hasPersistedData, getDeckStats } from "../services/deckPersistenceService";
 
 import useMobile from "../hooks/useMobile";
 
@@ -29,7 +30,21 @@ export default function ReadVocab({
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const [showPersistedInfo, setShowPersistedInfo] = useState(false);
 
+  const [deckStats, setDeckStats] = useState({ unknownCount: 0, savedDeckCount: 0 });
+
+
+
+  /* -------- CHECK PERSISTED DATA -------- */
+
+  useEffect(() => {
+    if (hasPersistedData()) {
+      const stats = getDeckStats();
+      setDeckStats(stats);
+      setShowPersistedInfo(true);
+    }
+  }, []);
 
   /* -------- FETCH VOCAB BASED ON RANGE -------- */
 
@@ -106,6 +121,43 @@ export default function ReadVocab({
       />
 
       <div style={page}>
+        {/* PERSISTED DATA INFO */}
+        {showPersistedInfo && (
+          <div style={persistedInfo}>
+            <div style={persistedInfoContent}>
+              <span style={persistedInfoIcon}>📚</span>
+              <div>
+                <strong>You have saved vocabulary to review!</strong>
+                <div style={persistedInfoDetails}>
+                  {deckStats.unknownCount > 0 && (
+                    <span>• {deckStats.unknownCount} unknown cards ready for revision</span>
+                  )}
+                  {deckStats.savedDeckCount > 0 && (
+                    <span>• {deckStats.savedDeckCount} saved decks</span>
+                  )}
+                </div>
+              </div>
+              <button 
+                style={persistedInfoClose}
+                onClick={() => setShowPersistedInfo(false)}
+              >
+                ✕
+              </button>
+            </div>
+            <div style={persistedInfoActions}>
+              <button 
+                style={persistedInfoButton}
+                onClick={() => {
+                  onGoCards();
+                  setShowPersistedInfo(false);
+                }}
+              >
+                🃏 Go to Flash Cards
+              </button>
+            </div>
+          </div>
+        )}
+        
         <div style={container}>
           <h2 style={heading}>Read & Memorize Vocabulary</h2>
 
@@ -243,6 +295,63 @@ const td = {
 
   verticalAlign: "top",
 
+};
+
+const persistedInfo = {
+  background: "#e3f2fd",
+  border: "1px solid #2196f3",
+  borderRadius: "8px",
+  padding: "16px",
+  marginBottom: "20px",
+  boxShadow: "0 2px 8px rgba(33, 150, 243, 0.15)",
+};
+
+const persistedInfoContent = {
+  display: "flex",
+  alignItems: "flex-start",
+  gap: "12px",
+  marginBottom: "12px",
+};
+
+const persistedInfoIcon = {
+  fontSize: "20px",
+  marginTop: "2px",
+};
+
+const persistedInfoDetails = {
+  fontSize: "13px",
+  color: "#666",
+  marginTop: "4px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "2px",
+};
+
+const persistedInfoClose = {
+  marginLeft: "auto",
+  background: "none",
+  border: "none",
+  fontSize: "16px",
+  cursor: "pointer",
+  color: "#666",
+  padding: "4px",
+};
+
+const persistedInfoActions = {
+  display: "flex",
+  gap: "10px",
+};
+
+const persistedInfoButton = {
+  background: "#2196f3",
+  color: "white",
+  border: "none",
+  padding: "8px 16px",
+  borderRadius: "6px",
+  cursor: "pointer",
+  fontSize: "14px",
+  fontWeight: "500",
+  transition: "background 0.2s ease",
 };
 
 
