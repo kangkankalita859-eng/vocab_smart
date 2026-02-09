@@ -342,7 +342,7 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "70px", // Just enough to clear the nav
+  paddingTop: "80px", // Much more space to clear nav and shadow
   marginTop: "0px", // Remove all margins
 };
 
