@@ -6,6 +6,7 @@ import ReadIdioms from "./pages/ReadIdioms";
 import IdiomSession from "./pages/IdiomSession";
 import Complete from "./pages/Complete";
 import TestAPI from "./TestAPI";
+import "./styles/flashcard.css";
 
 export default function App() {
   const [stage, setStage] = useState("home"); // Back to normal
