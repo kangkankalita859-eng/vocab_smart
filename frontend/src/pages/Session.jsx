@@ -118,7 +118,7 @@ export default function Session({
       }
       setActiveDeck(shuffled);
       setIsShuffling(false);
-    }, 650);
+    }, 650); // ⬅ animation duration
   };
 
   const unshuffleDeck = () => {
@@ -207,8 +207,6 @@ export default function Session({
           onApplyRange={handleApplyRange}
           onGoRead={onGoRead}
           onGoHome={onGoHome}
-          isMobile={isMobile}
-          onMenuToggle={() => setMobileMenuOpen(true)}
         />
 
         <div style={center}>
@@ -226,16 +224,6 @@ export default function Session({
             </button>
           </div>
         </div>
-
-        {/* Mobile sidebar only */}
-        {isMobile && (
-          <MobileSidebar
-            isOpen={mobileMenuOpen}
-            onClose={() => setMobileMenuOpen(false)}
-            onSubjectSelect={() => {}}
-            onSubtopicSelect={() => {}}
-          />
-        )}
       </>
     );
   }
@@ -300,7 +288,7 @@ export default function Session({
       )}
 
       <div style={container}>
-        <MiniStack title="✅ Known" count={knownDeck.length} />
+        <MiniStack title="❌ Unknown" count={unknownDeck.length} />
 
         <div style={deckWrapper}>
           <div style={deckArea}>
@@ -311,42 +299,26 @@ export default function Session({
                   position: "absolute",
                   top: index * 10 + (isShuffling ? Math.random() * 12 : 0),
                   left: index * 8 + (isShuffling ? Math.random() * 24 - 12 : 0),
-                  transform: `rotate(${isShuffling ? Math.random() * 8 - 4 : 0}deg)`,
-                  transition: isShuffling ? "all 0.6s ease-in-out" : "none",
-                  zIndex: index,
+                  transform: isShuffling
+                    ? `rotate(${Math.random() * 20 - 10}deg)`
+                    : "rotate(0deg)",
+                  transition: "all 0.65s cubic-bezier(.4,0,.2,1)",
+                  zIndex: 100 - index,
+                  pointerEvents: index === 0 ? "auto" : "none",
                 }}
               >
-                {index === 0 ? (
-                  <FlashCard
-                    card={card}
-                    onKnown={() => handleCardAction('known')}
-                    onUnknown={() => handleCardAction('unknown')}
-                    showActions={true}
-                  />
-                ) : (
-                  <div style={{
-                    width: "220px",
-                    height: "120px",
-                    background: "#fff",
-                    borderRadius: 8,
-                    boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                    border: "1px solid #e0e0e0",
-                    padding: 12,
-                    fontSize: 12,
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}>
-                    <strong>{card.word}</strong>
-                  </div>
-                )}
+                <FlashCard
+                  card={card}
+                  onKnown={() => handleCardAction('known')}
+                  onUnknown={() => handleCardAction('unknown')}
+                  showActions={index === 0}
+                />
               </div>
             ))}
           </div>
 
           <div style={shuffleBar}>
-            <button style={secondaryBtn} onClick={shuffleDeck} disabled={isShuffling}>
+            <button style={secondaryBtn} onClick={shuffleDeck}>
               🔀 Shuffle
             </button>
             <button style={secondaryBtn} onClick={unshuffleDeck}>
@@ -356,7 +328,8 @@ export default function Session({
         </div>
 
         <div style={stats}>
-          <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+          <MiniStack title="Known" count={knownDeck.length} />
+          <MiniStack title="Remaining" count={activeDeck.length} />
         </div>
       </div>
 
@@ -407,8 +380,7 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 120px)",
   padding: 40,
-  paddingTop: "80px",
-  marginLeft: "0px",
+  paddingTop: "80px", // Add padding for fixed navbar
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
@@ -453,8 +425,9 @@ const secondaryBtn = {
   cursor: "pointer",
 };
 
-const stats = {
-  display: "flex",
-  flexDirection: "column",
-  gap: 20,
-};
+
+
+
+
+
+
