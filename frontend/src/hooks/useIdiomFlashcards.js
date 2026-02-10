@@ -31,7 +31,13 @@ export default function useIdiomFlashcards(config) {
       if (data.status === 'success') {
         setCards(shuffle(data.data));
         setLoading(false);
+      } else {
+        console.error('API Error:', data.message);
+        setLoading(false);
       }
+    }).catch((error) => {
+      console.error('Fetch error:', error);
+      setLoading(false);
     });
   }, [config?.start, config?.limit, progressLoaded]);
 

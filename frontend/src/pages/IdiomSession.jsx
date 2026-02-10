@@ -231,6 +231,27 @@ export default function IdiomSession({
 
   /* ---------------- DECK FINISHED ---------------- */
 
+  if (activeDeck.length === 0 && originalDeck.length === 0) {
+    return (
+      <>
+        <SessionNav
+          mode="Idiom Cards"
+          config={config}
+          onApplyRange={handleApplyRange}
+          onGoRead={onGoRead}
+          onGoHome={onGoHome}
+        />
+        <div style={center}>
+          <h2>No Idioms Available</h2>
+          <p>Unable to load idioms. Please check your connection or try a different range.</p>
+          <button style={primaryBtn} onClick={() => window.location.reload()}>
+            🔄 Reload Page
+          </button>
+        </div>
+      </>
+    );
+  }
+
   if (activeDeck.length === 0 && originalDeck.length > 0) {
     return (
       <>
