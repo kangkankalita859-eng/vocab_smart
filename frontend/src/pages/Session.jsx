@@ -416,7 +416,7 @@ const container = {
   alignItems: "center",
   height: "calc(100vh - 60px)",
   padding: 40,
-  paddingTop: "80px",
+  paddingTop: "100px",
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
