@@ -355,7 +355,9 @@ export default function Session({
 
       {/* MAIN CONTAINER */}
       <div style={container}>
-        <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+        <div style={{ ...stats, marginTop: "120px" }}>
+          <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+        </div>
 
         <div style={deckWrapper}>
           <div style={deckArea}>
@@ -412,7 +414,9 @@ const deckPanel = {
   borderBottom: "1px solid #ddd",
   background: "#fafafa",
   alignItems: "center",
-  marginTop: "0px",
+  marginTop: "60px", // Add margin to avoid navbar overlap
+  position: "relative",
+  zIndex: 999,
 };
 
 const deckChip = {
@@ -426,10 +430,10 @@ const deckChip = {
 const container = {
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center",
+  alignItems: "flex-start", // Change from center to flex-start
   height: "calc(100vh - 60px)",
   padding: 40,
-  paddingTop: "100px",
+  paddingTop: "20px", // Reduce top padding since deck panel handles spacing
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
@@ -478,6 +482,7 @@ const stats = {
   display: "flex",
   flexDirection: "column",
   gap: 20,
+  marginTop: "100px", // Add top margin to align with flashcard area
 };
 
 const notification = {
