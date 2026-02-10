@@ -216,6 +216,13 @@ export default function Session({
     setSelectedDeckIds([]);
   };
 
+  const removeDeck = (deck) => {
+    if (window.confirm(`Are you sure you want to remove Deck ${savedDecks.indexOf(deck) + 1} with ${deck.unknownCards.length} cards?`)) {
+      setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
+      setSelectedDeckIds((p) => p.filter((id) => id !== deck.id));
+    }
+  };
+
   const reviseSelectedDecks = () => {
     const cards = savedDecks
       .filter((d) => selectedDeckIds.includes(d.id))
@@ -329,12 +336,20 @@ export default function Session({
 
               <div style={{ fontSize: 12 }}>❌ {d.unknownCards.length}</div>
 
-              <button
-                style={{ ...secondaryBtn, marginTop: 6 }}
-                onClick={() => reviseSingleDeck(d)}
-              >
-                ▶ Revise
-              </button>
+              <div style={{ display: "flex", gap: "6px", marginTop: 6 }}>
+                <button
+                  style={{ ...secondaryBtn, flex: 1 }}
+                  onClick={() => reviseSingleDeck(d)}
+                >
+                  ▶ Revise
+                </button>
+                <button
+                  style={{ ...secondaryBtn, backgroundColor: "#ffebee", borderColor: "#f44336", color: "#c62828", flex: 1 }}
+                  onClick={() => removeDeck(d)}
+                >
+                  🗑️ Remove
+                </button>
+              </div>
             </div>
           ))}
 
