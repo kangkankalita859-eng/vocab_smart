@@ -144,6 +144,13 @@ export default function IdiomSession({
     setSelectedDeckIds([]);
   };
 
+  const removeDeck = (deck) => {
+    if (window.confirm(`Are you sure you want to remove Idiom Deck ${savedDecks.indexOf(deck) + 1} with ${deck.unknownCards.length} cards?`)) {
+      setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
+      setSelectedDeckIds((p) => p.filter((id) => id !== deck.id));
+    }
+  };
+
   const reviseSelectedDecks = () => {
     const cards = savedDecks
       .filter((d) => selectedDeckIds.includes(d.id))
@@ -243,12 +250,20 @@ export default function IdiomSession({
 
               <div style={{ fontSize: 12 }}>❌ {d.unknownCards.length}</div>
 
-              <button
-                style={{ ...secondaryBtn, marginTop: 6 }}
-                onClick={() => reviseSingleDeck(d)}
-              >
-                ▶ Revise
-              </button>
+              <div style={{ display: "flex", gap: "6px", marginTop: 6 }}>
+                <button
+                  style={{ ...secondaryBtn, flex: 1 }}
+                  onClick={() => reviseSingleDeck(d)}
+                >
+                  ▶ Revise
+                </button>
+                <button
+                  style={{ ...secondaryBtn, backgroundColor: "#ffebee", borderColor: "#f44336", color: "#c62828", flex: 1 }}
+                  onClick={() => removeDeck(d)}
+                >
+                  🗑️ Remove
+                </button>
+              </div>
             </div>
           ))}
 
@@ -322,6 +337,9 @@ const deckPanel = {
   borderBottom: "1px solid #ddd",
   background: "#fafafa",
   alignItems: "center",
+  marginTop: "60px", // Add margin to avoid navbar overlap
+  position: "relative",
+  zIndex: 999,
 };
 
 const deckChip = {
@@ -335,10 +353,10 @@ const deckChip = {
 const container = {
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center",
-  height: "calc(100vh - 120px)",
+  alignItems: "flex-start", // Change from center to flex-start
+  height: "calc(100vh - 60px)",
   padding: 40,
-  paddingTop: "80px", // Add padding for fixed navbar
+  paddingTop: "80px", // Ensure content clears 60px navbar
   marginLeft: "0px", // Remove sidebar margin on desktop
 };
 
