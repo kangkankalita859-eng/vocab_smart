@@ -433,7 +433,7 @@ const container = {
   alignItems: "flex-start", // Change from center to flex-start
   height: "calc(100vh - 60px)",
   padding: 40,
-  paddingTop: "20px", // Reduce top padding since deck panel handles spacing
+  paddingTop: "80px", // Ensure content clears 60px navbar
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
