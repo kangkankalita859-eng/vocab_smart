@@ -63,7 +63,6 @@ export default function IdiomSession({
         }
         setKnownDeck([]);
         setUnknownDeck([]);
-        clearUnknownDeck('idiom');
         setLoading(false);
       })
       .catch((error) => {
@@ -71,49 +70,6 @@ export default function IdiomSession({
         setLoading(false);
       });
   }, [config]);
-
-  useEffect(() => {
-    // Auto-save unknown deck whenever it changes
-    if (unknownDeck.length > 0) {
-      saveUnknownDeck(unknownDeck, 'idiom');
-    }
-  }, [unknownDeck]);
-
-  useEffect(() => {
-    // Load persisted data on component mount
-    const persistedUnknownDeck = loadUnknownDeck('idiom');
-    const persistedSavedDecks = loadSavedDecks('idiom');
-    
-    if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
-      setUnknownDeck(persistedUnknownDeck);
-      setSavedDecks(persistedSavedDecks);
-      
-      // If user is coming from "Go to Flash Cards" to review unknown deck
-      if (reviewUnknownDeck && persistedUnknownDeck.length > 0) {
-        setActiveDeck(persistedUnknownDeck);
-        setOriginalDeck(persistedUnknownDeck);
-        setKnownDeck([]);
-        setUnknownDeck([]);
-        
-        // Clear persisted unknown deck since we're now using it
-        clearUnknownDeck('idiom');
-      } else {
-        setShowPersistedNotification(true);
-        
-        // Hide notification after 5 seconds
-        setTimeout(() => {
-          setShowPersistedNotification(false);
-        }, 5000);
-      }
-    }
-  }, [reviewUnknownDeck]);
-
-  useEffect(() => {
-    // Auto-save saved decks whenever they change
-    if (savedDecks.length > 0) {
-      saveSavedDecks(savedDecks, 'idiom');
-    }
-  }, [savedDecks]);
 
   /* ---------------- CARD ACTIONS ---------------- */
 
@@ -230,27 +186,6 @@ export default function IdiomSession({
   if (loading) return <p style={{ textAlign: "center" }}>Loading idioms…</p>;
 
   /* ---------------- DECK FINISHED ---------------- */
-
-  if (activeDeck.length === 0 && originalDeck.length === 0) {
-    return (
-      <>
-        <SessionNav
-          mode="Idiom Cards"
-          config={config}
-          onApplyRange={handleApplyRange}
-          onGoRead={onGoRead}
-          onGoHome={onGoHome}
-        />
-        <div style={center}>
-          <h2>No Idioms Available</h2>
-          <p>Unable to load idioms. Please check your connection or try a different range.</p>
-          <button style={primaryBtn} onClick={() => window.location.reload()}>
-            🔄 Reload Page
-          </button>
-        </div>
-      </>
-    );
-  }
 
   if (activeDeck.length === 0 && originalDeck.length > 0) {
     return (

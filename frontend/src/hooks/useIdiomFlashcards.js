@@ -13,7 +13,7 @@ export default function useIdiomFlashcards(config) {
 
   // Load persisted unknown deck on mount
   useEffect(() => {
-    const persistedUnknown = loadUnknownDeck('idiom');
+    const persistedUnknown = loadUnknownDeck();
     if (persistedUnknown.length > 0) {
       setUnknown(persistedUnknown);
     }
@@ -31,19 +31,13 @@ export default function useIdiomFlashcards(config) {
       if (data.status === 'success') {
         setCards(shuffle(data.data));
         setLoading(false);
-      } else {
-        console.error('API Error:', data.message);
-        setLoading(false);
       }
-    }).catch((error) => {
-      console.error('Fetch error:', error);
-      setLoading(false);
     });
   }, [config?.start, config?.limit, progressLoaded]);
 
   // Save unknown deck to localStorage
   const saveUnknownDeckToStorage = useCallback(() => {
-    saveUnknownDeck(unknown, 'idiom');
+    saveUnknownDeck(unknown);
   }, [unknown]);
 
   // Auto-save unknown deck when it changes
@@ -75,7 +69,7 @@ export default function useIdiomFlashcards(config) {
     setUnknown([]);
     setCurrentIndex(0);
     // Clear persisted unknown deck since we're now using it
-    saveUnknownDeck([], 'idiom');
+    saveUnknownDeck([]);
   };
 
   const reset = () => {
