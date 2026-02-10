@@ -10,7 +10,6 @@ import {
   clearUnknownDeck,
   hasPersistedData
 } from "../services/deckPersistenceService";
-import useMobile from "../hooks/useMobile";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -56,7 +55,6 @@ export default function IdiomSession({
 
   const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
-  const { isMobile } = useMobile();
 
   /* ---------------- FETCH IDIOMS ---------------- */
 
@@ -394,15 +392,13 @@ export default function IdiomSession({
 const deckPanel = {
   display: "flex",
   gap: 10,
-  padding: isMobile ? "8px 16px" : "10px 24px",
+  padding: "10px 24px",
   borderBottom: "1px solid #ddd",
   background: "#fafafa",
   alignItems: "center",
   marginTop: "60px", // Add margin to avoid navbar overlap
   position: "relative",
   zIndex: 999,
-  flexWrap: isMobile ? "wrap" : "nowrap",
-  justifyContent: isMobile ? "center" : "flex-start"
 };
 
 const deckChip = {
@@ -418,38 +414,18 @@ const container = {
   justifyContent: "space-between",
   alignItems: "flex-start", // Change from center to flex-start
   height: "calc(100vh - 60px)",
-  padding: isMobile ? 20 : 40,
-  paddingTop: isMobile ? "60px" : "80px", // Ensure content clears 60px navbar
-  flexDirection: isMobile ? "column" : "row",
-  gap: isMobile ? "20px" : "0",
+  padding: 40,
+  paddingTop: "80px", // Ensure content clears 60px navbar
   marginLeft: "0px", // Remove sidebar margin on desktop
 };
 
-const deckWrapper = { 
-  display: "flex", 
-  flexDirection: "column", 
-  alignItems: "center",
-  width: isMobile ? "100%" : "auto"
-};
+const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
 
-const deckArea = { 
-  position: "relative", 
-  width: isMobile ? 300 : 340, 
-  height: isMobile ? 380 : 440 
-};
+const deckArea = { position: "relative", width: 340, height: 440 };
 
-const shuffleBar = { 
-  marginTop: 18, 
-  display: "flex", 
-  gap: 12,
-  justifyContent: "center"
-};
+const shuffleBar = { marginTop: 18, display: "flex", gap: 12 };
 
-const miniStack = { 
-  width: isMobile ? "100%" : 140, 
-  textAlign: "center",
-  marginBottom: isMobile ? "10px" : "0"
-};
+const miniStack = { width: 140, textAlign: "center" };
 
 const miniCard = {
   position: "absolute",
@@ -487,21 +463,19 @@ const secondaryBtn = {
 
 const notification = {
   position: "fixed",
-  top: isMobile ? "60px" : "70px",
+  top: "70px",
   left: "50%",
   transform: "translateX(-50%)",
   background: "#4caf50",
   color: "white",
-  padding: isMobile ? "10px 16px" : "12px 20px",
+  padding: "12px 20px",
   borderRadius: "8px",
   boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
   zIndex: 1000,
   display: "flex",
   alignItems: "center",
   gap: "12px",
-  fontSize: isMobile ? "12px" : "14px",
-  maxWidth: isMobile ? "calc(100vw - 32px)" : "auto",
-  flexWrap: isMobile ? "wrap" : "nowrap"
+  fontSize: "14px",
 };
 
 const notificationClose = {
