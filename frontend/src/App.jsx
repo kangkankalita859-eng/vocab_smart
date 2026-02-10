@@ -11,6 +11,7 @@ import "./styles/flashcard.css";
 export default function App() {
   const [stage, setStage] = useState("home"); // Back to normal
   const [config, setConfig] = useState({ start: 0, limit: 20 });
+  const [reviewUnknownDeck, setReviewUnknownDeck] = useState(false);
 
   if (stage === "test") return <TestAPI />;
   
@@ -38,10 +39,17 @@ export default function App() {
   return (
     <Session
       config={config}
+      reviewUnknownDeck={reviewUnknownDeck}
       onComplete={() => setStage("complete")}
-      onGoRead={() => setStage("read")}
+      onGoRead={() => {
+        setReviewUnknownDeck(false);
+        setStage("read");
+      }}
       onUpdateConfig={(c) => setConfig(c)}
-      onGoHome={() => setStage("home")}   // ✅ ADD THIS
+      onGoHome={() => {
+        setReviewUnknownDeck(false);
+        setStage("home");
+      }}
     />
   );
 
@@ -50,7 +58,10 @@ export default function App() {
     return (
       <ReadVocab
         config={config}
-        onGoCards={() => setStage("session")}
+        onGoCards={() => {
+          setReviewUnknownDeck(true);
+          setStage("session");
+        }}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
       />

@@ -39,6 +39,7 @@ function MiniStack({ title, count }) {
 
 export default function Session({
   config,
+  reviewUnknownDeck,
   onComplete,
   onGoRead,
   onGoHome,
@@ -66,14 +67,26 @@ export default function Session({
     if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
       setUnknownDeck(persistedUnknownDeck);
       setSavedDecks(persistedSavedDecks);
-      setShowPersistedNotification(true);
       
-      // Hide notification after 5 seconds
-      setTimeout(() => {
-        setShowPersistedNotification(false);
-      }, 5000);
+      // If user is coming from "Go to Flash Cards" to review unknown deck
+      if (reviewUnknownDeck && persistedUnknownDeck.length > 0) {
+        setActiveDeck(persistedUnknownDeck);
+        setOriginalDeck(persistedUnknownDeck);
+        setKnownDeck([]);
+        setUnknownDeck([]);
+        
+        // Clear persisted unknown deck since we're now using it
+        clearUnknownDeck();
+      } else {
+        setShowPersistedNotification(true);
+        
+        // Hide notification after 5 seconds
+        setTimeout(() => {
+          setShowPersistedNotification(false);
+        }, 5000);
+      }
     }
-  }, []);
+  }, [reviewUnknownDeck]);
 
   /* ---------------- AUTO-SAVE UNKNOWN DECK ---------------- */
 
