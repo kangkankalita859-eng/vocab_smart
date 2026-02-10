@@ -3,16 +3,20 @@
    ========================= */
 
 const STORAGE_KEYS = {
-  UNKNOWN_DECK: 'vocab_unknown_deck',
-  SAVED_DECKS: 'vocab_saved_decks',
-  CURRENT_CONFIG: 'vocab_current_config'
+  VOCAB_UNKNOWN_DECK: 'vocab_unknown_deck',
+  VOCAB_SAVED_DECKS: 'vocab_saved_decks',
+  VOCAB_CURRENT_CONFIG: 'vocab_current_config',
+  IDIOM_UNKNOWN_DECK: 'idiom_unknown_deck',
+  IDIOM_SAVED_DECKS: 'idiom_saved_decks',
+  IDIOM_CURRENT_CONFIG: 'idiom_current_config'
 };
 
 /* ---------------- SAVE METHODS ---------------- */
 
-export const saveUnknownDeck = (unknownDeck) => {
+export const saveUnknownDeck = (unknownDeck, type = 'vocab') => {
   try {
-    localStorage.setItem(STORAGE_KEYS.UNKNOWN_DECK, JSON.stringify(unknownDeck));
+    const key = type === 'idiom' ? STORAGE_KEYS.IDIOM_UNKNOWN_DECK : STORAGE_KEYS.VOCAB_UNKNOWN_DECK;
+    localStorage.setItem(key, JSON.stringify(unknownDeck));
     return true;
   } catch (error) {
     console.error('Error saving unknown deck:', error);
@@ -20,9 +24,10 @@ export const saveUnknownDeck = (unknownDeck) => {
   }
 };
 
-export const saveSavedDecks = (savedDecks) => {
+export const saveSavedDecks = (savedDecks, type = 'vocab') => {
   try {
-    localStorage.setItem(STORAGE_KEYS.SAVED_DECKS, JSON.stringify(savedDecks));
+    const key = type === 'idiom' ? STORAGE_KEYS.IDIOM_SAVED_DECKS : STORAGE_KEYS.VOCAB_SAVED_DECKS;
+    localStorage.setItem(key, JSON.stringify(savedDecks));
     return true;
   } catch (error) {
     console.error('Error saving saved decks:', error);
@@ -30,9 +35,10 @@ export const saveSavedDecks = (savedDecks) => {
   }
 };
 
-export const saveCurrentConfig = (config) => {
+export const saveCurrentConfig = (config, type = 'vocab') => {
   try {
-    localStorage.setItem(STORAGE_KEYS.CURRENT_CONFIG, JSON.stringify(config));
+    const key = type === 'idiom' ? STORAGE_KEYS.IDIOM_CURRENT_CONFIG : STORAGE_KEYS.VOCAB_CURRENT_CONFIG;
+    localStorage.setItem(key, JSON.stringify(config));
     return true;
   } catch (error) {
     console.error('Error saving current config:', error);
@@ -42,9 +48,10 @@ export const saveCurrentConfig = (config) => {
 
 /* ---------------- LOAD METHODS ---------------- */
 
-export const loadUnknownDeck = () => {
+export const loadUnknownDeck = (type = 'vocab') => {
   try {
-    const saved = localStorage.getItem(STORAGE_KEYS.UNKNOWN_DECK);
+    const key = type === 'idiom' ? STORAGE_KEYS.IDIOM_UNKNOWN_DECK : STORAGE_KEYS.VOCAB_UNKNOWN_DECK;
+    const saved = localStorage.getItem(key);
     return saved ? JSON.parse(saved) : [];
   } catch (error) {
     console.error('Error loading unknown deck:', error);
@@ -52,9 +59,10 @@ export const loadUnknownDeck = () => {
   }
 };
 
-export const loadSavedDecks = () => {
+export const loadSavedDecks = (type = 'vocab') => {
   try {
-    const saved = localStorage.getItem(STORAGE_KEYS.SAVED_DECKS);
+    const key = type === 'idiom' ? STORAGE_KEYS.IDIOM_SAVED_DECKS : STORAGE_KEYS.VOCAB_SAVED_DECKS;
+    const saved = localStorage.getItem(key);
     return saved ? JSON.parse(saved) : [];
   } catch (error) {
     console.error('Error loading saved decks:', error);
@@ -62,9 +70,10 @@ export const loadSavedDecks = () => {
   }
 };
 
-export const loadCurrentConfig = () => {
+export const loadCurrentConfig = (type = 'vocab') => {
   try {
-    const saved = localStorage.getItem(STORAGE_KEYS.CURRENT_CONFIG);
+    const key = type === 'idiom' ? STORAGE_KEYS.IDIOM_CURRENT_CONFIG : STORAGE_KEYS.VOCAB_CURRENT_CONFIG;
+    const saved = localStorage.getItem(key);
     return saved ? JSON.parse(saved) : { start: 0, limit: 20 };
   } catch (error) {
     console.error('Error loading current config:', error);
@@ -74,9 +83,10 @@ export const loadCurrentConfig = () => {
 
 /* ---------------- CLEAR METHODS ---------------- */
 
-export const clearUnknownDeck = () => {
+export const clearUnknownDeck = (type = 'vocab') => {
   try {
-    localStorage.removeItem(STORAGE_KEYS.UNKNOWN_DECK);
+    const key = type === 'idiom' ? STORAGE_KEYS.IDIOM_UNKNOWN_DECK : STORAGE_KEYS.VOCAB_UNKNOWN_DECK;
+    localStorage.removeItem(key);
     return true;
   } catch (error) {
     console.error('Error clearing unknown deck:', error);
@@ -84,9 +94,10 @@ export const clearUnknownDeck = () => {
   }
 };
 
-export const clearSavedDecks = () => {
+export const clearSavedDecks = (type = 'vocab') => {
   try {
-    localStorage.removeItem(STORAGE_KEYS.SAVED_DECKS);
+    const key = type === 'idiom' ? STORAGE_KEYS.IDIOM_SAVED_DECKS : STORAGE_KEYS.VOCAB_SAVED_DECKS;
+    localStorage.removeItem(key);
     return true;
   } catch (error) {
     console.error('Error clearing saved decks:', error);
@@ -94,9 +105,12 @@ export const clearSavedDecks = () => {
   }
 };
 
-export const clearAllDeckData = () => {
+export const clearAllDeckData = (type = 'vocab') => {
   try {
-    Object.values(STORAGE_KEYS).forEach(key => {
+    const keys = type === 'idiom' 
+      ? [STORAGE_KEYS.IDIOM_UNKNOWN_DECK, STORAGE_KEYS.IDIOM_SAVED_DECKS, STORAGE_KEYS.IDIOM_CURRENT_CONFIG]
+      : [STORAGE_KEYS.VOCAB_UNKNOWN_DECK, STORAGE_KEYS.VOCAB_SAVED_DECKS, STORAGE_KEYS.VOCAB_CURRENT_CONFIG];
+    keys.forEach(key => {
       localStorage.removeItem(key);
     });
     return true;
@@ -108,15 +122,15 @@ export const clearAllDeckData = () => {
 
 /* ---------------- UTILITY METHODS ---------------- */
 
-export const hasPersistedData = () => {
-  const unknownDeck = loadUnknownDeck();
-  const savedDecks = loadSavedDecks();
+export const hasPersistedData = (type = 'vocab') => {
+  const unknownDeck = loadUnknownDeck(type);
+  const savedDecks = loadSavedDecks(type);
   return unknownDeck.length > 0 || savedDecks.length > 0;
 };
 
-export const getDeckStats = () => {
-  const unknownDeck = loadUnknownDeck();
-  const savedDecks = loadSavedDecks();
+export const getDeckStats = (type = 'vocab') => {
+  const unknownDeck = loadUnknownDeck(type);
+  const savedDecks = loadSavedDecks(type);
   
   return {
     unknownCount: unknownDeck.length,

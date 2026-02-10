@@ -39,8 +39,8 @@ export default function ReadVocab({
   /* -------- CHECK PERSISTED DATA -------- */
 
   useEffect(() => {
-    if (hasPersistedData()) {
-      const stats = getDeckStats();
+    if (hasPersistedData('vocab')) {
+      const stats = getDeckStats('vocab');
       setDeckStats(stats);
       setShowPersistedInfo(true);
     }

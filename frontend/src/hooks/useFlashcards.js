@@ -13,7 +13,7 @@ export default function useFlashcards(config) {
 
   // Load persisted unknown deck on mount
   useEffect(() => {
-    const persistedUnknown = loadUnknownDeck();
+    const persistedUnknown = loadUnknownDeck('vocab');
     if (persistedUnknown.length > 0) {
       setUnknown(persistedUnknown);
     }
@@ -37,7 +37,7 @@ export default function useFlashcards(config) {
 
   // Save unknown deck to localStorage
   const saveUnknownDeckToStorage = useCallback(() => {
-    saveUnknownDeck(unknown);
+    saveUnknownDeck(unknown, 'vocab');
   }, [unknown]);
 
   // Auto-save unknown deck when it changes
@@ -69,7 +69,7 @@ export default function useFlashcards(config) {
     setUnknown([]);
     setCurrentIndex(0);
     // Clear persisted unknown deck since we're now using it
-    saveUnknownDeck([]);
+    saveUnknownDeck([], 'vocab');
   };
 
   const reset = () => {

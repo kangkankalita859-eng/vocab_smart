@@ -61,8 +61,8 @@ export default function Session({
 
   useEffect(() => {
     // Load persisted data on component mount
-    const persistedUnknownDeck = loadUnknownDeck();
-    const persistedSavedDecks = loadSavedDecks();
+    const persistedUnknownDeck = loadUnknownDeck('vocab');
+    const persistedSavedDecks = loadSavedDecks('vocab');
     
     if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
       setUnknownDeck(persistedUnknownDeck);
@@ -76,7 +76,7 @@ export default function Session({
         setUnknownDeck([]);
         
         // Clear persisted unknown deck since we're now using it
-        clearUnknownDeck();
+        clearUnknownDeck('vocab');
       } else {
         setShowPersistedNotification(true);
         
@@ -93,7 +93,7 @@ export default function Session({
   useEffect(() => {
     // Auto-save unknown deck whenever it changes
     if (unknownDeck.length > 0) {
-      saveUnknownDeck(unknownDeck);
+      saveUnknownDeck(unknownDeck, 'vocab');
     }
   }, [unknownDeck]);
 
@@ -102,7 +102,7 @@ export default function Session({
   useEffect(() => {
     // Auto-save saved decks whenever they change
     if (savedDecks.length > 0) {
-      saveSavedDecks(savedDecks);
+      saveSavedDecks(savedDecks, 'vocab');
     }
   }, [savedDecks]);
 
@@ -199,7 +199,7 @@ export default function Session({
     setUnknownDeck([]);
     
     // Clear persisted unknown deck since it's now saved
-    clearUnknownDeck();
+    clearUnknownDeck('vocab');
     
     // Auto-save is handled by useEffect
   };
