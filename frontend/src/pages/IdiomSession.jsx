@@ -2,6 +2,14 @@ import { useEffect, useState } from "react";
 import IdiomFlashCard from "../components/IdiomFlashCard";
 import SessionNav from "../components/SessionNav";
 import { fetchIdioms } from "../services/idiomsService";
+import {
+  saveUnknownDeck,
+  loadUnknownDeck,
+  saveSavedDecks,
+  loadSavedDecks,
+  clearUnknownDeck,
+  hasPersistedData
+} from "../services/deckPersistenceService";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -43,6 +51,7 @@ export default function IdiomSession({
 
   const [savedDecks, setSavedDecks] = useState([]);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
+  const [showPersistedNotification, setShowPersistedNotification] = useState(false);
 
   const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
@@ -70,6 +79,43 @@ export default function IdiomSession({
         setLoading(false);
       });
   }, [config]);
+
+  /* ---------------- LOAD PERSISTED DATA ---------------- */
+
+  useEffect(() => {
+    // Load persisted data on component mount
+    const persistedUnknownDeck = loadUnknownDeck();
+    const persistedSavedDecks = loadSavedDecks();
+    
+    if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
+      setUnknownDeck(persistedUnknownDeck);
+      setSavedDecks(persistedSavedDecks);
+      setShowPersistedNotification(true);
+      
+      // Hide notification after 5 seconds
+      setTimeout(() => {
+        setShowPersistedNotification(false);
+      }, 5000);
+    }
+  }, []);
+
+  /* ---------------- AUTO-SAVE UNKNOWN DECK ---------------- */
+
+  useEffect(() => {
+    // Auto-save unknown deck whenever it changes
+    if (unknownDeck.length > 0) {
+      saveUnknownDeck(unknownDeck);
+    }
+  }, [unknownDeck]);
+
+  /* ---------------- AUTO-SAVE SAVED DECKS ---------------- */
+
+  useEffect(() => {
+    // Auto-save saved decks whenever they change
+    if (savedDecks.length > 0) {
+      saveSavedDecks(savedDecks);
+    }
+  }, [savedDecks]);
 
   /* ---------------- CARD ACTIONS ---------------- */
 
@@ -228,6 +274,19 @@ export default function IdiomSession({
         onGoRead={onGoRead}
         onGoHome={onGoHome}
       />
+
+      {/* PERSISTED DATA NOTIFICATION */}
+      {showPersistedNotification && (
+        <div style={notification}>
+          <span>📚 Previous idiom unknown deck data restored!</span>
+          <button 
+            style={notificationClose}
+            onClick={() => setShowPersistedNotification(false)}
+          >
+            ✕
+          </button>
+        </div>
+      )}
 
       {savedDecks.length > 0 && (
         <div style={deckPanel}>
@@ -400,4 +459,35 @@ const secondaryBtn = {
   border: "1px solid #aaa",
   background: "#fff",
   cursor: "pointer",
+};
+
+const notification = {
+  position: "fixed",
+  top: "70px",
+  left: "50%",
+  transform: "translateX(-50%)",
+  background: "#4caf50",
+  color: "white",
+  padding: "12px 20px",
+  borderRadius: "8px",
+  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+  zIndex: 1000,
+  display: "flex",
+  alignItems: "center",
+  gap: "12px",
+  fontSize: "14px",
+};
+
+const notificationClose = {
+  background: "none",
+  border: "none",
+  color: "white",
+  fontSize: "16px",
+  cursor: "pointer",
+  padding: "0",
+  width: "20px",
+  height: "20px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 };
