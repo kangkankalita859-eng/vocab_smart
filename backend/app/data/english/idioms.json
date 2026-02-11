@@ -1278,5 +1278,469 @@
     "hindiMeaning": "मजबूत दृढ़ संकल्प",
     "sscCount": 3,
     "example": "She has an iron will."
-  }            
+  },
+  {
+    "id": 161,
+    "phrase": "An old head on young shoulders",
+    "meaning": "Full of wisdom",
+    "hindiMeaning": "कम उम्र में अधिक बुद्धिमान",
+    "sscCount": 0,
+    "example": "He is an old head on young shoulders."
+  },
+  {
+    "id": 162,
+    "phrase": "An olive branch",
+    "meaning": "Gesture of peace",
+    "hindiMeaning": "शांति का प्रस्ताव",
+    "sscCount": 0,
+    "example": "He offered an olive branch."
+  },
+  {
+    "id": 163,
+    "phrase": "An open book",
+    "meaning": "One that held no secrets / one about whom it is easy to know everything / straightforward and honest",
+    "hindiMeaning": "खुली किताब (जिसके बारे में सब कुछ पता हो)",
+    "sscCount": 0,
+    "example": "He is an open book."
+  },
+  {
+    "id": 164,
+    "phrase": "An uphill task",
+    "meaning": "Difficult task",
+    "hindiMeaning": "कठिन कार्य",
+    "sscCount": 0,
+    "example": "This work is an uphill task."
+  },
+  {
+    "id": 165,
+    "phrase": "Appeal to Caesar",
+    "meaning": "Appeal to the highest possible authority",
+    "hindiMeaning": "सर्वोच्च अधिकारी से अपील करना",
+    "sscCount": 0,
+    "example": "He decided to appeal to Caesar."
+  },
+  {
+    "id": 166,
+    "phrase": "Apple of discord",
+    "meaning": "Reason for quarrel / Cause of animosity / something that causes friction / Bone of contention",
+    "hindiMeaning": "झगड़े का कारण",
+    "sscCount": 1,
+    "example": "Property became the apple of discord."
+  },
+  {
+    "id": 167,
+    "phrase": "Apple of one’s eye",
+    "meaning": "Someone very precious or dear",
+    "hindiMeaning": "आँख का तारा (बहुत प्यारा)",
+    "sscCount": 1,
+    "example": "His daughter is the apple of his eye."
+  },
+  {
+    "id": 168,
+    "phrase": "Apple-cart",
+    "meaning": "Spoil careful plans",
+    "hindiMeaning": "काम बिगाड़ देना",
+    "sscCount": 0,
+    "example": "His mistake upset the apple-cart."
+  },
+  {
+    "id": 169,
+    "phrase": "Apples and oranges",
+    "meaning": "Two unlike things or people / Unequal comparisons",
+    "hindiMeaning": "दो अलग-अलग चीजों की तुलना",
+    "sscCount": 1,
+    "example": "You are comparing apples and oranges."
+  },
+  {
+    "id": 170,
+    "phrase": "Apropos of nothing",
+    "meaning": "Having no relevance to any previous discussion or situation",
+    "hindiMeaning": "बिना किसी संदर्भ के",
+    "sscCount": 0,
+    "example": "He spoke apropos of nothing."
+  },
+  {
+    "id": 171,
+    "phrase": "Argus-eyed",
+    "meaning": "Carefully observant or attentive / Vigilant",
+    "hindiMeaning": "सतर्क",
+    "sscCount": 3,
+    "example": "The teacher is argus-eyed."
+  },
+  {
+    "id": 172,
+    "phrase": "Armed to the teeth",
+    "meaning": "Heavily armed or fortified",
+    "hindiMeaning": "पूरी तरह से सशस्त्र होना",
+    "sscCount": 2,
+    "example": "The guards were armed to the teeth."
+  },
+  {
+    "id": 173,
+    "phrase": "Around the clock",
+    "meaning": "Day and night",
+    "hindiMeaning": "दिन-रात",
+    "sscCount": 0,
+    "example": "They worked around the clock."
+  },
+  {
+    "id": 174,
+    "phrase": "Around the corner",
+    "meaning": "Occurring soon",
+    "hindiMeaning": "जल्द ही होने वाला",
+    "sscCount": 1,
+    "example": "Exams are around the corner."
+  },
+  {
+    "id": 175,
+    "phrase": "As a matter of fact",
+    "meaning": "Actually as it happens",
+    "hindiMeaning": "वास्तव में",
+    "sscCount": 0,
+    "example": "As a matter of fact, I was there."
+  },
+  {
+    "id": 176,
+    "phrase": "As bald as a cue ball",
+    "meaning": "Completely bald",
+    "hindiMeaning": "पूरी तरह गंजा",
+    "sscCount": 0,
+    "example": "He is as bald as a cue ball."
+  },
+  {
+    "id": 177,
+    "phrase": "As clear as a bell",
+    "meaning": "Readily understood",
+    "hindiMeaning": "बिल्कुल स्पष्ट",
+    "sscCount": 0,
+    "example": "Her explanation was clear as a bell."
+  },
+  {
+    "id": 178,
+    "phrase": "As clear as mud",
+    "meaning": "Impossible to understand",
+    "hindiMeaning": "समझ से बाहर",
+    "sscCount": 0,
+    "example": "Your plan is as clear as mud."
+  },
+  {
+    "id": 179,
+    "phrase": "As daft as a brush",
+    "meaning": "Extremely silly",
+    "hindiMeaning": "बेहद मूर्ख",
+    "sscCount": 2,
+    "example": "He behaves as daft as a brush."
+  },
+  {
+    "id": 180,
+    "phrase": "As dead as a doornail",
+    "meaning": "Unquestionably dead or inoperative",
+    "hindiMeaning": "पूरी तरह बेकार या मृत",
+    "sscCount": 0,
+    "example": "The phone is dead as a doornail."
+  },
+  {
+    "id": 181,
+    "phrase": "As fit as a fiddle",
+    "meaning": "Strong and healthy / In a perfectly healthy condition",
+    "hindiMeaning": "पूरी तरह स्वस्थ",
+    "sscCount": 2,
+    "example": "After rest, he is fit as a fiddle."
+  },
+  {
+    "id": 182,
+    "phrase": "As good as gold",
+    "meaning": "A person who is obedient and well-behaved",
+    "hindiMeaning": "शिष्ट व्यक्ति",
+    "sscCount": 0,
+    "example": "The child is as good as gold."
+  },
+  {
+    "id": 183,
+    "phrase": "As hard as a nail",
+    "meaning": "Emotionless / unrelenting / to have no feelings",
+    "hindiMeaning": "भावनाहीन",
+    "sscCount": 4,
+    "example": "He is as hard as a nail."
+  },
+  {
+    "id": 184,
+    "phrase": "As high as a kite",
+    "meaning": "Intoxicated with alcohol",
+    "hindiMeaning": "नशे में धुत",
+    "sscCount": 0,
+    "example": "He was high as a kite."
+  },
+  {
+    "id": 185,
+    "phrase": "As keen as mustard",
+    "meaning": "Very enthusiastic and excited",
+    "hindiMeaning": "बहुत उत्साही",
+    "sscCount": 0,
+    "example": "She is keen as mustard."
+  },
+  {
+    "id": 186,
+    "phrase": "As phony as a three-dollar bill",
+    "meaning": "Something that is fake",
+    "hindiMeaning": "नकली या झूठा",
+    "sscCount": 0,
+    "example": "His story is phony as a three-dollar bill."
+  },
+  {
+    "id": 187,
+    "phrase": "As sly as a fox",
+    "meaning": "Smart and clever",
+    "hindiMeaning": "चालाक",
+    "sscCount": 0,
+    "example": "He is sly as a fox."
+  },
+  {
+    "id": 188,
+    "phrase": "As the crow flies",
+    "meaning": "The shortest route / measurement in a straight line",
+    "hindiMeaning": "सीधी रेखा में दूरी",
+    "sscCount": 1,
+    "example": "It is five km as the crow flies."
+  },
+  {
+    "id": 189,
+    "phrase": "As thick as two short planks",
+    "meaning": "Extremely stupid",
+    "hindiMeaning": "बहुत मूर्ख",
+    "sscCount": 0,
+    "example": "He is as thick as two short planks."
+  },
+  {
+    "id": 190,
+    "phrase": "Ask for trouble",
+    "meaning": "Act in a way that is likely to incur problems or difficulties",
+    "hindiMeaning": "अपने लिए मुसीबत मोल लेना",
+    "sscCount": 0,
+    "example": "You are asking for trouble by driving fast."
+  },
+  {
+    "id": 191,
+    "phrase": "Asleep at the wheel",
+    "meaning": "Not attentive to one's duties",
+    "hindiMeaning": "काम के प्रति लापरवाह रहना",
+    "sscCount": 0,
+    "example": "He was asleep at the wheel."
+  },
+  {
+    "id": 192,
+    "phrase": "Assume airs",
+    "meaning": "Pretend superiority",
+    "hindiMeaning": "श्रेष्ठता का प्रदर्शन",
+    "sscCount": 0,
+    "example": "He assumes airs."
+  },
+  {
+    "id": 193,
+    "phrase": "At a crossroads",
+    "meaning": "A point in life where his decisions will have long term consequences",
+    "hindiMeaning": "दो राहों पर (महत्वपूर्ण निर्णय का समय)",
+    "sscCount": 1,
+    "example": "He is at a crossroads in life."
+  },
+  {
+    "id": 194,
+    "phrase": "At a loss",
+    "meaning": "Unable to decide",
+    "hindiMeaning": "निर्णय लेने में असमर्थ",
+    "sscCount": 1,
+    "example": "I am at a loss what to do."
+  },
+  {
+    "id": 195,
+    "phrase": "At a snail’s pace",
+    "meaning": "Do something very slowly",
+    "hindiMeaning": "बहुत धीरे-धीरे",
+    "sscCount": 1,
+    "example": "Work is going at a snail’s pace."
+  },
+  {
+    "id": 196,
+    "phrase": "At a stretch",
+    "meaning": "To do something continuously",
+    "hindiMeaning": "लगातार",
+    "sscCount": 1,
+    "example": "He studied for five hours at a stretch."
+  },
+  {
+    "id": 197,
+    "phrase": "At any cost",
+    "meaning": "Under all circumstances",
+    "hindiMeaning": "किसी भी कीमत पर",
+    "sscCount": 0,
+    "example": "Finish it at any cost."
+  },
+  {
+    "id": 198,
+    "phrase": "At beck and call",
+    "meaning": "At his disposal / to be dominated by someone / be always ready at her service",
+    "hindiMeaning": "इशारे पर नाचने वाला",
+    "sscCount": 1,
+    "example": "He is at his boss’s beck and call."
+  },
+  {
+    "id": 199,
+    "phrase": "At cross purposes",
+    "meaning": "Having opposing viewpoints or intentions",
+    "hindiMeaning": "विपरीत दृष्टिकोण रखना",
+    "sscCount": 2,
+    "example": "They were talking at cross purposes."
+  },
+  {
+    "id": 200,
+    "phrase": "At daggers drawn",
+    "meaning": "Enemies / To be bitterly hostile / Being at loggerheads",
+    "hindiMeaning": "शत्रु या संघर्ष की स्थिति में",
+    "sscCount": 3,
+    "example": "They are at daggers drawn."
+  },
+  {
+    "id": 201,
+    "phrase": "At each other’s throats",
+    "meaning": "Arguing angrily",
+    "hindiMeaning": "गुस्से से बहस करना",
+    "sscCount": 0,
+    "example": "They were at each other’s throats."
+  },
+  {
+    "id": 202,
+    "phrase": "At large",
+    "meaning": "A criminal escaped or not yet captured",
+    "hindiMeaning": "भागा हुआ अपराधी",
+    "sscCount": 1,
+    "example": "The thief is still at large."
+  },
+  {
+    "id": 203,
+    "phrase": "At loggerheads",
+    "meaning": "In conflict with someone / To disagree strongly",
+    "hindiMeaning": "असहमति के कारण विवाद",
+    "sscCount": 1,
+    "example": "They are at loggerheads."
+  },
+  {
+    "id": 204,
+    "phrase": "At loose ends",
+    "meaning": "In an uncertain situation",
+    "hindiMeaning": "अनिश्चित स्थिति में",
+    "sscCount": 2,
+    "example": "I am feeling at loose ends."
+  },
+  {
+    "id": 205,
+    "phrase": "At one’s elbow",
+    "meaning": "Next to someone",
+    "hindiMeaning": "किसी के समीप",
+    "sscCount": 3,
+    "example": "He was at my elbow."
+  },
+  {
+    "id": 206,
+    "phrase": "At one’s wit’s end",
+    "meaning": "Completely confused or perplexed",
+    "hindiMeaning": "पूरी तरह से उलझन में",
+    "sscCount": 3,
+    "example": "I am at my wit’s end."
+  },
+  {
+    "id": 207,
+    "phrase": "At random",
+    "meaning": "In a random manner",
+    "hindiMeaning": "अनियमित तरीके से",
+    "sscCount": 0,
+    "example": "He picked a book at random."
+  },
+  {
+    "id": 208,
+    "phrase": "At short notice",
+    "meaning": "With little warning or time for preparation",
+    "hindiMeaning": "कम समय में",
+    "sscCount": 0,
+    "example": "He came at short notice."
+  },
+  {
+    "id": 209,
+    "phrase": "At sixes and sevens",
+    "meaning": "In disorder or confusion",
+    "hindiMeaning": "अव्यवस्था या भ्रम में",
+    "sscCount": 3,
+    "example": "Everything was at sixes and sevens."
+  },
+  {
+    "id": 210,
+    "phrase": "At somebody’s expense",
+    "meaning": "Paid for by someone",
+    "hindiMeaning": "किसी और के लिए भुगतान करना",
+    "sscCount": 0,
+    "example": "He travelled at my expense."
+  },
+  {
+    "id": 211,
+    "phrase": "At stake",
+    "meaning": "In danger",
+    "hindiMeaning": "खतरे में",
+    "sscCount": 0,
+    "example": "His job is at stake."
+  },
+  {
+    "id": 212,
+    "phrase": "At the drop of a hat/dime",
+    "meaning": "Without any hesitation / instantly / without having planned beforehand",
+    "hindiMeaning": "बिना किसी हिचकिचाहट के तुरंत",
+    "sscCount": 7,
+    "example": "He agreed at the drop of a hat."
+  },
+  {
+    "id": 213,
+    "phrase": "At the eleventh hour",
+    "meaning": "At the very last moment / Just before the deadline",
+    "hindiMeaning": "आखिरी मौके पर",
+    "sscCount": 8,
+    "example": "He arrived at the eleventh hour."
+  },
+  {
+    "id": 214,
+    "phrase": "At the top of your lungs",
+    "meaning": "Extremely loudly",
+    "hindiMeaning": "पूरे जोर से चिल्लाना",
+    "sscCount": 0,
+    "example": "He shouted at the top of his lungs."
+  },
+  {
+    "id": 215,
+    "phrase": "At variance with",
+    "meaning": "In opposite",
+    "hindiMeaning": "विरोध में या अलग होना",
+    "sscCount": 0,
+    "example": "His views are at variance with mine."
+  },
+  {
+    "id": 216,
+    "phrase": "Average out",
+    "meaning": "To produce a result that is even and balanced when looked at over a period of time",
+    "hindiMeaning": "संतुलित होना",
+    "sscCount": 0,
+    "example": "The scores average out."
+  },
+  {
+    "id": 217,
+    "phrase": "Babe in the woods",
+    "meaning": "A young defenceless person",
+    "hindiMeaning": "असहाय",
+    "sscCount": 0,
+    "example": "He is a babe in the woods."
+  },
+  {
+    "id": 218,
+    "phrase": "Back in saddle",
+    "meaning": "Resume duty",
+    "hindiMeaning": "काम में वापस लौटना",
+    "sscCount": 0,
+    "example": "He is back in saddle."
+  }                
 ]
