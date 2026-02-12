@@ -4,6 +4,7 @@ export async function fetchVocab(start = 0, limit = null) {
   const url = new URL(`${API_BASE_URL}/api/vocab`);
   if (start > 0) url.searchParams.append('start', start);
   if (limit !== null) url.searchParams.append('limit', limit);
+  url.searchParams.append('_t', Date.now()); // Cache-busting
   
   const res = await fetch(url.toString());
   

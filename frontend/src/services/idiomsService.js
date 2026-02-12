@@ -7,6 +7,7 @@ export const fetchIdioms = async (start = 0, limit = null) => {
     if (limit !== null) {
       params.append("limit", limit.toString());
     }
+    params.append("_t", Date.now()); // Cache-busting
 
     const response = await fetch(`${API_BASE_URL}/api/idioms?${params}`);
     
