@@ -37,7 +37,7 @@ export default function SessionNav({
         />
         <input
           type="number"
-          placeholder="Count"
+          placeholder="End"
           defaultValue={config?.limit}
           id="limitInput"
           style={input}
@@ -48,9 +48,10 @@ export default function SessionNav({
             const start = Number(
               document.getElementById("startInput").value
             );
-            const limit = Number(
+            const end = Number(
               document.getElementById("limitInput").value
             );
+            const limit = end - start + 1; // Calculate correct limit
             onApplyRange({ start, limit });
           }}
         >
