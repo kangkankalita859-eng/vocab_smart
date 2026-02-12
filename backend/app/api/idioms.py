@@ -14,15 +14,22 @@ def get_idioms(start: int = Query(0, ge=0), limit: int = Query(None, ge=1)):
         with open(idioms_path, "r", encoding="utf-8") as f:
             idioms_data = json.load(f)
         
-        # Apply pagination
-        total_count = len(idioms_data)
-        end_index = start + limit if limit else total_count
-        paginated_data = idioms_data[start:end_index]
+        # Filter by ID instead of array slicing
+        if start > 0:
+            filtered_data = [item for item in idioms_data if item["id"] >= start]
+        else:
+            filtered_data = idioms_data
+        
+        # Apply limit to filtered data
+        if limit:
+            paginated_data = filtered_data[:limit]
+        else:
+            paginated_data = filtered_data
         
         return {
             "status": "success",
             "count": len(paginated_data),
-            "total": total_count,
+            "total": len(idioms_data),
             "start": start,
             "limit": limit,
             "data": paginated_data

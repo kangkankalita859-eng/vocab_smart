@@ -14,15 +14,22 @@ def get_vocab(start: int = Query(0, ge=0), limit: int = Query(None, ge=1)):
         with open(vocab_path, "r", encoding="utf-8") as f:
             vocab_data = json.load(f)
         
-        # Apply pagination
-        total_count = len(vocab_data)
-        end_index = start + limit if limit else total_count
-        paginated_data = vocab_data[start:end_index]
+        # Filter by ID instead of array slicing
+        if start > 0:
+            filtered_data = [item for item in vocab_data if item["id"] >= start]
+        else:
+            filtered_data = vocab_data
+        
+        # Apply limit to filtered data
+        if limit:
+            paginated_data = filtered_data[:limit]
+        else:
+            paginated_data = filtered_data
         
         return {
             "status": "success",
             "count": len(paginated_data),
-            "total": total_count,
+            "total": len(vocab_data),
             "start": start,
             "limit": limit,
             "data": paginated_data
