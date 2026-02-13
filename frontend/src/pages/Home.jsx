@@ -8,13 +8,6 @@ import PYQDisplay from "../components/PYQDisplay";
 
 import useMobile from "../hooks/useMobile";
 
-import {
-  loadUnknownDeck,
-  loadSavedDecks,
-  hasPersistedData,
-  getDeckStats
-} from "../services/deckPersistenceService";
-
 
 
 // Data structure for subject-specific content
@@ -127,21 +120,9 @@ const subjectContent = {
 
         description: "Reading passages and comprehension",
 
-        status: "available",
+        status: "coming-soon",
 
         color: "#96ceb4"
-
-      },
-
-      {
-
-        title: "📱 Offline Study",
-
-        description: "Study without internet connection",
-
-        status: "available",
-
-        color: "#4caf50"
 
       }
 
@@ -272,32 +253,16 @@ const subjectContent = {
 export default function Home({ onStart, onIdioms }) {
 
   const [selectedSubject, setSelectedSubject] = useState("");
+
   const [selectedTopic, setSelectedTopic] = useState("");
+
   const [showPYQ, setShowPYQ] = useState(false);
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const [offlineStats, setOfflineStats] = useState(null);
 
   const { isMobile } = useMobile();
 
-  // Check online status
-  useState(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
-    
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-    
-    // Load offline stats on mount
-    if (hasPersistedData()) {
-      setOfflineStats(getDeckStats());
-    }
-    
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []);
+
 
   const handleSubjectSelect = (subject) => {
 
@@ -354,22 +319,6 @@ export default function Home({ onStart, onIdioms }) {
       // For grammar, you can add specific handling later
 
       alert(`${module.title} functionality will be implemented soon!`);
-
-    } else if (module.title.includes('📱 Offline Study')) {
-
-      // Handle offline study mode
-
-      if (!isOnline) {
-
-        alert('Offline mode requires internet connection to sync data first!');
-
-        return;
-
-      }
-
-      // Navigate to offline study page
-
-      window.location.href = '/offline-study';
 
     } else {
 
@@ -500,16 +449,6 @@ export default function Home({ onStart, onIdioms }) {
             <span style={{ fontSize: '16px', fontWeight: '600' }}>
 
               Smart Vocabulary Trainer
-
-              {!isOnline && (
-
-                <span style={{ color: '#ff9800', marginLeft: '8px', fontSize: '12px' }}>
-
-                  ● Offline
-
-                </span>
-
-              )}
 
             </span>
 
