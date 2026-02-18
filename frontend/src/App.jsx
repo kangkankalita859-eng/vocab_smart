@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Session from "./pages/Session";
 import ReadVocab from "./pages/ReadVocab";
 import ReadIdioms from "./pages/ReadIdioms";
+import ReadSynonymsAntonyms from "./pages/ReadSynonymsAntonyms";
 import IdiomSession from "./pages/IdiomSession";
 import Complete from "./pages/Complete";
 import TestAPI from "./TestAPI";
@@ -31,6 +32,10 @@ export default function App() {
         onIdioms={(c) => {
           setConfig(c);
           setStage("read-idioms");
+        }}
+        onSynonymsAntonyms={(c) => {
+          setConfig(c);
+          setStage("read-synonyms-antonyms");
         }}
       />
     );
@@ -82,6 +87,16 @@ export default function App() {
       <IdiomSession
         config={config}
         onGoRead={() => setStage("read-idioms")}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "read-synonyms-antonyms")
+    return (
+      <ReadSynonymsAntonyms
+        config={config}
+        onGoCards={() => {}}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
       />

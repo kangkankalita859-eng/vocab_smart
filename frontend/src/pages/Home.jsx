@@ -250,7 +250,7 @@ const subjectContent = {
 
 
 
-export default function Home({ onStart, onIdioms }) {
+export default function Home({ onStart, onIdioms, onSynonymsAntonyms }) {
 
   const [selectedSubject, setSelectedSubject] = useState("");
 
@@ -657,11 +657,22 @@ export default function Home({ onStart, onIdioms }) {
 
 
 
+                  {/* SYNONYMS & ANTONYMS MODULE */}
+
+                  <div
+                    style={{ ...card, borderColor: "#9c27b0" }}
+                    onClick={() =>
+                      onSynonymsAntonyms({ start: 0, limit: 250 })
+                    }
+                  >
+                    <h3>🔄 Synonyms & Antonyms</h3>
+                    <p>Learn synonyms and antonyms with Hindi meanings</p>
+                    <span style={{ ...activeTag, backgroundColor: "#9c27b0" }}>Available</span>
+                  </div>
+
+
+
                   {/* COMING SOON MODULES */}
-
-                  <Module title="Synonyms" />
-
-                  <Module title="Antonyms" />
 
                   <Module title="Homonyms" />
 

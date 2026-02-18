@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "word": "Abandon",
+    "hindiMeaning": "छोड़ देना",
+    "meaning": "To leave someone, especially someone you are responsible for, with no intention of returning",
+    "synonyms": [
+      {"word": "Desert", "hindiMeaning": "छोड़ देना"},
+      {"word": "Forsake", "hindiMeaning": "त्यागना"},
+      {"word": "Dereliction", "hindiMeaning": "उपेक्षा, क्लेश का त्याग"},
+      {"word": "Discontinue", "hindiMeaning": "बंद करना"},
+      {"word": "Leave", "hindiMeaning": "छोड़ना"},
+      {"word": "Unrestrain", "hindiMeaning": "अनियंत्रित"}
+    ],
+    "antonyms": [
+      {"word": "Retain", "hindiMeaning": "बनाये रखना"},
+      {"word": "Support", "hindiMeaning": "समर्थन"},
+      {"word": "Constraint", "hindiMeaning": "बाध्यता"},
+      {"word": "Continue", "hindiMeaning": "जारी रखना"},
+      {"word": "Kept", "hindiMeaning": "रखा हुआ"}
+    ]
+  },
+  {
+    "id": 2,
+    "word": "Abate",
+    "hindiMeaning": "कम होना, घटना",
+    "meaning": "To become less intense or widespread",
+    "synonyms": [
+      {"word": "Decrease", "hindiMeaning": "कम होना"},
+      {"word": "Subside", "hindiMeaning": "शांत होना"},
+      {"word": "Diminish", "hindiMeaning": "कम होना"},
+      {"word": "Reduce", "hindiMeaning": "कम करना"},
+      {"word": "Lessen", "hindiMeaning": "कम होना"}
+    ],
+    "antonyms": [
+      {"word": "Increase", "hindiMeaning": "बढ़ना"},
+      {"word": "Intensify", "hindiMeaning": "तीव्र होना"},
+      {"word": "Grow", "hindiMeaning": "बढ़ना"},
+      {"word": "Augment", "hindiMeaning": "बढ़ाना"},
+      {"word": "Expand", "hindiMeaning": "फैलाना"}
+    ]
+  },
+  {
+    "id": 3,
+    "word": "Abdicate",
+    "hindiMeaning": "पद या सत्ता छोड़ देना",
+    "meaning": "To give up one's authority or throne",
+    "synonyms": [
+      {"word": "Renounce", "hindiMeaning": "त्यागना"},
+      {"word": "Resign", "hindiMeaning": "त्यागपत्र देना"},
+      {"word": "Step down", "hindiMeaning": "पद से हटना"},
+      {"word": "Give up", "hindiMeaning": "छोड़ देना"},
+      {"word": "Vacate", "hindiMeaning": "खाली करना"}
+    ],
+    "antonyms": [
+      {"word": "Assume", "hindiMeaning": "ग्रहण करना"},
+      {"word": "Accept", "hindiMeaning": "स्वीकार करना"},
+      {"word": "Take up", "hindiMeaning": "ग्रहण करना"},
+      {"word": "Embrace", "hindiMeaning": "अपनाना"},
+      {"word": "Usurp", "hindiMeaning": "हड़पना"}
+    ]
+  }
+]
