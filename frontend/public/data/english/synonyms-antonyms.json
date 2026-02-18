@@ -1,63 +1,746 @@
 [
-  {
-    "id": 1,
-    "word": "Abandon",
-    "hindiMeaning": "छोड़ देना",
-    "meaning": "To leave someone, especially someone you are responsible for, with no intention of returning",
-    "synonyms": [
-      {"word": "Desert", "hindiMeaning": "छोड़ देना"},
-      {"word": "Forsake", "hindiMeaning": "त्यागना"},
-      {"word": "Dereliction", "hindiMeaning": "उपेक्षा, क्लेश का त्याग"},
-      {"word": "Discontinue", "hindiMeaning": "बंद करना"},
-      {"word": "Leave", "hindiMeaning": "छोड़ना"},
-      {"word": "Unrestrain", "hindiMeaning": "अनियंत्रित"}
-    ],
-    "antonyms": [
-      {"word": "Retain", "hindiMeaning": "बनाये रखना"},
-      {"word": "Support", "hindiMeaning": "समर्थन"},
-      {"word": "Constraint", "hindiMeaning": "बाध्यता"},
-      {"word": "Continue", "hindiMeaning": "जारी रखना"},
-      {"word": "Kept", "hindiMeaning": "रखा हुआ"}
-    ]
-  },
-  {
-    "id": 2,
-    "word": "Abate",
-    "hindiMeaning": "कम होना, घटना",
-    "meaning": "To become less intense or widespread",
-    "synonyms": [
-      {"word": "Decrease", "hindiMeaning": "कम होना"},
-      {"word": "Subside", "hindiMeaning": "शांत होना"},
-      {"word": "Diminish", "hindiMeaning": "कम होना"},
-      {"word": "Reduce", "hindiMeaning": "कम करना"},
-      {"word": "Lessen", "hindiMeaning": "कम होना"}
-    ],
-    "antonyms": [
-      {"word": "Increase", "hindiMeaning": "बढ़ना"},
-      {"word": "Intensify", "hindiMeaning": "तीव्र होना"},
-      {"word": "Grow", "hindiMeaning": "बढ़ना"},
-      {"word": "Augment", "hindiMeaning": "बढ़ाना"},
-      {"word": "Expand", "hindiMeaning": "फैलाना"}
-    ]
-  },
-  {
-    "id": 3,
-    "word": "Abdicate",
-    "hindiMeaning": "पद या सत्ता छोड़ देना",
-    "meaning": "To give up one's authority or throne",
-    "synonyms": [
-      {"word": "Renounce", "hindiMeaning": "त्यागना"},
-      {"word": "Resign", "hindiMeaning": "त्यागपत्र देना"},
-      {"word": "Step down", "hindiMeaning": "पद से हटना"},
-      {"word": "Give up", "hindiMeaning": "छोड़ देना"},
-      {"word": "Vacate", "hindiMeaning": "खाली करना"}
-    ],
-    "antonyms": [
-      {"word": "Assume", "hindiMeaning": "ग्रहण करना"},
-      {"word": "Accept", "hindiMeaning": "स्वीकार करना"},
-      {"word": "Take up", "hindiMeaning": "ग्रहण करना"},
-      {"word": "Embrace", "hindiMeaning": "अपनाना"},
-      {"word": "Usurp", "hindiMeaning": "हड़पना"}
-    ]
-  }
+{
+  "id": 1,
+  "word": "Abandon",
+  "hindiMeaning": "छोड़ देना",
+  "meaning": "To leave someone, especially someone you are responsible for, with no intention of returning",
+  "synonyms": [
+    {"word": "Desert", "hindiMeaning": "छोड़ देना"},
+    {"word": "Forsake", "hindiMeaning": "त्यागना"},
+    {"word": "Dereliction", "hindiMeaning": "उपेक्षा"},
+    {"word": "Discontinue", "hindiMeaning": "बंद करना"},
+    {"word": "Leave", "hindiMeaning": "छोड़ना"},
+    {"word": "Unrestrain", "hindiMeaning": "अनियंत्रित"}
+  ],
+  "antonyms": [
+    {"word": "Retain", "hindiMeaning": "बनाए रखना"},
+    {"word": "Support", "hindiMeaning": "समर्थन"},
+    {"word": "Constraint", "hindiMeaning": "बाध्यता"},
+    {"word": "Continue", "hindiMeaning": "जारी रखना"},
+    {"word": "Kept", "hindiMeaning": "रखा हुआ"}
+  ]
+},
+{
+  "id": 2,
+  "word": "Abate",
+  "hindiMeaning": "कम होना",
+  "meaning": "To become less intense or widespread",
+  "synonyms": [
+    {"word": "Subside", "hindiMeaning": "शांत होना"},
+    {"word": "Decrease", "hindiMeaning": "कम होना"},
+    {"word": "Diminish", "hindiMeaning": "घटना"},
+    {"word": "Reduce", "hindiMeaning": "कम करना"}
+  ],
+  "antonyms": [
+    {"word": "Aggravate", "hindiMeaning": "बढ़ाना"},
+    {"word": "Increase", "hindiMeaning": "बढ़ना"},
+    {"word": "Grow", "hindiMeaning": "वृद्धि होना"},
+    {"word": "Extend", "hindiMeaning": "विस्तार करना"}
+  ]
+},
+{
+  "id": 3,
+  "word": "Abbreviate",
+  "hindiMeaning": "संक्षिप्त करना",
+  "meaning": "To shorten a word or phrase",
+  "synonyms": [
+    {"word": "Shorten", "hindiMeaning": "छोटा करना"},
+    {"word": "Compress", "hindiMeaning": "संक्षिप्त करना"}
+  ],
+  "antonyms": [
+    {"word": "Expand", "hindiMeaning": "विस्तार करना"}
+  ]
+},
+{
+  "id": 4,
+  "word": "Abdicate",
+  "hindiMeaning": "त्यागना",
+  "meaning": "To give up power or responsibility",
+  "synonyms": [
+    {"word": "Abandon", "hindiMeaning": "छोड़ देना"},
+    {"word": "Renounce", "hindiMeaning": "त्यागना"}
+  ],
+  "antonyms": [
+    {"word": "Assert", "hindiMeaning": "दावा करना"}
+  ]
+},
+{
+  "id": 5,
+  "word": "Abduct",
+  "hindiMeaning": "अपहरण करना",
+  "meaning": "To take someone away illegally",
+  "synonyms": [
+    {"word": "Kidnap", "hindiMeaning": "अपहरण करना"}
+  ],
+  "antonyms": [
+    {"word": "Redeem", "hindiMeaning": "मुक्त करना"}
+  ]
+},
+{
+  "id": 6,
+  "word": "Aberration",
+  "hindiMeaning": "असामान्यता, विचलन",
+  "meaning": "A departure from what is normal",
+  "synonyms": [
+    {"word": "Deviation", "hindiMeaning": "विचलन"}
+  ],
+  "antonyms": [
+    {"word": "Normality", "hindiMeaning": "सामान्यता"}
+  ]
+},
+{
+  "id": 7,
+  "word": "Absence",
+  "hindiMeaning": "अनुपस्थिति",
+  "meaning": "A state of being away",
+  "synonyms": [
+    {"word": "Inactivity", "hindiMeaning": "निष्क्रियता"},
+    {"word": "Suspension", "hindiMeaning": "निलंबन"}
+  ],
+  "antonyms": [
+    {"word": "Continuation", "hindiMeaning": "जारी रखना"}
+  ]
+},
+{
+  "id": 8,
+  "word": "Abide",
+  "hindiMeaning": "पालन करना",
+  "meaning": "To follow a rule or decision",
+  "synonyms": [
+    {"word": "Dwell", "hindiMeaning": "निवास करना"}
+  ],
+  "antonyms": [
+    {"word": "Reject", "hindiMeaning": "अस्वीकार करना"}
+  ]
+},
+{
+  "id": 9,
+  "word": "Abjure",
+  "hindiMeaning": "त्याग करना",
+  "meaning": "To formally give up a belief",
+  "synonyms": [
+    {"word": "Renounce", "hindiMeaning": "त्याग करना"},
+    {"word": "Recant", "hindiMeaning": "पलटना"},
+    {"word": "Withdraw", "hindiMeaning": "वापस लेना"}
+  ],
+  "antonyms": [
+    {"word": "Acquire", "hindiMeaning": "प्राप्त करना"}
+  ]
+},
+{
+  "id": 10,
+  "word": "Abolish",
+  "hindiMeaning": "समाप्त करना",
+  "meaning": "To officially end a system",
+  "synonyms": [
+    {"word": "Eliminate", "hindiMeaning": "हटाना"},
+    {"word": "Cancel", "hindiMeaning": "रद्द करना"},
+    {"word": "Eradicate", "hindiMeaning": "जड़ से मिटाना"},
+    {"word": "Destroy", "hindiMeaning": "नष्ट करना"}
+  ],
+  "antonyms": [
+    {"word": "Continue", "hindiMeaning": "जारी रखना"},
+    {"word": "Build", "hindiMeaning": "निर्माण करना"},
+    {"word": "Create", "hindiMeaning": "सृजन करना"},
+    {"word": "Restore", "hindiMeaning": "पुनर्स्थापित करना"}
+  ]
+},
+{
+  "id": 11,
+  "word": "Abominable",
+  "hindiMeaning": "घृणित",
+  "meaning": "Causing moral hatred",
+  "synonyms": [
+    {"word": "Obnoxious", "hindiMeaning": "घृणित"},
+    {"word": "Repugnant", "hindiMeaning": "अरुचिकर"}
+  ],
+  "antonyms": [
+    {"word": "Delightful", "hindiMeaning": "आनंददायक"},
+    {"word": "Admirable", "hindiMeaning": "प्रशंसनीय"}
+  ]
+},
+{
+  "id": 12,
+  "word": "Abort",
+  "hindiMeaning": "बंद कर देना",
+  "meaning": "To stop a process suddenly",
+  "synonyms": [
+    {"word": "End", "hindiMeaning": "समाप्त करना"}
+  ],
+  "antonyms": [
+    {"word": "Commence", "hindiMeaning": "आरंभ करना"}
+  ]
+},
+{
+  "id": 13,
+  "word": "Abortive",
+  "hindiMeaning": "असफल",
+  "meaning": "Failing to produce result",
+  "synonyms": [
+    {"word": "Unsuccessful", "hindiMeaning": "असफल"},
+    {"word": "Ineffective", "hindiMeaning": "अप्रभावी"}
+  ],
+  "antonyms": [
+    {"word": "Successful", "hindiMeaning": "सफल"}
+  ]
+},
+{
+  "id": 14,
+  "word": "Abound",
+  "hindiMeaning": "बहुत होना",
+  "meaning": "To exist in large quantity",
+  "synonyms": [
+    {"word": "Flourish", "hindiMeaning": "फलना-फूलना"}
+  ],
+  "antonyms": [
+    {"word": "Lack", "hindiMeaning": "कमी होना"}
+  ]
+},
+{
+  "id": 15,
+  "word": "Abridge",
+  "hindiMeaning": "संक्षेप करना",
+  "meaning": "To shorten without losing meaning",
+  "synonyms": [
+    {"word": "Shorten", "hindiMeaning": "छोटा करना"}
+  ],
+  "antonyms": [
+    {"word": "Stretch", "hindiMeaning": "खींचना"},
+    {"word": "Elongate", "hindiMeaning": "लंबा करना"},
+    {"word": "Enlarge", "hindiMeaning": "बढ़ाना"}
+  ]
+},
+{
+  "id": 16,
+  "word": "Abrogate",
+  "hindiMeaning": "रद्द करना",
+  "meaning": "To repeal or cancel a law",
+  "synonyms": [
+    {"word": "Repeal", "hindiMeaning": "रद्द करना"},
+    {"word": "Cancel", "hindiMeaning": "रद्द करना"}
+  ],
+  "antonyms": [
+    {"word": "Approve", "hindiMeaning": "स्वीकृत करना"},
+    {"word": "Enact", "hindiMeaning": "लागू करना"}
+  ]
+},
+{
+  "id": 17,
+  "word": "Abrupt",
+  "hindiMeaning": "आकस्मिक",
+  "meaning": "Sudden and unexpected",
+  "synonyms": [
+    {"word": "Sudden", "hindiMeaning": "अचानक"}
+  ],
+  "antonyms": [
+    {"word": "Gradual", "hindiMeaning": "क्रमिक"},
+    {"word": "Smooth", "hindiMeaning": "चिकना"}
+  ]
+},
+{
+  "id": 18,
+  "word": "Absolute",
+  "hindiMeaning": "पूर्ण",
+  "meaning": "Not qualified or diminished in any way; total",
+  "synonyms": [
+    {"word": "Complete", "hindiMeaning": "पूरा"},
+    {"word": "Definite", "hindiMeaning": "निश्चित"}
+  ],
+  "antonyms": [
+    {"word": "Limited", "hindiMeaning": "सीमित"},
+    {"word": "Incomplete", "hindiMeaning": "अधूरा"}
+  ]
+},
+{
+  "id": 19,
+  "word": "Absolve",
+  "hindiMeaning": "दोषमुक्त करना",
+  "meaning": "To free someone from blame or guilt",
+  "synonyms": [
+    {"word": "Acquit", "hindiMeaning": "दोषमुक्त करना"},
+    {"word": "Pardon", "hindiMeaning": "क्षमा करना"}
+  ],
+  "antonyms": [
+    {"word": "Blame", "hindiMeaning": "दोष देना"},
+    {"word": "Condemn", "hindiMeaning": "निंदा करना"},
+    {"word": "Accuse", "hindiMeaning": "आरोप लगाना"}
+  ]
+},
+{
+  "id": 20,
+  "word": "Absorb",
+  "hindiMeaning": "सोख लेना",
+  "meaning": "To take in or soak up",
+  "synonyms": [
+    {"word": "Soak", "hindiMeaning": "भिगोना"},
+    {"word": "Assimilate", "hindiMeaning": "आत्मसात करना"}
+  ],
+  "antonyms": [
+    {"word": "Eject", "hindiMeaning": "निकालना"},
+    {"word": "Emit", "hindiMeaning": "निकालना"},
+    {"word": "Dismiss", "hindiMeaning": "खारिज करना"}
+  ]
+},
+{
+  "id": 21,
+  "word": "Abstain",
+  "hindiMeaning": "परहेज करना",
+  "meaning": "To restrain oneself from doing something",
+  "synonyms": [
+    {"word": "Refrain", "hindiMeaning": "रुकना"},
+    {"word": "Resist", "hindiMeaning": "विरोध करना"}
+  ],
+  "antonyms": [
+    {"word": "Indulge", "hindiMeaning": "भोगना"},
+    {"word": "Pursue", "hindiMeaning": "पीछा करना"},
+    {"word": "Continue", "hindiMeaning": "जारी रखना"}
+  ]
+},
+{
+  "id": 22,
+  "word": "Absurd",
+  "hindiMeaning": "बेतुका",
+  "meaning": "Wildly unreasonable or illogical",
+  "synonyms": [
+    {"word": "Ridiculous", "hindiMeaning": "हास्यास्पद"},
+    {"word": "Foolish", "hindiMeaning": "मूर्ख"},
+    {"word": "Senseless", "hindiMeaning": "निरर्थक"}
+  ],
+  "antonyms": [
+    {"word": "Sensible", "hindiMeaning": "समझदार"},
+    {"word": "Reasonable", "hindiMeaning": "उचित"},
+    {"word": "Rational", "hindiMeaning": "तर्कसंगत"}
+  ]
+},
+{
+  "id": 23,
+  "word": "Abundance",
+  "hindiMeaning": "प्रचुरता",
+  "meaning": "A very large quantity of something",
+  "synonyms": [
+    {"word": "Plethora", "hindiMeaning": "अधिकता"}
+  ],
+  "antonyms": [
+    {"word": "Scarcity", "hindiMeaning": "कमी"},
+    {"word": "Dearth", "hindiMeaning": "अभाव"},
+    {"word": "Shortage", "hindiMeaning": "कमी"}
+  ]
+},
+{
+  "id": 24,
+  "word": "Abundant",
+  "hindiMeaning": "प्रचुर",
+  "meaning": "Existing in large quantities",
+  "synonyms": [
+    {"word": "Plentiful", "hindiMeaning": "भरपूर"},
+    {"word": "Copious", "hindiMeaning": "अधिक"},
+    {"word": "Ample", "hindiMeaning": "पर्याप्त"}
+  ],
+  "antonyms": [
+    {"word": "Meagre", "hindiMeaning": "अल्प"},
+    {"word": "Scarce", "hindiMeaning": "दुर्लभ"},
+    {"word": "Insufficient", "hindiMeaning": "अपर्याप्त"}
+  ]
+},
+{
+  "id": 25,
+  "word": "Abuse",
+  "hindiMeaning": "गाली देना / दुरुपयोग करना",
+  "meaning": "To treat with cruelty or cause harm",
+  "synonyms": [
+    {"word": "Scorn", "hindiMeaning": "तिरस्कार"},
+    {"word": "Harm", "hindiMeaning": "नुकसान"}
+  ],
+  "antonyms": [
+    {"word": "Applaud", "hindiMeaning": "प्रशंसा करना"},
+    {"word": "Laudatory", "hindiMeaning": "प्रशंसात्मक"}
+  ]
+},
+{
+  "id": 26,
+  "word": "Accede",
+  "hindiMeaning": "सहमत होना",
+  "meaning": "To agree to a demand or request",
+  "synonyms": [
+    {"word": "Consent", "hindiMeaning": "सहमति"},
+    {"word": "Comply", "hindiMeaning": "पालन करना"},
+    {"word": "Endorse", "hindiMeaning": "समर्थन करना"}
+  ],
+  "antonyms": [
+    {"word": "Deny", "hindiMeaning": "इनकार करना"},
+    {"word": "Disapprove", "hindiMeaning": "अस्वीकृति देना"}
+  ]
+},
+{
+  "id": 27,
+  "word": "Accessory",
+  "hindiMeaning": "सहायक उपकरण",
+  "meaning": "An added thing that makes something useful",
+  "synonyms": [
+    {"word": "Attachment", "hindiMeaning": "संलग्न वस्तु"}
+  ],
+  "antonyms": [
+    {"word": "Essential", "hindiMeaning": "आवश्यक"}
+  ]
+},
+{
+  "id": 28,
+  "word": "Accolade",
+  "hindiMeaning": "सम्मान",
+  "meaning": "An award or honor",
+  "synonyms": [
+    {"word": "Praise", "hindiMeaning": "प्रशंसा"},
+    {"word": "Award", "hindiMeaning": "पुरस्कार"},
+    {"word": "Laurel", "hindiMeaning": "यश"}
+  ],
+  "antonyms": [
+    {"word": "Blame", "hindiMeaning": "दोष"}
+  ]
+},
+{
+  "id": 29,
+  "word": "Accomplish",
+  "hindiMeaning": "सफल होना",
+  "meaning": "To complete successfully",
+  "synonyms": [
+    {"word": "Achieve", "hindiMeaning": "प्राप्त करना"},
+    {"word": "Attain", "hindiMeaning": "हासिल करना"}
+  ],
+  "antonyms": [
+    {"word": "Fail", "hindiMeaning": "असफल होना"},
+    {"word": "Miss", "hindiMeaning": "चूक जाना"},
+    {"word": "Fiasco", "hindiMeaning": "असफलता"}
+  ]
+},
+{
+  "id": 30,
+  "word": "Accord",
+  "hindiMeaning": "समझौता",
+  "meaning": "Agreement or harmony",
+  "synonyms": [
+    {"word": "Confer", "hindiMeaning": "प्रदान करना"}
+  ],
+  "antonyms": [
+    {"word": "Disagreement", "hindiMeaning": "असहमति"}
+  ]
+},
+{
+  "id": 31,
+  "word": "Accountable",
+  "hindiMeaning": "जवाबदेह",
+  "meaning": "Responsible for actions",
+  "synonyms": [
+    {"word": "Answerable", "hindiMeaning": "उत्तरदायी"}
+  ],
+  "antonyms": [
+    {"word": "Irresponsible", "hindiMeaning": "गैर जिम्मेदार"}
+  ]
+},
+{
+  "id": 32,
+  "word": "Accumulate",
+  "hindiMeaning": "संचय करना",
+  "meaning": "To gather in large quantity",
+  "synonyms": [
+    {"word": "Amass", "hindiMeaning": "इकट्ठा करना"},
+    {"word": "Gather", "hindiMeaning": "जमा करना"},
+    {"word": "Acquire", "hindiMeaning": "प्राप्त करना"}
+  ],
+  "antonyms": [
+    {"word": "Disperse", "hindiMeaning": "बिखेरना"},
+    {"word": "Scatter", "hindiMeaning": "छितराना"},
+    {"word": "Squander", "hindiMeaning": "बर्बाद करना"}
+  ]
+},
+{
+  "id": 33,
+  "word": "Accurate",
+  "hindiMeaning": "शुद्ध",
+  "meaning": "Correct in all details",
+  "synonyms": [
+    {"word": "Precise", "hindiMeaning": "सटीक"},
+    {"word": "Correct", "hindiMeaning": "सही"},
+    {"word": "Exact", "hindiMeaning": "ठीक"}
+  ],
+  "antonyms": [
+    {"word": "Incorrect", "hindiMeaning": "गलत"},
+    {"word": "Inaccurate", "hindiMeaning": "अशुद्ध"}
+  ]
+},
+{
+  "id": 34,
+  "word": "Accuse",
+  "hindiMeaning": "आरोप लगाना",
+  "meaning": "To charge someone with an offense or crime",
+  "synonyms": [
+    {"word": "Indict", "hindiMeaning": "आरोपी ठहराना"}
+  ],
+  "antonyms": [
+    {"word": "Exculpation", "hindiMeaning": "दोषमुक्ति"},
+    {"word": "Defend", "hindiMeaning": "बचाव करना"},
+    {"word": "Approval", "hindiMeaning": "स्वीकृति"}
+  ]
+},
+{
+  "id": 35,
+  "word": "Accustomed",
+  "hindiMeaning": "आदी",
+  "meaning": "Customary or usual",
+  "synonyms": [
+    {"word": "Habituated", "hindiMeaning": "अभ्यस्त"}
+  ],
+  "antonyms": [
+    {"word": "Unusual", "hindiMeaning": "असामान्य"}
+  ]
+},
+{
+  "id": 36,
+  "word": "Acquire",
+  "hindiMeaning": "प्राप्त करना",
+  "meaning": "To buy or obtain something",
+  "synonyms": [
+    {"word": "Procure", "hindiMeaning": "प्राप्त करना"},
+    {"word": "Obtain", "hindiMeaning": "पाना"},
+    {"word": "Develop", "hindiMeaning": "विकसित करना"}
+  ],
+  "antonyms": [
+    {"word": "Disperse", "hindiMeaning": "वितरित करना"},
+    {"word": "Discard", "hindiMeaning": "त्यागना"}
+  ]
+},
+{
+  "id": 37,
+  "word": "Acquisition",
+  "hindiMeaning": "अधिग्रहण",
+  "meaning": "Something that is obtained",
+  "synonyms": [
+    {"word": "Recover", "hindiMeaning": "पुनः प्राप्त करना"}
+  ],
+  "antonyms": [
+    {"word": "Loss", "hindiMeaning": "हानि"}
+  ]
+},
+{
+  "id": 38,
+  "word": "Acquisitive",
+  "hindiMeaning": "लालची",
+  "meaning": "Eager to acquire things",
+  "synonyms": [
+    {"word": "Eager", "hindiMeaning": "उत्सुक"}
+  ],
+  "antonyms": [
+    {"word": "Unsparing", "hindiMeaning": "उदार"}
+  ]
+},
+{
+  "id": 39,
+  "word": "Acquit",
+  "hindiMeaning": "दोषमुक्त करना",
+  "meaning": "To declare someone free from wrongdoing",
+  "synonyms": [
+    {"word": "Absolve", "hindiMeaning": "मुक्त करना"}
+  ],
+  "antonyms": [
+    {"word": "Condemn", "hindiMeaning": "निंदा करना"},
+    {"word": "Convict", "hindiMeaning": "दोषी ठहराना"},
+    {"word": "Blame", "hindiMeaning": "दोष देना"}
+  ]
+},
+{
+  "id": 40,
+  "word": "Active",
+  "hindiMeaning": "कार्यरत",
+  "meaning": "Engaging in energetic activity",
+  "synonyms": [
+    {"word": "Busy", "hindiMeaning": "व्यस्त"},
+    {"word": "Energetic", "hindiMeaning": "ऊर्जावान"}
+  ],
+  "antonyms": [
+    {"word": "Abeyant", "hindiMeaning": "निष्क्रिय"},
+    {"word": "Dormant", "hindiMeaning": "सुप्त"}
+  ]
+},
+{
+  "id": 41,
+  "word": "Acumen",
+  "hindiMeaning": "तीक्ष्ण बुद्धि",
+  "meaning": "Ability to make good judgments",
+  "synonyms": [
+    {"word": "Sharpness", "hindiMeaning": "तीक्ष्णता"},
+    {"word": "Brilliance", "hindiMeaning": "प्रतिभा"},
+    {"word": "Ingenuity", "hindiMeaning": "चतुराई"},
+    {"word": "Acuity", "hindiMeaning": "तीव्रता"}
+  ],
+  "antonyms": [
+    {"word": "Stupidity", "hindiMeaning": "मूर्खता"}
+  ]
+},
+{
+  "id": 42,
+  "word": "Acute",
+  "hindiMeaning": "तीव्र",
+  "meaning": "Severe or intense",
+  "synonyms": [
+    {"word": "Sharp", "hindiMeaning": "तेज"},
+    {"word": "Severe", "hindiMeaning": "गंभीर"}
+  ],
+  "antonyms": [
+    {"word": "Blunt", "hindiMeaning": "कुंद"}
+  ]
+},
+{
+  "id": 43,
+  "word": "Adamant",
+  "hindiMeaning": "अटल",
+  "meaning": "Refusing to change one's mind",
+  "synonyms": [
+    {"word": "Stubborn", "hindiMeaning": "जिद्दी"}
+  ],
+  "antonyms": [
+    {"word": "Yielding", "hindiMeaning": "मानने वाला"},
+    {"word": "Flexible", "hindiMeaning": "लचीला"},
+    {"word": "Lenient", "hindiMeaning": "नरम"},
+    {"word": "Gullible", "hindiMeaning": "भोला-भाला"}
+  ]
+},
+{
+  "id": 44,
+  "word": "Adept",
+  "hindiMeaning": "कुशल",
+  "meaning": "Very skilled at something",
+  "synonyms": [
+    {"word": "Skilled", "hindiMeaning": "कुशल"},
+    {"word": "Dexterous", "hindiMeaning": "निपुण"}
+  ],
+  "antonyms": [
+    {"word": "Inept", "hindiMeaning": "अकुशल"}
+  ]
+},
+{
+  "id": 45,
+  "word": "Adequate",
+  "hindiMeaning": "पर्याप्त",
+  "meaning": "Satisfactory in quality or quantity",
+  "synonyms": [
+    {"word": "Sufficient", "hindiMeaning": "पर्याप्त"},
+    {"word": "Enough", "hindiMeaning": "काफी"}
+  ],
+  "antonyms": [
+    {"word": "Wanting", "hindiMeaning": "कमी"},
+    {"word": "Dearth", "hindiMeaning": "अभाव"}
+  ]
+},
+{
+  "id": 46,
+  "word": "Adhere",
+  "hindiMeaning": "पालन करना",
+  "meaning": "To stick firmly to something",
+  "synonyms": [
+    {"word": "Comply", "hindiMeaning": "पालन करना"},
+    {"word": "Allegiance", "hindiMeaning": "निष्ठा"}
+  ],
+  "antonyms": [
+    {"word": "Condemn", "hindiMeaning": "निंदा करना"},
+    {"word": "Flout", "hindiMeaning": "उल्लंघन करना"},
+    {"word": "Disobey", "hindiMeaning": "अवज्ञा करना"}
+  ]
+},
+{
+  "id": 47,
+  "word": "Adjust",
+  "hindiMeaning": "अनुकूल बनाना",
+  "meaning": "To modify slightly",
+  "synonyms": [
+    {"word": "Adapt", "hindiMeaning": "अनुकूल बनाना"}
+  ],
+  "antonyms": [
+    {"word": "Disorganise", "hindiMeaning": "अव्यवस्थित करना"}
+  ]
+},
+{
+  "id": 48,
+  "word": "Admire",
+  "hindiMeaning": "प्रशंसा करना",
+  "meaning": "To regard with respect",
+  "synonyms": [
+    {"word": "Appreciate", "hindiMeaning": "सराहना करना"}
+  ],
+  "antonyms": [
+    {"word": "Contempt", "hindiMeaning": "अपमान"},
+    {"word": "Ridicule", "hindiMeaning": "उपहास"},
+    {"word": "Dislike", "hindiMeaning": "नापसंद करना"},
+    {"word": "Despise", "hindiMeaning": "घृणा करना"}
+  ]
+},
+{
+  "id": 49,
+  "word": "Admonish",
+  "hindiMeaning": "डांटना",
+  "meaning": "To warn or reprimand",
+  "synonyms": [
+    {"word": "Chide", "hindiMeaning": "डांटना"},
+    {"word": "Reprimand", "hindiMeaning": "फटकारना"},
+    {"word": "Warning", "hindiMeaning": "चेतावनी"},
+    {"word": "Counsel", "hindiMeaning": "सलाह देना"},
+    {"word": "Censure", "hindiMeaning": "निंदा करना"}
+  ],
+  "antonyms": [
+    {"word": "Praise", "hindiMeaning": "प्रशंसा"},
+    {"word": "Applaud", "hindiMeaning": "तालियां बजाना"},
+    {"word": "Compliment", "hindiMeaning": "तारीफ"}
+  ]
+},
+{
+  "id": 50,
+  "word": "Adore",
+  "hindiMeaning": "बहुत पसंद करना",
+  "meaning": "To love deeply",
+  "synonyms": [
+    {"word": "Admire", "hindiMeaning": "प्रशंसा करना"}
+  ],
+  "antonyms": [
+    {"word": "Despise", "hindiMeaning": "घृणा करना"},
+    {"word": "Condemn", "hindiMeaning": "निंदा करना"}
+  ]
+},
+{
+  "id": 51,
+  "word": "Adorn",
+  "hindiMeaning": "सजाना",
+  "meaning": "To make more beautiful",
+  "synonyms": [
+    {"word": "Beautify", "hindiMeaning": "सुंदर बनाना"}
+  ],
+  "antonyms": [
+    {"word": "Disfigure", "hindiMeaning": "बदसूरत करना"}
+  ]
+},
+{
+  "id": 52,
+  "word": "Adroit",
+  "hindiMeaning": "कुशल",
+  "meaning": "Clever in using hands or mind",
+  "synonyms": [
+    {"word": "Skilful", "hindiMeaning": "निपुण"},
+    {"word": "Capable", "hindiMeaning": "सक्षम"}
+  ],
+  "antonyms": [
+    {"word": "Incompetent", "hindiMeaning": "अक्षम"},
+    {"word": "Clumsy", "hindiMeaning": "अनाड़ी"}
+  ]
+},
+{
+  "id": 53,
+  "word": "Adulation",
+  "hindiMeaning": "चापलूसी",
+  "meaning": "Excessive admiration or praise",
+  "synonyms": [
+    {"word": "Flattery", "hindiMeaning": "चापलूसी"},
+    {"word": "Adoration", "hindiMeaning": "भक्ति"}
+  ],
+  "antonyms": [
+    {"word": "Criticism", "hindiMeaning": "आलोचना"},
+    {"word": "Condemnation", "hindiMeaning": "निंदा"}
+  ]
+}
 ]
