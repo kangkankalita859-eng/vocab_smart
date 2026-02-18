@@ -1,0 +1,1746 @@
+[
+  {
+    "id": 1,
+    "phrase": "A bad patch",
+    "meaning": "A period of difficulty",
+    "hindiMeaning": "कठिनाई का दौर",
+    "sscCount": 0,
+    "example": "He is going through a bad patch."
+  },
+  {
+    "id": 2,
+    "phrase": "A beast of burden",
+    "meaning": "An animal that carries luggage",
+    "hindiMeaning": "बोझ ढोने वाला पशु",
+    "sscCount": 0,
+    "example": "The camel is a beast of burden."
+  },
+  {
+    "id": 3,
+    "phrase": "A bee hive",
+    "meaning": "A busy place",
+    "hindiMeaning": "व्यस्त नगर",
+    "sscCount": 0,
+    "example": "The station looked like a bee hive."
+  },
+  {
+    "id": 4,
+    "phrase": "A big draw",
+    "meaning": "Huge attraction",
+    "hindiMeaning": "बहुत बड़ा आकर्षण",
+    "sscCount": 0,
+    "example": "The match was a big draw."
+  },
+  {
+    "id": 5,
+    "phrase": "A bird in the hand is worth two in the bush",
+    "meaning": "Having something for certain is better than the possibility of getting something better",
+    "hindiMeaning": "कुछ निश्चित रूप से होना, कुछ बेहतर पाने की उम्मीद से अच्छा है",
+    "sscCount": 5,
+    "example": "He accepted the offer because a bird in the hand is worth two in the bush."
+  },
+  {
+    "id": 6,
+    "phrase": "A bird’s eye view",
+    "meaning": "A general view from above / Aerial view / Good and comprehensive idea / An overall view",
+    "hindiMeaning": "ऊंचाई से विस्तृत दृश्य",
+    "sscCount": 3,
+    "example": "We had a bird’s eye view of the city."
+  },
+  {
+    "id": 7,
+    "phrase": "A bite at the cherry",
+    "meaning": "An attempt or opportunity to do something",
+    "hindiMeaning": "कुछ करने का मौका मिलना",
+    "sscCount": 0,
+    "example": "He got another bite at the cherry."
+  },
+  {
+    "id": 8,
+    "phrase": "A blessing in disguise",
+    "meaning": "An apparent misfortune that eventually has good results / A hidden favour",
+    "hindiMeaning": "दुख के भेष में सुख",
+    "sscCount": 3,
+    "example": "Failure was a blessing in disguise."
+  },
+  {
+    "id": 9,
+    "phrase": "A blue-eyed boy",
+    "meaning": "One who is favourite",
+    "hindiMeaning": "आँखों का तारा",
+    "sscCount": 3,
+    "example": "He is the blue-eyed boy of his teacher."
+  },
+  {
+    "id": 10,
+    "phrase": "A bolt from the blue",
+    "meaning": "Something unexpected and unpleasant / A complete surprise / A sudden calamity / An unexpected disaster",
+    "hindiMeaning": "आकस्मिक घटना",
+    "sscCount": 10,
+    "example": "His death was a bolt from the blue."
+  },
+  {
+    "id": 11,
+    "phrase": "A bone of contention",
+    "meaning": "Cause of dispute / quarrel / Point of an argument",
+    "hindiMeaning": "झगड़े का कारण",
+    "sscCount": 1,
+    "example": "Property became a bone of contention."
+  },
+  {
+    "id": 12,
+    "phrase": "A bull in a China shop",
+    "meaning": "A clumsy person in a delicate situation",
+    "hindiMeaning": "शीशमहल में बंदर",
+    "sscCount": 2,
+    "example": "He acts like a bull in a China shop."
+  },
+  {
+    "id": 13,
+    "phrase": "A bull market",
+    "meaning": "A period of rising prices in the stock market",
+    "hindiMeaning": "शेयर बाजार में कीमतों में वृद्धि",
+    "sscCount": 0,
+    "example": "Investors are happy in a bull market."
+  },
+  {
+    "id": 14,
+    "phrase": "A cakewalk",
+    "meaning": "An easy achievement / An easy task or victory",
+    "hindiMeaning": "अत्यंत सरल",
+    "sscCount": 1,
+    "example": "Winning the match was a cakewalk."
+  },
+  {
+    "id": 15,
+    "phrase": "A can of worms",
+    "meaning": "A complicated situation or problem",
+    "hindiMeaning": "जटिल परिस्थिति",
+    "sscCount": 0,
+    "example": "Don’t open that issue, it’s a can of worms."
+  },
+  {
+    "id": 16,
+    "phrase": "A carrot and stick approach",
+    "meaning": "Rewards and punishments that influence someone's behavior",
+    "hindiMeaning": "प्रोत्साहन और दंड का मिश्रित उपयोग",
+    "sscCount": 1,
+    "example": "The teacher used carrot and stick approach."
+  },
+  {
+    "id": 17,
+    "phrase": "A change of heart",
+    "meaning": "A change in one's opinion / Different opinion",
+    "hindiMeaning": "विचार में बदलाव",
+    "sscCount": 0,
+    "example": "He had a change of heart."
+  },
+  {
+    "id": 18,
+    "phrase": "A clean slate",
+    "meaning": "Situation in which you can start again",
+    "hindiMeaning": "फिर से शुरू करने का अवसर",
+    "sscCount": 0,
+    "example": "Let us begin with a clean slate."
+  },
+  {
+    "id": 19,
+    "phrase": "A closed book",
+    "meaning": "A mystery",
+    "hindiMeaning": "रहस्य",
+    "sscCount": 0,
+    "example": "Maths is a closed book for me."
+  },
+  {
+    "id": 20,
+    "phrase": "A close-fisted person",
+    "meaning": "A miser",
+    "hindiMeaning": "कंजूस आदमी",
+    "sscCount": 2,
+    "example": "He is a close-fisted person."
+  },
+  {
+    "id": 21,
+    "phrase": "A cog in the machine",
+    "meaning": "Very small part of a big organisation",
+    "hindiMeaning": "मामूली व्यक्ति",
+    "sscCount": 0,
+    "example": "He is just a cog in the machine."
+  },
+  {
+    "id": 22,
+    "phrase": "A cold fish",
+    "meaning": "Someone who seems unfriendly and who does not share his feelings",
+    "hindiMeaning": "भावनाओं को साझा नहीं करने वाला आदमी",
+    "sscCount": 2,
+    "example": "He is a cold fish and never talks much."
+  },
+  {
+    "id": 23,
+    "phrase": "A cuckoo in the nest",
+    "meaning": "An unwelcome intruder",
+    "hindiMeaning": "अवांछनीय घुसपैठिया",
+    "sscCount": 0,
+    "example": "He felt like a cuckoo in the nest."
+  },
+  {
+    "id": 24,
+    "phrase": "A cut above something",
+    "meaning": "Superior to",
+    "hindiMeaning": "बेहतर",
+    "sscCount": 2,
+    "example": "His work is a cut above others."
+  },
+  {
+    "id": 25,
+    "phrase": "A damp squib",
+    "meaning": "A disappointing result / a situation or event which is much less impressive than expected",
+    "hindiMeaning": "उड़ी दुकान फीकी पकवान (निराशाजनक परिणाम)",
+    "sscCount": 2,
+    "example": "The show turned out to be a damp squib."
+  },
+  {
+    "id": 26,
+    "phrase": "A damsel in distress",
+    "meaning": "A helpless woman",
+    "hindiMeaning": "असहाय नारी",
+    "sscCount": 0,
+    "example": "She looked like a damsel in distress."
+  },
+  {
+    "id": 27,
+    "phrase": "A dark horse",
+    "meaning": "An unexpected winner / someone who unexpectedly succeeds / an unknown entry / a competitor of unknown capabilities",
+    "hindiMeaning": "अप्रत्याशित विजेता",
+    "sscCount": 8,
+    "example": "He emerged as a dark horse in the election."
+  },
+  {
+    "id": 28,
+    "phrase": "A dead letter",
+    "meaning": "A law or agreement that is no longer enforced or followed",
+    "hindiMeaning": "निष्प्रभावी नियम या कानून",
+    "sscCount": 0,
+    "example": "This rule has become a dead letter."
+  },
+  {
+    "id": 29,
+    "phrase": "A dead loss",
+    "meaning": "Completely useless",
+    "hindiMeaning": "बेकार व्यक्ति",
+    "sscCount": 0,
+    "example": "He proved to be a dead loss."
+  },
+  {
+    "id": 30,
+    "phrase": "A diamond in the rough",
+    "meaning": "Someone or something with potential or talent but lacking training or polish",
+    "hindiMeaning": "कोरा हीरा (छिपे गुणों वाला व्यक्ति)",
+    "sscCount": 0,
+    "example": "He is a diamond in the rough."
+  },
+  {
+    "id": 31,
+    "phrase": "A dime a dozen",
+    "meaning": "Very common and of no particular value / Anything that is common and easy to get",
+    "hindiMeaning": "कोड़ी के भाव (बेहद सस्ते)",
+    "sscCount": 6,
+    "example": "Such books are a dime a dozen."
+  },
+  {
+    "id": 32,
+    "phrase": "A dog's breakfast",
+    "meaning": "A total mess",
+    "hindiMeaning": "अव्यवस्था",
+    "sscCount": 0,
+    "example": "His room is a dog's breakfast."
+  },
+  {
+    "id": 33,
+    "phrase": "A dog's life",
+    "meaning": "A miserable existence",
+    "hindiMeaning": "दयनीय अस्तित्व",
+    "sscCount": 2,
+    "example": "He is living a dog's life."
+  },
+  {
+    "id": 34,
+    "phrase": "A drop in a bucket/ocean",
+    "meaning": "A very small part of something big or whole / A quantity too small to make an impact",
+    "hindiMeaning": "ऊंट के मुँह में जीरा (बहुत कम)",
+    "sscCount": 1,
+    "example": "His help was just a drop in the ocean."
+  },
+  {
+    "id": 35,
+    "phrase": "A dry run",
+    "meaning": "Rehearsal of an event / a practice session",
+    "hindiMeaning": "पूर्वाभ्यास",
+    "sscCount": 1,
+    "example": "We had a dry run before the program."
+  },
+  {
+    "id": 36,
+    "phrase": "A fine state of affairs",
+    "meaning": "An unpleasant situation",
+    "hindiMeaning": "अप्रिय स्थिति",
+    "sscCount": 0,
+    "example": "This is a fine state of affairs."
+  },
+  {
+    "id": 37,
+    "phrase": "A fire in someone's belly",
+    "meaning": "One who is energetic and enthusiastic about something",
+    "hindiMeaning": "जोश से भरा हुआ",
+    "sscCount": 1,
+    "example": "He has a fire in his belly."
+  },
+  {
+    "id": 38,
+    "phrase": "A fish out of water",
+    "meaning": "An uncomfortable, unfamiliar or unsuitable position or situation / A person out of accustomed",
+    "hindiMeaning": "असहज परिस्थिति",
+    "sscCount": 13,
+    "example": "He felt like a fish out of water in the city."
+  },
+  {
+    "id": 39,
+    "phrase": "A fly on the wall",
+    "meaning": "An unperceived observer",
+    "hindiMeaning": "चोरी छिपे देखने वाला व्यक्ति",
+    "sscCount": 4,
+    "example": "I wish I were a fly on the wall."
+  },
+  {
+    "id": 40,
+    "phrase": "A flying visit",
+    "meaning": "A very short visit",
+    "hindiMeaning": "संक्षिप्त भेंट",
+    "sscCount": 0,
+    "example": "He paid a flying visit."
+  },
+  {
+    "id": 41,
+    "phrase": "A fool's paradise",
+    "meaning": "Being happy for foolish reasons / a state of happiness based on a person's not knowing about potential trouble",
+    "hindiMeaning": "हवाई महल (संभावित परेशानी नहीं जानने पर खुशी की स्थिति)",
+    "sscCount": 6,
+    "example": "He lives in a fool's paradise."
+  },
+  {
+    "id": 42,
+    "phrase": "A gentleman at large",
+    "meaning": "A man without a job",
+    "hindiMeaning": "बेरोजगार आदमी",
+    "sscCount": 1,
+    "example": "He is a gentleman at large."
+  },
+  {
+    "id": 43,
+    "phrase": "A golden mean",
+    "meaning": "Middle course between two extremes / neither too much nor too little",
+    "hindiMeaning": "बीच का रास्ता",
+    "sscCount": 2,
+    "example": "We should follow the golden mean."
+  },
+  {
+    "id": 44,
+    "phrase": "A Good Samaritan",
+    "meaning": "A helpful person",
+    "hindiMeaning": "मददगार व्यक्ति",
+    "sscCount": 0,
+    "example": "He is a Good Samaritan."
+  },
+  {
+    "id": 45,
+    "phrase": "A green horn",
+    "meaning": "An inexperienced man",
+    "hindiMeaning": "अनुभवहीन व्यक्ति",
+    "sscCount": 6,
+    "example": "He is still a green horn."
+  },
+  {
+    "id": 46,
+    "phrase": "A grey area",
+    "meaning": "An area where things aren't clearly defined / An unclear situation",
+    "hindiMeaning": "अस्पष्ट क्षेत्र/परिस्थिति",
+    "sscCount": 2,
+    "example": "This issue falls in a grey area."
+  },
+  {
+    "id": 47,
+    "phrase": "A hair in the butter",
+    "meaning": "A challenging situation",
+    "hindiMeaning": "चुनौतीपूर्ण स्थिति",
+    "sscCount": 0,
+    "example": "This project is a hair in the butter."
+  },
+  {
+    "id": 48,
+    "phrase": "A hair’s breadth",
+    "meaning": "Telling about the smallest possible amount or degree of something",
+    "hindiMeaning": "बहुत बारीकी के साथ विवरण देना",
+    "sscCount": 2,
+    "example": "He escaped by a hair’s breadth."
+  },
+  {
+    "id": 49,
+    "phrase": "A hairbreadth escape",
+    "meaning": "A narrow escape / narrow margin",
+    "hindiMeaning": "बाल बाल बचना",
+    "sscCount": 15,
+    "example": "It was a hairbreadth escape."
+  },
+  {
+    "id": 50,
+    "phrase": "A hard nut to crack",
+    "meaning": "Difficult task / A tough challenge / A difficult person / An inflexible person who is hard to convince",
+    "hindiMeaning": "लोहे के चने चबाना (मुश्किल काम)",
+    "sscCount": 1,
+    "example": "This problem is a hard nut to crack."
+  },
+  {
+    "id": 51,
+    "phrase": "A hornet’s nest",
+    "meaning": "An unpleasant, difficult or troublesome situation / Raising controversy",
+    "hindiMeaning": "अप्रिय स्थिति",
+    "sscCount": 4,
+    "example": "He stirred up a hornet’s nest."
+  },
+  {
+    "id": 52,
+    "phrase": "A hot potato",
+    "meaning": "A controversial issue/situation that is difficult to deal with",
+    "hindiMeaning": "विवादस्पद मुद्दा",
+    "sscCount": 3,
+    "example": "This topic is a hot potato."
+  },
+  {
+    "id": 53,
+    "phrase": "A house of cards",
+    "meaning": "A fragile or unstable situation that can easily collapse or fail",
+    "hindiMeaning": "ताश का घर (नाजुक या अस्थिर स्थिति)",
+    "sscCount": 2,
+    "example": "His business was a house of cards."
+  },
+  {
+    "id": 54,
+    "phrase": "A kick in the teeth",
+    "meaning": "A grave setback / Great disappointment",
+    "hindiMeaning": "बड़ी असफलता",
+    "sscCount": 2,
+    "example": "Losing the match was a kick in the teeth."
+  },
+  {
+    "id": 55,
+    "phrase": "A lame excuse",
+    "meaning": "Unsatisfactory explanation / Weak excuse",
+    "hindiMeaning": "असंतोषजनक बहाना",
+    "sscCount": 2,
+    "example": "He gave a lame excuse."
+  },
+  {
+    "id": 56,
+    "phrase": "A laughing stock",
+    "meaning": "An object of laughter / an object of ridicule",
+    "hindiMeaning": "हंसी का पात्र",
+    "sscCount": 1,
+    "example": "He became a laughing stock."
+  },
+  {
+    "id": 57,
+    "phrase": "A lean patch",
+    "meaning": "A period of poor performance",
+    "hindiMeaning": "असफलताओं का समय",
+    "sscCount": 0,
+    "example": "He is going through a lean patch."
+  },
+  {
+    "id": 58,
+    "phrase": "A left handed compliment",
+    "meaning": "An ambiguous compliment / insulting remark appearing as praise",
+    "hindiMeaning": "प्रशंसा के रूप में अपमानजनक टिप्पणी",
+    "sscCount": 3,
+    "example": "That was a left handed compliment."
+  },
+  {
+    "id": 59,
+    "phrase": "A leopard can’t change its spots",
+    "meaning": "It is impossible for one to change one's character",
+    "hindiMeaning": "कुत्ते की पूँछ टेढ़ी की टेढ़ी (किसी के चरित्र को बदलना असंभव है)",
+    "sscCount": 5,
+    "example": "He cheated again— a leopard can’t change its spots."
+  },
+  {
+    "id": 60,
+    "phrase": "A little bird told me",
+    "meaning": "To keep the identity of informant secret / receive information from a secret source",
+    "hindiMeaning": "अपने मुखबिर की पहचान गुप्त रखने का तरीका",
+    "sscCount": 2,
+    "example": "A little bird told me about your success."
+  },
+  {
+    "id": 61,
+    "phrase": "A little gush of gratitude",
+    "meaning": "Friendly feeling",
+    "hindiMeaning": "अनुकूल भावना",
+    "sscCount": 0,
+    "example": "She showed a little gush of gratitude."
+  },
+  {
+    "id": 62,
+    "phrase": "A live wire",
+    "meaning": "A person who is full of energy",
+    "hindiMeaning": "जिंदादिल व्यक्ति",
+    "sscCount": 1,
+    "example": "He is a live wire in the team."
+  },
+  {
+    "id": 63,
+    "phrase": "A long shot",
+    "meaning": "Little chance of success",
+    "hindiMeaning": "सफलता की कम संभावना",
+    "sscCount": 0,
+    "example": "Winning this match is a long shot."
+  },
+  {
+    "id": 64,
+    "phrase": "A lot on your plate",
+    "meaning": "To have a large number of problems to deal with / having many responsibilities",
+    "hindiMeaning": "बहुत सारी जिम्मेदारियां",
+    "sscCount": 3,
+    "example": "I can’t help now, I have a lot on my plate."
+  },
+  {
+    "id": 65,
+    "phrase": "A man of letters",
+    "meaning": "Proficient in literary art / Scholar / A well educated and a wise person",
+    "hindiMeaning": "विद्वान",
+    "sscCount": 5,
+    "example": "He is a man of letters."
+  },
+  {
+    "id": 66,
+    "phrase": "A man of means",
+    "meaning": "A wealthy man with lots of money and assets",
+    "hindiMeaning": "धनी व्यक्ति",
+    "sscCount": 0,
+    "example": "He is a man of means."
+  },
+  {
+    "id": 67,
+    "phrase": "A man of spirit",
+    "meaning": "A very courageous man",
+    "hindiMeaning": "साहसी आदमी",
+    "sscCount": 0,
+    "example": "He is a man of spirit."
+  },
+  {
+    "id": 68,
+    "phrase": "A man of straw",
+    "meaning": "A man of no substance / A weak or cowardly person",
+    "hindiMeaning": "कमजोर व्यक्ति",
+    "sscCount": 3,
+    "example": "He proved to be a man of straw."
+  },
+  {
+    "id": 69,
+    "phrase": "A mare’s nest",
+    "meaning": "A difficult/complicated situation / A false invention",
+    "hindiMeaning": "जटिल या भ्रामक स्थिति",
+    "sscCount": 2,
+    "example": "The whole plan turned out to be a mare’s nest."
+  },
+  {
+    "id": 70,
+    "phrase": "A month of Sundays",
+    "meaning": "A long time",
+    "hindiMeaning": "लम्बा समय",
+    "sscCount": 0,
+    "example": "It will take a month of Sundays to finish."
+  },
+  {
+    "id": 71,
+    "phrase": "A moot point",
+    "meaning": "Disputed",
+    "hindiMeaning": "विवादित विषय",
+    "sscCount": 0,
+    "example": "Whether he will win is a moot point."
+  },
+  {
+    "id": 72,
+    "phrase": "A needle in a haystack",
+    "meaning": "Something that is very difficult to locate / Attempting something impossible",
+    "hindiMeaning": "घास के ढेर में सुई",
+    "sscCount": 1,
+    "example": "Finding him is like a needle in a haystack."
+  },
+  {
+    "id": 73,
+    "phrase": "A night owl",
+    "meaning": "A person who prefers to be awake late at night",
+    "hindiMeaning": "देर रात तक जागने वाला व्यक्ति",
+    "sscCount": 0,
+    "example": "He is a night owl."
+  },
+  {
+    "id": 74,
+    "phrase": "A nig-nog",
+    "meaning": "A fool",
+    "hindiMeaning": "अकल का अंधा (मूर्ख व्यक्ति)",
+    "sscCount": 0,
+    "example": "Don’t behave like a nig-nog."
+  },
+  {
+    "id": 75,
+    "phrase": "A pain in the neck",
+    "meaning": "Someone or something that is annoying/irritating or a nuisance",
+    "hindiMeaning": "असहनीय आदमी",
+    "sscCount": 1,
+    "example": "That noise is a pain in the neck."
+  },
+  {
+    "id": 76,
+    "phrase": "A Penelope’s web",
+    "meaning": "An endless job",
+    "hindiMeaning": "अंतहीन कार्य",
+    "sscCount": 1,
+    "example": "Cleaning this office is a Penelope’s web."
+  },
+  {
+    "id": 77,
+    "phrase": "A penny for your thoughts",
+    "meaning": "A way of asking what someone is thinking",
+    "hindiMeaning": "कोई क्या सोच रहा है यह पूछने का तरीका",
+    "sscCount": 0,
+    "example": "You look serious, a penny for your thoughts?"
+  },
+  {
+    "id": 78,
+    "phrase": "A perfect storm",
+    "meaning": "A particularly bad situation caused by a combination of unfavorable circumstances",
+    "hindiMeaning": "बहुत खराब परिस्थिति होना",
+    "sscCount": 0,
+    "example": "Rising prices created a perfect storm."
+  },
+  {
+    "id": 79,
+    "phrase": "A picture paints a thousand words",
+    "meaning": "An image of a subject conveys its meaning more effectively than a description does",
+    "hindiMeaning": "एक तस्वीर हजार शब्दों के बराबर होती है",
+    "sscCount": 1,
+    "example": "This photo proves that a picture paints a thousand words."
+  },
+  {
+    "id": 80,
+    "phrase": "A piece of cake",
+    "meaning": "A very easy task",
+    "hindiMeaning": "बच्चों का खेल (आसान काम)",
+    "sscCount": 11,
+    "example": "The exam was a piece of cake."
+  },
+  {
+    "id": 81,
+    "phrase": "A piece of the pie",
+    "meaning": "A share in money or business",
+    "hindiMeaning": "पैसे में हिस्सेदारी",
+    "sscCount": 0,
+    "example": "Everyone wants a piece of the pie."
+  },
+  {
+    "id": 82,
+    "phrase": "A plum job",
+    "meaning": "An easy pleasant job that also pays well",
+    "hindiMeaning": "अच्छी वेतन वाली नौकरी",
+    "sscCount": 1,
+    "example": "He got a plum job."
+  },
+  {
+    "id": 83,
+    "phrase": "A queer fish",
+    "meaning": "An eccentric or unconventional person",
+    "hindiMeaning": "अजीब या विचित्र व्यक्ति",
+    "sscCount": 2,
+    "example": "He is a queer fish."
+  },
+  {
+    "id": 84,
+    "phrase": "A rainy day",
+    "meaning": "Time of difficulty",
+    "hindiMeaning": "मुश्किल घड़ी (कठिनाई का समय)",
+    "sscCount": 0,
+    "example": "Save money for a rainy day."
+  },
+  {
+    "id": 85,
+    "phrase": "A ray of hope",
+    "meaning": "Something that provides a small amount of optimism in a difficult situation",
+    "hindiMeaning": "आशा की किरण",
+    "sscCount": 0,
+    "example": "This news is a ray of hope."
+  },
+  {
+    "id": 86,
+    "phrase": "A red letter day",
+    "meaning": "An important day / a day that is pleasantly noteworthy or memorable / happy and significant day",
+    "hindiMeaning": "महत्वपूर्ण दिन",
+    "sscCount": 13,
+    "example": "Today is a red letter day for me."
+  },
+  {
+    "id": 87,
+    "phrase": "A red rag to a bull",
+    "meaning": "An object, utterance, or act which is certain to provoke someone",
+    "hindiMeaning": "सांड को लाल कपड़ा दिखाना",
+    "sscCount": 2,
+    "example": "His comment was a red rag to a bull."
+  },
+  {
+    "id": 88,
+    "phrase": "A rolling stone gathers no moss",
+    "meaning": "A person who does not settle in one place for a long time, does not gain wealth, name or fame",
+    "hindiMeaning": "अस्थिरता से कभी सफलता नहीं मिलती",
+    "sscCount": 1,
+    "example": "He keeps changing jobs—a rolling stone gathers no moss."
+  },
+  {
+    "id": 89,
+    "phrase": "A rotten apple",
+    "meaning": "A single bad person or thing in a group",
+    "hindiMeaning": "बुरी संगत",
+    "sscCount": 0,
+    "example": "One rotten apple spoils the basket."
+  },
+  {
+    "id": 90,
+    "phrase": "A sacred cow",
+    "meaning": "A person never to be criticised",
+    "hindiMeaning": "जिसकी आलोचना न हो",
+    "sscCount": 1,
+    "example": "That rule is a sacred cow here."
+  },
+  {
+    "id": 91,
+    "phrase": "A safe pair of hands",
+    "meaning": "A reliable person / A person who can be trusted to do something efficiently",
+    "hindiMeaning": "विश्वसनीय व्यक्ति",
+    "sscCount": 2,
+    "example": "Give the project to him, he is a safe pair of hands."
+  },
+  {
+    "id": 92,
+    "phrase": "A sea change",
+    "meaning": "A profound or notable transformation / Complete transformation",
+    "hindiMeaning": "पूर्ण परिवर्तन",
+    "sscCount": 2,
+    "example": "There has been a sea change in his behavior."
+  },
+  {
+    "id": 93,
+    "phrase": "A shot in the arm",
+    "meaning": "An encouraging stimulus / something that gives encouragement",
+    "hindiMeaning": "उत्साहवर्धक प्रोत्साहन",
+    "sscCount": 1,
+    "example": "This success is a shot in the arm for him."
+  },
+  {
+    "id": 94,
+    "phrase": "A sight for sore eyes",
+    "meaning": "A person or thing that one is extremely pleased or relieved to see",
+    "hindiMeaning": "आँखों की ठंडक",
+    "sscCount": 0,
+    "example": "Meeting you is a sight for sore eyes."
+  },
+  {
+    "id": 95,
+    "phrase": "A skeleton in the cupboard",
+    "meaning": "An embarrassing fact to be kept secret / something embarrassing or shameful",
+    "hindiMeaning": "शर्मनाक गुप्त भेद",
+    "sscCount": 2,
+    "example": "Every family has a skeleton in the cupboard."
+  },
+  {
+    "id": 96,
+    "phrase": "A snowball effect",
+    "meaning": "An accelerating growth of magnitude",
+    "hindiMeaning": "छोटी घटना का धीरे-धीरे बड़ा होना",
+    "sscCount": 0,
+    "example": "The problem had a snowball effect."
+  },
+  {
+    "id": 97,
+    "phrase": "A sore point",
+    "meaning": "Something which hurts",
+    "hindiMeaning": "दुखी करने वाली बात",
+    "sscCount": 1,
+    "example": "His failure is still a sore point."
+  },
+  {
+    "id": 98,
+    "phrase": "A square deal",
+    "meaning": "A fair agreement / A fair and honest deal",
+    "hindiMeaning": "निष्पक्ष समझौता",
+    "sscCount": 1,
+    "example": "We expect a square deal."
+  },
+  {
+    "id": 99,
+    "phrase": "A stick-in-the-mud",
+    "meaning": "A person who resists change",
+    "hindiMeaning": "रूढ़िवादी व्यक्ति (जो बदलाव में विश्वास नहीं करता)",
+    "sscCount": 0,
+    "example": "He is a stick-in-the-mud."
+  },
+  {
+    "id": 100,
+    "phrase": "A stiff-necked person",
+    "meaning": "An obstinate person",
+    "hindiMeaning": "अड़ियल व्यक्ति",
+    "sscCount": 0,
+    "example": "Don’t argue with him, he is stiff-necked."
+  },
+  {
+    "id": 101,
+    "phrase": "A stitch in time saves nine",
+    "meaning": "It is better to solve a problem straight away and not let it become bigger",
+    "hindiMeaning": "किसी समस्या का समाधान उसके ज्यादा बढ़ने से पहले कर देना अच्छा है",
+    "sscCount": 2,
+    "example": "Repair it now— a stitch in time saves nine."
+  },
+  {
+    "id": 102,
+    "phrase": "A stone’s throw away",
+    "meaning": "A very short distance",
+    "hindiMeaning": "थोड़ी दूरी पर",
+    "sscCount": 1,
+    "example": "The school is a stone’s throw away."
+  },
+  {
+    "id": 103,
+    "phrase": "A storm in a teacup",
+    "meaning": "Big fuss over a small matter / A lot of anger, excitement or worry about trivial things",
+    "hindiMeaning": "बात का बतंगड़",
+    "sscCount": 1,
+    "example": "It’s just a storm in a teacup."
+  },
+  {
+    "id": 104,
+    "phrase": "A stuffed shirt",
+    "meaning": "A pompous or self-important person",
+    "hindiMeaning": "अहंकारी या स्वयं को महत्वपूर्ण समझने वाला व्यक्ति",
+    "sscCount": 0,
+    "example": "He behaves like a stuffed shirt."
+  },
+  {
+    "id": 105,
+    "phrase": "A stumbling block",
+    "meaning": "An obstacle to progress",
+    "hindiMeaning": "सफलता में बाधा",
+    "sscCount": 0,
+    "example": "Lack of money is a stumbling block."
+  },
+  {
+    "id": 106,
+    "phrase": "A thorn in the flesh",
+    "meaning": "A source of continual annoyance or trouble / Annoying and irritating",
+    "hindiMeaning": "आँख का काँटा (निरंतर समस्या या परेशानी)",
+    "sscCount": 2,
+    "example": "He is a thorn in my flesh."
+  },
+  {
+    "id": 107,
+    "phrase": "A turning point",
+    "meaning": "Anything that brings about changes / The time at which an important change starts",
+    "hindiMeaning": "नया मोड़",
+    "sscCount": 2,
+    "example": "This match was a turning point."
+  },
+  {
+    "id": 108,
+    "phrase": "A vexed question",
+    "meaning": "Controversial",
+    "hindiMeaning": "विवादास्पद प्रश्न",
+    "sscCount": 0,
+    "example": "This is a vexed question."
+  },
+  {
+    "id": 109,
+    "phrase": "A vicious cycle",
+    "meaning": "When one problem causes another problem",
+    "hindiMeaning": "दुष्चक्र में फँसना (एक के बाद एक समस्या आना)",
+    "sscCount": 0,
+    "example": "Poverty creates a vicious cycle."
+  },
+  {
+    "id": 110,
+    "phrase": "A walk of life",
+    "meaning": "A person's occupation or position within society",
+    "hindiMeaning": "किसी व्यक्ति का काम या स्तर",
+    "sscCount": 0,
+    "example": "People from every walk of life attended."
+  },
+  {
+    "id": 111,
+    "phrase": "A wet blanket",
+    "meaning": "A person who discourages enjoyment or enthusiasm / someone who prevents other people from having fun",
+    "hindiMeaning": "कबाब में हड्डी (मज़ा किरकिरा करने वाला)",
+    "sscCount": 2,
+    "example": "Don’t be a wet blanket."
+  },
+  {
+    "id": 112,
+    "phrase": "A wildcat strike",
+    "meaning": "A strike by workers without official union support",
+    "hindiMeaning": "यूनियन की मंजूरी के बिना कर्मचारियों द्वारा शुरू की गई हड़ताल",
+    "sscCount": 0,
+    "example": "The workers went on a wildcat strike."
+  },
+  {
+    "id": 113,
+    "phrase": "A wolf in sheep’s clothing",
+    "meaning": "Hypocrite / a dangerous person pretending to be harmless",
+    "hindiMeaning": "भेड़ की खाल में भेड़िया (खतरनाक व्यक्ति)",
+    "sscCount": 6,
+    "example": "He is a wolf in sheep’s clothing."
+  },
+  {
+    "id": 114,
+    "phrase": "ABC of something",
+    "meaning": "Essential fact",
+    "hindiMeaning": "बुनियादी या सबसे महत्वपूर्ण तथ्य",
+    "sscCount": 0,
+    "example": "You should know the ABC of computers."
+  },
+  {
+    "id": 115,
+    "phrase": "Above board",
+    "meaning": "Honest and frank / without any secret",
+    "hindiMeaning": "ईमानदार",
+    "sscCount": 3,
+    "example": "His dealings are above board."
+  },
+  {
+    "id": 116,
+    "phrase": "Above/Over one’s head",
+    "meaning": "Beyond one's capability to understand something",
+    "hindiMeaning": "समझ या क्षमता से परे",
+    "sscCount": 2,
+    "example": "This topic is over my head."
+  },
+  {
+    "id": 117,
+    "phrase": "Achilles’ heel",
+    "meaning": "A weakness or vulnerable point",
+    "hindiMeaning": "कमजोरी",
+    "sscCount": 6,
+    "example": "Pride is his Achilles’ heel."
+  },
+  {
+    "id": 118,
+    "phrase": "Acid test",
+    "meaning": "Definitive proof of truth or falsehood / A fact, event or situation that proves something",
+    "hindiMeaning": "अग्नि परीक्षा (निश्चित प्रमाण)",
+    "sscCount": 1,
+    "example": "This exam is the acid test."
+  },
+  {
+    "id": 119,
+    "phrase": "Actions speak louder than words",
+    "meaning": "What you do is more important than what you say / What you do reveals the real you / Intentions can be judged by people's actions",
+    "hindiMeaning": "कथनी से अधिक करनी बोलती है",
+    "sscCount": 4,
+    "example": "He proved himself—actions speak louder than words."
+  },
+  {
+    "id": 120,
+    "phrase": "Adam’s ale",
+    "meaning": "Water",
+    "hindiMeaning": "पानी",
+    "sscCount": 0,
+    "example": "Adam’s ale is the best drink."
+  },
+  {
+    "id": 121,
+    "phrase": "Add fuel to the fire/flames",
+    "meaning": "Make things worse / worsen the difficult situation",
+    "hindiMeaning": "आग में घी डालना",
+    "sscCount": 11,
+    "example": "His comment added fuel to the fire."
+  },
+  {
+    "id": 122,
+    "phrase": "Add insult to injury",
+    "meaning": "To further a loss with mockery / Make a bad situation even worse",
+    "hindiMeaning": "जले पर नमक छिड़कना",
+    "sscCount": 7,
+    "example": "His words added insult to injury."
+  },
+  {
+    "id": 123,
+    "phrase": "After a fashion",
+    "meaning": "To only a certain extent",
+    "hindiMeaning": "केवल सीमित सीमा तक",
+    "sscCount": 0,
+    "example": "He understands English after a fashion."
+  },
+  {
+    "id": 124,
+    "phrase": "After one’s own heart",
+    "meaning": "Sharing or having one's tastes or views / Having likes and dislikes similar to one's own",
+    "hindiMeaning": "मन की बात",
+    "sscCount": 2,
+    "example": "He is a man after my own heart."
+  },
+  {
+    "id": 125,
+    "phrase": "Against the clock",
+    "meaning": "Work very fast to complete something within a deadline / work in great hurry, as fast as possible",
+    "hindiMeaning": "बहुत तेजी से काम करना",
+    "sscCount": 4,
+    "example": "We are working against the clock."
+  },
+  {
+    "id": 126,
+    "phrase": "Aid and abet",
+    "meaning": "To help someone to commit a crime",
+    "hindiMeaning": "अपराध के लिए उकसाना या मदद करना",
+    "sscCount": 0,
+    "example": "He was punished for aiding and abetting."
+  },
+  {
+    "id": 127,
+    "phrase": "Aladdin’s cave",
+    "meaning": "A place that contains many interesting objects",
+    "hindiMeaning": "अत्यधिक धन या रोचक वस्तुओं का स्थान",
+    "sscCount": 0,
+    "example": "This shop is like Aladdin’s cave."
+  },
+  {
+    "id": 128,
+    "phrase": "Alarums and excursions",
+    "meaning": "Confused activity and uproar",
+    "hindiMeaning": "भ्रमित गतिविधि",
+    "sscCount": 0,
+    "example": "There were alarums and excursions in the market."
+  },
+  {
+    "id": 129,
+    "phrase": "Alive and kicking",
+    "meaning": "In good health",
+    "hindiMeaning": "अच्छे स्वास्थ्य में",
+    "sscCount": 0,
+    "example": "He is alive and kicking."
+  },
+  {
+    "id": 130,
+    "phrase": "All agog",
+    "meaning": "Amazed / Full of interest and excitement",
+    "hindiMeaning": "हैरान",
+    "sscCount": 3,
+    "example": "The children were all agog."
+  },
+  {
+    "id": 131,
+    "phrase": "All along",
+    "meaning": "All the time / from the beginning",
+    "hindiMeaning": "शुरू से ही; हमेशा",
+    "sscCount": 1,
+    "example": "I knew the truth all along."
+  },
+  {
+    "id": 132,
+    "phrase": "All and sundry",
+    "meaning": "Everybody without distinction / All included",
+    "hindiMeaning": "हर कोई बिना भेद के",
+    "sscCount": 4,
+    "example": "All and sundry were invited."
+  },
+  {
+    "id": 133,
+    "phrase": "All at sea / Feel at sea",
+    "meaning": "Puzzled / state of confusion / lost and confused",
+    "hindiMeaning": "असमंजस की स्थिति",
+    "sscCount": 12,
+    "example": "I was all at sea during the exam."
+  },
+  {
+    "id": 134,
+    "phrase": "All bark and no bite",
+    "meaning": "Full of talk, but low on action",
+    "hindiMeaning": "जो गरजते हैं वे बरसते नहीं",
+    "sscCount": 0,
+    "example": "He threatens a lot but is all bark and no bite."
+  },
+  {
+    "id": 135,
+    "phrase": "All eyes",
+    "meaning": "Watching eagerly / To watch something intently",
+    "hindiMeaning": "उत्सुकतापूर्वक देखना",
+    "sscCount": 1,
+    "example": "Everyone was all eyes on the stage."
+  },
+  {
+    "id": 136,
+    "phrase": "All eyes and ears",
+    "meaning": "To be attentive",
+    "hindiMeaning": "आँख-कान खुले रखना",
+    "sscCount": 2,
+    "example": "The students were all eyes and ears."
+  },
+  {
+    "id": 137,
+    "phrase": "All hands on deck",
+    "meaning": "Everyone available to help with a problem",
+    "hindiMeaning": "समस्या के मदद के लिए सभी का उपलब्ध होना",
+    "sscCount": 0,
+    "example": "It’s all hands on deck today."
+  },
+  {
+    "id": 138,
+    "phrase": "All hat and no cattle",
+    "meaning": "One who is full of big talk but lacks substance and action",
+    "hindiMeaning": "डींग हांकने वाला",
+    "sscCount": 0,
+    "example": "He is all hat and no cattle."
+  },
+  {
+    "id": 139,
+    "phrase": "All in",
+    "meaning": "Exhausted",
+    "hindiMeaning": "पूरी तरह थका हुआ",
+    "sscCount": 0,
+    "example": "After work, I was all in."
+  },
+  {
+    "id": 140,
+    "phrase": "All in a day's work",
+    "meaning": "Part of a person's typical work",
+    "hindiMeaning": "रोजमर्रा का काम",
+    "sscCount": 0,
+    "example": "Fixing problems is all in a day's work."
+  },
+  {
+    "id": 141,
+    "phrase": "All in all",
+    "meaning": "Having all authority / considering everything",
+    "hindiMeaning": "सभी अधिकार होना",
+    "sscCount": 1,
+    "example": "All in all, it was a good trip."
+  },
+  {
+    "id": 142,
+    "phrase": "All moonshine",
+    "meaning": "Far from reality / concocted / nonsense",
+    "hindiMeaning": "दिखावटी",
+    "sscCount": 4,
+    "example": "His story is all moonshine."
+  },
+  {
+    "id": 143,
+    "phrase": "All of a sudden",
+    "meaning": "Quickly and unexpectedly",
+    "hindiMeaning": "अचानक से",
+    "sscCount": 0,
+    "example": "It started raining all of a sudden."
+  },
+  {
+    "id": 144,
+    "phrase": "All our might and main",
+    "meaning": "Full force",
+    "hindiMeaning": "पूरी ताकत से",
+    "sscCount": 2,
+    "example": "They tried with all their might and main."
+  },
+  {
+    "id": 145,
+    "phrase": "All over hell's half acre",
+    "meaning": "Everywhere",
+    "hindiMeaning": "सभी जगह",
+    "sscCount": 0,
+    "example": "His books were all over hell's half acre."
+  },
+  {
+    "id": 146,
+    "phrase": "All thumbs",
+    "meaning": "Clumsy / physically awkward",
+    "hindiMeaning": "अनाड़ी",
+    "sscCount": 1,
+    "example": "I’m all thumbs with tools."
+  },
+  {
+    "id": 147,
+    "phrase": "All wet",
+    "meaning": "Completely mistaken",
+    "hindiMeaning": "पूरी तरह गलत समझ लेना",
+    "sscCount": 0,
+    "example": "Your idea is all wet."
+  },
+  {
+    "id": 148,
+    "phrase": "All's fair in love and war",
+    "meaning": "Any action is acceptable in extreme circumstances like love or war",
+    "hindiMeaning": "प्यार और युद्ध में सब जायज है",
+    "sscCount": 0,
+    "example": "Don’t complain—all’s fair in love and war."
+  },
+  {
+    "id": 149,
+    "phrase": "Alma mater",
+    "meaning": "Institution where I got education",
+    "hindiMeaning": "जहाँ शिक्षा पाई वह संस्था",
+    "sscCount": 0,
+    "example": "This college is my alma mater."
+  },
+  {
+    "id": 150,
+    "phrase": "Alpha and omega",
+    "meaning": "Beginning and end",
+    "hindiMeaning": "शुरुआत और अंत",
+    "sscCount": 2,
+    "example": "Trust is the alpha and omega of success."
+  },
+  {
+    "id": 151,
+    "phrase": "Alphabet soup",
+    "meaning": "A metaphor for an abundance of abbreviations or acronyms",
+    "hindiMeaning": "शब्दों के लघुरूप का अत्यधिक प्रयोग",
+    "sscCount": 2,
+    "example": "The report was full of alphabet soup."
+  },
+  {
+    "id": 152,
+    "phrase": "Always a bridesmaid never a bride",
+    "meaning": "Someone who is never the most important person in a particular situation",
+    "hindiMeaning": "सबसे महत्वपूर्ण पद के बाद वाला स्थान",
+    "sscCount": 0,
+    "example": "He is always a bridesmaid, never a bride."
+  },
+  {
+    "id": 153,
+    "phrase": "An about turn",
+    "meaning": "Complete change of opinion",
+    "hindiMeaning": "विचार का पूरा परिवर्तन",
+    "sscCount": 0,
+    "example": "He took an about turn."
+  },
+  {
+    "id": 154,
+    "phrase": "An ace in the hole",
+    "meaning": "A major advantage that one keeps hidden until an ideal time",
+    "hindiMeaning": "तुरुप का इक्का (गुप्त ताकत)",
+    "sscCount": 0,
+    "example": "He has an ace in the hole."
+  },
+  {
+    "id": 155,
+    "phrase": "An arm-chair critic",
+    "meaning": "Someone who gives advice based on theory not practice",
+    "hindiMeaning": "बिना व्यावहारिक अनुभव के आलोचना करना",
+    "sscCount": 0,
+    "example": "Don’t be an arm-chair critic."
+  },
+  {
+    "id": 156,
+    "phrase": "An arrow in the quiver",
+    "meaning": "Strategies that can be followed",
+    "hindiMeaning": "उपलब्ध विकल्पों में से एक विकल्प",
+    "sscCount": 0,
+    "example": "This plan is another arrow in our quiver."
+  },
+  {
+    "id": 157,
+    "phrase": "An article of faith",
+    "meaning": "A firmly held belief",
+    "hindiMeaning": "दृढ़ विश्वास",
+    "sscCount": 0,
+    "example": "Honesty is an article of faith for him."
+  },
+  {
+    "id": 158,
+    "phrase": "An eye opener",
+    "meaning": "A shocking revelation",
+    "hindiMeaning": "चौंकाने वाला खुलासा",
+    "sscCount": 2,
+    "example": "The report was an eye opener."
+  },
+  {
+    "id": 159,
+    "phrase": "An iron hand",
+    "meaning": "Strict and harsh control",
+    "hindiMeaning": "सख्त और कठोर नियंत्रण",
+    "sscCount": 2,
+    "example": "He ruled with an iron hand."
+  },
+  {
+    "id": 160,
+    "phrase": "An iron will",
+    "meaning": "A firm opinion / strong determination",
+    "hindiMeaning": "मजबूत दृढ़ संकल्प",
+    "sscCount": 3,
+    "example": "She has an iron will."
+  },
+  {
+    "id": 161,
+    "phrase": "An old head on young shoulders",
+    "meaning": "Full of wisdom",
+    "hindiMeaning": "कम उम्र में अधिक बुद्धिमान",
+    "sscCount": 0,
+    "example": "He is an old head on young shoulders."
+  },
+  {
+    "id": 162,
+    "phrase": "An olive branch",
+    "meaning": "Gesture of peace",
+    "hindiMeaning": "शांति का प्रस्ताव",
+    "sscCount": 0,
+    "example": "He offered an olive branch."
+  },
+  {
+    "id": 163,
+    "phrase": "An open book",
+    "meaning": "One that held no secrets / one about whom it is easy to know everything / straightforward and honest",
+    "hindiMeaning": "खुली किताब (जिसके बारे में सब कुछ पता हो)",
+    "sscCount": 0,
+    "example": "He is an open book."
+  },
+  {
+    "id": 164,
+    "phrase": "An uphill task",
+    "meaning": "Difficult task",
+    "hindiMeaning": "कठिन कार्य",
+    "sscCount": 0,
+    "example": "This work is an uphill task."
+  },
+  {
+    "id": 165,
+    "phrase": "Appeal to Caesar",
+    "meaning": "Appeal to the highest possible authority",
+    "hindiMeaning": "सर्वोच्च अधिकारी से अपील करना",
+    "sscCount": 0,
+    "example": "He decided to appeal to Caesar."
+  },
+  {
+    "id": 166,
+    "phrase": "Apple of discord",
+    "meaning": "Reason for quarrel / Cause of animosity / something that causes friction / Bone of contention",
+    "hindiMeaning": "झगड़े का कारण",
+    "sscCount": 1,
+    "example": "Property became the apple of discord."
+  },
+  {
+    "id": 167,
+    "phrase": "Apple of one’s eye",
+    "meaning": "Someone very precious or dear",
+    "hindiMeaning": "आँख का तारा (बहुत प्यारा)",
+    "sscCount": 1,
+    "example": "His daughter is the apple of his eye."
+  },
+  {
+    "id": 168,
+    "phrase": "Apple-cart",
+    "meaning": "Spoil careful plans",
+    "hindiMeaning": "काम बिगाड़ देना",
+    "sscCount": 0,
+    "example": "His mistake upset the apple-cart."
+  },
+  {
+    "id": 169,
+    "phrase": "Apples and oranges",
+    "meaning": "Two unlike things or people / Unequal comparisons",
+    "hindiMeaning": "दो अलग-अलग चीजों की तुलना",
+    "sscCount": 1,
+    "example": "You are comparing apples and oranges."
+  },
+  {
+    "id": 170,
+    "phrase": "Apropos of nothing",
+    "meaning": "Having no relevance to any previous discussion or situation",
+    "hindiMeaning": "बिना किसी संदर्भ के",
+    "sscCount": 0,
+    "example": "He spoke apropos of nothing."
+  },
+  {
+    "id": 171,
+    "phrase": "Argus-eyed",
+    "meaning": "Carefully observant or attentive / Vigilant",
+    "hindiMeaning": "सतर्क",
+    "sscCount": 3,
+    "example": "The teacher is argus-eyed."
+  },
+  {
+    "id": 172,
+    "phrase": "Armed to the teeth",
+    "meaning": "Heavily armed or fortified",
+    "hindiMeaning": "पूरी तरह से सशस्त्र होना",
+    "sscCount": 2,
+    "example": "The guards were armed to the teeth."
+  },
+  {
+    "id": 173,
+    "phrase": "Around the clock",
+    "meaning": "Day and night",
+    "hindiMeaning": "दिन-रात",
+    "sscCount": 0,
+    "example": "They worked around the clock."
+  },
+  {
+    "id": 174,
+    "phrase": "Around the corner",
+    "meaning": "Occurring soon",
+    "hindiMeaning": "जल्द ही होने वाला",
+    "sscCount": 1,
+    "example": "Exams are around the corner."
+  },
+  {
+    "id": 175,
+    "phrase": "As a matter of fact",
+    "meaning": "Actually as it happens",
+    "hindiMeaning": "वास्तव में",
+    "sscCount": 0,
+    "example": "As a matter of fact, I was there."
+  },
+  {
+    "id": 176,
+    "phrase": "As bald as a cue ball",
+    "meaning": "Completely bald",
+    "hindiMeaning": "पूरी तरह गंजा",
+    "sscCount": 0,
+    "example": "He is as bald as a cue ball."
+  },
+  {
+    "id": 177,
+    "phrase": "As clear as a bell",
+    "meaning": "Readily understood",
+    "hindiMeaning": "बिल्कुल स्पष्ट",
+    "sscCount": 0,
+    "example": "Her explanation was clear as a bell."
+  },
+  {
+    "id": 178,
+    "phrase": "As clear as mud",
+    "meaning": "Impossible to understand",
+    "hindiMeaning": "समझ से बाहर",
+    "sscCount": 0,
+    "example": "Your plan is as clear as mud."
+  },
+  {
+    "id": 179,
+    "phrase": "As daft as a brush",
+    "meaning": "Extremely silly",
+    "hindiMeaning": "बेहद मूर्ख",
+    "sscCount": 2,
+    "example": "He behaves as daft as a brush."
+  },
+  {
+    "id": 180,
+    "phrase": "As dead as a doornail",
+    "meaning": "Unquestionably dead or inoperative",
+    "hindiMeaning": "पूरी तरह बेकार या मृत",
+    "sscCount": 0,
+    "example": "The phone is dead as a doornail."
+  },
+  {
+    "id": 181,
+    "phrase": "As fit as a fiddle",
+    "meaning": "Strong and healthy / In a perfectly healthy condition",
+    "hindiMeaning": "पूरी तरह स्वस्थ",
+    "sscCount": 2,
+    "example": "After rest, he is fit as a fiddle."
+  },
+  {
+    "id": 182,
+    "phrase": "As good as gold",
+    "meaning": "A person who is obedient and well-behaved",
+    "hindiMeaning": "शिष्ट व्यक्ति",
+    "sscCount": 0,
+    "example": "The child is as good as gold."
+  },
+  {
+    "id": 183,
+    "phrase": "As hard as a nail",
+    "meaning": "Emotionless / unrelenting / to have no feelings",
+    "hindiMeaning": "भावनाहीन",
+    "sscCount": 4,
+    "example": "He is as hard as a nail."
+  },
+  {
+    "id": 184,
+    "phrase": "As high as a kite",
+    "meaning": "Intoxicated with alcohol",
+    "hindiMeaning": "नशे में धुत",
+    "sscCount": 0,
+    "example": "He was high as a kite."
+  },
+  {
+    "id": 185,
+    "phrase": "As keen as mustard",
+    "meaning": "Very enthusiastic and excited",
+    "hindiMeaning": "बहुत उत्साही",
+    "sscCount": 0,
+    "example": "She is keen as mustard."
+  },
+  {
+    "id": 186,
+    "phrase": "As phony as a three-dollar bill",
+    "meaning": "Something that is fake",
+    "hindiMeaning": "नकली या झूठा",
+    "sscCount": 0,
+    "example": "His story is phony as a three-dollar bill."
+  },
+  {
+    "id": 187,
+    "phrase": "As sly as a fox",
+    "meaning": "Smart and clever",
+    "hindiMeaning": "चालाक",
+    "sscCount": 0,
+    "example": "He is sly as a fox."
+  },
+  {
+    "id": 188,
+    "phrase": "As the crow flies",
+    "meaning": "The shortest route / measurement in a straight line",
+    "hindiMeaning": "सीधी रेखा में दूरी",
+    "sscCount": 1,
+    "example": "It is five km as the crow flies."
+  },
+  {
+    "id": 189,
+    "phrase": "As thick as two short planks",
+    "meaning": "Extremely stupid",
+    "hindiMeaning": "बहुत मूर्ख",
+    "sscCount": 0,
+    "example": "He is as thick as two short planks."
+  },
+  {
+    "id": 190,
+    "phrase": "Ask for trouble",
+    "meaning": "Act in a way that is likely to incur problems or difficulties",
+    "hindiMeaning": "अपने लिए मुसीबत मोल लेना",
+    "sscCount": 0,
+    "example": "You are asking for trouble by driving fast."
+  },
+  {
+    "id": 191,
+    "phrase": "Asleep at the wheel",
+    "meaning": "Not attentive to one's duties",
+    "hindiMeaning": "काम के प्रति लापरवाह रहना",
+    "sscCount": 0,
+    "example": "He was asleep at the wheel."
+  },
+  {
+    "id": 192,
+    "phrase": "Assume airs",
+    "meaning": "Pretend superiority",
+    "hindiMeaning": "श्रेष्ठता का प्रदर्शन",
+    "sscCount": 0,
+    "example": "He assumes airs."
+  },
+  {
+    "id": 193,
+    "phrase": "At a crossroads",
+    "meaning": "A point in life where his decisions will have long term consequences",
+    "hindiMeaning": "दो राहों पर (महत्वपूर्ण निर्णय का समय)",
+    "sscCount": 1,
+    "example": "He is at a crossroads in life."
+  },
+  {
+    "id": 194,
+    "phrase": "At a loss",
+    "meaning": "Unable to decide",
+    "hindiMeaning": "निर्णय लेने में असमर्थ",
+    "sscCount": 1,
+    "example": "I am at a loss what to do."
+  },
+  {
+    "id": 195,
+    "phrase": "At a snail’s pace",
+    "meaning": "Do something very slowly",
+    "hindiMeaning": "बहुत धीरे-धीरे",
+    "sscCount": 1,
+    "example": "Work is going at a snail’s pace."
+  },
+  {
+    "id": 196,
+    "phrase": "At a stretch",
+    "meaning": "To do something continuously",
+    "hindiMeaning": "लगातार",
+    "sscCount": 1,
+    "example": "He studied for five hours at a stretch."
+  },
+  {
+    "id": 197,
+    "phrase": "At any cost",
+    "meaning": "Under all circumstances",
+    "hindiMeaning": "किसी भी कीमत पर",
+    "sscCount": 0,
+    "example": "Finish it at any cost."
+  },
+  {
+    "id": 198,
+    "phrase": "At beck and call",
+    "meaning": "At his disposal / to be dominated by someone / be always ready at her service",
+    "hindiMeaning": "इशारे पर नाचने वाला",
+    "sscCount": 1,
+    "example": "He is at his boss’s beck and call."
+  },
+  {
+    "id": 199,
+    "phrase": "At cross purposes",
+    "meaning": "Having opposing viewpoints or intentions",
+    "hindiMeaning": "विपरीत दृष्टिकोण रखना",
+    "sscCount": 2,
+    "example": "They were talking at cross purposes."
+  },
+  {
+    "id": 200,
+    "phrase": "At daggers drawn",
+    "meaning": "Enemies / To be bitterly hostile / Being at loggerheads",
+    "hindiMeaning": "शत्रु या संघर्ष की स्थिति में",
+    "sscCount": 3,
+    "example": "They are at daggers drawn."
+  },
+  {
+    "id": 201,
+    "phrase": "At each other’s throats",
+    "meaning": "Arguing angrily",
+    "hindiMeaning": "गुस्से से बहस करना",
+    "sscCount": 0,
+    "example": "They were at each other’s throats."
+  },
+  {
+    "id": 202,
+    "phrase": "At large",
+    "meaning": "A criminal escaped or not yet captured",
+    "hindiMeaning": "भागा हुआ अपराधी",
+    "sscCount": 1,
+    "example": "The thief is still at large."
+  },
+  {
+    "id": 203,
+    "phrase": "At loggerheads",
+    "meaning": "In conflict with someone / To disagree strongly",
+    "hindiMeaning": "असहमति के कारण विवाद",
+    "sscCount": 1,
+    "example": "They are at loggerheads."
+  },
+  {
+    "id": 204,
+    "phrase": "At loose ends",
+    "meaning": "In an uncertain situation",
+    "hindiMeaning": "अनिश्चित स्थिति में",
+    "sscCount": 2,
+    "example": "I am feeling at loose ends."
+  },
+  {
+    "id": 205,
+    "phrase": "At one’s elbow",
+    "meaning": "Next to someone",
+    "hindiMeaning": "किसी के समीप",
+    "sscCount": 3,
+    "example": "He was at my elbow."
+  },
+  {
+    "id": 206,
+    "phrase": "At one’s wit’s end",
+    "meaning": "Completely confused or perplexed",
+    "hindiMeaning": "पूरी तरह से उलझन में",
+    "sscCount": 3,
+    "example": "I am at my wit’s end."
+  },
+  {
+    "id": 207,
+    "phrase": "At random",
+    "meaning": "In a random manner",
+    "hindiMeaning": "अनियमित तरीके से",
+    "sscCount": 0,
+    "example": "He picked a book at random."
+  },
+  {
+    "id": 208,
+    "phrase": "At short notice",
+    "meaning": "With little warning or time for preparation",
+    "hindiMeaning": "कम समय में",
+    "sscCount": 0,
+    "example": "He came at short notice."
+  },
+  {
+    "id": 209,
+    "phrase": "At sixes and sevens",
+    "meaning": "In disorder or confusion",
+    "hindiMeaning": "अव्यवस्था या भ्रम में",
+    "sscCount": 3,
+    "example": "Everything was at sixes and sevens."
+  },
+  {
+    "id": 210,
+    "phrase": "At somebody’s expense",
+    "meaning": "Paid for by someone",
+    "hindiMeaning": "किसी और के लिए भुगतान करना",
+    "sscCount": 0,
+    "example": "He travelled at my expense."
+  },
+  {
+    "id": 211,
+    "phrase": "At stake",
+    "meaning": "In danger",
+    "hindiMeaning": "खतरे में",
+    "sscCount": 0,
+    "example": "His job is at stake."
+  },
+  {
+    "id": 212,
+    "phrase": "At the drop of a hat/dime",
+    "meaning": "Without any hesitation / instantly / without having planned beforehand",
+    "hindiMeaning": "बिना किसी हिचकिचाहट के तुरंत",
+    "sscCount": 7,
+    "example": "He agreed at the drop of a hat."
+  },
+  {
+    "id": 213,
+    "phrase": "At the eleventh hour",
+    "meaning": "At the very last moment / Just before the deadline",
+    "hindiMeaning": "आखिरी मौके पर",
+    "sscCount": 8,
+    "example": "He arrived at the eleventh hour."
+  },
+  {
+    "id": 214,
+    "phrase": "At the top of your lungs",
+    "meaning": "Extremely loudly",
+    "hindiMeaning": "पूरे जोर से चिल्लाना",
+    "sscCount": 0,
+    "example": "He shouted at the top of his lungs."
+  },
+  {
+    "id": 215,
+    "phrase": "At variance with",
+    "meaning": "In opposite",
+    "hindiMeaning": "विरोध में या अलग होना",
+    "sscCount": 0,
+    "example": "His views are at variance with mine."
+  },
+  {
+    "id": 216,
+    "phrase": "Average out",
+    "meaning": "To produce a result that is even and balanced when looked at over a period of time",
+    "hindiMeaning": "संतुलित होना",
+    "sscCount": 0,
+    "example": "The scores average out."
+  },
+  {
+    "id": 217,
+    "phrase": "Babe in the woods",
+    "meaning": "A young defenceless person",
+    "hindiMeaning": "असहाय",
+    "sscCount": 0,
+    "example": "He is a babe in the woods."
+  },
+  {
+    "id": 218,
+    "phrase": "Back in saddle",
+    "meaning": "Resume duty",
+    "hindiMeaning": "काम में वापस लौटना",
+    "sscCount": 0,
+    "example": "He is back in saddle."
+  }                
+]

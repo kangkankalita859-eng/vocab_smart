@@ -1,26 +1,57 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
-
+// Vocabulary service - uses local data instead of backend API
 export async function fetchVocab(start = 0, limit = null) {
-  const url = new URL(`${API_BASE_URL}/api/vocab`);
-  if (start > 0) url.searchParams.append('start', start);
-  if (limit !== null) url.searchParams.append('limit', limit);
-  url.searchParams.append('_t', Date.now()); // Cache-busting
-  
-  const res = await fetch(url.toString());
-  
-  if (!res.ok) {
-    throw new Error(`HTTP error! status: ${res.status}`);
+  try {
+    const response = await fetch('/data/english/vocab.json');
+    const vocabData = await response.json();
+    
+    // Filter by ID instead of array slicing
+    let filteredData = start > 0 
+      ? vocabData.filter(item => item.id >= start)
+      : vocabData;
+    
+    // Apply limit to filtered data
+    let paginatedData = limit 
+      ? filteredData.slice(0, limit)
+      : filteredData;
+    
+    return {
+      status: "success",
+      count: paginatedData.length,
+      total: vocabData.length,
+      start: start,
+      limit: limit,
+      data: paginatedData
+    };
+  } catch (error) {
+    return {
+      status: "error",
+      message: `Failed to load vocabulary data: ${error.message}`
+    };
   }
-  
-  return res.json();
 }
 
 export async function fetchVocabById(wordId) {
-  const res = await fetch(`${API_BASE_URL}/api/vocab/${wordId}`);
-  
-  if (!res.ok) {
-    throw new Error(`HTTP error! status: ${res.status}`);
+  try {
+    const response = await fetch('/data/english/vocab.json');
+    const vocabData = await response.json();
+    
+    const word = vocabData.find(item => item.id === wordId);
+    
+    if (word) {
+      return {
+        status: "success",
+        data: word
+      };
+    } else {
+      return {
+        status: "error",
+        message: `Word with ID ${wordId} not found`
+      };
+    }
+  } catch (error) {
+    return {
+      status: "error",
+      message: `Failed to load vocabulary data: ${error.message}`
+    };
   }
-  
-  return res.json();
 }
