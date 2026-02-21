@@ -4,6 +4,7 @@ export default function SessionNav({
   onApplyRange,
   onGoRead,
   onGoCards,
+  onGoTest,
   onGoHome,
   isMobile,
   onMenuToggle,
@@ -75,6 +76,14 @@ export default function SessionNav({
         >
           🃏 Flash Cards
         </button>
+        {onGoTest && (
+          <button
+            style={mode === "Test" ? activeBtn : linkBtn}
+            onClick={onGoTest}
+          >
+            📝 Test
+          </button>
+        )}
       </div>
     </div>
   );

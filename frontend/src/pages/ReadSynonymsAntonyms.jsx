@@ -18,6 +18,8 @@ export default function ReadSynonymsAntonyms({
   const { isMobile } = useMobile();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  console.log('ReadSynonymsAntonyms component mounted');
+
   /* -------- FETCH SYNONYMS & ANTONYMS -------- */
   useEffect(() => {
     const safeConfig = config || { start: 0, limit: 20 };
@@ -52,7 +54,8 @@ export default function ReadSynonymsAntonyms({
         config={config}
         onApplyRange={onUpdateConfig}
         onGoRead={() => {}}
-        onGoCards={onGoCards}
+        onGoCards={() => {}}
+        onGoTest={onGoCards}
         onGoHome={onGoHome}
         isMobile={isMobile}
         onMenuToggle={() => setMobileMenuOpen(true)}

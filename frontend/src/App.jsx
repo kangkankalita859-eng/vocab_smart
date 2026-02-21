@@ -4,6 +4,8 @@ import Session from "./pages/Session";
 import ReadVocab from "./pages/ReadVocab";
 import ReadIdioms from "./pages/ReadIdioms";
 import ReadSynonymsAntonyms from "./pages/ReadSynonymsAntonyms";
+import SynonymsAntonymsTestIntro from "./pages/SynonymsAntonymsTestIntro";
+import SynonymsAntonymsTest from "./pages/SynonymsAntonymsTest";
 import IdiomSession from "./pages/IdiomSession";
 import Complete from "./pages/Complete";
 import TestAPI from "./TestAPI";
@@ -13,6 +15,8 @@ export default function App() {
   const [stage, setStage] = useState("home"); // Back to normal
   const [config, setConfig] = useState({ start: 0, limit: 20 });
   const [reviewUnknownDeck, setReviewUnknownDeck] = useState(false);
+
+  console.log('App component mounted, current stage:', stage);
 
   if (stage === "test") return <TestAPI />;
   
@@ -96,8 +100,28 @@ export default function App() {
     return (
       <ReadSynonymsAntonyms
         config={config}
-        onGoCards={() => {}}
+        onGoCards={() => {
+          console.log('App: onGoCards called, setting stage to synonyms-antonyms-test-intro');
+          setStage("synonyms-antonyms-test-intro");
+        }}
         onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "synonyms-antonyms-test-intro")
+    return (
+      <SynonymsAntonymsTestIntro
+        config={config}
+        onStartTest={() => setStage("synonyms-antonyms-test")}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "synonyms-antonyms-test")
+    return (
+      <SynonymsAntonymsTest
+        config={config}
         onGoHome={() => setStage("home")}
       />
     );

@@ -742,5 +742,517 @@
     {"word": "Criticism", "hindiMeaning": "आलोचना"},
     {"word": "Condemnation", "hindiMeaning": "निंदा"}
   ]
+},
+{
+  "id": 54,
+  "word": "Adulterated",
+  "hindiMeaning": "मिलावटी",
+  "meaning": "Made weaker or impure by adding another substance",
+  "synonyms": [
+    {"word": "Contaminated", "hindiMeaning": "प्रदूषित"}
+  ],
+  "antonyms": [
+    {"word": "Purification", "hindiMeaning": "शुद्धिकरण"}
+  ]
+},
+{
+  "id": 55,
+  "word": "Advance",
+  "hindiMeaning": "आगे बढ़ना",
+  "meaning": "To move forward in a purposeful way",
+  "synonyms": [
+    {"word": "Progress", "hindiMeaning": "प्रगति"},
+    {"word": "Move Forward", "hindiMeaning": "आगे बढ़ना"}
+  ],
+  "antonyms": [
+    {"word": "Retreat", "hindiMeaning": "वापस जाना"},
+    {"word": "Retard", "hindiMeaning": "धीमा करना"},
+    {"word": "Linger", "hindiMeaning": "ठहरना"}
+  ]
+},
+{
+  "id": 56,
+  "word": "Advantage",
+  "hindiMeaning": "लाभ",
+  "meaning": "A condition giving a favorable position",
+  "synonyms": [
+    {"word": "Boon", "hindiMeaning": "वरदान"},
+    {"word": "Favourable", "hindiMeaning": "अनुकूल"}
+  ],
+  "antonyms": [
+    {"word": "Minus", "hindiMeaning": "नुकसान"}
+  ]
+},
+{
+  "id": 57,
+  "word": "Advent",
+  "hindiMeaning": "आगमन",
+  "meaning": "Arrival of a notable person or event",
+  "synonyms": [
+    {"word": "Arrival", "hindiMeaning": "आगमन"}
+  ],
+  "antonyms": [
+    {"word": "Departure", "hindiMeaning": "प्रस्थान"}
+  ]
+},
+{
+  "id": 58,
+  "word": "Adversary",
+  "hindiMeaning": "विरोधी",
+  "meaning": "An opponent in a contest or conflict",
+  "synonyms": [
+    {"word": "Rival", "hindiMeaning": "प्रतिद्वंदी"},
+    {"word": "Opponent", "hindiMeaning": "विरोधी"}
+  ],
+  "antonyms": [
+    {"word": "Helper", "hindiMeaning": "सहायक"},
+    {"word": "Comrade", "hindiMeaning": "साथी"}
+  ]
+},
+{
+  "id": 59,
+  "word": "Adversity",
+  "hindiMeaning": "विपत्ति",
+  "meaning": "Difficulties or misfortune",
+  "synonyms": [
+    {"word": "Misfortune", "hindiMeaning": "दुर्भाग्य"},
+    {"word": "Hardship", "hindiMeaning": "कठिनाई"},
+    {"word": "Misery", "hindiMeaning": "दुख"},
+    {"word": "Trouble", "hindiMeaning": "संकट"}
+  ],
+  "antonyms": [
+    {"word": "Prosperity", "hindiMeaning": "समृद्धि"}
+  ]
+},
+{
+  "id": 60,
+  "word": "Advocacy",
+  "hindiMeaning": "समर्थन",
+  "meaning": "Public support for a cause",
+  "synonyms": [
+    {"word": "Promotion", "hindiMeaning": "प्रचार"}
+  ],
+  "antonyms": [
+    {"word": "Discouragement", "hindiMeaning": "हतोत्साहन"},
+    {"word": "Opposition", "hindiMeaning": "विरोध"}
+  ]
+},
+{
+  "id": 61,
+  "word": "Advocate",
+  "hindiMeaning": "समर्थन करना",
+  "meaning": "To publicly support someone or something",
+  "synonyms": [
+    {"word": "Support", "hindiMeaning": "समर्थन"}
+  ],
+  "antonyms": [
+    {"word": "Oppose", "hindiMeaning": "विरोध करना"}
+  ]
+},
+{
+  "id": 62,
+  "word": "Affable",
+  "hindiMeaning": "मिलनसार",
+  "meaning": "Easy to talk to; friendly",
+  "synonyms": [
+    {"word": "Friendly", "hindiMeaning": "मित्रवत"}
+  ],
+  "antonyms": [
+    {"word": "Surly", "hindiMeaning": "रूखा"},
+    {"word": "Hostile", "hindiMeaning": "शत्रुतापूर्ण"},
+    {"word": "Reserved", "hindiMeaning": "संकोची"}
+  ]
+},
+{
+  "id": 63,
+  "word": "Affinity",
+  "hindiMeaning": "लगाव",
+  "meaning": "Natural liking or sympathy",
+  "synonyms": [
+    {"word": "Empathy", "hindiMeaning": "सहानुभूति"},
+    {"word": "Intimacy", "hindiMeaning": "निकटता"},
+    {"word": "Rapport", "hindiMeaning": "मेलजोल"}
+  ],
+  "antonyms": [
+    {"word": "Aversion", "hindiMeaning": "घृणा"},
+    {"word": "Dislike", "hindiMeaning": "नापसंद"}
+  ]
+},
+{
+  "id": 64,
+  "word": "Affliction",
+  "hindiMeaning": "पीड़ा",
+  "meaning": "Something that causes suffering",
+  "synonyms": [
+    {"word": "Bane", "hindiMeaning": "अभिशाप"},
+    {"word": "Annoy", "hindiMeaning": "परेशान करना"},
+    {"word": "Distress", "hindiMeaning": "कष्ट"}
+  ],
+  "antonyms": [
+    {"word": "Pleasure", "hindiMeaning": "आनंद"},
+    {"word": "Consolation", "hindiMeaning": "सांत्वना"},
+    {"word": "Adore", "hindiMeaning": "पूजना"}
+  ]
+},
+{
+  "id": 65,
+  "word": "Affluence",
+  "hindiMeaning": "समृद्धि",
+  "meaning": "State of having great wealth",
+  "synonyms": [
+    {"word": "Wealth", "hindiMeaning": "धन"},
+    {"word": "Richness", "hindiMeaning": "सम्पन्नता"}
+  ],
+  "antonyms": [
+    {"word": "Poverty", "hindiMeaning": "गरीबी"},
+    {"word": "Indigence", "hindiMeaning": "दरिद्रता"},
+    {"word": "Destitution", "hindiMeaning": "निर्धनता"}
+  ]
+},
+{
+  "id": 66,
+  "word": "Affluent",
+  "hindiMeaning": "धनी",
+  "meaning": "Having a great deal of money",
+  "synonyms": [
+    {"word": "Prosperous", "hindiMeaning": "समृद्ध"},
+    {"word": "Wealthy", "hindiMeaning": "धनवान"}
+  ],
+  "antonyms": [
+    {"word": "Poor", "hindiMeaning": "गरीब"},
+    {"word": "Deprived", "hindiMeaning": "वंचित"},
+    {"word": "Failing", "hindiMeaning": "असफल"}
+  ]
+},
+{
+  "id": 67,
+  "word": "Aggrandize",
+  "hindiMeaning": "शक्ति बढ़ाना",
+  "meaning": "To increase power or status",
+  "synonyms": [
+    {"word": "Augment", "hindiMeaning": "वृद्धि करना"}
+  ],
+  "antonyms": [
+    {"word": "Belittle", "hindiMeaning": "महत्व घटाना"}
+  ]
+},
+{
+  "id": 68,
+  "word": "Aggravate",
+  "hindiMeaning": "भड़काना",
+  "meaning": "To make something worse",
+  "synonyms": [
+    {"word": "Irritate", "hindiMeaning": "चिढ़ाना"},
+    {"word": "Intensify", "hindiMeaning": "तेज करना"},
+    {"word": "Annoy", "hindiMeaning": "परेशान करना"}
+  ],
+  "antonyms": [
+    {"word": "Alleviate", "hindiMeaning": "शांत करना"},
+    {"word": "Oblige", "hindiMeaning": "कृतज्ञ करना"},
+    {"word": "Conciliate", "hindiMeaning": "मिल-मिलाप करना"}
+  ]
+},
+{
+  "id": 69,
+  "word": "Agile",
+  "hindiMeaning": "फुर्तीला",
+  "meaning": "Able to move quickly and easily",
+  "synonyms": [
+    {"word": "Active", "hindiMeaning": "सक्रिय"},
+    {"word": "Quick", "hindiMeaning": "तेज"},
+    {"word": "Nimble", "hindiMeaning": "फुर्तीला"},
+    {"word": "Energetic", "hindiMeaning": "ऊर्जावान"}
+  ],
+  "antonyms": [
+    {"word": "Lethargic", "hindiMeaning": "सुस्त"}
+  ]
+},
+{
+  "id": 70,
+  "word": "Agitate",
+  "hindiMeaning": "उत्तेजित करना",
+  "meaning": "To make someone troubled or nervous",
+  "synonyms": [
+    {"word": "Upset", "hindiMeaning": "परेशान करना"}
+  ],
+  "antonyms": [
+    {"word": "Pacify", "hindiMeaning": "शांत करना"},
+    {"word": "Calm", "hindiMeaning": "शांत"},
+    {"word": "Soothe", "hindiMeaning": "शांत करना"}
+  ]
+},
+{
+  "id": 71,
+  "word": "Agony",
+  "hindiMeaning": "पीड़ा",
+  "meaning": "Extreme physical or mental suffering",
+  "synonyms": [
+    {"word": "Pain", "hindiMeaning": "दर्द"}
+  ],
+  "antonyms": [
+    {"word": "Pleasure", "hindiMeaning": "आनंद"},
+    {"word": "Ecstasy", "hindiMeaning": "परमानंद"},
+    {"word": "Delight", "hindiMeaning": "खुशी"},
+    {"word": "Comfort", "hindiMeaning": "आराम"}
+  ]
+},
+{
+  "id": 72,
+  "word": "Agreement",
+  "hindiMeaning": "समझौता",
+  "meaning": "Harmony or mutual understanding",
+  "synonyms": [
+    {"word": "Accord", "hindiMeaning": "समझौता"},
+    {"word": "Consent", "hindiMeaning": "सहमति"}
+  ],
+  "antonyms": [
+    {"word": "Disagreement", "hindiMeaning": "असहमति"},
+    {"word": "Conflict", "hindiMeaning": "संघर्ष"}
+  ]
+},
+{
+  "id": 73,
+  "word": "Alacrity",
+  "hindiMeaning": "तत्परता",
+  "meaning": "Brisk and cheerful readiness",
+  "synonyms": [
+    {"word": "Willingness", "hindiMeaning": "इच्छा"},
+    {"word": "Eagerness", "hindiMeaning": "उत्सुकता"}
+  ],
+  "antonyms": [
+    {"word": "Indifference", "hindiMeaning": "उदासीनता"},
+    {"word": "Apathy", "hindiMeaning": "उदासीनता"},
+    {"word": "Lethargy", "hindiMeaning": "सुस्ती"}
+  ]
+},
+{
+  "id": 74,
+  "word": "Alert",
+  "hindiMeaning": "सतर्क",
+  "meaning": "Quick to notice danger or problems",
+  "synonyms": [
+    {"word": "Watchful", "hindiMeaning": "सतर्क"},
+    {"word": "Vigilant", "hindiMeaning": "चौकस"}
+  ],
+  "antonyms": [
+    {"word": "Careless", "hindiMeaning": "लापरवाह"},
+    {"word": "Distracted", "hindiMeaning": "ध्यानभंग"}
+  ]
+},
+{
+  "id": 75,
+  "word": "Alien",
+  "hindiMeaning": "विदेशी",
+  "meaning": "From another country or unfamiliar",
+  "synonyms": [
+    {"word": "Foreigner", "hindiMeaning": "विदेशी"}
+  ],
+  "antonyms": [
+    {"word": "Native", "hindiMeaning": "स्थानीय"}
+  ]
+},
+{
+  "id": 76,
+  "word": "Alienate",
+  "hindiMeaning": "दूर कर देना",
+  "meaning": "To make someone feel isolated",
+  "synonyms": [
+    {"word": "Estrange", "hindiMeaning": "अलग करना"}
+  ],
+  "antonyms": [
+    {"word": "Reconcile", "hindiMeaning": "मेल-मिलाप करना"}
+  ]
+},
+{
+  "id": 77,
+  "word": "Alight",
+  "hindiMeaning": "उतरना",
+  "meaning": "To get down from a vehicle",
+  "synonyms": [
+    {"word": "Descend", "hindiMeaning": "उतरना"}
+  ],
+  "antonyms": [
+    {"word": "Embark", "hindiMeaning": "चढ़ना"}
+  ]
+},
+{
+  "id": 78,
+  "word": "Allege",
+  "hindiMeaning": "आरोप लगाना",
+  "meaning": "To claim without proof",
+  "synonyms": [
+    {"word": "Charge", "hindiMeaning": "आरोप"}
+  ],
+  "antonyms": [
+    {"word": "Testimony", "hindiMeaning": "प्रमाण"}
+  ]
+},
+{
+  "id": 79,
+  "word": "Alleviate",
+  "hindiMeaning": "कम करना",
+  "meaning": "To make something less severe",
+  "synonyms": [
+    {"word": "Mitigate", "hindiMeaning": "कम करना"},
+    {"word": "Relieve", "hindiMeaning": "राहत देना"},
+    {"word": "Diminish", "hindiMeaning": "कम होना"},
+    {"word": "Lessen", "hindiMeaning": "कम करना"},
+    {"word": "Mollify", "hindiMeaning": "शांत करना"}
+  ],
+  "antonyms": [
+    {"word": "Aggravate", "hindiMeaning": "बढ़ाना"},
+    {"word": "Exaggerate", "hindiMeaning": "अतिशयोक्ति करना"},
+    {"word": "Intensify", "hindiMeaning": "तेज करना"}
+  ]
+},
+{
+  "id": 80,
+  "word": "Allure",
+  "hindiMeaning": "आकर्षण करना",
+  "meaning": "To attract or tempt",
+  "synonyms": [
+    {"word": "Tempt", "hindiMeaning": "लुभाना"},
+    {"word": "Attract", "hindiMeaning": "आकर्षित करना"},
+    {"word": "Appeal", "hindiMeaning": "आकर्षण"}
+  ],
+  "antonyms": [
+    {"word": "Repulse", "hindiMeaning": "घृणा उत्पन्न करना"}
+  ]
+},
+{
+  "id": 81,
+  "word": "Ally",
+  "hindiMeaning": "मित्र",
+  "meaning": "A partner or supporter",
+  "synonyms": [
+    {"word": "Supporter", "hindiMeaning": "समर्थक"},
+    {"word": "Associate", "hindiMeaning": "सहयोगी"}
+  ],
+  "antonyms": [
+    {"word": "Enemy", "hindiMeaning": "शत्रु"}
+  ]
+},
+{
+  "id": 82,
+  "word": "Alteration",
+  "hindiMeaning": "परिवर्तन",
+  "meaning": "The act of changing",
+  "synonyms": [
+    {"word": "Modification", "hindiMeaning": "संशोधन"},
+    {"word": "Amendment", "hindiMeaning": "संशोधन"}
+  ],
+  "antonyms": [
+    {"word": "Fixation", "hindiMeaning": "स्थिरता"}
+  ]
+},
+{
+  "id": 83,
+  "word": "Altruistic",
+  "hindiMeaning": "परोपकारी",
+  "meaning": "Selfless concern for others",
+  "synonyms": [
+    {"word": "Philanthropic", "hindiMeaning": "दानशील"},
+    {"word": "Humanitarian", "hindiMeaning": "मानवतावादी"},
+    {"word": "Selflessness", "hindiMeaning": "निःस्वार्थता"}
+  ],
+  "antonyms": [
+    {"word": "Selfish", "hindiMeaning": "स्वार्थी"},
+    {"word": "Spite", "hindiMeaning": "द्वेष"}
+  ]
+},
+{
+  "id": 84,
+  "word": "Amass",
+  "hindiMeaning": "जमा करना",
+  "meaning": "To collect in large amount",
+  "synonyms": [
+    {"word": "Gather", "hindiMeaning": "इकट्ठा करना"}
+  ],
+  "antonyms": [
+    {"word": "Distribute", "hindiMeaning": "वितरित करना"},
+    {"word": "Scatter", "hindiMeaning": "बिखेरना"}
+  ]
+},
+{
+  "id": 85,
+  "word": "Amateur",
+  "hindiMeaning": "नौसिखिया",
+  "meaning": "Inexperienced person",
+  "synonyms": [
+    {"word": "Beginner", "hindiMeaning": "शुरुआती"}
+  ],
+  "antonyms": [
+    {"word": "Professional", "hindiMeaning": "पेशेवर"},
+    {"word": "Expert", "hindiMeaning": "विशेषज्ञ"}
+  ]
+},
+{
+  "id": 86,
+  "word": "Amaze",
+  "hindiMeaning": "चकित करना",
+  "meaning": "To surprise greatly",
+  "synonyms": [
+    {"word": "Astonish", "hindiMeaning": "आश्चर्यचकित करना"}
+  ],
+  "antonyms": [
+    {"word": "Ordinary", "hindiMeaning": "साधारण"},
+    {"word": "Obvious", "hindiMeaning": "स्पष्ट"}
+  ]
+},
+{
+  "id": 87,
+  "word": "Ambiguous",
+  "hindiMeaning": "अस्पष्ट",
+  "meaning": "Having more than one meaning",
+  "synonyms": [
+    {"word": "Vague", "hindiMeaning": "अस्पष्ट"}
+  ],
+  "antonyms": [
+    {"word": "Precise", "hindiMeaning": "सटीक"},
+    {"word": "Clear", "hindiMeaning": "स्पष्ट"},
+    {"word": "Certain", "hindiMeaning": "निश्चित"},
+    {"word": "Definite", "hindiMeaning": "निश्चित"}
+  ]
+},
+{
+  "id": 88,
+  "word": "Ambitious",
+  "hindiMeaning": "महत्वाकांक्षी",
+  "meaning": "Strong desire to succeed",
+  "synonyms": [
+    {"word": "Aspiring", "hindiMeaning": "आकांक्षी"}
+  ],
+  "antonyms": [
+    {"word": "Lazy", "hindiMeaning": "आलसी"},
+    {"word": "Laziness", "hindiMeaning": "आलस्य"}
+  ]
+},
+{
+  "id": 89,
+  "word": "Ameliorate",
+  "hindiMeaning": "सुधारना",
+  "meaning": "To make something better",
+  "synonyms": [
+    {"word": "Improve", "hindiMeaning": "बेहतर करना"}
+  ],
+  "antonyms": [
+    {"word": "Worsen", "hindiMeaning": "बिगाड़ना"},
+    {"word": "Deteriorate", "hindiMeaning": "खराब होना"},
+    {"word": "Aggravate", "hindiMeaning": "बढ़ाना"}
+  ]
+},
+{
+  "id": 90,
+  "word": "Amend",
+  "hindiMeaning": "संशोधित करना",
+  "meaning": "To make minor changes to improve",
+  "synonyms": [
+    {"word": "Modify", "hindiMeaning": "बदलना"},
+    {"word": "Correct", "hindiMeaning": "सुधारना"}
+  ],
+  "antonyms": [
+    {"word": "Damage", "hindiMeaning": "नुकसान पहुंचाना"},
+    {"word": "Harm", "hindiMeaning": "हानि पहुंचाना"}
+  ]
 }
 ]
