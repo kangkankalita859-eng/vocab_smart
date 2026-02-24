@@ -7535,6 +7535,1517 @@
   "example": "Bonus is an incentive to work.",
   "sscCount": 2,
   "otherExamCount": 1
+},
+{
+  "id": 888,
+  "word": "Incivism",
+  "hindiMeaning": "देशद्रोह (N.)",
+  "meaning": "Lack of civic-mindedness or patriotism",
+  "example": "Such acts show incivism.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 889,
+  "word": "Incognito",
+  "hindiMeaning": "गुप्त रूप से (Adj.)",
+  "meaning": "Travelling under a false name",
+  "example": "He travelled incognito.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 890,
+  "word": "Incoherent",
+  "hindiMeaning": "असंगत (Adj.)",
+  "meaning": "Expressed in a confusing way",
+  "example": "His speech was incoherent.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 891,
+  "word": "Incomprehensible",
+  "hindiMeaning": "समझ से बाहर (Adj.)",
+  "meaning": "Difficult to understand",
+  "example": "The handwriting was incomprehensible.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 892,
+  "word": "Incontrovertible",
+  "hindiMeaning": "अविवादित (Adj.)",
+  "meaning": "Impossible to deny",
+  "example": "These are incontrovertible facts.",
+  "sscCount": 1,
+  "otherExamCount": 2
+},
+{
+  "id": 893,
+  "word": "Incorrigible",
+  "hindiMeaning": "असंशोधनिय (Adj.)",
+  "meaning": "Beyond reform",
+  "example": "He is an incorrigible liar.",
+  "sscCount": 12,
+  "otherExamCount": 1
+},
+{
+  "id": 894,
+  "word": "Incredible",
+  "hindiMeaning": "अविश्वसनीय (Adj.)",
+  "meaning": "That cannot be believed",
+  "example": "She has incredible talent.",
+  "sscCount": 5,
+  "otherExamCount": 2
+},
+{
+  "id": 895,
+  "word": "Indebted",
+  "hindiMeaning": "ऋणी (Adj.)",
+  "meaning": "Owing money",
+  "example": "He is heavily indebted.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 896,
+  "word": "Indefatigable",
+  "hindiMeaning": "न थकने वाला (Adj.)",
+  "meaning": "Incapable of feeling tired",
+  "example": "She is an indefatigable worker.",
+  "sscCount": 5,
+  "otherExamCount": 2
+},
+{
+  "id": 897,
+  "word": "Indelible",
+  "hindiMeaning": "स्थायी (Adj.)",
+  "meaning": "That cannot be erased",
+  "example": "His words left an indelible mark.",
+  "sscCount": 2,
+  "otherExamCount": 2
+},
+{
+  "id": 898,
+  "word": "Indescribable",
+  "hindiMeaning": "अवर्णनीय (Adj.)",
+  "meaning": "Impossible to describe",
+  "example": "The beauty was indescribable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 899,
+  "word": "Indigenous",
+  "hindiMeaning": "स्वदेशी (Adj.)",
+  "meaning": "Native to a place",
+  "example": "These plants are indigenous.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 900,
+  "word": "Indignation",
+  "hindiMeaning": "क्रोध (N.)",
+  "meaning": "Anger at unfairness",
+  "example": "He spoke with indignation.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 901,
+  "word": "Indispensable",
+  "hindiMeaning": "अपरिहार्य (Adj.)",
+  "meaning": "Absolutely necessary",
+  "example": "Water is indispensable for life.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 902,
+  "word": "Industrious",
+  "hindiMeaning": "मेहनती (Adj.)",
+  "meaning": "Hard-working",
+  "example": "She is an industrious student.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 903,
+  "word": "Inedible",
+  "hindiMeaning": "अखाद्य (Adj.)",
+  "meaning": "Not fit to eat",
+  "example": "This fruit is inedible.",
+  "sscCount": 4,
+  "otherExamCount": 0
+},
+{
+  "id": 904,
+  "word": "Ineffable",
+  "hindiMeaning": "अवर्णनीय (Adj.)",
+  "meaning": "Cannot be expressed in words",
+  "example": "It was an ineffable joy.",
+  "sscCount": 3,
+  "otherExamCount": 1
+},
+{
+  "id": 905,
+  "word": "Ineligible",
+  "hindiMeaning": "अयोग्य (Adj.)",
+  "meaning": "Not fit to be chosen",
+  "example": "He is ineligible for the post.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 906,
+  "word": "Ineptness",
+  "hindiMeaning": "अयोग्यता (N.)",
+  "meaning": "Lack of skill",
+  "example": "His ineptness caused failure.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 907,
+  "word": "Inert",
+  "hindiMeaning": "अक्रिय (Adj.)",
+  "meaning": "Unable to act",
+  "example": "He remained inert.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 908,
+  "word": "Inevitable",
+  "hindiMeaning": "अटल (Adj.)",
+  "meaning": "Certain to happen",
+  "example": "Death is inevitable.",
+  "sscCount": 13,
+  "otherExamCount": 6
+},
+{
+  "id": 909,
+  "word": "Inexorable",
+  "hindiMeaning": "हठी/निर्दयी (Adj.)",
+  "meaning": "Not moved by request",
+  "example": "Time is inexorable.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 910,
+  "word": "Inextinguishable",
+  "hindiMeaning": "जिसे बुझाया न जा सके (Adj.)",
+  "meaning": "That cannot be put out",
+  "example": "His hope was inextinguishable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 911,
+  "word": "Infallible",
+  "hindiMeaning": "अचूक (Adj.)",
+  "meaning": "Unable to make mistakes",
+  "example": "No human is infallible.",
+  "sscCount": 10,
+  "otherExamCount": 4
+},
+{
+  "id": 912,
+  "word": "Infanticide",
+  "hindiMeaning": "शिशु हत्या (N.)",
+  "meaning": "Murder of an infant",
+  "example": "Infanticide is a crime.",
+  "sscCount": 3,
+  "otherExamCount": 2
+},
+{
+  "id": 913,
+  "word": "Infinite",
+  "hindiMeaning": "अनंत (Adj.)",
+  "meaning": "Not limited",
+  "example": "The universe is infinite.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 914,
+  "word": "Infirmary",
+  "hindiMeaning": "अस्पताल (N.)",
+  "meaning": "Place for care of sick people",
+  "example": "He was taken to the infirmary.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 915,
+  "word": "Inflammable",
+  "hindiMeaning": "ज्वलनशील (Adj.)",
+  "meaning": "Catches fire easily",
+  "example": "Petrol is inflammable.",
+  "sscCount": 7,
+  "otherExamCount": 0
+},
+{
+  "id": 916,
+  "word": "Inflorescence",
+  "hindiMeaning": "पुष्पगुच्छ (N.)",
+  "meaning": "A cluster of flowers",
+  "example": "The plant has beautiful inflorescence.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 917,
+  "word": "Ingenious",
+  "hindiMeaning": "प्रतिभाशाली (Adj.)",
+  "meaning": "Exceptionally clever or talented",
+  "example": "He is an ingenious student.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 918,
+  "word": "Inheritance",
+  "hindiMeaning": "विरासत (N.)",
+  "meaning": "Property received after someone's death",
+  "example": "He got a large inheritance.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 919,
+  "word": "Innocent",
+  "hindiMeaning": "निर्दोष (Adj.)",
+  "meaning": "Not guilty of wrongdoing",
+  "example": "The man was innocent.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 920,
+  "word": "Innocuous",
+  "hindiMeaning": "हानिरहित (Adj.)",
+  "meaning": "Causing no harm",
+  "example": "It was an innocuous remark.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 921,
+  "word": "Innuendo",
+  "hindiMeaning": "इशारा (N.)",
+  "meaning": "An indirect reference",
+  "example": "He spoke in innuendo.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 922,
+  "word": "Inoculate",
+  "hindiMeaning": "टीका लगाना (V.)",
+  "meaning": "To treat with a vaccine",
+  "example": "Children are inoculated early.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 923,
+  "word": "Inquisitive",
+  "hindiMeaning": "जिज्ञासु (Adj.)",
+  "meaning": "Curious to know things",
+  "example": "She is very inquisitive.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 924,
+  "word": "Insatiable",
+  "hindiMeaning": "लालची (Adj.)",
+  "meaning": "That cannot be satisfied",
+  "example": "He has insatiable desire.",
+  "sscCount": 5,
+  "otherExamCount": 1
+},
+{
+  "id": 925,
+  "word": "Inscribe",
+  "hindiMeaning": "अंकित करना (V.)",
+  "meaning": "To write or carve words",
+  "example": "His name was inscribed.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 926,
+  "word": "Inscription",
+  "hindiMeaning": "शिलालेख (N.)",
+  "meaning": "Words carved on stone",
+  "example": "The temple has old inscriptions.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 927,
+  "word": "Insolvable",
+  "hindiMeaning": "समाधानहीन (Adj.)",
+  "meaning": "Impossible to solve",
+  "example": "It is an insolvable problem.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 928,
+  "word": "Insolvent",
+  "hindiMeaning": "दिवालिया (Adj.)",
+  "meaning": "Unable to pay debts",
+  "example": "The company became insolvent.",
+  "sscCount": 5,
+  "otherExamCount": 7
+},
+{
+  "id": 929,
+  "word": "Insomnia",
+  "hindiMeaning": "अनिद्रा (N.)",
+  "meaning": "Inability to sleep",
+  "example": "He suffers from insomnia.",
+  "sscCount": 6,
+  "otherExamCount": 2
+},
+{
+  "id": 930,
+  "word": "Insulated",
+  "hindiMeaning": "विद्युत-रोधित (Adj.)",
+  "meaning": "Protected from heat or sound",
+  "example": "The wires are insulated.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 931,
+  "word": "Insurgent",
+  "hindiMeaning": "विद्रोही (N.)",
+  "meaning": "One who rebels",
+  "example": "The insurgents attacked.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 932,
+  "word": "Intangible",
+  "hindiMeaning": "अस्पर्श्य (Adj.)",
+  "meaning": "Cannot be touched",
+  "example": "Happiness is intangible.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 933,
+  "word": "Integrate",
+  "hindiMeaning": "संघटित करना (V.)",
+  "meaning": "To combine into a whole",
+  "example": "They integrated both systems.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 934,
+  "word": "Integrity",
+  "hindiMeaning": "अखंडता (N.)",
+  "meaning": "Honesty and strong morals",
+  "example": "He is known for integrity.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 935,
+  "word": "Interloper",
+  "hindiMeaning": "घुसपैठिया (N.)",
+  "meaning": "One who interferes",
+  "example": "He was treated as an interloper.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 936,
+  "word": "Interlude",
+  "hindiMeaning": "मध्यांतर (N.)",
+  "meaning": "Interval between events",
+  "example": "There was a short interlude.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 937,
+  "word": "Intermediary",
+  "hindiMeaning": "मध्यस्थ (Adj.)",
+  "meaning": "One who settles disputes",
+  "example": "He acted as intermediary.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 938,
+  "word": "Interment",
+  "hindiMeaning": "दफन (N.)",
+  "meaning": "Burial of a dead body",
+  "example": "The interment took place.",
+  "sscCount": 1,
+  "otherExamCount": 2
+},
+{
+  "id": 939,
+  "word": "Interminable",
+  "hindiMeaning": "अनंतकालीन (Adj.)",
+  "meaning": "Continuing endlessly",
+  "example": "It was an interminable wait.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 940,
+  "word": "Internment",
+  "hindiMeaning": "नजरबंदी (N.)",
+  "meaning": "Confinement in prison",
+  "example": "He was sent to internment.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 941,
+  "word": "Interpolate",
+  "hindiMeaning": "अनुमान लगाना (V.)",
+  "meaning": "To estimate value",
+  "example": "Data was interpolated.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 942,
+  "word": "Interpose",
+  "hindiMeaning": "घुसाना (V.)",
+  "meaning": "To place between",
+  "example": "He interposed himself.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 943,
+  "word": "Interregnum",
+  "hindiMeaning": "दो शासन के बीच का काल (N.)",
+  "meaning": "Period between two reigns",
+  "example": "It was a time of interregnum.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 944,
+  "word": "Intervene",
+  "hindiMeaning": "हस्तक्षेप करना (V.)",
+  "meaning": "To prevent or alter events",
+  "example": "The police intervened.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 945,
+  "word": "Intestate",
+  "hindiMeaning": "बिना वसीयत मरा हुआ (Adj.)",
+  "meaning": "One who dies without a will",
+  "example": "He died intestate.",
+  "sscCount": 5,
+  "otherExamCount": 0
+},
+{
+  "id": 946,
+  "word": "Intimidate",
+  "hindiMeaning": "धमकाना (V.)",
+  "meaning": "To force someone through fear",
+  "example": "He tried to intimidate me.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 947,
+  "word": "Introspection",
+  "hindiMeaning": "आत्म निरीक्षण (N.)",
+  "meaning": "Examination of one's own thoughts",
+  "example": "He spent time in introspection.",
+  "sscCount": 4,
+  "otherExamCount": 0
+},
+{
+  "id": 948,
+  "word": "Introvert",
+  "hindiMeaning": "अन्तर्मुखी व्यक्ति (N.)",
+  "meaning": "A quiet person more interested in own thoughts",
+  "example": "She is an introvert.",
+  "sscCount": 7,
+  "otherExamCount": 4
+},
+{
+  "id": 949,
+  "word": "Intruder",
+  "hindiMeaning": "घुसपैठिया (N.)",
+  "meaning": "A person who enters without permission",
+  "example": "The intruder was caught.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 950,
+  "word": "Inundate",
+  "hindiMeaning": "डुबोना (V.)",
+  "meaning": "To overflow or flood",
+  "example": "Heavy rain inundated the village.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 951,
+  "word": "Invalid",
+  "hindiMeaning": "लंबे समय से बीमार व्यक्ति (N.)",
+  "meaning": "A person disabled by illness",
+  "example": "He has become an invalid.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 952,
+  "word": "Inventory",
+  "hindiMeaning": "वस्तु सूची (N.)",
+  "meaning": "A detailed list of items",
+  "example": "Check the inventory.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 953,
+  "word": "Invertebrates",
+  "hindiMeaning": "अकशेरुकी (N.)",
+  "meaning": "Animals lacking a backbone",
+  "example": "Worms are invertebrates.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 954,
+  "word": "Investigation",
+  "hindiMeaning": "जांच पड़ताल (N.)",
+  "meaning": "Official examination of facts",
+  "example": "Police began investigation.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 955,
+  "word": "Invigilator",
+  "hindiMeaning": "निरीक्षक (N.)",
+  "meaning": "A person who supervises an exam",
+  "example": "The invigilator checked papers.",
+  "sscCount": 7,
+  "otherExamCount": 1
+},
+{
+  "id": 956,
+  "word": "Invigorate",
+  "hindiMeaning": "बलवर्धन करना (V.)",
+  "meaning": "To refresh and revive",
+  "example": "The walk invigorated him.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 957,
+  "word": "Invincible",
+  "hindiMeaning": "अजेय (Adj.)",
+  "meaning": "Impossible to defeat",
+  "example": "The team felt invincible.",
+  "sscCount": 5,
+  "otherExamCount": 5
+},
+{
+  "id": 958,
+  "word": "Invocation",
+  "hindiMeaning": "आह्वान (N.)",
+  "meaning": "Calling upon a higher power",
+  "example": "The ceremony began with invocation.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 959,
+  "word": "Invoice",
+  "hindiMeaning": "बिल (N.)",
+  "meaning": "Detailed list of goods with price",
+  "example": "Send the invoice.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 960,
+  "word": "Involuntary",
+  "hindiMeaning": "अनैच्छिक (Adj.)",
+  "meaning": "Done without conscious control",
+  "example": "It was an involuntary reaction.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 961,
+  "word": "Invulnerable",
+  "hindiMeaning": "अभेद्य (Adj.)",
+  "meaning": "That cannot be harmed",
+  "example": "No one is invulnerable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 962,
+  "word": "Irascible",
+  "hindiMeaning": "चिड़चिड़ा (Adj.)",
+  "meaning": "Easily angered",
+  "example": "He is irascible.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 963,
+  "word": "Irrefutable",
+  "hindiMeaning": "अखंडनीय (Adj.)",
+  "meaning": "Cannot be contradicted",
+  "example": "The proof is irrefutable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 964,
+  "word": "Irreverent",
+  "hindiMeaning": "अपमान जनक (Adj.)",
+  "meaning": "Showing lack of respect",
+  "example": "His remark was irreverent.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 965,
+  "word": "Irrevocable",
+  "hindiMeaning": "अटल (Adj.)",
+  "meaning": "That cannot be changed",
+  "example": "The decision is irrevocable.",
+  "sscCount": 7,
+  "otherExamCount": 0
+},
+{
+  "id": 966,
+  "word": "Irrigate",
+  "hindiMeaning": "सींचना (V.)",
+  "meaning": "To supply land with water",
+  "example": "Farmers irrigate fields.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 967,
+  "word": "Island",
+  "hindiMeaning": "द्वीप (N.)",
+  "meaning": "Land surrounded by water",
+  "example": "Sri Lanka is an island.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 968,
+  "word": "Islet",
+  "hindiMeaning": "छोटा द्वीप (N.)",
+  "meaning": "A small island",
+  "example": "They reached a tiny islet.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 969,
+  "word": "Isolated",
+  "hindiMeaning": "अलग किया हुआ (Adj.)",
+  "meaning": "Far away from others",
+  "example": "He lives in an isolated area.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 970,
+  "word": "Isthmus",
+  "hindiMeaning": "स्थलडमरूमध्य (N.)",
+  "meaning": "Narrow land connecting two large lands",
+  "example": "Panama is an isthmus.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 971,
+  "word": "Itinerant",
+  "hindiMeaning": "भ्रमणकारी (Adj.)",
+  "meaning": "Travelling from place to place for work",
+  "example": "He is an itinerant worker.",
+  "sscCount": 3,
+  "otherExamCount": 1
+},
+{
+  "id": 972,
+  "word": "Itinerary",
+  "hindiMeaning": "यात्रा कार्यक्रम (N.)",
+  "meaning": "A plan of a journey including route and places",
+  "example": "We prepared our itinerary.",
+  "sscCount": 7,
+  "otherExamCount": 2
+},
+{
+  "id": 973,
+  "word": "Janitor",
+  "hindiMeaning": "चौकीदार (N.)",
+  "meaning": "One who takes care of a building",
+  "example": "The janitor cleaned the hall.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 974,
+  "word": "Jargon",
+  "hindiMeaning": "विशिष्ट शब्दावली (N.)",
+  "meaning": "Special words used by a group",
+  "example": "Medical jargon is difficult.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 975,
+  "word": "Jaunt",
+  "hindiMeaning": "मनोरंजन की यात्रा (N.)",
+  "meaning": "A short journey for pleasure",
+  "example": "We went on a jaunt.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 976,
+  "word": "Jauntily",
+  "hindiMeaning": "मनोरंजन से (Adv.)",
+  "meaning": "In a cheerful manner",
+  "example": "He walked jauntily.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 977,
+  "word": "Jaywalk",
+  "hindiMeaning": "रास्ता पार करने में लापरवाह होना (V.)",
+  "meaning": "To cross streets carelessly",
+  "example": "Do not jaywalk.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 978,
+  "word": "Jingoism",
+  "hindiMeaning": "कट्टर राष्ट्रवाद (N.)",
+  "meaning": "Extreme patriotism",
+  "example": "Jingoism harms peace.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 979,
+  "word": "Jinx",
+  "hindiMeaning": "मनहूस (N.)",
+  "meaning": "A person or thing that brings bad luck",
+  "example": "He thinks it's a jinx.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 980,
+  "word": "Jockey",
+  "hindiMeaning": "घुड़सवारी का घुड़सवार (N.)",
+  "meaning": "A person who rides horses in races",
+  "example": "He is a famous jockey.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 981,
+  "word": "Journalism",
+  "hindiMeaning": "पत्रकारिता (N.)",
+  "meaning": "Work of collecting and writing news",
+  "example": "She studies journalism.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 982,
+  "word": "Journalist",
+  "hindiMeaning": "पत्रकार (N.)",
+  "meaning": "A person who writes for newspapers",
+  "example": "He is a journalist.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 983,
+  "word": "Journey",
+  "hindiMeaning": "यात्रा (N.)",
+  "meaning": "Travelling from one place to another",
+  "example": "It was a long journey.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 984,
+  "word": "Jovial",
+  "hindiMeaning": "उल्लासपूर्ण (Adj.)",
+  "meaning": "Merry and good-humoured",
+  "example": "He is jovial by nature.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 985,
+  "word": "Joy",
+  "hindiMeaning": "आनंद (N.)",
+  "meaning": "Great happiness",
+  "example": "She felt joy.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 986,
+  "word": "Judge",
+  "hindiMeaning": "न्यायाधीश (N.)",
+  "meaning": "A person who gives legal decisions",
+  "example": "The judge gave verdict.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 987,
+  "word": "Judiciary",
+  "hindiMeaning": "न्यायतंत्र (N.)",
+  "meaning": "Part of government dealing with law",
+  "example": "Judiciary is independent.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 988,
+  "word": "Junta",
+  "hindiMeaning": "सत्ताधारी सेना (N.)",
+  "meaning": "Military group ruling by force",
+  "example": "The junta took power.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 989,
+  "word": "Jurisprudence",
+  "hindiMeaning": "न्यायशास्त्र (N.)",
+  "meaning": "Science of law",
+  "example": "He studies jurisprudence.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 990,
+  "word": "Jury",
+  "hindiMeaning": "न्यायपीठ (N.)",
+  "meaning": "Group deciding court cases",
+  "example": "The jury agreed.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 991,
+  "word": "Juvenile",
+  "hindiMeaning": "किशोर (Adj.)",
+  "meaning": "Related to young people",
+  "example": "Juvenile crime is rising.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 992,
+  "word": "Juxtapose",
+  "hindiMeaning": "पास-पास रखना (V.)",
+  "meaning": "Place things side by side",
+  "example": "He juxtaposed two ideas.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 993,
+  "word": "Kennel",
+  "hindiMeaning": "कुत्ता-घर (N.)",
+  "meaning": "Small shelter for dogs",
+  "example": "The dog slept in kennel.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 994,
+  "word": "Kernel",
+  "hindiMeaning": "गिरी/दाना (N.)",
+  "meaning": "Inner soft part of seed",
+  "example": "Remove the kernel.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 995,
+  "word": "Kin",
+  "hindiMeaning": "रिश्तेदार (N.)",
+  "meaning": "Relatives or family members",
+  "example": "All his kin came.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 996,
+  "word": "Kiosk",
+  "hindiMeaning": "छोटा दुकान, गुमटी (N.)",
+  "meaning": "Small open shop",
+  "example": "He runs a kiosk.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 997,
+  "word": "Kleptomania",
+  "hindiMeaning": "चोरी करने की बीमारी (N.)",
+  "meaning": "A strong desire to steal",
+  "example": "He suffers from kleptomania.",
+  "sscCount": 7,
+  "otherExamCount": 5
+},
+{
+  "id": 998,
+  "word": "Kleptomaniac",
+  "hindiMeaning": "चोरी की बीमारी वाला (N.)",
+  "meaning": "A person with impulse to steal",
+  "example": "The kleptomaniac was arrested.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 999,
+  "word": "Knack",
+  "hindiMeaning": "कौशल (N.)",
+  "meaning": "A natural skill",
+  "example": "He has a knack for singing.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 1000,
+  "word": "Knell",
+  "hindiMeaning": "शोक सूचक घंटी की ध्वनि (N.)",
+  "meaning": "Sound of funeral bell",
+  "example": "The knell was heard.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1001,
+  "word": "Laceration",
+  "hindiMeaning": "घाव (N.)",
+  "meaning": "A deep cut in flesh",
+  "example": "He had a laceration.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1002,
+  "word": "Ladder",
+  "hindiMeaning": "सीढ़ी (N.)",
+  "meaning": "Tool for climbing",
+  "example": "He climbed the ladder.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1003,
+  "word": "Lair",
+  "hindiMeaning": "मांद (N.)",
+  "meaning": "Place where wild animals live",
+  "example": "The tiger returned to its lair.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1004,
+  "word": "Lamb",
+  "hindiMeaning": "मेमना (N.)",
+  "meaning": "Young one of a sheep",
+  "example": "The lamb is small.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1005,
+  "word": "Lapidary",
+  "hindiMeaning": "रत्न तराशने वाला (N.)",
+  "meaning": "Art of cutting gems",
+  "example": "He works as a lapidary.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1006,
+  "word": "Larder",
+  "hindiMeaning": "खाद्य भंडार रखने की जगह (N.)",
+  "meaning": "Store room for food",
+  "example": "Food is kept in larder.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1007,
+  "word": "Latter",
+  "hindiMeaning": "बाद वाला (Adj.)",
+  "meaning": "Second of two",
+  "example": "I prefer the latter.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1008,
+  "word": "Laudable",
+  "hindiMeaning": "प्रशंसनीय (Adj.)",
+  "meaning": "Worthy of praise",
+  "example": "His work is laudable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1009,
+  "word": "Laundry",
+  "hindiMeaning": "धोबीघर (N.)",
+  "meaning": "Place for washing clothes",
+  "example": "Clothes are in laundry.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1010,
+  "word": "Laurel",
+  "hindiMeaning": "प्रतिष्ठा (N.)",
+  "meaning": "Honour or achievement",
+  "example": "He won laurels.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1011,
+  "word": "Laxative",
+  "hindiMeaning": "पेट साफ करने वाली (Adj.)",
+  "meaning": "Medicine to soften bowels",
+  "example": "Doctor gave laxative.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1012,
+  "word": "Lazy",
+  "hindiMeaning": "आलसी (Adj.)",
+  "meaning": "Unwilling to work",
+  "example": "He is lazy.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1013,
+  "word": "Lease",
+  "hindiMeaning": "पट्टा (N.)",
+  "meaning": "Legal agreement for rent",
+  "example": "He signed a lease.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1014,
+  "word": "Leer",
+  "hindiMeaning": "बुरी नजर से देखना (N.)",
+  "meaning": "A sly lustful look",
+  "example": "He gave a leer.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1015,
+  "word": "Legacy",
+  "hindiMeaning": "विरासत (N.)",
+  "meaning": "Property left by will",
+  "example": "He got legacy.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1016,
+  "word": "Legal",
+  "hindiMeaning": "कानूनी (Adj.)",
+  "meaning": "Lawful",
+  "example": "It is legal.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1017,
+  "word": "Leisure",
+  "hindiMeaning": "खाली समय (N.)",
+  "meaning": "Free time",
+  "example": "I read in leisure.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1018,
+  "word": "Leonine",
+  "hindiMeaning": "सिंह जैसा (Adj.)",
+  "meaning": "Like a lion",
+  "example": "He has leonine courage.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1019,
+  "word": "Lexicographer",
+  "hindiMeaning": "शब्दकोश लेखक (N.)",
+  "meaning": "Writer of dictionaries",
+  "example": "He is a lexicographer.",
+  "sscCount": 9,
+  "otherExamCount": 4
+},
+{
+  "id": 1020,
+  "word": "Lexicography",
+  "hindiMeaning": "शब्दकोश निर्माण (N.)",
+  "meaning": "Making dictionaries",
+  "example": "She studies lexicography.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1021,
+  "word": "Lexicon",
+  "hindiMeaning": "शब्दकोश (N.)",
+  "meaning": "List of words",
+  "example": "Check the lexicon.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1022,
+  "word": "Liable",
+  "hindiMeaning": "उत्तरदायी (Adj.)",
+  "meaning": "Responsible by law",
+  "example": "He is liable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1023,
+  "word": "Libertarian",
+  "hindiMeaning": "मुक्तिवादी (N.)",
+  "meaning": "Believer in freedom",
+  "example": "He is a libertarian.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1024,
+  "word": "Ligaments",
+  "hindiMeaning": "जोड़ (N.)",
+  "meaning": "Tissues connecting bones",
+  "example": "Ligaments are strong.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1025,
+  "word": "Limelight",
+  "hindiMeaning": "प्रकाश में, चर्चा में (N.)",
+  "meaning": "Centre of attention",
+  "example": "He is in limelight.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1026,
+  "word": "Limivorous",
+  "hindiMeaning": "मिट्टी खाने वाला (Adj.)",
+  "meaning": "Eating mud",
+  "example": "Some animals are limivorous.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1027,
+  "word": "Linger",
+  "hindiMeaning": "विलंबित करना (V.)",
+  "meaning": "To stay longer than necessary",
+  "example": "Do not linger here.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+"id": 1028,
+"word": "Linguist",
+"hindiMeaning": "बहुभाषाविद (N.)",
+"meaning": "A person who knows several foreign languages well // a person who studies languages",
+"example": "He is a famous linguist.",
+"sscCount": 1,
+"otherExamCount": 1
+},
+{
+"id": 1029,
+"word": "Literate",
+"hindiMeaning": "साक्षर (Adj.)",
+"meaning": "One who can read and write",
+"example": "She is literate.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1030,
+"word": "Livestock",
+"hindiMeaning": "पशुधन (N.)",
+"meaning": "Animals especially on a farm, regarded as an asset",
+"example": "He owns large livestock.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1031,
+"word": "Loquacious",
+"hindiMeaning": "बातूनी (Adj.)",
+"meaning": "One who talks a lot",
+"example": "He is very loquacious.",
+"sscCount": 3,
+"otherExamCount": 1
+},
+{
+"id": 1032,
+"word": "Lucid",
+"hindiMeaning": "सुस्पष्ट (Adj.)",
+"meaning": "Easy to understand",
+"example": "His explanation was lucid.",
+"sscCount": 1,
+"otherExamCount": 1
+},
+{
+"id": 1033,
+"word": "Lucrative",
+"hindiMeaning": "लाभकारी (Adj.)",
+"meaning": "Profitable, yielding financial gain",
+"example": "He has a lucrative job.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1034,
+"word": "Lullaby",
+"hindiMeaning": "लोरी (N.)",
+"meaning": "A soft gentle song sung to make a child go to sleep",
+"example": "She sang a lullaby.",
+"sscCount": 2,
+"otherExamCount": 0
+},
+{
+"id": 1035,
+"word": "Lumen",
+"hindiMeaning": "प्रकाश की इकाई (N.)",
+"meaning": "A unit to measure light",
+"example": "Light is measured in lumen.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1036,
+"word": "Luminary",
+"hindiMeaning": "महान विद्वान (N.)",
+"meaning": "A person as a source of intellectual light or moral inspiration",
+"example": "He is a luminary in science.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1037,
+"word": "Lump Sum",
+"hindiMeaning": "एकमुश्त (N.)",
+"meaning": "An amount of money that is paid at one time",
+"example": "He received a lump sum.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1038,
+"word": "Lunar",
+"hindiMeaning": "चन्द्र संबंधी (Adj.)",
+"meaning": "Related to the moon",
+"example": "A lunar eclipse occurred.",
+"sscCount": 3,
+"otherExamCount": 0
+},
+{
+"id": 1039,
+"word": "Lunatic",
+"hindiMeaning": "पागल (Adj.)",
+"meaning": "One who is mentally not sound",
+"example": "He behaved like a lunatic.",
+"sscCount": 1,
+"otherExamCount": 1
+},
+{
+"id": 1040,
+"word": "Lurch",
+"hindiMeaning": "झटका (N.)",
+"meaning": "A sudden unsteady movement; a stagger",
+"example": "The car gave a lurch.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1041,
+"word": "Magnanimous",
+"hindiMeaning": "उदार चरित्र (Adj.)",
+"meaning": "Kind, generous, and forgiving",
+"example": "He is magnanimous in nature.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1042,
+"word": "Magnificent",
+"hindiMeaning": "भव्य (Adj.)",
+"meaning": "Extremely beautiful, elaborate or impressive",
+"example": "It was a magnificent building.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1043,
+"word": "Maiden",
+"hindiMeaning": "अविवाहित (N.)",
+"meaning": "A girl or young woman, especially an unmarried one",
+"example": "She is a young maiden.",
+"sscCount": 1,
+"otherExamCount": 1
+},
+{
+"id": 1044,
+"word": "Maiden-Speech",
+"hindiMeaning": "प्रथम भाषण (N.)",
+"meaning": "The first public speech delivered by a person",
+"example": "He gave his maiden speech.",
+"sscCount": 2,
+"otherExamCount": 0
+},
+{
+"id": 1045,
+"word": "Maintain",
+"hindiMeaning": "बनाए रखना (V.)",
+"meaning": "Cause to continue; keep up; preserve",
+"example": "Maintain discipline.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1046,
+"word": "Malapropism",
+"hindiMeaning": "शब्द का गलत प्रयोग (N.)",
+"meaning": "Usage of an incorrect word in place of a similar one",
+"example": "His speech had malapropism.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1047,
+"word": "Malcontent",
+"hindiMeaning": "असंतुष्ट (N.)",
+"meaning": "A person who is never happy with what he has",
+"example": "He is a malcontent.",
+"sscCount": 1,
+"otherExamCount": 2
+},
+{
+"id": 1048,
+"word": "Malevolence",
+"hindiMeaning": "द्वेष, दुर्भावना (N.)",
+"meaning": "Having or showing a wish to do evil",
+"example": "His malevolence was clear.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1049,
+"word": "Malevolent",
+"hindiMeaning": "दुर्भावनापूर्ण (Adj.)",
+"meaning": "Causing or wanting to cause harm",
+"example": "He gave a malevolent look.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1050,
+"word": "Malfunction",
+"hindiMeaning": "खराबी (N.)",
+"meaning": "Fail to function normally",
+"example": "The machine had a malfunction.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1051,
+"word": "Malleable",
+"hindiMeaning": "लचीला (Adj.)",
+"meaning": "Easy to shape in any desired form",
+"example": "Gold is malleable.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1052,
+"word": "Malnutrition",
+"hindiMeaning": "कुपोषण (N.)",
+"meaning": "Insufficient feeding or nourishing",
+"example": "Children suffer from malnutrition.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1053,
+"word": "Mammals",
+"hindiMeaning": "स्तनधारी (N.)",
+"meaning": "Any female animal which feeds its young on milk",
+"example": "Humans are mammals.",
+"sscCount": 2,
+"otherExamCount": 0
+},
+{
+"id": 1054,
+"word": "Manifestly",
+"hindiMeaning": "साफ तौर पर (Adv.)",
+"meaning": "In a way that is clear or obvious",
+"example": "He was manifestly wrong.",
+"sscCount": 0,
+"otherExamCount": 0
+},
+{
+"id": 1055,
+"word": "Manifesto",
+"hindiMeaning": "घोषणापत्र (N.)",
+"meaning": "A written statement by a political party",
+"example": "The party released its manifesto.",
+"sscCount": 0,
+"otherExamCount": 0
 }
-
 ]

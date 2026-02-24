@@ -557,56 +557,83 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms }) {
 
             <div style={grid}>
 
-              {selectedSubject && selectedTopic && subjectContent[selectedSubject] ? (
-
-                // Show subject-specific modules only when both subject and topic are selected
-
-                subjectContent[selectedSubject].modules.map((module, index) => (
-
-                  <div
-
-                    key={index}
-
-                    style={{
-
-                      ...card,
-
-                      borderColor: module.status === "available" ? module.color : "#e0e0e0",
-
-                      opacity: module.status === "available" ? 1 : 0.6,
-
-                      cursor: module.status === "available" ? "pointer" : "not-allowed"
-
-                    }}
-
-                    onClick={() => module.status === "available" && handleModuleClick(module)}
-
-                  >
-
-                    <h3>{module.title}</h3>
-
-                    <p>{module.description}</p>
-
-                    <span style={{
-
-                      ...activeTag,
-
-                      backgroundColor: module.status === "available" ? module.color : "#6c757d"
-
+              {selectedSubject ? (
+                // Show subject-specific modules or topic selection when subject is selected
+                selectedTopic ? (
+                  // Show modules when both subject and topic are selected
+                  subjectContent[selectedSubject].modules.map((module, index) => (
+                    <div
+                      key={index}
+                      style={{
+                        ...card,
+                        borderColor: module.status === "available" ? module.color : "#e0e0e0",
+                        opacity: module.status === "available" ? 1 : 0.6,
+                        cursor: module.status === "available" ? "pointer" : "not-allowed"
+                      }}
+                      onClick={() => module.status === "available" && handleModuleClick(module)}
+                    >
+                      <h3>{module.title}</h3>
+                      <p>{module.description}</p>
+                      <span style={{
+                        ...activeTag,
+                        backgroundColor: module.status === "available" ? module.color : "#6c757d"
+                      }}>
+                        {module.status === "available" ? "Available" : "Coming Soon"}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  // Show topic selection when only subject is selected
+                  <div style={{
+                    backgroundColor: "#f0f8ff",
+                    border: "1px solid #2196f3",
+                    borderRadius: "8px",
+                    padding: "24px",
+                    marginBottom: "24px",
+                    textAlign: "center"
+                  }}>
+                    <h3 style={{ fontSize: "20px", color: "#1976d2", marginBottom: "16px" }}>
+                      Choose a topic for {selectedSubject}
+                    </h3>
+                    
+                    {/* Topic Selection Grid */}
+                    <div style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                      gap: "16px",
+                      marginTop: "16px"
                     }}>
-
-                      {module.status === "available" ? "Available" : "Coming Soon"}
-
-                    </span>
-
+                      {subjectContent[selectedSubject].modules.map((module, index) => (
+                        <div
+                          key={index}
+                          style={{
+                            ...card,
+                            borderColor: module.title.includes('PYQ') ? "#ff6b6b" : 
+                                     module.status === "available" ? module.color : "#e0e0e0",
+                            opacity: module.title.includes('PYQ') ? 1 : 
+                                     module.status === "available" ? 1 : 0.6,
+                            cursor: module.title.includes('PYQ') ? "pointer" : 
+                                     module.status === "available" ? "pointer" : "not-allowed"
+                          }}
+                          onClick={() => module.title.includes('PYQ') ? handleTopicSelect('Number System') : 
+                                   (module.status === "available" && handleModuleClick(module))}
+                        >
+                          <h3>{module.title}</h3>
+                          <p>{module.description}</p>
+                          <span style={{
+                            ...activeTag,
+                            backgroundColor: module.title.includes('PYQ') ? "#ff6b6b" : 
+                                             module.status === "available" ? module.color : "#6c757d"
+                          }}>
+                            {module.status === "available" ? "Available" : "Coming Soon"}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-
-                ))
-
+                )
               ) : (
-
                 // Show default vocabulary modules when no subject/topic is selected
-
                 <>
 
                   {/* ACTIVE MODULE */}

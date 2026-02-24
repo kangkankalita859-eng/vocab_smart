@@ -5,10 +5,13 @@ export async function fetchPYQ(subject = null, topic = null, start = 0, limit = 
     
     if (subject && topic) {
       // Look in subject/topic specific folder
-      pyqPath = `/data/${subject.toLowerCase()}/${topic.toLowerCase().replace(" ", "-")}/pyq.json`;
+      pyqPath = `/data/${subject.toLowerCase()}/${topic.toLowerCase().replace(" ", "_")}/pyq.json`;
+    } else if (subject) {
+      // Default to maths number_system data when only subject is provided
+      pyqPath = `/data/maths/number_system/pyq.json`;
     } else {
-      // Default to maths data for now
-      pyqPath = '/data/maths/number-system/pyq.json';
+      // Default fallback
+      pyqPath = '/data/maths/number_system/pyq.json';
     }
     
     const response = await fetch(pyqPath);
