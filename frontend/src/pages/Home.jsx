@@ -250,7 +250,7 @@ const subjectContent = {
 
 
 
-export default function Home({ onStart, onIdioms, onSynonymsAntonyms }) {
+export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones }) {
 
   const [selectedSubject, setSelectedSubject] = useState("");
 
@@ -701,7 +701,27 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms }) {
 
                   {/* COMING SOON MODULES */}
 
-                  <Module title="Homonyms" />
+
+                  <div
+
+                    style={{ ...card, borderColor: "#3b82f6" }}
+
+                    onClick={() =>
+
+                      onHomonymsHomophones({ start: 0, limit: 250 })
+
+                    }
+
+                  >
+
+                    <h3>🧠 Homonyms &amp; Homophones</h3>
+
+                    <p>Learn confusing words with visuals for faster memory</p>
+
+                    <span style={{ ...activeTag, backgroundColor: "#3b82f6" }}>Available</span>
+
+                  </div>
+
 
                   <Module title="Spelling" />
 

@@ -4,6 +4,8 @@ import Session from "./pages/Session";
 import ReadVocab from "./pages/ReadVocab";
 import ReadIdioms from "./pages/ReadIdioms";
 import ReadSynonymsAntonyms from "./pages/ReadSynonymsAntonyms";
+import ReadHomonymsHomophones from "./pages/ReadHomonymsHomophones";
+import HomonymsHomophonesSession from "./pages/HomonymsHomophonesSession";
 import SynonymsAntonymsTestIntro from "./pages/SynonymsAntonymsTestIntro";
 import SynonymsAntonymsTest from "./pages/SynonymsAntonymsTest";
 import IdiomSession from "./pages/IdiomSession";
@@ -40,6 +42,10 @@ export default function App() {
         onSynonymsAntonyms={(c) => {
           setConfig(c);
           setStage("read-synonyms-antonyms");
+        }}
+        onHomonymsHomophones={(c) => {
+          setConfig(c);
+          setStage("read-homonyms-homophones");
         }}
       />
     );
@@ -104,6 +110,27 @@ export default function App() {
           console.log('App: onGoCards called, setting stage to synonyms-antonyms-test-intro');
           setStage("synonyms-antonyms-test-intro");
         }}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "read-homonyms-homophones")
+    return (
+      <ReadHomonymsHomophones
+        config={config}
+        onGoCards={() => setStage("homonyms-homophones-session")}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "homonyms-homophones-session")
+    return (
+      <HomonymsHomophonesSession
+        config={config}
+        onComplete={() => setStage("complete")}
+        onGoRead={() => setStage("read-homonyms-homophones")}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
       />
