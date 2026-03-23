@@ -289,7 +289,7 @@ const mainContainer = {
 
 const content = {
   flex: 1,
-  padding: "20px",
+  padding: isMobile ? "10px" : "20px",
   maxWidth: "1200px",
   margin: "0 auto",
   width: "100%",
@@ -377,12 +377,12 @@ const resetBtn = {
 };
 
 const mapContainer = {
-  marginTop: "90px",
-  padding: "20px"
+  marginTop: isMobile ? "70px" : "90px",
+  padding: isMobile ? "10px" : "20px"
 };
 
 const title = {
-  fontSize: "32px",
+  fontSize: isMobile ? "24px" : "32px",
   fontWeight: "700",
   color: "#2c3e50",
   textAlign: "center",
@@ -390,16 +390,16 @@ const title = {
 };
 
 const subtitle = {
-  fontSize: "16px",
+  fontSize: isMobile ? "14px" : "16px",
   color: "#6c757d",
   textAlign: "center",
-  marginBottom: "30px"
+  marginBottom: isMobile ? "20px" : "30px"
 };
 
 const mapWrapper = {
   display: "flex",
-  flexDirection: "row",
-  gap: "30px",
+  flexDirection: isMobile ? "column" : "row",
+  gap: isMobile ? "20px" : "30px",
   alignItems: "flex-start",
   justifyContent: "center"
 };
@@ -407,8 +407,9 @@ const mapWrapper = {
 const mapImageContainer = {
   position: "relative",
   flex: 1,
-  maxWidth: "600px",
-  minWidth: "400px"
+  maxWidth: isMobile ? "100%" : "600px",
+  minWidth: isMobile ? "auto" : "400px",
+  width: isMobile ? "100%" : "auto"
 };
 
 const mapImage = {
@@ -429,13 +430,13 @@ const overlaySvg = {
 };
 
 const infoPanel = {
-  flex: "0 0 350px",
+  flex: isMobile ? "1" : "0 0 300px",
   backgroundColor: "#ffffff",
   borderRadius: "12px",
-  padding: "25px",
+  padding: isMobile ? "15px" : "20px",
   boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
   border: "1px solid #e9ecef",
-  minHeight: "300px"
+  minWidth: isMobile ? "auto" : "250px"
 };
 
 const stateInfo = {
@@ -443,10 +444,10 @@ const stateInfo = {
 };
 
 const stateName = {
-  fontSize: "24px",
+  fontSize: isMobile ? "20px" : "24px",
   fontWeight: "700",
   color: "#007bff",
-  marginBottom: "25px",
+  marginBottom: isMobile ? "15px" : "25px",
   borderBottom: "2px solid #007bff",
   paddingBottom: "10px"
 };
@@ -454,14 +455,14 @@ const stateName = {
 const seatInfo = {
   display: "flex",
   flexDirection: "column",
-  gap: "20px"
+  gap: isMobile ? "15px" : "20px"
 };
 
 const seatItem = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "15px",
+  padding: isMobile ? "12px" : "15px",
   backgroundColor: "#f8f9fa",
   borderRadius: "8px",
   border: "1px solid #e9ecef"
@@ -515,16 +516,16 @@ const tooltip = {
 };
 
 const legend = {
-  marginTop: "30px",
+  marginTop: isMobile ? "20px" : "30px",
   backgroundColor: "#ffffff",
   borderRadius: "12px",
-  padding: "20px",
+  padding: isMobile ? "15px" : "20px",
   boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
   border: "1px solid #e9ecef"
 };
 
 const legendTitle = {
-  fontSize: "18px",
+  fontSize: isMobile ? "16px" : "18px",
   fontWeight: "600",
   color: "#2c3e50",
   marginBottom: "15px",
@@ -534,8 +535,8 @@ const legendTitle = {
 const legendItems = {
   display: "flex",
   justifyContent: "center",
-  gap: "30px",
-  flexWrap: "wrap"
+  gap: isMobile ? "20px" : "30px",
+  flexWrap: isMobile ? "wrap" : "nowrap"
 };
 
 const legendItem = {
