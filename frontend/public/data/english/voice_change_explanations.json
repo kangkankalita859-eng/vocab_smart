@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "explanation": "The sentence 'The office sanctioned me the loan' is in active voice and in simple past tense."
+  },
+  {
+    "id": 2,
+    "explanation": "Structure: Subject + had + V3 + Object → Active Past Perfect Tense."
+  },
+  {
+    "id": 3,
+    "explanation": "Structure: Subject + had + V3 + Object → Active Past Perfect Tense."
+  },
+  {
+    "id": 4,
+    "explanation": "Structure: Subject + V2 + Object → Active, Simple Past Tense."
+  },
+  {
+    "id": 5,
+    "explanation": "Structure: Subject + is/am/are + V-ing + Object → Active, Present Continuous Tense."
+  },
+  {
+    "id": 6,
+    "explanation": "Structure: Subject + is/am/are + V-ing + Object → Active, Present Continuous Tense."
+  },
+  {
+    "id": 7,
+    "explanation": "Structure: Subject + V2 + Object → Active, Simple Past Tense."
+  },
+  {
+    "id": 8,
+    "explanation": "Structure: Subject + V2 + Object + Preposition + Object → Active, Simple Past Tense."
+  },
+  {
+    "id": 9,
+    "explanation": "Structure: Subject + V2 + a few + Object → Active, Simple Past Tense."
+  },
+  {
+    "id": 10,
+    "explanation": "Structure: Subject + V1 + Object → Active, Simple Present Tense."
+  },
+  {
+    "id": 11,
+    "explanation": "Structure: Subject + V2 + Object → Active, Simple Past Tense."
+  },
+  {
+    "id": 12,
+    "explanation": "Structure: Subject + had + V3 + Object → Active, Past Perfect Tense."
+  },
+  {
+    "id": 13,
+    "explanation": "Structure using modals: Subject + Modal + V1 + Object (Active Voice) → Subject + Modal + be + V3 + by + Agent (Passive Voice)."
+  },
+  {
+    "id": 14,
+    "explanation": "Structure in Past Indefinite: Subject + was/were + V3 + by + Agent (Passive Voice) ↔ Subject + V2 + Object (Active Voice)."
+  },
+  {
+    "id": 15,
+    "explanation": "Structure in Past Indefinite: Subject + was/were + V3 + by + Agent (Passive Voice) ↔ Subject + V2 + Object (Active Voice)."
+  },
+  {
+    "id": 16,
+    "explanation": "Structure of Interrogative Sentence (Past Tense): Question word + was + V3 + by + Agent (Passive Voice) ↔ Question word + Subject + V2 (Active Voice)."
+  },
+  {
+    "id": 17,
+    "explanation": "Past Progressive Passive structure: Subject + was/were + being + V3 + Object. Active form: Subject + was/were + V-ing + Object."
+  },
+  {
+    "id": 18,
+    "explanation": "Example: 'Gun-toting guards were guarding the main gate.' Structure in Past Continuous: Subject + was/were + being + V3 + by + Agent (Passive) ↔ Subject + were + V-ing + Object (Active)."
+  },
+  {
+    "id": 19,
+    "explanation": "Example: 'The inadequate rainfall adversely affected the crop.' Past Simple Passive structure: Subject + was + Adverb + V3 + by + Object ↔ Subject + Adverb + V2 + Object (Active)."
+  },
+  {
+    "id": 20,
+    "explanation": "Example: 'Children are painting the wall of the park.' Present Continuous Passive structure: Subject + is/am/are + being + V3 + by + Object ↔ Subject + is/am/are + V-ing + Object (Active)."
+  },
+  {
+    "id": 21,
+    "explanation": "Example: 'The police was removing the injured to the hospital.' Past Continuous Passive structure: Subject + were/was + being + V3 + by + Object ↔ Subject + was + V-ing + Object (Active)."
+  },
+  {
+    "id": 22,
+    "explanation": "Example: 'The custom officers were thoroughly checking one of the passengers.' Past Progressive Passive structure: Subject + was/were + being + Adverb + V3 + by + Object."
+  },
+  {
+    "id": 23,
+    "explanation": "Example: 'The staff was arranging the chairs in the examination hall.' Past Continuous Passive structure: Subject + were + being + V3 + by + Object ↔ Subject + was + V-ing + Object."
+  },
+  {
+    "id": 24,
+    "explanation": "Example: 'Everyone was laughing at the hunchback.' Past Continuous Passive structure: Subject + was + being + V3 + by + Object ↔ Subject + was + V-ing + Object."
+  },
+  {
+    "id": 25,
+    "explanation": "Example: 'Ring the bell every forty minutes.' Imperative Passive structure: Let + Object + be + Past Participle."
+  },
+  {
+    "id": 26,
+    "explanation": "Example: 'The enemy will either take you prisoner or shoot you.' Future Passive structure: Subject + will + be + V3 + by + Object ↔ Subject + will + V1 + Object."
+  },
+  {
+    "id": 27,
+    "explanation": "Example: 'This scheme will greatly benefit us all.' Future Simple Passive structure: Subject + will + be + Adverb + V3 + by + Object ↔ Subject + will/shall + Adverb + V1 + Object."
+  }
+]

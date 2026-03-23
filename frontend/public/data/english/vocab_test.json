@@ -1,0 +1,1442 @@
+[
+  {
+    "id": 1,
+    "set": 1,
+    "question": "The wide variety of shared and different personal and group characteristics among human beings",
+    "options": [
+      "Community",
+      "Intensity",
+      "Diversity",
+      "Viscosity"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 2,
+    "set": 1,
+    "question": "To criticise someone severely",
+    "options": [
+      "Scoff",
+      "Chastise",
+      "Rate",
+      "Remonstrate"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 3,
+    "set": 1,
+    "question": "To have a strong emotional effect on",
+    "options": [
+      "To Yield",
+      "To Overwhelm",
+      "To Forfeit",
+      "To Smother"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 4,
+    "set": 1,
+    "question": "To make a low continuous vibratory sound expressing contentment (of a cat)",
+    "options": [
+      "To Buzz",
+      "To Roar",
+      "To Purr",
+      "To Meow"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 5,
+    "set": 1,
+    "question": "To restrain or compel a person to do something by force",
+    "options": [
+      "Coerce",
+      "Casualty",
+      "Consensus",
+      "Convoy"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 6,
+    "set": 1,
+    "question": "To tell the nature of a disease by its symptoms",
+    "options": [
+      "Diagnosis",
+      "Design",
+      "Decisive",
+      "Dosage"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 7,
+    "set": 1,
+    "question": "Very attractive and easy to feel love for",
+    "options": [
+      "Flamboyant",
+      "Mysterious",
+      "Laudable",
+      "Adorable"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 8,
+    "set": 1,
+    "question": "Working or operating quickly and effectively in an organised way",
+    "options": [
+      "Excellent",
+      "Effusive",
+      "Efficient",
+      "Extensive"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 9,
+    "set": 1,
+    "question": "Writing which cannot be read",
+    "options": [
+      "Illegible",
+      "Irrelevant",
+      "Irresponsible",
+      "Illusive"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 10,
+    "set": 1,
+    "question": "A legal document authorizing the police to make an arrest or search premises",
+    "options": [
+      "Warrant",
+      "Licence",
+      "Permit",
+      "Decree"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 11,
+    "set": 2,
+    "question": "Someone who has too much admiration for himself or herself",
+    "options": [
+      "Narcissist",
+      "Pantheist",
+      "Misogamist",
+      "Misanthropist"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 12,
+    "set": 2,
+    "question": "Something belonging to or surviving from an earlier period",
+    "options": [
+      "Vestige",
+      "Dinosaur",
+      "Relic",
+      "Ruin"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 13,
+    "set": 2,
+    "question": "Something that is modern or existing in the prevailing times",
+    "options": [
+      "Contemporary",
+      "Contradictory",
+      "Contemptuous",
+      "Ancient"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 14,
+    "set": 2,
+    "question": "Something which cannot be easily conquered",
+    "options": [
+      "Stable",
+      "Frightening",
+      "Invincible",
+      "Reciprocal"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 15,
+    "set": 2,
+    "question": "Study of sound and sound waves",
+    "options": [
+      "Botany",
+      "Physics",
+      "Demography",
+      "Acoustics"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 16,
+    "set": 2,
+    "question": "The arrangement of events or dates in the order of their occurrence",
+    "options": [
+      "Entomology",
+      "Theology",
+      "Psychology",
+      "Chronology"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 17,
+    "set": 2,
+    "question": "The imaginary line where the earth and sky seem to meet",
+    "options": [
+      "Nadir",
+      "Zenith",
+      "Horizon",
+      "Coast"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 18,
+    "set": 2,
+    "question": "The inability to obtain adequate sleep",
+    "options": [
+      "Insomnia",
+      "Pyromania",
+      "Andromania",
+      "Mythomania"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 19,
+    "set": 2,
+    "question": "The place that a person treats as his permanent home",
+    "options": [
+      "Oasis",
+      "Embankment",
+      "Domicile",
+      "Resort"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 20,
+    "set": 2,
+    "question": "The study of coins",
+    "options": [
+      "Barter",
+      "Minting",
+      "Currency",
+      "Numismatics"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 21,
+    "set": 3,
+    "question": "One who lends money at very high rates of interest",
+    "options": [
+      "Broker",
+      "Capitalist",
+      "Usurer",
+      "Investor"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 22,
+    "set": 3,
+    "question": "One who looks at the dark side of life",
+    "options": [
+      "Idealist",
+      "Physicist",
+      "Pessimist",
+      "Optimist"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 23,
+    "set": 3,
+    "question": "One who looks at the negative side of everything",
+    "options": [
+      "Racist",
+      "Activist",
+      "Pessimist",
+      "Optimist"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 24,
+    "set": 3,
+    "question": "One who possesses outstanding technical ability in a particular art or field",
+    "options": [
+      "Gourmand",
+      "Virtuous",
+      "Amateur",
+      "Virtuoso"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 25,
+    "set": 3,
+    "question": "One’s relatives or family",
+    "options": [
+      "Kilt",
+      "Kindle",
+      "Kine",
+      "Kin"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 26,
+    "set": 3,
+    "question": "Outer protective layer of a tree",
+    "options": [
+      "Bark",
+      "Peel",
+      "Shrub",
+      "Rind"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 27,
+    "set": 3,
+    "question": "Past events presented in order of sequence",
+    "options": [
+      "Chronology",
+      "Seismology",
+      "Anthropology",
+      "Cosmology"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 28,
+    "set": 3,
+    "question": "Performed or occurring as a result of a sudden impulse",
+    "options": [
+      "Refined",
+      "Volitional",
+      "Cultivated",
+      "Spontaneous"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 29,
+    "set": 3,
+    "question": "Requiring exceptional skill or caution",
+    "options": [
+      "Abstract",
+      "Blunt",
+      "Tricky",
+      "Sustainable"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 30,
+    "set": 3,
+    "question": "Someone who dishonestly pretends to deceive under an assumed character",
+    "options": [
+      "Explorer",
+      "Imitator",
+      "Imposter",
+      "Imbecile"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 31,
+    "set": 4,
+    "question": "Government by military class",
+    "options": [
+      "Autocracy",
+      "Stratocracy",
+      "Plutocracy",
+      "Theocracy"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 32,
+    "set": 4,
+    "question": "Huge fire for celebration",
+    "options": [
+      "Bonfire",
+      "Campaign",
+      "Agenda",
+      "Crossfire"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 33,
+    "set": 4,
+    "question": "Lasting for a very short time",
+    "options": [
+      "Chronology",
+      "Ephemeral",
+      "Eternal",
+      "Blasphemy"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 34,
+    "set": 4,
+    "question": "Minimum people needed for a meeting",
+    "options": [
+      "Quorum",
+      "Forum",
+      "Addendum",
+      "Decorum"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 35,
+    "set": 4,
+    "question": "Never changing and therefore boring",
+    "options": [
+      "Monotonous",
+      "Outdated",
+      "Impractical",
+      "Idealistic"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 36,
+    "set": 4,
+    "question": "No longer used because something new has been invented",
+    "options": [
+      "Obsolete",
+      "Classic",
+      "Ancient",
+      "Ornamental"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 37,
+    "set": 4,
+    "question": "One who always expects the worst possible outcome",
+    "options": [
+      "Optimist",
+      "Preacher",
+      "Serial Killer",
+      "Pessimist"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 38,
+    "set": 4,
+    "question": "One who eats human flesh",
+    "options": [
+      "Cannibal",
+      "Vegetarian",
+      "Carnivore",
+      "Mammal"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 39,
+    "set": 4,
+    "question": "One who is bad in spellings",
+    "options": [
+      "Calligrapher",
+      "Cacographer",
+      "Cartographer",
+      "Chauffeur"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 40,
+    "set": 4,
+    "question": "One who is violently against established beliefs and traditions",
+    "options": [
+      "Rebel",
+      "Iconoclast",
+      "Interlocutor",
+      "Martinet"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 41,
+    "set": 5,
+    "question": "An act of exchanging information",
+    "options": [
+      "Communication",
+      "Touch",
+      "Collaboration",
+      "Hold"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 42,
+    "set": 5,
+    "question": "An animal or a person that eats all types of food, especially plants and meat",
+    "options": [
+      "Omnivore",
+      "Vegetarian",
+      "Herbivore",
+      "Carnivore"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 43,
+    "set": 5,
+    "question": "Any female animal which feeds its young on milk from her own body",
+    "options": [
+      "Parasite",
+      "Mammal",
+      "Vertebrate",
+      "Fauna"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 44,
+    "set": 5,
+    "question": "Being careful that every detail of something is correct",
+    "options": [
+      "Stubborn",
+      "Fastidious",
+      "Squeamish",
+      "Impregnable"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 45,
+    "set": 5,
+    "question": "Causing or wanting to cause harm or evil to someone",
+    "options": [
+      "Rancour",
+      "Chaotic",
+      "Malevolent",
+      "Insipid"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 46,
+    "set": 5,
+    "question": "Centre of public attention",
+    "options": [
+      "Ambiguity",
+      "Obscurity",
+      "Fuzziness",
+      "Limelight"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 47,
+    "set": 5,
+    "question": "Certain to happen",
+    "options": [
+      "Indispensable",
+      "Convertible",
+      "Inevitable",
+      "Justifiable"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 48,
+    "set": 5,
+    "question": "Detailed list of goods dispatched with quantity and price to the purchaser",
+    "options": [
+      "Invoice",
+      "Ledger",
+      "Sales",
+      "Receipt"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 49,
+    "set": 5,
+    "question": "Fear of closed spaces",
+    "options": [
+      "Zoophobia",
+      "Hydrophobia",
+      "Claustrophobia",
+      "Xenophobia"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 50,
+    "set": 5,
+    "question": "Fear of water",
+    "options": [
+      "Botanophobia",
+      "Hydrophobia",
+      "Bibliophobia",
+      "Microphobia"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 51,
+    "set": 6,
+    "question": "A person who avoids sensory pleasures and physical comforts",
+    "options": [
+      "Frugal",
+      "Epicurean",
+      "Ascetic",
+      "Bohemian"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 52,
+    "set": 6,
+    "question": "A person who can use both his/her hands easily",
+    "options": [
+      "Left Handed",
+      "Ambidextrous",
+      "Writer",
+      "Right Handed"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 53,
+    "set": 6,
+    "question": "A person who does not drink alcohol",
+    "options": [
+      "Celibate",
+      "Abstain",
+      "Vegetarian",
+      "Teetotaller"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 54,
+    "set": 6,
+    "question": "A person who draws or produces maps",
+    "options": [
+      "Cartographer",
+      "Calligrapher",
+      "Chauffeur",
+      "Choreographer"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 55,
+    "set": 6,
+    "question": "A person who enjoys doing dangerous things, in a way that other people may think is stupid",
+    "options": [
+      "Gallant",
+      "Daredevil",
+      "Cavalier",
+      "Lunatic"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 56,
+    "set": 6,
+    "question": "A person who is skilled at producing beautiful handwriting",
+    "options": [
+      "Photographer",
+      "Calligrapher",
+      "Geographer",
+      "Seismographer"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 57,
+    "set": 6,
+    "question": "A person who lives a secluded or solitary life, often for religious reasons",
+    "options": [
+      "Extrovert",
+      "Monk",
+      "Hypochondriac",
+      "Chauvinist"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 58,
+    "set": 6,
+    "question": "A person who regards the whole world as his country",
+    "options": [
+      "Celibate",
+      "Contemporary",
+      "Cosmopolitan",
+      "Pacifist"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 59,
+    "set": 6,
+    "question": "A sudden violent event that brings about great loss or destruction",
+    "options": [
+      "Intrigue",
+      "Catastrophe",
+      "Blockbuster",
+      "Farce"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 60,
+    "set": 6,
+    "question": "A thing fit to eat",
+    "options": [
+      "Eligible",
+      "Edible",
+      "Digestible",
+      "Curable"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 61,
+    "set": 7,
+    "question": "A book published after author's death",
+    "options": [
+      "Posthumous Publication",
+      "Posthuman Publication",
+      "Supernatural Publication",
+      "Predecessor Publication"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 62,
+    "set": 7,
+    "question": "A building containing rare and old objects",
+    "options": [
+      "Mansion",
+      "Museum",
+      "Auditorium",
+      "Stockroom"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 63,
+    "set": 7,
+    "question": "A cage made for birds",
+    "options": [
+      "Aviary",
+      "Aquarium",
+      "Arena",
+      "Apiary"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 64,
+    "set": 7,
+    "question": "A creature which depends on others",
+    "options": [
+      "Virus",
+      "Parasite",
+      "Bacteria",
+      "Microbes"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 65,
+    "set": 7,
+    "question": "A disease prevalent over a large area",
+    "options": [
+      "Epidemic",
+      "Pandemic",
+      "Eradicate",
+      "Endemic"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 66,
+    "set": 7,
+    "question": "A disorder involving difficulty in reading",
+    "options": [
+      "Dysgraphia",
+      "Disability",
+      "Dyslexia",
+      "Delusion"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 67,
+    "set": 7,
+    "question": "A lover of books",
+    "options": [
+      "Philosopher",
+      "Librarian",
+      "Bibliophile",
+      "Teacher"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 68,
+    "set": 7,
+    "question": "A lover of mankind",
+    "options": [
+      "Philanthropist",
+      "Narcissist",
+      "Misanthrope",
+      "Lexicographer"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 69,
+    "set": 7,
+    "question": "A man whose wife is dead",
+    "options": [
+      "Ascetic",
+      "Widow",
+      "Bachelor",
+      "Widower"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 70,
+    "set": 7,
+    "question": "A person living in solitude for religious reasons",
+    "options": [
+      "Cretin",
+      "Heretic",
+      "Heir",
+      "Hermit"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 71,
+    "set": 8,
+    "question": "A person who has excessive admiration of themselves",
+    "options": [
+      "Egocentric",
+      "Narcissist",
+      "Egotist",
+      "Fanatic"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 72,
+    "set": 8,
+    "question": "A wooden frame for holding an artist’s work while it is being painted or drawn",
+    "options": [
+      "Podium",
+      "Lectern",
+      "Platform",
+      "Easel"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 73,
+    "set": 8,
+    "question": "Irrational fear of water",
+    "options": [
+      "Acrophobia",
+      "Cacophobia",
+      "Claustrophobia",
+      "Hydrophobia"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 74,
+    "set": 8,
+    "question": "Natural talent for something",
+    "options": [
+      "Feeling",
+      "Favour",
+      "Flair",
+      "Flavour"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 75,
+    "set": 8,
+    "question": "One who is skilled and eloquent in public speaking",
+    "options": [
+      "Spokesperson",
+      "Orator",
+      "Speaker",
+      "Anchor"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 76,
+    "set": 8,
+    "question": "The husks of corn or other grains separated by winnowing or threshing",
+    "options": [
+      "Fodder",
+      "Hay",
+      "Peel",
+      "Chaff"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 77,
+    "set": 8,
+    "question": "Forsaken or neglected child who has no home and spends most of his/her time on the streets",
+    "options": [
+      "Fugitive",
+      "Vulnerable",
+      "Miscreant",
+      "Waif"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 78,
+    "set": 8,
+    "question": "One who believes in fate",
+    "options": [
+      "Fatal",
+      "Fatalist",
+      "Flirt",
+      "Superstitious"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 79,
+    "set": 8,
+    "question": "One who goes from place to place, begging",
+    "options": [
+      "Misogamist",
+      "Malleable",
+      "Meticulous",
+      "Mendicant"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 80,
+    "set": 8,
+    "question": "Waver between different opinions or actions",
+    "options": [
+      "Sway",
+      "Viaduct",
+      "Thrifty",
+      "Vacillate"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 81,
+    "set": 9,
+    "question": "Adversity always presents opportunities for the examination of one's own conscious thoughts and feelings",
+    "options": [
+      "Introspection",
+      "Judgement",
+      "Evaluation",
+      "Cognition"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 82,
+    "set": 9,
+    "question": "The two women chatted in a friendly and peaceable manner",
+    "options": [
+      "Apparently",
+      "Assuredly",
+      "Absurdly",
+      "Amicably"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 83,
+    "set": 9,
+    "question": "'A Red, Red Rose' by Robert Burns is a poem that tells a story and has a regular rhythm and rhyme scheme",
+    "options": [
+      "Epic",
+      "Haiku",
+      "Sonnet",
+      "Ballad"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 84,
+    "set": 9,
+    "question": "Advertisements on television for soaps promise younger looking skin",
+    "options": [
+      "Rejuvenated",
+      "Smarter",
+      "Lighter",
+      "Brighter"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 85,
+    "set": 9,
+    "question": "He simply continued to say something in order to convey information in a calm voice",
+    "options": [
+      "Dictate",
+      "Speak",
+      "Teach",
+      "Spell"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 86,
+    "set": 9,
+    "question": "How did you become interested in learning the art of producing beautiful handwriting?",
+    "options": [
+      "Graphology",
+      "Calligraphy",
+      "Lexicography",
+      "Demography"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 87,
+    "set": 9,
+    "question": "I suppose dancing that well would require a lot of actual application",
+    "options": [
+      "Practice",
+      "Prevention",
+      "Perseverance",
+      "Perception"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 88,
+    "set": 9,
+    "question": "Ms. Scarlet was indifferent to pain and pleasure, she never complained",
+    "options": [
+      "Hypocrite",
+      "Versatile",
+      "Amateur",
+      "Stoic"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 89,
+    "set": 9,
+    "question": "They have put me in a very complex situation",
+    "options": [
+      "Conflict",
+      "Kennel",
+      "Imbroglio",
+      "Thearchy"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 90,
+    "set": 9,
+    "question": "Due to repeated failures, he tried to take his own life",
+    "options": [
+      "Suicide",
+      "Beside",
+      "Homicide",
+      "Patricide"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 91,
+    "set": 10,
+    "question": "Many English words, frequently used in Shakespearean age, are no longer in use",
+    "options": [
+      "Antiquated",
+      "Extinct",
+      "Ancient",
+      "Archaic"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 92,
+    "set": 10,
+    "question": "There is a place for grains in the backyard of this house",
+    "options": [
+      "Archive",
+      "Apiary",
+      "Granary",
+      "Dormitory"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 93,
+    "set": 10,
+    "question": "He was not willing to attend the technical session of the conference",
+    "options": [
+      "Dejecting",
+      "Curious",
+      "Comprehensive",
+      "Reluctant"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 94,
+    "set": 10,
+    "question": "It was his love and goodwill to humanity that was recognised by the state government",
+    "options": [
+      "Humanism",
+      "Affection",
+      "Philanthropy",
+      "Misanthropy"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 95,
+    "set": 10,
+    "question": "Whatever topic I discussed with the sage, it seemed that he knew everything",
+    "options": [
+      "Was a Psychologist",
+      "Was Abnormal",
+      "Was Excellent",
+      "Was Omniscient"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 96,
+    "set": 10,
+    "question": "After the scandal, the king was left with no choice but to announce his act of renouncing the throne",
+    "options": [
+      "Abdication",
+      "Coronation",
+      "Exoneration",
+      "Extradition"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 97,
+    "set": 10,
+    "question": "The king’s coronation ceremony was a grand affair, with all the nobles and dignitaries dressed in their finest insignia of royalty",
+    "options": [
+      "Ornaments",
+      "Regals",
+      "Regalia",
+      "Spectres"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 98,
+    "set": 10,
+    "question": "My mother always loves to spend her leisure time on our piece of enclosed land planted with fruit trees",
+    "options": [
+      "Farm",
+      "Orchard",
+      "Lawn",
+      "Garden"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 99,
+    "set": 10,
+    "question": "Pandemics have often been caused by a disease that spreads by physical touch or contact",
+    "options": [
+      "Are Vigorous",
+      "Are Fastidious",
+      "Are Contagious",
+      "Are Robust"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 100,
+    "set": 10,
+    "question": "Simon is afraid of closed space",
+    "options": [
+      "Has Xenophobia",
+      "Has Hydrophobia",
+      "Has Claustrophobia",
+      "Has Ecophobia"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 101,
+    "set": 11,
+    "question": "A drug or other substance that induces sleep",
+    "options": [
+      "Sedative",
+      "Energetic",
+      "Reviver",
+      "Stimulant"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 102,
+    "set": 11,
+    "question": "A person who has features of extrovert and introvert",
+    "options": [
+      "Stoic",
+      "Dual",
+      "Ambivert",
+      "Ambiguous"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 103,
+    "set": 11,
+    "question": "A phrase or words written in memory of a person who has died",
+    "options": [
+      "Tombstone",
+      "Calligraphy",
+      "Epitaph",
+      "Epigram"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 104,
+    "set": 11,
+    "question": "The doctor who treats bone problems",
+    "options": [
+      "Physiotherapist",
+      "Orthopaedist",
+      "Obstetrician",
+      "Gynaecologist"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 105,
+    "set": 11,
+    "question": "The killing of a group of people in a deliberate manner",
+    "options": [
+      "Regicide",
+      "Uxoricide",
+      "Homicide",
+      "Genocide"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 106,
+    "set": 11,
+    "question": "Ability to communicate effectively and express oneself clearly in writing and speaking",
+    "options": [
+      "Incoherence",
+      "Articulation",
+      "Rambling",
+      "Mumbling"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 107,
+    "set": 11,
+    "question": "Not guilty of any wrongdoing and lacking knowledge or awareness of wrongdoing",
+    "options": [
+      "Ignorant",
+      "Inexperienced",
+      "Innocent",
+      "Cruel"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 108,
+    "set": 11,
+    "question": "Capable of bending easily without breaking and able to be easily modified",
+    "options": [
+      "Versatile",
+      "Flexible",
+      "Adherent",
+      "Inadaptable"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 109,
+    "set": 11,
+    "question": "Selling, purchasing, and using an illegally copied product is a criminal offence",
+    "options": [
+      "A Crooked",
+      "An Outlawed",
+      "A Pirated",
+      "An Obsolete"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 110,
+    "set": 11,
+    "question": "Have no means of livelihood left",
+    "options": [
+      "Pauper",
+      "Worker",
+      "Unemployed",
+      "Mason"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 111,
+    "set": 12,
+    "question": "A person who makes an official examination of accounts",
+    "options": [
+      "Creditor",
+      "Registrar",
+      "Auditor",
+      "Professor"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 112,
+    "set": 12,
+    "question": "A reserve for animals, birds etc. in their natural habitat",
+    "options": [
+      "Forest",
+      "Aviary",
+      "Century",
+      "Sanctuary"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 113,
+    "set": 12,
+    "question": "A statement open to more than one interpretation",
+    "options": [
+      "Ambiguous",
+      "Palpable",
+      "Tangible",
+      "Explicit"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 114,
+    "set": 12,
+    "question": "One who cannot be corrected",
+    "options": [
+      "Vulnerable",
+      "Versatile",
+      "Incorrigible",
+      "Indefatigable"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 115,
+    "set": 12,
+    "question": "To skip about playfully",
+    "options": [
+      "Trundle",
+      "Amble",
+      "Scramble",
+      "Gambol"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 116,
+    "set": 12,
+    "question": "A form of government in which supreme power is vested in the people and exercised by them or their elected agents under a free electoral system",
+    "options": [
+      "Anarchy",
+      "Monarchy",
+      "Autocracy",
+      "Democracy"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 117,
+    "set": 12,
+    "question": "A notice of the death of a person, often with a biographical sketch, as in a newspaper",
+    "options": [
+      "Obituary",
+      "Oblivion",
+      "Elegy",
+      "Advertisement"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 118,
+    "set": 12,
+    "question": "A person engaged in or trained for space flight",
+    "options": [
+      "Astute",
+      "Astronomer",
+      "Atrocious",
+      "Astronaut"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 119,
+    "set": 12,
+    "question": "A pretence of having a virtuous character, moral or religious beliefs or principles, etc., that one does not really possess",
+    "options": [
+      "Gullibility",
+      "Hypocrisy",
+      "Shrewdness",
+      "Naivety"
+    ],
+    "type": "One Word Substitution"
+  },
+  {
+    "id": 120,
+    "set": 12,
+    "question": "A state of intense happiness and self-confidence",
+    "options": [
+      "Oblivion",
+      "Euphoria",
+      "Intoxication",
+      "Touche"
+    ],
+    "type": "One Word Substitution"
+  }
+]

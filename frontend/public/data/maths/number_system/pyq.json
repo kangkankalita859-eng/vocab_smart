@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "subject": "Maths",
+    "topic": "Number System",
+    "type": "TYPE-I",
+    "question": "If the unit digit of (433 × 456 × 43N) is (N + 2), then what is the value of N?",
+    "options": ["1", "8", "3", "6"],
+    "correctAnswer": 3,
+    "exam": "SSC CGL Tier-I CBE Exam",
+    "date": "2018-03-09"
+  },
+  {
+    "id": 2,
+    "subject": "Maths",
+    "topic": "Number System",
+    "type": "TYPE-I",
+    "question": "The value of 22.4 + 11.567 - 33.59 is:",
+    "options": ["0.32", "0.412", "0.31", "0.412"],
+    "correctAnswer": 1,
+    "exam": "SSC CGL Tier-II CBE Exam",
+    "date": "2019-09-11"
+  },
+  {
+    "id": 3,
+    "subject": "Maths",
+    "topic": "Number System",
+    "type": "TYPE-I",
+    "question": "When a two-digit number is multiplied by the sum of its digits, the product is 424. When the number obtained by interchanging its digits is multiplied by the sum of digits, the result is 280. Find the sum of digits.",
+    "options": ["6", "9", "8", "7"],
+    "correctAnswer": 2,
+    "exam": "SSC CGL Tier-I CBE Exam",
+    "date": "2019-09-12"
+  },
+  {
+    "id": 4,
+    "subject": "Maths",
+    "topic": "Number System",
+    "type": "TYPE-I",
+    "question": "If A = 0.312, B = 0.415 and C = 0.309, then what is the value of (A + B + C)?",
+    "options": ["1141/1100", "1097/1100", "1211/1100", "1043/1100"],
+    "correctAnswer": 1,
+    "exam": "SSC CGL Tier-II CBE Exam",
+    "date": "2022-08-08"
+  },
+  {
+    "id": 5,
+    "subject": "Maths",
+    "topic": "Number System",
+    "type": "TYPE-I",
+    "question": "If the sum of two numbers is 25 and their product is 144, what is the positional difference between the two numbers?",
+    "options": ["8", "7", "16", "9"],
+    "correctAnswer": 1,
+    "exam": "SSC CHSL Tier-I CBE Exam",
+    "date": "2022-05-25"
+  },
+  {
+    "id": 6,
+    "subject": "Maths",
+    "topic": "Number System",
+    "type": "TYPE-I",
+    "question": "The difference between a number and the square root of the number is 2. Find the number.",
+    "options": ["1", "2", "3", "4"],
+    "correctAnswer": 4,
+    "exam": "SSC CHSL Tier-I CBE Exam",
+    "date": "2022-05-26"
+  },
+  {
+    "id": 7,
+    "subject": "Maths",
+    "topic": "Number System",
+    "type": "TYPE-I",
+    "question": "Evaluate 99 × 99 - 1.",
+    "options": ["9900", "9800", "9801", "9899"],
+    "correctAnswer": 3,
+    "exam": "SSC CHSL Tier-I CBE Exam",
+    "date": "2022-06-06"
+  }
+]

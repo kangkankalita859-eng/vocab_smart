@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "idiom": "A blessing in disguise",
+    "meaning": "Something good that seemed bad at first",
+    "question": "What does 'A blessing in disguise' mean?",
+    "options": ["Something good that seemed bad at first", "Something bad that seemed good at first", "A hidden treasure", "A lucky charm"],
+    "correctAnswer": 0,
+    "explanation": "This idiom refers to something that initially appears to be a misfortune but ultimately results in a positive outcome."
+  },
+  {
+    "id": 2,
+    "idiom": "Break a leg",
+    "meaning": "Good luck",
+    "question": "What does 'Break a leg' mean when said to a performer?",
+    "options": ["To actually break a leg", "Good luck", "Bad luck", "To dance well"],
+    "correctAnswer": 1,
+    "explanation": "This is a theatrical superstition where people wish performers good luck by saying the opposite."
+  },
+  {
+    "id": 3,
+    "idiom": "Call it a day",
+    "meaning": "Stop working on something",
+    "question": "What does 'Call it a day' mean?",
+    "options": ["To start working", "To stop working for the day", "To work overtime", "To take a break"],
+    "correctAnswer": 1,
+    "explanation": "This idiom means to stop working on something, usually for the day."
+  },
+  {
+    "id": 4,
+    "idiom": "Cut corners",
+    "meaning": "To do something in the easiest way",
+    "question": "What does 'Cut corners' mean?",
+    "options": ["To cut paper", "To save money", "To do something in the easiest or cheapest way", "To be lazy"],
+    "correctAnswer": 2,
+    "explanation": "This idiom means to do something in the easiest, cheapest, or fastest way, often sacrificing quality."
+  },
+  {
+    "id": 5,
+    "idiom": "Get out of hand",
+    "meaning": "To become difficult to control",
+    "question": "What does 'Get out of hand' mean?",
+    "options": ["To leave", "To become difficult to control", "To help someone", "To understand"],
+    "correctAnswer": 1,
+    "explanation": "This idiom means a situation has become difficult to control or manage."
+  },
+  {
+    "id": 6,
+    "idiom": "Hit the nail on the head",
+    "meaning": "To be exactly right",
+    "question": "What does 'Hit the nail on the head' mean?",
+    "options": ["To be wrong", "To be exactly right", "To make a mistake", "To be confused"],
+    "correctAnswer": 1,
+    "explanation": "This idiom means to describe a situation exactly as it is, or to be exactly right about something."
+  },
+  {
+    "id": 7,
+    "idiom": "Let the cat out of the bag",
+    "meaning": "To reveal a secret",
+    "question": "What does 'Let the cat out of the bag' mean?",
+    "options": ["To buy a cat", "To reveal a secret", "To hide something", "To be honest"],
+    "correctAnswer": 1,
+    "explanation": "This idiom means to accidentally reveal a secret or information that was meant to be kept hidden."
+  },
+  {
+    "id": 8,
+    "idiom": "Make a long story short",
+    "meaning": "To get to the point quickly",
+    "question": "What does 'Make a long story short' mean?",
+    "options": ["To tell a long story", "To get to the point quickly", "To write a story", "To be silent"],
+    "correctAnswer": 1,
+    "explanation": "This idiom is used when someone wants to summarize a long story or get to the main point quickly."
+  },
+  {
+    "id": 9,
+    "idiom": "Once in a blue moon",
+    "meaning": "Very rarely",
+    "question": "What does 'Once in a blue moon' mean?",
+    "options": ["Every day", "Very rarely", "Every week", "Every month"],
+    "correctAnswer": 1,
+    "explanation": "This idiom means something happens very rarely or infrequently."
+  },
+  {
+    "id": 10,
+    "idiom": "Piece of cake",
+    "meaning": "Something very easy",
+    "question": "What does 'Piece of cake' mean?",
+    "options": ["Something difficult", "Something very easy", "Food", "A dessert"],
+    "correctAnswer": 1,
+    "explanation": "This idiom means something is very easy to do or accomplish."
+  }
+]

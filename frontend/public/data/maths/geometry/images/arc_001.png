@@ -1,0 +1,6 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 100,100 A 60,0 0 80,100" fill="none" stroke="#007bff" stroke-width="2"/>
+  <circle cx="100" cy="100" r="40" fill="#e3f2fd" stroke="#007bff" stroke-width="2"/>
+  <text x="100" y="100" text-anchor="middle" font-family="Arial" font-size="14" fill="#2c3e50">Arc</text>
+  <text x="50" y="50" text-anchor="middle" font-family="Arial" font-size="12" fill="#007bff">60°</text>
+</svg>

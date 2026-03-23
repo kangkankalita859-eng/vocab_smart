@@ -1,0 +1,704 @@
+[
+  {
+    "id": 1,
+    "sentence": "I was sanctioned the loan by the office.",
+    "type": "Passive to Active",
+    "options": [
+      "The office had sanctioned the loan to me.",
+      "The office sanctioned loan to me.",
+      "The office sanctioned me the loan.",
+      "The office was sanctioned me the loan."
+    ]
+  },
+  {
+    "id": 2,
+    "sentence": "This picture had been drawn by me.",
+    "type": "Passive to Active",
+    "options": [
+      "I had drawn this picture.",
+      "I have drawn this picture.",
+      "I drew this picture.",
+      "I drawn this picture."
+    ]
+  },
+  {
+    "id": 3,
+    "sentence": "The books exhibition had been opened by the Governor.",
+    "type": "Passive to Active",
+    "options": [
+      "The Governor had opened the books exhibition.",
+      "The Governor has opened the books exhibition.",
+      "The Governor opened the books exhibition.",
+      "The Governor opens the books exhibition."
+    ]
+  },
+  {
+    "id": 4,
+    "sentence": "This letter was written by Mr. Kumar.",
+    "type": "Passive to Active",
+    "options": [
+      "Mr. Kumar had written this letter.",
+      "Mr. Kumar writes this letter.",
+      "Mr. Kumar has written this letter.",
+      "Mr. Kumar wrote this letter."
+    ]
+  },
+  {
+    "id": 5,
+    "sentence": "The flute is being played by Shankar.",
+    "type": "Passive to Active",
+    "options": [
+      "Shankar was playing the flute.",
+      "Shankar is playing the flute.",
+      "Shankar has been playing the flute.",
+      "Shankar playing the flute."
+    ]
+  },
+  {
+    "id": 6,
+    "sentence": "The room is being swept by the sweeper.",
+    "type": "Passive to Active",
+    "options": [
+      "The sweeper is sweeping the room.",
+      "The sweeper swept the room.",
+      "The sweeper sweeps the room.",
+      "The sweeper has been sweeping the room."
+    ]
+  },
+  {
+    "id": 7,
+    "sentence": "A gift was given to me by my friend.",
+    "type": "Passive to Active",
+    "options": [
+      "My friend had given me a gift.",
+      "My friend has given me a gift.",
+      "My friend gave me a gift.",
+      "My friend gives me a gift."
+    ]
+  },
+  {
+    "id": 8,
+    "sentence": "He was taken to the hospital by his friends.",
+    "type": "Passive to Active",
+    "options": [
+      "His friends had taken him to the hospital.",
+      "His friends have taken him to the hospital.",
+      "His friends take him to the hospital.",
+      "His friends took him to the hospital."
+    ]
+  },
+  {
+    "id": 9,
+    "sentence": "A few bags were bought by me.",
+    "type": "Passive to Active",
+    "options": [
+      "I had bought a few bags.",
+      "I have bought a few bags.",
+      "I bought a few bags.",
+      "I buy a few bags."
+    ]
+  },
+  {
+    "id": 10,
+    "sentence": "A children's story is written by Amith.",
+    "type": "Passive to Active",
+    "options": [
+      "Amith has written a children's story.",
+      "Amith wrote a children's story.",
+      "Amith writes a children's story.",
+      "Amith had written a children's story."
+    ]
+  },
+  {
+    "id": 11,
+    "sentence": "Our house was built by my father.",
+    "type": "Passive to Active",
+    "options": [
+      "My father had built our house.",
+      "My father builds our house.",
+      "My father has built our house.",
+      "My father built our house."
+    ]
+  },
+  {
+    "id": 12,
+    "sentence": "The telephone had been invented by Graham Bell.",
+    "type": "Passive to Active",
+    "options": [
+      "Graham Bell should have invented the telephone.",
+      "Graham Bell has invented the telephone.",
+      "Graham Bell had invented the telephone.",
+      "Graham Bell invented the telephone."
+    ]
+  },
+  {
+    "id": 13,
+    "sentence": "The trophy might be won by us.",
+    "type": "Passive to Active",
+    "options": [
+      "The trophy might win us.",
+      "We would win the trophy.",
+      "We might win the trophy.",
+      "We must win the trophy."
+    ]
+  },
+  {
+    "id": 14,
+    "sentence": "After the food was eaten, the dishes were washed by us.",
+    "type": "Passive to Active",
+    "options": [
+      "After we ate the food, we washed the dishes.",
+      "After we were eating the food, we washed the dishes.",
+      "After we are eating the food, we are washing the dishes.",
+      "After we had washed the dishes we had eaten the food."
+    ]
+  },
+  {
+    "id": 15,
+    "sentence": "He was given some money by his brother.",
+    "type": "Passive to Active",
+    "options": [
+      "His brother has given him some money.",
+      "His brother gave him some money.",
+      "He gave his brother some money.",
+      "His brother gives him some money."
+    ]
+  },
+  {
+    "id": 16,
+    "sentence": "Did you hear what was said by her?",
+    "type": "Passive to Active",
+    "options": [
+      "Did she hear what you said?",
+      "Did you hear what she has said?",
+      "Did you hear what she said?",
+      "Have you heard what she said?"
+    ]
+  },
+  {
+    "id": 17,
+    "sentence": "Every passing vehicle was being thoroughly checked by the guards.",
+    "type": "Passive to Active",
+    "options": [
+      "The guards were thoroughly checking every passing vehicle.",
+      "The guards have thoroughly checked every passing vehicle."
+    ]
+  },
+  {
+    "id": 18,
+    "sentence": "The main gate of the building was being guarded by gun-totting guards.",
+    "type": "Passive to Active",
+    "options": [
+      "Gun-totting guards guarded the main gate of the building.",
+      "The main gate of the building were guarding gun-totting guards.",
+      "Gun-totting guards were guarding the main gate of the building.",
+      "Gun-totting guards have been guarding the main gate of the building."
+    ]
+  },
+  {
+    "id": 19,
+    "sentence": "The crop was adversely affected by the inadequate rainfall.",
+    "type": "Passive to Active",
+    "options": [
+      "The adversely rainfall has affected the inadequate crop.",
+      "The inadequate rainfall was adversely affecting the crop.",
+      "The inadequate rainfall adversely affected the crop.",
+      "The inadequate crop adversely affected the rainfall."
+    ]
+  },
+  {
+    "id": 20,
+    "sentence": "The wall of this park is being painted by children.",
+    "type": "Passive to Active",
+    "options": [
+      "Children are painting the wall of this park.",
+      "The wall is painting children of this park.",
+      "Children have been painting the wall of this park.",
+      "Children painted the wall of this park."
+    ]
+  },
+  {
+    "id": 21,
+    "sentence": "The injured were being removed to the hospital by the police.",
+    "type": "Passive to Active",
+    "options": [
+      "The police removed the injured to the hospital.",
+      "The injured was removing the police to the hospital.",
+      "The police was removing the injured to the hospital.",
+      "The police has been removing the injured to the hospital."
+    ]
+  },
+  {
+    "id": 22,
+    "sentence": "One of the passengers was being thoroughly checked by the custom officers.",
+    "type": "Passive to Active",
+    "options": [
+      "The custom officers have been thoroughly checking one of the passengers.",
+      "The custom officers thoroughly checked one of the passengers.",
+      "One of the passengers was thoroughly checking the custom officers.",
+      "The custom officers were thoroughly checking one of the passengers."
+    ]
+  },
+  {
+    "id": 23,
+    "sentence": "The chairs were being arranged in the examination hall by the staff.",
+    "type": "Passive to Active",
+    "options": [
+      "The chair were arranging the staff in the examination hall.",
+      "The staff was arranging the chairs in the examination hall.",
+      "The staff has been arranging the chairs in the examination hall.",
+      "The staff has arranged the chairs in the examination hall."
+    ]
+  },
+  {
+    "id": 24,
+    "sentence": "The hunchback was being laughed at by everyone.",
+    "type": "Passive to Active",
+    "options": [
+      "Everyone was laughing at the hunchback.",
+      "Everyone is laughing at the hunchback.",
+      "Everyone laughed at the hunchback.",
+      "Everyone laughs at the hunchback."
+    ]
+  },
+  {
+    "id": 25,
+    "sentence": "Let the bell be rung every forty minutes.",
+    "type": "Passive to Active",
+    "options": [
+      "The bell should be rung every forty minutes.",
+      "Ring the bell every forty minutes.",
+      "The bell ought to be rung every forty minutes.",
+      "Let the bell keep ringing every forty minutes."
+    ]
+  },
+  {
+    "id": 26,
+    "sentence": "You will either be taken prisoner or shot by the enemy.",
+    "type": "Passive to Active",
+    "options": [
+      "The enemy will be either taking you prisoner or shooting you.",
+      "The enemy either takes you prisoner or shoots you.",
+      "The enemy would either take you prisoner or shoot.",
+      "The enemy will either take you prisoner or shoot you."
+    ]
+  },
+  {
+    "id": 27,
+    "sentence": "We will all be greatly benefitted by this scheme.",
+    "type": "Passive to Active",
+    "options": [
+      "This scheme has greatly benefitted us all.",
+      "This scheme would greatly benefit we all.",
+      "This scheme will greatly benefit us all.",
+      "This scheme is going to greatly benefit us all."
+    ]
+  },
+  {
+    "id": 28,
+    "sentence": "Heavy taxes have been imposed on luxury items by the government.",
+    "type": "Passive to Active",
+    "options": [
+      "The government is imposing heavy taxes on luxury items.",
+      "The government has imposed heavy taxes on luxury items.",
+      "The government imposed heavy taxes on luxury items.",
+      "The government had imposed heavy taxes on luxury items."
+    ]
+  },
+  {
+    "id": 29,
+    "sentence": "Superstitions are still believed in by people.",
+    "type": "Passive to Active",
+    "options": [
+      "People have still believed in superstitions.",
+      "People are still believing in superstitions.",
+      "People still believe in superstitions.",
+      "People still believed in superstitions."
+    ]
+  },
+  {
+    "id": 30,
+    "sentence": "It was decided by the members that the report would be placed before the Chairman for his comments.",
+    "type": "Passive to Active",
+    "options": [
+      "The members decided that the report would be placed before the Chairman for his comments.",
+      "The Chairman's comments were to be placed on the report of the members.",
+      "Did the members decide to place the report before the Chairman?",
+      "The Chairman decided to place the report before the members."
+    ]
+  },
+  {
+    "id": 31,
+    "sentence": "By whom were you taught Mathematics?",
+    "type": "Passive to Active",
+    "options": [
+      "Who taught you Mathematics?",
+      "Who teaching you Mathematics?",
+      "Who will teach you Mathematics?",
+      "Whom are you teaching Mathematics?"
+    ]
+  },
+  {
+    "id": 32,
+    "sentence": "Rudra was laughed at by all his friends when he wore his socks inside-out.",
+    "type": "Passive to Active",
+    "options": [
+      "If Rudra wears his socks inside-out all his friends will laugh at him.",
+      "When Rudra wore his socks inside-out all his friends were laughing at him.",
+      "All his friends will be laughing at Rudra for wearing his socks inside-out.",
+      "All his friends laughed at Rudra when he wore his socks inside-out."
+    ]
+  },
+  {
+    "id": 33,
+    "sentence": "Dinesh was looked after by his grandmother when his parents went abroad.",
+    "type": "Passive to Active",
+    "options": [
+      "Dinesh's grandmother looks after him when his parents went abroad.",
+      "Dinesh's grandmother looked after him when his parents went abroad.",
+      "Dinesh looked after his grandmother when his parents went abroad.",
+      "Dinesh's grandmother was looking after him when his parents went abroad."
+    ]
+  },
+  {
+    "id": 34,
+    "sentence": "The results will be known to us by the end of the next month.",
+    "type": "Passive to Active",
+    "options": [
+      "We will know the results by the end of the next month.",
+      "We have known the results by the end of the next month.",
+      "We are knowing the results by the end of the next month.",
+      "We know the results by the end of the next month."
+    ]
+  },
+  {
+    "id": 35,
+    "sentence": "Two children were shot dead by a psychopath during the California music festival.",
+    "type": "Passive to Active",
+    "options": [
+      "Two children were being shot dead by a psychopath during the California music festival.",
+      "Two children are shot dead by a psychopath during the California music festival.",
+      "A psychopath during the California music festival was shooting dead two children.",
+      "A psychopath shot dead two children during the California music festival."
+    ]
+  },
+  {
+    "id": 36,
+    "sentence": "Popular monuments will be kept open till 9 p.m.",
+    "type": "Passive to Active",
+    "options": [
+      "They had kept popular monuments open till 9 p.m.",
+      "They are keeping popular monuments open till 9 p.m.",
+      "They will keep popular monuments open till 9 p.m.",
+      "They will be keeping popular monuments open till 9 p.m."
+    ]
+  },
+  {
+    "id": 37,
+    "sentence": "By how many people were you helped in your time of difficulty?",
+    "type": "Passive to Active",
+    "options": [
+      "How many people helped you in your time of difficulty?",
+      "How many people were you helping in time of difficulty?",
+      "How many people are you helped by in your time of difficulty?",
+      "In your time of difficulty how many people were you helped by?"
+    ]
+  },
+  {
+    "id": 38,
+    "sentence": "Preparations are being made for our Annual fest.",
+    "type": "Passive to Active",
+    "options": [
+      "We are making preparations for our Annual fest.",
+      "We have made preparations for our Annual fest.",
+      "Preparations were being made for our Annual fest.",
+      "Our Annual fest preparations are made."
+    ]
+  },
+  {
+    "id": 39,
+    "sentence": "The play on environment issues was performed with great professionalism by our students.",
+    "type": "Passive to Active",
+    "options": [
+      "Our students performed the play on environment issues with great professionalism.",
+      "Our students were to perform with great professionalism the play on environment issue.",
+      "Our students have been performing the play on environment issues with great professionalism.",
+      "The play on environment issues was being performed with great professionalism by our students."
+    ]
+  },
+  {
+    "id": 40,
+    "sentence": "Our home was built in 1990 by my father.",
+    "type": "Passive to Active",
+    "options": [
+      "Our home was being built in 1990 by my father.",
+      "My father had built our home in 1990.",
+      "My father was building our home in 1990.",
+      "My father built our home in 1990."
+    ]
+  },
+  {
+    "id": 41,
+    "sentence": "When we arrived at his house, we were welcomed by his parents.",
+    "type": "Passive to Active",
+    "options": [
+      "When his parents arrived at his house, we welcomed them.",
+      "When we arrived at his house, his parents welcomed us.",
+      "When we arrived at his house, we welcomed his parents.",
+      "After we arrived at his house, his parents had welcomed us."
+    ]
+  },
+  {
+    "id": 42,
+    "sentence": "Has the car been cleaned by the driver?",
+    "type": "Passive to Active",
+    "options": [
+      "How has the driver cleaned the car?",
+      "Does the driver clean the car?",
+      "Has the driver cleaned the car?",
+      "Did the driver clean the car?"
+    ]
+  },
+  {
+    "id": 43,
+    "sentence": "Preparations were being made for the sports meet at the school.",
+    "type": "Passive to Active",
+    "options": [
+      "They have been making preparations for the sports meet at the school.",
+      "They were making preparations for the sports meet at the school.",
+      "They have started making preparations for the sports meet at the school.",
+      "They have made preparations for the sports meet at the school."
+    ]
+  },
+  {
+    "id": 44,
+    "sentence": "By whom was this window pane broken?",
+    "type": "Passive to Active",
+    "options": [
+      "Who breaks this window pane?",
+      "Who broke this window pane?",
+      "Who has broken this window pane?",
+      "Who will break this window pane?"
+    ]
+  },
+  {
+    "id": 45,
+    "sentence": "A poster on Independence Day was being made by Avika.",
+    "type": "Passive to Active",
+    "options": [
+      "A poster was making Avika on Independence Day.",
+      "Avika was making a poster on Independence Day.",
+      "Avika is making a poster on Independence Day.",
+      "Independence Day was making a poster on Avika."
+    ]
+  },
+  {
+    "id": 46,
+    "sentence": "More roles for women will be opened up in the ranks of soldiers by the Indian army.",
+    "type": "Passive to Active",
+    "options": [
+      "The Indian army has opened up more roles for women in the ranks of soldiers.",
+      "More roles will open up for the Indian army in the ranks of women soldiers.",
+      "The Indian army will open up more roles for women in the ranks of soldiers.",
+      "Women will open up more roles for the Indian army in the ranks of soldiers."
+    ]
+  },
+  {
+    "id": 47,
+    "sentence": "The film Jurassic Park was directed by Steven Spielberg.",
+    "type": "Passive to Active",
+    "options": [
+      "The film Jurassic Park directed Steven Spielberg.",
+      "Steven Spielberg is the director of the film Jurassic Park.",
+      "Steven Spielberg has been directing the film Jurassic Park.",
+      "Steven Spielberg directed the film Jurassic Park."
+    ]
+  },
+  {
+    "id": 48,
+    "sentence": "Pruning of trees in my colony has been started by the horticulture department.",
+    "type": "Passive to Active",
+    "options": [
+      "Pruning of trees in my colony has started the horticulture department.",
+      "The horticulture department has been starting pruning of trees in my colony.",
+      "The horticulture department has started pruning of trees in my colony.",
+      "The horticulture department will start pruning of trees in my colony."
+    ]
+  },
+  {
+    "id": 49,
+    "sentence": "Being a space scientist, you are advised not to take your work lightly.",
+    "type": "Passive to Active",
+    "options": [
+      "Being a space scientist, you do not take your work lightly.",
+      "Being a space scientist, you could not take your work lightly.",
+      "Being a space scientist, you should not take your work lightly.",
+      "Being a space scientist, you will not take your work lightly."
+    ]
+  },
+  {
+    "id": 50,
+    "sentence": "Were all formalities completed by you?",
+    "type": "Passive to Active",
+    "options": [
+      "Did you complete all formalities?",
+      "Have you completed all formalities?",
+      "Have you been completing all formalities?",
+      "Will you complete all formalities?"
+    ]
+  },
+  {
+    "id": 51,
+    "sentence": "It is known by everyone that the tournament will be won by us.",
+    "type": "Passive to Active",
+    "options": [
+      "It is known to everyone that we are going to win the tournament.",
+      "It is known that the tournament is going to be won by us.",
+      "Everyone knows that we will win the tournament.",
+      "Everyone knows that the tournament was won by us."
+    ]
+  },
+  {
+    "id": 52,
+    "sentence": "An interesting discussion is being held on environmental degradation.",
+    "type": "Passive to Active",
+    "options": [
+      "They are holding an interesting discussion on environmental degradation.",
+      "An interesting discussion had been held on environmental degradation.",
+      "An interesting discussion is to be held on environmental degradation.",
+      "They will be holding an interesting discussion on environmental degradation."
+    ]
+  },
+  {
+    "id": 53,
+    "sentence": "My birthday was celebrated by my colleagues at the office today.",
+    "type": "Passive to Active",
+    "options": [
+      "My colleagues have celebrated my birthday at the office today.",
+      "My colleagues are celebrating my birthday at the office today.",
+      "My colleagues will celebrate my birthday at the office today.",
+      "My colleagues celebrated my birthday at the office today."
+    ]
+  },
+  {
+    "id": 54,
+    "sentence": "By whom was this window broken? Five packets of milk were delivered by the milkman.",
+    "type": "Passive to Active",
+    "options": [
+      "Who broke this window? The milkman delivered five packets of milk.",
+      "Who had broken this window? The milkman had delivered five packets of milk.",
+      "Whom was break this window? The milkman will deliver five packets of milk.",
+      "Who is breaking this window? The milkman is delivering five packets of milk."
+    ]
+  },
+  {
+    "id": 55,
+    "sentence": "Has your message been despatched?",
+    "type": "Passive to Active",
+    "options": [
+      "Has your message despatched?",
+      "Have you despatched your message?",
+      "Had you despatch your message?",
+      "Is your message despatching?"
+    ]
+  },
+  {
+    "id": 56,
+    "sentence": "I am sometimes puzzled by her actions.",
+    "type": "Passive to Active",
+    "options": [
+      "Her actions are sometimes puzzled by me.",
+      "Her actions sometimes puzzle me.",
+      "She can sometimes puzzle me.",
+      "Her actions were sometimes puzzling me."
+    ]
+  },
+  {
+    "id": 57,
+    "sentence": "He was given another chance by his employer.",
+    "type": "Passive to Active",
+    "options": [
+      "His employer is giving him another chance.",
+      "His employer gave him another chance.",
+      "His employer has given him another chance.",
+      "He gave his employer another chance."
+    ]
+  },
+  {
+    "id": 58,
+    "sentence": "The man eating tiger will be captured tomorrow by the forest officers.",
+    "type": "Passive to Active",
+    "options": [
+      "The forest officers will capture the man eating tiger tomorrow.",
+      "The forest officers will be capturing the man eating tiger tomorrow.",
+      "The forest officers captured the man eating tiger tomorrow.",
+      "The man eating tiger will capture the forest officers tomorrow."
+    ]
+  },
+  {
+    "id": 59,
+    "sentence": "Let this email be sent immediately.",
+    "type": "Passive to Active",
+    "options": [
+      "Send this email immediately.",
+      "Ask him to send this email immediately.",
+      "We can send this email immediately.",
+      "You could send this email immediately."
+    ]
+  },
+  {
+    "id": 60,
+    "sentence": "The light was switched off by her before sleeping.",
+    "type": "Passive to Active",
+    "options": [
+      "She is switching off the light before sleeping.",
+      "She switches off the light before sleeping.",
+      "She had switches off the light before sleeping.",
+      "She switched off the light before sleeping."
+    ]
+  },
+  {
+    "id": 61,
+    "sentence": "The ticket will be sent to you by the airlines on e-mail.",
+    "type": "Passive to Active",
+    "options": [
+      "The airlines had sent you the ticket by e-mail.",
+      "The airlines will have sent you the ticket by e-mail.",
+      "The airlines will send you the ticket by e-mail.",
+      "The airlines will be sending you the ticket by e-mail."
+    ]
+  },
+  {
+    "id": 62,
+    "sentence": "The audience was surprised by the ending of the play.",
+    "type": "Passive to Active",
+    "options": [
+      "The ending of the play was surprising for the audience.",
+      "The ending of the play surprised the audience.",
+      "The ending of the play has surprised the audience.",
+      "The audience surprised the ending of the play."
+    ]
+  },
+  {
+    "id": 63,
+    "sentence": "They were refused entry in Delhi by the police.",
+    "type": "Passive to Active",
+    "options": [
+      "The police refused them entry in Delhi.",
+      "The police had refused them entry in Delhi.",
+      "The police have refused them entry in Delhi.",
+      "The police can refuse them entry in Delhi."
+    ]
+  },
+  {
+    "id": 64,
+    "sentence": "Only home-cooked food is eaten by us.",
+    "type": "Passive to Active",
+    "options": [
+      "We eat only home-cooked food.",
+      "We are eating only home-cooked food.",
+      "We ate only home-cooked food.",
+      "We have eaten only home-cooked food."
+    ]
+  }        
+]

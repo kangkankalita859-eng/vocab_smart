@@ -1,0 +1,890 @@
+[
+  {
+    "id": 1,
+    "word": "Abate",
+    "pairWord": "Abet",
+    "meaning": "To become less strong, diminish",
+    "hindiMeaning": "कम होना, घटना",
+    "example": "The storm began to abate after midnight."
+  },
+  {
+    "id": 2,
+    "word": "Abet",
+    "pairWord": "Abate",
+    "meaning": "To encourage or support someone in a criminal act",
+    "hindiMeaning": "उकसाना, अपराध आदि में सहायक होना",
+    "example": "He was arrested for abetting the robbery."
+  },
+  {
+    "id": 3,
+    "word": "Abut",
+    "pairWord": "Abate",
+    "meaning": "To be next to or joined to something",
+    "hindiMeaning": "सटा या लगा होना",
+    "example": "Their house abuts the main road."
+  },
+  {
+    "id": 4,
+    "word": "Abjure",
+    "pairWord": "Adjure",
+    "meaning": "To formally reject or not accept a belief",
+    "hindiMeaning": "त्यागना",
+    "example": "He decided to abjure his old habits."
+  },
+  {
+    "id": 5,
+    "word": "Adjure",
+    "pairWord": "Abjure",
+    "meaning": "To solemnly command or advise someone to do something",
+    "hindiMeaning": "अनुरोध करना",
+    "example": "She adjured him to tell the truth."
+  },
+  {
+    "id": 6,
+    "word": "Accede",
+    "pairWord": "Exceed",
+    "meaning": "To agree or consent",
+    "hindiMeaning": "सहमत होना",
+    "example": "The manager acceded to our request."
+  },
+  {
+    "id": 7,
+    "word": "Exceed",
+    "pairWord": "Accede",
+    "meaning": "To be greater in number or size than something",
+    "hindiMeaning": "अधिक होना",
+    "example": "The expenses may exceed the budget."
+  },
+  {
+    "id": 8,
+    "word": "Access",
+    "pairWord": "Excess",
+    "meaning": "The opportunity or right to use something",
+    "hindiMeaning": "पहुँच",
+    "example": "Students have access to the library."
+  },
+  {
+    "id": 9,
+    "word": "Excess",
+    "pairWord": "Access",
+    "meaning": "More than necessary",
+    "hindiMeaning": "अधिकता",
+    "example": "Excess sugar can harm your health."
+  },
+  {
+    "id": 10,
+    "word": "Accessory",
+    "pairWord": "Accessary",
+    "meaning": "Something extra that is not necessary but is attractive or useful",
+    "hindiMeaning": "सहायक उपकरण",
+    "example": "She bought a handbag as a fashion accessory."
+  },
+  {
+    "id": 11,
+    "word": "Accessary",
+    "pairWord": "Accessory",
+    "meaning": "Someone who helps another person commit a crime",
+    "hindiMeaning": "अपराध में सहायक",
+    "example": "He was charged as an accessary to the theft."
+  },
+  {
+    "id": 12,
+    "word": "Accident",
+    "pairWord": "Incident",
+    "meaning": "An unfortunate happening that occurs unintentionally",
+    "hindiMeaning": "दुर्घटना",
+    "example": "He was injured in a road accident."
+  },
+  {
+    "id": 13,
+    "word": "Incident",
+    "pairWord": "Accident",
+    "meaning": "An individual occurrence or event",
+    "hindiMeaning": "घटना",
+    "example": "The police are investigating the incident."
+  },
+  {
+    "id": 14,
+    "word": "Address",
+    "pairWord": "Address",
+    "meaning": "To speak to a person or an assembly",
+    "hindiMeaning": "सम्बोधित करना",
+    "example": "The principal addressed the students."
+  },
+  {
+    "id": 15,
+    "word": "Address",
+    "pairWord": "Address",
+    "meaning": "The number of the building, the name of the street, and place where somebody lives or works",
+    "hindiMeaning": "पता",
+    "example": "Please write your address clearly."
+  },
+  {
+    "id": 16,
+    "word": "Adversity",
+    "pairWord": "Adversary",
+    "meaning": "An unfavorable situation",
+    "hindiMeaning": "आपदा",
+    "example": "He remained strong in times of adversity."
+  },
+  {
+    "id": 17,
+    "word": "Adversary",
+    "pairWord": "Adversity",
+    "meaning": "An enemy or opposing force",
+    "hindiMeaning": "प्रतिद्वन्दी, विरोधी",
+    "example": "The boxer defeated his adversary."
+  },
+  {
+    "id": 18,
+    "word": "Advice",
+    "pairWord": "Advise",
+    "meaning": "An opinion offered as a guide",
+    "hindiMeaning": "सलाह",
+    "example": "She gave me good advice."
+  },
+  {
+    "id": 19,
+    "word": "Advise",
+    "pairWord": "Advice",
+    "meaning": "To give advice to (verb)",
+    "hindiMeaning": "सलाह देना",
+    "example": "Doctors advise regular exercise."
+  },
+  {
+    "id": 20,
+    "word": "Adopt",
+    "pairWord": "Adapt",
+    "meaning": "To choose or take as one's own",
+    "hindiMeaning": "गोद लेना",
+    "example": "They decided to adopt a child."
+  },
+  {
+    "id": 21,
+    "word": "Adapt",
+    "pairWord": "Adopt",
+    "meaning": "To change according to new environment or new situation",
+    "hindiMeaning": "अनुकूल बनाना",
+    "example": "Animals adapt to their environment."
+  },
+  {
+    "id": 22,
+    "word": "Adept",
+    "pairWord": "Adopt",
+    "meaning": "Skilled, proficient",
+    "hindiMeaning": "निपुण",
+    "example": "She is adept at solving puzzles."
+  },
+  {
+    "id": 23,
+    "word": "Addition",
+    "pairWord": "Edition",
+    "meaning": "The act or process of adding or uniting",
+    "hindiMeaning": "जोड़ना, वृद्धि",
+    "example": "The addition of sugar improved the taste."
+  },
+  {
+    "id": 24,
+    "word": "Edition",
+    "pairWord": "Addition",
+    "meaning": "A particular form or version of a published text",
+    "hindiMeaning": "संस्करण",
+    "example": "This is the latest edition of the book."
+  },
+  {
+    "id": 25,
+    "word": "Addicted",
+    "pairWord": ["Addition", "Edition"],
+    "meaning": "Unable to stop doing or using something",
+    "hindiMeaning": "आदी",
+    "example": "He is addicted to video games."
+  },
+  {
+    "id": 26,
+    "word": "Adore",
+    "pairWord": ["Adorn"],
+    "meaning": "To regard with the utmost esteem, love, and respect",
+    "hindiMeaning": "बहुत चाहना",
+    "example": "Children adore their grandparents."
+  },
+  {
+    "id": 27,
+    "word": "Adorn",
+    "pairWord": ["Adore"],
+    "meaning": "To decorate or add beauty",
+    "hindiMeaning": "सजाना",
+    "example": "Flowers adorned the stage."
+  },
+  {
+    "id": 28,
+    "word": "Adverse",
+    "pairWord": ["Averse"],
+    "meaning": "Unfavorable",
+    "hindiMeaning": "प्रतिकूल",
+    "example": "The company faced adverse conditions."
+  },
+  {
+    "id": 29,
+    "word": "Averse",
+    "pairWord": ["Adverse"],
+    "meaning": "Having a strong dislike or disinclination",
+    "hindiMeaning": "विरुद्ध, अनिच्छुक",
+    "example": "He is averse to taking risks."
+  },
+  {
+    "id": 30,
+    "word": "Affect",
+    "pairWord": ["Effect"],
+    "meaning": "To influence",
+    "hindiMeaning": "प्रभाव डालना",
+    "example": "Lack of sleep can affect your health."
+  },
+  {
+    "id": 31,
+    "word": "Affect",
+    "pairWord": ["Effect"],
+    "meaning": "Emotional response",
+    "hindiMeaning": "भाव",
+    "example": "The sad movie had a strong affect on the audience."
+  },
+  {
+    "id": 32,
+    "word": "Effect",
+    "pairWord": ["Affect"],
+    "meaning": "A result",
+    "hindiMeaning": "परिणाम",
+    "example": "The new rule had a positive effect on students."
+  },
+  {
+    "id": 33,
+    "word": "Effect",
+    "pairWord": ["Affect"],
+    "meaning": "To cause",
+    "hindiMeaning": "प्रभाव उत्पन्न करना",
+    "example": "The new policy will effect many changes."
+  },
+  {
+    "id": 34,
+    "word": "Afflict",
+    "pairWord": ["Inflict"],
+    "meaning": "To cause pain or suffering",
+    "hindiMeaning": "दुख देना",
+    "example": "The disease continued to afflict the villagers."
+  },
+  {
+    "id": 35,
+    "word": "Inflict",
+    "pairWord": ["Afflict"],
+    "meaning": "To impose something unpleasant or harmful",
+    "hindiMeaning": "थोपना",
+    "example": "The judge refused to inflict a harsh punishment."
+  },
+  {
+    "id": 36,
+    "word": "Ail",
+    "pairWord": ["Ale"],
+    "meaning": "To be sick or unwell",
+    "hindiMeaning": "बीमार होना",
+    "example": "He could not explain what exactly ailed him."
+  },
+  {
+    "id": 37,
+    "word": "Ale",
+    "pairWord": ["Ail"],
+    "meaning": "A type of beer",
+    "hindiMeaning": "शराब",
+    "example": "He ordered a glass of ale at the pub."
+  },
+  {
+    "id": 38,
+    "word": "Aid",
+    "pairWord": ["Aide"],
+    "meaning": "To help or assist",
+    "hindiMeaning": "मदद करना",
+    "example": "The doctor rushed to aid the injured man."
+  },
+  {
+    "id": 39,
+    "word": "Aide",
+    "pairWord": ["Aid"],
+    "meaning": "An assistant",
+    "hindiMeaning": "सहायक",
+    "example": "The minister was accompanied by his aide."
+  },
+  {
+    "id": 40,
+    "word": "Aisle",
+    "pairWord": ["Isle"],
+    "meaning": "A space between rows",
+    "hindiMeaning": "गलियारा",
+    "example": "She walked down the aisle during the wedding."
+  },
+  {
+    "id": 41,
+    "word": "Isle",
+    "pairWord": ["Aisle"],
+    "meaning": "An island",
+    "hindiMeaning": "द्वीप",
+    "example": "They spent their vacation on a tropical isle."
+  },
+  {
+    "id": 42,
+    "word": "Amicable",
+    "pairWord": ["Amiable"],
+    "meaning": "Friendly",
+    "hindiMeaning": "मैत्रीपूर्ण",
+    "example": "They reached an amicable agreement."
+  },
+  {
+    "id": 43,
+    "word": "Amiable",
+    "pairWord": ["Amicable"],
+    "meaning": "Pleasant and friendly",
+    "hindiMeaning": "सुशील",
+    "example": "She is known for her amiable personality."
+  },
+  {
+    "id": 44,
+    "word": "Alleviate",
+    "pairWord": ["Elevate"],
+    "meaning": "To make easier to endure",
+    "hindiMeaning": "कम करना",
+    "example": "Medicine helped alleviate his pain."
+  },
+  {
+    "id": 45,
+    "word": "Elevate",
+    "pairWord": ["Alleviate"],
+    "meaning": "To lift up",
+    "hindiMeaning": "ऊँचा करना",
+    "example": "Regular exercise can elevate your mood."
+  },
+  {
+    "id": 46,
+    "word": "All ways",
+    "pairWord": ["Always"],
+    "meaning": "In every manner possible",
+    "hindiMeaning": "सभी तरह से",
+    "example": "She tried all ways to solve the problem."
+  },
+  {
+    "id": 47,
+    "word": "Always",
+    "pairWord": ["All ways"],
+    "meaning": "Regularly",
+    "hindiMeaning": "हमेशा",
+    "example": "He always arrives on time."
+  },
+  {
+    "id": 48,
+    "word": "Alteration",
+    "pairWord": ["Altercation", "Alternation"],
+    "meaning": "A change",
+    "hindiMeaning": "परिवर्तन",
+    "example": "The dress required a small alteration."
+  },
+  {
+    "id": 49,
+    "word": "Altercation",
+    "pairWord": ["Alteration", "Alternation"],
+    "meaning": "A dispute or quarrel",
+    "hindiMeaning": "तकरार",
+    "example": "An altercation broke out between the two drivers."
+  },
+  {
+    "id": 50,
+    "word": "Alternation",
+    "pairWord": ["Alteration", "Altercation"],
+    "meaning": "Successive change from one thing to another",
+    "hindiMeaning": "अदल-बदल",
+    "example": "The alternation of seasons is natural."
+  },
+  {
+    "id": 51,
+    "word": "Apposite",
+    "pairWord": ["Opposite"],
+    "meaning": "Suitable, well adapted",
+    "hindiMeaning": "उपयुक्त",
+    "example": "His comment was apposite to the topic."
+  },
+  {
+    "id": 52,
+    "word": "Opposite",
+    "pairWord": ["Apposite"],
+    "meaning": "Completely different",
+    "hindiMeaning": "विपरीत",
+    "example": "Their opinions are completely opposite."
+  },
+  {
+    "id": 53,
+    "word": "Apprehend",
+    "pairWord": ["Comprehend"],
+    "meaning": "To catch somebody",
+    "hindiMeaning": "पकड़ना",
+    "example": "The police apprehended the thief."
+  },
+  {
+    "id": 54,
+    "word": "Comprehend",
+    "pairWord": ["Apprehend"],
+    "meaning": "To understand",
+    "hindiMeaning": "समझना",
+    "example": "It is difficult to comprehend the theory."
+  },
+  {
+    "id": 55,
+    "word": "Admission",
+    "pairWord": [],
+    "meaning": "An act of admitting or being admitted",
+    "hindiMeaning": "प्रवेश",
+    "example": "She secured admission to the university."
+  },
+  {
+    "id": 56,
+    "word": "Admittance",
+    "pairWord": ["Admission"],
+    "meaning": "The act of admitting someone to enter",
+    "hindiMeaning": "प्रवेश",
+    "example": "Admittance to the hall was restricted."
+  },
+  {
+    "id": 57,
+    "word": "Allay",
+    "pairWord": ["Alley", "Ally"],
+    "meaning": "To make more bearable or less severe",
+    "hindiMeaning": "शांत करना",
+    "example": "The doctor tried to allay her fears."
+  },
+  {
+    "id": 58,
+    "word": "Alley",
+    "pairWord": ["Allay", "Ally"],
+    "meaning": "A narrow passage between buildings",
+    "hindiMeaning": "गली",
+    "example": "The cat ran into a dark alley."
+  },
+  {
+    "id": 59,
+    "word": "Ally",
+    "pairWord": ["Allay", "Alley"],
+    "meaning": "One who helps and supports someone",
+    "hindiMeaning": "मित्र",
+    "example": "He became a strong ally of the leader."
+  },
+  {
+    "id": 60,
+    "word": "Allude",
+    "pairWord": ["Elude"],
+    "meaning": "To make an indirect reference",
+    "hindiMeaning": "संकेत करना",
+    "example": "He alluded to the problem without mentioning it directly."
+  },
+  {
+    "id": 61,
+    "word": "Elude",
+    "pairWord": ["Allude"],
+    "meaning": "To avoid or escape from",
+    "hindiMeaning": "टालना",
+    "example": "The thief managed to elude the police."
+  },
+  {
+    "id": 62,
+    "word": "Allusion",
+    "pairWord": ["Illusion"],
+    "meaning": "An indirect reference",
+    "hindiMeaning": "संकेत",
+    "example": "The poem contains an allusion to Greek mythology."
+  },
+  {
+    "id": 63,
+    "word": "Illusion",
+    "pairWord": ["Allusion"],
+    "meaning": "A false idea or misleading appearance",
+    "hindiMeaning": "भ्रम",
+    "example": "The magician created the illusion of disappearing."
+  },
+  {
+    "id": 64,
+    "word": "Already",
+    "pairWord": ["All ready"],
+    "meaning": "By this time",
+    "hindiMeaning": "पहले से ही",
+    "example": "She has already finished her homework."
+  },
+  {
+    "id": 65,
+    "word": "All ready",
+    "pairWord": ["Already"],
+    "meaning": "Fully prepared",
+    "hindiMeaning": "सब तैयार",
+    "example": "The players were all ready for the match."
+  },
+  {
+    "id": 66,
+    "word": "Alright",
+    "pairWord": ["All right"],
+    "meaning": "Informal form meaning okay",
+    "hindiMeaning": "ठीक",
+    "example": "Everything will be alright soon."
+  },
+  {
+    "id": 67,
+    "word": "All right",
+    "pairWord": ["Alright"],
+    "meaning": "Completely correct or satisfactory",
+    "hindiMeaning": "बिल्कुल ठीक",
+    "example": "Is everything all right at home?"
+  },
+  {
+    "id": 68,
+    "word": "Altar",
+    "pairWord": ["Alter"],
+    "meaning": "A sacred place used in religious worship",
+    "hindiMeaning": "वेदी",
+    "example": "Flowers were placed on the altar."
+  },
+  {
+    "id": 69,
+    "word": "Alter",
+    "pairWord": ["Altar"],
+    "meaning": "To change",
+    "hindiMeaning": "बदलना",
+    "example": "They decided to alter the plan."
+  },
+  {
+    "id": 70,
+    "word": "Alternate",
+    "pairWord": ["Alternative"],
+    "meaning": "Occurring by turns",
+    "hindiMeaning": "बारी-बारी से",
+    "example": "They worked on alternate days."
+  },
+  {
+    "id": 71,
+    "word": "Alternative",
+    "pairWord": ["Alternate"],
+    "meaning": "Another possibility or option",
+    "hindiMeaning": "विकल्प",
+    "example": "We need an alternative solution."
+  },
+  {
+    "id": 72,
+    "word": "Altogether",
+    "pairWord": ["All together"],
+    "meaning": "Completely or entirely",
+    "hindiMeaning": "पूरी तरह से",
+    "example": "The plan failed altogether."
+  },
+  {
+    "id": 73,
+    "word": "All together",
+    "pairWord": ["Altogether"],
+    "meaning": "Everyone in one place",
+    "hindiMeaning": "सब मिलकर",
+    "example": "They sang the song all together."
+  },
+  {
+    "id": 74,
+    "word": "Angel",
+    "pairWord": ["Angle"],
+    "meaning": "A spiritual or divine being",
+    "hindiMeaning": "फरिश्ता",
+    "example": "She helped me like an angel."
+  },
+  {
+    "id": 75,
+    "word": "Angle",
+    "pairWord": ["Angel"],
+    "meaning": "A figure formed by two lines",
+    "hindiMeaning": "कोण",
+    "example": "Measure the angle of the triangle."
+  },
+  {
+    "id": 76,
+    "word": "Antique",
+    "pairWord": ["Antic"],
+    "meaning": "Very old and valuable",
+    "hindiMeaning": "प्राचीन",
+    "example": "He collects antique furniture."
+  },
+  {
+    "id": 77,
+    "word": "Antic",
+    "pairWord": ["Antique"],
+    "meaning": "Playful or strange act",
+    "hindiMeaning": "विचित्र हरकत",
+    "example": "The clown entertained children with funny antics."
+  },
+  {
+    "id": 78,
+    "word": "Annual",
+    "pairWord": ["Annul"],
+    "meaning": "Happening every year",
+    "hindiMeaning": "वार्षिक",
+    "example": "The school holds an annual function."
+  },
+  {
+    "id": 79,
+    "word": "Annul",
+    "pairWord": ["Annual"],
+    "meaning": "To cancel officially",
+    "hindiMeaning": "निरस्त करना",
+    "example": "The court decided to annul the contract."
+  },
+  {
+    "id": 80,
+    "word": "Anyone",
+    "pairWord": ["Any one"],
+    "meaning": "Any person",
+    "hindiMeaning": "कोई भी",
+    "example": "Anyone can participate in the competition."
+  },
+  {
+    "id": 81,
+    "word": "Any one",
+    "pairWord": ["Anyone"],
+    "meaning": "Any single person or thing",
+    "hindiMeaning": "कोई एक",
+    "example": "Any one of these books will help you."
+  },
+  {
+    "id": 82,
+    "word": "Apart",
+    "pairWord": ["A part"],
+    "meaning": "Separated",
+    "hindiMeaning": "अलग",
+    "example": "The two houses stand far apart."
+  },
+  {
+    "id": 83,
+    "word": "A part",
+    "pairWord": ["Apart"],
+    "meaning": "A portion of something",
+    "hindiMeaning": "हिस्सा",
+    "example": "She played a part in the project."
+  },
+  {
+    "id": 84,
+    "word": "Apprise",
+    "pairWord": ["Appraise"],
+    "meaning": "To inform",
+    "hindiMeaning": "सूचित करना",
+    "example": "Please apprise me of the situation."
+  },
+  {
+    "id": 85,
+    "word": "Appraise",
+    "pairWord": ["Apprise"],
+    "meaning": "To estimate the value",
+    "hindiMeaning": "मूल्यांकन करना",
+    "example": "Experts were called to appraise the painting."
+  },
+  {
+    "id": 86,
+    "word": "Artful",
+    "pairWord": ["Artistic"],
+    "meaning": "Crafty or cunning",
+    "hindiMeaning": "चालाक",
+    "example": "He gave an artful excuse."
+  },
+  {
+    "id": 87,
+    "word": "Artistic",
+    "pairWord": ["Artful"],
+    "meaning": "Related to art",
+    "hindiMeaning": "कलात्मक",
+    "example": "She has great artistic talent."
+  },
+  {
+    "id": 88,
+    "word": "Artist",
+    "pairWord": ["Artiste", "Artisan"],
+    "meaning": "A person who creates art",
+    "hindiMeaning": "कलाकार",
+    "example": "The artist painted a beautiful landscape."
+  },
+  {
+    "id": 89,
+    "word": "Artiste",
+    "pairWord": ["Artist", "Artisan"],
+    "meaning": "A professional performer",
+    "hindiMeaning": "कलाकार",
+    "example": "The famous artiste performed on stage."
+  },
+  {
+    "id": 90,
+    "word": "Artisan",
+    "pairWord": ["Artist", "Artiste"],
+    "meaning": "A skilled craft worker",
+    "hindiMeaning": "शिल्पकार",
+    "example": "The artisan carved the wood beautifully."
+  },
+  {
+    "id": 91,
+    "word": "Ascetic",
+    "pairWord": ["Aesthetic"],
+    "meaning": "A person who lives a simple life",
+    "hindiMeaning": "तपस्वी",
+    "example": "The monk lived an ascetic life."
+  },
+  {
+    "id": 92,
+    "word": "Aesthetic",
+    "pairWord": ["Ascetic"],
+    "meaning": "Concerned with beauty",
+    "hindiMeaning": "सौंदर्य संबंधी",
+    "example": "The building has great aesthetic appeal."
+  },
+  {
+    "id": 93,
+    "word": "Ascent",
+    "pairWord": ["Assent", "Accent"],
+    "meaning": "The act of climbing",
+    "hindiMeaning": "चढ़ाई",
+    "example": "The ascent of the mountain was difficult."
+  },
+  {
+    "id": 94,
+    "word": "Assent",
+    "pairWord": ["Ascent", "Accent"],
+    "meaning": "Agreement",
+    "hindiMeaning": "सहमति",
+    "example": "She nodded in assent."
+  },
+  {
+    "id": 95,
+    "word": "Accent",
+    "pairWord": ["Ascent", "Assent"],
+    "meaning": "A particular style of pronunciation",
+    "hindiMeaning": "लहजा",
+    "example": "His British accent is noticeable."
+  },
+  {
+    "id": 96,
+    "word": "Assistance",
+    "pairWord": ["Assistants"],
+    "meaning": "Help",
+    "hindiMeaning": "सहायता",
+    "example": "Thank you for your assistance."
+  },
+  {
+    "id": 97,
+    "word": "Assistants",
+    "pairWord": ["Assistance"],
+    "meaning": "Helpers",
+    "hindiMeaning": "सहायक",
+    "example": "The manager spoke to his assistants."
+  },
+  {
+    "id": 98,
+    "word": "Auger",
+    "pairWord": ["Augur"],
+    "meaning": "A tool for boring holes",
+    "hindiMeaning": "बरमा",
+    "example": "The carpenter used an auger."
+  },
+  {
+    "id": 99,
+    "word": "Augur",
+    "pairWord": ["Auger"],
+    "meaning": "To predict the future",
+    "hindiMeaning": "भविष्यवाणी करना",
+    "example": "The dark clouds augur a storm."
+  },
+  {
+    "id": 100,
+    "word": "Affection",
+    "pairWord": ["Affectation"],
+    "meaning": "Love or fondness",
+    "hindiMeaning": "स्नेह",
+    "example": "She showed great affection for her child."
+  },
+  {
+    "id": 101,
+    "word": "Affectation",
+    "pairWord": ["Affection"],
+    "meaning": "Artificial behaviour",
+    "hindiMeaning": "बनावटी व्यवहार",
+    "example": "His accent sounded like an affectation."
+  },
+  {
+    "id": 102,
+    "word": "Adulteration",
+    "pairWord": ["Adultery"],
+    "meaning": "Making something impure",
+    "hindiMeaning": "मिलावट",
+    "example": "Food adulteration is a serious crime."
+  },
+  {
+    "id": 103,
+    "word": "Adultery",
+    "pairWord": ["Adulteration"],
+    "meaning": "Extramarital relationship",
+    "hindiMeaning": "व्यभिचार",
+    "example": "The law once punished adultery."
+  },
+  {
+    "id": 104,
+    "word": "Aspersion",
+    "pairWord": ["Aspiration"],
+    "meaning": "A damaging remark",
+    "hindiMeaning": "आरोप",
+    "example": "He cast aspersions on her reputation."
+  },
+  {
+    "id": 105,
+    "word": "Aspiration",
+    "pairWord": ["Aspersion"],
+    "meaning": "Strong desire or ambition",
+    "hindiMeaning": "महत्त्वाकांक्षा",
+    "example": "Her aspiration is to become a scientist."
+  },
+  {
+    "id": 106,
+    "word": "Aspire",
+    "pairWord": ["Expire"],
+    "meaning": "To strongly desire",
+    "hindiMeaning": "महत्त्वाकांक्षा रखना",
+    "example": "He aspires to be a pilot."
+  },
+  {
+    "id": 107,
+    "word": "Expire",
+    "pairWord": ["Aspire"],
+    "meaning": "To end or die",
+    "hindiMeaning": "समाप्त होना",
+    "example": "The passport will expire next month."
+  },
+  {
+    "id": 108,
+    "word": "Avert",
+    "pairWord": ["Advert"],
+    "meaning": "To prevent",
+    "hindiMeaning": "टालना",
+    "example": "The driver managed to avert an accident."
+  },
+  {
+    "id": 109,
+    "word": "Advert",
+    "pairWord": ["Avert"],
+    "meaning": "Advertisement",
+    "hindiMeaning": "विज्ञापन",
+    "example": "I saw the advert in the newspaper."
+  },
+  {
+    "id": 110,
+    "word": "Are",
+    "pairWord": ["Are"],
+    "meaning": "Plural form of 'to be'",
+    "hindiMeaning": "हैं",
+    "example": "They are going to the market."
+  },
+  {
+    "id": 111,
+    "word": "Our",
+    "pairWord": ["Are"],
+    "meaning": "Plural form of 'to be'",
+    "hindiMeaning": "हैं",
+    "example": "They are going to the market."
+  }       
+]

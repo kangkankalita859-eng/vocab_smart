@@ -1,0 +1,494 @@
+[
+  {
+    "id": 1,
+    "explanation": "In indirect speech, 'I' changes to 'he' and 'am going' changes to 'was going'. Present continuous changes to past continuous."
+  },
+  {
+    "id": 2,
+    "explanation": "Present perfect 'have completed' changes to past perfect 'had completed' in indirect speech."
+  },
+  {
+    "id": 3,
+    "explanation": "Universal truths don't change tense in indirect speech - 'revolves' remains 'revolves'."
+  },
+  {
+    "id": 4,
+    "explanation": "In direct speech, 'told me' becomes 'said to me' and 'was feeling' becomes 'am feeling'."
+  },
+  {
+    "id": 5,
+    "explanation": "Question word 'where' remains, but 'do you live' changes to 'I lived' (simple past)."
+  },
+  {
+    "id": 6,
+    "explanation": "'Will' changes to 'would' and 'tomorrow' changes to 'the next day' in indirect speech."
+  },
+  {
+    "id": 7,
+    "explanation": "Negative imperative 'Don't' changes to 'forbade' in indirect speech."
+  },
+  {
+    "id": 8,
+    "explanation": "Exclamatory sentences use 'exclaimed that' and 'what a' becomes 'very'."
+  },
+  {
+    "id": 9,
+    "explanation": "Present perfect continuous changes to past perfect continuous, 'here' changes to 'there'."
+  },
+  {
+    "id": 10,
+    "explanation": "Imperative sentences use 'ordered' + 'to + verb' in indirect speech."
+  },
+  {
+    "id": 11,
+    "explanation": "Yes/No questions use 'if' or 'whether', 'can' changes to 'could'."
+  },
+  {
+    "id": 12,
+    "explanation": "'Bought' (simple past) changes to 'had bought' (past perfect), 'this' changes to 'that', 'yesterday' changes to 'the previous day'."
+  },
+  {
+    "id": 13,
+    "explanation": "Imperative sentences often use 'advised', 'told', or 'instructed' + 'to + verb'."
+  },
+  {
+    "id": 14,
+    "explanation": "'May' changes to 'might' in indirect speech."
+  },
+  {
+    "id": 15,
+    "explanation": "Requests use 'requested + object + to + verb' in indirect speech."
+  },
+  {
+    "id": 16,
+    "explanation": "In indirect questions, the question word order changes."
+  },
+  {
+    "id": 17,
+    "explanation": "Indirect questions often use 'if' and 'whether' clauses."
+  },
+  {
+    "id": 18,
+    "explanation": "Time and place references may change in indirect speech."
+  },
+  {
+    "id": 19,
+    "explanation": "Pronouns may need to be changed in indirect speech."
+  },
+  {
+    "id": 20,
+    "explanation": "Reported speech uses 'that' clause in indirect statements."
+  },
+  {
+    "id": 21,
+    "explanation": "Commands and requests follow different patterns in indirect speech."
+  },
+  {
+    "id": 22,
+    "explanation": "Some verbs change form in indirect speech (tell → told)."
+  },
+  {
+    "id": 23,
+    "explanation": "Modal verbs may require changes in indirect speech."
+  },
+  {
+    "id": 24,
+    "explanation": "Adverbs of frequency and manner may change position."
+  },
+  {
+    "id": 25,
+    "explanation": "Context determines whether 'say' or 'tell' is appropriate."
+  },
+  {
+    "id": 26,
+    "explanation": "Indirect questions often require more words than direct ones."
+  },
+  {
+    "id": 27,
+    "explanation": "Tense consistency is important in indirect speech."
+  },
+  {
+    "id": 28,
+    "explanation": "Indirect speech allows for more polite expressions."
+  },
+  {
+    "id": 29,
+    "explanation": "Some expressions have fixed indirect forms."
+  },
+  {
+    "id": 30,
+    "explanation": "Indirect questions can test understanding of context."
+  },
+  {
+    "id": 31,
+    "explanation": "Word order changes are common in indirect speech."
+  },
+  {
+    "id": 32,
+    "explanation": "Indirect speech requires careful attention to pronouns."
+  },
+  {
+    "id": 33,
+    "explanation": "Prepositions may need adjustment in indirect questions."
+  },
+  {
+    "id": 34,
+    "explanation": "Indirect questions often use introductory phrases."
+  },
+  {
+    "id": 35,
+    "explanation": "Context clues help determine indirect speech patterns."
+  },
+  {
+    "id": 36,
+    "explanation": "Indirect speech can express doubt or uncertainty."
+  },
+  {
+    "id": 37,
+    "explanation": "Some languages have different indirect speech rules."
+  },
+  {
+    "id": 38,
+    "explanation": "Indirect questions may require reported speech."
+  },
+  {
+    "id": 39,
+    "explanation": "Time expressions change in indirect speech."
+  },
+  {
+    "id": 40,
+    "explanation": "Indirect speech often uses specific introductory words."
+  },
+  {
+    "id": 41,
+    "explanation": "Context determines verb choice in indirect speech."
+  },
+  {
+    "id": 42,
+    "explanation": "Indirect questions can test understanding of grammar."
+  },
+  {
+    "id": 43,
+    "explanation": "Word order and structure change in indirect speech."
+  },
+  {
+    "id": 44,
+    "explanation": "Indirect speech allows for more formal expressions."
+  },
+  {
+    "id": 45,
+    "explanation": "Some expressions require fixed indirect forms."
+  },
+  {
+    "id": 46,
+    "explanation": "Indirect questions often use specific question patterns."
+  },
+  {
+    "id": 47,
+    "explanation": "Verb tense consistency is crucial in indirect speech."
+  },
+  {
+    "id": 48,
+    "explanation": "Indirect speech can express politeness through form."
+  },
+  {
+    "id": 49,
+    "explanation": "Context helps choose correct indirect speech pattern."
+  },
+  {
+    "id": 50,
+    "explanation": "Indirect questions test understanding of meaning."
+  },
+  {
+    "id": 51,
+    "explanation": "Word order changes are common in indirect speech."
+  },
+  {
+    "id": 52,
+    "explanation": "Indirect speech requires attention to verb forms."
+  },
+  {
+    "id": 53,
+    "explanation": "Some expressions have set indirect speech patterns."
+  },
+  {
+    "id": 54,
+    "explanation": "Indirect questions can test understanding of context."
+  },
+  {
+    "id": 55,
+    "explanation": "Verb choice depends on indirect speech context."
+  },
+  {
+    "id": 56,
+    "explanation": "Indirect speech often uses specific introductory phrases."
+  },
+  {
+    "id": 57,
+    "explanation": "Context determines verb choice in indirect speech."
+  },
+  {
+    "id": 58,
+    "explanation": "Indirect speech can express doubt or uncertainty."
+  },
+  {
+    "id": 59,
+    "explanation": "Some languages have different indirect speech rules."
+  },
+  {
+    "id": 60,
+    "explanation": "Indirect questions often use introductory phrases."
+  },
+  {
+    "id": 61,
+    "explanation": "Indirect questions often use 'if' and 'whether' clauses."
+  },
+  {
+    "id": 62,
+    "explanation": "Verb tense consistency is important in indirect speech."
+  },
+  {
+    "id": 63,
+    "explanation": "Indirect speech allows for more polite expressions."
+  },
+  {
+    "id": 64,
+    "explanation": "Indirect questions test understanding of grammar."
+  },
+  {
+    "id": 65,
+    "explanation": "Word order and structure change in indirect speech."
+  },
+  {
+    "id": 66,
+    "explanation": "Indirect speech can express politeness through form."
+  },
+  {
+    "id": 67,
+    "explanation": "Context helps choose correct indirect speech pattern."
+  },
+  {
+    "id": 68,
+    "explanation": "Indirect questions can test understanding of meaning."
+  },
+  {
+    "id": 69,
+    "explanation": "Verb tense consistency is crucial in indirect speech."
+  },
+  {
+    "id": 70,
+    "explanation": "Some expressions require fixed indirect forms."
+  },
+  {
+    "id": 71,
+    "explanation": "Indirect questions often use specific question patterns."
+  },
+  {
+    "id": 72,
+    "explanation": "Verb choice depends on indirect speech context."
+  },
+  {
+    "id": 73,
+    "explanation": "Context determines verb choice in indirect speech."
+  },
+  {
+    "id": 74,
+    "explanation": "Indirect speech requires attention to verb forms."
+  },
+  {
+    "id": 75,
+    "explanation": "Some expressions have set indirect speech patterns."
+  },
+  {
+    "id": 76,
+    "explanation": "Indirect questions can test understanding of context."
+  },
+  {
+    "id": 77,
+    "explanation": "Verb choice depends on indirect speech context."
+  },
+  {
+    "id": 78,
+    "explanation": "Indirect speech often uses specific introductory phrases."
+  },
+  {
+    "id": 79,
+    "explanation": "Context determines verb choice in indirect speech."
+  },
+  {
+    "id": 80,
+    "explanation": "Indirect speech can express doubt or uncertainty."
+  },
+  {
+    "id": 81,
+    "explanation": "Some languages have different indirect speech rules."
+  },
+  {
+    "id": 82,
+    "explanation": "Indirect questions often use introductory phrases."
+  },
+  {
+    "id": 83,
+    "explanation": "Verb tense consistency is important in indirect speech."
+  },
+  {
+    "id": 84,
+    "explanation": "Indirect speech allows for more polite expressions."
+  },
+  {
+    "id": 85,
+    "explanation": "Context helps choose correct indirect speech pattern."
+  },
+  {
+    "id": 86,
+    "explanation": "Indirect questions can test understanding of meaning."
+  },
+  {
+    "id": 87,
+    "explanation": "Word order changes are common in indirect speech."
+  },
+  {
+    "id": 88,
+    "explanation": "Indirect speech requires attention to verb forms."
+  },
+  {
+    "id": 89,
+    "explanation": "Some expressions require fixed indirect forms."
+  },
+  {
+    "id": 90,
+    "explanation": "Indirect questions often use specific question patterns."
+  },
+  {
+    "id": 91,
+    "explanation": "Verb choice depends on indirect speech context."
+  },
+  {
+    "id": 92,
+    "explanation": "Context determines verb choice in indirect speech."
+  },
+  {
+    "id": 93,
+    "explanation": "Indirect speech requires attention to verb forms."
+  },
+  {
+    "id": 94,
+    "explanation": "Some expressions have set indirect speech patterns."
+  },
+  {
+    "id": 95,
+    "explanation": "Indirect questions can test understanding of context."
+  },
+  {
+    "id": 96,
+    "explanation": "Verb choice depends on indirect speech context."
+  },
+  {
+    "id": 97,
+    "explanation": "Indirect speech often uses specific introductory phrases."
+  },
+  {
+    "id": 98,
+    "explanation": "Context determines verb choice in indirect speech."
+  },
+  {
+    "id": 99,
+    "explanation": "Indirect speech can express doubt or uncertainty."
+  },
+  {
+    "id": 100,
+    "explanation": "Some languages have different indirect speech rules."
+  },
+  {
+    "id": 101,
+    "explanation": "Indirect questions often use introductory phrases."
+  },
+  {
+    "id": 102,
+    "explanation": "Verb tense consistency is important in indirect speech."
+  },
+  {
+    "id": 103,
+    "explanation": "Indirect speech allows for more polite expressions."
+  },
+  {
+    "id": 104,
+    "explanation": "Context helps choose correct indirect speech pattern."
+  },
+  {
+    "id": 105,
+    "explanation": "Indirect questions can test understanding of meaning."
+  },
+  {
+    "id": 106,
+    "explanation": "Word order changes are common in indirect speech."
+  },
+  {
+    "id": 107,
+    "explanation": "Indirect speech requires attention to verb forms."
+  },
+  {
+    "id": 108,
+    "explanation": "Some expressions require fixed indirect forms."
+  },
+  {
+    "id": 109,
+    "explanation": "Indirect questions often use specific question patterns."
+  },
+  {
+    "id": 110,
+    "explanation": "Verb choice depends on indirect speech context."
+  },
+  {
+    "id": 111,
+    "explanation": "Context determines verb choice in indirect speech."
+  },
+  {
+    "id": 112,
+    "explanation": "Indirect speech requires attention to verb forms."
+  },
+  {
+    "id": 113,
+    "explanation": "Some expressions have set indirect speech patterns."
+  },
+  {
+    "id": 114,
+    "explanation": "Indirect questions can test understanding of context."
+  },
+  {
+    "id": 115,
+    "explanation": "Verb choice depends on indirect speech context."
+  },
+  {
+    "id": 116,
+    "explanation": "Indirect speech often uses specific introductory phrases."
+  },
+  {
+    "id": 117,
+    "explanation": "Context determines verb choice in indirect speech."
+  },
+  {
+    "id": 118,
+    "explanation": "Indirect speech can express doubt or uncertainty."
+  },
+  {
+    "id": 119,
+    "explanation": "Some languages have different indirect speech rules."
+  },
+  {
+    "id": 120,
+    "explanation": "Indirect questions often use introductory phrases."
+  },
+  {
+    "id": 121,
+    "explanation": "Verb tense consistency is important in indirect speech."
+  },
+  {
+    "id": 122,
+    "explanation": "Indirect speech allows for more polite expressions."
+  },
+  {
+    "id": 123,
+    "explanation": "Context helps choose correct indirect speech pattern."
+  }
+]

@@ -1,0 +1,381 @@
+import { useEffect, useState } from "react";
+
+import SessionNav from "../components/SessionNav";
+import MobileSidebar from "../components/MobileSidebar";
+
+import { fetchVocab } from "../services/vocabService";
+import { hasPersistedData, getDeckStats } from "../services/deckPersistenceService";
+
+import useMobile from "../hooks/useMobile";
+
+
+
+export default function ReadVocab({
+
+  config,
+
+  onGoCards,
+
+  onGoTest,
+
+  onUpdateConfig,
+
+  onGoHome,
+
+}) {
+
+  const [vocab, setVocab] = useState([]);
+
+  const [loading, setLoading] = useState(true);
+
+  const { isMobile } = useMobile();
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [sscOnly, setSscOnly] = useState(false);
+
+  const [showPersistedInfo, setShowPersistedInfo] = useState(false);
+
+  const [deckStats, setDeckStats] = useState({ unknownCount: 0, savedDeckCount: 0 });
+
+
+
+  /* -------- CHECK PERSISTED DATA -------- */
+
+  useEffect(() => {
+    if (hasPersistedData()) {
+      const stats = getDeckStats();
+      setDeckStats(stats);
+      setShowPersistedInfo(true);
+    }
+  }, []);
+
+  /* -------- FETCH VOCAB BASED ON RANGE -------- */
+
+
+
+  useEffect(() => {
+
+    // Ensure we have a valid config
+
+    const safeConfig = config || { start: 0, limit: 20 };
+
+    
+
+    setLoading(true);
+
+    fetchVocab(safeConfig.start, safeConfig.limit)
+
+      .then((data) => {
+
+        if (data.status === 'success') {
+
+          setVocab(data.data);
+
+        } else {
+
+          console.error('API Error:', data.message);
+
+        }
+
+        setLoading(false);
+
+      })
+
+      .catch((error) => {
+
+        console.error('Fetch error:', error);
+
+        setLoading(false);
+
+      });
+
+  }, [config]);
+
+
+
+  /* -------- LOADING -------- */
+
+
+
+  if (loading) {
+
+    return <p style={{ textAlign: "center" }}>Loading vocabulary…</p>;
+
+  }
+
+
+
+  /* -------- UI -------- */
+
+  const filteredVocab = sscOnly
+    ? vocab.filter((item) => Number(item.sscCount || 0) >= 1)
+    : vocab;
+
+
+
+  return (
+    <>
+      {/* NAV BAR */}
+      <SessionNav
+        mode="Read"
+        config={config}
+        onApplyRange={onUpdateConfig}
+        onGoRead={() => {}}
+        onGoCards={onGoCards}
+        onGoTest={onGoTest}
+        testLabel="📝 Exam"
+        onGoHome={onGoHome}
+        showSscFilter
+        sscOnly={sscOnly}
+        onToggleSscOnly={setSscOnly}
+        isMobile={isMobile}
+        onMenuToggle={() => setMobileMenuOpen(true)}
+      />
+
+      <div style={page}>
+        {/* PERSISTED DATA INFO */}
+        {showPersistedInfo && (
+          <div style={persistedInfo}>
+            <div style={persistedInfoContent}>
+              <span style={persistedInfoIcon}>📚</span>
+              <div>
+                <strong>You have saved vocabulary to review!</strong>
+                <div style={persistedInfoDetails}>
+                  {deckStats.unknownCount > 0 && (
+                    <span>• {deckStats.unknownCount} unknown cards ready for revision</span>
+                  )}
+                  {deckStats.savedDeckCount > 0 && (
+                    <span>• {deckStats.savedDeckCount} saved decks</span>
+                  )}
+                </div>
+              </div>
+              <button 
+                style={persistedInfoClose}
+                onClick={() => setShowPersistedInfo(false)}
+              >
+                ✕
+              </button>
+            </div>
+            <div style={persistedInfoActions}>
+              <button 
+                style={persistedInfoButton}
+                onClick={() => {
+                  onGoCards();
+                  setShowPersistedInfo(false);
+                }}
+              >
+                🃏 Go to Flash Cards
+              </button>
+            </div>
+          </div>
+        )}
+        
+        <div style={container}>
+          <h2 style={heading}>Read & Memorize Vocabulary</h2>
+
+          <table style={table}>
+            <thead>
+              <tr>
+                <th style={th}>SN</th>
+                <th style={th}>Phrase / Meaning</th>
+                <th style={th}>One Word</th>
+                <th style={th}>Hindi</th>
+                <th style={th}>Exam Count</th>
+                <th style={th}>Example Sentence</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {filteredVocab.map((item) => (
+                <tr key={item.id}>
+                  <td style={td}>{item.id}</td>
+                  <td style={td}>{item.meaning}</td>
+                  <td style={{ ...td, fontWeight: "600" }}>
+                    {item.word}
+                  </td>
+                  <td style={td}>{item.hindiMeaning}</td>
+                  <td style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
+                    {Number(item.sscCount || 0)} ({Number(item.otherExamCount || 0)})
+                  </td>
+                  <td
+                    style={{
+                      ...td,
+                      fontStyle: "italic",
+                      color: "#444",
+                      maxWidth: "300px",
+                    }}
+                  >
+                    {item.example ? item.example : "—" }
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          {filteredVocab.length === 0 && (
+            <p style={{ marginTop: "16px", color: "#777" }}>
+              No vocabulary found for the selected range.
+            </p>
+          )}
+        </div>
+      </div>
+
+      {/* Mobile sidebar only - no desktop sidebar */}
+      {isMobile && (
+        <MobileSidebar
+          isOpen={mobileMenuOpen}
+          onClose={() => setMobileMenuOpen(false)}
+          onSubjectSelect={() => {}}
+          onSubtopicSelect={() => {}}
+        />
+      )}
+    </>
+  );
+
+}
+
+
+/* ---------------- STYLES ---------------- */
+
+
+
+const page = {
+  minHeight: "calc(100vh - 60px)",
+  background: "#f5f5f5",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  paddingTop: "80px", // Add padding for fixed navbar
+  marginLeft: "0px", // Remove sidebar margin on desktop
+};
+
+
+
+const container = {
+
+  width: "95%",
+
+  maxWidth: "1200px",
+
+  background: "#fff",
+
+  padding: "24px",
+
+  borderRadius: "10px",
+
+  boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+
+};
+
+
+
+const heading = {
+
+  marginBottom: "16px",
+
+};
+
+
+
+const table = {
+
+  width: "100%",
+
+  borderCollapse: "collapse",
+
+  fontSize: "14px",
+
+};
+
+
+
+const th = {
+
+  border: "1px solid #ccc",
+
+  padding: "8px",
+
+  background: "#eee",
+
+  textAlign: "left",
+
+};
+
+
+
+const td = {
+
+  border: "1px solid #ccc",
+
+  padding: "8px",
+
+  verticalAlign: "top",
+
+};
+
+const persistedInfo = {
+  background: "#e3f2fd",
+  border: "1px solid #2196f3",
+  borderRadius: "8px",
+  padding: "16px",
+  marginBottom: "20px",
+  boxShadow: "0 2px 8px rgba(33, 150, 243, 0.15)",
+};
+
+const persistedInfoContent = {
+  display: "flex",
+  alignItems: "flex-start",
+  gap: "12px",
+  marginBottom: "12px",
+};
+
+const persistedInfoIcon = {
+  fontSize: "20px",
+  marginTop: "2px",
+};
+
+const persistedInfoDetails = {
+  fontSize: "13px",
+  color: "#666",
+  marginTop: "4px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "2px",
+};
+
+const persistedInfoClose = {
+  marginLeft: "auto",
+  background: "none",
+  border: "none",
+  fontSize: "16px",
+  cursor: "pointer",
+  color: "#666",
+  padding: "4px",
+};
+
+const persistedInfoActions = {
+  display: "flex",
+  gap: "10px",
+};
+
+const persistedInfoButton = {
+  background: "#2196f3",
+  color: "white",
+  border: "none",
+  padding: "8px 16px",
+  borderRadius: "6px",
+  cursor: "pointer",
+  fontSize: "14px",
+  fontWeight: "500",
+  transition: "background 0.2s ease",
+};
+
+
+
+
+
+
+
+
+

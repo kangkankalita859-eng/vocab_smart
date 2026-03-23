@@ -1,0 +1,18 @@
+[
+  {
+    "id": "set1",
+    "name": "Set 1: Common Idioms",
+    "description": "Basic English idioms for beginners",
+    "start": 0,
+    "limit": 5,
+    "totalQuestions": 5
+  },
+  {
+    "id": "set2", 
+    "name": "Set 2: Daily Life Idioms",
+    "description": "Idioms used in everyday conversations",
+    "start": 5,
+    "limit": 5,
+    "totalQuestions": 5
+  }
+]

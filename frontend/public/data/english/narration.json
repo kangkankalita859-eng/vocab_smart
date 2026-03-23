@@ -1,0 +1,2510 @@
+[
+  {
+    "id": 1,
+    "sentence": "I said to my sister, \"I brought you a doll yesterday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "I told my sister that I brought you a doll the previous day.",
+      "I told my sister that I had brought her a doll the previous day.",
+      "I told my sister that I had brought her a doll yesterday.",
+      "I told my sister that I brought her a doll yesterday."
+    ]
+  },
+  {
+    "id": 2,
+    "sentence": "They said, \"We've lived here for a long time.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "They said they have lived there for a long time.",
+      "They said they lived here for a long time.",
+      "They said they had lived there for a long time.",
+      "They said they have lived for a long time."
+    ]
+  },
+  {
+    "id": 3,
+    "sentence": "\"Would you open the door please?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She asked me to please open the door.",
+      "She requested me to open the door.",
+      "She requested me to please open the door.",
+      "She asked me open the door."
+    ]
+  },
+  {
+    "id": 4,
+    "sentence": "The teacher said to the student, \"Why do you disturb the class?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The teacher said to the student why he disturbed the class.",
+      "The teacher told the student why he had disturbed the class.",
+      "The teacher asked the student why he disturbed the class.",
+      "The teacher asked the student why he had disturbed the class."
+    ]
+  },
+  {
+    "id": 5,
+    "sentence": "Rita said to me, \"Will you lend me this classic?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rita asked me if I would lend her that classic.",
+      "If she would lend me that classic.",
+      "If I will lend her that classic.",
+      "Would I lend her that classic?"
+    ]
+  },
+  {
+    "id": 6,
+    "sentence": "The lady said to the servant, \"If you don't wash the clothes properly, I will dismiss you.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The lady warned the servant that she would dismiss her if she didn't wash the clothes properly.",
+      "The lady told the servant that she would dismiss her on the event of bad work.",
+      "The lady cautioned the servant that she must wash the clothes properly.",
+      "The lady advised the servant to wash the clothes properly."
+    ]
+  },
+  {
+    "id": 7,
+    "sentence": "\"There are ceremonies going on,\" he said to me.",
+    "type": "Direct to Indirect",
+    "options": [
+      "He told me that there were ceremonies going on.",
+      "He told that there have been ceremonies going on.",
+      "He told that there had been ceremonies going on.",
+      "He told that there are ceremonies going on."
+    ]
+  },
+  {
+    "id": 8,
+    "sentence": "She said to me, \"It has been raining heavily and you cannot go.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She told me that it had been raining heavily and I could not go.",
+      "She told me that it was raining heavily and I could not go.",
+      "She told me that it has been raining heavily and I could not go.",
+      "She told me that it is raining heavily and I could not go."
+    ]
+  },
+  {
+    "id": 9,
+    "sentence": "John said, \"I shall be 21 tomorrow.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "John said that he would be 21 tomorrow.",
+      "John said that he would be 21 the following day.",
+      "John said that he should be 21 the following day.",
+      "John said that I shall be 21 tomorrow."
+    ]
+  },
+  {
+    "id": 10,
+    "sentence": "She asked, \"Is the secretary coming to the meeting?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She asked that the secretary was coming to the meeting.",
+      "She asked that if the secretary was coming to the meeting.",
+      "She asked if the secretary is coming to the meeting.",
+      "She asked if the secretary was coming to the meeting."
+    ]
+  },
+  {
+    "id": 11,
+    "sentence": "\"I came home last night,\" said he.",
+    "type": "Direct to Indirect",
+    "options": [
+      "He told that he had come home last night.",
+      "He said that he came home last night.",
+      "He said that he had come home the previous night.",
+      "He says that he came home the previous night."
+    ]
+  },
+  {
+    "id": 12,
+    "sentence": "\"If you want to smoke, you'll have to go out,\" said the conductor.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The conductor ordered me to go out and smoke.",
+      "The conductor said that if I/he wanted to smoke, I/he would have to go out.",
+      "The conductor told me that smoking is not permitted in the bus.",
+      "The conductor told me that I will have to go out and smoke."
+    ]
+  },
+  {
+    "id": 13,
+    "sentence": "\"Be careful; the steps are very slippery,\" I warned him.",
+    "type": "Direct to Indirect",
+    "options": [
+      "I warned him to be careful as the steps were very slippery.",
+      "I warned him to be careful as the steps are very slippery.",
+      "I warned him to be careful and steps were very slippery.",
+      "I told him to be careful and the steps are very slippery."
+    ]
+  },
+  {
+    "id": 14,
+    "sentence": "She said, \"I am sorry, I am not able to submit those papers.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He said she was sorry, she is not able to submit those papers.",
+      "She said that she was sorry and she will not be able to submit those papers.",
+      "She apologized for not being able to submit those papers.",
+      "She exclaimed with sorrow that she was sorry and she will not be able to submit those papers."
+    ]
+  },
+  {
+    "id": 15,
+    "sentence": "She said to me, \"I'm going shopping. Can I get you something?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She said she was going shopping and said to me if I wanted something.",
+      "She said she was going shopping and asked if I wanted something.",
+      "She said she was going shopping and asked if she could get me something.",
+      "She said she is going shopping and asked if she could get me something."
+    ]
+  },
+  {
+    "id": 16,
+    "sentence": "Kala said to Radha, \"Who were you speaking to over the phone?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Kala asked Radha who she had been speaking to over the phone.",
+      "Kala asked Radha who she has been speaking to over the phone.",
+      "Kala asked Radha that who she was speaking to over the phone.",
+      "Kala asked Radha that who she had been speaking to over the phone."
+    ]
+  },
+  {
+    "id": 17,
+    "sentence": "The king said to his men, \"Do not be afraid of the enemy. Face them bravely.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The king ordered his men to not be afraid of the enemy and that they had to be faced bravely.",
+      "The king asked his men to not be afraid of the enemy but they should be faced bravely.",
+      "The king advised his men not to be afraid of the enemy but to face them bravely.",
+      "The king told his men not to be afraid of the enemy and they had faced them bravely."
+    ]
+  },
+  {
+    "id": 18,
+    "sentence": "Kannan said to Subha, \"I'll return the book after I have read it.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Kannan told Subha that he will return the book after he has read it.",
+      "Kannan told Subha that he would return the book after he has read it.",
+      "Kannan told Subha that he will return the book after he read it.",
+      "Kannan told Subha that he would return the book after he had read it."
+    ]
+  },
+  {
+    "id": 19,
+    "sentence": "The boss said to his secretary, \"Did you discuss this matter with the manager?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The boss asked his secretary whether he discussed that matter with the manager.",
+      "The boss asked his secretary if you have discussed that matter with the manager.",
+      "The boss asked his secretary if he had discussed that matter with the manager.",
+      "The boss asked his secretary whether he has discussed that matter with the manager."
+    ]
+  },
+  {
+    "id": 20,
+    "sentence": "Mother said, \"Where are you going?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mother said where I was going.",
+      "Mother told where I was going.",
+      "Mother enquired where I was going.",
+      "Mother asked where I am going."
+    ]
+  },
+  {
+    "id": 21,
+    "sentence": "\"What a sight to behold!\" said the painter.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The painter said it is a beauty to behold.",
+      "The painter exclaimed that it was a sight to behold.",
+      "The painter said it was a sight to behold.",
+      "The painter exclaimed that what a sight to behold."
+    ]
+  },
+  {
+    "id": 22,
+    "sentence": "\"What time does the train arrive?\" she asked.",
+    "type": "Direct to Indirect",
+    "options": [
+      "She enquired at what time the train arrived.",
+      "She asked about the train.",
+      "When will the train arrive she asked.",
+      "She said when does the train arrive."
+    ]
+  },
+  {
+    "id": 23,
+    "sentence": "Tom said \"I was playing cricket.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Tom said, who was playing cricket?",
+      "Tom was playing cricket.",
+      "Tom said that he had been playing cricket.",
+      "Tom said he was playing cricket."
+    ]
+  },
+  {
+    "id": 24,
+    "sentence": "My mother said, \"God is everywhere.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My mother said that God is everywhere.",
+      "My mother has said that God is everywhere.",
+      "My mother said God is everywhere.",
+      "My mother said that God was everywhere."
+    ]
+  },
+  {
+    "id": 25,
+    "sentence": "He said, \"Where have you been lately?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He said where he lately.",
+      "He told him where was he lately.",
+      "He asked him where he was lately.",
+      "He asked him where he had been lately."
+    ]
+  },
+  {
+    "id": 26,
+    "sentence": "The guide said to the tourists, \"This will be the best day of your life.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The guide told the tourists that this would be the best day of their lives.",
+      "The guide told the tourists that that would be the best day of their lives.",
+      "The guide told the tourists this that would be the best day of their lives.",
+      "The guide told the tourists that this will be the best day of their lives."
+    ]
+  },
+  {
+    "id": 27,
+    "sentence": "The jeweller said to us, \"These diamonds are polished here.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The jeweller informed us that these diamonds were polished there.",
+      "The jeweller informed us that those diamonds were polished there.",
+      "The jeweller informed us that those diamonds were polished here.",
+      "The jeweller informed us that these diamonds were polished here."
+    ]
+  },
+  {
+    "id": 28,
+    "sentence": "He said to the doctor, \"How soon will I be able to walk again?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He asks the doctor how soon would I be able to walk again.",
+      "He asked the doctor how soon would he be able to walk again.",
+      "He is asking the doctor how soon would I be able to walk again.",
+      "He asks the doctor how soon will he be able to walk again."
+    ]
+  },
+  {
+    "id": 29,
+    "sentence": "My father said to me, \"Don't talk to your mother like that.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My father warns me not to talk to my mother like that.",
+      "My father warned me not to talk to my mother like that.",
+      "My father warned me not to have talked to my mother like that.",
+      "My father warns me not to have talked to my mother like that."
+    ]
+  },
+  {
+    "id": 30,
+    "sentence": "The old man said to me, \"Life has taught me some hard lessons.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The old man tells me that life has taught him some hard lessons.",
+      "The old man told me this that life has taught him some hard lessons.",
+      "The old man tells me that life is teaching him some hard lessons.",
+      "The old man told me that life had taught him some hard lessons."
+    ]
+  },
+  {
+    "id": 31,
+    "sentence": "The groom said to the bride, \"I will take good care of you.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The groom promised the bride that he would take good care of her.",
+      "The groom has promised the bride that he will be taking good care of her.",
+      "The groom had promised the bride that he would have taken good care of her.",
+      "The groom promises the bride that he would take good care of her."
+    ]
+  },
+  {
+    "id": 32,
+    "sentence": "He said to his partner, \"I will not be responsible if the project fails.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He has told his partner that he will not be responsible if the project fails.",
+      "He told his partner that he would not be responsible if the project failed.",
+      "He tells his partner that he would not be responsible if the project fails.",
+      "He told his partner that I will not be responsible if the project failed."
+    ]
+  },
+  {
+    "id": 33,
+    "sentence": "He said to his partner, \"I will not be responsible if the project fails.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He tells his partner that he would not be responsible if the project fails.",
+      "He told his partner that he would not be responsible if the project failed.",
+      "He tells his partner that he will not be responsible if the project fails.",
+      "He told his partner that I will not be responsible if the project failed."
+    ]
+  },
+  {
+    "id": 34,
+    "sentence": "The manager said, \"Vivek must go tomorrow to meet the client.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The manager said that Vivek must have to go the following day to meet the client.",
+      "The manager said that Vivek will have to go tomorrow to meet the client.",
+      "The manager said that Vivek must go the following day to meet the client.",
+      "The manager said that Vivek must be going tomorrow to meet the client."
+    ]
+  },
+  {
+    "id": 35,
+    "sentence": "Aunt said to mother, \"I will be in Surat on Friday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Aunt told mother that she will be in Surat on Friday.",
+      "Aunt told mother that she would be in Surat on Friday.",
+      "Aunt told mother she will be in Surat on Friday.",
+      "Aunt told mother that she would be in Surat on Friday."
+    ]
+  },
+  {
+    "id": 36,
+    "sentence": "My brother said, \"I can climb this hill in less than an hour.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My brother claimed that he can climb that hill in less than an hour.",
+      "My brother claimed that he could climb this hill in less than an hour.",
+      "My brother claimed that he can climb this hill in less than an hour.",
+      "My brother claimed that he could climb that hill in less than an hour."
+    ]
+  },
+  {
+    "id": 37,
+    "sentence": "My son said to me, \"I will not disappoint you.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My son tells me that he will not disappoint me.",
+      "My son tells me that he will not be disappointing me.",
+      "My son told me that he would not disappoint me.",
+      "My son had told me that he would not be disappointing me."
+    ]
+  },
+  {
+    "id": 38,
+    "sentence": "The officer said, \"I am very busy now.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The officer said that he was very busy now.",
+      "The officer said that he is very busy then.",
+      "The officer said that he is very busy now.",
+      "The officer said that he was very busy then."
+    ]
+  },
+  {
+    "id": 39,
+    "sentence": "\"I am proud of you,\" father said to me.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Father told me that he is proud of me.",
+      "Father told me that he was proud of me.",
+      "Father told me this that he was proud of me.",
+      "Father told me that that he is proud of me."
+    ]
+  },
+  {
+    "id": 40,
+    "sentence": "\"The taxi is here,\" said the watchman.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The watchman said that the taxi is there.",
+      "The watchman said that the taxi was here.",
+      "The watchman said that the taxi is here.",
+      "The watchman said that the taxi was there."
+    ]
+  },
+  {
+    "id": 41,
+    "sentence": "The student said, \"I must study hard.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The student said that he had to study hard.",
+      "The student says that he had to study hard.",
+      "The student says that he must study hard.",
+      "The student say that he had to study hard."
+    ]
+  },
+  {
+    "id": 42,
+    "sentence": "Preeti said to her friend, \"I am like my mother.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Preeti told her friend that she was like her mother.",
+      "Preeti told her friend that I was like her mother.",
+      "Preeti tells her friend that she is like her mother.",
+      "Preeti tells her friend that that she was like her mother."
+    ]
+  },
+  {
+    "id": 43,
+    "sentence": "My brother said to me, \"I was upset, but now I am fine.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My brother told me that he was upset, but now he was fine.",
+      "My brother told me that he had been upset, but he will be fine.",
+      "My brother told me that he had been upset, but then he was fine.",
+      "My brother told me that he has been upset, but then he is fine."
+    ]
+  },
+  {
+    "id": 44,
+    "sentence": "My friend said to me, \"For me running is like therapy.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My friend told me this that for her running is like therapy.",
+      "My friend told me that for her running was like therapy.",
+      "My friend told me that for her having run was like therapy.",
+      "My friend tells me that for her running is like therapy."
+    ]
+  },
+  {
+    "id": 45,
+    "sentence": "I said to the taxi driver, \"You must be crazy to drive so fast.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "I said to the taxi driver that he has to be crazy to drive so fast.",
+      "I told the taxi driver that he had to be crazy to drive so fast.",
+      "I had told the taxi driver that he has to be crazy to drive so fast.",
+      "I had said to the taxi driver that he has to be crazy to be driving so fast."
+    ]
+  },
+  {
+    "id": 46,
+    "sentence": "The teacher said to me, \"Stand there next to the podium.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The teacher tells me to stand there next to the podium.",
+      "The teacher told me to have stood there next to the podium.",
+      "The teacher told me to stand there next to the podium.",
+      "The teacher had told me to have stood there next to the podium."
+    ]
+  },
+  {
+    "id": 47,
+    "sentence": "He said to her, \"I will meet you here tomorrow.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He told her this that he will meet her there the following day.",
+      "He told her that he would meet her there the following day.",
+      "He told her that he would meet her here tomorrow.",
+      "He told her that he will meet her there tomorrow."
+    ]
+  },
+  {
+    "id": 48,
+    "sentence": "She said to her friend, \"What can I do to help you?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She asked her friend what she can do to help her.",
+      "She asked her friend what she could do to help her.",
+      "She asks her friend what she is that she could do to help her.",
+      "She asks her friend what she can do for helping her."
+    ]
+  },
+  {
+    "id": 49,
+    "sentence": "Manoj said to his friend, \"I am very angry with you.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Manoj told his friend that he was very angry with him.",
+      "Manoj told his friend that he is very angry with him.",
+      "Manoj told his friend that he was very angered by him.",
+      "Manoj told his friend that he is very angered by him."
+    ]
+  },
+  {
+    "id": 50,
+    "sentence": "\"Hurry up, get in the bus,\" the conductor said to us.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The conductor told us to hurry up and get in the bus.",
+      "The conductor tells us to hurry up and get in the bus.",
+      "The conductor told us to hurry up and got in the bus.",
+      "The conductor tells us to hurry up and got in the bus."
+    ]
+  },
+  {
+    "id": 51,
+    "sentence": "\"My train will reach by noon,\" he explained.",
+    "type": "Direct to Indirect",
+    "options": [
+      "He explained that his train will reach by noon.",
+      "He explained that his train would reach by noon.",
+      "He explained that his train will have reached by noon.",
+      "He explained that his train would have had reached by noon."
+    ]
+  },
+  {
+    "id": 52,
+    "sentence": "I said to my wife, \"These show-pieces look nice.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "I told my wife that these show-pieces looked nice.",
+      "I told my wife that those show-pieces looked nice.",
+      "I told my wife that those show-pieces look nice.",
+      "I told my wife that these show-pieces look nice."
+    ]
+  },
+  {
+    "id": 53,
+    "sentence": "He said, \"I work in an army hospital which is now being renovated.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He said that he worked in an army hospital which was now being renovated.",
+      "He said that he works in an army hospital which was then being renovated.",
+      "He said that he works in an army hospital which was now being renovated.",
+      "He said that he worked in an army hospital which was then being renovated."
+    ]
+  },
+  {
+    "id": 54,
+    "sentence": "They said, \"We play cricket every Sunday here at the club.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "They said that they played cricket every Sunday here at the club.",
+      "They said that they played cricket every Sunday there at the club.",
+      "They said that they play cricket every Sunday there at the club.",
+      "They said that they play cricket every Sunday here at the club."
+    ]
+  },
+  {
+    "id": 55,
+    "sentence": "She said, \"I love my grandparents thus I take good care of them.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She says that she loved her grandparents thus she took good care of them.",
+      "She said that she loves her grandparents so she took good care of them.",
+      "She said that she loves her grandparents thus she took good care of them.",
+      "She said that she loved her grandparents so she took good care of them."
+    ]
+  },
+  {
+    "id": 56,
+    "sentence": "He said, \"I don't waste time as now I am very busy.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He said that he didn't waste time as he was very busy now.",
+      "He said that he didn't waste time as he is very busy then.",
+      "He said that he didn't waste time as he is very busy now.",
+      "He said that he didn't waste time as he was very busy then."
+    ]
+  },
+  {
+    "id": 57,
+    "sentence": "The lady said, \"I am waiting for someone to come here and pick me up.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The lady said that she was waiting for someone to go here and pick her up.",
+      "The lady said that she was waiting for someone to go there and pick her up.",
+      "The lady said that she is waiting for someone to go there and pick her up.",
+      "The lady said that she is waiting for someone to go here and pick her up."
+    ]
+  },
+  {
+    "id": 58,
+    "sentence": "He said, \"She is driving a car now after many years.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He said that she now was driving a car after many years.",
+      "He said that she then is driving a car after many years.",
+      "He said that she was driving a car then after many years.",
+      "He said that she now is driving a car after many years."
+    ]
+  },
+  {
+    "id": 59,
+    "sentence": "The DJ said, \"The audience is enjoying the new music that I created just for this show.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The DJ said that the audience are enjoying the music that he has created just for that show.",
+      "The DJ said that the audience is enjoying the music that he had created just for this show.",
+      "The DJ said that the audience was enjoying the music that he had created just for this show.",
+      "The DJ said that the audience were enjoying the music that he had created just for that show."
+    ]
+  },
+  {
+    "id": 60,
+    "sentence": "My sister said, \"I am not going to college as now I have a study break.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My sister said that she was not going to college now as she had a study break.",
+      "My sister said that she is not going to college then as she had a study break.",
+      "My sister said that she is not going to college now as she had a study break.",
+      "My sister said that she was not going to college then as she had a study break."
+    ]
+  },
+  {
+    "id": 61,
+    "sentence": "The executive said to his senior, \"I have completed the work a week ago.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The executive said that he had completed the work a week ago.",
+      "The executive said that he has completed the work a week before.",
+      "The executive said that he had completed the work a week before.",
+      "The executive said that he has completed the work a week ago."
+    ]
+  },
+  {
+    "id": 62,
+    "sentence": "The sportsman said, \"I have won a prize in the race that was held here yesterday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The sportsman said that he had won a prize in the race that was held there yesterday.",
+      "The sportsman said that he had won a prize in the race that was held there a day before.",
+      "The sportsman says that he has won a prize in the race that was held there a day before.",
+      "The sportsman said that he has won a prize in the race that was held here yesterday."
+    ]
+  },
+  {
+    "id": 63,
+    "sentence": "The manager said, \"The janitor has washed these linen today.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The manager said that the janitor had washed those linen today.",
+      "The manager said that the janitor has washed those linen that day.",
+      "The manager said that the janitor had washed those linen that day.",
+      "The manager said that the janitor has washed those linen today."
+    ]
+  },
+  {
+    "id": 64,
+    "sentence": "Priya said, \"I have not met the boy hence I cannot make a decision.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Priya says that she had not met the boy hence she could not make a decision.",
+      "Priya said that she has not met the boy hence she could not make a decision.",
+      "Priya says that she has not met the boy hence she could not make a decision.",
+      "Priya said that she had not met the boy thence she could not make a decision."
+    ]
+  },
+  {
+    "id": 65,
+    "sentence": "The workman said, \"I have been working in this factory since the day it started.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The workman said that he had been working in that factory since the day it has started.",
+      "The workman said that he has been working in that factory since the day it had started.",
+      "The workman said that he had been working in that factory since the day it had started.",
+      "The workman said that he has been working in that factory since the day it has started."
+    ]
+  },
+  {
+    "id": 66,
+    "sentence": "Arun said, \"I bought this ring for my mother.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Arun said that he has bought that ring for his mother.",
+      "Arun said that he had bought this ring for his mother.",
+      "Arun said that he has bought this ring for his mother.",
+      "Arun said that he had bought that ring for his mother."
+    ]
+  },
+  {
+    "id": 67,
+    "sentence": "The cab driver said to me, \"I was waiting for you for a long time.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The cab driver said to me that he was waiting for me for a long time.",
+      "The cab driver said to me that he is waiting for me for a long time.",
+      "The cab driver said to me that he has been for me for a long time.",
+      "The cab driver said to me that he had been waiting for me for a long time."
+    ]
+  },
+  {
+    "id": 68,
+    "sentence": "Zakir said, \"Here is the book that I have been looking for.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Zakir said that there was the book that he has been looking for.",
+      "Zakir said that here was the book that he had been looking for.",
+      "Zakir said that there was the book that he had been looking for.",
+      "Zakir said that here was the book that he has been looking for."
+    ]
+  },
+  {
+    "id": 69,
+    "sentence": "Mother said to me, \"Will you come here and help me?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mother asks me to come there and help her.",
+      "Mother asked me if I would go there and help her.",
+      "Mother asked me to go here and help her.",
+      "Mother is asking me to come here and help her."
+    ]
+  },
+  {
+    "id": 70,
+    "sentence": "The clerk said, \"What can I do for you?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The clerk asked what he could do for me.",
+      "The clerk asked what he can do for me.",
+      "The clerk asked what he could be doing for me.",
+      "The clerk asked what he can be doing for me."
+    ]
+  },
+  {
+    "id": 71,
+    "sentence": "The professor told the class, \"I will give you a test on Friday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The professor told the class that he would give us a test on Friday.",
+      "The professor told the class that he will be giving us a test on Friday.",
+      "The professor told the class this that he would give us a test on Friday.",
+      "The professor told the class that he will give us a test on Friday."
+    ]
+  },
+  {
+    "id": 72,
+    "sentence": "They said, \"We have to complete this task by noon.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "They said that they had to complete that task by noon.",
+      "They said that they had to be completing that task by noon.",
+      "They said that we had to complete that task by noon.",
+      "They said that we had to be completing that task by noon."
+    ]
+  },
+  {
+    "id": 73,
+    "sentence": "Jyoti said to her sister, \"This dress is so pretty.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Jyoti said to her sister this that dress was so pretty.",
+      "Jyoti said to her sister that dress was so pretty.",
+      "Jyoti said to her sister that dress is so pretty.",
+      "Jyoti said to her sister this dress is so pretty."
+    ]
+  },
+  {
+    "id": 74,
+    "sentence": "Manisha said, \"I know her well.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Manisha said that she knew her well.",
+      "Manisha said if she knows her well.",
+      "Manisha said that she knows her.",
+      "Manisha says that she knew her well."
+    ]
+  },
+  {
+    "id": 75,
+    "sentence": "Ram said, \"I have cleared the clutter.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Ram told that he cleared the clutter.",
+      "Ram says that he cleared the clutter.",
+      "Ram said that he had cleared the clutter.",
+      "The clutter was cleared by Ram."
+    ]
+  },
+  {
+    "id": 76,
+    "sentence": "Sunder said, \"I will go to my sister's house today.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Sunder said that he went to his sister's house that day.",
+      "Sunder said that he has to go to his sister's house that day.",
+      "Sunder said that he goes to his sister's house that day.",
+      "Sunder said that he would go to his sister's house that day."
+    ]
+  },
+  {
+    "id": 77,
+    "sentence": "Nisha said to Sunil, \"I will not be going for the class.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Nisha told Sunil that she will not have gone for the class.",
+      "Nisha told Sunil that she does not go for the class.",
+      "Nisha told Sunil that she would not be going for the class.",
+      "Nisha told Sunil that she had not been going for the class."
+    ]
+  },
+  {
+    "id": 78,
+    "sentence": "Suresh said to me, \"I have been dancing for two hours.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Suresh told me that he has been dancing for two hours.",
+      "Suresh told me that he had been dancing for two hours.",
+      "Suresh told me that he is dancing for two hours.",
+      "Suresh told me that he was dancing for two hours."
+    ]
+  },
+  {
+    "id": 79,
+    "sentence": "Kumar said, \"I am unwell.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Kumar said that he had been unwell.",
+      "Kumar said that he is unwell.",
+      "Kumar said that he has been unwell.",
+      "Kumar said that he was unwell."
+    ]
+  },
+  {
+    "id": 80,
+    "sentence": "Rahim said, \"I will have completed my project.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rahim said that he would complete his project.",
+      "Rahim said that he would have completed his project.",
+      "Rahim said that he had completed his project.",
+      "Rahim said that he has completed his project."
+    ]
+  },
+  {
+    "id": 81,
+    "sentence": "He said to him, \"Is not your name Krishna?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He enquired of him whether his name was not Krishna.",
+      "He enquired him whether my name was not Krishna.",
+      "He enquires him whether his name was not Krishna.",
+      "He enquired him whether his name is not Krishna."
+    ]
+  },
+  {
+    "id": 82,
+    "sentence": "\"Call the first witness,\" said the judge.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The judge commands to call the first witness.",
+      "The judge pleaded to call the first witness.",
+      "The judge commanded to call the first witness.",
+      "The judge commanded him to call the first witness."
+    ]
+  },
+  {
+    "id": 83,
+    "sentence": "Prabha said to Prabhu, \"Prem was playing cards.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Prabha told Prabhu that Prem had been playing cards.",
+      "Prabha told Prabhu that Prem has been playing cards.",
+      "Prabha told Prabhu that Prem playing cards.",
+      "Prabha told Prabhu that Prem plays cards."
+    ]
+  },
+  {
+    "id": 84,
+    "sentence": "“Where do you live?” said the stranger.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The stranger enquired where I lived.",
+      "The stranger enquires where I lived.",
+      "The stranger enquired where I had been living.",
+      "The stranger enquires where I have been living."
+    ]
+  },
+  {
+    "id": 85,
+    "sentence": "Anbu said to Suresh, \"Priya is playing in the garden.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Anbu told Suresh that Priya was playing in the garden.",
+      "Anbu told Suresh that Priya played in the garden.",
+      "Anbu told Suresh that Priya plays in the garden.",
+      "Anbu told Suresh that Priya play in the garden."
+    ]
+  },
+  {
+    "id": 86,
+    "sentence": "Vasanth said to Praveen, \"I have eaten three apples.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Vasanth told Praveen that he ate three apples.",
+      "Vasanth told Praveen that he has eaten three apples.",
+      "Vasanth told Praveen that he had eaten three apples.",
+      "Vasanth told Praveen that he eats three apples."
+    ]
+  },
+  {
+    "id": 87,
+    "sentence": "Siva said, \"I have read the novel Pride and Prejudice.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Siva said that he have read the novel Pride and Prejudice.",
+      "Siva said that he reads the novel Pride and Prejudice.",
+      "Siva said that he had read the novel Pride and Prejudice.",
+      "Siva said that he read the novel Pride and Prejudice."
+    ]
+  },
+  {
+    "id": 88,
+    "sentence": "Anitha said, \"I have been learning Bharatanatyam for the past six months.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Anitha said that she had been learning Bharatanatyam for the past six months.",
+      "Anitha said that she has been learning Bharatanatyam for the past six months.",
+      "Anitha said that she is learning Bharatanatyam for the past six months.",
+      "Anitha said that she learnt Bharatanatyam for the past six months."
+    ]
+  },
+  {
+    "id": 89,
+    "sentence": "The teacher said to the students, \"Work hard now if you wish to have a better future.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The teacher advised the students to work hard then if they wished to have a better future.",
+      "The teacher advised the students to work hard now if they wished to have a better future.",
+      "The teacher advised the students to work hard then if they wish to have a better future.",
+      "The teacher advised the students to work hard now if they wish to have a better future."
+    ]
+  },
+  {
+    "id": 90,
+    "sentence": "\"Do you have anything to tell me, my angel?\" said her mother.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Her mother asked if she has anything to tell her.",
+      "Her mother asked if she had anything to tell me.",
+      "Her mother asked if she had anything to tell her.",
+      "Her mother asked if she has anything to tell me."
+    ]
+  },
+  {
+    "id": 91,
+    "sentence": "\"Bring me my spectacles,\" said grandfather.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Grandfather ordered me and brought him his spectacles.",
+      "Grandfather ordered me to have brought him his spectacles.",
+      "Grandfather ordered me to bring him his spectacles.",
+      "Grandfather ordered myself to bring his spectacles."
+    ]
+  },
+  {
+    "id": 92,
+    "sentence": "They said, \"We pray everyday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "They said that they have been praying every day.",
+      "They said that they pray every day.",
+      "They said that they prayed every day.",
+      "They said that we prayed every day."
+    ]
+  },
+  {
+    "id": 93,
+    "sentence": "They said, \"We were just taking pictures.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "They said that they had just took pictures.",
+      "They said that they had just been taking pictures.",
+      "They said that we had just been taking pictures.",
+      "They said that we had just took pictures."
+    ]
+  },
+  {
+    "id": 94,
+    "sentence": "They said, \"We will attend the performance tomorrow.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "They said that they would attend the performance the day after tomorrow.",
+      "They said that they will attend the performance the day after.",
+      "They said that they would attend the performance the next day.",
+      "They said that they will attend the performance the day after tomorrow."
+    ]
+  },
+  {
+    "id": 95,
+    "sentence": "She said to me, \"Will you be coming to the party tomorrow?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She asked me if I would be going to the party the day after tomorrow.",
+      "She asked me if I will be going to the party the following day.",
+      "She asked me if I will be going to the party the day after tomorrow.",
+      "She asked me if I would be going to the party the following day."
+    ]
+  },
+  {
+    "id": 96,
+    "sentence": "My friend said to me, \"I am willing to help you on a condition.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My friend said to me that he is willing to help me on a condition.",
+      "My friend said to me that he has had been willing to help me on a condition.",
+      "My friend said to me that he has been willing to help me on a condition.",
+      "My friend said to me that he was willing to help me on a condition."
+    ]
+  },
+  {
+    "id": 97,
+    "sentence": "\"Please don't leave me alone here,\" the kid told her mother.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The kid begged her mother not to leave her alone there.",
+      "The kid begs her mother not to leave her alone there.",
+      "The kid begged her mother not to leave her alone here.",
+      "The kid begs her mother not to leave her alone here."
+    ]
+  },
+  {
+    "id": 98,
+    "sentence": "Rohit said, \"I take a bath daily with cold water.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rohit says that he were taking a bath daily with cold water.",
+      "Rohit said that he has had been taking a bath daily with cold water.",
+      "Rohit said that he is taking a bath daily with cold water.",
+      "Rohit said that he took a bath daily with cold water."
+    ]
+  },
+  {
+    "id": 99,
+    "sentence": "The teacher said to the students, \"I will not tolerate such behaviour.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The teacher said to the students that he would not tolerate such behaviour.",
+      "The teacher said to the students that he would not be tolerating such behaviour.",
+      "The teacher said to the students that he will not tolerate such behaviour.",
+      "The teacher said to the students that he will be tolerating such behaviour."
+    ]
+  },
+  {
+    "id": 100,
+    "sentence": "Vaibhav said to me, \"Has your father returned from work?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Vaibhav asked me whether my father has returned from work.",
+      "Vaibhav asked me whether my father had returned from work.",
+      "Vaibhav asked me whether my father has had returned from work.",
+      "Vaibhav asked me whether my father had been returning from work."
+    ]
+  },
+  {
+    "id": 101,
+    "sentence": "Sahil said to me, \"Where will you go this holiday?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Sahil asked me where I would go that holiday.",
+      "Sahil asked me where I will go that holiday.",
+      "Sahil asked me where I will be going that holiday.",
+      "Sahil asked me where I would gone that holiday."
+    ]
+  },
+  {
+    "id": 102,
+    "sentence": "Heena said, \"I bought a dress yesterday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Heena said that she has bought a dress the day before.",
+      "Heena said that she had bought a dress the day before.",
+      "Heena said that she has bought a dress the day before yesterday.",
+      "Heena said that she had bought a dress the day before yesterday."
+    ]
+  },
+  {
+    "id": 103,
+    "sentence": "He said, \"I saw the movie yesterday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He said that he has seen the movie the day before.",
+      "He said that he had seen the movie the day before.",
+      "He said that he had seen the movie the day before yesterday.",
+      "He said that I have seen the movie the day before."
+    ]
+  },
+  {
+    "id": 104,
+    "sentence": "The manager said to the executive, \"Today you will come along with me to meet the client.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The manager said to the executive that day he would have to go along with him to meet the client.",
+      "The manager said to the executive that day he would have to go along with him to meet the client.",
+      "The manager said to the executive that day he will have to go along with him to meet the client.",
+      "The manager said to the executive that day he would have to go along with him to meet the client."
+    ]
+  },
+  {
+    "id": 105,
+    "sentence": "Vaibhav said to me, \"We have to win this game.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Vaibhav said to me that they have to win that game.",
+      "Vaibhav said to me that we had to win that game.",
+      "Vaibhav said to me that we have to win that game.",
+      "Vaibhav said to me that they had to win that game."
+    ]
+  },
+  {
+    "id": 106,
+    "sentence": "Nasir asked his tutor, \"Do I need to learn these formulas?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Nasir asked his tutor if he has to learn those formulas.",
+      "Nasir asked his tutor if he had to learn those formulas.",
+      "Nasir asked his tutor if he didn't have to learn those formulas.",
+      "Nasir asked his tutor hadn't he to learn those formulas."
+    ]
+  },
+  {
+    "id": 107,
+    "sentence": "Pritam said, \"These pastries are yummy.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Pritam said that those pastries are yummy.",
+      "Pritam said this that those pastries were yummy.",
+      "Pritam said that those pastries were yummy.",
+      "Pritam said that these pastries are yummy."
+    ]
+  },
+  {
+    "id": 108,
+    "sentence": "The constable said, \"I saw a bullet mark here.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The constable said that he sees a bullet mark there.",
+      "The constable said that he had seen a bullet mark there.",
+      "The constable says that he saw a bullet mark here.",
+      "The constable said that he sees a bullet mark here."
+    ]
+  },
+  {
+    "id": 109,
+    "sentence": "Mother said to my sister, \"Tell him sorry right now.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mother said to my sister to tell him sorry right then.",
+      "Mother said to my sister to tell him sorry right now.",
+      "Mother says to my sister to tell him sorry right then.",
+      "Mother says to my sister to tell him sorry right now."
+    ]
+  },
+  {
+    "id": 110,
+    "sentence": "I said to him, \"I am too tired now to go out with you.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "I said to him that I was too tired then to go out with him.",
+      "I said to him that I am too tired then to go out with him.",
+      "I said to him that I was too tired then to go out with you.",
+      "I said to him that I am too tired then to go out with you."
+    ]
+  },
+  {
+    "id": 111,
+    "sentence": "The coach said, \"Well done! You have made me proud.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The coach applauded and said that he has made him proud.",
+      "The coach applauds and says well done that he had made him proud.",
+      "The coach applauded, says well done and that he has made him proud.",
+      "The coach applauded and said that he had made him proud."
+    ]
+  },
+  {
+    "id": 112,
+    "sentence": "The girl said to her partner, \"You will have to dance better than this tomorrow.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The girl said to her partner that he will have to dance better than that the day after.",
+      "The girl said to her partner that he would have to dance better than this the day after.",
+      "The girl said to her partner that he would have to dance better than that the day after.",
+      "The girl said to her partner that he will have to dance better than this the day after."
+    ]
+  },
+  {
+    "id": 113,
+    "sentence": "The agent said, \"This is the best house on this street.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The agent said this that was the best house on that street.",
+      "The agent said that that was the best house on that street.",
+      "The agent said that this is the best house on that street.",
+      "The agent said this that is the best house on that street."
+    ]
+  },
+  {
+    "id": 114,
+    "sentence": "My mother said to me, \"You will regret your actions.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My mother warned me that I will regret my actions.",
+      "My mother warned me that I will be regretting my actions.",
+      "My mother warned me that I would regret my actions.",
+      "My mother warned me that I would be regretting my actions."
+    ]
+  },
+  {
+    "id": 115,
+    "sentence": "Param said, \"I am going to the gym now.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Param said that he is going to the gym then.",
+      "Param said that he has gone to the gym then.",
+      "Param said that he had gone to the gym then.",
+      "Param said that he was going to the gym then."
+    ]
+  },
+  {
+    "id": 116,
+    "sentence": "Shyam said, \"My master is eating.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Shyam inform that his master is eating.",
+      "Shyam say that his master is eating.",
+      "Shyam and his master was eating.",
+      "Shyam said that his master was eating."
+    ]
+  },
+  {
+    "id": 117,
+    "sentence": "Rohan said, \"I am going.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rohan had said he is gone.",
+      "Rohan is going.",
+      "Rohan said that he is gone.",
+      "Rohan said that he was going."
+    ]
+  },
+  {
+    "id": 118,
+    "sentence": "Tina said to him, \"Please wait here till I return.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Tina asked him to stay there.",
+      "Tina requested him to wait there till she returned.",
+      "Tina request him to wait until she comes.",
+      "Tina says he should wait there till her returned."
+    ]
+  },
+  {
+    "id": 119,
+    "sentence": "She said, \"German is easy to teach.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She says German is easy.",
+      "She told us that German was easy to teach.",
+      "She informed German was easy to teach.",
+      "She said that German was easy to teach."
+    ]
+  },
+  {
+    "id": 120,
+    "sentence": "Sita said, \"Will he listen to such a man?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Sita said would we listen to such a man.",
+      "Sita ask if he would listen to such a man.",
+      "Sita said would I listen to such a man.",
+      "Sita asked whether he would listen to such a man."
+    ]
+  },
+  {
+    "id": 121,
+    "sentence": "Rita said, \"Alas! I am undone.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rita said that she was undone.",
+      "Rita told me that she was undone.",
+      "Rita exclaimed sadly that she was undone.",
+      "Rita said that alas, she was undone."
+    ]
+  },
+  {
+    "id": 122,
+    "sentence": "\"Are you going to eat with us?\" he asked.",
+    "type": "Direct to Indirect",
+    "options": [
+      "He asked me if I was going to eat with them.",
+      "He asked whether he was going to eat with them.",
+      "He inquired whether I am going to eat or not.",
+      "She asked me if he was going to eat with them."
+    ]
+  },
+  {
+    "id": 123,
+    "sentence": "His mother said, \"I have not seen him for years.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She has not seen him for years said his mother.",
+      "His mother had not seen him for years.",
+      "His mother told him she had not saw him for years.",
+      "His mother said that she had not seen him for years."
+    ]
+  },
+    {
+    "id": 124,
+    "sentence": "Kavita asked me, \"How is your mother?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Kavita asked me how was my mother.",
+      "Kavita asked her how my mother is.",
+      "Kavita asked how mother was.",
+      "Kavita asked me how my mother was."
+    ]
+  },
+  {
+    "id": 125,
+    "sentence": "\"Stop!\" shouted the Inspector to his men.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The Inspector shouted to his men to stop.",
+      "The Inspector asked them to stop.",
+      "The men were asked to stop by the Inspector.",
+      "The Inspector asked if men would stop."
+    ]
+  },
+  {
+    "id": 126,
+    "sentence": "She said, \"Let us wait for the seat.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She proposed that they should wait for the seat.",
+      "She proposed that they could wait for the seat.",
+      "She proposed to wait for the seat.",
+      "She proposed let us wait for the seat."
+    ]
+  },
+  {
+    "id": 127,
+    "sentence": "Jane said, \"Cheer up, father. I’ll go and get work somewhere.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Jane asked her father to cheer up as she will go and get work somewhere.",
+      "Jane asked her father to cheer up because she would go and get work somewhere.",
+      "Jane asks her father to cheer up as she would get job.",
+      "Jane asked her father to cheer up as she would go and get work somewhere."
+    ]
+  },
+  {
+    "id": 128,
+    "sentence": "He said, \"I am hungry.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He informed about his hunger.",
+      "He says he was hungry.",
+      "He was feeling hungry.",
+      "He said that he was hungry."
+    ]
+  },
+  {
+    "id": 129,
+    "sentence": "\"Do you write with left hand?\" she asked.",
+    "type": "Direct to Indirect",
+    "options": [
+      "She asked whether I wrote with left hand.",
+      "She asked that did I wrote with left hand.",
+      "She asked about my writing.",
+      "She ask if I write with my left hand."
+    ]
+  },
+  {
+    "id": 130,
+    "sentence": "Bunty says, \"I may not come for the practice today.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Bunty says that he may not come for the practice today.",
+      "Bunty says that he might not come for practice today.",
+      "Bunty said that he might not come for the practice that day.",
+      "Bunty told me he won’t come to the practice."
+    ]
+  },
+  {
+    "id": 131,
+    "sentence": "The visitor enquired, \"When is the next train?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The visitor enquired about the next train.",
+      "The visitor enquired when the next train was.",
+      "The visitor asked when is the next train.",
+      "The visitor was interested in the next train."
+    ]
+  },
+  {
+    "id": 132,
+    "sentence": "The wolf cried out to the hound, \"A thought has just come into my head.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The wolf cried out that a thought had just came into his head.",
+      "The wolf cried out to the hound that a thought had just come into his head.",
+      "The wolf cried out about a thought into his head to the hound.",
+      "The wolf told hound about a thought into his head."
+    ]
+  },
+  {
+    "id": 133,
+    "sentence": "He said to me, \"I go for a walk daily.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He told me that he went for a walk daily.",
+      "He told me that he goes for a walk daily.",
+      "He told me that he daily went for a walk.",
+      "He told me that he had gone for a walk daily."
+    ]
+  },
+    {
+    "id": 134,
+    "sentence": "The Queen was deeply affected, and said to the old woman, \"What can I do for you?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The Queen asked the old woman if she could do something for her.",
+      "The Queen was deeply affected and asked the old woman what she could do for her.",
+      "The Queen was deeply affected so she asked the old woman what her majesty could do for her.",
+      "The Queen asked the old woman if she could help her as she was deeply affected."
+    ]
+  },
+  {
+    "id": 135,
+    "sentence": "Ram said, \"I met her yesterday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Ram said that he met her yesterday.",
+      "Ram said he meet her the day before.",
+      "Ram said that he had met her the day before.",
+      "Ram met her the day before."
+    ]
+  },
+  {
+    "id": 136,
+    "sentence": "The tutor said, \"The sun rises in the East.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The tutor says the sun rises in the East.",
+      "The tutor said that the sun rose in the East.",
+      "The tutor said that the sun has been rising in the East.",
+      "The tutor said that the sun rises in the East."
+    ]
+  },
+  {
+    "id": 137,
+    "sentence": "She says, \"She wants to buy this dress.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She said she want to buy this dress.",
+      "She wanted to buy this dress, she said.",
+      "She said that she want to buy this dress.",
+      "She says that she wants to buy this dress."
+    ]
+  },
+  {
+    "id": 138,
+    "sentence": "Anuj said, \"I need your help now.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Anuj needed my help then.",
+      "Anuj said that he needed my help then.",
+      "Anuj said he needed my help now.",
+      "Anuj says he needed my help now."
+    ]
+  },
+  {
+    "id": 139,
+    "sentence": "Anjali said, \"I eat two guavas.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Anjali say she eat two guavas.",
+      "Two guavas are eaten by Anjali.",
+      "Anjali said that she ate two guavas.",
+      "Anjali said she eat two guavas."
+    ]
+  },
+  {
+    "id": 140,
+    "sentence": "Pooja said, \"I write a novel.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Pooja says she wrote a novel.",
+      "Pooja said that she wrote a novel.",
+      "Pooja wrote a novel.",
+      "A novel was written by Pooja."
+    ]
+  },
+  {
+    "id": 141,
+    "sentence": "Karan said to us, \"You should leave early for the airport so as to reach on time.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Karan told us that we would leave early for the airport so as to reach on time.",
+      "Karan told us that we had to leave early for the airport so as to reach on time.",
+      "Karan told us to have left early for the airport so as to reach on time.",
+      "Karan told us that we should leave early for the airport so as to reach on time."
+    ]
+  },
+  {
+    "id": 142,
+    "sentence": "Taru asked me, \"What did you buy from the Mall yesterday?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Taru asked me what I had bought from the Mall the previous day.",
+      "Taru asked me what did you buy from the Mall yesterday.",
+      "Taru asked me what I was buying from the Mall the previous day.",
+      "Taru asked me what had I bought from the Mall the previous day."
+    ]
+  },
+  {
+    "id": 143,
+    "sentence": "Kavya said to her mother, \"Please let me wear your green silk saree today.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Kavya entreated her mother to let her wear her green silk saree that day.",
+      "Kavya told her mother that she wanted to wear her green silk saree that day.",
+      "Kavya asked her mother if she could wear her green silk saree that day.",
+      "Kavya requested her mother to let her wear her green silk saree that day."
+    ]
+  },
+  {
+    "id": 144,
+    "sentence": "My mother said to me, \"You are late again.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My mother told me that you are late again.",
+      "My mother told me that I was late again.",
+      "My mother told me that I am late again.",
+      "My mother told me that you were late again."
+    ]
+  },
+    {
+    "id": 145,
+    "sentence": "“I am tired,” he says every evening.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Every evening he says that he is tired.",
+      "Every evening he said that he was tired.",
+      "Every evening he says that I am tired.",
+      "Every evening he said that he is tired."
+    ]
+  },
+  {
+    "id": 146,
+    "sentence": "Chettiar said to me, \"You may return the money next month.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Chettiar told me that I am to return the money the coming month.",
+      "Chettiar rejected that I might return the money the coming month.",
+      "Chettiar acceded that I return the money the next month.",
+      "Chettiar acceded that I might return the money the coming month."
+    ]
+  },
+  {
+    "id": 147,
+    "sentence": "The bookie said, \"Alas! I have lost all my fortune.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The bookie said alas he had lost all his fortune.",
+      "The bookie lamented that he had lost all his fortune.",
+      "The bookie observed that he has lost all his fortune.",
+      "The bookie accepted that he have lost all his fortune."
+    ]
+  },
+  {
+    "id": 148,
+    "sentence": "Mary asked her husband, \"Why have you been avoiding me since yesterday?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mary wanted to know from her husband the reason he is avoiding her since the previous day.",
+      "Mary questioned her husband as to why he has been avoiding her since the previous day.",
+      "Mary wanted to know from her husband as to why he had been avoiding her since the previous day.",
+      "Mary asked her husband as to why he had been avoiding her since yesterday."
+    ]
+  },
+  {
+    "id": 149,
+    "sentence": "“I am not happy about the announcement,” Bob Tilman said.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Bob Tilman confessed that he is not happy about the announcement.",
+      "Bob Tilman told that he was not happy about the announcement.",
+      "Bob Tilman confessed that he was not happy about the announcement.",
+      "Bob Tilman says that he was not happy about the announcement."
+    ]
+  },
+  {
+    "id": 150,
+    "sentence": "John said, \"When I am bored, I cook.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "John said that when he was bored, he cooked.",
+      "John said that when he is bored, he will cook.",
+      "John said that when he cooked he was bored.",
+      "John says that when he is bored, he cooks."
+    ]
+  },
+  {
+    "id": 151,
+    "sentence": "The priest said to me, \"You have committed a cardinal sin.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The priest told me that I had committed a cardinal sin.",
+      "The priest is saying I have committed a cardinal sin.",
+      "The priest said if I will be committing a cardinal sin.",
+      "The priest told me I am committing a cardinal sin."
+    ]
+  },
+  {
+    "id": 152,
+    "sentence": "Her mother said, \"We must have a party to celebrate your promotion.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Her mother said that they must have a party to celebrate her promotion.",
+      "Her mother said she had been planning a party for celebrating her promotion.",
+      "Her mother says that they should plan a party to celebrate her promotion.",
+      "Her mother told that they would be having a party to celebrate her promotion."
+    ]
+  },
+  {
+    "id": 153,
+    "sentence": "My uncle said, \"Just my luck! I’ve missed the bus again.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My uncle exclaimed that he was unlucky as he had missed the bus again.",
+      "My uncle said he was lucky as he had missed the bus again.",
+      "My uncle exclaimed that he is once again lucky to miss the bus.",
+      "My uncle says that he is unlucky as he has missed the bus again."
+    ]
+  },
+  {
+    "id": 154,
+    "sentence": "Kiran said, \"I will reach Patna tomorrow morning.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Kiran said that she will reach Patna tomorrow morning.",
+      "Kiran says that she will reach Patna tomorrow morning.",
+      "Kiran said that I will reach Patna the next morning.",
+      "Kiran said that she would reach Patna the next morning."
+    ]
+  },
+  {
+    "id": 155,
+    "sentence": "The airline official said, \"We are extremely sorry that the flight has been delayed due to heavy floods.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The airline is extremely sorry that the flight will be delayed due to heavy floods.",
+      "The airline official announces they are extremely sorry that the flight has been delayed due to heavy floods.",
+      "The airline official announced that they were extremely sorry that the flight had been delayed due to heavy floods.",
+      "The airline official announced that we are extremely sorry that the flight has been delayed due to heavy floods."
+    ]
+  },
+  {
+    "id": 156,
+    "sentence": "Rita said, \"I am not feeling well.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rita said that she was not feeling well.",
+      "Rita said she will not be feeling well.",
+      "Rita said she is not feeling well.",
+      "Rita says that I’m not feeling well."
+    ]
+  },
+  {
+    "id": 157,
+    "sentence": "“You speak such good English!” said Mary.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mary exclaimed that I speak so much good English.",
+      "Mary told me I was speaking much good English.",
+      "Mary exclaimed that I spoke very good English.",
+      "Mary exclaimed that I was speaking very good English."
+    ]
+  },
+  {
+    "id": 158,
+    "sentence": "The lawyer says, \"My client is innocent.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The lawyer said that his client is innocent.",
+      "The lawyer says that his client is innocent.",
+      "The lawyer says my client was innocent.",
+      "The lawyer said that my client is innocent."
+    ]
+  },
+    {
+    "id": 159,
+    "sentence": "“Let’s go out for dinner. I’ve been home this whole week,” said Anna.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Anna said to me that we must go out for dinner as she has been home that whole week.",
+      "Anna told me she was wanting to go out for dinner and had been home this whole week.",
+      "Anna told me she is at home the whole week and would like to go out for dinner.",
+      "Anna suggested that we go out for dinner as she had been home that whole week."
+    ]
+  },
+  {
+    "id": 160,
+    "sentence": "“Go on, apply for the job,” said my best friend.",
+    "type": "Direct to Indirect",
+    "options": [
+      "My best friend says I should go off and apply for the job.",
+      "My best friend had said to me to go on and apply for the job.",
+      "My best friend encouraged me to apply for the job.",
+      "You should apply for the job my best friend said."
+    ]
+  },
+  {
+    "id": 161,
+    "sentence": "“You should lock your car as there have been some instances of theft,” said Anil.",
+    "type": "Direct to Indirect",
+    "options": [
+      "There have been instances of theft so I should lock my car was told to me by Anil.",
+      "Anil advised me that I should lock my car as there had been some instances of theft.",
+      "There have been some instances of theft so I should have locked my car said Anil.",
+      "Anil said he must lock his car because there were some instances of theft."
+    ]
+  },
+  {
+    "id": 162,
+    "sentence": "The Queen said to the ministers, \"Cut off the prisoner’s head!\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The Queen ordered the ministers to cut off the prisoner’s head.",
+      "Screaming at the ministers the Queen is ordering to cut off the prisoner’s head.",
+      "The prisoner’s head would be cut off screamed the queen to the ministers.",
+      "The Queen told the ministers that to cut off the prisoner’s head."
+    ]
+  },
+  {
+    "id": 163,
+    "sentence": "Mother said, \"Sonam, don’t throw tantrums.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mother warns Sonam not to throw tantrums.",
+      "Mother said that Sonam is not to throw tantrums.",
+      "Mother told Sonam not to throw tantrums.",
+      "Mother says to Sonam not to throw tantrums."
+    ]
+  },
+  {
+    "id": 164,
+    "sentence": "Reena said, \"What a lovely scene! I wish I could stay here forever!\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Reena said with happiness that was a lovely scene. She wishes to stay there forever.",
+      "Reena exclaimed that it was a lovely scene. She further wished that she could stay there forever.",
+      "Reena says this is a lovely scene. I wish I could stay there forever.",
+      "Reena said what a lovely scene! She wished she could stay here forever."
+    ]
+  },
+  {
+    "id": 165,
+    "sentence": "The salesman said to me, \"All the gift items are new. We received this consignment yesterday.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The salesman informed me that all the gift items were new. He further said that they had received that consignment the day before.",
+      "The salesman informed to me about all the gift items that they were new. They received that consignment the day before.",
+      "The salesman told me that all the gift items are new. He further said we received this consignment yesterday.",
+      "The salesman said to me that all the gift items are new. We received that consignment yesterday."
+    ]
+  },
+  {
+    "id": 166,
+    "sentence": "The teacher said to Rana, \"Have you completed the project?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The teacher asked Rana that if Rana has completed the project.",
+      "The teacher asks Rana have you completed the project.",
+      "The teacher asked Rana whether he had completed the project.",
+      "The teacher asks Rana will you complete the project."
+    ]
+  },
+  {
+    "id": 167,
+    "sentence": "Sonia says, \"I love the monsoons.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Sonia said that she loved the monsoons.",
+      "Sonia says that she loves the monsoons.",
+      "Sonia says that she is loving the monsoons.",
+      "Sonia said that she was loving the monsoons."
+    ]
+  },
+  {
+    "id": 168,
+    "sentence": "My boss said, \"Do you think you can complete the report within five days?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My boss said to me do you think I can complete the report within five days?",
+      "My boss asked me whether I thought I could complete the report within five days.",
+      "My boss said to me if I think I can complete the report within five days.",
+      "My boss says do you think you can complete the report within five days?"
+    ]
+  },
+  {
+    "id": 169,
+    "sentence": "“Don’t overspeed at night,” I said to Irina.",
+    "type": "Direct to Indirect",
+    "options": [
+      "I warned Irina not to overspeed at night.",
+      "Over speeding at night is not good, I said to Irina.",
+      "I warn to Irina not to overspeed at night.",
+      "I had been warning Irina not to overspeed at night."
+    ]
+  },
+  {
+    "id": 170,
+    "sentence": "Mary said, \"I have to be there by 10 am tomorrow.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mary says to me that she has to be there by 10 am.",
+      "Mary tells me she has to be there by 10 am tomorrow.",
+      "Mary told me that she had to be there by 10 am the next day.",
+      "Mary is telling me that she has to be there by 10 am tomorrow."
+    ]
+  },
+  {
+    "id": 171,
+    "sentence": "Sumit said, \"I will be leaving for London this summer so I can meet you only when I return.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Sumit said he will be leaving for London this summer and he could meet him only when he returned.",
+      "Sumit said he will go to London this summer and he would meet me only when he will be returning.",
+      "Sumit said that he would be leaving for London that summer and he could meet me only when he returned.",
+      "Sumit said he will have gone to London that summer and could meet me only when he returned."
+    ]
+  },
+    {
+    "id": 172,
+    "sentence": "Mother said to Kavya, \"Turn on the light.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mother told Kavya to turn on the light.",
+      "Mother asked Kavya if the light was on.",
+      "Kavya told mother to turn on the light.",
+      "Mother requested Kavya to please on the light."
+    ]
+  },
+  {
+    "id": 173,
+    "sentence": "Pushpa said, \"I arrived at the workshop an hour ago but nothing much is happening here.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Pushpa observed that though she had arrived at the workshop an hour ago but nothing much is happening there.",
+      "Pushpa said that she has arrived at the workshop an hour earlier but nothing much is happening here.",
+      "Pushpa asked why she had to arrive at the workshop an hour before when nothing much was happening there.",
+      "Pushpa said that she had arrived at the workshop an hour before but nothing much was happening there."
+    ]
+  },
+  {
+    "id": 174,
+    "sentence": "The teacher said to Mohit, \"Go to your seat and sit quietly.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The teacher requested Mohit to go to his seat and sit quietly.",
+      "The teacher instructed Mohit to go to his seat and sit quietly.",
+      "The teacher instructed Mohit that he must go to his seat and sit quietly.",
+      "The teacher told Mohit to go to your seat and sit quietly."
+    ]
+  },
+  {
+    "id": 175,
+    "sentence": "Rahul said, \"I can speak French.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rahul said that he should speak French.",
+      "Rahul said that he can speak French.",
+      "Rahul said that he could speak French.",
+      "Rahul said that I can speak French."
+    ]
+  },
+  {
+    "id": 176,
+    "sentence": "The lady said to the plumber, \"Why didn’t you come last week?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The lady asked the plumber why he hadn’t come the previous week and told him that the RO machine had been making some noise for the last ten days.",
+      "The lady asked the plumber why he didn’t come last week and told him that the RO machine has been making some noise for the last ten days.",
+      "The lady asked the plumber if he had come the previous week and told him that the RO machine had been making some noise for the last ten days.",
+      "The lady scolded the plumber for not coming last week and told him that the RO machine was making some noise for the last ten days."
+    ]
+  },
+  {
+    "id": 177,
+    "sentence": "When Rohit saw Saurabh, he said, \"Oh, how tall you have grown!\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "When Rohit saw Saurabh, he exclaimed that he had grown very tall.",
+      "When Rohit saw Saurabh, he exclaimed how tall Saurabh was grown.",
+      "When Rohit saw Saurabh, he observed that he had grown very tall.",
+      "When Rohit saw Saurabh, he commented that he has grown very tall."
+    ]
+  },
+  {
+    "id": 178,
+    "sentence": "Addressing a public meeting, Rajnath Singh said, \"Whatever talks take place, they will be on the issue of Pakistan occupied Kashmir.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Addressing a public meeting, Rajnath Singh asked whatever talks took place, why they were not on the issue of Pakistan occupied Kashmir.",
+      "Addressing a public meeting, Rajnath Singh said that whatever talks take place, they will be on the issue of Pakistan occupied Kashmir.",
+      "Addressing a public meeting, Rajnath Singh announced that whatever talks took place, they would be on the issue of Pakistan occupied Kashmir.",
+      "Addressing a public meeting, Rajnath Singh said that if there were talks, they had to be on the issue of Pakistan occupied Kashmir."
+    ]
+  },
+  {
+    "id": 179,
+    "sentence": "Rani said, \"We are organizing a cleaning programme in the colony tomorrow.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rani said that they were organizing a cleaning programme in the colony the next day.",
+      "Rani asked why they were organizing a cleaning programme in the colony the next day.",
+      "Rani said that we are organizing a cleaning programme in the colony tomorrow.",
+      "Rani told that we were organizing a cleaning programme in the colony that day."
+    ]
+  },
+  {
+    "id": 180,
+    "sentence": "Major Chaudhry said to the aspirants, \"Does everyone understand English?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Major Chaudhry informed the aspirants that everyone understood English.",
+      "Major Chaudhry asked the aspirants whether everyone understood English.",
+      "Major Chaudhry told the aspirants that everyone should understand English.",
+      "Major Chaudhry asked the aspirants whether everyone understands English."
+    ]
+  },
+  {
+    "id": 181,
+    "sentence": "The Finance Minister said, \"The Government will trim the corporate tax gradually to 25 percent for all companies.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The Finance Minister said that the Government would trim the corporate tax gradually to 25 percent for all companies.",
+      "The Finance Minister asked the Government if it would trim the corporate tax gradually to 25 percent for all companies.",
+      "The Finance Minister ordered the Government to trim the corporate tax gradually to 25 percent for all companies.",
+      "The Finance Minister told that the Government will trim the corporate tax gradually to 25 percent for all companies."
+    ]
+  },
+    {
+    "id": 182,
+    "sentence": "I said to Taru, \"The tyre of my car is punctured.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "I told Taru that the tyre of my car is punctured.",
+      "Taru told me that the tyre of my car was punctured.",
+      "I told Taru that the tyre of my car was punctured.",
+      "I told Taru that the tyre of her car is punctured."
+    ]
+  },
+  {
+    "id": 183,
+    "sentence": "Avika said to her mother, \"You are very late today.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Avika asked her mother why she was late today.",
+      "Avika told her mother that she is very late that day.",
+      "Avika told her mother that she was very late that day.",
+      "Avika told her mother that you were very late that day."
+    ]
+  },
+  {
+    "id": 184,
+    "sentence": "Anshul said, \"Should we go to the zoo today?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Anshul told that they should go to the zoo that day.",
+      "Anshul wondered if they should go to the zoo that day.",
+      "Anshul asked if we should go to the zoo today.",
+      "Anshul announced that they would go to the zoo that day."
+    ]
+  },
+  {
+    "id": 185,
+    "sentence": "My sister said, \"What time will the train reach Bhopal?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My sister asked what time the train reaches Bhopal.",
+      "My sister asked what time the train will reach Bhopal.",
+      "My sister asked what time the train reached Bhopal.",
+      "My sister asked what time the train would reach Bhopal."
+    ]
+  },
+  {
+    "id": 186,
+    "sentence": "Mrs. Sethi said to her students, \"Would you like to go outdoors for the yoga class?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mrs. Sethi asked her students whether they would like to go outdoors for the yoga class.",
+      "Mrs. Sethi asked her students about their liking to go outdoors for the yoga class.",
+      "Mrs. Sethi told her students that they would like to go outdoors for the yoga class.",
+      "Mrs. Sethi said to her students will you like to go outdoors for the yoga class?"
+    ]
+  },
+  {
+    "id": 187,
+    "sentence": "“Let’s not go out today. It’s going to be a hot day,” he said to me.",
+    "type": "Direct to Indirect",
+    "options": [
+      "He suggested that we shouldn’t be going out that day as it is going to be a hot day.",
+      "He is suggesting that they shouldn’t go out today as it was going to be a hot day.",
+      "He suggested that we shouldn’t go out that day as it was going to be a hot day.",
+      "He had suggested that they shouldn’t go out today as it was going to be a hot day."
+    ]
+  },
+  {
+    "id": 188,
+    "sentence": "Kapil said to his team, \"If you don’t perform well in this match, you will not get a place in the team.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Kapil told to his team if you don’t perform well in this match, you will not get a place in the team.",
+      "Kapil warned his team that if they didn’t perform well in that match, they would not get a place in the team.",
+      "Kapil warned to his team, if they don’t perform well in this match, they will not get a place in the team.",
+      "Kapil said to his team that if you don’t perform well in that match, you will not get a place in the team."
+    ]
+  },
+  {
+    "id": 189,
+    "sentence": "“I will be twenty five tomorrow,” said Vidushi.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Vidushi is saying that she will be twenty five by tomorrow.",
+      "Vidushi said that she would be twenty five the next day.",
+      "Vidushi will say that she would be twenty five tomorrow.",
+      "Vidushi had told me she would be twenty five the next day."
+    ]
+  },
+  {
+    "id": 190,
+    "sentence": "The interviewer said, \"Rajiv, I’m impressed with you.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The interviewer says I am impressed with Rajiv.",
+      "The interviewer told Rajiv that he is impressed with him.",
+      "The interviewer told Rajiv that he was impressed with him.",
+      "The interviewer said to Rajiv that he had been impressed with you."
+    ]
+  },
+  {
+    "id": 191,
+    "sentence": "The old lady said, \"May God bless you and give you all you desire in life!\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The old lady says that may God bless you and give you all you desire in life.",
+      "The old lady said that God may bless you and give you all you desire in life.",
+      "The old lady said that God will bless me and give me all I desire in life.",
+      "The old lady wished that God would bless me and give me all I desired in life."
+    ]
+  },
+  {
+    "id": 192,
+    "sentence": "“Don’t use your mobile while crossing the road,” I said to him.",
+    "type": "Direct to Indirect",
+    "options": [
+      "I told him not to use his mobile while crossing the road.",
+      "I advised him not to use his mobile while crossing the road.",
+      "I am advising him not to use his mobile while crossing the road.",
+      "I said him not to use his mobile while crossing the road."
+    ]
+  },
+  {
+    "id": 193,
+    "sentence": "She said to her friend, \"Where did you go yesterday?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She asked her friend where she had gone the day before.",
+      "She asked her friend where had she gone the day before.",
+      "She asked her friend where she was going yesterday.",
+      "She asked her friend where she went yesterday."
+    ]
+  },
+  {
+    "id": 194,
+    "sentence": "The airport helper said, \"Should I fetch you a trolley?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The helper had said he would be fetching me a trolley.",
+      "The airport helper is asking me that he will fetch a trolley.",
+      "The airport helper asked me if he should fetch me a trolley.",
+      "The airport helper said he will go to fetch me a trolley."
+    ]
+  },
+    {
+    "id": 195,
+    "sentence": "The sales girl said, \"Forgive me but this dress is already sold.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The sales girl said that she is sorry but this dress is already sold.",
+      "The sales girl begged forgiveness and regretted that the dress was already sold.",
+      "The sales girl asked to be forgiven but this dress was already sold.",
+      "The sales girl said to me to forgive her but this dress was sold."
+    ]
+  },
+  {
+    "id": 196,
+    "sentence": "“If the rains don’t stop we will have to move the animals to another place,” said the zoo official.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The zoo official had been saying that if the rains don’t stop they would have to move the animals to another place.",
+      "The zoo official said that if the rains didn’t stop they would have to move the animals to another place.",
+      "The zoo official will say that if the rains don’t stop they will have to move the animals to another place.",
+      "The zoo official said that if the rains are not stopping they would have to move the animals to another place."
+    ]
+  },
+  {
+    "id": 197,
+    "sentence": "The art teacher said, \"I never tell my students what to draw. I tell them to imagine.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The art teacher said that I never tell my students what to draw. I tell them to imagine.",
+      "The art teacher said that she never told her students what to draw. She told them to imagine.",
+      "The art teacher is saying that she never tells her students what to draw. She tells them to imagine.",
+      "The art teacher had said that she never told her students what to draw. She tells them to imagine."
+    ]
+  },
+  {
+    "id": 198,
+    "sentence": "“Reena, I’m surprised you want dinner as we had such a late lunch,” said Rajat.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rajat had told Reena that he was surprised that she had wanted dinner as they were having such a late lunch.",
+      "Rajat was saying to Reena that he was surprised that she was wanting dinner as they had been having such a late lunch.",
+      "Rajat had been telling Reena that he was surprised that she wants dinner as they had had such a late lunch.",
+      "Rajat told Reena that he was surprised that she wanted dinner as they had had such a late lunch."
+    ]
+  },
+  {
+    "id": 199,
+    "sentence": "“Can you pay him in cash?” she said to me.",
+    "type": "Direct to Indirect",
+    "options": [
+      "She asked me if he could pay me in cash.",
+      "She asked him if I can pay him in cash.",
+      "She asked me if I could pay him in cash.",
+      "She asked him if I should pay him in cash."
+    ]
+  },
+  {
+    "id": 200,
+    "sentence": "“If I had the manual of the new T.V. I would have fixed it by now,” said Uma.",
+    "type": "Direct to Indirect",
+    "options": [
+      "Uma said that if she was having the manual of the new T.V she would have fixed it by now.",
+      "Uma said that if she has the manual of the new T.V she will have fixed it by then.",
+      "Uma said that if she will have the manual of the new T.V she would have fixed it by then.",
+      "Uma said that if she had had the manual of the new T.V she would have fixed it by then."
+    ]
+  },
+  {
+    "id": 201,
+    "sentence": "The commander said, \"Keep marching till you reach the border.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The commander ordered his men to keep marching till they reached the border.",
+      "The commander requested the men keep marching till they reach the border.",
+      "The commander said the men should keep marching till they reach the border.",
+      "The commander said to his men they should keep marching till you reach the border."
+    ]
+  },
+  {
+    "id": 202,
+    "sentence": "I said, \"Mother please let me go out for a movie with my friends.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He requested his mother she may please let him go out for a movie with his friends.",
+      "I said to mother you please let me go out for a movie with my friends.",
+      "She is begging her mother to please let me go out for a movie with my friends.",
+      "I begged my mother to let me go out for a movie with my friends."
+    ]
+  },
+  {
+    "id": 203,
+    "sentence": "“Why is everybody leaving so early today?” said the manager.",
+    "type": "Direct to Indirect",
+    "options": [
+      "The manager asked why was everybody leaving so early that day.",
+      "The manager asked why everybody left so early that day.",
+      "The manager asked why everybody was leaving so early that day.",
+      "The manager asked why everybody was leaving so early today."
+    ]
+  },
+  {
+    "id": 204,
+    "sentence": "Aanya said, “Even if it rains very hard I will not miss school tomorrow.”",
+    "type": "Direct to Indirect",
+    "options": [
+      "Aanya says that even if it rains very hard she will not miss school tomorrow.",
+      "Aanya said that even if it rained very hard she would not miss school the next day.",
+      "Aanya said though it rains very hard she will not miss school the next day.",
+      "Aanya has said that if it rains very hard I will not miss school tomorrow."
+    ]
+  },
+  {
+    "id": 205,
+    "sentence": "Father hugged me and said, \"What a beautiful painting!\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Father hugged me and exclaimed that my painting was very beautiful.",
+      "Father hugs me and exclaimed that my painting is very beautiful.",
+      "Father hugs me and says that my painting was very beautiful.",
+      "Father hugged me and exclaimed I had made a very beautiful painting."
+    ]
+  },
+  {
+    "id": 206,
+    "sentence": "Rashmi says, \"My startup is doing very well.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Rashmi says that my startup is doing very well.",
+      "Rashmi said that her startup is doing very well.",
+      "Rashmi said that her startup was doing very well.",
+      "Rashmi says that her startup is doing very well."
+    ]
+  },
+    {
+    "id": 207,
+    "sentence": "He said, \"The last film I saw was such a violent one that I couldn’t sleep the whole night.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He is saying that the last film he saw was such a violent one that he couldn’t sleep the whole night.",
+      "He shall be saying that the last film he had been seeing was such a violent one that he couldn’t sleep the whole night.",
+      "He shall say that the last film he had seen was such a violent one that he couldn’t sleep the whole night.",
+      "He said that the last film he had seen was such a violent one that he couldn’t sleep the whole night."
+    ]
+  },
+  {
+    "id": 208,
+    "sentence": "The teacher suggested that the PTM be postponed to the third Saturday of the month.",
+    "type": "Indirect to Direct",
+    "options": [
+      "The teacher told, \"The PTM will be postponed to the third Saturday of the month.\"",
+      "The teacher said, \"Let’s postpone the PTM to the third Saturday of the month.\"",
+      "The teacher said, \"The PTM would be postponed to the third Saturday of the month.\"",
+      "The teacher suggested, \"The PTM must be postponed to the third Saturday of the month.\""
+    ]
+  },
+  {
+    "id": 209,
+    "sentence": "The RWA members said, \"We want to see the audited accounts before we make more payments.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The RWA members are saying that they want to see the audited accounts before they make more payments.",
+      "The RWA members said that they wanted to see the audited accounts before they made more payments.",
+      "The RWA members said that we want to see the audited accounts before we make more payments.",
+      "The RWA members said we wanted to see the audited accounts before we make more payments."
+    ]
+  },
+  {
+    "id": 210,
+    "sentence": "Mr. Puri said to me, \"Why are you taking down this fence?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mr. Puri asked me why was I taking down this fence.",
+      "Mr. Puri said to me why you were taking down that fence.",
+      "Mr. Puri asked me why I was taking down that fence.",
+      "Mr. Puri said to me that why are you taking down this fence."
+    ]
+  },
+  {
+    "id": 211,
+    "sentence": "Mrs. Gupta said to me, \"Why are these boys standing in the sun?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Mrs. Gupta told me why those boys are standing in the sun.",
+      "Mrs. Gupta asked me why those boys were standing in the sun.",
+      "Mrs. Gupta said to me that why are these boys standing in the sun.",
+      "Mrs. Gupta asked me why were these boys standing in the sun."
+    ]
+  },
+  {
+    "id": 212,
+    "sentence": "The shopkeeper asked me, \"Where is your car?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The shopkeeper asked me where my car was.",
+      "The shopkeeper asked me where my car is.",
+      "The shopkeeper asked me where was my car.",
+      "The shopkeeper asked me where is your car."
+    ]
+  },
+  {
+    "id": 213,
+    "sentence": "I asked the shopkeeper, \"What is the price of this bike?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "I asked the shopkeeper that what the price of this bike was.",
+      "I asked the shopkeeper what is the price of this bike.",
+      "I asked the shopkeeper what was the price of that bike.",
+      "I asked the shopkeeper what the price of that bike was."
+    ]
+  },
+  {
+    "id": 214,
+    "sentence": "Bhola said to his mother, \"Why is this charcoal so black?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Bhola asked his mother why that charcoal was so black.",
+      "Bhola told his mother why that charcoal was so black.",
+      "Bhola asked his mother why that charcoal is so black.",
+      "Bhola asked his mother why this charcoal is so black."
+    ]
+  },
+  {
+    "id": 215,
+    "sentence": "Bhola said to his friend, \"How can I make this charcoal white?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Bhola asked his friend how he could make that charcoal white.",
+      "Bhola told his friend how he could make that charcoal white.",
+      "Bhola asked his friend how can I make this charcoal white.",
+      "Bhola asked his friend how could he make that charcoal white."
+    ]
+  },
+  {
+    "id": 216,
+    "sentence": "Father said to me, \"Are you going to keep me waiting all night?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Father asked me if you were going to keep him waiting all night.",
+      "Father told me that you are going to keep him waiting all night.",
+      "Father asked me are you going to keep me waiting all night.",
+      "Father asked me if I was going to keep him waiting all night."
+    ]
+  },
+  {
+    "id": 217,
+    "sentence": "The stranger said to me, \"Can you tell me the way to the River Bank Colony?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The stranger asked me can you tell me the way to the River Bank Colony.",
+      "The stranger asked me if you could tell him the way to the River Bank Colony.",
+      "The stranger asked me if I could tell him the way to the River Bank Colony.",
+      "The stranger told me that I could tell him the way to the River Bank Colony."
+    ]
+  },
+    {
+    "id": 218,
+    "sentence": "She said, \"Deepak slipped when he was trying to skate.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She said that Deepak slipped when he was trying to skate.",
+      "She said that Deepak was slipping when he was trying to skate.",
+      "She said that Deepak has slipped when he was trying to skate.",
+      "She said that Deepak had slipped when he was trying to skate."
+    ]
+  },
+  {
+    "id": 219,
+    "sentence": "The lawyer said to the accused, \"Where were you at the time of burglary?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The lawyer asked the burglar where he was at the time of burglary.",
+      "The lawyer asked the burglar that where was he at the time of burglary.",
+      "The lawyer asked the burglar if he was there at the time of burglary.",
+      "The lawyer asked the burglar where were you at the time of burglary."
+    ]
+  },
+  {
+    "id": 220,
+    "sentence": "Seema said to her daughter, \"Don’t go near the well.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Seema requested her daughter to go near the well.",
+      "Seema told her daughter that don’t go near the well.",
+      "Seema said her daughter you shouldn’t go near the well.",
+      "Seema warned her daughter not to go near the well."
+    ]
+  },
+  {
+    "id": 221,
+    "sentence": "He said to the grocer, \"What is the price of tomatoes?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "He asked the grocer that what was the price of tomatoes.",
+      "He asked the grocer what the price of tomatoes was.",
+      "He asked the grocer what was the price of tomatoes.",
+      "He asked the grocer what is the price of tomatoes."
+    ]
+  },
+  {
+    "id": 222,
+    "sentence": "My grandmother said, \"I bore six children.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "My grandmother told that she had bore six children.",
+      "My grandmother said that she had borne six children.",
+      "My grandmother said that she has born six children.",
+      "My grandmother said she bore six children."
+    ]
+  },
+  {
+    "id": 223,
+    "sentence": "Father said to his daughter, \"I will attend your convocation tomorrow.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Father told his daughter that he would attend her convocation the next day.",
+      "Father told his daughter I will attend her convocation tomorrow.",
+      "Father told his daughter that he will attend her convocation tomorrow.",
+      "Father told his daughter that he will be attending her convocation the next day."
+    ]
+  },
+  {
+    "id": 224,
+    "sentence": "She says, \"I go for a walk every morning.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She said that she went for a walk every morning.",
+      "She says that she goes for a walk every morning.",
+      "She said that she goes for a walk every morning.",
+      "She says that I go for a walk every morning."
+    ]
+  },
+  {
+    "id": 225,
+    "sentence": "She said to you, \"I have a thousand rupees in my purse now.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "She told you that she has a thousand rupees in my purse now.",
+      "She told you that she had a thousand rupees in her purse then.",
+      "She said you that she have a thousand rupees in my purse then.",
+      "She told me that she had a thousand rupees in her purse now."
+    ]
+  },
+  {
+    "id": 226,
+    "sentence": "The interviewer asked Ashok, \"Why did you leave that job last month?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The interviewer asked Ashok that why he leave that job the last month.",
+      "The interviewer asked Ashok that why did he leave that job the previous month.",
+      "The interviewer asked Ashok why he had left that job the previous month.",
+      "The interviewer asked Ashok why you have left that job the previous month."
+    ]
+  },
+  {
+    "id": 227,
+    "sentence": "Uma asked me, \"How’s your brother?\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "Uma asked me how was my brother.",
+      "Uma asked me how your brother was.",
+      "Uma asked me how my brother was.",
+      "Uma asked me how is my brother."
+    ]
+  },
+  {
+    "id": 228,
+    "sentence": "The doctor told his patient, \"Continue the same course of medicines for the next week.\"",
+    "type": "Direct to Indirect",
+    "options": [
+      "The doctor told his patient to continued the same course of medicines in the next week.",
+      "The doctor told his patient for continuing the same course of medicines for the next week.",
+      "The doctor told his patient that he may continue the same course of medicines in the following week.",
+      "The doctor told his patient to continue the same course of medicines for the following week."
+    ]
+  }              
+]
