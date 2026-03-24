@@ -12,44 +12,44 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
   
   console.log("isMobile:", isMobile);
 
-  // State data with MP seats and Assembly seats
+  // State data with MP seats, Assembly seats, Capital, and Chief Minister
   const statesData = {
-    "Andhra Pradesh": { mpSeats: 25, assemblySeats: 175, capital: "Amaravati" },
-    "Arunachal Pradesh": { mpSeats: 2, assemblySeats: 60, capital: "Itanagar" },
-    "Assam": { mpSeats: 14, assemblySeats: 126, capital: "Dispur" },
-    "Bihar": { mpSeats: 40, assemblySeats: 243, capital: "Patna" },
-    "Chhattisgarh": { mpSeats: 11, assemblySeats: 90, capital: "Raipur" },
-    "Goa": { mpSeats: 2, assemblySeats: 40, capital: "Panaji" },
-    "Gujarat": { mpSeats: 26, assemblySeats: 182, capital: "Gandhinagar" },
-    "Haryana": { mpSeats: 10, assemblySeats: 90, capital: "Chandigarh" },
-    "Himachal Pradesh": { mpSeats: 4, assemblySeats: 68, capital: "Shimla" },
-    "Jammu & Kashmir": { mpSeats: 5, assemblySeats: 83, capital: "Srinagar/Jammu" },
-    "Jharkhand": { mpSeats: 14, assemblySeats: 81, capital: "Ranchi" },
-    "Karnataka": { mpSeats: 28, assemblySeats: 224, capital: "Bengaluru" },
-    "Kerala": { mpSeats: 20, assemblySeats: 140, capital: "Thiruvananthapuram" },
-    "Madhya Pradesh": { mpSeats: 29, assemblySeats: 230, capital: "Bhopal" },
-    "Maharashtra": { mpSeats: 48, assemblySeats: 288, capital: "Mumbai" },
-    "Manipur": { mpSeats: 2, assemblySeats: 60, capital: "Imphal" },
-    "Meghalaya": { mpSeats: 2, assemblySeats: 60, capital: "Shillong" },
-    "Mizoram": { mpSeats: 1, assemblySeats: 40, capital: "Aizawl" },
-    "Nagaland": { mpSeats: 1, assemblySeats: 60, capital: "Kohima" },
-    "Odisha": { mpSeats: 21, assemblySeats: 147, capital: "Bhubaneswar" },
-    "Punjab": { mpSeats: 13, assemblySeats: 117, capital: "Chandigarh" },
-    "Rajasthan": { mpSeats: 25, assemblySeats: 200, capital: "Jaipur" },
-    "Sikkim": { mpSeats: 1, assemblySeats: 32, capital: "Gangtok" },
-    "Tamil Nadu": { mpSeats: 39, assemblySeats: 234, capital: "Chennai" },
-    "Telangana": { mpSeats: 17, assemblySeats: 119, capital: "Hyderabad" },
-    "Tripura": { mpSeats: 2, assemblySeats: 60, capital: "Agartala" },
-    "Uttar Pradesh": { mpSeats: 80, assemblySeats: 403, capital: "Lucknow" },
-    "Uttarakhand": { mpSeats: 5, assemblySeats: 70, capital: "Dehradun" },
-    "West Bengal": { mpSeats: 42, assemblySeats: 294, capital: "Kolkata" },
-    "Ladakh": { mpSeats: 1, assemblySeats: 0, capital: "Leh" },
-    "Puducherry": { mpSeats: 1, assemblySeats: 30, capital: "Puducherry" },
-    "Chandigarh": { mpSeats: 1, assemblySeats: 0, capital: "Chandigarh" },
-    "Andaman & Nicobar": { mpSeats: 1, assemblySeats: 0, capital: "Port Blair" },
-    "Lakshadweep": { mpSeats: 1, assemblySeats: 0, capital: "Kavaratti" },
-    "Dadra & Nagar Haveli": { mpSeats: 1, assemblySeats: 0, capital: "Silvassa" },
-    "Daman & Diu": { mpSeats: 1, assemblySeats: 0, capital: "Daman" }
+    "Andhra Pradesh": { mpSeats: 25, assemblySeats: 175, capital: "Amaravati", chiefMinister: "N. Chandrababu Naidu" },
+    "Arunachal Pradesh": { mpSeats: 2, assemblySeats: 60, capital: "Itanagar", chiefMinister: "Pema Khandu" },
+    "Assam": { mpSeats: 14, assemblySeats: 126, capital: "Dispur", chiefMinister: "Himanta Biswa Sarma" },
+    "Bihar": { mpSeats: 40, assemblySeats: 243, capital: "Patna", chiefMinister: "Nitish Kumar" },
+    "Chhattisgarh": { mpSeats: 11, assemblySeats: 90, capital: "Raipur", chiefMinister: "Vishnu Deo Sai" },
+    "Goa": { mpSeats: 2, assemblySeats: 40, capital: "Panaji", chiefMinister: "Pramod Sawant" },
+    "Gujarat": { mpSeats: 26, assemblySeats: 182, capital: "Gandhinagar", chiefMinister: "Bhupendra Patel" },
+    "Haryana": { mpSeats: 10, assemblySeats: 90, capital: "Chandigarh", chiefMinister: "Nayab Singh Saini" },
+    "Himachal Pradesh": { mpSeats: 4, assemblySeats: 68, capital: "Shimla", chiefMinister: "Sukhvinder Singh Sukhu" },
+    "Jammu & Kashmir": { mpSeats: 5, assemblySeats: 83, capital: "Srinagar/Jammu", chiefMinister: "Omar Abdullah" },
+    "Jharkhand": { mpSeats: 14, assemblySeats: 81, capital: "Ranchi", chiefMinister: "Hemant Soren" },
+    "Karnataka": { mpSeats: 28, assemblySeats: 224, capital: "Bengaluru", chiefMinister: "Siddaramaiah" },
+    "Kerala": { mpSeats: 20, assemblySeats: 140, capital: "Thiruvananthapuram", chiefMinister: "Pinarayi Vijayan" },
+    "Madhya Pradesh": { mpSeats: 29, assemblySeats: 230, capital: "Bhopal", chiefMinister: "Mohan Yadav" },
+    "Maharashtra": { mpSeats: 48, assemblySeats: 288, capital: "Mumbai", chiefMinister: "Devendra Fadnavis" },
+    "Manipur": { mpSeats: 2, assemblySeats: 60, capital: "Imphal", chiefMinister: "N. Biren Singh" },
+    "Meghalaya": { mpSeats: 2, assemblySeats: 60, capital: "Shillong", chiefMinister: "Conrad K. Sangma" },
+    "Mizoram": { mpSeats: 1, assemblySeats: 40, capital: "Aizawl", chiefMinister: "Lalduhoma" },
+    "Nagaland": { mpSeats: 1, assemblySeats: 60, capital: "Kohima", chiefMinister: "Neiphiu Rio" },
+    "Odisha": { mpSeats: 21, assemblySeats: 147, capital: "Bhubaneswar", chiefMinister: "Mohan Majhi" },
+    "Punjab": { mpSeats: 13, assemblySeats: 117, capital: "Chandigarh", chiefMinister: "Bhagwant Mann" },
+    "Rajasthan": { mpSeats: 25, assemblySeats: 200, capital: "Jaipur", chiefMinister: "Bhajan Lal Sharma" },
+    "Sikkim": { mpSeats: 1, assemblySeats: 32, capital: "Gangtok", chiefMinister: "Prem Singh Tamang" },
+    "Tamil Nadu": { mpSeats: 39, assemblySeats: 234, capital: "Chennai", chiefMinister: "M.K. Stalin" },
+    "Telangana": { mpSeats: 17, assemblySeats: 119, capital: "Hyderabad", chiefMinister: "A. Revanth Reddy" },
+    "Tripura": { mpSeats: 2, assemblySeats: 60, capital: "Agartala", chiefMinister: "Manik Saha" },
+    "Uttar Pradesh": { mpSeats: 80, assemblySeats: 403, capital: "Lucknow", chiefMinister: "Yogi Adityanath" },
+    "Uttarakhand": { mpSeats: 5, assemblySeats: 70, capital: "Dehradun", chiefMinister: "Pushkar Singh Dhami" },
+    "West Bengal": { mpSeats: 42, assemblySeats: 294, capital: "Kolkata", chiefMinister: "Mamata Banerjee" },
+    "Ladakh": { mpSeats: 1, assemblySeats: 0, capital: "Leh", chiefMinister: "No CM (Union Territory)" },
+    "Puducherry": { mpSeats: 1, assemblySeats: 30, capital: "Puducherry", chiefMinister: "N. Rangasamy" },
+    "Chandigarh": { mpSeats: 1, assemblySeats: 0, capital: "Chandigarh", chiefMinister: "No CM (Union Territory)" },
+    "Andaman & Nicobar": { mpSeats: 1, assemblySeats: 0, capital: "Port Blair", chiefMinister: "No CM (Union Territory)" },
+    "Lakshadweep": { mpSeats: 1, assemblySeats: 0, capital: "Kavaratti", chiefMinister: "No CM (Union Territory)" },
+    "Dadra & Nagar Haveli": { mpSeats: 1, assemblySeats: 0, capital: "Silvassa", chiefMinister: "No CM (Union Territory)" },
+    "Daman & Diu": { mpSeats: 1, assemblySeats: 0, capital: "Daman", chiefMinister: "No CM (Union Territory)" }
   };
 
   // State coordinates for tiny circles (positioned exactly above state capitals) - Alphabetical Order
@@ -265,6 +265,27 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
                     borderRadius: "20px" 
                   }}>
                     {statesData[selectedState]?.capital || "N/A"}
+                  </span>
+                </div>
+                <div style={{ 
+                  display: "flex", 
+                  justifyContent: "space-between", 
+                  alignItems: "center", 
+                  padding: "15px", 
+                  backgroundColor: "#f8f9fa", 
+                  borderRadius: "8px", 
+                  border: "1px solid #e9ecef" 
+                }}>
+                  <span style={{ fontSize: "16px", fontWeight: "600", color: "#495057" }}>Chief Minister:</span>
+                  <span style={{ 
+                    fontSize: "16px", 
+                    fontWeight: "700", 
+                    color: "#007bff", 
+                    backgroundColor: "#e3f2fd", 
+                    padding: "8px 16px", 
+                    borderRadius: "20px" 
+                  }}>
+                    {statesData[selectedState]?.chiefMinister || "N/A"}
                   </span>
                 </div>
               </div>
