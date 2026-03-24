@@ -430,9 +430,15 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
   };
 
   const getStateOpacity = (stateName) => {
-    if (selectedState === stateName) return 0.8;
+    if (selectedState === stateName) return 0.9;
     if (hoveredState === stateName) return 0.8;
-    return 0.3;
+    return 0.4;
+  };
+
+  const getStateScale = (stateName) => {
+    if (selectedState === stateName) return 1.5;
+    if (hoveredState === stateName) return 1.3;
+    return 1;
   };
 
   const resetSelection = () => {
@@ -442,30 +448,64 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
 
   return (
     <div style={{ padding: "20px", textAlign: "center", backgroundColor: "#f5f7fa" }}>
+      {/* Add CSS animations */}
+      <style>{`
+        @keyframes pulse {
+          0% { opacity: 0.6; }
+          50% { opacity: 0.3; }
+          100% { opacity: 0.6; }
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .map-container {
+          animation: fadeIn 0.6s ease-out;
+        }
+        
+        .state-circle {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .state-circle:hover {
+          z-index: 10;
+        }
+      `}</style>
       {/* Header */}
       <div style={{ marginBottom: "30px" }}>
         <h1 style={{ fontSize: "32px", fontWeight: "700", color: "#2c3e50", marginBottom: "10px" }}>
           🗺️ Interactive India Political Map
         </h1>
         <p style={{ fontSize: "16px", color: "#6c757d" }}>
-          Click on any state to see MP seats, Assembly seats, Capital, and Chief Minister information
+          Click on any state to see comprehensive information: Population, Area, Economy, National Parks, and more
         </p>
       </div>
 
       {/* Main Map Container */}
-      <div style={{ display: "flex", flexDirection: isMobile ? "column" : "row", gap: "30px", alignItems: "flex-start", justifyContent: "center" }}>
+      <div className="map-container" style={{ display: "flex", flexDirection: isMobile ? "column" : "row", gap: "30px", alignItems: "flex-start", justifyContent: "center" }}>
         
         {/* Map Image with Circles */}
-        <div style={{ position: "relative", flex: 1, maxWidth: "600px", width: "100%" }}>
+        <div style={{ 
+          position: "relative", 
+          flex: 1, 
+          maxWidth: "600px", 
+          width: "100%",
+          borderRadius: "16px",
+          overflow: "hidden",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+          border: "3px solid #e9ecef",
+          transition: "all 0.3s ease"
+        }}>
           <img 
             src="/India-map-en.png"
             alt="India Map"
             style={{ 
               width: "100%", 
               height: "auto",
-              borderRadius: "12px",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-              border: "2px solid #e9ecef"
+              display: "block",
+              transition: "all 0.3s ease"
             }}
             onError={(e) => {
               console.error("Image failed to load:", e);
@@ -489,33 +529,97 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
             viewBox="0 0 320 360"
             onMouseLeave={() => setHoveredState(null)}
           >
-            {Object.entries(stateCoordinates).map(([stateName, coords]) => (
+            {/* Add subtle glow effect for selected state */}
+            {selectedState && (
               <circle
-                key={stateName}
-                cx={coords.x}
-                cy={coords.y}
-                r={coords.radius}
-                fill={getStateColor(stateName)}
-                fillOpacity={getStateOpacity(stateName)}
-                stroke="#fff"
-                strokeWidth="2"
-                style={{ cursor: 'pointer', transition: 'all 0.3s ease' }}
-                onMouseEnter={() => setHoveredState(stateName)}
-                onClick={() => handleStateClick(stateName)}
+                cx={stateCoordinates[selectedState]?.x}
+                cy={stateCoordinates[selectedState]?.y}
+                r={stateCoordinates[selectedState]?.radius + 8}
+                fill="none"
+                stroke="#ff6b6b"
+                strokeWidth="3"
+                strokeOpacity="0.6"
+                style={{
+                  filter: "drop-shadow(0 0 8px rgba(255, 107, 107, 0.4))",
+                  animation: "pulse 2s infinite"
+                }}
               />
+            )}
+            
+            {Object.entries(stateCoordinates).map(([stateName, coords]) => (
+              <g key={stateName}>
+                {/* Outer glow for hover effect */}
+                {(hoveredState === stateName || selectedState === stateName) && (
+                  <circle
+                    cx={coords.x}
+                    cy={coords.y}
+                    r={coords.radius + 4}
+                    fill="none"
+                    stroke={getStateColor(stateName)}
+                    strokeWidth="2"
+                    strokeOpacity="0.3"
+                    style={{
+                      filter: "drop-shadow(0 0 6px rgba(0, 123, 255, 0.3))"
+                    }}
+                  />
+                )}
+                
+                {/* Main circle */}
+                <circle
+                  cx={coords.x}
+                  cy={coords.y}
+                  r={coords.radius}
+                  fill={getStateColor(stateName)}
+                  fillOpacity={getStateOpacity(stateName)}
+                  stroke="#fff"
+                  strokeWidth="2"
+                  style={{ 
+                    cursor: 'pointer', 
+                    transition: 'all 0.3s ease',
+                    transform: `scale(${getStateScale(stateName)})`,
+                    transformOrigin: `${coords.x}px ${coords.y}px`,
+                    filter: hoveredState === stateName || selectedState === stateName 
+                      ? "drop-shadow(0 0 8px rgba(0, 123, 255, 0.5))" 
+                      : "none"
+                  }}
+                  onMouseEnter={() => setHoveredState(stateName)}
+                  onClick={() => handleStateClick(stateName)}
+                />
+                
+                {/* State name label for selected/hovered states */}
+                {(hoveredState === stateName || selectedState === stateName) && (
+                  <text
+                    x={coords.x}
+                    y={coords.y - coords.radius - 8}
+                    textAnchor="middle"
+                    fontSize="10"
+                    fontWeight="600"
+                    fill="#2c3e50"
+                    style={{
+                      filter: "drop-shadow(0 1px 2px rgba(255, 255, 255, 0.8))",
+                      pointerEvents: "none"
+                    }}
+                  >
+                    {stateName.length > 12 ? stateName.substring(0, 10) + "..." : stateName}
+                  </text>
+                )}
+              </g>
             ))}
           </svg>
         </div>
 
         {/* State Information Panel */}
         <div style={{ 
-          flex: isMobile ? "1" : "0 0 300px", 
+          flex: isMobile ? "1" : "0 0 320px", 
           backgroundColor: "#ffffff", 
-          borderRadius: "12px", 
+          borderRadius: "16px", 
           padding: "20px", 
-          boxShadow: "0 4px 20px rgba(0,0,0,0.1)", 
+          boxShadow: "0 8px 32px rgba(0,0,0,0.12)", 
           border: "1px solid #e9ecef",
-          minWidth: "250px"
+          minWidth: "280px",
+          transition: "all 0.3s ease",
+          maxHeight: isMobile ? "none" : "600px",
+          overflow: "hidden"
         }}>
           {selectedState ? (
             <div style={{ textAlign: "center" }}>
