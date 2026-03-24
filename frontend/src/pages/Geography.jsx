@@ -378,46 +378,7 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
     }
   };
 
-  // State boundary paths (exact from official SVG)
-  const stateBoundaries = {
-    "Jammu & Kashmir": "M 80 20 L 120 20 L 125 50 L 110 70 L 90 50 L 80 30 Z",
-    "Himachal Pradesh": "M 100 50 L 120 50 L 125 70 L 115 80 L 105 70 L 100 60 Z",
-    "Punjab": "M 80 80 L 110 80 L 115 100 L 105 110 L 95 100 L 80 90 Z",
-    "Chandigarh": "M 105 105 L 115 105 L 117 115 L 115 120 L 107 118 L 105 110 Z",
-    "Uttarakhand": "M 120 70 L 140 70 L 145 90 L 135 100 L 125 90 L 120 80 Z",
-    "Haryana": "M 95 100 L 125 100 L 130 120 L 120 130 L 110 120 L 95 110 Z",
-    "Delhi": "M 105 105 L 115 105 L 117 115 L 115 120 L 107 118 L 105 110 Z",
-    "Rajasthan": "M 50 100 L 100 100 L 100 160 L 80 180 L 60 160 L 50 140 Z",
-    "Uttar Pradesh": "M 140 110 L 200 110 L 200 150 L 180 160 L 160 150 L 140 150 Z",
-    "Madhya Pradesh": "M 100 160 L 160 160 L 180 180 L 160 200 L 120 200 L 100 180 Z",
-    "Gujarat": "M 40 180 L 80 180 L 90 220 L 70 240 L 50 220 L 40 200 Z",
-    "Maharashtra": "M 90 220 L 130 220 L 140 260 L 120 280 L 100 260 L 90 240 Z",
-    "Goa": "M 65 270 L 75 270 L 77 280 L 72 285 L 67 280 L 65 275 Z",
-    "Karnataka": "M 80 280 L 120 280 L 130 320 L 110 340 L 90 320 L 80 300 Z",
-    "Kerala": "M 90 320 L 110 320 L 115 340 L 105 350 L 95 340 L 90 330 Z",
-    "Tamil Nadu": "M 110 300 L 150 300 L 160 340 L 140 350 L 120 340 L 110 320 Z",
-    "Andhra Pradesh": "M 120 250 L 160 250 L 170 280 L 150 290 L 130 280 L 120 270 Z",
-    "Telangana": "M 120 230 L 150 230 L 160 250 L 140 260 L 130 250 L 120 240 Z",
-    "Chhattisgarh": "M 160 180 L 190 180 L 200 210 L 180 220 L 170 200 L 160 190 Z",
-    "Odisha": "M 180 180 L 220 180 L 230 220 L 210 240 L 190 220 L 180 200 Z",
-    "West Bengal": "M 210 150 L 240 150 L 245 180 L 230 190 L 220 170 L 210 160 Z",
-    "Bihar": "M 200 120 L 230 120 L 235 150 L 220 160 L 210 140 L 200 130 Z",
-    "Jharkhand": "M 180 160 L 210 160 L 220 190 L 200 200 L 190 180 L 180 170 Z",
-    "Sikkim": "M 220 100 L 230 100 L 233 110 L 228 115 L 223 110 L 220 105 Z",
-    "Assam": "M 260 120 L 280 120 L 285 140 L 275 150 L 265 140 L 260 130 Z",
-    "Arunachal Pradesh": "M 270 90 L 290 90 L 295 110 L 285 120 L 275 110 L 270 100 Z",
-    "Nagaland": "M 285 120 L 295 120 L 298 130 L 293 135 L 288 130 L 285 125 Z",
-    "Manipur": "M 280 140 L 290 140 L 293 150 L 288 155 L 283 150 L 280 145 Z",
-    "Mizoram": "M 270 160 L 280 160 L 283 170 L 278 175 L 273 170 L 270 165 Z",
-    "Tripura": "M 260 155 L 270 155 L 273 165 L 268 170 L 263 165 L 260 160 Z",
-    "Meghalaya": "M 250 130 L 260 130 L 263 140 L 258 145 L 253 140 L 250 135 Z",
-    "Lakshadweep": "M 45 310 L 55 310 L 57 320 L 52 325 L 47 320 L 45 315 Z",
-    "Andaman & Nicobar": "M 280 290 L 290 290 L 293 300 L 288 305 L 283 300 L 280 295 Z",
-    "Puducherry": "M 138 310 L 148 310 L 150 320 L 145 325 L 140 320 L 138 315 Z",
-    "Dadra & Nagar Haveli": "M 60 208 L 70 208 L 72 218 L 67 223 L 62 218 L 60 213 Z",
-    "Daman & Diu": "M 38 200 L 48 200 L 50 210 L 45 215 L 40 210 L 38 205 Z",
-    "Ladakh": "M 50 55 L 80 55 L 85 75 L 75 85 L 65 75 L 50 65 Z"
-  };
+  // State coordinates for tiny circles (positioned exactly above state capitals) - Alphabetical Order
   const stateCoordinates = {
     "Andaman & Nicobar": { x: 285, y: 299, radius: 4 }, // Above Port Blair
     "Andhra Pradesh": { x: 130, y: 260, radius: 5 }, // Above Amaravati
@@ -518,7 +479,7 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
           🗺️ Interactive India Political Map
         </h1>
         <p style={{ fontSize: "16px", color: "#6c757d" }}>
-          Click on any state or hover to see boundaries and comprehensive information: Population, Area, Economy, National Parks, and more
+          Click on any state circle to see comprehensive information: Population, Area, Economy, National Parks, and more
         </p>
       </div>
 
@@ -568,45 +529,19 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
             viewBox="0 0 320 360"
             onMouseLeave={() => setHoveredState(null)}
           >
-            {/* State Boundaries */}
-            {Object.entries(stateBoundaries).map(([stateName, path]) => (
-              <path
-                key={`boundary-${stateName}`}
-                d={path}
-                fill={selectedState === stateName ? "rgba(255, 107, 107, 0.2)" : 
-                      hoveredState === stateName ? "rgba(78, 205, 196, 0.2)" : 
-                      "rgba(0, 123, 255, 0.1)"}
-                stroke={selectedState === stateName ? "#ff6b6b" : 
-                       hoveredState === stateName ? "#4ecdc4" : 
-                       "#007bff"}
-                strokeWidth={selectedState === stateName ? "2.5" : 
-                            hoveredState === stateName ? "2" : 
-                            "1"}
-                strokeOpacity={selectedState === stateName ? 0.8 : 
-                             hoveredState === stateName ? 0.6 : 
-                             0.3}
-                style={{
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  pointerEvents: 'all'
-                }}
-                onMouseEnter={() => setHoveredState(stateName)}
-                onClick={() => handleStateClick(stateName)}
-              />
-            ))}
-            
             {/* Add subtle glow effect for selected state */}
-            {selectedState && stateBoundaries[selectedState] && (
-              <path
-                d={stateBoundaries[selectedState]}
+            {selectedState && (
+              <circle
+                cx={stateCoordinates[selectedState]?.x}
+                cy={stateCoordinates[selectedState]?.y}
+                r={stateCoordinates[selectedState]?.radius + 8}
                 fill="none"
                 stroke="#ff6b6b"
-                strokeWidth="4"
-                strokeOpacity="0.4"
+                strokeWidth="3"
+                strokeOpacity="0.6"
                 style={{
-                  filter: "drop-shadow(0 0 12px rgba(255, 107, 107, 0.5))",
-                  animation: "pulse 2s infinite",
-                  pointerEvents: "none"
+                  filter: "drop-shadow(0 0 8px rgba(255, 107, 107, 0.4))",
+                  animation: "pulse 2s infinite"
                 }}
               />
             )}
@@ -646,9 +581,10 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
                     transformOrigin: `${coords.x}px ${coords.y}px`,
                     filter: hoveredState === stateName || selectedState === stateName 
                       ? "drop-shadow(0 0 8px rgba(0, 123, 255, 0.5))" 
-                      : "none",
-                    pointerEvents: "none"
+                      : "none"
                   }}
+                  onMouseEnter={() => setHoveredState(stateName)}
+                  onClick={() => handleStateClick(stateName)}
                 />
                 
                 {/* State name label for selected/hovered states */}
