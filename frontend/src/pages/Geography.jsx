@@ -5,7 +5,7 @@ import useMobile from "../hooks/useMobile";
 
 export default function Geography({ config, onUpdateConfig, onGoHome }) {
   console.log("Geography component loaded successfully!");
-  console.log("Updated with Chief Minister information - v2.0");
+  console.log("Updated with Chief Minister information - v2.1 - Fresh deployment");
   const [selectedState, setSelectedState] = useState(null);
   const [hoveredState, setHoveredState] = useState(null);
   const { isMobile } = useMobile();
