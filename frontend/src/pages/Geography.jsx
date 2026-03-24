@@ -378,7 +378,42 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
     }
   };
 
-  // State coordinates for tiny circles (positioned exactly above state capitals) - Alphabetical Order
+  // State boundary paths (simplified SVG paths for major states)
+  const stateBoundaries = {
+    "Uttar Pradesh": "M 145 125 L 180 125 L 180 165 L 145 165 Z",
+    "Madhya Pradesh": "M 120 175 L 160 175 L 160 215 L 120 215 Z",
+    "Rajasthan": "M 70 130 L 110 130 L 110 180 L 70 180 Z",
+    "Gujarat": "M 45 160 L 85 160 L 85 210 L 45 210 Z",
+    "Maharashtra": "M 95 215 L 135 215 L 135 255 L 95 255 Z",
+    "Karnataka": "M 85 260 L 125 260 L 125 300 L 85 300 Z",
+    "Kerala": "M 95 320 L 115 320 L 115 340 L 95 340 Z",
+    "Tamil Nadu": "M 119 309 L 159 309 L 159 340 L 119 340 Z",
+    "Andhra Pradesh": "M 130 260 L 170 260 L 170 290 L 130 290 Z",
+    "Telangana": "M 125 240 L 155 240 L 155 270 L 125 270 Z",
+    "Odisha": "M 200 195 L 240 195 L 240 235 L 200 235 Z",
+    "West Bengal": "M 220 165 L 250 165 L 250 195 L 220 195 Z",
+    "Bihar": "M 213 140 L 243 140 L 243 170 L 213 170 Z",
+    "Jharkhand": "M 197 175 L 227 175 L 227 205 L 197 205 Z",
+    "Chhattisgarh": "M 175 178 L 205 178 L 205 208 L 175 208 Z",
+    "Punjab": "M 90 75 L 120 75 L 120 105 L 90 105 Z",
+    "Haryana": "M 99 105 L 129 105 L 129 135 L 99 135 Z",
+    "Delhi": "M 107 108 L 117 108 L 117 118 L 107 118 Z",
+    "Uttarakhand": "M 125 83 L 145 83 L 145 103 L 125 103 Z",
+    "Himachal Pradesh": "M 104 59 L 124 59 L 124 79 L 104 79 Z",
+    "Jammu & Kashmir": "M 85 25 L 115 25 L 115 55 L 85 55 Z",
+    "Punjab": "M 70 75 L 90 75 L 90 95 L 70 95 Z",
+    "Assam": "M 270 128 L 290 128 L 290 148 L 270 148 Z",
+    "Arunachal Pradesh": "M 278 107 L 298 107 L 298 127 L 278 127 Z",
+    "Nagaland": "M 289 130 L 299 130 L 299 140 L 289 140 Z",
+    "Manipur": "M 285 148 L 295 148 L 295 158 L 285 158 Z",
+    "Mizoram": "M 275 165 L 285 165 L 285 175 L 275 175 Z",
+    "Tripura": "M 263 162 L 273 162 L 273 172 L 263 172 Z",
+    "Meghalaya": "M 255 139 L 265 139 L 265 149 L 255 149 Z",
+    "Sikkim": "M 226 119 L 236 119 L 236 129 L 226 129 Z",
+    "Goa": "M 67 267 L 77 267 L 77 277 L 67 277 Z",
+    "Lakshadweep": "M 45 315 L 55 315 L 55 325 L 45 325 Z",
+    "Andaman & Nicobar": "M 285 299 L 295 299 L 295 309 L 285 309 Z"
+  };
   const stateCoordinates = {
     "Andaman & Nicobar": { x: 285, y: 299, radius: 4 }, // Above Port Blair
     "Andhra Pradesh": { x: 130, y: 260, radius: 5 }, // Above Amaravati
@@ -479,7 +514,7 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
           🗺️ Interactive India Political Map
         </h1>
         <p style={{ fontSize: "16px", color: "#6c757d" }}>
-          Click on any state to see comprehensive information: Population, Area, Economy, National Parks, and more
+          Click on any state or hover to see boundaries and comprehensive information: Population, Area, Economy, National Parks, and more
         </p>
       </div>
 
@@ -529,19 +564,45 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
             viewBox="0 0 320 360"
             onMouseLeave={() => setHoveredState(null)}
           >
+            {/* State Boundaries */}
+            {Object.entries(stateBoundaries).map(([stateName, path]) => (
+              <path
+                key={`boundary-${stateName}`}
+                d={path}
+                fill={selectedState === stateName ? "rgba(255, 107, 107, 0.2)" : 
+                      hoveredState === stateName ? "rgba(78, 205, 196, 0.2)" : 
+                      "rgba(0, 123, 255, 0.1)"}
+                stroke={selectedState === stateName ? "#ff6b6b" : 
+                       hoveredState === stateName ? "#4ecdc4" : 
+                       "#007bff"}
+                strokeWidth={selectedState === stateName ? "2.5" : 
+                            hoveredState === stateName ? "2" : 
+                            "1"}
+                strokeOpacity={selectedState === stateName ? 0.8 : 
+                             hoveredState === stateName ? 0.6 : 
+                             0.3}
+                style={{
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  pointerEvents: 'all'
+                }}
+                onMouseEnter={() => setHoveredState(stateName)}
+                onClick={() => handleStateClick(stateName)}
+              />
+            ))}
+            
             {/* Add subtle glow effect for selected state */}
-            {selectedState && (
-              <circle
-                cx={stateCoordinates[selectedState]?.x}
-                cy={stateCoordinates[selectedState]?.y}
-                r={stateCoordinates[selectedState]?.radius + 8}
+            {selectedState && stateBoundaries[selectedState] && (
+              <path
+                d={stateBoundaries[selectedState]}
                 fill="none"
                 stroke="#ff6b6b"
-                strokeWidth="3"
-                strokeOpacity="0.6"
+                strokeWidth="4"
+                strokeOpacity="0.4"
                 style={{
-                  filter: "drop-shadow(0 0 8px rgba(255, 107, 107, 0.4))",
-                  animation: "pulse 2s infinite"
+                  filter: "drop-shadow(0 0 12px rgba(255, 107, 107, 0.5))",
+                  animation: "pulse 2s infinite",
+                  pointerEvents: "none"
                 }}
               />
             )}
@@ -559,7 +620,8 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
                     strokeWidth="2"
                     strokeOpacity="0.3"
                     style={{
-                      filter: "drop-shadow(0 0 6px rgba(0, 123, 255, 0.3))"
+                      filter: "drop-shadow(0 0 6px rgba(0, 123, 255, 0.3))",
+                      pointerEvents: "none"
                     }}
                   />
                 )}
@@ -580,10 +642,9 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
                     transformOrigin: `${coords.x}px ${coords.y}px`,
                     filter: hoveredState === stateName || selectedState === stateName 
                       ? "drop-shadow(0 0 8px rgba(0, 123, 255, 0.5))" 
-                      : "none"
+                      : "none",
+                    pointerEvents: "none"
                   }}
-                  onMouseEnter={() => setHoveredState(stateName)}
-                  onClick={() => handleStateClick(stateName)}
                 />
                 
                 {/* State name label for selected/hovered states */}
