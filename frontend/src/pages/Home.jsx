@@ -266,7 +266,7 @@ const subjectContent = {
 
 
 
-export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onVocabTest, onGeometry, onGeography, onIndiaMap }) {
+export default function App({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onVocabTest, onGeometry, onGeography, onIndiaMap }) {
 
   const [selectedSubject, setSelectedSubject] = useState("");
 

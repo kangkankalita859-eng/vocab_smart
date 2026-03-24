@@ -12,6 +12,7 @@ import VocabTestSets from "./pages/VocabTestSets";
 import ReadGeometry from "./pages/ReadGeometry";
 import IndiaMap from "./pages/IndiaMap";
 import Geography from "./pages/Geography";
+import Constitution from "./pages/Constitution";
 import HomonymsHomophonesSession from "./pages/HomonymsHomophonesSession";
 import VocabTestIntro from "./pages/VocabTestIntro";
 import VocabTest from "./pages/VocabTest";
@@ -77,6 +78,7 @@ export default function App() {
         }}
         onIndiaMap={() => setStage("india-map")}
         onGeography={() => setStage("geography")}
+        onConstitution={() => setStage("constitution")}
       />
     );
 
