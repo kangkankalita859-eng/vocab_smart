@@ -3,7 +3,7 @@ import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
 import useMobile from "../hooks/useMobile";
 
-export default function Constitution({ onGoHome }) {
+export default function Constitution({ onGoHome, onViewSchedules }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile } = useMobile();
 
@@ -480,6 +480,21 @@ export default function Constitution({ onGoHome }) {
 
         {/* Navigation */}
         <div style={{ marginTop: "40px", textAlign: "center" }}>
+          <button 
+            onClick={onViewSchedules}
+            style={{ 
+              background: "#28a745", 
+              color: "#fff", 
+              border: "none", 
+              padding: "12px 24px", 
+              borderRadius: "6px", 
+              cursor: "pointer", 
+              fontSize: "16px",
+              marginRight: "10px"
+            }}
+          >
+            📋 View Schedules
+          </button>
           <button 
             onClick={onGoHome}
             style={{ 

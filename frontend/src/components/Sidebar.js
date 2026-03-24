@@ -16,7 +16,7 @@ const subjectsData = {
   },
   gs: {
     name: '🌍 General Studies',
-    subtopics: ['History', 'Geography', 'Polity', 'Science', 'Current Affairs']
+    subtopics: ['Constitution of India', 'Geography', 'Polity', 'Science', 'Current Affairs']
   }
 };
 

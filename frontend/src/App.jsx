@@ -13,6 +13,7 @@ import ReadGeometry from "./pages/ReadGeometry";
 import IndiaMap from "./pages/IndiaMap";
 import Geography from "./pages/Geography";
 import Constitution from "./pages/Constitution";
+import Schedules from "./pages/Schedules";
 import HomonymsHomophonesSession from "./pages/HomonymsHomophonesSession";
 import VocabTestIntro from "./pages/VocabTestIntro";
 import VocabTest from "./pages/VocabTest";
@@ -62,23 +63,34 @@ export default function App() {
           setConfig(c);
           setStage("read-homonyms-homophones");
         }}
-        onEnglishVocab={() => setStage("english-vocab-home")}
-        onGrammar={() => setStage("grammar-home")}
-        onNarration={() => {
-          setConfig({ start: 0, limit: 10 });
+        onEnglishVocab={(c) => {
+          setConfig(c);
+          setStage("english-vocab-home");
+        }}
+        onGrammar={(c) => {
+          setConfig(c);
+          setStage("grammar-home");
+        }}
+        onNarration={(c) => {
+          setConfig(c);
           setStage("read-narration");
         }}
-        onVoiceChange={() => {
-          setConfig({ start: 0, limit: 10 });
+        onVoiceChange={(c) => {
+          setConfig(c);
           setStage("read-voice-change");
         }}
-        onVocabTest={() => {
-          setConfig({ start: 0, limit: 10 });
-          setStage("read-vocab-test");
+        onVocabTest={(c) => {
+          setConfig(c);
+          setStage("vocab-test-sets");
         }}
-        onIndiaMap={() => setStage("india-map")}
+        onGeometry={(c) => {
+          setConfig(c);
+          setStage("read-geometry");
+        }}
         onGeography={() => setStage("geography")}
+        onIndiaMap={() => setStage("india-map")}
         onConstitution={() => setStage("constitution")}
+        onSchedules={() => setStage("schedules")}
       />
     );
 
@@ -352,6 +364,19 @@ export default function App() {
       <IndiaMap
         onGoHome={() => setStage("home")}
       />
+    );
+
+  if (stage === "constitution")
+    return (
+      <Constitution 
+        onGoHome={() => setStage("home")}
+        onViewSchedules={() => setStage("schedules")}
+      />
+    );
+
+  if (stage === "schedules")
+    return (
+      <Schedules />
     );
 
   return <Complete />;
