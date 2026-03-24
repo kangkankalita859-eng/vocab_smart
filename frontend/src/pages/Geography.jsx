@@ -123,7 +123,7 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
           🗺️ Interactive India Political Map
         </h1>
         <p style={{ fontSize: "16px", color: "#6c757d" }}>
-          Click on any state to see MP seats and Assembly seats information
+          Click on any state to see MP seats, Assembly seats, Capital, and Chief Minister information
         </p>
       </div>
 
@@ -313,7 +313,7 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
                 Select a State
               </h3>
               <p style={{ fontSize: "16px", color: "#6c757d", lineHeight: "1.5" }}>
-                Click on any state circle to see detailed information
+                Click on any state circle to see detailed information including Chief Minister
               </p>
             </div>
           )}
