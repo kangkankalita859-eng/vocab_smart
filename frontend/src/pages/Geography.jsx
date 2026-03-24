@@ -55,43 +55,43 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
 
   // State coordinates for tiny circles (positioned exactly above state capitals) - Alphabetical Order
   const stateCoordinates = {
-    "Andaman & Nicobar": { x: 280, y: 275, radius: 6 }, // Above Port Blair
-    "Andhra Pradesh": { x: 130, y: 260, radius: 8 }, // Above Amaravati
-    "Arunachal Pradesh": { x: 278, y: 107, radius: 6 }, // Above Itanagar
+    "Andaman & Nicobar": { x: 285, y: 299, radius: 4 }, // Above Port Blair
+    "Andhra Pradesh": { x: 130, y: 260, radius: 5 }, // Above Amaravati
+    "Arunachal Pradesh": { x: 278, y: 107, radius: 4 }, // Above Itanagar
     "Assam": { x: 270, y: 128, radius: 5 }, // Above Dispur
-    "Bihar": { x: 155, y: 100, radius: 8 }, // Above Patna
-    "Chandigarh": { x: 160, y: 95, radius: 6 }, // Chandigarh itself
-    "Chhattisgarh": { x: 160, y: 165, radius: 6 }, // Above Raipur
-    "Dadra & Nagar Haveli": { x: 50, y: 190, radius: 4 }, // Above Silvassa
-    "Daman & Diu": { x: 40, y: 180, radius: 4 }, // Above Daman
-    "Delhi": { x: 80, y: 85, radius: 5 }, // Delhi itself
-    "Goa": { x: 63, y: 265, radius: 4 }, // Above Panaji
-    "Gujarat": { x: 45, y: 160, radius: 8 }, // Above Gandhinagar
-    "Haryana": { x: 75, y: 85, radius: 6 }, // Above Chandigarh
-    "Himachal Pradesh": { x: 70, y: 55, radius: 6 }, // Above Shimla
-    "Jammu & Kashmir": { x: 75, y: 35, radius: 8 }, // Above Srinagar/Jammu
-    "Jharkhand": { x: 200, y: 165, radius: 6 }, // Above Ranchi
-    "Karnataka": { x: 85, y: 260, radius: 8 }, // Above Bengaluru
-    "Kerala": { x: 95, y: 320, radius: 5 }, // Above Thiruvananthapuram
-    "Ladakh": { x: 50, y: 55, radius: 8 }, // Above Leh
+    "Bihar": { x: 213, y: 140, radius: 4 }, // Above Patna
+    "Chandigarh": { x: 104, y: 83, radius: 2 }, // Chandigarh itself
+    "Chhattisgarh": { x: 175, y: 178, radius: 4 }, // Above Raipur
+    "Dadra & Nagar Haveli": { x: 60, y: 208, radius: 3 }, // Above Silvassa
+    "Daman & Diu": { x: 38, y: 200, radius: 4 }, // Above Daman
+    "Delhi": { x: 107, y: 108, radius: 2 }, // Delhi itself
+    "Goa": { x: 67, y: 267, radius: 3 }, // Above Panaji
+    "Gujarat": { x: 45, y: 165, radius: 6 }, // Above Gandhinagar
+    "Haryana": { x: 99, y: 105, radius: 4 }, // Above Chandigarh
+    "Himachal Pradesh": { x: 104, y: 59, radius: 4 }, // Above Shimla
+    "Jammu & Kashmir": { x: 85, y: 25, radius: 6 }, // Above Srinagar/Jammu
+    "Jharkhand": { x: 197, y: 175, radius: 4 }, // Above Ranchi
+    "Karnataka": { x: 85, y: 260, radius: 6 }, // Above Bengaluru
+    "Kerala": { x: 99, y: 335, radius: 4 }, // Above Thiruvananthapuram
+    "Ladakh": { x: 115, y: 42, radius: 3 }, // Above Leh
     "Lakshadweep": { x: 45, y: 315, radius: 4 }, // Above Kavaratti
-    "Madhya Pradesh": { x: 120, y: 175, radius: 7 }, // Above Bhopal
-    "Maharashtra": { x: 95, y: 215, radius: 8 }, // Above Mumbai
-    "Manipur": { x: 235, y: 125, radius: 5 }, // Above Imphal
+    "Madhya Pradesh": { x: 120, y: 183, radius: 5 }, // Above Bhopal
+    "Maharashtra": { x: 75, y: 235, radius: 6 }, // Above Mumbai
+    "Manipur": { x: 285, y: 148, radius: 3 }, // Above Imphal
     "Meghalaya": { x: 255, y: 139, radius:4 }, // Above Shillong
-    "Mizoram": { x: 235, y: 145, radius: 5 }, // Above Aizawl
+    "Mizoram": { x: 275, y: 165, radius: 4 }, // Above Aizawl
     "Nagaland": { x: 289, y: 130, radius: 5 }, // Above Kohima
-    "Odisha": { x: 200, y: 200, radius: 6 }, // Above Bhubaneswar
-    "Puducherry": { x: 85, y: 320, radius: 4 }, // Above Puducherry
-    "Punjab": { x: 70, y: 75, radius: 6 }, // Above Chandigarh
-    "Rajasthan": { x: 70, y: 130, radius: 8 }, // Above Jaipur
-    "Sikkim": { x: 195, y: 95, radius: 4 }, // Above Gangtok
-    "Tamil Nadu": { x: 119, y: 309, radius: 6 }, // Above Chennai
-    "Telangana": { x: 125, y: 240, radius: 6 }, // Above Hyderabad
+    "Odisha": { x: 200, y: 195, radius: 4 }, // Above Bhubaneswar
+    "Puducherry": { x: 138, y: 310, radius: 3 }, // Above Puducherry
+    "Punjab": { x: 90, y: 75, radius: 5 }, // Above Chandigarh
+    "Rajasthan": { x: 70, y: 120, radius: 6 }, // Above Jaipur
+    "Sikkim": { x: 226, y: 119, radius: 3 }, // Above Gangtok
+    "Tamil Nadu": { x: 119, y: 309, radius: 4 }, // Above Chennai
+    "Telangana": { x: 125, y: 240, radius: 4 }, // Above Hyderabad
     "Tripura": { x: 263, y: 162, radius: 3 }, // Above Agartala
-    "Uttarakhand": { x: 85, y: 55, radius: 6 }, // Above Dehradun
-    "Uttar Pradesh": { x: 145, y: 125, radius: 10 }, // Above Lucknow
-    "West Bengal": { x: 220, y: 165, radius: 6 } // Above Kolkata
+    "Uttarakhand": { x: 125, y: 83, radius: 4 }, // Above Dehradun
+    "Uttar Pradesh": { x: 145, y: 135, radius: 6 }, // Above Lucknow
+    "West Bengal": { x: 220, y: 175, radius: 4 } // Above Kolkata
   };
 
   const handleStateClick = (stateName) => {
