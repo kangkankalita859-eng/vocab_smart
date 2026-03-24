@@ -8,6 +8,8 @@ import PYQDisplay from "../components/PYQDisplay";
 
 import useMobile from "../hooks/useMobile";
 
+import Constitution from "./Constitution";
+
 
 
 // Data structure for subject-specific content
@@ -234,6 +236,18 @@ const subjectContent = {
 
       {
 
+        title: "📜 Constitution of India",
+
+        description: "Complete guide to Indian Constitution",
+
+        status: "available",
+
+        color: "#795548"
+
+      },
+
+      {
+
         title: "🧪 Test",
 
         description: "General Studies mock tests",
@@ -284,26 +298,31 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
 
     });
 
-  };
+};
 
 
 
-  const handleTopicSelect = (topic) => {
-
-    setSelectedTopic(topic);
-
-    console.log('Selected topic:', topic);
-
-    // Handle specific subtopic actions
-    if (topic === 'India Map') {
-      onGeography();
-    }
-
-  };
 
 
+const handleTopicSelect = (topic) => {
 
-  const handleModuleClick = (module) => {
+setSelectedTopic(topic);
+
+console.log('Selected topic:', topic);
+
+// Handle specific subtopic actions
+if (topic === 'India Map') {
+onGeography();
+} else if (topic === 'Constitution of India') {
+// Show Constitution component
+window.location.href = '/constitution';
+}
+};
+
+
+
+const handleModuleClick = (module) => {
+console.log('Clicked module:', module);
     console.log('Clicked module:', module);
     
     // Check if we're in English subject and Grammar subtopic
