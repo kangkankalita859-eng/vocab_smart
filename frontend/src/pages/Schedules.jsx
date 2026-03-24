@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useMobile from "../hooks/useMobile";
 
-export default function Schedules() {
+export default function Schedules({ onGoHome }) {
   const { isMobile } = useMobile();
 
   // Schedule content data
@@ -278,7 +278,7 @@ export default function Schedules() {
     <div style={styles.container}>
       <button 
         style={styles.backButton}
-        onClick={() => window.history.back()}
+        onClick={onGoHome}
       >
         ← Back
       </button>

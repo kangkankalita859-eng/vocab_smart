@@ -376,7 +376,7 @@ export default function App() {
 
   if (stage === "schedules")
     return (
-      <Schedules />
+      <Schedules onGoHome={() => setStage("home")} />
     );
 
   return <Complete />;
