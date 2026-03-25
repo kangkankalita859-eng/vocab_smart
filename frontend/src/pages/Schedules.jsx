@@ -5,24 +5,43 @@ export default function Schedules({ onGoHome }) {
   const { isMobile } = useMobile();
 
   const handleViewConstitution = () => {
-    // Use global setAppStage if available
-    if (window.setAppStage) {
-      window.setAppStage('constitution');
-    } else {
-      // Fallback navigation methods
-      try {
-        window.location.hash = '#constitution';
-        setTimeout(() => {
-          window.location.href = '#constitution';
-        }, 100);
-        setTimeout(() => {
-          const url = window.location.origin + window.location.pathname + '#constitution';
-          window.location.replace(url);
-        }, 200);
-      } catch (error) {
-        console.log('Navigation error:', error);
-        window.location.reload();
+    console.log('Constitution button clicked');
+    
+    // Try the most direct approaches
+    try {
+      // Method 1: Direct hash change
+      window.location.hash = '#constitution';
+      console.log('Hash set to:', window.location.hash);
+      
+      // Method 2: Force hash change with event
+      const hashChangeEvent = new HashChangeEvent('hashchange');
+      window.dispatchEvent(hashChangeEvent);
+      console.log('Hash change event dispatched');
+      
+      // Method 3: Direct location reload with hash
+      setTimeout(() => {
+        const currentUrl = window.location.pathname;
+        window.location.href = currentUrl + '#constitution';
+        console.log('Direct href set to:', currentUrl + '#constitution');
+      }, 50);
+      
+      // Method 4: PostMessage to parent
+      if (window.parent !== window.self) {
+        window.parent.postMessage({
+          type: 'NAVIGATION_REQUEST',
+          payload: { stage: 'constitution' }
+        }, '*');
+        console.log('PostMessage sent to parent');
       }
+      
+      // Method 5: Storage event
+      localStorage.setItem('requestedStage', 'constitution');
+      console.log('Stage saved to localStorage');
+      
+    } catch (error) {
+      console.error('Navigation error:', error);
+      // Ultimate fallback
+      alert('Navigation to Constitution page. Please refresh the app.');
     }
   };
 
@@ -308,6 +327,21 @@ export default function Schedules({ onGoHome }) {
       {/* Header */}
       <div style={styles.header}>
         <h1 style={styles.title}>{schedulesContent.title}</h1>
+        <button 
+          onClick={handleViewConstitution}
+          style={{ 
+            background: "#28a745", 
+            color: "#fff", 
+            border: "none", 
+            padding: "8px 16px", 
+            borderRadius: "6px", 
+            cursor: "pointer", 
+            fontSize: "14px",
+            marginLeft: "20px"
+          }}
+        >
+          📋 View Constitution
+        </button>
       </div>
 
       {/* Mnemonic Section */}
@@ -330,25 +364,9 @@ export default function Schedules({ onGoHome }) {
 
       {/* Schedules Section */}
       <div style={styles.schedulesSection}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
-          <h2 style={{ fontSize: "24px", fontWeight: "600", color: "#2c3e50", margin: "0" }}>
-            📚 Detailed Schedules
-          </h2>
-          <button 
-            onClick={handleViewConstitution}
-            style={{ 
-              background: "#28a745", 
-              color: "#fff", 
-              border: "none", 
-              padding: "10px 20px", 
-              borderRadius: "6px", 
-              cursor: "pointer", 
-              fontSize: "14px"
-            }}
-          >
-            📋 View Constitution
-          </button>
-        </div>
+        <h2 style={{ fontSize: "24px", fontWeight: "600", color: "#2c3e50", marginBottom: "20px", textAlign: "center" }}>
+          � Detailed Schedules
+        </h2>
         
         {schedulesContent.schedules.map((schedule, index) => (
           <div key={index} style={styles.scheduleCard}>

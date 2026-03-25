@@ -39,6 +39,50 @@ export default function App() {
     window.setAppStage = setStage;
   }
 
+  // Listen for navigation requests from child components
+  React.useEffect(() => {
+    const handleNavigationRequest = (event) => {
+      if (event.data && event.data.type === 'NAVIGATION_REQUEST') {
+        console.log('Navigation request received:', event.data.payload);
+        setStage(event.data.payload.stage);
+      }
+    };
+
+    // Listen for localStorage changes
+    const handleStorageChange = () => {
+      const requestedStage = localStorage.getItem('requestedStage');
+      if (requestedStage) {
+        console.log('Storage navigation request:', requestedStage);
+        setStage(requestedStage);
+        localStorage.removeItem('requestedStage');
+      }
+    };
+
+    // Listen for hash changes
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        console.log('Hash change detected:', hash);
+        setStage(hash);
+      }
+    };
+
+    // Add event listeners
+    window.addEventListener('message', handleNavigationRequest);
+    window.addEventListener('storage', handleStorageChange);
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Check for initial hash
+    if (window.location.hash) {
+      const initialHash = window.location.hash.substring(1);
+      if (initialHash) {
+        setStage(initialHash);
+      }
+    }
+
+    return <App />;
+  }, []);
+
   console.log('App component mounted, current stage:', stage);
 
   if (stage === "test") return <TestAPI />;
