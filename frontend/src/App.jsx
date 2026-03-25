@@ -34,6 +34,11 @@ export default function App() {
   const [reviewUnknownDeck, setReviewUnknownDeck] = useState(false);
   const [vocabExamConfig, setVocabExamConfig] = useState(null);
 
+  // Make setStage globally available
+  if (typeof window !== 'undefined' && !window.setAppStage) {
+    window.setAppStage = setStage;
+  }
+
   console.log('App component mounted, current stage:', stage);
 
   if (stage === "test") return <TestAPI />;

@@ -4,6 +4,28 @@ import useMobile from "../hooks/useMobile";
 export default function Schedules({ onGoHome }) {
   const { isMobile } = useMobile();
 
+  const handleViewConstitution = () => {
+    // Use global setAppStage if available
+    if (window.setAppStage) {
+      window.setAppStage('constitution');
+    } else {
+      // Fallback navigation methods
+      try {
+        window.location.hash = '#constitution';
+        setTimeout(() => {
+          window.location.href = '#constitution';
+        }, 100);
+        setTimeout(() => {
+          const url = window.location.origin + window.location.pathname + '#constitution';
+          window.location.replace(url);
+        }, 200);
+      } catch (error) {
+        console.log('Navigation error:', error);
+        window.location.reload();
+      }
+    }
+  };
+
   // Schedule content data
   const schedulesContent = {
     title: "📋 Constitution of India - Schedules",
@@ -308,9 +330,25 @@ export default function Schedules({ onGoHome }) {
 
       {/* Schedules Section */}
       <div style={styles.schedulesSection}>
-        <h2 style={{ fontSize: "24px", fontWeight: "600", color: "#2c3e50", marginBottom: "20px", textAlign: "center" }}>
-          📚 Detailed Schedules
-        </h2>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
+          <h2 style={{ fontSize: "24px", fontWeight: "600", color: "#2c3e50", margin: "0" }}>
+            📚 Detailed Schedules
+          </h2>
+          <button 
+            onClick={handleViewConstitution}
+            style={{ 
+              background: "#28a745", 
+              color: "#fff", 
+              border: "none", 
+              padding: "10px 20px", 
+              borderRadius: "6px", 
+              cursor: "pointer", 
+              fontSize: "14px"
+            }}
+          >
+            📋 View Constitution
+          </button>
+        </div>
         
         {schedulesContent.schedules.map((schedule, index) => (
           <div key={index} style={styles.scheduleCard}>
