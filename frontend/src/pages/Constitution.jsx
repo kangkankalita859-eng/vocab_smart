@@ -3,7 +3,7 @@ import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
 import useMobile from "../hooks/useMobile";
 
-export default function Constitution({ onGoHome, onViewSchedules }) {
+export default function Constitution({ onGoHome, onViewSchedules, onViewParts }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile } = useMobile();
 
@@ -27,9 +27,10 @@ export default function Constitution({ onGoHome, onViewSchedules }) {
       title: "📊 Key Facts",
       items: [
         { label: "Total Articles", value: "448 (as of 2023)" },
-        { label: "Total Parts", value: "25" },
-        { label: "Total Schedules", value: "12" },
         { label: "Total Amendments", value: "104" },
+        
+        { label: "Total Schedules", value: "12" },
+        { label: "Total Parts", value: "25" },
         { label: "Languages", value: "22 scheduled languages" },
         { label: "Official Language", value: "Hindi (Devanagari script)" }
       ]
@@ -282,6 +283,24 @@ export default function Constitution({ onGoHome, onViewSchedules }) {
                   <div style={{ color: "#007bff", fontWeight: "700" }}>
                     {item.value}
                   </div>
+                  {item.label === "Total Schedules" && (
+                    <button 
+                      onClick={onViewSchedules}
+                      style={{ 
+                        background: "#28a745", 
+                        color: "#fff", 
+                        border: "none", 
+                        padding: "8px 16px", 
+                        borderRadius: "6px", 
+                        cursor: "pointer", 
+                        fontSize: "14px",
+                        marginTop: "8px",
+                        width: "100%"
+                      }}
+                    >
+                      📋 View Schedules
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
@@ -310,16 +329,52 @@ export default function Constitution({ onGoHome, onViewSchedules }) {
               {constitutionContent.keyFacts.items.map((item, index) => (
                 <div key={index} style={{
                   padding: "12px",
-                  backgroundColor: "#fff3cd",
+                  backgroundColor: "#e3f2fd",
                   borderRadius: "8px",
-                  border: "1px solid #ffeaa7"
+                  border: "1px solid #c3e6cb"
                 }}>
-                  <div style={{ fontWeight: "600", color: "#856404", marginBottom: "4px" }}>
+                  <div style={{ fontWeight: "600", color: "#495057", marginBottom: "4px" }}>
                     {item.label}:
                   </div>
-                  <div style={{ color: "#856404", fontWeight: "700" }}>
+                  <div style={{ color: "#007bff", fontWeight: "700" }}>
                     {item.value}
                   </div>
+                  {item.label === "Total Schedules" && (
+                    <button 
+                      onClick={onViewSchedules}
+                      style={{ 
+                        background: "#28a745", 
+                        color: "#fff", 
+                        border: "none", 
+                        padding: "8px 16px", 
+                        borderRadius: "6px", 
+                        cursor: "pointer", 
+                        fontSize: "14px",
+                        marginTop: "8px",
+                        width: "100%"
+                      }}
+                    >
+                      📋 View Schedules
+                    </button>
+                  )}
+                  {item.label === "Total Parts" && (
+                    <button 
+                      onClick={onViewParts}
+                      style={{ 
+                        background: "#007bff", 
+                        color: "#fff", 
+                        border: "none", 
+                        padding: "8px 16px", 
+                        borderRadius: "6px", 
+                        cursor: "pointer", 
+                        fontSize: "14px",
+                        marginTop: "8px",
+                        width: "100%"
+                      }}
+                    >
+                      📚 View Parts
+                    </button>
+                  )}
                 </div>
               ))}
             </div>

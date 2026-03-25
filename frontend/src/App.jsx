@@ -14,6 +14,8 @@ import IndiaMap from "./pages/IndiaMap";
 import Geography from "./pages/Geography";
 import Constitution from "./pages/Constitution";
 import Schedules from "./pages/Schedules";
+import Parts from "./pages/Parts";
+import Articles from "./pages/Articles";
 import HomonymsHomophonesSession from "./pages/HomonymsHomophonesSession";
 import VocabTestIntro from "./pages/VocabTestIntro";
 import VocabTest from "./pages/VocabTest";
@@ -83,14 +85,6 @@ export default function App() {
     window.addEventListener('storage', handleStorageChange);
     window.addEventListener('hashchange', handleHashChange);
 
-    // Check for initial hash
-    if (window.location.hash) {
-      const initialHash = window.location.hash.substring(1);
-      if (initialHash) {
-        setStage(initialHash);
-      }
-    }
-
     // Return cleanup function
     return cleanup;
   }, []);
@@ -150,6 +144,7 @@ export default function App() {
         onIndiaMap={() => setStage("india-map")}
         onConstitution={() => setStage("constitution")}
         onSchedules={() => setStage("schedules")}
+        onParts={() => setStage("parts")}
       />
     );
 
@@ -363,6 +358,8 @@ export default function App() {
     return (
       <Constitution
         onGoHome={() => setStage("home")}
+        onViewSchedules={() => setStage("schedules")}
+        onViewParts={() => setStage("parts")}
       />
     );
 
@@ -370,6 +367,21 @@ export default function App() {
     return (
       <Schedules
         onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "parts")
+    return (
+      <Parts
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "articles")
+    return (
+      <Articles
+        onGoHome={() => setStage("home")}
+        partNumber={window.currentPartNumber || "Part I"}
       />
     );
 

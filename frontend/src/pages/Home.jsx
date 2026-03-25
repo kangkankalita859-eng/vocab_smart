@@ -126,7 +126,7 @@ const subjectContent = {
   }
 };
 
-export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onVocabTest, onGeometry, onGeography, onIndiaMap, onConstitution, onSchedules }) {
+export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onVocabTest, onGeometry, onGeography, onIndiaMap, onConstitution, onSchedules, onParts }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const [showPYQ, setShowPYQ] = useState(false);
@@ -231,6 +231,16 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
     }
   };
 
+  const handleViewParts = () => {
+    setShowConstitution(false);
+    // Navigate to parts using the prop from App.jsx
+    if (onParts) {
+      onParts();
+    } else {
+      console.log('Cannot navigate to parts - no onParts prop available');
+    }
+  };
+
   return (
     <div style={mainContainer}>
       {/* SIDEBAR - Desktop or Mobile */}
@@ -260,6 +270,7 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
           <Constitution 
             onGoHome={handleBackToModules}
             onViewSchedules={handleViewSchedules}
+            onViewParts={handleViewParts}
           />
         ) : (
           <>
