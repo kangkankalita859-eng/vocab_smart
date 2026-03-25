@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Session from "./pages/Session";
 import ReadVocab from "./pages/ReadVocab";
@@ -28,44 +28,55 @@ import EnglishVocabHome from "./pages/EnglishVocabHome";
 import GrammarHome from "./pages/GrammarHome";
 import "./styles/flashcard.css";
 
+// Global navigation function
+window.setAppStage = null;
+
 export default function App() {
-  const [stage, setStage] = useState("home"); // Back to normal
+  const [stage, setStage] = useState("home");
   const [config, setConfig] = useState({ start: 0, limit: 20 });
   const [reviewUnknownDeck, setReviewUnknownDeck] = useState(false);
   const [vocabExamConfig, setVocabExamConfig] = useState(null);
 
-  // Make setStage globally available
-  if (typeof window !== 'undefined' && !window.setAppStage) {
-    window.setAppStage = setStage;
-  }
+  console.log('App component mounted, current stage:', stage);
 
-  // Listen for navigation requests from child components
-  React.useEffect(() => {
-    const handleNavigationRequest = (event) => {
-      if (event.data && event.data.type === 'NAVIGATION_REQUEST') {
-        console.log('Navigation request received:', event.data.payload);
-        setStage(event.data.payload.stage);
-      }
-    };
+  // Navigation event handlers
+  const handleNavigationRequest = (event) => {
+    if (event.data && event.data.type === 'NAVIGATION_REQUEST') {
+      console.log('Navigation request received:', event.data.payload);
+      setStage(event.data.payload.stage);
+    }
+  };
 
-    // Listen for localStorage changes
-    const handleStorageChange = () => {
-      const requestedStage = localStorage.getItem('requestedStage');
-      if (requestedStage) {
-        console.log('Storage navigation request:', requestedStage);
-        setStage(requestedStage);
-        localStorage.removeItem('requestedStage');
-      }
-    };
+  const handleStorageChange = () => {
+    const requestedStage = localStorage.getItem('requestedStage');
+    if (requestedStage) {
+      console.log('Storage navigation request:', requestedStage);
+      setStage(requestedStage);
+      localStorage.removeItem('requestedStage');
+    }
+  };
 
-    // Listen for hash changes
-    const handleHashChange = () => {
-      const hash = window.location.hash.substring(1);
-      if (hash) {
-        console.log('Hash change detected:', hash);
-        setStage(hash);
-      }
-    };
+  const handleHashChange = () => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      console.log('Hash change detected:', hash);
+      setStage(hash);
+    }
+  };
+
+  // Cleanup function
+  const cleanup = () => {
+    window.removeEventListener('message', handleNavigationRequest);
+    window.removeEventListener('storage', handleStorageChange);
+    window.removeEventListener('hashchange', handleHashChange);
+  };
+
+  // Main effect for setting up navigation and cleanup
+  useEffect(() => {
+    // Set up global navigation function
+    if (typeof window !== 'undefined' && !window.setAppStage) {
+      window.setAppStage = setStage;
+    }
 
     // Add event listeners
     window.addEventListener('message', handleNavigationRequest);
@@ -80,14 +91,13 @@ export default function App() {
       }
     }
 
-    return <App />;
+    // Return cleanup function
+    return cleanup;
   }, []);
 
-  console.log('App component mounted, current stage:', stage);
-
+  // Render appropriate component based on stage
   if (stage === "test") return <TestAPI />;
   
-
   if (stage === "home")
     return (
       <Home
@@ -144,31 +154,27 @@ export default function App() {
     );
 
   if (stage === "session")
-  return (
-    <Session
-      config={config}
-      reviewUnknownDeck={reviewUnknownDeck}
-      onComplete={() => setStage("complete")}
-      onGoRead={() => {
-        if (stage === "read-homonyms-homophones") {
-          setStage("read-narration");
-        } else {
-          setReviewUnknownDeck(false);
-          setStage("read");
-        }
-      }}
-      onGoTest={() => {
-        setVocabExamConfig(null);
-        setStage("vocab-test-intro");
-      }}
-      onUpdateConfig={(c) => setConfig(c)}
-      onGoHome={() => {
-        setReviewUnknownDeck(false);
-        setStage("home");
-      }}
-    />
-  );
-
+    return (
+      <Session
+        config={config}
+        reviewUnknownDeck={reviewUnknownDeck}
+        onComplete={() => setStage("complete")}
+        onGoRead={() => {
+          if (stage === "read-homonyms-homophones") {
+            setStage("read-narration");
+          } else {
+            setReviewUnknownDeck(false);
+            setStage("read");
+          }
+        }}
+        onGoTest={() => {
+          setVocabExamConfig(null);
+          setStage("vocab-test-intro");
+        }}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
 
   if (stage === "read")
     return (
@@ -179,33 +185,10 @@ export default function App() {
           setStage("session");
         }}
         onGoTest={() => {
-          setConfig({ start: 0, limit: 10 });
-          setStage("vocab-test-sets");
-        }}
-        onUpdateConfig={(c) => setConfig(c)}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
-  if (stage === "vocab-test-intro")
-    return (
-      <VocabTestIntro
-        config={config}
-        onSelectSet={(set) => {
-          setVocabExamConfig({ start: set.start, limit: set.limit });
+          setVocabExamConfig(null);
           setStage("vocab-test");
         }}
-        onGoRead={() => setStage("read")}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
-  if (stage === "vocab-test")
-    return (
-      <VocabTest
-        config={vocabExamConfig || { start: config.start, limit: Math.min(10, config.limit || 10) }}
-        setConfig={(c) => setVocabExamConfig(c)}
-        onGoRead={() => setStage("read")}
+        onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
       />
     );
@@ -216,19 +199,9 @@ export default function App() {
         config={config}
         onGoCards={() => setStage("idiom-session")}
         onGoTest={() => {
-          setConfig({ start: 0, limit: 10 });
+          setVocabExamConfig(null);
           setStage("idiom-exam-sets");
         }}
-        onUpdateConfig={(c) => setConfig(c)}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
-  if (stage === "idiom-session")
-    return (
-      <IdiomSession
-        config={config}
-        onGoRead={() => setStage("read-idioms")}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
       />
@@ -247,81 +220,12 @@ export default function App() {
       />
     );
 
-  if (stage === "english-vocab-home")
-    return (
-      <EnglishVocabHome
-        onGoRead={() => {
-          setConfig({ start: 0, limit: 20 });
-          setStage("read");
-        }}
-        onGoCards={() => {
-          setConfig({ start: 0, limit: 20 });
-          setReviewUnknownDeck(true);
-          setStage("session");
-        }}
-        onGoExam={() => {
-          setConfig({ start: 0, limit: 10 });
-          setStage("vocab-test-sets");
-        }}
-        onGoIdiomExam={() => {
-          setConfig({ start: 0, limit: 10 });
-          setStage("idiom-exam");
-        }}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
-  if (stage === "grammar-home")
-    return (
-      <GrammarHome
-        onSelectTopic={(topic) => {
-          // TODO: Navigate to specific grammar topic page
-          console.log("Selected grammar topic:", topic);
-        }}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
   if (stage === "read-homonyms-homophones")
     return (
       <ReadHomonymsHomophones
         config={config}
         onGoCards={() => setStage("homonyms-homophones-session")}
         onUpdateConfig={(c) => setConfig(c)}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
-  if (stage === "homonyms-homophones-session")
-    return (
-      <HomonymsHomophonesSession
-        config={config}
-        onGrammar={() => setStage("grammar-home")}
-        onNarration={() => setStage("read-narration")}
-        onVoiceChange={() => setStage("read-voice-change")}
-        onVocabTest={() => setStage("vocab-test-sets")}
-        onGeometry={() => setStage("read-geometry")}
-        onGeometryUpload={() => setStage("geometry-upload")}
-        onComplete={() => setStage("complete")}
-        onGoRead={() => setStage("read-homonyms-homophones")}
-        onUpdateConfig={(c) => setConfig(c)}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
-  if (stage === "synonyms-antonyms-test-intro")
-    return (
-      <SynonymsAntonymsTestIntro
-        config={config}
-        onStartTest={() => setStage("synonyms-antonyms-test")}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
-  if (stage === "synonyms-antonyms-test")
-    return (
-      <SynonymsAntonymsTest
-        config={config}
         onGoHome={() => setStage("home")}
       />
     );
@@ -348,9 +252,29 @@ export default function App() {
     return (
       <ReadVocabTest
         config={config}
+        onGoCards={() => {
+          setReviewUnknownDeck(false);
+          setStage("read");
+        }}
+        onGoTest={() => {
+          setVocabExamConfig(null);
+          setStage("vocab-test");
+        }}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
-        onGoBackToSets={() => setStage("vocab-test-sets")}
+      />
+    );
+
+  if (stage === "vocab-test-intro")
+    return (
+      <VocabTestIntro
+        config={config}
+        onSelectSet={(set) => {
+          setVocabExamConfig({ start: set.start, limit: set.limit });
+          setStage("vocab-test");
+        }}
+        onGoRead={() => setStage("read")}
+        onGoHome={() => setStage("home")}
       />
     );
 
@@ -360,10 +284,38 @@ export default function App() {
         config={config}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
-        onSelectSet={(set) => {
-          setConfig({ start: set.start, limit: set.limit, setNumber: set.setNumber });
-          setStage("read-vocab-test");
+      />
+    );
+
+  if (stage === "vocab-test")
+    return (
+      <VocabTest
+        config={vocabExamConfig || { start: config.start, limit: Math.min(10, config.limit || 10) }}
+        setConfig={(c) => setVocabExamConfig(c)}
+        onGoRead={() => setStage("read")}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "idiom-session")
+    return (
+      <IdiomSession
+        config={config}
+        onGoCards={() => setStage("idiom-session")}
+        onGoTest={() => {
+          setVocabExamConfig(null);
+          setStage("idiom-exam-sets");
         }}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "idiom-exam")
+    return (
+      <IdiomExam
+        config={config}
+        onGoHome={() => setStage("home")}
       />
     );
 
@@ -373,62 +325,53 @@ export default function App() {
         config={config}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
-        onSelectSet={(set) => {
-          setConfig({ start: set.start, limit: set.limit, setNumber: set.setNumber });
-          setStage("idiom-exam");
+      />
+    );
+
+  if (stage === "english-vocab-home")
+    return (
+      <EnglishVocabHome
+        onGoRead={() => {
+          setConfig({ start: 0, limit: 20 });
+          setStage("read");
         }}
-      />
-    );
-
-  if (stage === "idiom-exam")
-    return (
-      <IdiomExam
-        config={config}
-        onUpdateConfig={(c) => setConfig(c)}
-        onGoHome={() => setStage("home")}
-        onGoBackToSets={() => setStage("idiom-exam-sets")}
-      />
-    );
-
-  if (stage === "read-geometry")
-    return (
-      <ReadGeometry
-        config={config}
+        onGoCards={() => {
+          setConfig({ start: 0, limit: 20 });
+          setReviewUnknownDeck(true);
+          setStage("session");
+        }}
+        onGoExam={() => {
+          setVocabExamConfig(null);
+          setStage("vocab-test-sets");
+        }}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
       />
     );
 
-  if (stage === "geography")
+  if (stage === "grammar-home")
     return (
-      <Geography
-        config={config}
-        onUpdateConfig={(c) => setConfig(c)}
-        onGoHome={() => setStage("home")}
-      />
-    );
-
-  if (stage === "india-map")
-    return (
-      <IndiaMap
+      <GrammarHome
+        onSelectTopic={(topic) => {
+          console.log("Selected grammar topic:", topic);
+        }}
         onGoHome={() => setStage("home")}
       />
     );
 
   if (stage === "constitution")
     return (
-      <Constitution 
+      <Constitution
         onGoHome={() => setStage("home")}
-        onViewSchedules={() => setStage("schedules")}
       />
     );
 
   if (stage === "schedules")
     return (
-      <Schedules onGoHome={() => setStage("home")} />
+      <Schedules
+        onGoHome={() => setStage("home")}
+      />
     );
 
   return <Complete />;
 }
-
-

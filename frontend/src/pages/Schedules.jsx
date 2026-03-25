@@ -7,41 +7,18 @@ export default function Schedules({ onGoHome }) {
   const handleViewConstitution = () => {
     console.log('Constitution button clicked');
     
-    // Try the most direct approaches
-    try {
-      // Method 1: Direct hash change
-      window.location.hash = '#constitution';
-      console.log('Hash set to:', window.location.hash);
-      
-      // Method 2: Force hash change with event
-      const hashChangeEvent = new HashChangeEvent('hashchange');
-      window.dispatchEvent(hashChangeEvent);
-      console.log('Hash change event dispatched');
-      
-      // Method 3: Direct location reload with hash
-      setTimeout(() => {
-        const currentUrl = window.location.pathname;
-        window.location.href = currentUrl + '#constitution';
-        console.log('Direct href set to:', currentUrl + '#constitution');
-      }, 50);
-      
-      // Method 4: PostMessage to parent
-      if (window.parent !== window.self) {
-        window.parent.postMessage({
-          type: 'NAVIGATION_REQUEST',
-          payload: { stage: 'constitution' }
-        }, '*');
-        console.log('PostMessage sent to parent');
+    // Use same navigation pattern as other components in the app
+    if (window.setAppStage) {
+      window.setAppStage('constitution');
+    } else {
+      // Fallback: try to trigger navigation like other components
+      try {
+        window.location.href = '#constitution';
+        console.log('Direct navigation to constitution');
+      } catch (error) {
+        console.error('Navigation error:', error);
+        alert('Please refresh the page to navigate to Constitution.');
       }
-      
-      // Method 5: Storage event
-      localStorage.setItem('requestedStage', 'constitution');
-      console.log('Stage saved to localStorage');
-      
-    } catch (error) {
-      console.error('Navigation error:', error);
-      // Ultimate fallback
-      alert('Navigation to Constitution page. Please refresh the app.');
     }
   };
 
@@ -327,21 +304,22 @@ export default function Schedules({ onGoHome }) {
       {/* Header */}
       <div style={styles.header}>
         <h1 style={styles.title}>{schedulesContent.title}</h1>
-        <button 
-          onClick={handleViewConstitution}
-          style={{ 
-            background: "#28a745", 
-            color: "#fff", 
-            border: "none", 
-            padding: "8px 16px", 
-            borderRadius: "6px", 
-            cursor: "pointer", 
-            fontSize: "14px",
-            marginLeft: "20px"
-          }}
-        >
-          📋 View Constitution
-        </button>
+        <a 
+            href="#constitution"
+            style={{ 
+              background: "#28a745", 
+              color: "#fff", 
+              border: "none", 
+              padding: "8px 16px", 
+              borderRadius: "6px", 
+              cursor: "pointer", 
+              fontSize: "14px",
+              marginLeft: "20px",
+              textDecoration: "none"
+            }}
+          >
+            📋 View Constitution
+          </a>
       </div>
 
       {/* Mnemonic Section */}
