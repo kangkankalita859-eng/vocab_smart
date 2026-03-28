@@ -24,6 +24,17 @@ export default function Parts({ onGoHome }) {
     }
   };
 
+  // Back button container with sticky positioning
+  const backButtonContainer = {
+    position: "sticky",
+    top: "0",
+    zIndex: "1000",
+    backgroundColor: "#ffffff",
+    padding: "20px",
+    borderBottom: "1px solid #e9ecef",
+    marginBottom: "20px"
+  };
+
   const handleViewConstitution = () => {
     console.log('Constitution button clicked');
     
@@ -42,6 +53,91 @@ export default function Parts({ onGoHome }) {
     }
   };
 
+  // Function to highlight the word in the description
+  const highlightWord = (description, word) => {
+    if (!word) return description;
+    
+    // Create a regex to find the word (case insensitive)
+    const regex = new RegExp(`(${word})`, 'gi');
+    const parts = description.split(regex);
+    
+    return parts.map((part, index) => {
+      if (part.toLowerCase() === word.toLowerCase()) {
+        return (
+          <span key={index} style={{ 
+            backgroundColor: "#ffeb3b", 
+            color: "#000", 
+            fontWeight: "700",
+            padding: "2px 4px",
+            borderRadius: "3px"
+          }}>
+            {part}
+          </span>
+        );
+      }
+      return part;
+    });
+  };
+
+  // Function to highlight first letters of words starting with capital letters
+  const highlightFirstLetters = (description) => {
+    // Split by words and highlight first letter of capital words with dark color
+    const words = description.split(' ');
+    return words.map((word, index) => {
+      if (word && word[0] && word[0] === word[0].toUpperCase() && word[0] !== word[0].toLowerCase()) {
+        const firstLetter = word[0];
+        const restOfWord = word.slice(1);
+        
+        return (
+          <span key={index}>
+            <span style={{ 
+              color: "#2c3e50", // Dark color
+              fontWeight: "normal" // No bold
+            }}>
+              {firstLetter}
+            </span>
+            {restOfWord}
+            {index < words.length - 1 && ' '}
+          </span>
+        );
+      }
+      return word + (index < words.length - 1 ? ' ' : '');
+    });
+  };
+
+  // Function to highlight the mnemonic sentence with yellow color only
+  const highlightMnemonicSentence = (sentence) => {
+    // Split by words and highlight first letter of ALL words with yellow color
+    const words = sentence.split(' ');
+    return words.map((word, index) => {
+      if (word && word[0]) {
+        const firstLetter = word[0].toUpperCase();
+        const restOfWord = word.slice(1);
+        
+        // Don't highlight small words that should stay lowercase
+        const shouldHighlight = !['to', 'of', 'and'].includes(word.toLowerCase());
+        
+        return (
+          <span key={index}>
+            {shouldHighlight ? (
+              <span style={{ 
+                color: "#fb8200ff", // Yellow color
+                fontWeight: "bold" // No bold
+              }}>
+                {firstLetter}
+              </span>
+            ) : (
+              firstLetter
+            )}
+            {restOfWord}
+            {index < words.length - 1 && ' '}
+          </span>
+        );
+      }
+      return word + (index < words.length - 1 ? ' ' : '');
+    });
+  };
+
   // Parts content data
   const partsContent = {
     title: "📚 Constitution of India - Parts",
@@ -49,31 +145,163 @@ export default function Parts({ onGoHome }) {
       title: "🧠 Remembering Trick: U Can Fly Directly From US to UP to Meet Child of Shyam and Ram; Fruits Taste Sweet to Eat, So Only Eat Maggie As Tasty Snack",
       description: "Each letter represents a part serially:",
       letters: [
-        { letter: "U", part: "Part I", description: "The Union and its Territory" },
-        { letter: "C", part: "Part II", description: "Citizenship" },
-        { letter: "F", part: "Part III", description: "Fundamental Rights" },
-        { letter: "D", part: "Part IV", description: "Directive Principles of State Policy" },
-        { letter: "F", part: "Part IV-A", description: "Fundamental Duties" },
-        { letter: "U", part: "Part V", description: "The Union" },
-        { letter: "S", part: "Part VI", description: "The States" },
-        { letter: "T", part: "Part VII", description: "States in the First Schedule" },
-        { letter: "O", part: "Part VIII", description: "The Union Territories" },
-        { letter: "U", part: "Part IX", description: "The Panchayats" },
-        { letter: "P", part: "Part IX-A", description: "The Municipalities" },
-        { letter: "M", part: "Part X", description: "The Scheduled and Tribal Areas" },
-        { letter: "E", part: "Part XI", description: "Relations between Union and States" },
-        { letter: "E", part: "Part XII", description: "Finance, Property, Contracts and Suits" },
-        { letter: "T", part: "Part XIII", description: "Trade, Commerce and Intercourse within the Territory of India" },
-        { letter: "C", part: "Part XIV", description: "Services under the Union and the States" },
-        { letter: "H", part: "Part XIV-A", description: "Tribunals" },
-        { letter: "I", part: "Part XV", description: "Elections" },
-        { letter: "L", part: "Part XVI", description: "Special Provisions Relating to Certain Classes" },
-        { letter: "D", part: "Part XVII", description: "Official Language" },
-        { letter: "L", part: "Part XVIII", description: "Emergency Provisions" },
-        { letter: "Y", part: "Part XIX", description: "Miscellaneous" },
-        { letter: "A", part: "Part XX", description: "Amendment of the Constitution" },
-        { letter: "M", part: "Part XXI", description: "Temporary, Transitional and Special Provisions" },
-        { letter: "E", part: "Part XXII", description: "Short Title, Commencement, Authoritative Text in Hindi and Repeals" }
+        { 
+          letter: "U", 
+          part: "Part I", 
+          description: "Union and its Territory",
+          highlightedWord: "Union"
+        },
+        { 
+          letter: "Can", 
+          part: "Part II", 
+          description: "Citizenship",
+          highlightedWord: "Citizenship"
+        },
+        { 
+          letter: "Fly", 
+          part: "Part III", 
+          description: "Fundamental Rights",
+          highlightedWord: "Fundamental"
+        },
+        { 
+          letter: "Diectly", 
+          part: "Part IV", 
+          description: "Directive Principles of State Policy",
+          highlightedWord: "Directive"
+        },
+        { 
+          letter: "From", 
+          part: "Part IV-A", 
+          description: "Fundamental Duties(added by 42nd CAA, 1976)",
+          highlightedWord: "Fundamental"
+        },
+        { 
+          letter: "U", 
+          part: "Part V", 
+          description: "Union Government",
+          highlightedWord: "Union"
+        },
+        { 
+          letter: "S", 
+          part: "Part VI", 
+          description: "State Government",
+          highlightedWord: "States"
+        },
+        { 
+          letter: "", 
+          part: "Part VII", 
+          description: "",
+          highlightedWord: "Territories",
+          deleted: true
+        },
+        { 
+          letter: "U", 
+          part: "Part VIII", 
+          description: "Union Territories",
+          highlightedWord: "of"
+        },
+        { 
+          letter: "P", 
+          part: "Part IX", 
+          description: "Panchayats",
+          highlightedWord: "Union"
+        },
+        { 
+          letter: "Meet", 
+          part: "Part IX-A", 
+          description: "Municipalities",
+          highlightedWord: "Panchayats"
+        },
+        { 
+          letter: "Child", 
+          part: "Part IX-B", 
+          description: "Co -Operative Socities(added by 97th CAA, 2011",
+          highlightedWord: "Municipalities"
+        },
+        { 
+          letter: "Shyam &", 
+          part: "Part X", 
+          description: "Sheduled and Tribal Areas",
+          highlightedWord: "Estates"
+        },
+        { 
+          letter: "Ram", 
+          part: "Part XI", 
+          description: "Relations between Union and States",
+          highlightedWord: "Estates"
+        },
+        { 
+          letter: "Fruits", 
+          part: "Part XII", 
+          description: "Finance, Property, Contracts and Suits",
+          highlightedWord: "Estate"
+        },
+        { 
+          letter: "Taste", 
+          part: "Part XIII", 
+          description: "Trade, Commerce and Intercourse within the Territory of India",
+          highlightedWord: "Trade"
+        },
+        { 
+          letter: "Sweet", 
+          part: "Part XIV", 
+          description: "Services under the Union and the States",
+          highlightedWord: "Commerce"
+        },
+        { 
+          letter: "To", 
+          part: "Part XIV-A", 
+          description: "Tribunals(added by 42nd CAA, 1976)",
+          highlightedWord: "High"
+        },
+        { 
+          letter: "Eat", 
+          part: "Part XV", 
+          description: "Elections",
+          highlightedWord: "India"
+        },
+        { 
+          letter: "So", 
+          part: "Part XVI", 
+          description: "Special Provisions Relating to Certain Classes",
+          highlightedWord: "Legislature"
+        },
+        { 
+          letter: "Only", 
+          part: "Part XVII", 
+          description: "Official Language",
+          highlightedWord: "Democratic"
+        },
+        { 
+          letter: "Eat", 
+          part: "Part XVIII", 
+          description: "Emergency Provisions",
+          highlightedWord: "Law"
+        },
+        { 
+          letter: "Maggie", 
+          part: "Part XIX", 
+          description: "Miscellaneous",
+          highlightedWord: "Year"
+        },
+        { 
+          letter: "As", 
+          part: "Part XX", 
+          description: "Amendment of the Constitution",
+          highlightedWord: "Amendment"
+        },
+        { 
+          letter: "Tasty", 
+          part: "Part XXI", 
+          description: "Temporary, Transitional and Special Provisions",
+          highlightedWord: "Miscellaneous"
+        },
+        { 
+          letter: "Snack", 
+          part: "Part XXII", 
+          description: "Short Title, Commencement, Authoritative Text in Hindi and Repeals",
+          highlightedWord: "Enactment"
+        }
       ]
     },
     parts: [
@@ -364,36 +592,62 @@ export default function Parts({ onGoHome }) {
   return (
     <div style={styles.container}>
       {/* Back Button */}
-      <button 
-        style={styles.backButton}
-        onClick={onGoHome}
-      >
-        ← Back
-      </button>
-
-      {/* Header */}
-      <div style={styles.header}>
-        <h1 style={styles.title}>{partsContent.title}</h1>
+      <div style={backButtonContainer}>
         <button 
           onClick={handleViewConstitution}
           style={{ 
             background: "#28a745", 
             color: "#fff", 
             border: "none", 
-            padding: "8px 16px", 
-            borderRadius: "6px", 
+            padding: "12px 24px", 
+            borderRadius: "8px", 
             cursor: "pointer", 
-            fontSize: "14px",
-            marginLeft: "20px"
+            fontSize: "16px",
+            fontWeight: "600",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
           }}
         >
           📜 View Constitution
         </button>
       </div>
 
+      {/* Header */}
+      <div style={styles.header}>
+        <h1 style={styles.title}>{partsContent.title}</h1>
+      </div>
+
       {/* Mnemonic Section */}
       <div style={styles.mnemonicSection}>
-        <h2 style={styles.mnemonicTitle}>{partsContent.mnemonic.title}</h2>
+        <div style={{
+          backgroundColor: "#f8f9fa",
+          border: "2px solid #dee2e6",
+          borderRadius: "8px",
+          padding: "20px",
+          marginBottom: "30px",
+          textAlign: "center"
+        }}>
+          <h3 style={{
+            fontSize: "20px",
+            fontWeight: "600",
+            color: "#2c3e50",
+            marginBottom: "10px"
+          }}>
+            🧠 Remembering Trick
+          </h3>
+          <p style={{
+            fontSize: "18px",
+            fontWeight: "normal",
+            color: "#2c3e50",
+            marginBottom: "15px",
+            lineHeight: "1.4"
+          }}>
+            {highlightMnemonicSentence(partsContent.mnemonic.title.replace("🧠 Remembering Trick: ", ""))}
+          </p>
+        </div>
+        
         <p style={{ textAlign: "center", fontSize: "16px", color: "#155724", marginBottom: "20px" }}>
           {partsContent.mnemonic.explanation}
         </p>
@@ -403,7 +657,22 @@ export default function Parts({ onGoHome }) {
             <div key={index} style={styles.mnemonicLetter}>
               <div style={styles.letter}>{item.letter}</div>
               <div style={styles.partNumber}>{item.part}</div>
-              <div style={styles.partDescription}>{item.description}</div>
+              <div style={styles.partDescription}>{highlightFirstLetters(item.description)}</div>
+              {item.deleted && (
+                <div style={{
+                  backgroundColor: "#ffebee",
+                  color: "#856404",
+                  padding: "8px 12px",
+                  borderRadius: "6px",
+                  fontSize: "12px",
+                  fontWeight: "600",
+                  textAlign: "center",
+                  marginTop: "10px",
+                  border: "1px solid #f8d7da"
+                }}>
+                  🗑️ DELETED
+                </div>
+              )}
             </div>
           ))}
         </div>

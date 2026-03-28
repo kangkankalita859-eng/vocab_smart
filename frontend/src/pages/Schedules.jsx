@@ -22,6 +22,32 @@ export default function Schedules({ onGoHome }) {
     }
   };
 
+  // Function to highlight the word in the description
+  const highlightWord = (description, word) => {
+    if (!word) return description;
+    
+    // Create a regex to find the word (case insensitive)
+    const regex = new RegExp(`(${word})`, 'gi');
+    const parts = description.split(regex);
+    
+    return parts.map((part, index) => {
+      if (part.toLowerCase() === word.toLowerCase()) {
+        return (
+          <span key={index} style={{ 
+            backgroundColor: "#ffeb3b", 
+            color: "#000", 
+            fontWeight: "700",
+            padding: "2px 4px",
+            borderRadius: "3px"
+          }}>
+            {part}
+          </span>
+        );
+      }
+      return part;
+    });
+  };
+
   // Schedule content data
   const schedulesContent = {
     title: "📋 Constitution of India - Schedules",
@@ -29,18 +55,78 @@ export default function Schedules({ onGoHome }) {
       title: "🧠 Remembering Trick: TEARS OF OLD PM",
       explanation: "Each letter represents a schedule serially:",
       letters: [
-        { letter: "T", schedule: "First Schedule", description: "States and Union Territories" },
-        { letter: "E", schedule: "Second Schedule", description: "Emoluments of President, Governors, etc." },
-        { letter: "A", schedule: "Third Schedule", description: "Forms of Oaths and Affirmations" },
-        { letter: "R", schedule: "Fourth Schedule", description: "Allocation of Seats in Rajya Sabha" },
-        { letter: "S", schedule: "Fifth Schedule", description: "Protection of Tribal Areas or Scheduled Areas" },
-        { letter: "O", schedule: "Sixth Schedule", description: "Administration of Tribal Areas" },
-        { letter: "F", schedule: "Seventh Schedule", description: "Union, State, and Concurrent Lists" },
-        { letter: "O", schedule: "Eighth Schedule", description: "Official Languages" },
-        { letter: "L", schedule: "Ninth Schedule", description: "Validation of Certain Acts, Land Reforms" },
-        { letter: "D", schedule: "Tenth Schedule", description: "Anti-Defection Law" },
-        { letter: "P", schedule: "Eleventh Schedule", description: "Panchayat Raj Powers" },
-        { letter: "M", schedule: "Twelfth Schedule", description: "Municipalities Powers" }
+        { 
+          letter: "T", 
+          schedule: "First Schedule", 
+          description: "States and Union Territories",
+          highlightedWord: "Territories"
+        },
+        { 
+          letter: "E", 
+          schedule: "Second Schedule", 
+          description: "Emoluments of President, Governors, etc.",
+          highlightedWord: "Emoluments"
+        },
+        { 
+          letter: "A", 
+          schedule: "Third Schedule", 
+          description: "Forms of Oaths and Affirmations",
+          highlightedWord: "Affirmations"
+        },
+        { 
+          letter: "R", 
+          schedule: "Fourth Schedule", 
+          description: "Allocation of Seats in Rajya Sabha",
+          highlightedWord: "Rajya Sabha"
+        },
+        { 
+          letter: "S", 
+          schedule: "Fifth Schedule", 
+          description: "Protection of Tribal Areas or Scheduled Areas",
+          highlightedWord: "Scheduled Areas"
+        },
+        { 
+          letter: "O", 
+          schedule: "Sixth Schedule", 
+          description: "Administration of Other Tribal Areas",
+          highlightedWord: "Other Tribal Areas"
+        },
+        { 
+          letter: "F", 
+          schedule: "Seventh Schedule", 
+          description: "Federal Structure; Union, State, and Concurrent Lists",
+          highlightedWord: "Federal Structure"
+        },
+        { 
+          letter: "O", 
+          schedule: "Eighth Schedule", 
+          description: "Official Languages",
+          highlightedWord: "Official Languages"
+        },
+        { 
+          letter: "L", 
+          schedule: "Ninth Schedule", 
+          description: "Validation of Certain Acts, Land Reforms",
+          highlightedWord: "Land Reforms"
+        },
+        { 
+          letter: "D", 
+          schedule: "Tenth Schedule", 
+          description: "Anti-Defection Law",
+          highlightedWord: "Defection Law"
+        },
+        { 
+          letter: "P", 
+          schedule: "Eleventh Schedule", 
+          description: "Panchayat Raj Powers",
+          highlightedWord: "Panchayat"
+        },
+        { 
+          letter: "M", 
+          schedule: "Twelfth Schedule", 
+          description: "Municipalities Powers",
+          highlightedWord: "Municipalities"
+        }
       ]
     },
     schedules: [
@@ -333,8 +419,8 @@ export default function Schedules({ onGoHome }) {
           {schedulesContent.mnemonic.letters.map((item, index) => (
             <div key={index} style={styles.mnemonicCard}>
               <div style={styles.letter}>{item.letter}</div>
-              <div style={styles.scheduleName}>{item.schedule}</div>
-              <div style={styles.description}>{item.description}</div>
+              <div style={styles.scheduleNumber}>{item.schedule}</div>
+              <div style={styles.scheduleDescription}>{highlightWord(item.description, item.highlightedWord)}</div>
             </div>
           ))}
         </div>
