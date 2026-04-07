@@ -12,6 +12,7 @@ import VocabTestSets from "./pages/VocabTestSets";
 import ReadGeometry from "./pages/ReadGeometry";
 import IndiaMap from "./pages/IndiaMap";
 import Geography from "./pages/Geography";
+import MapDrawing from "./pages/MapDrawing";
 import Constitution from "./pages/Constitution";
 import Schedules from "./pages/Schedules";
 import Parts from "./pages/Parts";
@@ -142,6 +143,7 @@ export default function App() {
         }}
         onGeography={() => setStage("geography")}
         onIndiaMap={() => setStage("india-map")}
+        onMapDrawing={() => setStage("map-drawing")}
         onConstitution={() => setStage("constitution")}
         onSchedules={() => setStage("schedules")}
         onParts={() => setStage("parts")}
@@ -354,6 +356,30 @@ export default function App() {
       />
     );
 
+  if (stage === "geography")
+    return (
+      <Geography
+        config={config}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+        onMapDrawing={() => setStage("map-drawing")}
+      />
+    );
+
+  if (stage === "india-map")
+    return (
+      <IndiaMap
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "map-drawing")
+    return (
+      <MapDrawing
+        onGoHome={() => setStage("home")}
+      />
+    );
+
   if (stage === "constitution")
     return (
       <Constitution
@@ -373,6 +399,29 @@ export default function App() {
   if (stage === "parts")
     return (
       <Parts
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "synonyms-antonyms-test-intro")
+    return (
+      <SynonymsAntonymsTestIntro
+        config={config}
+        onSelectSet={(set) => {
+          setVocabExamConfig({ start: set.start, limit: set.limit });
+          setStage("synonyms-antonyms-test");
+        }}
+        onGoRead={() => setStage("read-synonyms-antonyms")}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "synonyms-antonyms-test")
+    return (
+      <SynonymsAntonymsTest
+        config={vocabExamConfig || { start: config.start, limit: Math.min(10, config.limit || 10) }}
+        setConfig={(c) => setVocabExamConfig(c)}
+        onGoRead={() => setStage("read-synonyms-antonyms")}
         onGoHome={() => setStage("home")}
       />
     );

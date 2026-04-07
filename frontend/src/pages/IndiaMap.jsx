@@ -163,7 +163,8 @@ export default function IndiaMap({ onGoHome }) {
                 }}
               />
               
-              {/* Clickable State Areas */}
+              {/* Temporarily remove overlay to debug */}
+              {/* 
               <svg
                 style={overlaySvg}
                 viewBox="0 0 320 360"
@@ -186,6 +187,7 @@ export default function IndiaMap({ onGoHome }) {
                   />
                 ))}
               </svg>
+              */}
             </div>
 
             {/* State Information Panel */}

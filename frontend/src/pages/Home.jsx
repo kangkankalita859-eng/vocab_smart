@@ -126,7 +126,7 @@ const subjectContent = {
   }
 };
 
-export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onVocabTest, onGeometry, onGeography, onIndiaMap, onConstitution, onSchedules, onParts }) {
+export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onVocabTest, onGeometry, onGeography, onIndiaMap, onMapDrawing, onConstitution, onSchedules, onParts }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const [showPYQ, setShowPYQ] = useState(false);
@@ -153,6 +153,8 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
     // Handle specific subtopic actions
     if (topic === 'India Map') {
       onGeography();
+    } else if (topic === 'Physical Geography') {
+      onMapDrawing();
     } else if (topic === 'Constitution of India') {
       // Show Constitution component in current interface
       setShowConstitution(true);
@@ -444,10 +446,10 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
                         <span style={{ ...activeTag, backgroundColor: "#2196f3" }}>Available</span>
                       </div>
                       
-                      <div style={{ ...card, borderColor: "#4caf50" }} onClick={() => alert('Physical Geography coming soon!')}>
+                      <div style={{ ...card, borderColor: "#4caf50" }} onClick={() => handleTopicSelect('Physical Geography')}>
                         <h3>🏔️ Physical Geography</h3>
-                        <p>Mountains, rivers, and physical features of India</p>
-                        <span style={{ ...activeTag, backgroundColor: "#ff9800" }}>Coming Soon</span>
+                        <p>Draw state boundaries manually using mouse cursor</p>
+                        <span style={{ ...activeTag, backgroundColor: "#4caf50" }}>Available</span>
                       </div>
                       
                       <div style={{ ...card, borderColor: "#ff9800" }} onClick={() => alert('World Geography coming soon!')}>
@@ -525,8 +527,10 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
                   </div>
                 )
               ) : (
-                // Show default vocabulary modules when no subject/topic is selected
+                // Show default modules when no subject/topic is selected
                 <>
+                  
+                  
                   {/* ACTIVE MODULE */}
                   <div
                     style={{ ...card, borderColor: "#388e3c" }}
@@ -557,7 +561,7 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
                     <span style={{ ...activeTag, backgroundColor: "#9c27b0" }}>Available</span>
                   </div>
 
-                  {/* COMING SOON MODULES */}
+                  {/* HOMONYMS & HOMOPHONES MODULE */}
                   <div
                     style={{ ...card, borderColor: "#3b82f6" }}
                     onClick={() => onHomonymsHomophones({ start: 0, limit: 250 })}

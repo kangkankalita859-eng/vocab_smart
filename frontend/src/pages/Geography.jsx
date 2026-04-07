@@ -3,14 +3,16 @@ import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
 import useMobile from "../hooks/useMobile";
 
-export default function Geography({ config, onUpdateConfig, onGoHome }) {
+export default function Geography({ config, onUpdateConfig, onGoHome, onMapDrawing }) {
   console.log("Geography component loaded successfully!");
   console.log("FINAL VERSION with Chief Ministers - " + new Date().toISOString());
   const [selectedState, setSelectedState] = useState(null);
   const [hoveredState, setHoveredState] = useState(null);
+  const [activeTab, setActiveTab] = useState("basic");
+  const [showMap, setShowMap] = useState(false);
+  
   const { isMobile } = useMobile();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("basic");
   
   console.log("isMobile:", isMobile);
 
@@ -478,9 +480,41 @@ export default function Geography({ config, onUpdateConfig, onGoHome }) {
         <h1 style={{ fontSize: "32px", fontWeight: "700", color: "#2c3e50", marginBottom: "10px" }}>
           🗺️ Interactive India Political Map
         </h1>
-        <p style={{ fontSize: "16px", color: "#6c757d" }}>
+        <p style={{ fontSize: "16px", color: "#6c757d", marginBottom: "20px" }}>
           Click on any state circle to see comprehensive information: Population, Area, Economy, National Parks, and more
         </p>
+        
+        {/* Physical Geography Button */}
+        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+          <button
+            onClick={onMapDrawing}
+            style={{
+              backgroundColor: "#28a745",
+              color: "#fff",
+              border: "none",
+              padding: "15px 30px",
+              borderRadius: "12px",
+              cursor: "pointer",
+              fontSize: "18px",
+              fontWeight: "700",
+              boxShadow: "0 4px 15px rgba(40, 167, 69, 0.3)",
+              transition: "all 0.3s ease",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px"
+            }}
+            onMouseOver={(e) => {
+              e.target.style.transform = "translateY(-2px)";
+              e.target.style.boxShadow = "0 6px 20px rgba(40, 167, 69, 0.4)";
+            }}
+            onMouseOut={(e) => {
+              e.target.style.transform = "translateY(0)";
+              e.target.style.boxShadow = "0 4px 15px rgba(40, 167, 69, 0.3)";
+            }}
+          >
+            ✏️ Physical Geography - Draw State Boundaries
+          </button>
+        </div>
       </div>
 
       {/* Main Map Container */}
