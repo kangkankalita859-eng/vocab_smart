@@ -96,6 +96,34 @@ export default function IndiaMap({ onGoHome }) {
     setSelectedState(stateName);
   };
 
+  const getStateCenter = (coords) => ({
+    cx: coords.x + coords.width / 2,
+    cy: coords.y + coords.height / 2
+  });
+
+  const getMarkerRadii = (coords, isActive, isHovered) => {
+    const baseRadius = Math.max(4, Math.min(8, Math.min(coords.width, coords.height) * 0.18));
+
+    if (isActive) {
+      return {
+        outerRadius: baseRadius + 2,
+        innerRadius: baseRadius
+      };
+    }
+
+    if (isHovered) {
+      return {
+        outerRadius: baseRadius + 1,
+        innerRadius: baseRadius - 0.25
+      };
+    }
+
+    return {
+      outerRadius: baseRadius,
+      innerRadius: Math.max(3, baseRadius - 1.5)
+    };
+  };
+
   const getStateColor = (stateName) => {
     if (selectedState === stateName) return "#ff6b6b";
     if (hoveredState === stateName) return "#4ecdc4";
@@ -163,31 +191,62 @@ export default function IndiaMap({ onGoHome }) {
                 }}
               />
               
-              {/* Temporarily remove overlay to debug */}
-              {/* 
               <svg
                 style={overlaySvg}
                 viewBox="0 0 320 360"
                 onMouseLeave={() => setHoveredState(null)}
               >
-                {Object.entries(stateCoordinates).map(([stateName, coords]) => (
-                  <rect
-                    key={stateName}
-                    x={coords.x}
-                    y={coords.y}
-                    width={coords.width}
-                    height={coords.height}
-                    fill={getStateColor(stateName)}
-                    fillOpacity={getStateOpacity(stateName)}
-                    stroke="#fff"
-                    strokeWidth="1"
-                    style={{ cursor: 'pointer' }}
-                    onMouseEnter={() => setHoveredState(stateName)}
-                    onClick={() => handleStateClick(stateName)}
-                  />
-                ))}
+                {Object.entries(stateCoordinates).map(([stateName, coords]) => {
+                  const { cx, cy } = getStateCenter(coords);
+                  const isActive = selectedState === stateName;
+                  const isHovered = hoveredState === stateName;
+                  const { outerRadius, innerRadius } = getMarkerRadii(coords, isActive, isHovered);
+
+                  return (
+                  <g key={stateName}>
+                    <rect
+                      x={coords.x}
+                      y={coords.y}
+                      width={coords.width}
+                      height={coords.height}
+                      fill="transparent"
+                      style={{ cursor: "pointer" }}
+                      onMouseEnter={() => setHoveredState(stateName)}
+                      onClick={() => handleStateClick(stateName)}
+                    />
+                    <circle
+                      cx={cx}
+                      cy={cy}
+                      r={outerRadius}
+                      fill="#ffffff"
+                      fillOpacity="0.96"
+                      stroke={isActive ? "#78bfff" : isHovered ? "#8adbe7" : "#9fc8ff"}
+                      strokeWidth={Math.max(1.5, outerRadius * 0.22)}
+                      style={{
+                        cursor: "pointer",
+                        transition: "all 0.2s ease"
+                      }}
+                      onMouseEnter={() => setHoveredState(stateName)}
+                      onClick={() => handleStateClick(stateName)}
+                    />
+                    <circle
+                      cx={cx}
+                      cy={cy}
+                      r={innerRadius}
+                      fill={isActive ? "#79c2ff" : isHovered ? "#8fe1ea" : "#96b7f3"}
+                      fillOpacity="0.98"
+                      stroke="#ffffff"
+                      strokeWidth={Math.max(1, innerRadius * 0.12)}
+                      style={{
+                        cursor: "pointer",
+                        transition: "all 0.2s ease"
+                      }}
+                      onMouseEnter={() => setHoveredState(stateName)}
+                      onClick={() => handleStateClick(stateName)}
+                    />
+                  </g>
+                )})}
               </svg>
-              */}
             </div>
 
             {/* State Information Panel */}
@@ -385,7 +444,7 @@ const seatValue = {
 
 const placeholderInfo = {
   textAlign: "center",
-  padding: "40px 20px"
+  padding: "120px 20px 40px"
 };
 
 const placeholderTitle = {

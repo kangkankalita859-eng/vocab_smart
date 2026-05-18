@@ -183,7 +183,7 @@ export default function App() {
         }}
         onGoTest={() => {
           setVocabExamConfig(null);
-          setStage("vocab-test");
+          setStage("vocab-test-intro");
         }}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
@@ -255,7 +255,7 @@ export default function App() {
         }}
         onGoTest={() => {
           setVocabExamConfig(null);
-          setStage("vocab-test");
+          setStage("vocab-test-intro");
         }}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
@@ -312,7 +312,9 @@ export default function App() {
     return (
       <IdiomExam
         config={config}
+        onUpdateConfig={(c) => setConfig((prev) => ({ ...prev, ...c }))}
         onGoHome={() => setStage("home")}
+        onGoBackToSets={() => setStage("idiom-exam-sets")}
       />
     );
 
@@ -322,6 +324,10 @@ export default function App() {
         config={config}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
+        onSelectSet={(set) => {
+          setConfig((prev) => ({ ...prev, ...set }));
+          setStage("idiom-exam");
+        }}
       />
     );
 

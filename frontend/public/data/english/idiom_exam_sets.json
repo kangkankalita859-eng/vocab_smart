@@ -2,17 +2,33 @@
   {
     "id": "set1",
     "name": "Set 1: Common Idioms",
-    "description": "Basic English idioms for beginners",
+    "description": "Starter idioms that are very common in exams and conversation",
     "start": 0,
-    "limit": 5,
-    "totalQuestions": 5
+    "limit": 3,
+    "totalQuestions": 3
   },
   {
-    "id": "set2", 
-    "name": "Set 2: Daily Life Idioms",
-    "description": "Idioms used in everyday conversations",
-    "start": 5,
-    "limit": 5,
-    "totalQuestions": 5
+    "id": "set2",
+    "name": "Set 2: Practical Usage",
+    "description": "Idioms about work, effort, and handling situations",
+    "start": 3,
+    "limit": 3,
+    "totalQuestions": 3
+  },
+  {
+    "id": "set3",
+    "name": "Set 3: Speaking Naturally",
+    "description": "Useful idioms for everyday spoken English",
+    "start": 6,
+    "limit": 2,
+    "totalQuestions": 2
+  },
+  {
+    "id": "set4",
+    "name": "Set 4: Rare And Easy",
+    "description": "Short final practice set with frequency and ease-based idioms",
+    "start": 8,
+    "limit": 2,
+    "totalQuestions": 2
   }
 ]

@@ -10516,5 +10516,1661 @@
   "example": "They walked through the apple orchard.",
   "sscCount": 7,
   "otherExamCount": 4
+},
+{
+  "id": 1219,
+  "word": "Orchestra",
+  "hindiMeaning": "वादक समूह (N.)",
+  "meaning": "A large body of people playing various musical instruments",
+  "example": "The orchestra performed beautifully at the concert.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1220,
+  "word": "Ordeal",
+  "hindiMeaning": "कठिन परीक्षा (N.)",
+  "meaning": "Experiences that are very unpleasant or difficult",
+  "example": "Recovering from the accident was a painful ordeal.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1221,
+  "word": "Order",
+  "hindiMeaning": "क्रम (N.)",
+  "meaning": "The arrangement or disposition of people or things in relation to each other according to a particular sequence, pattern, or method",
+  "example": "The files were arranged in alphabetical order.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1222,
+  "word": "Office",
+  "hindiMeaning": "पद (N.)",
+  "meaning": "Something like an opening, particularly one in the body such as mouth",
+  "example": "He was elected to a high public office.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1223,
+  "word": "Ornithologist",
+  "hindiMeaning": "पक्षी विज्ञानी (N.)",
+  "meaning": "A person who studies birds",
+  "example": "The ornithologist spent years studying migratory birds.",
+  "sscCount": 2,
+  "otherExamCount": 2
+},
+{
+  "id": 1224,
+  "word": "Ornithology",
+  "hindiMeaning": "पक्षीविज्ञान (N.)",
+  "meaning": "The scientific study of birds",
+  "example": "She developed an interest in ornithology during college.",
+  "sscCount": 3,
+  "otherExamCount": 3
+},
+{
+  "id": 1225,
+  "word": "Orphan",
+  "hindiMeaning": "अनाथ (N.)",
+  "meaning": "A child whose parents are dead",
+  "example": "The orphan was adopted by a caring family.",
+  "sscCount": 3,
+  "otherExamCount": 1
+},
+{
+  "id": 1226,
+  "word": "Orphanage",
+  "hindiMeaning": "अनाथालय (N.)",
+  "meaning": "A home for the care and protection of children without parents",
+  "example": "They donated books to the orphanage.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1227,
+  "word": "Orthodox",
+  "hindiMeaning": "रूढ़िवादी (Adj.)",
+  "meaning": "A person holding conventional beliefs especially in matter of religion",
+  "example": "His orthodox views were criticized by many people.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1228,
+  "word": "Orthopaedics",
+  "hindiMeaning": "हड्डी रोग (N.)",
+  "meaning": "The branch of medicine that treats illnesses of bones",
+  "example": "He specialized in orthopaedics after medical school.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1229,
+  "word": "Orthopaedist",
+  "hindiMeaning": "हड्डियों का डॉक्टर (N.)",
+  "meaning": "Doctor who deals with bone problems",
+  "example": "The orthopaedist treated her fractured leg.",
+  "sscCount": 5,
+  "otherExamCount": 0
+},
+{
+  "id": 1230,
+  "word": "Ossify",
+  "hindiMeaning": "हड्डी बनना, कठोर हो जाना (V.)",
+  "meaning": "Make or become like a bone",
+  "example": "Old habits can ossify over time.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1231,
+  "word": "Ostler",
+  "hindiMeaning": "घोड़ों की देखभाल करने वाला (N.)",
+  "meaning": "A person who looks after horses at an inn",
+  "example": "The ostler fed the horses before sunrise.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1232,
+  "word": "Ostracise",
+  "hindiMeaning": "निष्कासित करना (V.)",
+  "meaning": "To banish or turn out of society and friendship",
+  "example": "The group decided to ostracise him for cheating.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1233,
+  "word": "Outdo",
+  "hindiMeaning": "आगे बढ़ना (V.)",
+  "meaning": "Be more successful than someone",
+  "example": "She managed to outdo all her competitors.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1234,
+  "word": "Outlandish",
+  "hindiMeaning": "विचित्र (Adj.)",
+  "meaning": "Looking or sounding foreign, bizarre, strange, unfamiliar",
+  "example": "He wore an outlandish costume to the party.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1235,
+  "word": "Outlaw",
+  "hindiMeaning": "नियमबाहरी (N.)",
+  "meaning": "A person who has broken the law, especially one who remains at large or is a fugitive",
+  "example": "The outlaw escaped into the forest.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1236,
+  "word": "Outreach",
+  "hindiMeaning": "पहुँच (V.)",
+  "meaning": "Involvement with or influence in the community",
+  "example": "The NGO started an outreach program for poor children.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1237,
+  "word": "Overlook",
+  "hindiMeaning": "अनदेखी करना (V.)",
+  "meaning": "Fail to notice; ignore; condone an offence",
+  "example": "Do not overlook small mistakes in the report.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1238,
+  "word": "Overwhelm",
+  "hindiMeaning": "भावनाओं से अभिभूत होना (V.)",
+  "meaning": "Have a strong emotional effect on",
+  "example": "The sudden success overwhelmed him.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1239,
+  "word": "Ovine",
+  "hindiMeaning": "भेड़ के समान (N.)",
+  "meaning": "Pertaining to sheep",
+  "example": "The farm is famous for its ovine breeds.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1240,
+  "word": "Pacifism",
+  "hindiMeaning": "शांतिवाद (N.)",
+  "meaning": "Belief that war and violence are unjustified",
+  "example": "His pacifism inspired many followers.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1241,
+  "word": "Pacifist",
+  "hindiMeaning": "शांतिवादी (N.)",
+  "meaning": "A person who opposes war or use of military force",
+  "example": "The pacifist spoke against armed conflict.",
+  "sscCount": 6,
+  "otherExamCount": 1
+},
+{
+  "id": 1242,
+  "word": "Pack",
+  "hindiMeaning": "भेड़ियों का झुंड (N.)",
+  "meaning": "A group of wolves",
+  "example": "A pack of wolves was seen near the forest.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1243,
+  "word": "Pack",
+  "hindiMeaning": "ताश की गड्डी (N.)",
+  "meaning": "A group of playing cards",
+  "example": "He bought a new pack of cards.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1244,
+  "word": "Pact",
+  "hindiMeaning": "समझौता (N.)",
+  "meaning": "A formal agreement between two or more nations or peoples",
+  "example": "The two countries signed a peace pact.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1245,
+  "word": "Paediatrician",
+  "hindiMeaning": "बच्चों का चिकित्सक (N.)",
+  "meaning": "A doctor who treats children diseases",
+  "example": "The paediatrician examined the sick child carefully.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 1246,
+  "word": "Palaeography",
+  "hindiMeaning": "पुरातन लिपि विज्ञान (N.)",
+  "meaning": "The study of ancient writings and scriptures",
+  "example": "He specialized in palaeography during his research.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1247,
+  "word": "Palindrome",
+  "hindiMeaning": "ऐसा शब्द जो आगे और पीछे दोनों तरफ से एक जैसा हो (N.)",
+  "meaning": "A word that reads the same backwards as forwards",
+  "example": "‘Madam’ is a famous palindrome.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1248,
+  "word": "Palliation",
+  "hindiMeaning": "कम गंभीर बनाना (N.)",
+  "meaning": "Make something less severe",
+  "example": "The medicine provided palliation from pain.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1249,
+  "word": "Palpable",
+  "hindiMeaning": "स्पर्शनीय (Adj.)",
+  "meaning": "Thing that can be felt or touched",
+  "example": "There was a palpable tension in the room.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1250,
+  "word": "Panacea",
+  "hindiMeaning": "रामबाण इलाज (N.)",
+  "meaning": "A solution for all difficulties or diseases",
+  "example": "There is no panacea for unemployment.",
+  "sscCount": 16,
+  "otherExamCount": 1
+},
+{
+  "id": 1251,
+  "word": "Pandemic",
+  "hindiMeaning": "महामारी (N.)",
+  "meaning": "Disease that spreads over a whole country or the whole world",
+  "example": "The pandemic affected millions of people.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 1252,
+  "word": "Pandemonium",
+  "hindiMeaning": "कोलाहल (N.)",
+  "meaning": "Wild and noisy disorder",
+  "example": "The announcement created pandemonium in the stadium.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1253,
+  "word": "Pander",
+  "hindiMeaning": "नीच कार्य में सहायता देनेवाला (V.)",
+  "meaning": "Gratify an immoral or distasteful desire",
+  "example": "Some advertisements pander to unhealthy habits.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1254,
+  "word": "Panic",
+  "hindiMeaning": "आतंक, भगदड़ (N.)",
+  "meaning": "Sudden uncontrollable fear or anxiety, often causing wildly unthinking behaviour",
+  "example": "People ran in panic after hearing the explosion.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1255,
+  "word": "Panorama",
+  "hindiMeaning": "चित्रमाला (N.)",
+  "meaning": "Wide, uninterrupted view",
+  "example": "The hilltop offered a beautiful panorama of the city.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1256,
+  "word": "Pant",
+  "hindiMeaning": "हांफना (V.)",
+  "meaning": "Breathe hard and with difficulty",
+  "example": "He began to pant after running fast.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1257,
+  "word": "Pantheism",
+  "hindiMeaning": "सर्वेश्वरवाद (N.)",
+  "meaning": "The belief that God is in everything, including nature",
+  "example": "Pantheism teaches that divinity exists in all things.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 1258,
+  "word": "Pantheon",
+  "hindiMeaning": "सर्वदेवालय (N.)",
+  "meaning": "A temple dedicated to all the gods",
+  "example": "The ancient pantheon attracted many tourists.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1259,
+  "word": "Pantry",
+  "hindiMeaning": "रसोई भंडार (N.)",
+  "meaning": "A small room in a big house, hotel, ship etc. where glasses, dishes, spoons, food etc. are kept",
+  "example": "She stored the groceries in the pantry.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1260,
+  "word": "Paparazzi",
+  "hindiMeaning": "सेलिब्रिटी फोटोग्राफर (N.)",
+  "meaning": "Photographers who follow celebrities to get their pictures to sell them",
+  "example": "The actor was surrounded by paparazzi outside the airport.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1261,
+  "word": "Parable",
+  "hindiMeaning": "नीति कथा (N.)",
+  "meaning": "Story told to illustrate a moral or spiritual truth",
+  "example": "The teacher narrated a parable about honesty.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1262,
+  "word": "Parasite",
+  "hindiMeaning": "परजीवी (N.)",
+  "meaning": "One who lives/survives on others/other lives",
+  "example": "A parasite depends on another organism for survival.",
+  "sscCount": 5,
+  "otherExamCount": 0
+},
+{
+  "id": 1263,
+  "word": "Parboil",
+  "hindiMeaning": "अधूरा पकाना (V.)",
+  "meaning": "A method of boiling briefly to cook food slightly",
+  "example": "She parboiled the rice before frying it.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1264,
+  "word": "Parochial",
+  "hindiMeaning": "सीमित (Adj.)",
+  "meaning": "Having a limited or narrow outlook or scope",
+  "example": "He was criticized for his parochial thinking.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1265,
+  "word": "Parole",
+  "hindiMeaning": "पैरोल (N.)",
+  "meaning": "Permission that is given to a prisoner to leave prison before the end of his sentence on condition that he behaves well",
+  "example": "The prisoner was released on parole.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1266,
+  "word": "Parricide",
+  "hindiMeaning": "पितृहत्याक (N.)",
+  "meaning": "The crime of killing your father, mother or a close relative",
+  "example": "The novel revolved around a shocking parricide case.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1267,
+  "word": "Parvenu",
+  "hindiMeaning": "नयी नयी दौलत (N.)",
+  "meaning": "One who has suddenly gained new wealth, power or prestige",
+  "example": "The parvenu tried hard to fit into high society.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 1268,
+  "word": "Patent",
+  "hindiMeaning": "एकछत्र अधिकार (N.)",
+  "meaning": "Sole right to make and sell some invention",
+  "example": "The scientist received a patent for his invention.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1269,
+  "word": "Pathology",
+  "hindiMeaning": "रोग विज्ञान (N.)",
+  "meaning": "The scientific study of diseases",
+  "example": "She is studying pathology in medical college.",
+  "sscCount": 3,
+  "otherExamCount": 1
+},
+{
+  "id": 1270,
+  "word": "Patriarchy",
+  "hindiMeaning": "पितृसत्ता (N.)",
+  "meaning": "A system of society or government in which men hold the power and women are largely excluded from it",
+  "example": "The novel criticizes the patriarchy of ancient society.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1271,
+  "word": "Patricide",
+  "hindiMeaning": "पितृहत्या (N.)",
+  "meaning": "Killing of one's own father",
+  "example": "The king's murder was treated as patricide.",
+  "sscCount": 3,
+  "otherExamCount": 1
+},
+{
+  "id": 1272,
+  "word": "Patrilineal",
+  "hindiMeaning": "पितृवंशीय (Adj.)",
+  "meaning": "Relationship between father and child that continues in a family with each generation",
+  "example": "The tribe follows a patrilineal system.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1273,
+  "word": "Patrimony",
+  "hindiMeaning": "पैतृक संपत्ति (N.)",
+  "meaning": "Property that is given to somebody when his father dies",
+  "example": "He inherited a large patrimony from his father.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1274,
+  "word": "Patriot",
+  "hindiMeaning": "देश-भक्त (N.)",
+  "meaning": "A person who loves, supports and defends his country",
+  "example": "Every patriot respects the national flag.",
+  "sscCount": 5,
+  "otherExamCount": 0
+},
+{
+  "id": 1275,
+  "word": "Patrol",
+  "hindiMeaning": "गश्त लगाना (V.)",
+  "meaning": "To go around an area to keep a watch",
+  "example": "Police officers patrol the streets at night.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1276,
+  "word": "Pauper",
+  "hindiMeaning": "कंगाल (N.)",
+  "meaning": "One who has no money or means of livelihood left",
+  "example": "The old pauper begged for food on the roadside.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1277,
+  "word": "Pecuniary",
+  "hindiMeaning": "धन-संबंधी (Adj.)",
+  "meaning": "Concerning or consisting of money",
+  "example": "He suffered a huge pecuniary loss in business.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1278,
+  "word": "Pedagogy",
+  "hindiMeaning": "शिक्षा शास्त्र (N.)",
+  "meaning": "The method and practice of teaching",
+  "example": "Modern pedagogy focuses on practical learning.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1279,
+  "word": "Pedant",
+  "hindiMeaning": "रूढ़िवादी (N.)",
+  "meaning": "A person who insists on adherence to formal rules or literary meaning",
+  "example": "The pedant corrected every minor grammar mistake.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1280,
+  "word": "Pedantic",
+  "hindiMeaning": "रूढ़िवादी (Adj.)",
+  "meaning": "Overly concerned with minute details or formalisms",
+  "example": "His pedantic attitude annoyed the students.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 1281,
+  "word": "Pedestrian",
+  "hindiMeaning": "पैदल यात्री (N.)",
+  "meaning": "A person who walks on foot and not travelling in a vehicle",
+  "example": "Pedestrians should use the zebra crossing.",
+  "sscCount": 7,
+  "otherExamCount": 2
+},
+{
+  "id": 1282,
+  "word": "Pediatrics",
+  "hindiMeaning": "बाल चिकित्सा (N.)",
+  "meaning": "Branch of medicine concerned with children and their illnesses",
+  "example": "She wants to specialize in pediatrics.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1283,
+  "word": "Penalty",
+  "hindiMeaning": "जुर्माना (N.)",
+  "meaning": "A punishment imposed for breaking a law, rule, or contract",
+  "example": "The player received a penalty for foul play.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1284,
+  "word": "Penchant",
+  "hindiMeaning": "विशेष रुचि (N.)",
+  "meaning": "A special fondness or liking for",
+  "example": "She has a penchant for classical music.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1285,
+  "word": "Pendant",
+  "hindiMeaning": "लटकन (N.)",
+  "meaning": "A small ornament which hangs down especially from a necklace",
+  "example": "The diamond pendant looked beautiful.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1286,
+  "word": "Peninsula",
+  "hindiMeaning": "प्रायद्वीप (N.)",
+  "meaning": "A large mass of land projecting into a body of water",
+  "example": "India is a famous peninsula.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1287,
+  "word": "Pensive",
+  "hindiMeaning": "चिंताग्रस्त (Adj.)",
+  "meaning": "Deep in thought",
+  "example": "He looked pensive after hearing the news.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1288,
+  "word": "Perennial",
+  "hindiMeaning": "चिरस्थायी (Adj.)",
+  "meaning": "Something that happens often or that lasts for a long time",
+  "example": "Water shortage is a perennial problem in the village.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1289,
+  "word": "Perfunctory",
+  "hindiMeaning": "बेमन से करना (Adj.)",
+  "meaning": "Done as a routine but without interest",
+  "example": "He gave a perfunctory reply to the question.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1290,
+  "word": "Pergola",
+  "hindiMeaning": "छाया करने या पौधों के चढ़ने के लिए बनाया गया ढांचा (N.)",
+  "meaning": "A structure in the garden where climbing plants can grow and people can walk under",
+  "example": "The garden pergola was covered with roses.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1291,
+  "word": "Perpetual",
+  "hindiMeaning": "निरन्तर (Adj.)",
+  "meaning": "Continuing for a long period of time without interruption // lasting forever or indefinitely",
+  "example": "They lived in perpetual fear during the war.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1292,
+  "word": "Perquisite",
+  "hindiMeaning": "अतिरिक्त लाभ, विशेषाधिकार (N.)",
+  "meaning": "An incidental benefit awarded for certain types of employment // An extra profit or allowance additional to a main income etc. // Something held or claimed as an exclusive right or possession",
+  "example": "A company car is one of the perquisites of the job.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1293,
+  "word": "Persecute",
+  "hindiMeaning": "अत्याचार करना (V.)",
+  "meaning": "Subject someone to hostility and ill-treatment, especially because of their race or political or religious beliefs",
+  "example": "People should not persecute others for their beliefs.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1294,
+  "word": "Perseverance",
+  "hindiMeaning": "दृढ़ता (N.)",
+  "meaning": "Constant effort to achieve something",
+  "example": "Success comes through hard work and perseverance.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1295,
+  "word": "Personnel",
+  "hindiMeaning": "कार्मिक (N.)",
+  "meaning": "A person employed in armed forces",
+  "example": "Military personnel were deployed near the border.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1296,
+  "word": "Perusal",
+  "hindiMeaning": "अवलोकन (N.)",
+  "meaning": "The action of examining with care or reading carefully",
+  "example": "The document is ready for your perusal.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1297,
+  "word": "Pessimist",
+  "hindiMeaning": "निराशावादी (N.)",
+  "meaning": "A person who always expects bad things to happen or something not to be successful",
+  "example": "A pessimist sees problems in every opportunity.",
+  "sscCount": 7,
+  "otherExamCount": 2
+},
+{
+  "id": 1298,
+  "word": "Pesticide",
+  "hindiMeaning": "कीटनाशक (N.)",
+  "meaning": "Killing of pests",
+  "example": "Farmers use pesticide to protect crops.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1299,
+  "word": "Pestiferous",
+  "hindiMeaning": "विनाशक (Adj.)",
+  "meaning": "That which is morally dangerous",
+  "example": "The pestiferous influence spoiled the children.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1300,
+  "word": "Pestle",
+  "hindiMeaning": "मूसल (N.)",
+  "meaning": "Stick with a thick end used in a mortar for pounding",
+  "example": "She crushed the spices with a pestle.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1301,
+  "word": "Peter",
+  "hindiMeaning": "धीरे धीरे समाप्त हो जाना (V.)",
+  "meaning": "Decrease or fade gradually before coming to an end",
+  "example": "The rain began to peter out by evening.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1302,
+  "word": "Pew",
+  "hindiMeaning": "गिरजाघर का बेंच (N.)",
+  "meaning": "A long wooden seat with a back for people to sit on in a church",
+  "example": "The family sat quietly on the pew.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1303,
+  "word": "Philanderer",
+  "hindiMeaning": "इश्कबाज (N.)",
+  "meaning": "A person who always runs after women",
+  "example": "The philanderer was known for his flirtatious behavior.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1304,
+  "word": "Philanthropist",
+  "hindiMeaning": "मानव प्रेमी, परोपकारी (N.)",
+  "meaning": "A person who loves all mankind // Someone who freely gives money and help to people who need it",
+  "example": "The philanthropist donated money to build schools.",
+  "sscCount": 17,
+  "otherExamCount": 8
+},
+{
+  "id": 1305,
+  "word": "Philanthropy",
+  "hindiMeaning": "मानव प्रेम (N.)",
+  "meaning": "The love of man or mankind",
+  "example": "Her philanthropy helped many poor families.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1306,
+  "word": "Philatelist",
+  "hindiMeaning": "डाक के टिकट का संग्रहक (N.)",
+  "meaning": "A person who collects or studies stamps",
+  "example": "My grandfather is a passionate philatelist.",
+  "sscCount": 8,
+  "otherExamCount": 4
+},
+{
+  "id": 1307,
+  "word": "Philately",
+  "hindiMeaning": "टिकट संग्रह करना (N.)",
+  "meaning": "The collection and study of postage stamps",
+  "example": "Philately is an interesting hobby for many people.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1308,
+  "word": "Philistine",
+  "hindiMeaning": "अशिक्षित (N.)",
+  "meaning": "A person who does not like, understand or enjoy the beauty of art, literature, music, etc.",
+  "example": "The philistine could not appreciate classical music.",
+  "sscCount": 7,
+  "otherExamCount": 0
+},
+{
+  "id": 1309,
+  "word": "Philogynist",
+  "hindiMeaning": "महिलाओं का समर्थक (N.)",
+  "meaning": "A person who likes or admires women",
+  "example": "He was known as a philogynist among his friends.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1310,
+  "word": "Philology",
+  "hindiMeaning": "भाषाशास्त्र (N.)",
+  "meaning": "The study of languages",
+  "example": "She studied philology at the university.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 1311,
+  "word": "Philosopher",
+  "hindiMeaning": "दार्शनिक (N.)",
+  "meaning": "One who loves wisdom and hence pursues it",
+  "example": "The philosopher spent years studying human nature.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1312,
+  "word": "Phobia",
+  "hindiMeaning": "भय (N.)",
+  "meaning": "Intense and unreasoned fear or dislike",
+  "example": "She has a phobia of heights.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1313,
+  "word": "Phonetics",
+  "hindiMeaning": "ध्वनि-विज्ञान (N.)",
+  "meaning": "The study and classification of sounds",
+  "example": "Phonetics helps in improving pronunciation.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1314,
+  "word": "Physician",
+  "hindiMeaning": "चिकित्सक (N.)",
+  "meaning": "A doctor, who is a specialist in general medicine and not surgery",
+  "example": "The physician prescribed medicine for fever.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1315,
+  "word": "Physiology",
+  "hindiMeaning": "शरीरविज्ञान (N.)",
+  "meaning": "A study of the human body",
+  "example": "He is studying physiology in college.",
+  "sscCount": 2,
+  "otherExamCount": 2
+},
+{
+  "id": 1316,
+  "word": "Physiotherapy",
+  "hindiMeaning": "भौतिक चिकित्सा (N.)",
+  "meaning": "Treatment by means of exercise and massage",
+  "example": "The patient recovered quickly with physiotherapy.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1317,
+  "word": "Pigsty",
+  "hindiMeaning": "सूअर को रखने की जगह (N.)",
+  "meaning": "A place where pigs are kept",
+  "example": "The farmer cleaned the pigsty every morning.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1318,
+  "word": "Pile",
+  "hindiMeaning": "ढेर (N.)",
+  "meaning": "A large number of things placed one on top of another",
+  "example": "There was a pile of books on the table.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1319,
+  "word": "Pilferage",
+  "hindiMeaning": "छोटी चोरी (N.)",
+  "meaning": "The act of stealing something in small quantities",
+  "example": "The shop suffered losses due to pilferage.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1320,
+  "word": "Pillion",
+  "hindiMeaning": "पीछे की सीट (N.)",
+  "meaning": "A seat for a passenger on a bicycle or motorbike",
+  "example": "She sat on the pillion of the scooter.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1321,
+  "word": "Pioneer",
+  "hindiMeaning": "प्रथम अन्वेषक (N.)",
+  "meaning": "One who does something for the first time",
+  "example": "He was a pioneer in space research.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1322,
+  "word": "Pirate",
+  "hindiMeaning": "समुद्री डाकू (N.)",
+  "meaning": "A person who attacks and robs ships at sea",
+  "example": "The pirate attacked the merchant ship at night.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1323,
+  "word": "Pirated",
+  "hindiMeaning": "चोरी किया हुआ (Adj.)",
+  "meaning": "Selling, purchasing, and using an illegally copied product is a criminal offence",
+  "example": "The police seized pirated software from the shop.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1324,
+  "word": "Piscivorous",
+  "hindiMeaning": "मत्स्यभक्षी (Adj.)",
+  "meaning": "One who lives on fish",
+  "example": "The kingfisher is a piscivorous bird.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1325,
+  "word": "Placate",
+  "hindiMeaning": "शांत करना (V.)",
+  "meaning": "Make someone less angry or hostile",
+  "example": "He tried to placate the angry customer.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1326,
+  "word": "Placid",
+  "hindiMeaning": "शांत (Adj.)",
+  "meaning": "Not easily excited or upset",
+  "example": "The lake looked calm and placid in the morning.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1327,
+  "word": "Plagiarise",
+  "hindiMeaning": "साहित्यिक चोरी (V.)",
+  "meaning": "Take and use the thoughts, inventions, etc. of another person as one’s own",
+  "example": "Students should never plagiarise others' work.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1328,
+  "word": "Plagiarism",
+  "hindiMeaning": "साहित्यिक चोरी (N.)",
+  "meaning": "Stealing of ideas or writings of someone else",
+  "example": "The article was rejected because of plagiarism.",
+  "sscCount": 5,
+  "otherExamCount": 2
+},
+{
+  "id": 1329,
+  "word": "Plagiarist",
+  "hindiMeaning": "साहित्यिक चोर (N.)",
+  "meaning": "One who copies from other writers",
+  "example": "The plagiarist copied entire paragraphs from the book.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1330,
+  "word": "Plaintiff",
+  "hindiMeaning": "अर्जीदार (N.)",
+  "meaning": "Person who files a suit",
+  "example": "The plaintiff appeared before the court.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1331,
+  "word": "Plaque",
+  "hindiMeaning": "दीवार में लगाई गई पत्थर या धातु की स्मृति-पट्टिका (N.)",
+  "meaning": "Flat metal or porcelain plate fixed on a wall as an ornament or memorial",
+  "example": "A plaque was placed outside the historic building.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1332,
+  "word": "Plausible",
+  "hindiMeaning": "विश्वसनीय/यथार्थ (Adj.)",
+  "meaning": "Seem reasonable",
+  "example": "He gave a plausible explanation for being late.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1333,
+  "word": "Plebiscite",
+  "hindiMeaning": "जनमत-संग्रह (N.)",
+  "meaning": "A decision made by public voting",
+  "example": "The government announced a plebiscite on the issue.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1334,
+  "word": "Pledge",
+  "hindiMeaning": "प्रतिज्ञा (N.)",
+  "meaning": "A solemn promise or undertaking",
+  "example": "The students took a pledge to protect nature.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1335,
+  "word": "Plenitude",
+  "hindiMeaning": "प्रचुरता (N.)",
+  "meaning": "The state of being full or complete",
+  "example": "The garden was admired for its plenitude of flowers.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1336,
+  "word": "Pliable",
+  "hindiMeaning": "लचीला (Adj.)",
+  "meaning": "Capable of bending easily without breaking",
+  "example": "The branches were soft and pliable.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1337,
+  "word": "Plumber",
+  "hindiMeaning": "नलसाज/नलकर्मी (N.)",
+  "meaning": "One who repairs leaking water pipes",
+  "example": "The plumber fixed the broken tap quickly.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1338,
+  "word": "Plutocracy",
+  "hindiMeaning": "धनिक तंत्र (N.)",
+  "meaning": "Government by the richest people of a country",
+  "example": "Critics argued that the nation was becoming a plutocracy.",
+  "sscCount": 5,
+  "otherExamCount": 2
+},
+{
+  "id": 1339,
+  "word": "Podium",
+  "hindiMeaning": "मंच (N.)",
+  "meaning": "A speaker’s platform",
+  "example": "The speaker walked confidently to the podium.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1340,
+  "word": "Poignant",
+  "hindiMeaning": "मार्मिक (Adj.)",
+  "meaning": "Evoking a keen sense of sadness or regret",
+  "example": "The movie ended on a poignant note.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1341,
+  "word": "Polemical",
+  "hindiMeaning": "विवादात्मक (Adj.)",
+  "meaning": "Something that is pertaining to controversy",
+  "example": "The article was highly polemical in tone.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1342,
+  "word": "Politics",
+  "hindiMeaning": "राजनीति शास्त्र (N.)",
+  "meaning": "The science or art of political government",
+  "example": "He is studying politics at university.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1343,
+  "word": "Polyandry",
+  "hindiMeaning": "बहुपति प्रथा (N.)",
+  "meaning": "The custom of having more than one husband at the same time",
+  "example": "Polyandry was practiced in some ancient communities.",
+  "sscCount": 2,
+  "otherExamCount": 2
+},
+{
+  "id": 1344,
+  "word": "Polygamist",
+  "hindiMeaning": "बहुविवाही (N.)",
+  "meaning": "A person having more than one wife at the same time",
+  "example": "The polygamist faced criticism from society.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1345,
+  "word": "Polygamy",
+  "hindiMeaning": "बहुविवाह (N.)",
+  "meaning": "The custom of having more than one husband or wife at the same time",
+  "example": "Polygamy is illegal in many countries.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 1346,
+  "word": "Polyglot",
+  "hindiMeaning": "बहुभाषी (N.)",
+  "meaning": "A person who knows and is able to use several languages",
+  "example": "The polyglot could speak six languages fluently.",
+  "sscCount": 8,
+  "otherExamCount": 8
+},
+{
+  "id": 1347,
+  "word": "Polygon",
+  "hindiMeaning": "बहुभुज (N.)",
+  "meaning": "A flat shape with at least three straight sides and three angles, and usually five or more",
+  "example": "A hexagon is a type of polygon.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1348,
+  "word": "Polytheist",
+  "hindiMeaning": "बहुदेववादी (N.)",
+  "meaning": "One who believes in a plurality of gods",
+  "example": "Ancient Greeks were polytheists.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1349,
+  "word": "Populous",
+  "hindiMeaning": "घनी आबादी वाला (Adj.)",
+  "meaning": "Full of people",
+  "example": "Tokyo is one of the most populous cities in the world.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1350,
+  "word": "Port",
+  "hindiMeaning": "बंदरगाह (N.)",
+  "meaning": "A place where ships load and unload goods",
+  "example": "The cargo ship arrived at the port yesterday.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1351,
+  "word": "Portable",
+  "hindiMeaning": "आसानी से साथ ले जाने योग्य (Adj.)",
+  "meaning": "Something that can be carried easily",
+  "example": "This portable speaker is easy to carry while travelling.",
+  "sscCount": 5,
+  "otherExamCount": 0
+},
+{
+  "id": 1352,
+  "word": "Portfolio",
+  "hindiMeaning": "जानकारी संग्रह (N.)",
+  "meaning": "A collection of drawings, documents, etc. that represent a person's, especially an artist's, work",
+  "example": "She showed her design portfolio during the interview.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1353,
+  "word": "Posthumous",
+  "hindiMeaning": "मरणोपरांत (Adj.)",
+  "meaning": "Occurring or coming into existence after a person's death",
+  "example": "The writer received a posthumous award.",
+  "sscCount": 4,
+  "otherExamCount": 5
+},
+{
+  "id": 1354,
+  "word": "Posthumous Child",
+  "hindiMeaning": "पिता के मरणोपरांत पैदा हुआ बच्चा (N.)",
+  "meaning": "A child born after the death of its father",
+  "example": "The posthumous child never saw his father.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1355,
+  "word": "Posthumous Publication",
+  "hindiMeaning": "मरणोपरांत प्रकाशन (N.)",
+  "meaning": "A book published after author's death",
+  "example": "The poet's diary became a famous posthumous publication.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1356,
+  "word": "Postmortem",
+  "hindiMeaning": "शवपरीक्षा (N.)",
+  "meaning": "A medical examination of a dead body",
+  "example": "The doctors conducted a postmortem to find the cause of death.",
+  "sscCount": 4,
+  "otherExamCount": 0
+},
+{
+  "id": 1357,
+  "word": "Postpone",
+  "hindiMeaning": "स्थगित करना (V.)",
+  "meaning": "Delay an event to a later date or time",
+  "example": "The meeting was postponed due to heavy rain.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1358,
+  "word": "Postscript",
+  "hindiMeaning": "उपसंहार (N.)",
+  "meaning": "A note appended to a letter after the signature",
+  "example": "He added a funny postscript at the end of the letter.",
+  "sscCount": 2,
+  "otherExamCount": 1
+},
+{
+  "id": 1359,
+  "word": "Potable",
+  "hindiMeaning": "पीने योग्य (Adj.)",
+  "meaning": "Fit to drink (water)",
+  "example": "The villagers finally received potable water.",
+  "sscCount": 6,
+  "otherExamCount": 5
+},
+{
+  "id": 1360,
+  "word": "Potion",
+  "hindiMeaning": "पेय औषधि (N.)",
+  "meaning": "A liquid with healing, magical, or poisonous properties",
+  "example": "The wizard prepared a mysterious potion.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1361,
+  "word": "Potpourri",
+  "hindiMeaning": "सुगंधित मिश्रण (N.)",
+  "meaning": "A mixture of dried flowers and leaves used for making a room smell",
+  "example": "The bowl of potpourri filled the room with fragrance.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1362,
+  "word": "Practice",
+  "hindiMeaning": "अमल, प्रयोग (N.)",
+  "meaning": "Actual application of an idea, belief, or method",
+  "example": "Regular practice improves your speaking skills.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1363,
+  "word": "Pragmatist",
+  "hindiMeaning": "व्यवहारवादी (N.)",
+  "meaning": "One who values practicality",
+  "example": "As a pragmatist, he focused on practical solutions.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1364,
+  "word": "Precarious",
+  "hindiMeaning": "अनिश्चित (Adj.)",
+  "meaning": "Dependent on chance or uncertainty",
+  "example": "The climbers were in a precarious situation.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1365,
+  "word": "Precedent",
+  "hindiMeaning": "मिसाल/पूर्व निर्णय (N.)",
+  "meaning": "A previous case that might serve as an example or guide in subsequent situations",
+  "example": "The judge referred to an old precedent while giving the verdict.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1366,
+  "word": "Precipice",
+  "hindiMeaning": "खड़ी चट्टान (N.)",
+  "meaning": "A very steep or overhanging rock face or cliff on a mountain",
+  "example": "The hikers stood carefully near the precipice.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1367,
+  "word": "Predator",
+  "hindiMeaning": "शिकारी जानवर/पक्षी (N.)",
+  "meaning": "An animal that lives by killing and eating other animals",
+  "example": "The tiger is a powerful predator.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 1368,
+  "word": "Predecessor",
+  "hindiMeaning": "पूर्वज (N.)",
+  "meaning": "Something that precedes and indicates the approach of something/someone",
+  "example": "The new manager respected his predecessor's work.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1369,
+  "word": "Predicting",
+  "hindiMeaning": "पूर्वानुमान करना (V.)",
+  "meaning": "We are expecting a good monsoon this year",
+  "example": "Scientists are predicting heavy rainfall this season.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1370,
+  "word": "Preface",
+  "hindiMeaning": "प्रस्तावना (N.)",
+  "meaning": "An introduction to a book, especially one that explains the author’s aims",
+  "example": "I read the preface before starting the novel.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1371,
+  "word": "Prejudiced",
+  "hindiMeaning": "पक्षपातपूर्ण (Adj.)",
+  "meaning": "To be biased against",
+  "example": "The manager was accused of being prejudiced against new employees.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1372,
+  "word": "Prelude",
+  "hindiMeaning": "प्रस्तावना (N.)",
+  "meaning": "An action or event that happens before another important one and forms an introduction to it",
+  "example": "The small clash was a prelude to a bigger conflict.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1373,
+  "word": "Premiere",
+  "hindiMeaning": "प्रथम प्रदर्शन (N.)",
+  "meaning": "The first public performance of a musical or theatrical work or the first showing of a film",
+  "example": "Many celebrities attended the movie premiere.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1374,
+  "word": "Premonition",
+  "hindiMeaning": "पूर्वाभास (N.)",
+  "meaning": "A strong feeling that something is about to happen, especially something unpleasant",
+  "example": "She had a premonition about the accident.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1375,
+  "word": "Prepare",
+  "hindiMeaning": "तैयार करना (V.)",
+  "meaning": "To get ready",
+  "example": "Students should prepare well for the examination.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1376,
+  "word": "Prescribe",
+  "hindiMeaning": "निर्धारित करना (V.)",
+  "meaning": "To order treatment for someone",
+  "example": "The doctor prescribed medicine for the patient.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1377,
+  "word": "Prevaricate",
+  "hindiMeaning": "छल कपट करना (V.)",
+  "meaning": "To make evasive or misleading statement",
+  "example": "The witness tried to prevaricate during the investigation.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1378,
+  "word": "Pride",
+  "hindiMeaning": "शेरों का समूह (N.)",
+  "meaning": "A group of lions",
+  "example": "A pride of lions was resting near the river.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1379,
+  "word": "Privilege",
+  "hindiMeaning": "विशेषाधिकार (N.)",
+  "meaning": "Right or advantage available to a person",
+  "example": "Education is a privilege for many children.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1380,
+  "word": "Probationer",
+  "hindiMeaning": "क्रम सेवन के लिए नियुक्त (N.)",
+  "meaning": "A person working on a trial period",
+  "example": "The probationer worked hard to secure a permanent job.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1381,
+  "word": "Procrastinate",
+  "hindiMeaning": "टालना (V.)",
+  "meaning": "To put off doing something, especially out of habitual carelessness or laziness",
+  "example": "Do not procrastinate your exam preparation.",
+  "sscCount": 4,
+  "otherExamCount": 1
+},
+{
+  "id": 1382,
+  "word": "Procrastination",
+  "hindiMeaning": "टालमटोल (N.)",
+  "meaning": "The art of delaying",
+  "example": "Procrastination can ruin a student's career.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1383,
+  "word": "Prodigal",
+  "hindiMeaning": "फिजूली (Adj.)",
+  "meaning": "Spending money freely and rather wastefully",
+  "example": "His prodigal lifestyle caused financial problems.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1384,
+  "word": "Prodigy",
+  "hindiMeaning": "विलक्षण प्रतिभावान बालक (N.)",
+  "meaning": "A person, especially a young one, with exceptional qualities or abilities",
+  "example": "The young chess player is considered a prodigy.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1385,
+  "word": "Proficiency",
+  "hindiMeaning": "निपुणता (N.)",
+  "meaning": "A high degree of skill",
+  "example": "She gained proficiency in spoken English.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1386,
+  "word": "Profile",
+  "hindiMeaning": "बात स्पष्ट रूप से (N.)",
+  "meaning": "General view of a person's character",
+  "example": "The company checked his professional profile.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1387,
+  "word": "Profligate",
+  "hindiMeaning": "अतिव्ययक (Adj.)",
+  "meaning": "Recklessly extravagant or wasteful in the use of resources",
+  "example": "The king was criticized for his profligate spending.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1388,
+  "word": "Proletariat",
+  "hindiMeaning": "श्रमिक वर्ग (N.)",
+  "meaning": "Working-class people regarded collectively",
+  "example": "The movement was supported by the proletariat.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1389,
+  "word": "Proliferation",
+  "hindiMeaning": "प्रसार, फैलाव (N.)",
+  "meaning": "Rapid increase in the number or amount of something",
+  "example": "The proliferation of mobile phones changed communication.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1390,
+  "word": "Prologue",
+  "hindiMeaning": "प्रस्तावना (N.)",
+  "meaning": "An introductory section",
+  "example": "The novel begins with a short prologue.",
+  "sscCount": 3,
+  "otherExamCount": 2
+},
+{
+  "id": 1391,
+  "word": "Prolonged",
+  "hindiMeaning": "दीर्घकालीन (V.)",
+  "meaning": "Continuing for a long time",
+  "example": "The prolonged meeting exhausted everyone.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1392,
+  "word": "Prop",
+  "hindiMeaning": "टेक, सहारा (N.)",
+  "meaning": "A piece of wood, metal, etc. used for supporting something or keeping it in position",
+  "example": "He used a stick as a prop for the weak branch.",
+  "sscCount": 1,
+  "otherExamCount": 1
+},
+{
+  "id": 1393,
+  "word": "Propaganda",
+  "hindiMeaning": "राजनीतिक फायदे वाला प्रचार या भ्रामक जानकारी (N.)",
+  "meaning": "Information, especially of a biased or misleading nature, used to promote a political cause or point of view",
+  "example": "The government denied spreading propaganda.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1394,
+  "word": "Prophet",
+  "hindiMeaning": "ईश्वर का दूत (N.)",
+  "meaning": "A person sent by God to teach the people",
+  "example": "People respected him as a prophet.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1395,
+  "word": "Propulsion",
+  "hindiMeaning": "संचालक शक्ति (N.)",
+  "meaning": "The act of driving or pushing forwards",
+  "example": "Jet engines provide propulsion to aircraft.",
+  "sscCount": 1,
+  "otherExamCount": 2
+},
+{
+  "id": 1396,
+  "word": "Proscribe",
+  "hindiMeaning": "प्रतिबंध करना (V.)",
+  "meaning": "To forbid something, especially by law",
+  "example": "The government decided to proscribe illegal activities.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1397,
+  "word": "Proselyte",
+  "hindiMeaning": "धर्मांतरित व्यक्ति (N.)",
+  "meaning": "A person who has been converted to another religion or belief",
+  "example": "He became a proselyte after studying the religion deeply.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1398,
+  "word": "Protagonist",
+  "hindiMeaning": "नायक (N.)",
+  "meaning": "Central character in a story or play",
+  "example": "The protagonist of the movie inspired the audience.",
+  "sscCount": 3,
+  "otherExamCount": 0
+},
+{
+  "id": 1399,
+  "word": "Protocol",
+  "hindiMeaning": "नियमों की प्रणाली (N.)",
+  "meaning": "A system of fixed rules and formal behaviour used at official meetings",
+  "example": "Diplomats must follow official protocol.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1400,
+  "word": "Prototype",
+  "hindiMeaning": "नमूना (N.)",
+  "meaning": "The first design of something from which other forms are copied or developed",
+  "example": "Engineers tested the prototype before production.",
+  "sscCount": 2,
+  "otherExamCount": 0
+},
+{
+  "id": 1401,
+  "word": "Provender",
+  "hindiMeaning": "चारा (N.)",
+  "meaning": "Food for farm animals",
+  "example": "The farmer stored provender for winter.",
+  "sscCount": 0,
+  "otherExamCount": 0
+},
+{
+  "id": 1402,
+  "word": "Provincialism",
+  "hindiMeaning": "प्रांतियता (N.)",
+  "meaning": "Concern for one's own area or region at the expense of national or supranational unity",
+  "example": "Provincialism can create divisions among people.",
+  "sscCount": 0,
+  "otherExamCount": 0
 }
 ]

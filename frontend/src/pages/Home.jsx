@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import MobileSidebar from "../components/MobileSidebar";
 import PYQDisplay from "../components/PYQDisplay";
@@ -133,32 +133,41 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
   const [showConstitution, setShowConstitution] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile } = useMobile();
+  const topicSectionRef = useRef(null);
 
   const handleSubjectSelect = (subject) => {
     setSelectedSubject(subject);
     setSelectedTopic(""); // Reset topic when changing subject
     setShowConstitution(false); // Clear Constitution view when changing subject
     console.log('Selected subject:', subject);
-    // Scroll down when subject is selected
-    window.scrollTo({
-      top: 200,
-      behavior: 'smooth'
-    });
+    setTimeout(() => {
+      topicSectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }, 0);
   };
 
   const handleTopicSelect = (topic) => {
+    if (topic === 'Constitution of India') {
+      if (onConstitution) {
+        onConstitution();
+      } else {
+        setShowConstitution(true);
+      }
+      return;
+    }
+
     setSelectedTopic(topic);
     setShowConstitution(false); // Clear Constitution view when selecting new topic
     console.log('Selected topic:', topic);
-    // Handle specific subtopic actions
-    if (topic === 'India Map') {
-      onGeography();
-    } else if (topic === 'Physical Geography') {
-      onMapDrawing();
-    } else if (topic === 'Constitution of India') {
-      // Show Constitution component in current interface
-      setShowConstitution(true);
-    }
+
+    setTimeout(() => {
+      topicSectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }, 0);
   };
 
   const handleModuleClick = (module) => {
@@ -317,40 +326,38 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
               </div>
             )}
             
-            {!isMobile && (
-              <h1 style={title}>
-                {selectedSubject && selectedTopic && subjectContent[selectedSubject] 
-                  ? subjectContent[selectedSubject].title 
-                  : "Smart Vocabulary Trainer"
-                }
-              </h1>
-            )}
+              {!isMobile && (
+                <h1 style={title}>
+                  {selectedTopic && subjectContent[selectedSubject] 
+                    ? subjectContent[selectedSubject].title 
+                    : "Smart Vocabulary Trainer"
+                  }
+                </h1>
+              )}
             
-            {!isMobile && (
-              <p style={subtitle}>
-                {selectedSubject && selectedTopic
-                  ? `Choose a resource for ${selectedTopic} to start your preparation` 
-                  : selectedSubject 
-                  ? "Select a topic to see available resources"
-                  : "Choose a section to start your preparation"
-                }
-              </p>
-            )}
+              {!isMobile && (
+                <p style={subtitle}>
+                  {selectedTopic
+                    ? `Choose a resource for ${selectedTopic} to start your preparation` 
+                    : "Choose a section to start your preparation"
+                  }
+                </p>
+              )}
             
             {/* Display selected subject and topic */}
-            {(selectedSubject || selectedTopic) && (
-              <div style={{
-                backgroundColor: "#f0f8ff",
-                border: "1px solid #2196f3",
+            {selectedTopic && (
+                <div style={{
+                  backgroundColor: "#f0f8ff",
+                  border: "1px solid #2196f3",
                 borderRadius: "8px",
                 padding: "16px",
                 marginBottom: "24px",
                 textAlign: "center"
               }}>
-                {selectedSubject && (
-                  <p style={{ margin: "0", fontSize: "16px", color: "#1976d2" }}>
-                    <strong>Selected Subject:</strong> {selectedSubject.charAt(0).toUpperCase() + selectedSubject.slice(1)}
-                  </p>
+                  {selectedSubject && (
+                    <p style={{ margin: "0", fontSize: "16px", color: "#1976d2" }}>
+                      <strong>Selected Subject:</strong> {selectedSubject.charAt(0).toUpperCase() + selectedSubject.slice(1)}
+                    </p>
                 )}
                 {selectedTopic && (
                   <p style={{ margin: "8px 0 0 0", fontSize: "16px", color: "#7b1fa2" }}>
@@ -378,12 +385,11 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
               </button>
             )}
             
-            <div style={grid}>
-              {selectedSubject ? (
-                // Show subject-specific modules or topic selection when subject is selected
-                selectedTopic ? (
-                  // Show modules when both subject and topic are selected
-                  selectedSubject === 'english' && selectedTopic === 'Vocabulary' ? (
+              <div ref={topicSectionRef} style={grid}>
+              {selectedTopic ? (
+                // Show resources only after a sidebar subtopic is selected
+                    // Show modules when both subject and topic are selected
+                    selectedSubject === 'english' && selectedTopic === 'Vocabulary' ? (
                     // Show vocabulary-specific modules
                     <>
                       <div style={{ ...card, borderColor: "#388e3c" }} onClick={() => onStart({ start: 0, limit: 250 })}>
@@ -440,13 +446,13 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
                   ) : selectedSubject === 'gs' && selectedTopic === 'Geography' ? (
                     // Show geography subtopics
                     <>
-                      <div style={{ ...card, borderColor: "#2196f3" }} onClick={() => handleTopicSelect('India Map')}>
+                      <div style={{ ...card, borderColor: "#2196f3" }} onClick={() => onIndiaMap()}>
                         <h3>🗺️ India Map</h3>
                         <p>Interactive India Political Map with state information</p>
                         <span style={{ ...activeTag, backgroundColor: "#2196f3" }}>Available</span>
                       </div>
                       
-                      <div style={{ ...card, borderColor: "#4caf50" }} onClick={() => handleTopicSelect('Physical Geography')}>
+                      <div style={{ ...card, borderColor: "#4caf50" }} onClick={() => onMapDrawing()}>
                         <h3>🏔️ Physical Geography</h3>
                         <p>Draw state boundaries manually using mouse cursor</p>
                         <span style={{ ...activeTag, backgroundColor: "#4caf50" }}>Available</span>
@@ -482,50 +488,6 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
                       </div>
                     ))
                   )
-                ) : (
-                  // Show topic selection when only subject is selected
-                  <div style={{
-                    backgroundColor: "#f0f8ff",
-                    border: "1px solid #2196f3",
-                    borderRadius: "8px",
-                    padding: "24px",
-                    marginBottom: "24px",
-                    textAlign: "center"
-                  }}>
-                    <h3 style={{ fontSize: "20px", color: "#1976d2", marginBottom: "16px" }}>
-                      Choose a topic for {selectedSubject}
-                    </h3>
-                    
-                    {/* Topic Selection Grid */}
-                    <div style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-                      gap: "16px",
-                      marginTop: "16px"
-                    }}>
-                      {['Grammar', 'Vocabulary', 'Comprehension', 'Essay Writing', 'Letter Writing'].map((subtopic, index) => (
-                        <div
-                          key={index}
-                          style={{
-                            ...card,
-                            borderColor: "#2196f3",
-                            cursor: "pointer"
-                          }}
-                          onClick={() => handleTopicSelect(subtopic)}
-                        >
-                          <h3>{subtopic}</h3>
-                          <p>Click to explore {subtopic} topics</p>
-                          <span style={{
-                            ...activeTag,
-                            backgroundColor: "#2196f3"
-                          }}>
-                            Available
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )
               ) : (
                 // Show default modules when no subject/topic is selected
                 <>
