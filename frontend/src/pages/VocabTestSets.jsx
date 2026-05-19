@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
 import useMobile from "../hooks/useMobile";
@@ -6,94 +6,44 @@ import useMobile from "../hooks/useMobile";
 export default function VocabTestSets({ config, onUpdateConfig, onGoHome, onSelectSet }) {
   const { isMobile } = useMobile();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [testSets, setTestSets] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Generate sets dynamically based on available data
-  const testSets = [
-    {
-      id: 1,
-      title: "Set 1: Basic One Word Substitution",
-      description: "10 questions on basic one word substitutions (Diversity to Chastise)",
-      questions: 10,
-      difficulty: "Easy"
-    },
-    {
-      id: 2,
-      title: "Set 2: Common One Word Substitution",
-      description: "10 questions on common one word substitutions (Narcissist to Relic)",
-      questions: 10,
-      difficulty: "Easy"
-    },
-    {
-      id: 3,
-      title: "Set 3: Advanced One Word Substitution",
-      description: "10 questions on advanced one word substitutions (Contemporary to Invincible)",
-      questions: 10,
-      difficulty: "Medium"
-    },
-    {
-      id: 4,
-      title: "Set 4: Academic One Word Substitution",
-      description: "10 questions on academic one word substitutions (Acoustics to Horizon)",
-      questions: 10,
-      difficulty: "Medium"
-    },
-    {
-      id: 5,
-      title: "Set 5: Medical One Word Substitution",
-      description: "10 questions on medical one word substitutions (Insomnia to Numismatics)",
-      questions: 10,
-      difficulty: "Medium"
-    },
-    {
-      id: 6,
-      title: "Set 6: People One Word Substitution",
-      description: "10 questions on people-related one word substitutions (Usurer to Pessimist)",
-      questions: 10,
-      difficulty: "Hard"
-    },
-    {
-      id: 7,
-      title: "Set 7: Professional One Word Substitution",
-      description: "10 questions on professional one word substitutions (Posthumous to Parasite)",
-      questions: 10,
-      difficulty: "Hard"
-    },
-    {
-      id: 8,
-      title: "Set 8: Personal One Word Substitution",
-      description: "10 questions on personal one word substitutions (Narcissist to Vacillate)",
-      questions: 10,
-      difficulty: "Hard"
-    },
-    {
-      id: 9,
-      title: "Set 9: Literary One Word Substitution",
-      description: "10 questions on literary one word substitutions (Introspection to Suicide)",
-      questions: 10,
-      difficulty: "Hard"
-    },
-    {
-      id: 10,
-      title: "Set 10: General One Word Substitution",
-      description: "10 questions on general one word substitutions (Archaic to Claustrophobia)",
-      questions: 10,
-      difficulty: "Hard"
-    },
-    {
-      id: 11,
-      title: "Set 11: Specialized One Word Substitution",
-      description: "10 questions on specialized one word substitutions (Sedative to Unemployed)",
-      questions: 10,
-      difficulty: "Hard"
-    },
-    {
-      id: 12,
-      title: "Set 12: Advanced Concepts",
-      description: "10 questions on advanced concepts (Auditor to Euphoria)",
-      questions: 10,
-      difficulty: "Hard"
-    }
-  ];
+  // Load test data dynamically from JSON files
+  useEffect(() => {
+    const loadTestData = async () => {
+      try {
+        const response = await fetch('/data/english/vocab_test.json');
+        const questions = await response.json();
+
+        // Group questions by set
+        const setMap = new Map();
+        questions.forEach(q => {
+          if (!setMap.has(q.set)) {
+            setMap.set(q.set, []);
+          }
+          setMap.get(q.set).push(q);
+        });
+
+        // Create sets array from grouped data
+        const sets = Array.from(setMap.entries()).map(([setNum, setQuestions]) => ({
+          id: setNum,
+          title: `Set ${setNum}: One Word Substitution`,
+          description: `${setQuestions.length} questions on one word substitutions`,
+          questions: setQuestions.length,
+          difficulty: setNum <= 2 ? "Easy" : setNum <= 4 ? "Medium" : "Hard"
+        })).sort((a, b) => a.id - b.id);
+
+        setTestSets(sets);
+        setLoading(false);
+      } catch (error) {
+        console.error('Failed to load test data:', error);
+        setLoading(false);
+      }
+    };
+
+    loadTestData();
+  }, []);
 
   const handleSetClick = (set) => {
     onSelectSet({
@@ -151,31 +101,41 @@ export default function VocabTestSets({ config, onUpdateConfig, onGoHome, onSele
           <h2 style={pageTitle}>Choose a Test Set</h2>
           <p style={pageSubtitle}>Select a vocabulary test set to practice opposite meanings</p>
           
-          <div style={setsGrid}>
-            {testSets.map((set) => (
-              <button
-                key={set.id}
-                style={setCard}
-                onClick={() => handleSetClick(set)}
-              >
-                <div style={setHeader}>
-                  <h3 style={setTitle}>{set.title}</h3>
-                  <span style={
-                    set.difficulty === "Easy" ? difficultyEasy :
-                    set.difficulty === "Medium" ? difficultyMedium :
-                    difficultyHard
-                  }>
-                    {set.difficulty}
-                  </span>
-                </div>
-                <p style={setDescription}>{set.description}</p>
-                <div style={setFooter}>
-                  <span style={questionCount}>{set.questions} Questions</span>
-                  <span style={startButton}>Start →</span>
-                </div>
-              </button>
-            ))}
-          </div>
+          {loading ? (
+            <p style={{ textAlign: "center", marginTop: "40px", fontSize: "16px", color: "#666" }}>
+              Loading test sets...
+            </p>
+          ) : testSets.length === 0 ? (
+            <p style={{ textAlign: "center", marginTop: "40px", fontSize: "16px", color: "#999" }}>
+              No test sets available.
+            </p>
+          ) : (
+            <div style={setsGrid}>
+              {testSets.map((set) => (
+                <button
+                  key={set.id}
+                  style={setCard}
+                  onClick={() => handleSetClick(set)}
+                >
+                  <div style={setHeader}>
+                    <h3 style={setTitle}>{set.title}</h3>
+                    <span style={
+                      set.difficulty === "Easy" ? difficultyEasy :
+                      set.difficulty === "Medium" ? difficultyMedium :
+                      difficultyHard
+                    }>
+                      {set.difficulty}
+                    </span>
+                  </div>
+                  <p style={setDescription}>{set.description}</p>
+                  <div style={setFooter}>
+                    <span style={questionCount}>{set.questions} Questions</span>
+                    <span style={startButton}>Start →</span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

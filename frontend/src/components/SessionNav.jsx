@@ -10,6 +10,9 @@ export default function SessionNav({
   showSscFilter,
   sscOnly,
   onToggleSscOnly,
+  showExamFrequencySort,
+  sortByExamFrequency,
+  onToggleSortByExamFrequency,
   isMobile,
   onMenuToggle,
 }) {
@@ -75,6 +78,17 @@ export default function SessionNav({
               style={{ marginRight: 6 }}
             />
             {isMobile ? "SSC" : "SSC (≥1)"}
+          </label>
+        )}
+        {showExamFrequencySort && (
+          <label style={isMobile ? mobileFilterPill : filterPill}>
+            <input
+              type="checkbox"
+              checked={!!sortByExamFrequency}
+              onChange={(e) => onToggleSortByExamFrequency && onToggleSortByExamFrequency(e.target.checked)}
+              style={{ marginRight: 6 }}
+            />
+            {isMobile ? "By Freq" : "By Frequency"}
           </label>
         )}
         {mode !== "Read" && (

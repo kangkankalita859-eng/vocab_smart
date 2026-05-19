@@ -237,12 +237,12 @@ export default function ReadVocabTest({ config, onUpdateConfig, onGoHome, onGoBa
 
                 {/* Question Word */}
                 <div style={wordContainer}>
-                  <h3 style={wordText}>{questions[currentQuestionIndex].word}</h3>
+                  <h3 style={wordText}>{questions[currentQuestionIndex].question}</h3>
                 </div>
 
                 {/* Question Sentence */}
                 <div style={sentenceContainer}>
-                  <h3 style={sentenceText}>{questions[currentQuestionIndex].question}</h3>
+                  {/* This section can show additional context if needed */}
                 </div>
 
                 {/* Options */}

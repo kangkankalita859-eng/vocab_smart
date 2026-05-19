@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 
 import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
@@ -7,25 +7,45 @@ import useMobile from "../hooks/useMobile";
 export default function VocabTestIntro({ config, onSelectSet, onGoHome, onGoRead }) {
   const { isMobile } = useMobile();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sets, setSets] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const sets = useMemo(() => {
-    const start = Number(config?.start || 0);
-    const limit = Number(config?.limit || 0);
-    const total = Math.max(0, limit);
-    const count = Math.ceil(total / 10);
+  // Load test sets from vocab_test.json
+  useEffect(() => {
+    const loadTestSets = async () => {
+      try {
+        const response = await fetch('/data/english/vocab_test.json');
+        const questions = await response.json();
 
-    return Array.from({ length: count }).map((_, i) => {
-      const setStartOffset = i * 10;
-      const setLimit = Math.min(10, total - setStartOffset);
-      return {
-        index: i,
-        start: start + setStartOffset,
-        limit: setLimit,
-        title: `Practice Set - ${i + 1}`,
-        subtitle: `Direction (Q. 1-${setLimit}): Select the option that can be used as a one-word substitute for the given word/meaning.`,
-      };
-    });
-  }, [config]);
+        // Group questions by set
+        const setMap = new Map();
+        questions.forEach(q => {
+          if (!setMap.has(q.set)) {
+            setMap.set(q.set, []);
+          }
+          setMap.get(q.set).push(q);
+        });
+
+        // Create sets array from grouped data
+        const testSets = Array.from(setMap.entries()).map(([setNum, setQuestions]) => ({
+          index: setNum - 1,
+          setNumber: setNum,
+          start: 0, // Start from 0 for the test
+          limit: setQuestions.length,
+          title: `Practice Set - ${setNum}`,
+          subtitle: `Direction (Q. 1-${setQuestions.length}): Select the option that can be used as a one-word substitute for the given word/meaning.`,
+        })).sort((a, b) => a.setNumber - b.setNumber);
+
+        setSets(testSets);
+        setLoading(false);
+      } catch (error) {
+        console.error('Failed to load test sets:', error);
+        setLoading(false);
+      }
+    };
+
+    loadTestSets();
+  }, []);
 
   return (
     <>
@@ -44,31 +64,40 @@ export default function VocabTestIntro({ config, onSelectSet, onGoHome, onGoRead
         <div style={container}>
           <h2 style={{ marginTop: 0 }}>Vocabulary Exam</h2>
           <p style={{ marginTop: 6, color: "#555" }}>
-            Choose a practice set. Each set contains 10 questions.
+            Choose a practice set.
           </p>
 
-          <div style={grid}>
-            {sets.map((s) => (
-              <button
-                key={s.index}
-                style={setCard}
-                onClick={() => onSelectSet && onSelectSet(s)}
-              >
-                <div style={{ fontWeight: 700, fontSize: 16 }}>{s.title}</div>
-                <div style={{ marginTop: 8, fontSize: 12, color: "#666", lineHeight: 1.35 }}>
-                  {s.subtitle}
-                </div>
-                <div style={{ marginTop: 10, fontSize: 12, color: "#111" }}>
-                  Range: {s.start} - {s.start + s.limit - 1}
-                </div>
-              </button>
-            ))}
-          </div>
-
-          {sets.length === 0 && (
-            <p style={{ marginTop: 16, color: "#777" }}>
-              No questions available for the selected range. Increase the End value.
+          {loading ? (
+            <p style={{ marginTop: 20, color: "#888", textAlign: "center" }}>
+              Loading test sets...
             </p>
+          ) : sets.length === 0 ? (
+            <p style={{ marginTop: 16, color: "#777" }}>
+              No test sets available.
+            </p>
+          ) : (
+            <div style={grid}>
+              {sets.map((s) => (
+                <button
+                  key={s.index}
+                  style={setCard}
+                  onClick={() => onSelectSet && onSelectSet({
+                    setNumber: s.setNumber,
+                    start: s.start,
+                    limit: s.limit,
+                    title: s.title
+                  })}
+                >
+                  <div style={{ fontWeight: 700, fontSize: 16 }}>{s.title}</div>
+                  <div style={{ marginTop: 8, fontSize: 12, color: "#666", lineHeight: 1.35 }}>
+                    {s.subtitle}
+                  </div>
+                  <div style={{ marginTop: 10, fontSize: 12, color: "#111" }}>
+                    Questions: {s.limit}
+                  </div>
+                </button>
+              ))}
+            </div>
           )}
         </div>
       </div>

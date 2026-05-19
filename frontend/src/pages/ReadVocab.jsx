@@ -34,6 +34,8 @@ export default function ReadVocab({
 
   const [sscOnly, setSscOnly] = useState(false);
 
+  const [sortByExamFrequency, setSortByExamFrequency] = useState(false);
+
   const [showPersistedInfo, setShowPersistedInfo] = useState(false);
 
   const [deckStats, setDeckStats] = useState({ unknownCount: 0, savedDeckCount: 0 });
@@ -112,6 +114,15 @@ export default function ReadVocab({
     ? vocab.filter((item) => Number(item.sscCount || 0) >= 1)
     : vocab;
 
+  // Sort by exam frequency if toggle is on
+  const displayedVocab = sortByExamFrequency
+    ? [...filteredVocab].sort((a, b) => {
+        const aCount = Number(a.sscCount || 0);
+        const bCount = Number(b.sscCount || 0);
+        return bCount - aCount; // Descending order - highest count first
+      })
+    : filteredVocab;
+
 
 
   return (
@@ -129,6 +140,9 @@ export default function ReadVocab({
         showSscFilter
         sscOnly={sscOnly}
         onToggleSscOnly={setSscOnly}
+        showExamFrequencySort
+        sortByExamFrequency={sortByExamFrequency}
+        onToggleSortByExamFrequency={setSortByExamFrequency}
         isMobile={isMobile}
         onMenuToggle={() => setMobileMenuOpen(true)}
       />
@@ -187,7 +201,7 @@ export default function ReadVocab({
             </thead>
 
             <tbody>
-              {filteredVocab.map((item) => (
+              {displayedVocab.map((item) => (
                 <tr key={item.id}>
                   <td style={td}>{item.id}</td>
                   <td style={td}>{item.meaning}</td>
@@ -213,7 +227,7 @@ export default function ReadVocab({
             </tbody>
           </table>
 
-          {filteredVocab.length === 0 && (
+          {displayedVocab.length === 0 && (
             <p style={{ marginTop: "16px", color: "#777" }}>
               No vocabulary found for the selected range.
             </p>

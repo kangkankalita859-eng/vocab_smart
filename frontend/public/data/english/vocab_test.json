@@ -1262,7 +1262,7 @@
   {
     "id": 106,
     "set": 11,
-    "question": "Ability to communicate effectively and express oneself clearly in writing and speaking",
+    "question": "she was known for her {Ability to communicate effectively and express oneself clearly in writing and speaking}",
     "options": [
       "Incoherence",
       "Articulation",
@@ -1274,7 +1274,7 @@
   {
     "id": 107,
     "set": 11,
-    "question": "Not guilty of any wrongdoing and lacking knowledge or awareness of wrongdoing",
+    "question": "The child was {Not guilty of any wrongdoing and lacking knowledge or awareness of wrongdoing}",
     "options": [
       "Ignorant",
       "Inexperienced",
@@ -1286,7 +1286,7 @@
   {
     "id": 108,
     "set": 11,
-    "question": "Capable of bending easily without breaking and able to be easily modified",
+    "question": "The schedule was {Capable of bending easily without breaking and able to be easily modified}",
     "options": [
       "Versatile",
       "Flexible",
@@ -1298,7 +1298,7 @@
   {
     "id": 109,
     "set": 11,
-    "question": "Selling, purchasing, and using an illegally copied product is a criminal offence",
+    "question": "{Selling, purchasing, and using an illegally copied product is a criminal offence}",
     "options": [
       "A Crooked",
       "An Outlawed",
@@ -1310,7 +1310,7 @@
   {
     "id": 110,
     "set": 11,
-    "question": "Have no means of livelihood left",
+    "question": "The pandemic deeply affected small businesses owners, as they  {Have no means of livelihood left}",
     "options": [
       "Pauper",
       "Worker",

@@ -248,7 +248,7 @@ export default function App() {
   if (stage === "read-vocab-test")
     return (
       <ReadVocabTest
-        config={config}
+        config={vocabExamConfig || config}
         onGoCards={() => {
           setReviewUnknownDeck(false);
           setStage("read");
@@ -259,6 +259,7 @@ export default function App() {
         }}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
+        onGoBackToSets={() => setStage("vocab-test-intro")}
       />
     );
 
@@ -267,8 +268,8 @@ export default function App() {
       <VocabTestIntro
         config={config}
         onSelectSet={(set) => {
-          setVocabExamConfig({ start: set.start, limit: set.limit });
-          setStage("vocab-test");
+          setVocabExamConfig({ setNumber: set.setNumber, start: set.start, limit: set.limit });
+          setStage("read-vocab-test");
         }}
         onGoRead={() => setStage("read")}
         onGoHome={() => setStage("home")}
