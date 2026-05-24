@@ -18,14 +18,14 @@ export default function EnglishVocabHome({ onGoRead, onGoCards, onGoExam, onGoHo
       onClick: () => console.log("Voice Change clicked"),
     },
     {
-      title: "Sentence Transformation",
-      description: "Master various sentence transformation patterns",
-      onClick: () => console.log("Sentence Transformation clicked"),
+      title: "Common Error",
+      description: "Identify and correct common grammatical errors",
+      onClick: () => console.log("Common Error clicked"),
     },
     {
-      title: "Tenses",
-      description: "Practice all English tenses with exercises",
-      onClick: () => console.log("Tenses clicked"),
+      title: "Improvement of Sentences",
+      description: "Learn techniques to improve sentence quality and clarity",
+      onClick: () => console.log("Improvement of Sentences clicked"),
     },
     {
       title: "Articles",

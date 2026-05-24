@@ -7,6 +7,8 @@ import ReadSynonymsAntonyms from "./pages/ReadSynonymsAntonyms";
 import ReadHomonymsHomophones from "./pages/ReadHomonymsHomophones";
 import ReadNarration from "./pages/ReadNarration";
 import ReadVoiceChange from "./pages/ReadVoiceChange";
+import ReadError from "./pages/ReadError";
+import ReadSentenceImprovement from "./pages/ReadSentenceImprovement";
 import ReadVocabTest from "./pages/ReadVocabTest";
 import VocabTestSets from "./pages/VocabTestSets";
 import ReadGeometry from "./pages/ReadGeometry";
@@ -133,6 +135,14 @@ export default function App() {
           setConfig(c);
           setStage("read-voice-change");
         }}
+        onError={(c) => {
+          setConfig(c);
+          setStage("read-error");
+        }}
+        onSentenceImprovement={(c) => {
+          setConfig(c);
+          setStage("read-sentence-improvement");
+        }}
         onVocabTest={(c) => {
           setConfig(c);
           setStage("vocab-test-sets");
@@ -239,6 +249,24 @@ export default function App() {
   if (stage === "read-voice-change")
     return (
       <ReadVoiceChange
+        config={config}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "read-error")
+    return (
+      <ReadError
+        config={config}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "read-sentence-improvement")
+    return (
+      <ReadSentenceImprovement
         config={config}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "wrong_part": 3,
+    "explanation": "Use of the definite article (the) is superfluous. 'recommended vaccine' should replace 'recommended the vaccine'.",
+    "correct_sentence": "A senior doctor expressed concern about physician's recommended vaccine."
+  },
+  {
+    "id": 2,
+    "wrong_part": 1,
+    "explanation": "'have discussing' is incorrect. 'have been discussing', 'have discussed', or 'are discussing' should be used.",
+    "correct_sentence": "We have been discussing all the known mechanisms of physical growth."
+  },
+  {
+    "id": 3,
+    "wrong_part": 3,
+    "explanation": "'the' should be used before 'Halloween night' because it is specific.",
+    "correct_sentence": "Children enjoy listening to ghost stories especially on the Halloween night."
+  },
+  {
+    "id": 4,
+    "wrong_part": 2,
+    "explanation": "'many works' is incorrect because 'work' is uncountable here. Use 'a lot of work', 'much work', or 'lots of work'.",
+    "correct_sentence": "I have a lot of work to do."
+  },
+  {
+    "id": 5,
+    "wrong_part": 1,
+    "explanation": "'filth' is an uncountable noun, so 'much' should replace 'many'.",
+    "correct_sentence": "There is so much filth all around the place."
+  },
+  {
+    "id": 6,
+    "wrong_part": 3,
+    "explanation": "'same usual time' is incorrect. Use 'the same time' or 'the usual time'.",
+    "correct_sentence": "I came to school at the usual time."
+  },
+  {
+    "id": 7,
+    "wrong_part": 4,
+    "explanation": "No error.",
+    "correct_sentence": "The company is using influence to persuade people to buy its refrigerators."
+  },
+  {
+    "id": 8,
+    "wrong_part": 2,
+    "explanation": "'thorough cleaning' is correct, not 'thoroughly cleaning' because an adjective is needed before the noun.",
+    "correct_sentence": "The technician reminded them to have a thorough cleaning of the machine after each use."
+  },
+  {
+    "id": 9,
+    "wrong_part": 3,
+    "explanation": "After the preposition 'instead of', a gerund (-ing form) should be used.",
+    "correct_sentence": "You should have used the money for paying your debts instead of buying a motorcycle."
+  },
+  {
+    "id": 10,
+    "wrong_part": 4,
+    "explanation": "No error.",
+    "correct_sentence": "My cousin invited me to her birthday party."
+  },
+  {
+    "id": 11,
+    "wrong_part": 2,
+    "explanation": "'abide' takes the preposition 'by'.",
+    "correct_sentence": "We should abide by the promise that we make."
+  },
+  {
+    "id": 12,
+    "wrong_part": 2,
+    "explanation": "Present perfect tense should be used for consistency.",
+    "correct_sentence": "Many firms fail because when they begin exporting, they have not researched the target markets."
+  },
+  {
+    "id": 13,
+    "wrong_part": 1,
+    "explanation": "Passive voice should be used: 'is measured'.",
+    "correct_sentence": "Part of what a man learns is measurable as specific knowledge and skills."
+  },
+  {
+    "id": 14,
+    "wrong_part": 3,
+    "explanation": "'any' is used in negative sentences with uncountable nouns.",
+    "correct_sentence": "He explained that the pillars of tribalism that humans rely on for security would always counter any significant culture or social change."
+  },
+  {
+    "id": 15,
+    "wrong_part": 1,
+    "explanation": "'between' should be used for two objects.",
+    "correct_sentence": "There is a barrier between the egghead and the hoi polloi."
+  },
+  {
+    "id": 16,
+    "wrong_part": 3,
+    "explanation": "Correct preposition usage is 'paying for'.",
+    "correct_sentence": "Credit when used responsibly, can achieve a great number of positive things in our lives, such as financing and paying for our dream hybrid."
+  },
+  {
+    "id": 17,
+    "wrong_part": 3,
+    "explanation": "Present tense should be used because it expresses general truth.",
+    "correct_sentence": "As with people, some monkeys are lazy and some are industrious."
+  },
+  {
+    "id": 18,
+    "wrong_part": 2,
+    "explanation": "Gerund form should be used after 'through'.",
+    "correct_sentence": "The postman travelled by the cycle, often wading through swamps or passing through jungles."
+  },
+  {
+    "id": 19,
+    "wrong_part": 2,
+    "explanation": "'in the end' should be used instead of 'in his earlier years'.",
+    "correct_sentence": "No matter what Ashoka did in his earlier years, in the end he proved to be uncommonly virtuous and wise."
+  },
+  {
+    "id": 20,
+    "wrong_part": 1,
+    "explanation": "'medicines' is plural, so 'have scored' should be used.",
+    "correct_sentence": "Modern medicines have scored significant victories against both infection and trauma."
+  }
+]

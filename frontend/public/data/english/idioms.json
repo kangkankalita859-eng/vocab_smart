@@ -2767,208 +2767,237 @@
     "sscCount": 1,
     "example": "The authorities brought the criminals to book."
   },
-  {
+    {
     "id": 347,
     "phrase": "Bring the house down",
     "meaning": "Made the audience applaud enthusiastically",
     "hindiMeaning": "दर्शकों द्वारा तालियों से उत्साह बढ़ाना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "The comedian brought the house down with his hilarious performance."
   },
   {
     "id": 348,
     "phrase": "Bring to one's knees",
     "meaning": "To force to submit",
     "hindiMeaning": "घुटनों पर लाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The economic crisis brought the company to its knees."
   },
   {
     "id": 349,
     "phrase": "Broke a lance with",
     "meaning": "To argue against",
     "hindiMeaning": "विरुद्ध बहस करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He broke a lance with his teacher over the new rules."
   },
   {
     "id": 350,
     "phrase": "Broke down",
     "meaning": "Wept bitterly / cried",
     "hindiMeaning": "फूट-फूट कर रोना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "She broke down after hearing the sad news."
   },
   {
     "id": 351,
     "phrase": "Broke off",
     "meaning": "Suddenly stopped",
     "hindiMeaning": "अचानक रुक जाना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "He broke off in the middle of the conversation."
   },
   {
     "id": 352,
     "phrase": "Broke Priscian's head",
     "meaning": "To use bad grammar",
     "hindiMeaning": "खराब व्याकरण का उपयोग",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The student broke Priscian's head while speaking English."
   },
   {
     "id": 353,
     "phrase": "Broke up",
     "meaning": "Disbanded itself",
     "hindiMeaning": "संबंध तोड़ना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The music band broke up after many disagreements."
   },
   {
     "id": 354,
     "phrase": "Broken reed",
     "meaning": "Support that failed / A weak person / Someone or something too frail to provide support",
     "hindiMeaning": "विफल समर्थन",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "He turned out to be a broken reed in difficult times."
   },
   {
     "id": 355,
     "phrase": "Brought up",
     "meaning": "Introduced for discussion",
     "hindiMeaning": "चर्चा के लिए पेश करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "She brought up an important issue in the meeting."
   },
   {
     "id": 356,
     "phrase": "Brown study",
     "meaning": "A mood of deep absorption or thoughtfulness",
     "hindiMeaning": "ध्यान में डूब जाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He sat in a brown study for hours."
   },
   {
     "id": 357,
     "phrase": "Bugs me",
     "meaning": "Irritates me",
     "hindiMeaning": "परेशान करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "His rude behavior really bugs me."
   },
   {
     "id": 358,
     "phrase": "Build castles in the air",
     "meaning": "Daydream / Have unrealistic ideas / create impossible dreams or hopes",
     "hindiMeaning": "हवाई किले बनाना",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "Instead of building castles in the air, work hard for your goals."
   },
   {
     "id": 359,
     "phrase": "Bull's-eye",
     "meaning": "Something that is the centre of a target",
     "hindiMeaning": "तोते की आँख (लक्ष्य का केंद्र)",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "His answer was a perfect bull's-eye."
   },
   {
     "id": 360,
     "phrase": "Burn one's bridges / boats",
     "meaning": "To destroy all relations / make it impossible to return to the previous situation later",
     "hindiMeaning": "पीछे लौटने के रास्ते बंद करना",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "He burned his bridges after insulting his boss."
   },
   {
     "id": 361,
     "phrase": "Burn the midnight oil",
     "meaning": "To work or study till very late in the night / work very hard",
     "hindiMeaning": "देर रात तक काम करना",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "She burned the midnight oil before the exam."
   },
   {
     "id": 362,
     "phrase": "Burning question",
     "meaning": "An important question or issue",
     "hindiMeaning": "महत्वपूर्ण प्रश्न",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Unemployment is a burning question in the country."
   },
   {
     "id": 363,
     "phrase": "Bury the hatchet",
     "meaning": "To make peace / end a quarrel",
     "hindiMeaning": "झगड़ा खत्म करना",
-    "sscCount": 8
+    "sscCount": 8,
+    "example": "The two friends decided to bury the hatchet."
   },
   {
     "id": 364,
     "phrase": "Butt in",
     "meaning": "Interrupt",
     "hindiMeaning": "दखल देना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Please don't butt in while others are talking."
   },
   {
     "id": 365,
     "phrase": "Butter fingers",
     "meaning": "To be clumsy",
     "hindiMeaning": "अनाड़ी व्यक्ति",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Ravi is such a butter fingers that he drops everything."
   },
   {
     "id": 366,
     "phrase": "Butterflies in the stomach",
     "meaning": "To be anxious and nervous",
     "hindiMeaning": "घबराहट",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "I had butterflies in my stomach before the interview."
   },
   {
     "id": 367,
     "phrase": "Button her lip",
     "meaning": "Stop talking",
     "hindiMeaning": "बात बंद करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The teacher told the students to button their lips."
   },
   {
     "id": 368,
     "phrase": "Buy a lemon",
     "meaning": "To buy something that is of much less value",
     "hindiMeaning": "खराब वस्तु खरीदना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He bought a lemon instead of a good car."
   },
   {
     "id": 369,
     "phrase": "By a whisker",
     "meaning": "By a small margin",
     "hindiMeaning": "बहुत कम अंतर से",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "She won the race by a whisker."
   },
   {
     "id": 370,
     "phrase": "By and by",
     "meaning": "Gradually",
     "hindiMeaning": "धीरे-धीरे",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "By and by, everything became normal."
   },
   {
     "id": 371,
     "phrase": "By and large",
     "meaning": "In general / On the whole",
     "hindiMeaning": "सामान्यतः",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "By and large, the event was successful."
   },
   {
     "id": 372,
     "phrase": "By courtesy of",
     "meaning": "Given or allowed by / With kindly consideration",
     "hindiMeaning": "सौजन्य से",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "We got free tickets by courtesy of the organizer."
   },
   {
     "id": 373,
     "phrase": "By fair means or foul",
     "meaning": "In any way honest or dishonest",
     "hindiMeaning": "किसी भी तरह से",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "He wanted to win the match by fair means or foul."
   },
   {
     "id": 374,
     "phrase": "By fits and starts",
     "meaning": "Unsteady / irregularly",
     "hindiMeaning": "अनियमित रूप से",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "The work progressed by fits and starts."
   },
   {
     "id": 375,
     "phrase": "By hook or by crook",
     "meaning": "By any means good or bad / using whatever methods are possible",
     "hindiMeaning": "किसी भी तरह से",
-    "sscCount": 6
+    "sscCount": 6,
+    "example": "She was determined to pass the exam by hook or by crook."
   },
   {
     "id": 376,
@@ -2977,705 +3006,813 @@
     "hindiMeaning": "दिन दूनी रात चौगुनी (बहुत तेजी से)",
     "sscCount": 13
   },
+    {
+    "id": 376,
+    "phrase": "By leaps and bounds",
+    "meaning": "Very quickly / rapidly / swiftly",
+    "hindiMeaning": "दिन दूनी रात चौगुनी (बहुत तेजी से)",
+    "sscCount": 13,
+    "example": "Technology is growing by leaps and bounds."
+  },
   {
     "id": 377,
     "phrase": "By the same token",
     "meaning": "In the same way",
     "hindiMeaning": "एक समान तरीके से",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "If he deserves praise, then by the same token he deserves a reward."
   },
   {
     "id": 378,
     "phrase": "By the skin of one's teeth",
     "meaning": "By the narrowest margin / Having a narrow escape / To just barely manage to achieve something",
     "hindiMeaning": "बहुत कम अंतर से",
-    "sscCount": 9
+    "sscCount": 9,
+    "example": "He passed the exam by the skin of his teeth."
   },
   {
     "id": 379,
     "phrase": "By the sweat of one's brow",
     "meaning": "Hard work",
     "hindiMeaning": "कड़ी मेहनत",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He earned his success by the sweat of his brow."
   },
   {
     "id": 380,
     "phrase": "Call down",
     "meaning": "To scold",
     "hindiMeaning": "डाँटना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The manager called down the worker for his negligence."
   },
   {
     "id": 381,
     "phrase": "Call in question",
     "meaning": "Challenge",
     "hindiMeaning": "चुनौती देना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "His honesty was called in question."
   },
   {
     "id": 382,
     "phrase": "Call it a day",
     "meaning": "Decide or agree to stop doing something / give up work and go back to home",
     "hindiMeaning": "आज के लिए इतना ही",
-    "sscCount": 8
+    "sscCount": 8,
+    "example": "We finished the work and called it a day."
   },
   {
     "id": 383,
     "phrase": "Call off",
     "meaning": "Cancel something",
     "hindiMeaning": "रद्द करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The match was called off due to heavy rain."
   },
   {
     "id": 384,
     "phrase": "Call on",
     "meaning": "Pay a visit",
     "hindiMeaning": "मिलने आना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "I will call on my uncle tomorrow."
   },
   {
     "id": 385,
     "phrase": "Call the shots",
     "meaning": "To be in control / to be the person in charge",
     "hindiMeaning": "निर्णय लेने का अधिकार होना",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "The manager calls the shots in the company."
   },
   {
     "id": 386,
     "phrase": "Call upon",
     "meaning": "To order",
     "hindiMeaning": "काम के लिए बुलाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The teacher called upon the students to maintain discipline."
   },
   {
     "id": 387,
     "phrase": "Called for",
     "meaning": "To require something / Asked",
     "hindiMeaning": "किसी काम के लिए बुलाना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Your brave action called for appreciation."
   },
   {
     "id": 388,
     "phrase": "Came out of his shell",
     "meaning": "Became more sociable",
     "hindiMeaning": "अधिक मिलनसार बनना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "After joining college, he came out of his shell."
   },
   {
     "id": 389,
     "phrase": "Came up",
     "meaning": "Was raised",
     "hindiMeaning": "उठाना या बढ़ाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The issue came up during the meeting."
   },
   {
     "id": 390,
     "phrase": "Can't cut the mustard",
     "meaning": "To be unable to do a job",
     "hindiMeaning": "नौकरी करने में असमर्थ होना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "He can't cut the mustard in such a competitive environment."
   },
   {
     "id": 391,
     "phrase": "Cap in hand",
     "meaning": "In a respectful manner",
     "hindiMeaning": "सम्मानजनक तरीके से",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He went to his boss cap in hand to ask for leave."
   },
   {
     "id": 392,
     "phrase": "Capital punishment",
     "meaning": "Death sentence",
     "hindiMeaning": "मृत्यु दंड",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The criminal was awarded capital punishment."
   },
   {
     "id": 393,
     "phrase": "Carry on",
     "meaning": "Continue doing something",
     "hindiMeaning": "जारी रखना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Please carry on with your work."
   },
   {
     "id": 394,
     "phrase": "Carry out",
     "meaning": "Complete something / execute",
     "hindiMeaning": "पूरा करना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "The workers carried out the plan successfully."
   },
   {
     "id": 395,
     "phrase": "Carry the ball",
     "meaning": "Be in charge",
     "hindiMeaning": "जिम्मेदारी संभालना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "She will carry the ball for the entire project."
   },
   {
     "id": 396,
     "phrase": "Carry the can",
     "meaning": "To take the responsibility of some misdemeanour",
     "hindiMeaning": "गलती की जिम्मेदारी लेना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He had to carry the can for the team's mistake."
   },
   {
     "id": 397,
     "phrase": "Carry the day",
     "meaning": "Win a victory / becomes the winner",
     "hindiMeaning": "जीत हासिल करना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "Our team carried the day in the final match."
   },
   {
     "id": 398,
     "phrase": "Carry weight",
     "meaning": "Be important",
     "hindiMeaning": "महत्वपूर्ण होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "His opinion carries a lot of weight in the office."
   },
   {
     "id": 399,
     "phrase": "Carve out a niche",
     "meaning": "Developed a specific position for himself",
     "hindiMeaning": "अपने लिए एक विशेष स्थान बनाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "She carved out a niche for herself in the IT industry."
   },
   {
     "id": 400,
     "phrase": "Cash-strapped",
     "meaning": "Impoverished",
     "hindiMeaning": "पैसे की तंगी",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The company is cash-strapped after huge losses."
   },
-  {
+    {
     "id": 401,
     "phrase": "Cast a slur upon",
     "meaning": "To make a damaging or disparaging remark",
     "hindiMeaning": "कलंक लगाना (बदनामी करना)",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The false accusation cast a slur upon his reputation."
   },
   {
     "id": 402,
     "phrase": "Cast aside",
     "meaning": "To reject",
     "hindiMeaning": "त्याग देना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He cast aside all his fears and moved forward."
   },
   {
     "id": 403,
     "phrase": "Cast someone adrift",
     "meaning": "To leave someone without any support or purpose",
     "hindiMeaning": "बिना सहारा छोड़ देना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "After losing his job, he felt cast adrift."
   },
   {
     "id": 404,
     "phrase": "Casting pearls before swine",
     "meaning": "Offering good things to undeserving people",
     "hindiMeaning": "भैंस के आगे बीन बजाना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "Teaching manners to those rude boys is like casting pearls before swine."
   },
   {
     "id": 405,
     "phrase": "Cat nap",
     "meaning": "To have disturbed sleep / brief sleep",
     "hindiMeaning": "संक्षिप्त नींद",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "I took a quick cat nap during lunch break."
   },
   {
     "id": 406,
     "phrase": "Cat’s paw",
     "meaning": "A person used as a tool by another",
     "hindiMeaning": "एक व्यक्ति का दूसरे द्वारा उपयोग किया जाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He was only a cat’s paw in the conspiracy."
   },
   {
     "id": 407,
     "phrase": "Catch 22",
     "meaning": "A particular situation in which one cannot do anything",
     "hindiMeaning": "ऐसी स्थिति जिसमें कुछ नहीं किया जा सकता",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "Getting experience without a job is a real Catch 22."
   },
   {
     "id": 408,
     "phrase": "Catch a tartar",
     "meaning": "To deal with someone or something that proves unexpectedly troublesome or powerful / to catch a dangerous person",
     "hindiMeaning": "अपने से बलवान से जा भिड़ना",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "The bully caught a tartar when he challenged the boxer."
   },
   {
     "id": 409,
     "phrase": "Catch red-handed",
     "meaning": "To catch someone doing something illegal / caught in the act of committing the crime",
     "hindiMeaning": "रंगे हाथ पकड़ना",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "The thief was caught red-handed by the police."
   },
   {
     "id": 410,
     "phrase": "Catch time by the forelock",
     "meaning": "Seize opportunity",
     "hindiMeaning": "अवसर का लाभ उठाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "You should catch time by the forelock and apply for the scholarship."
   },
   {
     "id": 411,
     "phrase": "Cat’s whiskers",
     "meaning": "To be highly impressive",
     "hindiMeaning": "अत्यधिक प्रभावशाली",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Everyone thinks her new design is the cat’s whiskers."
   },
   {
     "id": 412,
     "phrase": "Change for the better",
     "meaning": "An improvement in the situation",
     "hindiMeaning": "पहले से बेहतर",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The situation has changed for the better now."
   },
   {
     "id": 413,
     "phrase": "Change hands",
     "meaning": "Pass from one person to another / change of ownership",
     "hindiMeaning": "एक व्यक्ति से दूसरे व्यक्ति के पास जाना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "The old house changed hands last year."
   },
   {
     "id": 414,
     "phrase": "Change horses in midstream",
     "meaning": "Change plans",
     "hindiMeaning": "बीच में योजना बदलना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "It is risky to change horses in midstream."
   },
   {
     "id": 415,
     "phrase": "Changed colours",
     "meaning": "Turned pale",
     "hindiMeaning": "पीला पड़ जाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He changed colours after hearing the shocking news."
   },
   {
     "id": 416,
     "phrase": "Chapter and verse",
     "meaning": "To give exact information about something, especially something in a book / provided minute details",
     "hindiMeaning": "पूर्ण सटीक जानकारी",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "He explained the rules chapter and verse."
   },
   {
     "id": 417,
     "phrase": "Charley horse",
     "meaning": "Cramp",
     "hindiMeaning": "हाथ या पैर में ऐंठन",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "I got a charley horse after running for a long time."
   },
   {
     "id": 418,
     "phrase": "Chase rainbows",
     "meaning": "To pursue unrealistic goals",
     "hindiMeaning": "अवास्तविक लक्ष्यों का पीछा करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Stop chasing rainbows and focus on practical goals."
   },
   {
     "id": 419,
     "phrase": "Cheek by jowl",
     "meaning": "Very close together",
     "hindiMeaning": "आस पास",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "The houses were built cheek by jowl."
   },
   {
     "id": 420,
     "phrase": "Chew someone out",
     "meaning": "To scold someone",
     "hindiMeaning": "किसी को गुस्से में डांटना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The coach chewed the players out for their poor performance."
   },
   {
     "id": 421,
     "phrase": "Chew something over",
     "meaning": "Discuss or consider something at length",
     "hindiMeaning": "किसी बात पर विचार करना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Let me chew the proposal over before deciding."
   },
   {
     "id": 422,
     "phrase": "Chew the cud",
     "meaning": "Contemplating / to think slowly and carefully about something",
     "hindiMeaning": "किसी बात पर विचार करना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "He sat alone chewing the cud about his future."
   },
   {
     "id": 423,
     "phrase": "Chew the fat",
     "meaning": "Gossip and make small talk / have friendly talks",
     "hindiMeaning": "गपें मारना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "We spent the evening chewing the fat with old friends."
   },
   {
     "id": 424,
     "phrase": "Chew the scenery",
     "meaning": "To act overly emotional",
     "hindiMeaning": "जरूरत से ज्यादा भावुक होकर काम करना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "The actor chewed the scenery in the final scene."
   },
   {
     "id": 425,
     "phrase": "Chicken feed",
     "meaning": "Very little money",
     "hindiMeaning": "बहुत कम पैसा",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "For a millionaire, that amount is just chicken feed."
   },
   {
     "id": 426,
     "phrase": "Chicken out",
     "meaning": "To decide not to do something because you are too frightened / withdrew",
     "hindiMeaning": "डर जाना",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "He chickened out before the bungee jump."
   },
   {
     "id": 427,
     "phrase": "Chicken-hearted",
     "meaning": "Timid / cowardly / easily frightened",
     "hindiMeaning": "डरपोक",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "Only a chicken-hearted person would run away from the challenge."
   },
   {
     "id": 428,
     "phrase": "Child’s play",
     "meaning": "Something that is very easy to do / a very easy task",
     "hindiMeaning": "बच्चों का खेल (आसान काम)",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "Solving this puzzle is child’s play for her."
   },
   {
     "id": 429,
     "phrase": "Children should be seen and not heard",
     "meaning": "Children should not speak in the presence of adults",
     "hindiMeaning": "बच्चों को बड़ों की उपस्थिति में नहीं बोलना चाहिए",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "My grandfather believed that children should be seen and not heard."
   },
   {
     "id": 430,
     "phrase": "Chill out",
     "meaning": "To calm down",
     "hindiMeaning": "शांत होना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Just chill out and stop worrying so much."
   },
   {
     "id": 431,
     "phrase": "Chinks in the armour",
     "meaning": "A weakness that can be taken advantage of",
     "hindiMeaning": "कमजोरी",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "The lawyer found chinks in the armour of the opponent’s argument."
   },
   {
     "id": 432,
     "phrase": "Chip off the old block",
     "meaning": "Someone similar in character or behaviour to one's father / resembling parents",
     "hindiMeaning": "जैसा बाप वैसा बेटा",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "Rahul is a chip off the old block just like his father."
   },
   {
     "id": 433,
     "phrase": "Clam up",
     "meaning": "To become silent",
     "hindiMeaning": "मुँह बंद कर लेना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He clammed up when the police questioned him."
   },
   {
     "id": 434,
     "phrase": "Clean hands",
     "meaning": "Innocent",
     "hindiMeaning": "मासूम",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The investigation proved that he had clean hands."
   },
   {
     "id": 435,
     "phrase": "Clear the air",
     "meaning": "To deal openly with misunderstandings to remove them",
     "hindiMeaning": "संदेह दूर करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "They met to clear the air after the argument."
   },
   {
     "id": 436,
     "phrase": "Cloak and dagger",
     "meaning": "Activity involving mystery and secrecy / like a spy",
     "hindiMeaning": "रहस्य और गोपनीयता से भरी गतिविधि",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "The movie was full of cloak and dagger activities."
   },
   {
     "id": 437,
     "phrase": "Close shave",
     "meaning": "A narrow escape from danger or disaster",
     "hindiMeaning": "बाल-बाल बचना",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "It was a close shave for the passengers in the accident."
   },
   {
     "id": 438,
     "phrase": "Close to one's heart",
     "meaning": "Dear and important to oneself",
     "hindiMeaning": "अत्यधिक प्रिय",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Education is a subject close to her heart."
   },
   {
     "id": 439,
     "phrase": "Closed the book on",
     "meaning": "Stopped working on",
     "hindiMeaning": "काम करना बंद करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The company closed the book on the failed project."
   },
   {
     "id": 440,
     "phrase": "Cloven hoof",
     "meaning": "The evil intention",
     "hindiMeaning": "दुष्ट इरादा",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "His cloven hoof became visible after the betrayal."
   },
   {
     "id": 441,
     "phrase": "Cock and bull story",
     "meaning": "An unbelievable or absurd story",
     "hindiMeaning": "अविश्वसनीय या अतर्किक कहानी",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "Nobody believed his cock and bull story."
   },
   {
     "id": 442,
     "phrase": "Cold comfort",
     "meaning": "Slight satisfaction",
     "hindiMeaning": "झूठी तसल्ली",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The apology was only cold comfort to the victim."
   },
   {
     "id": 443,
     "phrase": "Comb through",
     "meaning": "To carefully look through",
     "hindiMeaning": "बारीकी से देखना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "The police combed through the entire area for clues."
   },
   {
     "id": 444,
     "phrase": "Come about",
     "meaning": "To happen",
     "hindiMeaning": "घटित होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "How did this misunderstanding come about?"
   },
   {
     "id": 445,
     "phrase": "Come hell or high water",
     "meaning": "No matter what / in spite of any obstacles",
     "hindiMeaning": "कठिनाइयों के बावजूद",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "I will attend the meeting come hell or high water."
   },
   {
     "id": 446,
     "phrase": "Come in handy",
     "meaning": "Turn out to be useful",
     "hindiMeaning": "उपयोगी होना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Your notes will come in handy during revision."
   },
   {
     "id": 447,
     "phrase": "Come of age",
     "meaning": "To mature and develop fully",
     "hindiMeaning": "व्यस्क हो जाना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "The company has finally come of age."
   },
   {
     "id": 448,
     "phrase": "Come off",
     "meaning": "Be separated",
     "hindiMeaning": "अलग-थलग हो जाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The handle came off the door suddenly."
   },
   {
     "id": 449,
     "phrase": "Come rain or shine",
     "meaning": "Under any circumstances / whatever happens",
     "hindiMeaning": "किसी भी परिस्थिति में",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "She goes for a walk every morning come rain or shine."
   },
   {
     "id": 450,
     "phrase": "Come to blows",
     "meaning": "Get into a fight physically",
     "hindiMeaning": "हाथापाई होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The two players came to blows during the match."
   },
   {
     "id": 451,
     "phrase": "Come to grief",
     "meaning": "Have an accident / meet with disaster",
     "hindiMeaning": "दुर्घटना या असफल होना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "The project came to grief due to poor planning."
   },
   {
     "id": 452,
     "phrase": "Come to light",
     "meaning": "Been revealed / become known publicly",
     "hindiMeaning": "प्रकाश में आना (पता चलना)",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "The truth finally came to light."
   },
   {
     "id": 453,
     "phrase": "Come to terms with something",
     "meaning": "To gradually accept a sad situation",
     "hindiMeaning": "स्थिति से समझौता कर लेना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "She is trying to come to terms with her loss."
   },
   {
     "id": 454,
     "phrase": "Come to the point",
     "meaning": "To speak plainly about the real issue",
     "hindiMeaning": "मुद्दे की बात करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Please come to the point and stop wasting time."
   },
   {
     "id": 455,
     "phrase": "Come true",
     "meaning": "To happen as hoped",
     "hindiMeaning": "सपने सच होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Her dream of becoming a doctor came true."
   },
   {
     "id": 456,
     "phrase": "Come what may",
     "meaning": "No matter what happens",
     "hindiMeaning": "चाहे जो हो जाए",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Come what may, I will support my family."
   },
   {
     "id": 457,
     "phrase": "Cook the books",
     "meaning": "To falsify financial records / dishonest accounting",
     "hindiMeaning": "हिसाब में धोखाधड़ी करना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "The accountant was arrested for cooking the books."
   },
   {
     "id": 458,
     "phrase": "Cool about working",
     "meaning": "Ready to work",
     "hindiMeaning": "काम करने के लिए तैयार",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The workers were cool about working overtime."
   },
   {
     "id": 459,
     "phrase": "Cool as a cucumber",
     "meaning": "Not nervous or emotional / calm and composed",
     "hindiMeaning": "धैर्यवान",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "She remained cool as a cucumber during the interview."
   },
   {
     "id": 460,
     "phrase": "Cool it",
     "meaning": "To relax",
     "hindiMeaning": "शांत होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Cool it and stop arguing."
   },
   {
     "id": 461,
     "phrase": "Cool your heels",
     "meaning": "To be kept waiting / unwillingly wait for something or someone",
     "hindiMeaning": "इंतजार करना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "We had to cool our heels outside the office."
   },
   {
     "id": 462,
     "phrase": "Cope with",
     "meaning": "Handle",
     "hindiMeaning": "सामना करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "She learned to cope with pressure."
   },
   {
     "id": 463,
     "phrase": "Copycat",
     "meaning": "One who imitates another closely",
     "hindiMeaning": "नकलची बंदर",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "My little brother is such a copycat."
   },
   {
     "id": 464,
     "phrase": "Cordoned off",
     "meaning": "Isolated",
     "hindiMeaning": "घेरा डालना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The police cordoned off the accident area."
   },
   {
     "id": 465,
     "phrase": "Cost (someone) dearly",
     "meaning": "To bring one suffering",
     "hindiMeaning": "महंगा पड़ना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "His careless mistake cost him dearly."
   },
   {
     "id": 466,
     "phrase": "Cost an arm and a leg",
     "meaning": "Very expensive / a large amount of money",
     "hindiMeaning": "बहुत महंगा पड़ना",
-    "sscCount": 8
+    "sscCount": 8,
+    "example": "That luxury car costs an arm and a leg."
   },
   {
     "id": 467,
     "phrase": "Couch potato",
     "meaning": "A lazy person / a person who watches too much television",
     "hindiMeaning": "आलसी व्यक्ति",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "He became a couch potato during the holidays."
   },
   {
     "id": 468,
     "phrase": "Count one's blessings",
     "meaning": "Be grateful for what one has",
     "hindiMeaning": "जो मिला है उसमें खुश रहना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "We should count our blessings every day."
   },
   {
     "id": 469,
     "phrase": "Cover up",
     "meaning": "Hide or conceal",
     "hindiMeaning": "छुपाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He tried to cover up his mistakes."
   },
   {
     "id": 470,
     "phrase": "Crack someone up",
     "meaning": "Laugh out loud / to make someone laugh",
     "hindiMeaning": "किसी को हंसाना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "His jokes always crack me up."
   },
   {
     "id": 471,
     "phrase": "Crash and burn",
     "meaning": "To fail completely",
     "hindiMeaning": "पूरी तरह से विफल होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The startup crashed and burned within a year."
   },
   {
     "id": 472,
     "phrase": "Creature comforts",
     "meaning": "Luxuries",
     "hindiMeaning": "भौतिक सुख",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He enjoys all the creature comforts of life."
   },
   {
     "id": 473,
     "phrase": "Cross one's mind",
     "meaning": "To think of something / to be thought of by one",
     "hindiMeaning": "विचार आना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "It never crossed my mind that he would betray me."
   },
   {
     "id": 474,
     "phrase": "Cross out",
     "meaning": "Eliminate",
     "hindiMeaning": "काट देना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Please cross out the wrong answer."
   },
   {
     "id": 475,
     "phrase": "Cross swords",
     "meaning": "Disagree / to fight",
     "hindiMeaning": "असहमत होना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "The two politicians crossed swords in the debate."
   },
   {
     "id": 476,
     "phrase": "Cross that bridge",
     "meaning": "Solve the problem",
     "hindiMeaning": "समस्या का समाधान",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "We will cross that bridge together."
   },
   {
     "id": 477,
@@ -3689,440 +3826,2611 @@
     "phrase": "Cross your fingers",
     "meaning": "To hope things will happen as you want / wish for good luck or success",
     "hindiMeaning": "आशा करना",
-    "sscCount": 5
+    "sscCount": 5,
+    "example": "Cross your fingers and hope for the best."
   },
   {
     "id": 479,
     "phrase": "Crux of the matter",
     "meaning": "The most important / critical point",
     "hindiMeaning": "सबसे महत्वपूर्ण पहलू",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "The crux of the matter is lack of communication."
   },
   {
     "id": 480,
     "phrase": "Cry down",
     "meaning": "To depreciate",
     "hindiMeaning": "मूल्य या प्रतिष्ठा कम करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Some people tried to cry down his achievements."
   },
   {
     "id": 481,
     "phrase": "Cry for the moon",
     "meaning": "To make an impractical or unattainable request",
     "hindiMeaning": "असंभव मांग करना",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "Asking for a private jet is like crying for the moon."
   },
   {
     "id": 482,
     "phrase": "Cry in the wilderness",
     "meaning": "An unrealistic demand / unpopular opinion / unheeded warning",
     "hindiMeaning": "अनसुनी राय",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "His warnings were just a cry in the wilderness."
   },
   {
     "id": 483,
     "phrase": "Cry over spilt milk",
     "meaning": "To complain about a past loss or mistake that cannot be changed",
     "hindiMeaning": "बीती बातों पर अफसोस करना",
-    "sscCount": 5
+    "sscCount": 5,
+    "example": "There is no use crying over spilt milk."
   },
   {
     "id": 484,
     "phrase": "Cup of tea",
     "meaning": "One's chosen or preferred thing / something that pleases one",
     "hindiMeaning": "ऐसा काम जिसमें आप कुशल हैं",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "Mathematics is not my cup of tea."
   },
   {
     "id": 485,
     "phrase": "Currying favour with",
     "meaning": "Ingratiate oneself with someone through flattering behaviour",
     "hindiMeaning": "चापलूसी करना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "He is always currying favour with his boss."
   },
   {
     "id": 486,
     "phrase": "Cut a poor figure",
     "meaning": "To put a bad impression",
     "hindiMeaning": "बुरा प्रभाव डालना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He cut a poor figure during the presentation."
   },
   {
     "id": 487,
     "phrase": "Cut and dried",
     "meaning": "Ready made / Already decided",
     "hindiMeaning": "बना बनाया",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "The matter is not as cut and dried as it seems."
   },
   {
     "id": 488,
     "phrase": "Cut corners",
     "meaning": "To save money, time or effort by doing something badly or cheaply",
     "hindiMeaning": "सबसे आसान या गलत तरीके से करना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "The contractor cut corners to save money."
   },
   {
     "id": 489,
     "phrase": "Cut down on",
     "meaning": "Reduce",
     "hindiMeaning": "कम करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "You should cut down on junk food."
   },
   {
     "id": 490,
     "phrase": "Cut from the same cloth",
     "meaning": "To be of a similar nature",
     "hindiMeaning": "एक जैसा होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The two brothers are cut from the same cloth."
   },
   {
     "id": 491,
     "phrase": "Cut him off, without a shilling",
     "meaning": "Disinherited him",
     "hindiMeaning": "जायदाद से बेदखल करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "His father cut him off without a shilling."
   },
   {
     "id": 492,
     "phrase": "Cut in",
     "meaning": "Interrupt someone while they are speaking",
     "hindiMeaning": "बीच में टोकना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Please don't cut in while I am talking."
   },
   {
     "id": 493,
     "phrase": "Cut no ice with me",
     "meaning": "Had no influence on me",
     "hindiMeaning": "कोई प्रभाव नहीं पड़ना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "His excuses cut no ice with me."
   },
   {
     "id": 494,
     "phrase": "Cut one short",
     "meaning": "To interrupt someone",
     "hindiMeaning": "बात काटना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "She cut me short before I could explain."
   },
   {
     "id": 495,
     "phrase": "Cut short",
     "meaning": "Make shorter as if by cutting off",
     "hindiMeaning": "काट कर छोटा करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The meeting was cut short due to rain."
   },
   {
     "id": 496,
     "phrase": "Cut someone some slack",
     "meaning": "To not manage someone very strictly or critically / to be more lenient",
     "hindiMeaning": "किसी को ढील देना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "You should cut him some slack because he is new here."
   },
   {
     "id": 497,
     "phrase": "Cut the Gordian knot",
     "meaning": "Removed the difficulty / to perform a difficult task",
     "hindiMeaning": "कठिन समस्या का समाधान करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The manager cut the Gordian knot with a bold decision."
   },
   {
     "id": 498,
     "phrase": "Cut the mustard",
     "meaning": "To perform well / To succeed",
     "hindiMeaning": "अच्छा प्रदर्शन करना",
-    "sscCount": 6
+    "sscCount": 6,
+    "example": "He finally cut the mustard in the interview."
   },
   {
     "id": 499,
     "phrase": "Cut to the chase",
     "meaning": "To start talking about the important aspects / come to the point",
     "hindiMeaning": "मुद्दे पर आना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Let's cut to the chase and discuss the main issue."
   },
   {
     "id": 500,
     "phrase": "Cut to the quick",
     "meaning": "Hurt intensely",
     "hindiMeaning": "भावनाओं को ठेस पहुंचाना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Her rude comments cut him to the quick."
   },
   {
     "id": 501,
     "phrase": "Dance attendance on someone",
     "meaning": "Obey or serve someone attentively and eagerly",
     "hindiMeaning": "ध्यान से सेवा करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He spent the whole day dancing attendance on his boss."
   },
   {
     "id": 502,
     "phrase": "Dance to someone's tune",
     "meaning": "Do what others want you to do",
     "hindiMeaning": "दूसरों के संकेत पर चलना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "He refuses to dance to anyone's tune."
   },
   {
     "id": 503,
     "phrase": "Day and night",
     "meaning": "Continuously",
     "hindiMeaning": "दिन रात",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "She worked day and night to achieve success."
   },
   {
     "id": 504,
     "phrase": "Dead heat",
     "meaning": "Close contest that ends in a tie",
     "hindiMeaning": "बराबरी का मुकाबला",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The election ended in a dead heat."
   },
   {
     "id": 505,
     "phrase": "Dead in the water",
     "meaning": "No chance of succeeding or making progress",
     "hindiMeaning": "सफल होने की कोई आशा नहीं",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Without funding, the project is dead in the water."
   },
   {
     "id": 506,
     "phrase": "Dead ringer",
     "meaning": "An exact duplicate",
     "hindiMeaning": "हूबहू दिखने वाला व्यक्ति",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "He is a dead ringer for his father."
   },
   {
     "id": 507,
     "phrase": "Dead set against",
     "meaning": "Disapproved",
     "hindiMeaning": "पूरी तरह से विरोध",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "My parents are dead set against this idea."
   },
   {
     "id": 508,
     "phrase": "Deadlock",
     "meaning": "A state in which progress is impossible",
     "hindiMeaning": "गतिरोध",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The negotiations ended in a deadlock."
   },
   {
     "id": 509,
     "phrase": "Deep pockets",
     "meaning": "A lot of money",
     "hindiMeaning": "बहुत सारा पैसा",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Only companies with deep pockets can afford such projects."
   },
   {
     "id": 510,
     "phrase": "Desperate times call for desperate measures",
     "meaning": "When you are extremely desperate you need to take extreme actions",
     "hindiMeaning": "कठिन समय में कठोर कदम उठाने पड़ते हैं",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "During the crisis, desperate times called for desperate measures."
   },
   {
     "id": 511,
     "phrase": "Die a dog's death",
     "meaning": "A dishonourable or shameful death",
     "hindiMeaning": "कुत्ते की मौत मरना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The cruel king died a dog's death."
   },
   {
     "id": 512,
     "phrase": "Die hard",
     "meaning": "Unwilling to change",
     "hindiMeaning": "हठ या जिद करने वाला",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Old habits die hard."
   },
   {
     "id": 513,
     "phrase": "Died in harness",
     "meaning": "Died while working / to die while in service",
     "hindiMeaning": "सेवा में रहते हुए मर जाना",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "The officer died in harness after years of service."
   },
   {
     "id": 514,
     "phrase": "Dig around",
     "meaning": "Investigating",
     "hindiMeaning": "खोजबीन करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The journalist kept digging around for information."
   },
   {
     "id": 515,
     "phrase": "Dig up dirt on someone",
     "meaning": "Discover damaging information about someone",
     "hindiMeaning": "किसी के भेद पता करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The reporters tried to dig up dirt on the politician."
   },
   {
     "id": 516,
     "phrase": "Do a good turn",
     "meaning": "To help someone / Render a service",
     "hindiMeaning": "किसी की सहायता करना",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "He did me a good turn when I was in trouble."
   },
   {
     "id": 517,
     "phrase": "Do a roaring trade",
     "meaning": "Highly successful",
     "hindiMeaning": "अत्यधिक सफल होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The shop did a roaring trade during the festival season."
   },
   {
     "id": 518,
     "phrase": "Do away with",
     "meaning": "To abolish",
     "hindiMeaning": "खत्म करना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The government decided to do away with the old rule."
   },
   {
     "id": 519,
     "phrase": "Do or die",
     "meaning": "To make a final effort",
     "hindiMeaning": "करो या मरो",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "It was a do or die situation for the team."
   },
   {
     "id": 520,
     "phrase": "Dodge a bullet",
     "meaning": "To narrowly avoid a dangerous or unpleasant situation",
     "hindiMeaning": "बाल-बाल बचना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He dodged a bullet by avoiding that risky investment."
   },
   {
     "id": 521,
     "phrase": "Dog eat dog",
     "meaning": "Ruthlessly competitive",
     "hindiMeaning": "कड़ी प्रतिस्पर्धा",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The corporate world is dog eat dog."
   },
   {
     "id": 522,
     "phrase": "Dog in a manger",
     "meaning": "Selfish",
     "hindiMeaning": "स्वार्थी",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "Don't be a dog in a manger and let others use it."
   },
   {
     "id": 523,
     "phrase": "Don't judge a book by its cover",
     "meaning": "We should not judge something primarily by its outward appearance",
     "hindiMeaning": "केवल बाहरी दिखावे से पूर्वानुमान नहीं लगाना चाहिए",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "He looks strict, but don't judge a book by its cover."
   },
   {
     "id": 524,
     "phrase": "Done for",
     "meaning": "Ruined",
     "hindiMeaning": "तबाह करना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Without help, the company was done for."
   },
   {
     "id": 525,
     "phrase": "Donkey’s years",
     "meaning": "A very long time",
     "hindiMeaning": "बहुत लंबा समय",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "I haven't seen him for donkey’s years."
   },
   {
     "id": 526,
     "phrase": "Don't count your chickens before they hatch",
     "meaning": "Don’t make plans based on events that have not yet happened",
     "hindiMeaning": "सफलता मिलने से पहले आशा न मानना",
-    "sscCount": 8
+    "sscCount": 8,
+    "example": "You shouldn't count your chickens before they hatch."
   },
   {
     "id": 527,
     "phrase": "Don't put all your eggs in one basket",
     "meaning": "Don't put all your resources in one place",
     "hindiMeaning": "सब कुछ दांव पर न लगाना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "Invest wisely and don't put all your eggs in one basket."
   },
   {
     "id": 528,
     "phrase": "Dot one's i's and cross one's t's",
     "meaning": "Be detailed and exact / Pay attention to minute details",
     "hindiMeaning": "विस्तृत और सटीक होना",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "Before submitting the report, dot your i's and cross your t's."
   },
   {
     "id": 529,
     "phrase": "Down and out",
     "meaning": "Without money",
     "hindiMeaning": "दीन-हीन व्यक्ति",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "After losing his job, he became down and out."
   },
   {
     "id": 530,
     "phrase": "Down in the dumps",
     "meaning": "Sad and depressed",
     "hindiMeaning": "हताश",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "She has been down in the dumps since the result came out."
   },
   {
     "id": 531,
     "phrase": "Down in the mouth",
     "meaning": "To be depressed",
     "hindiMeaning": "उदास होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "He looked down in the mouth after the failure."
   },
   {
     "id": 532,
     "phrase": "Down the drain",
     "meaning": "Wasted or lost",
     "hindiMeaning": "बर्बाद या व्यर्थ होना",
-    "sscCount": 2
+    "sscCount": 2,
+    "example": "All our hard work went down the drain."
   },
   {
     "id": 533,
     "phrase": "Down the tubes",
     "meaning": "Failing completely",
     "hindiMeaning": "पूरी तरह से असफल होना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The business went down the tubes after the pandemic."
   },
   {
     "id": 534,
     "phrase": "Down to earth",
     "meaning": "Very realistic and sensible / Practical and direct",
     "hindiMeaning": "आडंबर रहित (सरल और सच्चा)",
-    "sscCount": 1
+    "sscCount": 1,
+    "example": "Despite her fame, she is very down to earth."
   },
   {
     "id": 535,
     "phrase": "Draconian law",
     "meaning": "Extremely severe law",
     "hindiMeaning": "बेहद कठोर कानून",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "The new policy was criticized as a draconian law."
   },
   {
     "id": 536,
     "phrase": "Drag one's feet",
     "meaning": "Be reluctant to act / Do something deliberately at a slow pace",
     "hindiMeaning": "टालमटोल करना",
-    "sscCount": 4
+    "sscCount": 4,
+    "example": "The officials dragged their feet on the issue."
   },
   {
     "id": 537,
     "phrase": "Draw a blank",
     "meaning": "To be unsuccessful / find no favour",
     "hindiMeaning": "खाली हाथ लौटना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "I asked around for help but drew a blank."
   },
   {
     "id": 538,
     "phrase": "Draw a line",
     "meaning": "To fix a limit / accept something up to a particular point",
     "hindiMeaning": "सीमा निर्धारित करना",
-    "sscCount": 3
+    "sscCount": 3,
+    "example": "Parents should draw a line between freedom and discipline."
   },
   {
     "id": 539,
     "phrase": "Draw first blood",
     "meaning": "Be the first to gain an advantage against an opponent",
     "hindiMeaning": "पहले फायदा उठाना",
-    "sscCount": 0
+    "sscCount": 0,
+    "example": "Our team drew first blood in the opening minutes."
   },
   {
     "id": 540,
     "phrase": "Dressed to kill",
     "meaning": "Dressed to attract attention",
     "hindiMeaning": "आकर्षक कपड़े पहनना",
-    "sscCount": 0
-  }                                        
+    "sscCount": 0,
+    "example": "She arrived at the party dressed to kill."
+  },
+    {
+    "id": 541,
+    "phrase": "Dress down",
+    "meaning": "Give a scolding",
+    "hindiMeaning": "कड़ी फटकार लगाना",
+    "sscCount": 0,
+    "otherExamCount": 1
+  },
+  {
+    "id": 542,
+    "phrase": "Drew on his fancy",
+    "meaning": "Used his imagination",
+    "hindiMeaning": "कल्पना शक्ति का उपयोग करना",
+    "sscCount": 0,
+    "otherExamCount": 1
+  },
+  {
+    "id": 543,
+    "phrase": "Drive home",
+    "meaning": "Emphasize / to emphasize an important point",
+    "hindiMeaning": "महत्वपूर्ण बिंदु पर जोर देना",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 544,
+    "phrase": "Drive someone up the wall",
+    "meaning": "Make someone very irritated or angry",
+    "hindiMeaning": "किसी को बहुत परेशान या गुस्सा करना",
+    "sscCount": 3,
+    "otherExamCount": 0
+  },
+  {
+    "id": 545,
+    "phrase": "Drop in",
+    "meaning": "Pay a casual visit",
+    "hindiMeaning": "बिना बताए मिलना",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 546,
+    "phrase": "Drop names",
+    "meaning": "Name famous people to impress others",
+    "hindiMeaning": "प्रसिद्ध लोगों का नाम लेकर प्रभावित करना",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 547,
+    "phrase": "Dropping like flies",
+    "meaning": "Collapsing in large numbers / A large number of people either falling ill or dying",
+    "hindiMeaning": "बड़ी संख्या में गिरना या मरना",
+    "sscCount": 1,
+    "otherExamCount": 0
+  },
+  {
+    "id": 548,
+    "phrase": "Dust and ashes",
+    "meaning": "Something that is very disappointing",
+    "hindiMeaning": "अत्यंत निराशाजनक",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 549,
+    "phrase": "Eager beaver",
+    "meaning": "A keen and enthusiastic person",
+    "hindiMeaning": "बहुत उत्साही व्यक्ति",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 550,
+    "phrase": "Eagle eye",
+    "meaning": "An eye with sharp visual powers / A careful or close watch",
+    "hindiMeaning": "तीखी नजर",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 551,
+    "phrase": "Ease somebody's mind",
+    "meaning": "Alleviate someone's anxiety",
+    "hindiMeaning": "किसी की चिंता कम करना",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 552,
+    "phrase": "Easier said than done",
+    "meaning": "Be more easily talked about than put into practice / Not as easy as it appears to be",
+    "hindiMeaning": "कहना आसान, करना मुश्किल",
+    "sscCount": 5,
+    "otherExamCount": 1
+  },
+  {
+    "id": 553,
+    "phrase": "Easy money",
+    "meaning": "Make money without much effort, often dishonestly",
+    "hindiMeaning": "आसानी से पैसा कमाना",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 554,
+    "phrase": "Eat anyone's salt",
+    "meaning": "To be one's guest",
+    "hindiMeaning": "किसी का मेहमान होना",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 555,
+    "phrase": "Eats like a horse",
+    "meaning": "Eats a lot of food",
+    "hindiMeaning": "बहुत ज्यादा खाना",
+    "sscCount": 5,
+    "otherExamCount": 2
+  },
+  {
+    "id": 556,
+    "phrase": "Egg on",
+    "meaning": "Encourage / provoke / urge",
+    "hindiMeaning": "उकसाना",
+    "sscCount": 2,
+    "otherExamCount": 1
+  },
+  {
+    "id": 557,
+    "phrase": "Elbow grease",
+    "meaning": "A lot of physical effort",
+    "hindiMeaning": "कड़ी मेहनत",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 558,
+    "phrase": "Elbow room",
+    "meaning": "Freedom to do what one wants / enough space to move or work freely",
+    "hindiMeaning": "कार्य करने की स्वतंत्रता",
+    "sscCount": 2,
+    "otherExamCount": 3
+  },
+  {
+    "id": 559,
+    "phrase": "Ended in a fiasco",
+    "meaning": "A complete failure",
+    "hindiMeaning": "पूर्ण विफलता",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 560,
+    "phrase": "Enough rope",
+    "meaning": "Enough freedom for action",
+    "hindiMeaning": "कार्य करने के लिए पर्याप्त स्वतंत्रता",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 561,
+    "phrase": "Evening of life",
+    "meaning": "Old age",
+    "hindiMeaning": "बुढ़ापा",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 562,
+    "phrase": "Every cloud has a silver lining",
+    "meaning": "Every unpleasant situation has a promising side / Something positive is there in any difficult situation",
+    "hindiMeaning": "हर बुराई में अच्छाई छिपी होती है",
+    "sscCount": 5,
+    "otherExamCount": 6
+  },
+  {
+    "id": 563,
+    "phrase": "Every dog has his day",
+    "meaning": "Everyone has good luck or success at a point of time in their lives",
+    "hindiMeaning": "हर कुत्ते का दिन आता है",
+    "sscCount": 2,
+    "otherExamCount": 0
+  },
+  {
+    "id": 564,
+    "phrase": "Every inch a gentleman",
+    "meaning": "Completely gentleman",
+    "hindiMeaning": "पूर्णतः सज्जन व्यक्ति",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+  {
+    "id": 565,
+    "phrase": "Evil twin",
+    "meaning": "An imaginary double humorously invoked to explain or excuse uncharacteristic or reprehensible behaviour",
+    "hindiMeaning": "बुरा जुड़वां",
+    "sscCount": 0,
+    "otherExamCount": 0
+  },
+    {
+    "id": 566,
+    "phrase": "Excuse my French",
+    "meaning": "Used to apologize for swearing",
+    "hindiMeaning": "गाली गलौज के लिए क्षमा",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Excuse my French, but that was a terrible mistake."
+  },
+  {
+    "id": 567,
+    "phrase": "Explore all avenues",
+    "meaning": "Try out every possibility to get a result",
+    "hindiMeaning": "सफलता पाने के लिए हर संभव प्रयास करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "We should explore all avenues before making a decision."
+  },
+  {
+    "id": 568,
+    "phrase": "Eye wash",
+    "meaning": "A deception / A pretence",
+    "hindiMeaning": "आँखों में धूल झोंकना (छलावा देना)",
+    "sscCount": 5,
+    "otherExamCount": 2,
+    "example": "The inquiry was just an eye wash to fool the public."
+  },
+  {
+    "id": 569,
+    "phrase": "Face the music",
+    "meaning": "To accept punishment for mistake / Get reprimanded / to bear the consequences / Accept the blame",
+    "hindiMeaning": "किये का परिणाम भुगतना",
+    "sscCount": 16,
+    "otherExamCount": 7,
+    "example": "Now you must face the music for your actions."
+  },
+  {
+    "id": 570,
+    "phrase": "Face to face",
+    "meaning": "With another person in their presence rather than, say, by phone or letter",
+    "hindiMeaning": "आमने-सामने, प्रत्यक्ष रूप से",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "We discussed the matter face to face."
+  },
+  {
+    "id": 571,
+    "phrase": "Face up to",
+    "meaning": "To accept a difficult situation",
+    "hindiMeaning": "कठिन परिस्थिति का सामना करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "You must face up to the reality of the situation."
+  },
+  {
+    "id": 572,
+    "phrase": "Faint hearted",
+    "meaning": "Timid",
+    "hindiMeaning": "डरपोक",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "A faint hearted person can never become a leader."
+  },
+  {
+    "id": 573,
+    "phrase": "Fair weather friends",
+    "meaning": "Friends in good times / supports only when easy and convenient",
+    "hindiMeaning": "स्वार्थी मित्र",
+    "sscCount": 9,
+    "otherExamCount": 0,
+    "example": "Fair weather friends disappeared when he faced problems."
+  },
+  {
+    "id": 574,
+    "phrase": "Fair's fair",
+    "meaning": "Just treatment",
+    "hindiMeaning": "सबके साथ एक ही न्याय",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "You should give everyone an equal chance because fair's fair."
+  },
+  {
+    "id": 575,
+    "phrase": "Fall back on",
+    "meaning": "Resort to something / to seek support out of necessity",
+    "hindiMeaning": "आश्रय लेना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "When business failed, he had to fall back on his savings."
+  },
+  {
+    "id": 576,
+    "phrase": "Fall flat",
+    "meaning": "To fail to produce intended effect / to have no effect / Unsuccessful",
+    "hindiMeaning": "असफल होना",
+    "sscCount": 5,
+    "otherExamCount": 1,
+    "example": "His joke fell flat in front of the audience."
+  },
+  {
+    "id": 577,
+    "phrase": "Fall for",
+    "meaning": "To be tricked or fooled by",
+    "hindiMeaning": "बहकावे में आना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Don't fall for fake advertisements."
+  },
+  {
+    "id": 578,
+    "phrase": "Fall foul of",
+    "meaning": "Quarrelling with",
+    "hindiMeaning": "किसी के साथ झगड़ा या विवाद होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He fell foul of the law after breaking the rules."
+  },
+  {
+    "id": 579,
+    "phrase": "Fall into line",
+    "meaning": "Adhere to rules",
+    "hindiMeaning": "नियमों या आदेशों का पालन करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The workers finally fell into line with the management."
+  },
+  {
+    "id": 580,
+    "phrase": "Fall short",
+    "meaning": "To not reach a particular level / Had no effect",
+    "hindiMeaning": "अपर्याप्त होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "His performance fell short of expectations."
+  },
+  {
+    "id": 581,
+    "phrase": "Falling head over heels",
+    "meaning": "Falling deeply in love with someone",
+    "hindiMeaning": "प्यार में डूब जाना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She fell head over heels for her classmate."
+  },
+  {
+    "id": 582,
+    "phrase": "Fallout",
+    "meaning": "To quarrel / Stop being friendly after an argument",
+    "hindiMeaning": "झगड़ा",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "There was a fallout between the two friends."
+  },
+  {
+    "id": 583,
+    "phrase": "Familiarity breeds contempt",
+    "meaning": "The better you know someone the less you like him",
+    "hindiMeaning": "किसी के साथ अधिक घनिष्ठता, मनमुटाव या सम्मान की हानि का कारण बनता है",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Sometimes familiarity breeds contempt in relationships."
+  },
+  {
+    "id": 584,
+    "phrase": "Far cry from",
+    "meaning": "To be very different from others",
+    "hindiMeaning": "एकदम अलग",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "Village life is a far cry from city life."
+  },
+  {
+    "id": 585,
+    "phrase": "Feast one's eyes on",
+    "meaning": "Gaze at something with pleasure",
+    "hindiMeaning": "किसी चीज को प्रेम से देखना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "We feasted our eyes on the beautiful scenery."
+  },
+  {
+    "id": 586,
+    "phrase": "Feather in one's cap",
+    "meaning": "A new and additional distinction / an accomplishment to be proud of",
+    "hindiMeaning": "चार चाँद लगाना (गर्व करने योग्य उपलब्धि)",
+    "sscCount": 4,
+    "otherExamCount": 2,
+    "example": "Winning the gold medal was a feather in her cap."
+  },
+  {
+    "id": 587,
+    "phrase": "Feather one's own nest",
+    "meaning": "Make money in an improper way / to profit in a dishonest way / promote their own interest",
+    "hindiMeaning": "बेईमानी करके धनी होना",
+    "sscCount": 7,
+    "otherExamCount": 1,
+    "example": "The corrupt officer feathered his own nest using public money."
+  },
+  {
+    "id": 588,
+    "phrase": "Fed up",
+    "meaning": "Annoyed",
+    "hindiMeaning": "ऊब जाना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "I am fed up with his excuses."
+  },
+  {
+    "id": 589,
+    "phrase": "Feel blue",
+    "meaning": "Gloomy",
+    "hindiMeaning": "उदास होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She felt blue after failing the exam."
+  },
+  {
+    "id": 590,
+    "phrase": "Feel his pulse",
+    "meaning": "Find his views",
+    "hindiMeaning": "किसी के विचार समझना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The manager tried to feel his pulse before making the decision."
+  },
+    {
+    "id": 591,
+    "phrase": "Feel the pinch",
+    "meaning": "Having financial problems all of a sudden",
+    "hindiMeaning": "पैसे की कमी होना",
+    "sscCount": 3,
+    "otherExamCount": 1,
+    "example": "Many families are feeling the pinch because of inflation."
+  },
+  {
+    "id": 592,
+    "phrase": "Fell back",
+    "meaning": "Turned back",
+    "hindiMeaning": "पीछे हटना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The soldiers fell back after the attack."
+  },
+  {
+    "id": 593,
+    "phrase": "Fell foul of",
+    "meaning": "Got into trouble with",
+    "hindiMeaning": "मुश्किल में पड़ना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He fell foul of the law for breaking the rules."
+  },
+  {
+    "id": 594,
+    "phrase": "Fell through",
+    "meaning": "Failed",
+    "hindiMeaning": "असफल हो जाना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Our travel plan fell through at the last moment."
+  },
+  {
+    "id": 595,
+    "phrase": "Few and far between",
+    "meaning": "Rare or seldom-seen / Not frequent",
+    "hindiMeaning": "दुर्लभ",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "Good job opportunities are few and far between nowadays."
+  },
+  {
+    "id": 596,
+    "phrase": "Fifth wheel",
+    "meaning": "An unneeded person",
+    "hindiMeaning": "अनावश्यक व्यक्ति",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "I felt like a fifth wheel among the couples."
+  },
+  {
+    "id": 597,
+    "phrase": "Fight fire with fire",
+    "meaning": "To fight against an opponent by using the same methods or weapons that the opponent uses",
+    "hindiMeaning": "अपने प्रतिद्वंदी की ही रणनीति का इस्तेमाल करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The team decided to fight fire with fire."
+  },
+  {
+    "id": 598,
+    "phrase": "Fight shy of me",
+    "meaning": "Try to overcome challenges without help from anyone else",
+    "hindiMeaning": "मुश्किल से बचना",
+    "sscCount": 4,
+    "otherExamCount": 1,
+    "example": "He fights shy of taking responsibility."
+  },
+  {
+    "id": 599,
+    "phrase": "Fight your own battles",
+    "meaning": "To try to overcome challenges without help from anyone else",
+    "hindiMeaning": "अपनी लड़ाई खुद लड़ना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "You should learn to fight your own battles."
+  },
+  {
+    "id": 600,
+    "phrase": "Figure out",
+    "meaning": "Finally understood",
+    "hindiMeaning": "किसी चीज का हल करना या समझना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She finally figured out the answer."
+  },
+  {
+    "id": 601,
+    "phrase": "Find yourself in troubled waters",
+    "meaning": "In a difficult situation or time",
+    "hindiMeaning": "कठिन परिस्थिति में फँसना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He found himself in troubled waters after losing his job."
+  },
+  {
+    "id": 602,
+    "phrase": "Finding their feet",
+    "meaning": "Beginning to understand the work and feeling confident",
+    "hindiMeaning": "काम को समझना और आत्मविश्वास महसूस करना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "The new employees are slowly finding their feet."
+  },
+  {
+    "id": 603,
+    "phrase": "Finish with something",
+    "meaning": "Be through",
+    "hindiMeaning": "समाप्त करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "I am finally finished with my assignment."
+  },
+  {
+    "id": 604,
+    "phrase": "Fire in one's belly",
+    "meaning": "Strong determination to succeed",
+    "hindiMeaning": "कुछ हासिल करने का दृढ़ संकल्प",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She has the fire in her belly to achieve success."
+  },
+  {
+    "id": 605,
+    "phrase": "Fire the imagination",
+    "meaning": "To make someone feel very interested in something and excited about it",
+    "hindiMeaning": "दिलचस्पी जगाना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The movie fired the imagination of young viewers."
+  },
+  {
+    "id": 606,
+    "phrase": "First and foremost",
+    "meaning": "Highest priority / Most important aspect",
+    "hindiMeaning": "सबसे महत्वपूर्ण",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "Safety should be our first and foremost concern."
+  },
+  {
+    "id": 607,
+    "phrase": "Fit like a glove",
+    "meaning": "To fit snugly",
+    "hindiMeaning": "बहुत अच्छी तरह से फिट होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The dress fits her like a glove."
+  },
+  {
+    "id": 608,
+    "phrase": "Flash in the pan",
+    "meaning": "Someone or something whose success or popularity is short-lived / something unlikely to be repeated or an indication of future achievements or success",
+    "hindiMeaning": "क्षणिक सफलता",
+    "sscCount": 2,
+    "otherExamCount": 2,
+    "example": "His early success turned out to be just a flash in the pan."
+  },
+  {
+    "id": 609,
+    "phrase": "Flea market",
+    "meaning": "A market where antiques and second-hand goods are sold",
+    "hindiMeaning": "कबाड़ी बाजार",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "We bought old books from the flea market."
+  },
+  {
+    "id": 610,
+    "phrase": "Flex one's muscles",
+    "meaning": "Give or make a show of one's strength",
+    "hindiMeaning": "शक्ति प्रदर्शन करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The army flexed its muscles near the border."
+  },
+  {
+    "id": 611,
+    "phrase": "Fly into a rage/passion",
+    "meaning": "To become extremely angry",
+    "hindiMeaning": "आग बबूला होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He flew into a rage after hearing the insult."
+  },
+  {
+    "id": 612,
+    "phrase": "Fly off at a tangent",
+    "meaning": "Starts discussing something irrelevant / Change the subject immediately",
+    "hindiMeaning": "मुद्दे से भटकना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "During the discussion, he flew off at a tangent."
+  },
+  {
+    "id": 613,
+    "phrase": "Fly the nest",
+    "meaning": "Children leaving their parents' home to live on their own",
+    "hindiMeaning": "अपने पैरों पर खड़ा होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Both children have flown the nest now."
+  },
+  {
+    "id": 614,
+    "phrase": "Flying high",
+    "meaning": "Very successful",
+    "hindiMeaning": "ऊँची उड़ान भरना (बहुत सफल या उल्लसित होना)",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "After the promotion, she was flying high."
+  },
+    {
+    "id": 615,
+    "phrase": "Flying off the handle",
+    "meaning": "Suddenly becoming enraged / To lose one's temper",
+    "hindiMeaning": "आग बबूला होना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "He started flying off the handle over a small mistake."
+  },
+  {
+    "id": 616,
+    "phrase": "Follow one's nose",
+    "meaning": "To go straightforward",
+    "hindiMeaning": "सीधे मार्ग में चलना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Just follow your nose and you will reach the station."
+  },
+  {
+    "id": 617,
+    "phrase": "Follow suit",
+    "meaning": "To do as others have done",
+    "hindiMeaning": "अनुकरण करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "When one student stood up, the others followed suit."
+  },
+  {
+    "id": 618,
+    "phrase": "Foot the bill",
+    "meaning": "To pay for something / Pay for",
+    "hindiMeaning": "बिल का भुगतान करना",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "My father had to foot the bill for the repairs."
+  },
+  {
+    "id": 619,
+    "phrase": "For better or worse",
+    "meaning": "Under any circumstances",
+    "hindiMeaning": "हर परिस्थिति में",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "For better or worse, we must accept the decision."
+  },
+  {
+    "id": 620,
+    "phrase": "For good",
+    "meaning": "Permanently / forever",
+    "hindiMeaning": "हमेशा के लिए",
+    "sscCount": 5,
+    "otherExamCount": 4,
+    "example": "He left the city for good."
+  },
+  {
+    "id": 621,
+    "phrase": "For keeps",
+    "meaning": "Forever",
+    "hindiMeaning": "सदैव",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "This friendship is for keeps."
+  },
+  {
+    "id": 622,
+    "phrase": "For old times' sake",
+    "meaning": "Because of sentimental memories or past friendship",
+    "hindiMeaning": "भावुक कारणों से",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Let's meet once again for old times' sake."
+  },
+  {
+    "id": 623,
+    "phrase": "Forty winks",
+    "meaning": "A short nap / sleep during the day",
+    "hindiMeaning": "झपकी",
+    "sscCount": 5,
+    "otherExamCount": 1,
+    "example": "I took forty winks after lunch."
+  },
+  {
+    "id": 624,
+    "phrase": "Fought to the bitter end",
+    "meaning": "Carried on a contest regardless of the consequences",
+    "hindiMeaning": "बिना रुके लड़ते रहना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "The soldiers fought to the bitter end."
+  },
+  {
+    "id": 625,
+    "phrase": "Foul play",
+    "meaning": "Unfair or dishonest behaviour",
+    "hindiMeaning": "नियम विरुद्ध खेलना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The police suspected foul play in the incident."
+  },
+  {
+    "id": 626,
+    "phrase": "Four corners of the world",
+    "meaning": "From all parts of the world",
+    "hindiMeaning": "दुनिया के सभी हिस्सों से",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Tourists came from the four corners of the world."
+  },
+  {
+    "id": 627,
+    "phrase": "From far and wide",
+    "meaning": "From all directions",
+    "hindiMeaning": "सभी दिशाओं से",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "People came from far and wide to attend the fair."
+  },
+  {
+    "id": 628,
+    "phrase": "From rags to riches",
+    "meaning": "To go from very poor to being very wealthy",
+    "hindiMeaning": "रंक से राजा बनना",
+    "sscCount": 2,
+    "otherExamCount": 4,
+    "example": "His life story is truly from rags to riches."
+  },
+  {
+    "id": 629,
+    "phrase": "From scratch",
+    "meaning": "From the beginning",
+    "hindiMeaning": "बिल्कुल शुरुआत से",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She built her business from scratch."
+  },
+  {
+    "id": 630,
+    "phrase": "From stem to stern",
+    "meaning": "All the way from the front of a ship to the back",
+    "hindiMeaning": "पूरी तरह से",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The ship was cleaned from stem to stern."
+  },
+  {
+    "id": 631,
+    "phrase": "From the bottom of my heart",
+    "meaning": "Sincerely",
+    "hindiMeaning": "सच्चे दिल से",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "I thank you from the bottom of my heart."
+  },
+  {
+    "id": 632,
+    "phrase": "Full of beans",
+    "meaning": "Lively and energetic / Full of energy",
+    "hindiMeaning": "जोश से भरा हुआ",
+    "sscCount": 9,
+    "otherExamCount": 1,
+    "example": "The children were full of beans after the picnic."
+  },
+  {
+    "id": 633,
+    "phrase": "Full of hot air",
+    "meaning": "Full of nonsense",
+    "hindiMeaning": "बकवास से भरा हुआ",
+    "sscCount": 3,
+    "otherExamCount": 0,
+    "example": "His promises are full of hot air."
+  },
+  {
+    "id": 634,
+    "phrase": "Full of sound and fury",
+    "meaning": "Merely loud and angry words but insignificant",
+    "hindiMeaning": "कोलाहल",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Their argument was full of sound and fury."
+  },
+  {
+    "id": 635,
+    "phrase": "Full steam ahead",
+    "meaning": "Move outward with determination",
+    "hindiMeaning": "पूरे जोर लगाना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The team moved full steam ahead with the project."
+  },
+  {
+    "id": 636,
+    "phrase": "Gall and wormwood",
+    "meaning": "Hateful / Strong feelings of resentment and bitterness",
+    "hindiMeaning": "घृणास्पद",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "His words were full of gall and wormwood."
+  },
+  {
+    "id": 637,
+    "phrase": "Game is up",
+    "meaning": "Deception is at an end",
+    "hindiMeaning": "भेद खुलना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The thief realized that the game was up."
+  },
+  {
+    "id": 638,
+    "phrase": "Gate crasher",
+    "meaning": "Uninvited guest",
+    "hindiMeaning": "बिन बुलाया मेहमान",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Several gate crashers entered the wedding party."
+  },
+  {
+    "id": 639,
+    "phrase": "Give away",
+    "meaning": "Distributed",
+    "hindiMeaning": "वितरित करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The charity organization gave away free food."
+  },
+  {
+    "id": 640,
+    "phrase": "Gave the game away",
+    "meaning": "Gave out the secret",
+    "hindiMeaning": "भेद खोलना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "His nervous smile gave the game away."
+  },
+  {
+    "id": 641,
+    "phrase": "Gave vent to something",
+    "meaning": "Expressed forcefully",
+    "hindiMeaning": "किसी पर गुस्सा निकालना",
+    "sscCount": 3,
+    "otherExamCount": 0,
+    "example": "She gave vent to her anger after the argument."
+  },
+  {
+    "id": 642,
+    "phrase": "Gear up for",
+    "meaning": "Get ready for",
+    "hindiMeaning": "तैयारी करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Students are gearing up for the exams."
+  },
+  {
+    "id": 643,
+    "phrase": "Get under",
+    "meaning": "In a manipulative and unfair way",
+    "hindiMeaning": "अनैतिक ढंग से",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He tried to get under his rival using unfair methods."
+  },
+  {
+    "id": 644,
+    "phrase": "Get a foot in the door",
+    "meaning": "To have a chance to do something",
+    "hindiMeaning": "अवसर मिलना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "This internship will help you get a foot in the door."
+  },
+  {
+    "id": 645,
+    "phrase": "Get a gold star",
+    "meaning": "To earn a merit point for doing well",
+    "hindiMeaning": "इनाम अर्जित करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She got a gold star for her excellent performance."
+  },
+  {
+    "id": 646,
+    "phrase": "Get a second wind",
+    "meaning": "Have renewed energy after having been tired / Burst of energy",
+    "hindiMeaning": "नया जोश",
+    "sscCount": 3,
+    "otherExamCount": 0,
+    "example": "After resting for a while, I got a second wind."
+  },
+    {
+    "id": 647,
+    "phrase": "Get a taste of your own medicine",
+    "meaning": "To receive the same treatment that you have given to others",
+    "hindiMeaning": "जैसे को तैसा",
+    "sscCount": 3,
+    "otherExamCount": 5,
+    "example": "The bully finally got a taste of his own medicine."
+  },
+  {
+    "id": 648,
+    "phrase": "Get away",
+    "meaning": "To leave",
+    "hindiMeaning": "छूट जाना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "We decided to get away for the weekend."
+  },
+  {
+    "id": 649,
+    "phrase": "Get cracking",
+    "meaning": "To start doing something",
+    "hindiMeaning": "शुरुआत करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "We should get cracking before it gets too late."
+  },
+  {
+    "id": 650,
+    "phrase": "Get down to brass tacks",
+    "meaning": "Start talking about the most important facts of a situation",
+    "hindiMeaning": "मुद्दे की बात करना",
+    "sscCount": 3,
+    "otherExamCount": 2,
+    "example": "Let's get down to brass tacks and discuss the budget."
+  },
+  {
+    "id": 651,
+    "phrase": "Get into a scrape",
+    "meaning": "Involved in a problem",
+    "hindiMeaning": "किसी मुसीबत में पड़ना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He got into a scrape because of careless driving."
+  },
+  {
+    "id": 652,
+    "phrase": "Get into a soup",
+    "meaning": "To make things difficult",
+    "hindiMeaning": "मुसीबत मोल लेना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "You will get into a soup if you ignore the rules."
+  },
+  {
+    "id": 653,
+    "phrase": "Get into hot water",
+    "meaning": "To get into trouble / To be in a situation in which you can be criticised",
+    "hindiMeaning": "मुसीबत में पड़ना",
+    "sscCount": 13,
+    "otherExamCount": 7,
+    "example": "He got into hot water for breaking the office rules."
+  },
+  {
+    "id": 654,
+    "phrase": "Get mixed up",
+    "meaning": "Get confused",
+    "hindiMeaning": "उलझन में पड़ना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "I always get mixed up with these complicated formulas."
+  },
+  {
+    "id": 655,
+    "phrase": "Get off on the wrong foot",
+    "meaning": "To start a relationship or activity badly",
+    "hindiMeaning": "किसी रिश्ते या काम की खराब शुरुआत करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "We got off on the wrong foot during our first meeting."
+  },
+  {
+    "id": 656,
+    "phrase": "Get on like a house on fire",
+    "meaning": "To become friends quickly",
+    "hindiMeaning": "जल्द घुलमिल जाना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "The two classmates got on like a house on fire."
+  },
+  {
+    "id": 657,
+    "phrase": "Get on somebody's nerves",
+    "meaning": "To be an irritant / annoys me",
+    "hindiMeaning": "किसी का दिमाग खराब करना",
+    "sscCount": 6,
+    "otherExamCount": 0,
+    "example": "His constant complaints get on my nerves."
+  },
+  {
+    "id": 658,
+    "phrase": "Get one's dander up",
+    "meaning": "Lose one's temper",
+    "hindiMeaning": "आग बबूला होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "His rude remarks got my dander up."
+  },
+  {
+    "id": 659,
+    "phrase": "Get one's ducks in a row",
+    "meaning": "Have everything properly organized",
+    "hindiMeaning": "व्यवस्थित व्यवस्था",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Before starting the project, get your ducks in a row."
+  },
+  {
+    "id": 660,
+    "phrase": "Get out of hand",
+    "meaning": "To become uncontrollable / get out of control",
+    "hindiMeaning": "हाथ से निकलना (काबू से बाहर होना)",
+    "sscCount": 10,
+    "otherExamCount": 2,
+    "example": "The situation got out of hand after the argument."
+  },
+  {
+    "id": 661,
+    "phrase": "Get someone's goat",
+    "meaning": "To irritate someone",
+    "hindiMeaning": "अत्यधिक चिढ़ाना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "His sarcastic comments really get my goat."
+  },
+  {
+    "id": 662,
+    "phrase": "Get something off one's chest",
+    "meaning": "Express something that has been worrying you, and you want to say",
+    "hindiMeaning": "मन की बात कहना",
+    "sscCount": 3,
+    "otherExamCount": 0,
+    "example": "I need to get this problem off my chest."
+  },
+  {
+    "id": 663,
+    "phrase": "Get the axe",
+    "meaning": "Lose the job",
+    "hindiMeaning": "नौकरी खो देना",
+    "sscCount": 1,
+    "otherExamCount": 2,
+    "example": "Several workers got the axe during the recession."
+  },
+  {
+    "id": 664,
+    "phrase": "Get the hang of",
+    "meaning": "Learn how to use / get the main idea",
+    "hindiMeaning": "समझना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "You will get the hang of coding with practice."
+  },
+  {
+    "id": 665,
+    "phrase": "Get the message",
+    "meaning": "Understand what is implied by a remark or action",
+    "hindiMeaning": "भाव समझना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "I think he finally got the message."
+  },
+  {
+    "id": 666,
+    "phrase": "Get the picture",
+    "meaning": "To understand what's happening",
+    "hindiMeaning": "स्थिति को समझना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Now I get the picture clearly."
+  },
+  {
+    "id": 667,
+    "phrase": "Get the sack",
+    "meaning": "Be dismissed",
+    "hindiMeaning": "बर्खास्त होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He got the sack for coming late repeatedly."
+  },
+  {
+    "id": 668,
+    "phrase": "Get the upper hand",
+    "meaning": "To get an advantage",
+    "hindiMeaning": "फायदा पाना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "Our team got the upper hand in the second half."
+  },
+  {
+    "id": 669,
+    "phrase": "Get up on the wrong side of the bed",
+    "meaning": "Start the day in a bad mood, which continues all day long",
+    "hindiMeaning": "दिन की खराब शुरुआत",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "He must have got up on the wrong side of the bed today."
+  },
+  {
+    "id": 670,
+    "phrase": "Get wind of something",
+    "meaning": "Hear about something / Come to know / To learn something",
+    "hindiMeaning": "हवा लगना (खबर लगना)",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The media got wind of the secret deal."
+  },
+  {
+    "id": 671,
+    "phrase": "Get your act together",
+    "meaning": "Organise your work in a better way",
+    "hindiMeaning": "काम को बेहतर तरीके से करना",
+    "sscCount": 3,
+    "otherExamCount": 1,
+    "example": "You need to get your act together before the exams."
+  },
+  {
+    "id": 672,
+    "phrase": "Get your money's worth",
+    "meaning": "To pay and get something of good value",
+    "hindiMeaning": "पैसा वसूल करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The tour package was excellent and we got our money's worth."
+  },
+  {
+    "id": 673,
+    "phrase": "Get your own way",
+    "meaning": "Persuade other people to let you do what you want",
+    "hindiMeaning": "अपनी बात मनवाना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She always gets her own way in family matters."
+  },
+    {
+    "id": 674,
+    "phrase": "Gets in his teacher's hair",
+    "meaning": "Annoys his teachers",
+    "hindiMeaning": "अपने शिक्षक को परेशान करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He always gets in his teacher's hair by talking in class."
+  },
+  {
+    "id": 675,
+    "phrase": "Getting a new lease of life",
+    "meaning": "A chance to continue living or to become successful or popular again / Become energetic again",
+    "hindiMeaning": "नया जीवन मिलना",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "The old building got a new lease of life after renovation."
+  },
+  {
+    "id": 676,
+    "phrase": "Getting in everyone's hair",
+    "meaning": "Annoying",
+    "hindiMeaning": "झुंझला देना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Stop getting in everyone's hair with your constant questions."
+  },
+  {
+    "id": 677,
+    "phrase": "Gift of the gab",
+    "meaning": "Ability to speak eloquently / Talk well persuasively / Ability to convince",
+    "hindiMeaning": "जुबान पर सरस्वती का वास",
+    "sscCount": 15,
+    "otherExamCount": 3,
+    "example": "He has the gift of the gab and easily convinces people."
+  },
+  {
+    "id": 678,
+    "phrase": "Give a free hand",
+    "meaning": "To exercise complete control over something / full liberty",
+    "hindiMeaning": "खुली छूट देना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "The manager gave me a free hand in the project."
+  },
+  {
+    "id": 679,
+    "phrase": "Give a piece of one's mind",
+    "meaning": "To rebuke someone strongly / speaking sharply / scolding / reprimand",
+    "hindiMeaning": "डाँटना",
+    "sscCount": 6,
+    "otherExamCount": 0,
+    "example": "She gave him a piece of her mind for being careless."
+  },
+  {
+    "id": 680,
+    "phrase": "Give a wide berth to",
+    "meaning": "To stay away from",
+    "hindiMeaning": "दूर रहना",
+    "sscCount": 1,
+    "otherExamCount": 2,
+    "example": "You should give a wide berth to dishonest people."
+  },
+  {
+    "id": 681,
+    "phrase": "Give and take",
+    "meaning": "Adjustment / Obliging each other mutually",
+    "hindiMeaning": "आपसी समझौता",
+    "sscCount": 3,
+    "otherExamCount": 0,
+    "example": "A successful relationship needs give and take."
+  },
+  {
+    "id": 682,
+    "phrase": "Give in",
+    "meaning": "Yield",
+    "hindiMeaning": "हार मानना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "After a long argument, he finally gave in."
+  },
+  {
+    "id": 683,
+    "phrase": "Give it a shot/whirl",
+    "meaning": "To try out something",
+    "hindiMeaning": "कोशिश करना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "I have never played cricket, but I will give it a shot."
+  },
+  {
+    "id": 684,
+    "phrase": "Give me a hand with",
+    "meaning": "Help me with / assist",
+    "hindiMeaning": "मदद करना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "Can you give me a hand with this assignment?"
+  },
+  {
+    "id": 685,
+    "phrase": "Give oneself airs",
+    "meaning": "Pretend to be good",
+    "hindiMeaning": "खुद को अच्छा दिखाने की कोशिश करना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "She gives herself airs after getting promoted."
+  },
+  {
+    "id": 686,
+    "phrase": "Give somebody a ring",
+    "meaning": "Call someone on the telephone",
+    "hindiMeaning": "टेलीफोन करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "I will give you a ring in the evening."
+  },
+  {
+    "id": 687,
+    "phrase": "Give someone the cold shoulder",
+    "meaning": "Deliberately ignore, avoid or be unfriendly towards someone",
+    "hindiMeaning": "जानबूझ कर नजरअंदाज करना",
+    "sscCount": 7,
+    "otherExamCount": 6,
+    "example": "She gave him the cold shoulder after the quarrel."
+  },
+  {
+    "id": 688,
+    "phrase": "Give someone the slip",
+    "meaning": "Evade or escape from someone",
+    "hindiMeaning": "चंगुल से भाग निकलना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "The thief gave the police the slip."
+  },
+  {
+    "id": 689,
+    "phrase": "Give the benefit of the doubt",
+    "meaning": "Accepting something/someone as honest or deserving of trust even though there are doubts / Regard someone as innocent until proven otherwise",
+    "hindiMeaning": "संदेह का लाभ देना",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "The teacher gave him the benefit of the doubt."
+  },
+  {
+    "id": 690,
+    "phrase": "Give up",
+    "meaning": "Stop doing it",
+    "hindiMeaning": "हार मानना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Never give up on your dreams."
+  },
+  {
+    "id": 691,
+    "phrase": "Give up the ghost",
+    "meaning": "To die / To stop working",
+    "hindiMeaning": "मरना / बंद पड़ना",
+    "sscCount": 3,
+    "otherExamCount": 0,
+    "example": "My old laptop finally gave up the ghost."
+  },
+  {
+    "id": 692,
+    "phrase": "Give way",
+    "meaning": "Collapse",
+    "hindiMeaning": "ढह जाना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The old bridge gave way during the storm."
+  },
+  {
+    "id": 693,
+    "phrase": "Giving a false alarm",
+    "meaning": "A situation when people wrongly think that something bad is going to happen",
+    "hindiMeaning": "झूठी चेतावनी",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The fire alarm turned out to be a false alarm."
+  },
+  {
+    "id": 694,
+    "phrase": "Gnash your teeth",
+    "meaning": "Express rage",
+    "hindiMeaning": "दाँत पीसना (गुस्सा होना)",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He gnashed his teeth in anger after hearing the news."
+  },
+  {
+    "id": 695,
+    "phrase": "Go against the grain",
+    "meaning": "Something in conflict with one's value system / Doing things differently from what you usually do",
+    "hindiMeaning": "सामान्य रूखे के विपरीत होना",
+    "sscCount": 3,
+    "otherExamCount": 0,
+    "example": "Lying goes against the grain for her."
+  },
+  {
+    "id": 696,
+    "phrase": "Go at equal speed",
+    "meaning": "Keep up with",
+    "hindiMeaning": "साथ चलना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He could not keep up with the fast runners."
+  },
+  {
+    "id": 697,
+    "phrase": "Go belly up",
+    "meaning": "Go bankrupt",
+    "hindiMeaning": "दिवाला निकलना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "Many small companies went belly up during the recession."
+  },
+    {
+    "id": 698,
+    "phrase": "Go bonkers",
+    "meaning": "Become crazy",
+    "hindiMeaning": "पागल हो जाना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "People went bonkers after hearing the exciting news."
+  },
+  {
+    "id": 699,
+    "phrase": "Go cold turkey",
+    "meaning": "To quit an addictive habit suddenly and completely",
+    "hindiMeaning": "एकदम से किसी बुरी आदत को छोड़ देना",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "He decided to go cold turkey and quit smoking."
+  },
+  {
+    "id": 700,
+    "phrase": "Go down in flames",
+    "meaning": "Fail completely / To fail miserably",
+    "hindiMeaning": "पूरी तरह से विफल होना",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "Their business plan went down in flames."
+  },
+  {
+    "id": 701,
+    "phrase": "Go down like a lead balloon",
+    "meaning": "To be received badly by an audience",
+    "hindiMeaning": "बेकार असर पड़ना",
+    "sscCount": 2,
+    "otherExamCount": 5,
+    "example": "His joke went down like a lead balloon."
+  },
+  {
+    "id": 702,
+    "phrase": "Go Dutch",
+    "meaning": "Divide the costs",
+    "hindiMeaning": "लागत को विभाजित करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Let's go Dutch for dinner tonight."
+  },
+  {
+    "id": 703,
+    "phrase": "Go easy on",
+    "meaning": "Use only a small amount of",
+    "hindiMeaning": "ज्यादा कठोर नहीं करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Go easy on the sugar in my tea."
+  },
+  {
+    "id": 704,
+    "phrase": "Go for a song",
+    "meaning": "To be sold cheaply",
+    "hindiMeaning": "सस्ते में बेच जाना",
+    "sscCount": 3,
+    "otherExamCount": 1,
+    "example": "The old furniture went for a song."
+  },
+  {
+    "id": 705,
+    "phrase": "Go for the jugular",
+    "meaning": "Attack all out / To attack in the most effective way",
+    "hindiMeaning": "तेजी से तरक्की करने लगना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "The lawyer went for the jugular during the debate."
+  },
+  {
+    "id": 706,
+    "phrase": "Go getter",
+    "meaning": "A real achiever",
+    "hindiMeaning": "सिद्धहस्त या होशियार होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She is a real go getter in her career."
+  },
+  {
+    "id": 707,
+    "phrase": "Go haywire",
+    "meaning": "Became out of control",
+    "hindiMeaning": "नियंत्रण से बाहर होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The machine suddenly went haywire."
+  },
+  {
+    "id": 708,
+    "phrase": "Go off",
+    "meaning": "Stop working",
+    "hindiMeaning": "काम बंद करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The lights went off during the storm."
+  },
+  {
+    "id": 709,
+    "phrase": "Go over",
+    "meaning": "Review",
+    "hindiMeaning": "समीक्षा करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Let's go over the notes once again."
+  },
+  {
+    "id": 710,
+    "phrase": "Go the extra mile",
+    "meaning": "Going above and beyond whatever is required for the task at hand / To make an extra effort",
+    "hindiMeaning": "आवश्यकता से अधिक प्रयास करना",
+    "sscCount": 5,
+    "otherExamCount": 5,
+    "example": "Successful students always go the extra mile."
+  },
+  {
+    "id": 711,
+    "phrase": "Go through a rough patch",
+    "meaning": "To experience problems",
+    "hindiMeaning": "मुसीबतों का अनुभव करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The company is going through a rough patch."
+  },
+  {
+    "id": 712,
+    "phrase": "Go through fire and water",
+    "meaning": "Undergo any risk / to experience hardships in order to achieve something",
+    "hindiMeaning": "किसी भी खतरा मोल लेना",
+    "sscCount": 4,
+    "otherExamCount": 0,
+    "example": "He was ready to go through fire and water for his family."
+  },
+  {
+    "id": 713,
+    "phrase": "Go through the roof",
+    "meaning": "Rise very high",
+    "hindiMeaning": "बहुत ऊँचा बढ़ना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Petrol prices have gone through the roof."
+  },
+  {
+    "id": 714,
+    "phrase": "Go to rack and ruin",
+    "meaning": "Get in a bad condition / destroyed",
+    "hindiMeaning": "मिट्टी में मिलाना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "The old mansion has gone to rack and ruin."
+  },
+  {
+    "id": 715,
+    "phrase": "Go to the dogs",
+    "meaning": "To be ruined / Deteriorate shockingly",
+    "hindiMeaning": "बर्बाद हो जाना",
+    "sscCount": 6,
+    "otherExamCount": 0,
+    "example": "The company went to the dogs after poor management."
+  },
+  {
+    "id": 716,
+    "phrase": "Go to the wall",
+    "meaning": "To fail / To be ruined",
+    "hindiMeaning": "असफल होना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "Many small shops went to the wall during the recession."
+  },
+  {
+    "id": 717,
+    "phrase": "Go with the flow",
+    "meaning": "Do what others are doing",
+    "hindiMeaning": "धारा के साथ बहना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Sometimes it's easier to just go with the flow."
+  },
+  {
+    "id": 718,
+    "phrase": "Go/Start with a bang",
+    "meaning": "Very exciting and successful",
+    "hindiMeaning": "धमाकेदार सफलता",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "The festival started with a bang."
+  },
+  {
+    "id": 719,
+    "phrase": "God's acre",
+    "meaning": "A cemetery beside a church",
+    "hindiMeaning": "चर्च के पास का कब्रिस्तान",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The old church had a peaceful God's acre nearby."
+  },
+  {
+    "id": 720,
+    "phrase": "God's are born fool",
+    "meaning": "A born fool",
+    "hindiMeaning": "पैदाइशी मूर्ख",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Only a born fool would ignore such advice."
+  },
+  {
+    "id": 721,
+    "phrase": "Goes about",
+    "meaning": "Concerned with",
+    "hindiMeaning": "चारों ओर घूमना",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "The story goes about the struggles of a poor farmer."
+  },
+  {
+    "id": 722,
+    "phrase": "Going over one's head",
+    "meaning": "Beyond one's capacity to understand",
+    "hindiMeaning": "समझ से बाहर",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The lecture was going over my head."
+  },
+  {
+    "id": 723,
+    "phrase": "Go down to brass tacks",
+    "meaning": "Began to work seriously",
+    "hindiMeaning": "गंभीरता से काम करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "It's time to go down to brass tacks and finish the work."
+  },
+  {
+    "id": 724,
+    "phrase": "Got on well",
+    "meaning": "Had a friendly relationship",
+    "hindiMeaning": "दोस्ताना रिश्ता",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The two colleagues got on well with each other."
+  },
+  {
+    "id": 725,
+    "phrase": "Got the green light",
+    "meaning": "Got permission to go ahead with something",
+    "hindiMeaning": "हरी झंडी (अनुमति मिलना)",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "We finally got the green light for the new project."
+  },
+  {
+    "id": 726,
+    "phrase": "Grasp at straws",
+    "meaning": "Trying to find some way to save yourself when something you choose is likely to work / Desperate attempt to succeed",
+    "hindiMeaning": "सफलता के लिए हाथ पैर मारना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Without proper preparation, he was just grasping at straws."
+  },
+    {
+    "id": 727,
+    "phrase": "Grease the palm",
+    "meaning": "To bribe someone discreetly",
+    "hindiMeaning": "मुट्ठी गरम करना (रिश्वत देना)",
+    "sscCount": 9,
+    "otherExamCount": 2,
+    "example": "He tried to grease the palm of the officer."
+  },
+  {
+    "id": 728,
+    "phrase": "Great minds think alike",
+    "meaning": "Said when two people have the same opinion or make the same choice",
+    "hindiMeaning": "जब दो लोगों की राय एक जैसी हो",
+    "sscCount": 1,
+    "otherExamCount": 2,
+    "example": "We both chose the same topic—great minds think alike."
+  },
+  {
+    "id": 729,
+    "phrase": "Green thumb",
+    "meaning": "To have a natural interest in gardening",
+    "hindiMeaning": "बागवानी में रुचि",
+    "sscCount": 2,
+    "otherExamCount": 4,
+    "example": "My grandmother has a green thumb."
+  },
+  {
+    "id": 730,
+    "phrase": "Green-eyed",
+    "meaning": "To be jealous",
+    "hindiMeaning": "ईर्ष्यालु",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "He became green-eyed after seeing his friend's success."
+  },
+  {
+    "id": 731,
+    "phrase": "Grin/Beam from ear to ear",
+    "meaning": "To smile a lot because of happiness",
+    "hindiMeaning": "ठहाका लगाना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She was grinning from ear to ear after hearing the news."
+  },
+  {
+    "id": 732,
+    "phrase": "Grist to the mill",
+    "meaning": "Profitable or useful advantage / Useful to somebody",
+    "hindiMeaning": "रेती चीज जिसका लाभ उठाया जा सकता है",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "The new information was grist to the mill for the reporters."
+  },
+  {
+    "id": 733,
+    "phrase": "Hadn't a leg to stand on",
+    "meaning": "Did not have much hope of getting",
+    "hindiMeaning": "ज्यादा उम्मीद नहीं होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Without evidence, his argument hadn't a leg to stand on."
+  },
+  {
+    "id": 734,
+    "phrase": "Halcyon days",
+    "meaning": "Peaceful days / Happy days",
+    "hindiMeaning": "खुशहाल या सुखद समय",
+    "sscCount": 1,
+    "otherExamCount": 2,
+    "example": "He often talks about the halcyon days of his childhood."
+  },
+  {
+    "id": 735,
+    "phrase": "Hale and hearty",
+    "meaning": "Strong and healthy",
+    "hindiMeaning": "तंदुरुस्त",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "Even at eighty, my grandfather is hale and hearty."
+  },
+  {
+    "id": 736,
+    "phrase": "Half a loaf is better than no bread",
+    "meaning": "It's better to get less than what you want than to get nothing",
+    "hindiMeaning": "कुछ भी नहीं होने से कुछ होना बेहतर है",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "I accepted the small job because half a loaf is better than no bread."
+  },
+  {
+    "id": 737,
+    "phrase": "Hand and glove",
+    "meaning": "In close association / in partnership for some dishonest activity / Very intimate terms",
+    "hindiMeaning": "घनिष्ठ संबंध",
+    "sscCount": 8,
+    "otherExamCount": 3,
+    "example": "The two partners worked hand and glove."
+  },
+  {
+    "id": 738,
+    "phrase": "Hand in hand",
+    "meaning": "Together",
+    "hindiMeaning": "साथ साथ",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Success and hard work go hand in hand."
+  },
+  {
+    "id": 739,
+    "phrase": "Hand over fist",
+    "meaning": "Quickly and continuously",
+    "hindiMeaning": "बहुत तेजी से",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "The company was making money hand over fist."
+  },
+  {
+    "id": 740,
+    "phrase": "Handle with kid gloves",
+    "meaning": "To treat someone with extreme care",
+    "hindiMeaning": "बहुत सावधानी से",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "You must handle the patient with kid gloves."
+  },
+  {
+    "id": 741,
+    "phrase": "Hands down",
+    "meaning": "Easily and without doubt",
+    "hindiMeaning": "निसंदेह",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She won the competition hands down."
+  },
+  {
+    "id": 742,
+    "phrase": "Hang in the balance",
+    "meaning": "Remains undecided",
+    "hindiMeaning": "अनिर्णीत की स्थिति में",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The final decision still hangs in the balance."
+  },
+  {
+    "id": 743,
+    "phrase": "Hang in there",
+    "meaning": "Don't give up / To persist in a difficult situation",
+    "hindiMeaning": "हार नहीं मानना",
+    "sscCount": 4,
+    "otherExamCount": 0,
+    "example": "Hang in there, things will improve soon."
+  },
+  {
+    "id": 744,
+    "phrase": "Hang on every word",
+    "meaning": "Listen very carefully",
+    "hindiMeaning": "ध्यान से सुनना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The students hung on every word of the teacher."
+  },
+  {
+    "id": 745,
+    "phrase": "Hang one's head",
+    "meaning": "To be ashamed",
+    "hindiMeaning": "सिर झुकाना (शर्मिंदा करना)",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "He hung his head in shame after the mistake."
+  },
+  {
+    "id": 746,
+    "phrase": "Hang up one's boots",
+    "meaning": "To take retirement from a sport",
+    "hindiMeaning": "संन्यास लेना",
+    "sscCount": 3,
+    "otherExamCount": 0,
+    "example": "The famous player decided to hang up his boots."
+  },
+  {
+    "id": 747,
+    "phrase": "Hanging by a thread/a hair",
+    "meaning": "Be in a dangerous situation",
+    "hindiMeaning": "खतरनाक स्थिति में होना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "His life was hanging by a thread after the accident."
+  },
+  {
+    "id": 748,
+    "phrase": "Hard and fast",
+    "meaning": "That cannot be altered / strict",
+    "hindiMeaning": "अपरिवर्तनीय",
+    "sscCount": 4,
+    "otherExamCount": 0,
+    "example": "There are no hard and fast rules for success."
+  },
+  {
+    "id": 749,
+    "phrase": "Hard cash",
+    "meaning": "Notes and coins as opposed to cheques and ATM cards",
+    "hindiMeaning": "नकद रुपया",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The shop accepts only hard cash."
+  },
+  {
+    "id": 750,
+    "phrase": "Hard of hearing",
+    "meaning": "To be deaf / partially deaf",
+    "hindiMeaning": "बहरा होना",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "My grandfather is hard of hearing."
+  },
+  {
+    "id": 751,
+    "phrase": "Hard to swallow",
+    "meaning": "Difficult to believe",
+    "hindiMeaning": "विश्वास करना कठिन होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "His excuse was hard to swallow."
+  },
+  {
+    "id": 752,
+    "phrase": "Has a face like thunder",
+    "meaning": "Very angry",
+    "hindiMeaning": "अत्यंत क्रोधित दिखाई देना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She had a face like thunder after hearing the bad news."
+  },
+  {
+    "id": 753,
+    "phrase": "Haste makes waste",
+    "meaning": "Doing things in a hurry does not give fruitful results",
+    "hindiMeaning": "जल्दबाजी में काम बिगड़ जाता है",
+    "sscCount": 2,
+    "otherExamCount": 3,
+    "example": "Take your time because haste makes waste."
+  },
+  {
+    "id": 754,
+    "phrase": "Haul over the coals",
+    "meaning": "To scold someone severely for an error",
+    "hindiMeaning": "खूब डाँटना",
+    "sscCount": 1,
+    "otherExamCount": 1,
+    "example": "The manager hauled him over the coals for the mistake."
+  },
+    {
+    "id": 755,
+    "phrase": "Have a bash",
+    "meaning": "To make an attempt",
+    "hindiMeaning": "जोरदार प्रयास करना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She hit upon a brilliant idea for the project."
+  },
+  {
+    "id": 756,
+    "phrase": "Have a bee in her bonnet",
+    "meaning": "To think about a lot / Is an obsessed person",
+    "hindiMeaning": "भूत सवार होना (अत्यधिक जुनूनी होना)",
+    "sscCount": 2,
+    "otherExamCount": 3,
+    "example": "She has a bee in her bonnet about cleanliness."
+  },
+  {
+    "id": 757,
+    "phrase": "Have a bone to pick with somebody",
+    "meaning": "Disagree or be annoyed with someone",
+    "hindiMeaning": "मुद्दा, जिस पर चर्चा की आवश्यकता हो",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "I have a bone to pick with you about yesterday's meeting."
+  },
+  {
+    "id": 758,
+    "phrase": "Have a chip on one's shoulder",
+    "meaning": "To be upset for something that happened in the past / a grudge / a feeling of relentless anger / To be easily angered",
+    "hindiMeaning": "पुरानी घटना पर अभी तक गुस्सा रहना",
+    "sscCount": 4,
+    "otherExamCount": 3,
+    "example": "He has a chip on his shoulder since he lost the competition."
+  },
+  {
+    "id": 759,
+    "phrase": "Have a finger in every pie",
+    "meaning": "To be involved in a large and varied number of activities or enterprises",
+    "hindiMeaning": "एक से अधिक काम में फंसा होना",
+    "sscCount": 3,
+    "otherExamCount": 1,
+    "example": "The businessman has a finger in every pie."
+  },
+  {
+    "id": 760,
+    "phrase": "Have a foot in the grave",
+    "meaning": "Be close to death",
+    "hindiMeaning": "कब्र में एक पैर होना (मृत्यु के करीब होना)",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "After the illness, he looked like he had a foot in the grave."
+  },
+  {
+    "id": 761,
+    "phrase": "Have a good run",
+    "meaning": "To experience joy or success in some endeavour, but only for a limited period of time",
+    "hindiMeaning": "कुछ समय के लिए सफलता या अच्छा भाग्य का अनुभव",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The team had a good run in the tournament."
+  },
+  {
+    "id": 762,
+    "phrase": "Have a long face",
+    "meaning": "Look unhappy or disappointed",
+    "hindiMeaning": "उदास होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Why do you have such a long face today?"
+  },
+  {
+    "id": 763,
+    "phrase": "Have a narrow escape",
+    "meaning": "Just manage to avoid danger or trouble",
+    "hindiMeaning": "किसी खतरनाक स्थिति से बाल-बाल बचना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The passengers had a narrow escape in the accident."
+  },
+  {
+    "id": 764,
+    "phrase": "Have a whale of a time",
+    "meaning": "Have an exceptionally fun or exciting experience",
+    "hindiMeaning": "मज़ेदार या रोमांचक अनुभव लेना",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "We had a whale of a time at the picnic."
+  },
+  {
+    "id": 765,
+    "phrase": "Have an axe to grind",
+    "meaning": "A private interest to serve / To have an ulterior motive",
+    "hindiMeaning": "अपना उल्लू सीधा करना (निजी स्वार्थ)",
+    "sscCount": 9,
+    "otherExamCount": 0,
+    "example": "He supports the proposal because he has an axe to grind."
+  },
+  {
+    "id": 766,
+    "phrase": "Have an ox on the tongue",
+    "meaning": "Bribed to remain silent",
+    "hindiMeaning": "चुप रहने के लिए रिश्वत लेना",
+    "sscCount": 10,
+    "otherExamCount": 0,
+    "example": "The witness seemed to have an ox on the tongue."
+  },
+  {
+    "id": 767,
+    "phrase": "Have ants in one's pants",
+    "meaning": "Very restless about something",
+    "hindiMeaning": "किसी चीज़ को लेकर बहुत बेचैन होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The children had ants in their pants before the trip."
+  },
+  {
+    "id": 768,
+    "phrase": "Have bigger/other fish to fry",
+    "meaning": "Some more important work to attend to",
+    "hindiMeaning": "अन्य महत्वपूर्ण काम होना",
+    "sscCount": 6,
+    "otherExamCount": 2,
+    "example": "I can't join you now; I have bigger fish to fry."
+  },
+  {
+    "id": 769,
+    "phrase": "Have green fingers",
+    "meaning": "To be good at gardening",
+    "hindiMeaning": "बागवानी में निपुणता",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "My aunt has green fingers and grows beautiful flowers."
+  },
+  {
+    "id": 770,
+    "phrase": "Have one's hands full",
+    "meaning": "To be very busy",
+    "hindiMeaning": "बहुत व्यस्त होना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "I have my hands full preparing for exams."
+  },
+  {
+    "id": 771,
+    "phrase": "Have one's heart in one's mouth",
+    "meaning": "To be extremely frightened and nervous",
+    "hindiMeaning": "कलेजा मुँह में आना (बहुत डरना या घबराना)",
+    "sscCount": 2,
+    "otherExamCount": 1,
+    "example": "I had my heart in my mouth during the final over."
+  },
+  {
+    "id": 772,
+    "phrase": "Have the ball at your feet",
+    "meaning": "To be in the best position to do something",
+    "hindiMeaning": "उत्तम स्थिति में होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "With this opportunity, you have the ball at your feet."
+  },
+  {
+    "id": 773,
+    "phrase": "Have the last laugh",
+    "meaning": "To be victorious at the end of an argument",
+    "hindiMeaning": "अंततः विजयी होना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "Despite criticism, she had the last laugh after succeeding."
+  },
+  {
+    "id": 774,
+    "phrase": "Have them rolling in the aisles",
+    "meaning": "Make an audience laugh uncontrollably",
+    "hindiMeaning": "लोगों को हँसने पर मजबूर कर देना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "The comedian had the audience rolling in the aisles."
+  },
+  {
+    "id": 775,
+    "phrase": "Have your back to/against the wall",
+    "meaning": "To be in a desperate situation with very few options / Be in a difficult situation from where escape is difficult",
+    "hindiMeaning": "कठिन परिस्थिति में होना",
+    "sscCount": 3,
+    "otherExamCount": 2,
+    "example": "The company had its back against the wall during the crisis."
+  },
+  {
+    "id": 776,
+    "phrase": "Have your heart set on something",
+    "meaning": "To want something very much",
+    "hindiMeaning": "दिल से चाहना",
+    "sscCount": 0,
+    "otherExamCount": 0,
+    "example": "She has her heart set on becoming a doctor."
+  },
+  {
+    "id": 777,
+    "phrase": "Having a soft spot for",
+    "meaning": "To like someone a lot / Being fond of",
+    "hindiMeaning": "प्यार होना",
+    "sscCount": 2,
+    "otherExamCount": 0,
+    "example": "He has a soft spot for stray animals."
+  }                                       
 ]

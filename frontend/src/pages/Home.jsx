@@ -126,7 +126,7 @@ const subjectContent = {
   }
 };
 
-export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onVocabTest, onGeometry, onGeography, onIndiaMap, onMapDrawing, onConstitution, onSchedules, onParts }) {
+export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onError, onSentenceImprovement, onVocabTest, onGeometry, onGeography, onIndiaMap, onMapDrawing, onConstitution, onSchedules, onParts }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const [showPYQ, setShowPYQ] = useState(false);
@@ -179,10 +179,10 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
         onNarration();
       } else if (module.title.includes('Voice')) {
         onVoiceChange();
-      } else if (module.title.includes('Transformation')) {
-        alert("Sentence Transformation coming soon!");
-      } else if (module.title.includes('Tenses')) {
-        alert("Tenses coming soon!");
+      } else if (module.title.includes('Common Error')) {
+        onError({ start: 0, limit: 250 });
+      } else if (module.title.includes('Improvement')) {
+        onSentenceImprovement({ start: 0, limit: 250 });
       }
     } else if (selectedSubject === 'english' && selectedTopic === 'Vocabulary') {
       // Show vocabulary boxes
@@ -431,15 +431,15 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
                         <span style={{ ...activeTag, backgroundColor: "#ff9800" }}>Available</span>
                       </div>
                       
-                      <div style={{ ...card, borderColor: "#4caf50" }} onClick={() => handleModuleClick({ title: "🔄 Sentence Transformation" })}>
-                        <h3>🔄 Sentence Transformation</h3>
-                        <p>Master various sentence transformation patterns</p>
+                      <div style={{ ...card, borderColor: "#4caf50" }} onClick={() => handleModuleClick({ title: "❌ Common Error" })}>
+                        <h3>❌ Common Error</h3>
+                        <p>Identify and correct common grammatical errors</p>
                         <span style={{ ...activeTag, backgroundColor: "#4caf50" }}>Available</span>
                       </div>
                       
-                      <div style={{ ...card, borderColor: "#2196f3" }} onClick={() => handleModuleClick({ title: "⏰ Tenses" })}>
-                        <h3>⏰ Tenses</h3>
-                        <p>Practice all English tenses with exercises</p>
+                      <div style={{ ...card, borderColor: "#2196f3" }} onClick={() => handleModuleClick({ title: "✨ Improvement of Sentences" })}>
+                        <h3>✨ Improvement of Sentences</h3>
+                        <p>Learn techniques to improve sentence quality and clarity</p>
                         <span style={{ ...activeTag, backgroundColor: "#2196f3" }}>Available</span>
                       </div>
                     </>

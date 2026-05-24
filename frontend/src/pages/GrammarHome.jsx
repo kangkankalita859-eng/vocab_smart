@@ -13,9 +13,9 @@ export default function GrammarHome({ onSelectTopic, onGoHome }) {
       description: "Learn and practice direct and indirect speech",
     },
     {
-      id: "transformation-of-sentence",
-      title: "Transformation of Sentence",
-      description: "Practice sentence transformation exercises",
+      id: "common-error",
+      title: "Common Error",
+      description: "Identify and correct common grammatical errors",
     },
     {
       id: "active-passive-voice",
@@ -23,9 +23,9 @@ export default function GrammarHome({ onSelectTopic, onGoHome }) {
       description: "Understand and practice active and passive voice",
     },
     {
-      id: "tenses",
-      title: "Tenses",
-      description: "Practice all English tenses with examples",
+      id: "improvement-of-sentences",
+      title: "Improvement of Sentences",
+      description: "Learn techniques to improve sentence quality and clarity",
     },
     {
       id: "articles",
