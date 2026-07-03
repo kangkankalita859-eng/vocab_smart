@@ -201,8 +201,8 @@
     "hindiMeaning": "बरी (दोषमुक्त) कर देना",
     "meaning": "To decide and state officially in court that somebody is not guilty of a crime.",
     "example": "The court acquitted the accused due to lack of evidence.",
-    "sscCount": 4,
-    "otherExamCount": 1
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 27,
@@ -210,8 +210,8 @@
     "hindiMeaning": "कलाबाज़ी करने वाला",
     "meaning": "An entertainer who performs difficult physical feats.",
     "example": "The acrobat amazed the audience with his performance.",
-    "sscCount": 4,
-    "otherExamCount": 1
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 28,
@@ -220,7 +220,7 @@
     "meaning": "An abbreviation formed from the initial letters of other words and pronounced as a word.",
     "example": "NASA is an acronym for National Aeronautics and Space Administration.",
     "sscCount": 4,
-    "otherExamCount": 1
+    "otherExamCount": 0
   },
   {
     "id": 29,
@@ -228,8 +228,8 @@
     "hindiMeaning": "ऊँचाई का डर",
     "meaning": "Fear of great heights.",
     "example": "He avoided tall buildings due to acrophobia.",
-    "sscCount": 4,
-    "otherExamCount": 1
+    "sscCount": 3,
+    "otherExamCount": 3
   },
   {
     "id": 30,
@@ -267,8 +267,8 @@
     "hindiMeaning": "नशेड़ी",
     "meaning": "A person who is physically dependent on a substance or harmful drugs.",
     "example": "He became an addict after years of substance abuse.",
-    "sscCount": 4,
-    "otherExamCount": 1
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 35,
@@ -284,7 +284,7 @@
     "meaning": "The period between the beginning of puberty and adulthood.",
     "example": "Adolescence is a crucial stage of development.",
     "sscCount": 4,
-    "otherExamCount": 1
+    "otherExamCount": 0
   },
   {
     "id": 37,
@@ -327,8 +327,8 @@
     "hindiMeaning": "हवाई",
     "meaning": "Growing, existing, or living in air.",
     "example": "The photographer captured aerial views of the city.",
-    "sscCount": 4,
-    "otherExamCount": 1
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 43,
@@ -337,7 +337,7 @@
     "meaning": "Concerned with beauty or the appreciation of beauty.",
     "example": "The building has great aesthetic value.",
     "sscCount": 4,
-    "otherExamCount": 1
+    "otherExamCount": 2
   },
   {
     "id": 44,
@@ -346,7 +346,7 @@
     "meaning": "A list of items to be discussed at a meeting.",
     "example": "Education was the main item on the agenda.",
     "sscCount": 4,
-    "otherExamCount": 1
+    "otherExamCount": 2
   },
   {
     "id": 45,
@@ -354,7 +354,7 @@
     "hindiMeaning": "महत्व या शक्ति बढ़ाना",
     "meaning": "To increase the importance, position, or wealth.",
     "example": "He tried to aggrandize himself through false claims.",
-    "sscCount": 4,
+    "sscCount": 1,
     "otherExamCount": 1
   },
   {
@@ -370,8 +370,8 @@
     "hindiMeaning": "ईश्वर के अस्तित्व पर संदेह करने वाला",
     "meaning": "One who is not sure about God's existence.",
     "example": "He described himself as an agnostic.",
-    "sscCount": 4,
-    "otherExamCount": 1
+    "sscCount": 2,
+    "otherExamCount": 8
   },
   {
     "id": 48,
@@ -379,8 +379,8 @@
     "hindiMeaning": "अत्यधिक पीड़ा",
     "meaning": "Extreme mental or physical suffering.",
     "example": "She was in agony after the accident.",
-    "sscCount": 4,
-    "otherExamCount": 1
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 49,
@@ -395,8 +395,8 @@
     "hindiMeaning": "मध्यकालीन रसायन विद्या",
     "meaning": "A medieval study of chemistry.",
     "example": "Alchemy aimed to turn base metals into gold.",
-    "sscCount": 4,
-    "otherExamCount": 1
+    "sscCount": 2,
+    "otherExamCount": 2
   },
   {
     "id": 51,
@@ -411,7 +411,7 @@
     "hindiMeaning": "दर्द का डर",
     "meaning": "Fear of pain.",
     "example": "Her algophobia prevented medical treatment.",
-    "sscCount": 4,
+    "sscCount": 1,
     "otherExamCount": 1
   },
   {
@@ -419,28 +419,36 @@
     "word": "Alien",
     "hindiMeaning": "अजनबी, विदेशी, अन्य ग्रह का प्राणी (N.)",
     "meaning": "A person belonging to a foreign country // different from what you are used to // A fictional being from another world",
-    "example": "He felt like an alien in a new culture."
+    "example": "He felt like an alien in a new culture.",
+    "sscCount": 4,
+    "otherExamCount": 0
   },
   {
     "id": 54,
     "word": "Alimony",
     "hindiMeaning": "छूटे हुए साथी के लिये गुजारा भत्ता (N.)",
     "meaning": "The money paid to former wife, husband or partner when the marriage is ended",
-    "example": "He pays alimony every month."
+    "example": "He pays alimony every month.",
+    "sscCount": 6,
+    "otherExamCount": 2
   },
   {
     "id": 55,
     "word": "Allegory",
     "hindiMeaning": "नीति कथा (N.)",
     "meaning": "A story, play, picture, etc. in which each character/event is a symbol representing an idea/a quality such as truth, evil, death, etc.",
-    "example": "The novel is an allegory of human life."
+    "example": "The novel is an allegory of human life.",
+    "sscCount": 2,
+    "otherExamCount": 1
   },
   {
     "id": 56,
     "word": "Alliteration",
     "hindiMeaning": "अनुप्रास अलंकार (N.)",
     "meaning": "Words that begin with the same letter, syllable or sound // Repetition of an initial sound in two or more words of a line",
-    "example": "She sells seashells is an example of alliteration."
+    "example": "She sells seashells is an example of alliteration.",
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 57,
@@ -454,14 +462,18 @@
     "word": "Alma Mater",
     "hindiMeaning": "जहाँ शिक्षा पाई वह संस्था (N.)",
     "meaning": "The school or college in which one has been educated",
-    "example": "He visited his alma mater after many years."
+    "example": "He visited his alma mater after many years.",
+    "sscCount": 1,
+    "otherExamCount": 1
   },
   {
     "id": 59,
     "word": "Almanac",
     "hindiMeaning": "पंचांग (N.)",
     "meaning": "A publication containing astronomical or meteorological annual calendar that contains important dates and time",
-    "example": "The farmer checked the almanac before sowing."
+    "example": "The farmer checked the almanac before sowing.",
+    "sscCount": 2,
+    "otherExamCount": 5
   },
   {
     "id": 60,
@@ -475,7 +487,9 @@
     "word": "Altar",
     "hindiMeaning": "वह स्थान जहाँ भगवान पर चढ़ाने वाली सामग्री रखी जाती है (N.)",
     "meaning": "A table or flat surface where offerings are made to a deity",
-    "example": "Flowers were placed on the altar."
+    "example": "Flowers were placed on the altar.",
+    "sscCount": 1,
+    "otherExamCount": 1
   },
   {
     "id": 62,
@@ -489,14 +503,18 @@
     "word": "Altitude",
     "hindiMeaning": "ऊँचाई (N.)",
     "meaning": "The height above sea level",
-    "example": "The city is located at a high altitude."
+    "example": "The city is located at a high altitude.",
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 64,
     "word": "Altruist",
     "hindiMeaning": "परोपकारी (N.)",
     "meaning": "Someone who makes charitable donations intended to the welfare of other people",
-    "example": "He is known as an altruist in society."
+    "example": "He is known as an altruist in society.",
+    "sscCount": 10,
+    "otherExamCount": 3
   },
   {
     "id": 65,
@@ -510,7 +528,9 @@
     "word": "Amateur",
     "hindiMeaning": "शौक़ीन व्यक्ति/अनुभवहीन (N.)",
     "meaning": "One who plays for pleasure rather than as a profession // A person who is neither well experienced nor professional // A non-professional who is inept at a particular activity",
-    "example": "He plays cricket as an amateur."
+    "example": "He plays cricket as an amateur.",
+    "sscCount": 11,
+    "otherExamCount": 3
   },
   {
     "id": 67,
@@ -524,14 +544,18 @@
     "word": "Ambassador",
     "hindiMeaning": "राजदूत (N.)",
     "meaning": "A diplomatic representative in another country",
-    "example": "The ambassador attended the official ceremony."
+    "example": "The ambassador attended the official ceremony.",
+    "sscCount": 1,
+    "otherExamCount": 1
   },
   {
     "id": 69,
     "word": "Ambidextrous",
     "hindiMeaning": "अम्बिडेक्स्ट्रस (दोनों हाथों से समान रूप से काम करने वाला) (N.)",
     "meaning": "Able to use the left hand and right hand equally well",
-    "example": "He is ambidextrous and writes with both hands."
+    "example": "He is ambidextrous and writes with both hands.",
+    "sscCount": 12,
+    "otherExamCount": 2
   },
   {
     "id": 70,
@@ -545,7 +569,9 @@
     "word": "Ambiguous",
     "hindiMeaning": "संदिग्ध/अस्पष्ट (Adj.)",
     "meaning": "Capable of being understood in either of two or more possible senses, and therefore not definite",
-    "example": "His answer was ambiguous."
+    "example": "His answer was ambiguous.",
+    "sscCount": 6,
+    "otherExamCount": 1
   },
   {
     "id": 72,
@@ -559,21 +585,27 @@
     "word": "Ambivert",
     "hindiMeaning": "अन्तर्मुखी और बहिर्मुखी दोनों प्रवृत्ति वाला (N.)",
     "meaning": "One who has the qualities like shyness and openness at the same time",
-    "example": "He is an ambivert by nature."
+    "example": "He is an ambivert by nature.",
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 74,
     "word": "Amble",
     "hindiMeaning": "धीमी गति से चलना (V.)",
     "meaning": "Walk or move at a slow, relaxed pace // To walk aimlessly",
-    "example": "They ambled through the park in the evening."
+    "example": "They ambled through the park in the evening.",
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 75,
     "word": "Ameliorate",
     "hindiMeaning": "बेहतर बनाने के लिए सुधार करना (V.)",
     "meaning": "Make (something bad or unsatisfactory) better",
-    "example": "Steps were taken to ameliorate the situation."
+    "example": "Steps were taken to ameliorate the situation.",
+    "sscCount": 1,
+    "otherExamCount": 1
   },
   {
     "id": 76,
@@ -601,28 +633,36 @@
     "word": "Amnesia",
     "hindiMeaning": "भूलने की बीमारी (N.)",
     "meaning": "A partial or total loss of memory",
-    "example": "The accident caused temporary amnesia."
+    "example": "The accident caused temporary amnesia.",
+    "sscCount": 6,
+    "otherExamCount": 4
   },
   {
     "id": 80,
     "word": "Amnesty",
     "hindiMeaning": "राज-क्षमा (N.)",
     "meaning": "An official pardon // the formal act of liberating someone",
-    "example": "The government declared amnesty for prisoners."
+    "example": "The government declared amnesty for prisoners.",
+    "sscCount": 4,
+    "otherExamCount": 1
   },
   {
     "id": 81,
     "word": "Amoral",
     "hindiMeaning": "नीतिहीन/अनैतिक (Adj.)",
     "meaning": "Not following any moral rules and not caring about right/wrong",
-    "example": "His actions were considered amoral."
+    "example": "His actions were considered amoral.",
+    "sscCount": 2,
+    "otherExamCount": 1
   },
   {
     "id": 82,
     "word": "Amphibians",
     "hindiMeaning": "उभयचर जन्तु (वह जीव जो जल और स्थल दोनों में रह सकता है) (N.)",
     "meaning": "Animal that can live both on land and in water",
-    "example": "Frogs are amphibians."
+    "example": "Frogs are amphibians.",
+    "sscCount": 8,
+    "otherExamCount": 4
   },
   {
     "id": 83,
@@ -643,7 +683,9 @@
     "word": "Analogy",
     "hindiMeaning": "समानता (N.)",
     "meaning": "A similarity between like features of two things, on which a comparison may be based",
-    "example": "The teacher explained the concept using an analogy."
+    "example": "The teacher explained the concept using an analogy.",
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 86,
@@ -657,14 +699,18 @@
     "word": "Anarchist",
     "hindiMeaning": "अराजकतावादी (N.)",
     "meaning": "A person who believes that laws and governments are not necessary // A person who believes in or tries to bring about a state of lawlessness",
-    "example": "He was labeled as an anarchist."
+    "example": "He was labeled as an anarchist.",
+    "sscCount": 5,
+    "otherExamCount": 6
   },
   {
     "id": 88,
     "word": "Anarchy",
     "hindiMeaning": "अव्यवस्था/अराजकता (N.)",
     "meaning": "A situation in a country, an organization, etc. in which there is no government, order/control",
-    "example": "The country fell into anarchy."
+    "example": "The country fell into anarchy.",
+    "sscCount": 8,
+    "otherExamCount": 2
   },
   {
     "id": 89,
@@ -678,28 +724,36 @@
     "word": "Anchor",
     "hindiMeaning": "रेडियो/टेलीविजन कार्यक्रम प्रस्तुत करने वाला (N.)",
     "meaning": "A person who presents a radio/television programme",
-    "example": "She is a famous news anchor."
+    "example": "She is a famous news anchor.",
+    "sscCount": 4,
+    "otherExamCount": 0
   },
   {
     "id": 91,
     "word": "Ancient",
     "hindiMeaning": "प्राचीन (Adj.)",
     "meaning": "Belonging to long past",
-    "example": "They visited an ancient temple."
+    "example": "They visited an ancient temple.",
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 92,
     "word": "Anecdote",
     "hindiMeaning": "लघुकथा (N.)",
     "meaning": "A short, interesting or amusing story about a real person or an event",
-    "example": "He shared an anecdote from his childhood."
+    "example": "He shared an anecdote from his childhood.",
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 93,
     "word": "Anesthetist",
     "hindiMeaning": "बेहोशी लाने वाला (N.)",
     "meaning": "A medical specialist who administers drugs for relieving pain during surgery",
-    "example": "The anesthetist prepared the patient for surgery."
+    "example": "The anesthetist prepared the patient for surgery.",
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 94,
@@ -713,21 +767,27 @@
     "word": "Animosity",
     "hindiMeaning": "घृणा (N.)",
     "meaning": "A strong dislike / hostility",
-    "example": "There was animosity between the two groups."
+    "example": "There was animosity between the two groups.",
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 96,
     "word": "Annihilate",
     "hindiMeaning": "विनाश करना (V.)",
     "meaning": "To destroy completely",
-    "example": "The fire annihilated the village."
+    "example": "The fire annihilated the village.",
+    "sscCount": 1,
+    "otherExamCount": 1
   },
   {
     "id": 97,
     "word": "Anniversary",
     "hindiMeaning": "सालगिरह (N.)",
     "meaning": "The date on which an event happened in some previous year",
-    "example": "They celebrated their wedding anniversary."
+    "example": "They celebrated their wedding anniversary.",
+    "sscCount": 4,
+    "otherExamCount": 0
   },
   {
     "id": 98,
@@ -748,35 +808,45 @@
     "word": "Anonymous",
     "hindiMeaning": "बेनाम/गुमनाम (Adj.)",
     "meaning": "Whose names are not known // An unknown author",
-    "example": "The letter was sent by an anonymous person."
+    "example": "The letter was sent by an anonymous person.",
+    "sscCount": 6,
+    "otherExamCount": 1
   },
   {
     "id": 101,
     "word": "Anorexia",
     "hindiMeaning": "भोजन त्याग की तीव्र इच्छा (N.)",
     "meaning": "Obsessive desire to lose weight by refusing to eat",
-    "example": "She was diagnosed with anorexia."
+    "example": "She was diagnosed with anorexia.",
+    "sscCount": 1,
+    "otherExamCount": 2
   },
   {
     "id": 102,
     "word": "Anthology",
     "hindiMeaning": "साहित्यिक संग्रह (N.)",
     "meaning": "A collection of poems, stories, etc. that have been written by different people and published together in a book",
-    "example": "The book is an anthology of poems."
+    "example": "The book is an anthology of poems.",
+    "sscCount": 2,
+    "otherExamCount": 1
   },
   {
     "id": 103,
     "word": "Anthropologist",
     "hindiMeaning": "मानव शास्त्री (N.)",
     "meaning": "One who studies the evolution of mankind",
-    "example": "The anthropologist studied tribal cultures."
+    "example": "The anthropologist studied tribal cultures.",
+    "sscCount": 1,
+    "otherExamCount": 3
   },
   {
     "id": 104,
     "word": "Anthropology",
     "hindiMeaning": "मानव विज्ञान (N.)",
     "meaning": "The study of human race, especially of its origin, development, customs and beliefs",
-    "example": "She is pursuing anthropology."
+    "example": "She is pursuing anthropology.",
+    "sscCount": 5,
+    "otherExamCount": 3
   },
   {
     "id": 105,
@@ -790,21 +860,27 @@
     "word": "Antidote",
     "hindiMeaning": "विष नाशक (N.)",
     "meaning": "A medicine to nullify the effect of poison or another medicine",
-    "example": "The doctor gave an antidote immediately."
+    "example": "The doctor gave an antidote immediately.",
+    "sscCount": 6,
+    "otherExamCount": 0
   },
   {
     "id": 107,
     "word": "Antipathy",
     "hindiMeaning": "घृणा, द्वेष (N.)",
     "meaning": "Strong dislike between two persons // A deep-seated feeling of aversion",
-    "example": "She felt antipathy towards dishonesty."
+    "example": "She felt antipathy towards dishonesty.",
+    "sscCount": 4,
+    "otherExamCount": 0
   },
   {
     "id": 108,
     "word": "Antiquarian",
     "hindiMeaning": "पुरातात्विक (N.)",
     "meaning": "One who studies/deals antique things",
-    "example": "The antiquarian collected old manuscripts."
+    "example": "The antiquarian collected old manuscripts.",
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 109,
@@ -825,7 +901,9 @@
     "word": "Apartheid",
     "hindiMeaning": "नस्लीय भेदभाव (N.)",
     "meaning": "A policy that segregates people on the basis of race // Policy of racial discrimination",
-    "example": "Apartheid existed in South Africa."
+    "example": "Apartheid existed in South Africa.",
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 112,
@@ -839,14 +917,18 @@
     "word": "Apathetic",
     "hindiMeaning": "उदासीन/भावहीन (Adj.)",
     "meaning": "Showing or feeling no interest, enthusiasm, or concern",
-    "example": "He was apathetic about politics."
+    "example": "He was apathetic about politics.",
+    "sscCount": 2,
+    "otherExamCount": 0
   },
   {
     "id": 114,
     "word": "Apathy",
     "hindiMeaning": "उदासीनता (N.)",
     "meaning": "The feeling of not being interested in or enthusiastic",
-    "example": "Public apathy is a serious issue."
+    "example": "Public apathy is a serious issue.",
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 115,
@@ -860,7 +942,9 @@
     "word": "Apiary",
     "hindiMeaning": "मधुमक्खियों के पालन का स्थान (N.)",
     "meaning": "A place where bees are kept",
-    "example": "The farmer owns an apiary."
+    "example": "The farmer owns an apiary.",
+    "sscCount": 5,
+    "otherExamCount": 4
   },
   {
     "id": 117,
@@ -881,7 +965,9 @@
     "word": "Apostate",
     "hindiMeaning": "धर्म त्यागी (N.)",
     "meaning": "A person who renounces a religious or political belief or principle",
-    "example": "He was labeled an apostate."
+    "example": "He was labeled an apostate.",
+    "sscCount": 3,
+    "otherExamCount": 4
   },
   {
     "id": 120,
@@ -930,7 +1016,9 @@
     "word": "Apprentice",
     "hindiMeaning": "शिक्षार्थी (N.)",
     "meaning": "A person who works for an expert to learn a trade",
-    "example": "He joined as an apprentice carpenter."
+    "example": "He joined as an apprentice carpenter.",
+    "sscCount": 3,
+    "otherExamCount": 0
   },
   {
     "id": 127,
@@ -944,14 +1032,18 @@
     "word": "Aquarium",
     "hindiMeaning": "मछलीघर (N.)",
     "meaning": "A glass tank where fish and water plants are kept",
-    "example": "The aquarium has colorful fish."
+    "example": "The aquarium has colorful fish.",
+    "sscCount": 7,
+    "otherExamCount": 1
   },
   {
     "id": 129,
     "word": "Aquatic",
     "hindiMeaning": "जलीय (Adj.)",
     "meaning": "Animals and plants growing or living in, or near water",
-    "example": "Fish are aquatic animals."
+    "example": "Fish are aquatic animals.",
+    "sscCount": 6,
+    "otherExamCount": 0
   },
   {
     "id": 130,
@@ -972,21 +1064,27 @@
     "word": "Arbitrator",
     "hindiMeaning": "पंच/मध्यस्थ (N.)",
     "meaning": "A person who is chosen to settle a disagreement // a person appointed by two parties to resolve a dispute",
-    "example": "The arbitrator resolved the conflict."
+    "example": "The arbitrator resolved the conflict.",
+    "sscCount": 5,
+    "otherExamCount": 3
   },
   {
     "id": 133,
     "word": "Archaeologist",
     "hindiMeaning": "पुरातत्व विज्ञानी (N.)",
     "meaning": "One who studies human antiquities",
-    "example": "The archaeologist discovered ancient tools."
+    "example": "The archaeologist discovered ancient tools.",
+    "sscCount": 1,
+    "otherExamCount": 1
   },
   {
     "id": 134,
     "word": "Archaeology",
     "hindiMeaning": "पुरातत्व (N.)",
     "meaning": "The study of human history and prehistory through the excavation of sites",
-    "example": "She teaches archaeology."
+    "example": "She teaches archaeology.",
+    "sscCount": 6,
+    "otherExamCount": 2
   },
   {
     "id": 135,
@@ -1000,14 +1098,18 @@
     "word": "Archipelago",
     "hindiMeaning": "द्वीपसमूह (N.)",
     "meaning": "A large body of water with many islands",
-    "example": "Indonesia is an archipelago."
+    "example": "Indonesia is an archipelago.",
+    "sscCount": 4,
+    "otherExamCount": 0
   },
   {
     "id": 137,
     "word": "Archive",
     "hindiMeaning": "अभिलेखागार (N.)",
     "meaning": "The place where public, government or historical records are kept",
-    "example": "The files are stored in the archive."
+    "example": "The files are stored in the archive.",
+    "sscCount": 9,
+    "otherExamCount": 4
   },
   {
     "id": 138,
@@ -1021,7 +1123,9 @@
     "word": "Arena",
     "hindiMeaning": "अखाड़ा (N.)",
     "meaning": "A place where fights take place // A place or scene of activity, debate, or conflict",
-    "example": "Politics is a tough arena."
+    "example": "Politics is a tough arena.",
+    "sscCount": 3,
+    "otherExamCount": 1
   },
   {
     "id": 140,
