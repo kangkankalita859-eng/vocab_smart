@@ -31,6 +31,7 @@ import Complete from "./pages/Complete";
 import TestAPI from "./TestAPI";
 import EnglishVocabHome from "./pages/EnglishVocabHome";
 import GrammarHome from "./pages/GrammarHome";
+import Sidebar from "./components/Sidebar";
 import "./styles/flashcard.css";
 
 // Global navigation function
@@ -466,6 +467,24 @@ export default function App() {
       <Articles
         onGoHome={() => setStage("home")}
         partNumber={window.currentPartNumber || "Part I"}
+      />
+    );
+
+  if (stage === "read-geometry")
+    return (
+      <ReadGeometry
+        config={config}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
+      />
+    );
+
+  if (stage === "homonyms-homophones-session")
+    return (
+      <HomonymsHomophonesSession
+        config={config}
+        onUpdateConfig={(c) => setConfig(c)}
+        onGoHome={() => setStage("home")}
       />
     );
 
