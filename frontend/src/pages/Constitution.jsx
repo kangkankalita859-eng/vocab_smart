@@ -27,8 +27,7 @@ export default function Constitution({ onGoHome, onViewSchedules, onViewParts })
       title: "📊 Key Facts",
       items: [
         { label: "Total Articles", value: "448 (as of 2023)" },
-        { label: "Total Amendments", value: "104" },
-        
+        { label: "Total Amendments", value: "104" },   
         { label: "Total Schedules", value: "12" },
         { label: "Total Parts", value: "25" },
         { label: "Languages", value: "22 scheduled languages" },

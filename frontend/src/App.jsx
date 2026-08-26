@@ -41,6 +41,8 @@ export default function App() {
   const [stage, setStage] = useState("home");
   const [config, setConfig] = useState({ start: 0, limit: 20 });
   const [reviewUnknownDeck, setReviewUnknownDeck] = useState(false);
+  const [reviewIdiomUnknownDeck, setReviewIdiomUnknownDeck] = useState(false);
+  const [reviewHomonymsUnknownDeck, setReviewHomonymsUnknownDeck] = useState(false);
   const [vocabExamConfig, setVocabExamConfig] = useState(null);
 
   console.log('App component mounted, current stage:', stage);
@@ -172,6 +174,8 @@ export default function App() {
             setStage("read-narration");
           } else {
             setReviewUnknownDeck(false);
+            setReviewIdiomUnknownDeck(false);
+            setReviewHomonymsUnknownDeck(false);
             setStage("read");
           }
         }}
@@ -205,7 +209,10 @@ export default function App() {
     return (
       <ReadIdioms
         config={config}
-        onGoCards={() => setStage("idiom-session")}
+        onGoCards={() => {
+          setReviewIdiomUnknownDeck(true);
+          setStage("idiom-session");
+        }}
         onGoTest={() => {
           setVocabExamConfig(null);
           setStage("idiom-exam-sets");
@@ -232,7 +239,10 @@ export default function App() {
     return (
       <ReadHomonymsHomophones
         config={config}
-        onGoCards={() => setStage("homonyms-homophones-session")}
+        onGoCards={() => {
+          setReviewHomonymsUnknownDeck(true);
+          setStage("homonyms-homophones-session");
+        }}
         onUpdateConfig={(c) => setConfig(c)}
         onGoHome={() => setStage("home")}
       />
@@ -328,13 +338,24 @@ export default function App() {
     return (
       <IdiomSession
         config={config}
-        onGoCards={() => setStage("idiom-session")}
+        reviewUnknownDeck={reviewIdiomUnknownDeck}
+        onGoCards={() => {
+          setReviewIdiomUnknownDeck(true);
+          setStage("idiom-session");
+        }}
+        onGoRead={() => {
+          setReviewIdiomUnknownDeck(false);
+          setStage("read-idioms");
+        }}
         onGoTest={() => {
           setVocabExamConfig(null);
           setStage("idiom-exam-sets");
         }}
         onUpdateConfig={(c) => setConfig(c)}
-        onGoHome={() => setStage("home")}
+        onGoHome={() => {
+          setReviewIdiomUnknownDeck(false);
+          setStage("home");
+        }}
       />
     );
 
@@ -483,8 +504,20 @@ export default function App() {
     return (
       <HomonymsHomophonesSession
         config={config}
+        reviewUnknownDeck={reviewHomonymsUnknownDeck}
+        onGoCards={() => {
+          setReviewHomonymsUnknownDeck(true);
+          setStage("homonyms-homophones-session");
+        }}
+        onGoRead={() => {
+          setReviewHomonymsUnknownDeck(false);
+          setStage("read-homonyms-homophones");
+        }}
         onUpdateConfig={(c) => setConfig(c)}
-        onGoHome={() => setStage("home")}
+        onGoHome={() => {
+          setReviewHomonymsUnknownDeck(false);
+          setStage("home");
+        }}
       />
     );
 

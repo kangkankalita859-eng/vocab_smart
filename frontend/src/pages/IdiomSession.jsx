@@ -10,6 +10,7 @@ import {
   clearUnknownDeck,
   hasPersistedData
 } from "../services/deckPersistenceService";
+import shuffle from "../utils/shuffle";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -39,7 +40,7 @@ function MiniStack({ title, count }) {
 
 export default function IdiomSession({
   config,
-  onComplete,
+  reviewUnknownDeck,
   onGoRead,
   onGoHome,
   onUpdateConfig,
@@ -52,6 +53,7 @@ export default function IdiomSession({
   const [savedDecks, setSavedDecks] = useState([]);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
   const [showPersistedNotification, setShowPersistedNotification] = useState(false);
+  const [progressLoaded, setProgressLoaded] = useState(false);
 
   const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
@@ -59,7 +61,7 @@ export default function IdiomSession({
   /* ---------------- FETCH IDIOMS ---------------- */
 
   useEffect(() => {
-    if (!config) return;
+    if (!config || !progressLoaded) return;
 
     setLoading(true);
     fetchIdioms(config.start, config.limit)
@@ -78,33 +80,46 @@ export default function IdiomSession({
         console.error('Fetch error:', error);
         setLoading(false);
       });
-  }, [config]);
+  }, [config, progressLoaded]);
 
   /* ---------------- LOAD PERSISTED DATA ---------------- */
 
   useEffect(() => {
     // Load persisted data on component mount
-    const persistedUnknownDeck = loadUnknownDeck();
-    const persistedSavedDecks = loadSavedDecks();
+    const persistedUnknownDeck = loadUnknownDeck('idiom');
+    const persistedSavedDecks = loadSavedDecks('idiom');
     
     if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
       setUnknownDeck(persistedUnknownDeck);
       setSavedDecks(persistedSavedDecks);
-      setShowPersistedNotification(true);
       
-      // Hide notification after 5 seconds
-      setTimeout(() => {
-        setShowPersistedNotification(false);
-      }, 5000);
+      // If user is coming from "Go to Flash Cards" to review unknown deck
+      if (reviewUnknownDeck && persistedUnknownDeck.length > 0) {
+        setActiveDeck(persistedUnknownDeck);
+        setOriginalDeck(persistedUnknownDeck);
+        setKnownDeck([]);
+        setUnknownDeck([]);
+        
+        // Clear persisted unknown deck since we're now using it
+        clearUnknownDeck('idiom');
+      } else {
+        setShowPersistedNotification(true);
+        
+        // Hide notification after 5 seconds
+        setTimeout(() => {
+          setShowPersistedNotification(false);
+        }, 5000);
+      }
     }
-  }, []);
+    setProgressLoaded(true);
+  }, [reviewUnknownDeck]);
 
   /* ---------------- AUTO-SAVE UNKNOWN DECK ---------------- */
 
   useEffect(() => {
     // Auto-save unknown deck whenever it changes
     if (unknownDeck.length > 0) {
-      saveUnknownDeck(unknownDeck);
+      saveUnknownDeck(unknownDeck, 'idiom');
     }
   }, [unknownDeck]);
 
@@ -113,7 +128,7 @@ export default function IdiomSession({
   useEffect(() => {
     // Auto-save saved decks whenever they change
     if (savedDecks.length > 0) {
-      saveSavedDecks(savedDecks);
+      saveSavedDecks(savedDecks, 'idiom');
     }
   }, [savedDecks]);
 
@@ -139,11 +154,7 @@ export default function IdiomSession({
     setIsShuffling(true);
 
     setTimeout(() => {
-      const shuffled = [...activeDeck];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
+      const shuffled = shuffle(activeDeck);
       setActiveDeck(shuffled);
       setIsShuffling(false);
     }, 650); // ⬅ animation duration
@@ -156,10 +167,13 @@ export default function IdiomSession({
   /* ---------------- REVISION ---------------- */
 
   const handleReviseUnknown = () => {
-    setActiveDeck(unknownDeck);
-    setOriginalDeck(unknownDeck);
+    const shuffled = shuffle(unknownDeck);
+    setActiveDeck(shuffled);
+    setOriginalDeck([...unknownDeck]);
     setKnownDeck([]);
     setUnknownDeck([]);
+    // Clear persisted unknown deck since we're now revising it
+    clearUnknownDeck('idiom');
   };
 
   /* ---------------- SAVE DECK ---------------- */

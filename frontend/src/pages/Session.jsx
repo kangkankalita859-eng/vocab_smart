@@ -10,6 +10,7 @@ import {
   clearUnknownDeck,
   hasPersistedData
 } from "../services/deckPersistenceService";
+import shuffle from "../utils/shuffle";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -61,8 +62,8 @@ export default function Session({
 
   useEffect(() => {
     // Load persisted data on component mount
-    const persistedUnknownDeck = loadUnknownDeck();
-    const persistedSavedDecks = loadSavedDecks();
+    const persistedUnknownDeck = loadUnknownDeck('vocab');
+    const persistedSavedDecks = loadSavedDecks('vocab');
     
     if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
       setUnknownDeck(persistedUnknownDeck);
@@ -76,7 +77,7 @@ export default function Session({
         setUnknownDeck([]);
         
         // Clear persisted unknown deck since we're now using it
-        clearUnknownDeck();
+        clearUnknownDeck('vocab');
       } else {
         setShowPersistedNotification(true);
         
@@ -93,7 +94,7 @@ export default function Session({
   useEffect(() => {
     // Auto-save unknown deck whenever it changes
     if (unknownDeck.length > 0) {
-      saveUnknownDeck(unknownDeck);
+      saveUnknownDeck(unknownDeck, 'vocab');
     }
   }, [unknownDeck]);
 
@@ -102,7 +103,7 @@ export default function Session({
   useEffect(() => {
     // Auto-save saved decks whenever they change
     if (savedDecks.length > 0) {
-      saveSavedDecks(savedDecks);
+      saveSavedDecks(savedDecks, 'vocab');
     }
   }, [savedDecks]);
 
@@ -155,11 +156,7 @@ export default function Session({
     setIsShuffling(true);
 
     setTimeout(() => {
-      const shuffled = [...activeDeck];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
+      const shuffled = shuffle(activeDeck);
       setActiveDeck(shuffled);
       setIsShuffling(false);
     }, 650);
@@ -172,13 +169,14 @@ export default function Session({
   /* ---------------- REVISION ---------------- */
 
   const handleReviseUnknown = () => {
-    setActiveDeck(unknownDeck);
-    setOriginalDeck(unknownDeck);
+    const shuffled = shuffle(unknownDeck);
+    setActiveDeck(shuffled);
+    setOriginalDeck([...unknownDeck]);
     setKnownDeck([]);
     setUnknownDeck([]);
     
     // Clear persisted unknown deck since we're now using it
-    clearUnknownDeck();
+    clearUnknownDeck('vocab');
   };
 
   /* ---------------- SAVE DECK ---------------- */
@@ -199,7 +197,7 @@ export default function Session({
     setUnknownDeck([]);
     
     // Clear persisted unknown deck since it's now saved
-    clearUnknownDeck();
+    clearUnknownDeck('vocab');
     
     // Auto-save is handled by useEffect
   };

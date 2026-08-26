@@ -12,6 +12,7 @@ import {
   loadSavedDecks,
   clearUnknownDeck,
 } from "../services/deckPersistenceService";
+import shuffle from "../utils/shuffle";
 
 function MiniStack({ title, count }) {
   return (
@@ -37,7 +38,7 @@ function MiniStack({ title, count }) {
 
 export default function HomonymsHomophonesSession({
   config,
-  onComplete,
+  reviewUnknownDeck,
   onGoRead,
   onGoHome,
   onUpdateConfig,
@@ -49,12 +50,13 @@ export default function HomonymsHomophonesSession({
 
   const [savedDecks, setSavedDecks] = useState([]);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
+  const [progressLoaded, setProgressLoaded] = useState(false);
 
   const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
 
   useEffect(() => {
-    if (!config) return;
+    if (!config || !progressLoaded) return;
 
     setLoading(true);
     fetchHomonymsHomophones(config.start, config.limit)
@@ -73,27 +75,39 @@ export default function HomonymsHomophonesSession({
         console.error("Fetch error:", error);
         setLoading(false);
       });
-  }, [config]);
+  }, [config, progressLoaded]);
 
   useEffect(() => {
-    const persistedUnknownDeck = loadUnknownDeck();
-    const persistedSavedDecks = loadSavedDecks();
+    const persistedUnknownDeck = loadUnknownDeck('homonyms');
+    const persistedSavedDecks = loadSavedDecks('homonyms');
 
     if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
       setUnknownDeck(persistedUnknownDeck);
       setSavedDecks(persistedSavedDecks);
+      
+      // If user is coming from "Go to Flash Cards" to review unknown deck
+      if (reviewUnknownDeck && persistedUnknownDeck.length > 0) {
+        setActiveDeck(persistedUnknownDeck);
+        setOriginalDeck(persistedUnknownDeck);
+        setKnownDeck([]);
+        setUnknownDeck([]);
+        
+        // Clear persisted unknown deck since we're now using it
+        clearUnknownDeck('homonyms');
+      }
     }
-  }, []);
+    setProgressLoaded(true);
+  }, [reviewUnknownDeck]);
 
   useEffect(() => {
     if (unknownDeck.length > 0) {
-      saveUnknownDeck(unknownDeck);
+      saveUnknownDeck(unknownDeck, 'homonyms');
     }
   }, [unknownDeck]);
 
   useEffect(() => {
     if (savedDecks.length > 0) {
-      saveSavedDecks(savedDecks);
+      saveSavedDecks(savedDecks, 'homonyms');
     }
   }, [savedDecks]);
 
@@ -115,11 +129,7 @@ export default function HomonymsHomophonesSession({
     setIsShuffling(true);
 
     setTimeout(() => {
-      const shuffled = [...activeDeck];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
+      const shuffled = shuffle(activeDeck);
       setActiveDeck(shuffled);
       setIsShuffling(false);
     }, 650);
@@ -130,11 +140,12 @@ export default function HomonymsHomophonesSession({
   };
 
   const handleReviseUnknown = () => {
-    setActiveDeck(unknownDeck);
-    setOriginalDeck(unknownDeck);
+    const shuffled = shuffle(unknownDeck);
+    setActiveDeck(shuffled);
+    setOriginalDeck([...unknownDeck]);
     setKnownDeck([]);
     setUnknownDeck([]);
-    clearUnknownDeck();
+    clearUnknownDeck('homonyms');
   };
 
   const handleAddDeck = () => {
@@ -149,7 +160,7 @@ export default function HomonymsHomophonesSession({
     setOriginalDeck([]);
     setKnownDeck([]);
     setUnknownDeck([]);
-    clearUnknownDeck();
+    clearUnknownDeck('homonyms');
   };
 
   const reviseSingleDeck = (deck) => {
