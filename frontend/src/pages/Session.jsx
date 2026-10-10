@@ -8,9 +8,13 @@ import {
   saveSavedDecks,
   loadSavedDecks,
   clearUnknownDeck,
+  clearInProgressSession,
+  loadInProgressSession,
+  saveInProgressSession,
   hasPersistedData
 } from "../services/deckPersistenceService";
 import shuffle from "../utils/shuffle";
+import "../styles/session.css";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -46,17 +50,24 @@ export default function Session({
   onGoHome,
   onUpdateConfig,
 }) {
-  const [activeDeck, setActiveDeck] = useState([]);
-  const [originalDeck, setOriginalDeck] = useState([]);
-  const [knownDeck, setKnownDeck] = useState([]);
-  const [unknownDeck, setUnknownDeck] = useState([]);
+  const [savedProgress] = useState(() => loadInProgressSession("vocab"));
+  const [activeDeck, setActiveDeck] = useState(() => savedProgress?.activeDeck || []);
+  const [originalDeck, setOriginalDeck] = useState(
+    () => savedProgress?.originalDeck || savedProgress?.activeDeck || []
+  );
+  const [knownDeck, setKnownDeck] = useState(() => savedProgress?.knownDeck || []);
+  const [unknownDeck, setUnknownDeck] = useState(() => savedProgress?.unknownDeck || []);
+  const [lastAction, setLastAction] = useState(() => savedProgress?.lastAction || null);
 
   const [savedDecks, setSavedDecks] = useState([]);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => !savedProgress);
   const [isShuffling, setIsShuffling] = useState(false);
   const [showPersistedNotification, setShowPersistedNotification] = useState(false);
+  const [persistenceLoaded, setPersistenceLoaded] = useState(false);
+  const [isResumingProgress, setIsResumingProgress] = useState(() => Boolean(savedProgress));
+  const [isProgressSaved, setIsProgressSaved] = useState(() => Boolean(savedProgress));
 
   /* ---------------- LOAD PERSISTED DATA ---------------- */
 
@@ -65,6 +76,12 @@ export default function Session({
     const persistedUnknownDeck = loadUnknownDeck('vocab');
     const persistedSavedDecks = loadSavedDecks('vocab');
     
+    if (isResumingProgress) {
+      setSavedDecks(persistedSavedDecks);
+      setPersistenceLoaded(true);
+      return;
+    }
+
     if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
       setUnknownDeck(persistedUnknownDeck);
       setSavedDecks(persistedSavedDecks);
@@ -87,29 +104,48 @@ export default function Session({
         }, 5000);
       }
     }
+    setPersistenceLoaded(true);
   }, [reviewUnknownDeck]);
 
   /* ---------------- AUTO-SAVE UNKNOWN DECK ---------------- */
 
   useEffect(() => {
+    if (!persistenceLoaded) return;
     // Auto-save unknown deck whenever it changes
-    if (unknownDeck.length > 0) {
-      saveUnknownDeck(unknownDeck, 'vocab');
-    }
-  }, [unknownDeck]);
+    saveUnknownDeck(unknownDeck, 'vocab');
+  }, [unknownDeck, persistenceLoaded]);
 
   /* ---------------- AUTO-SAVE SAVED DECKS ---------------- */
 
   useEffect(() => {
+    if (!persistenceLoaded) return;
     // Auto-save saved decks whenever they change
-    if (savedDecks.length > 0) {
-      saveSavedDecks(savedDecks, 'vocab');
+    saveSavedDecks(savedDecks, 'vocab');
+  }, [savedDecks, persistenceLoaded]);
+
+  useEffect(() => {
+    if (!isProgressSaved) return;
+
+    if (activeDeck.length === 0) {
+      clearInProgressSession("vocab");
+      setIsProgressSaved(false);
+      return;
     }
-  }, [savedDecks]);
+
+    saveInProgressSession(
+      { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
+      "vocab"
+    );
+  }, [activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, isProgressSaved]);
 
   /* ---------------- FETCH VOCAB ---------------- */
 
   useEffect(() => {
+    if (isResumingProgress) {
+      setLoading(false);
+      return;
+    }
+
     if (!config) return;
 
     setLoading(true);
@@ -123,6 +159,7 @@ export default function Session({
         }
         setKnownDeck([]);
         setUnknownDeck([]);
+        setLastAction(null);
         setLoading(false);
       })
       .catch((error) => {
@@ -135,17 +172,46 @@ export default function Session({
 
   const handleKnown = () => {
     const card = activeDeck[0];
+    if (!card) return;
     setKnownDeck((p) => [...p, card]);
     setActiveDeck((p) => p.slice(1));
+    setLastAction({ card, deck: "known" });
   };
 
   const handleUnknown = () => {
     const card = activeDeck[0];
-    const newUnknownDeck = [...unknownDeck, card];
-    setUnknownDeck(newUnknownDeck);
+    if (!card) return;
+    setUnknownDeck((p) => [...p, card]);
     setActiveDeck((p) => p.slice(1));
-    
-    // Auto-save is handled by useEffect
+    setLastAction({ card, deck: "unknown" });
+  };
+
+  const handleUndo = () => {
+    if (!lastAction) return;
+
+    setActiveDeck((p) => [lastAction.card, ...p]);
+    if (lastAction.deck === "known") {
+      setKnownDeck((p) => p.slice(0, -1));
+    } else {
+      setUnknownDeck((p) => p.slice(0, -1));
+    }
+    setLastAction(null);
+  };
+
+  const handleSaveProgress = () => {
+    if (activeDeck.length === 0) return;
+
+    const saved = saveInProgressSession(
+      { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
+      "vocab"
+    );
+    setIsProgressSaved(saved);
+  };
+
+  const clearSavedProgress = () => {
+    clearInProgressSession("vocab");
+    setIsProgressSaved(false);
+    setIsResumingProgress(false);
   };
 
   /* ---------------- SHUFFLE (ANIMATED) ---------------- */
@@ -164,16 +230,19 @@ export default function Session({
 
   const unshuffleDeck = () => {
     setActiveDeck(originalDeck);
+    setLastAction(null);
   };
 
   /* ---------------- REVISION ---------------- */
 
   const handleReviseUnknown = () => {
+    clearSavedProgress();
     const shuffled = shuffle(unknownDeck);
     setActiveDeck(shuffled);
     setOriginalDeck([...unknownDeck]);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
     
     // Clear persisted unknown deck since we're now using it
     clearUnknownDeck('vocab');
@@ -183,6 +252,8 @@ export default function Session({
 
   const handleAddDeck = () => {
     if (unknownDeck.length === 0) return;
+
+    clearSavedProgress();
 
     const newSavedDecks = [
       ...savedDecks,
@@ -195,6 +266,7 @@ export default function Session({
     setOriginalDeck([]);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
     
     // Clear persisted unknown deck since it's now saved
     clearUnknownDeck('vocab');
@@ -205,10 +277,12 @@ export default function Session({
   /* ---------------- SAVED DECK REVISION ---------------- */
 
   const reviseSingleDeck = (deck) => {
+    clearSavedProgress();
     setActiveDeck(deck.unknownCards);
     setOriginalDeck(deck.unknownCards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
 
     setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
     setSelectedDeckIds([]);
@@ -222,6 +296,7 @@ export default function Session({
   };
 
   const reviseSelectedDecks = () => {
+    clearSavedProgress();
     const cards = savedDecks
       .filter((d) => selectedDeckIds.includes(d.id))
       .flatMap((d) => d.unknownCards);
@@ -230,6 +305,7 @@ export default function Session({
     setOriginalDeck(cards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
 
     setSavedDecks((p) =>
       p.filter((d) => !selectedDeckIds.includes(d.id))
@@ -238,18 +314,24 @@ export default function Session({
   };
 
   const reviseAllDecks = () => {
+    clearSavedProgress();
     const cards = savedDecks.flatMap((d) => d.unknownCards);
     setActiveDeck(cards);
     setOriginalDeck(cards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
     setSavedDecks([]);
     setSelectedDeckIds([]);
   };
 
   /* ---------------- RANGE APPLY ---------------- */
 
-  const handleApplyRange = (c) => onUpdateConfig(c);
+  const handleApplyRange = (c) => {
+    clearSavedProgress();
+    setLastAction(null);
+    onUpdateConfig(c);
+  };
 
   /* ---------------- LOADING ---------------- */
 
@@ -273,6 +355,9 @@ export default function Session({
           <p>Known: {knownDeck.length} | Unknown: {unknownDeck.length}</p>
 
           <div style={{ display: "flex", gap: "14px" }}>
+            <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+              ↩ Undo Last Card
+            </button>
             {unknownDeck.length > 0 && (
               <button style={secondaryBtn} onClick={handleReviseUnknown}>
                 🔁 Revise Unknown
@@ -314,9 +399,9 @@ export default function Session({
 
       {/* DECK PANEL - OUTSIDE CONTAINER */}
       {savedDecks.length > 0 && (
-        <div style={deckPanel}>
+        <div style={deckPanel} className="flash-session-deck-panel">
           {savedDecks.map((d, i) => (
-            <div key={d.id} style={deckChip}>
+            <div key={d.id} style={deckChip} className="flash-session-deck-chip">
               <label>
                 <input
                   type="checkbox"
@@ -351,7 +436,10 @@ export default function Session({
             </div>
           ))}
 
-          <div style={{ marginLeft: "auto", display: "flex", gap: 10 }}>
+          <div
+            className="flash-session-deck-actions"
+            style={{ marginLeft: "auto", display: "flex", gap: 10 }}
+          >
             <button
               style={secondaryBtn}
               disabled={!selectedDeckIds.length}
@@ -367,13 +455,16 @@ export default function Session({
       )}
 
       {/* MAIN CONTAINER */}
-      <div style={container}>
-        <div style={{ ...stats, marginTop: "120px" }}>
+      <div style={container} className="flash-session-layout">
+        <div
+          style={{ ...stats, marginTop: "120px" }}
+          className="flash-session-stats flash-session-stats--unknown"
+        >
           <MiniStack title="❌ Unknown" count={unknownDeck.length} />
         </div>
 
-        <div style={deckWrapper}>
-          <div style={deckArea}>
+        <div style={deckWrapper} className="flash-session-deck-wrapper">
+          <div style={deckArea} className="flash-session-deck-area">
             {activeDeck.slice(0, 6).map((card, index) => (
               <div
                 key={card.id}
@@ -399,17 +490,23 @@ export default function Session({
             ))}
           </div>
 
-          <div style={shuffleBar}>
+          <div style={shuffleBar} className="flash-session-controls">
             <button style={secondaryBtn} onClick={shuffleDeck}>
               🔀 Shuffle
             </button>
             <button style={secondaryBtn} onClick={unshuffleDeck}>
               ↩️ Unshuffle
             </button>
+            <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+              ↩ Undo
+            </button>
+            <button style={secondaryBtn} onClick={handleSaveProgress}>
+              {isProgressSaved ? "✓ Progress Saved" : "💾 Save Progress"}
+            </button>
           </div>
         </div>
 
-        <div style={stats}>
+        <div style={stats} className="flash-session-stats flash-session-stats--summary">
           <MiniStack title="Known" count={knownDeck.length} />
           <MiniStack title="Remaining" count={activeDeck.length} />
         </div>

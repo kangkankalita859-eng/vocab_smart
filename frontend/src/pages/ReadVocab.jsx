@@ -38,7 +38,11 @@ export default function ReadVocab({
 
   const [showPersistedInfo, setShowPersistedInfo] = useState(false);
 
-  const [deckStats, setDeckStats] = useState({ unknownCount: 0, savedDeckCount: 0 });
+  const [deckStats, setDeckStats] = useState({
+    unknownCount: 0,
+    savedDeckCount: 0,
+    inProgressCount: 0,
+  });
 
 
 
@@ -161,6 +165,9 @@ export default function ReadVocab({
                   )}
                   {deckStats.savedDeckCount > 0 && (
                     <span>• {deckStats.savedDeckCount} saved decks</span>
+                  )}
+                  {deckStats.inProgressCount > 0 && (
+                    <span>• Continue your saved session with {deckStats.inProgressCount} cards remaining</span>
                   )}
                 </div>
               </div>

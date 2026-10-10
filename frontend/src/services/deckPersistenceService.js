@@ -6,12 +6,15 @@ const STORAGE_KEYS = {
   VOCAB_UNKNOWN_DECK: 'vocab_unknown_deck',
   VOCAB_SAVED_DECKS: 'vocab_saved_decks',
   VOCAB_CURRENT_CONFIG: 'vocab_current_config',
+  VOCAB_IN_PROGRESS_SESSION: 'vocab_in_progress_session',
   IDIOM_UNKNOWN_DECK: 'idiom_unknown_deck',
   IDIOM_SAVED_DECKS: 'idiom_saved_decks',
   IDIOM_CURRENT_CONFIG: 'idiom_current_config',
+  IDIOM_IN_PROGRESS_SESSION: 'idiom_in_progress_session',
   HOMONYMS_UNKNOWN_DECK: 'homonyms_unknown_deck',
   HOMONYMS_SAVED_DECKS: 'homonyms_saved_decks',
-  HOMONYMS_CURRENT_CONFIG: 'homonyms_current_config'
+  HOMONYMS_CURRENT_CONFIG: 'homonyms_current_config',
+  HOMONYMS_IN_PROGRESS_SESSION: 'homonyms_in_progress_session'
 };
 
 // Get storage keys for a specific card type
@@ -21,20 +24,23 @@ const getKeys = (cardType) => {
       return {
         UNKNOWN_DECK: STORAGE_KEYS.IDIOM_UNKNOWN_DECK,
         SAVED_DECKS: STORAGE_KEYS.IDIOM_SAVED_DECKS,
-        CURRENT_CONFIG: STORAGE_KEYS.IDIOM_CURRENT_CONFIG
+        CURRENT_CONFIG: STORAGE_KEYS.IDIOM_CURRENT_CONFIG,
+        IN_PROGRESS_SESSION: STORAGE_KEYS.IDIOM_IN_PROGRESS_SESSION
       };
     case 'homonyms':
       return {
         UNKNOWN_DECK: STORAGE_KEYS.HOMONYMS_UNKNOWN_DECK,
         SAVED_DECKS: STORAGE_KEYS.HOMONYMS_SAVED_DECKS,
-        CURRENT_CONFIG: STORAGE_KEYS.HOMONYMS_CURRENT_CONFIG
+        CURRENT_CONFIG: STORAGE_KEYS.HOMONYMS_CURRENT_CONFIG,
+        IN_PROGRESS_SESSION: STORAGE_KEYS.HOMONYMS_IN_PROGRESS_SESSION
       };
     case 'vocab':
     default:
       return {
         UNKNOWN_DECK: STORAGE_KEYS.VOCAB_UNKNOWN_DECK,
         SAVED_DECKS: STORAGE_KEYS.VOCAB_SAVED_DECKS,
-        CURRENT_CONFIG: STORAGE_KEYS.VOCAB_CURRENT_CONFIG
+        CURRENT_CONFIG: STORAGE_KEYS.VOCAB_CURRENT_CONFIG,
+        IN_PROGRESS_SESSION: STORAGE_KEYS.VOCAB_IN_PROGRESS_SESSION
       };
   }
 };
@@ -74,6 +80,17 @@ export const saveCurrentConfig = (config, cardType = 'vocab') => {
   }
 };
 
+export const saveInProgressSession = (session, cardType = 'vocab') => {
+  try {
+    const keys = getKeys(cardType);
+    localStorage.setItem(keys.IN_PROGRESS_SESSION, JSON.stringify(session));
+    return true;
+  } catch (error) {
+    console.error('Error saving in-progress session:', error);
+    return false;
+  }
+};
+
 /* ---------------- LOAD METHODS ---------------- */
 
 export const loadUnknownDeck = (cardType = 'vocab') => {
@@ -109,6 +126,21 @@ export const loadCurrentConfig = (cardType = 'vocab') => {
   }
 };
 
+export const loadInProgressSession = (cardType = 'vocab') => {
+  try {
+    const keys = getKeys(cardType);
+    const saved = localStorage.getItem(keys.IN_PROGRESS_SESSION);
+    const session = saved ? JSON.parse(saved) : null;
+
+    return session && Array.isArray(session.activeDeck) && session.activeDeck.length > 0
+      ? session
+      : null;
+  } catch (error) {
+    console.error('Error loading in-progress session:', error);
+    return null;
+  }
+};
+
 /* ---------------- CLEAR METHODS ---------------- */
 
 export const clearUnknownDeck = (cardType = 'vocab') => {
@@ -129,6 +161,17 @@ export const clearSavedDecks = (cardType = 'vocab') => {
     return true;
   } catch (error) {
     console.error('Error clearing saved decks:', error);
+    return false;
+  }
+};
+
+export const clearInProgressSession = (cardType = 'vocab') => {
+  try {
+    const keys = getKeys(cardType);
+    localStorage.removeItem(keys.IN_PROGRESS_SESSION);
+    return true;
+  } catch (error) {
+    console.error('Error clearing in-progress session:', error);
     return false;
   }
 };
@@ -164,17 +207,21 @@ export const clearAllCardTypes = () => {
 export const hasPersistedData = (cardType = 'vocab') => {
   const unknownDeck = loadUnknownDeck(cardType);
   const savedDecks = loadSavedDecks(cardType);
-  return unknownDeck.length > 0 || savedDecks.length > 0;
+  const inProgressSession = loadInProgressSession(cardType);
+  return unknownDeck.length > 0 || savedDecks.length > 0 || Boolean(inProgressSession);
 };
 
 export const getDeckStats = (cardType = 'vocab') => {
   const unknownDeck = loadUnknownDeck(cardType);
   const savedDecks = loadSavedDecks(cardType);
+  const inProgressSession = loadInProgressSession(cardType);
+  const inProgressCount = inProgressSession?.activeDeck?.length || 0;
   
   return {
     unknownCount: unknownDeck.length,
     savedDeckCount: savedDecks.length,
+    inProgressCount,
     totalSavedCards: savedDecks.reduce((total, deck) => total + deck.unknownCards.length, 0),
-    hasData: unknownDeck.length > 0 || savedDecks.length > 0
+    hasData: unknownDeck.length > 0 || savedDecks.length > 0 || inProgressCount > 0
   };
 };

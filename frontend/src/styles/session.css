@@ -1,0 +1,77 @@
+/* Shared layout for vocab, idiom, and homonym card sessions. */
+.flash-session-layout,
+.flash-session-deck-area,
+.flash-session-deck-panel,
+.flash-session-deck-chip {
+  box-sizing: border-box;
+}
+
+.flash-session-controls {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .flash-session-deck-panel {
+    flex-wrap: wrap;
+    padding: 10px 16px !important;
+  }
+
+  .flash-session-layout {
+    height: auto !important;
+    min-height: calc(100vh - 60px);
+    padding: 72px 20px 40px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 28px;
+  }
+
+  .flash-session-stats {
+    margin-top: 0 !important;
+  }
+
+  .flash-session-stats--unknown {
+    order: 1;
+  }
+
+  .flash-session-deck-wrapper {
+    order: 2;
+    width: 100%;
+  }
+
+  .flash-session-stats--summary {
+    order: 3;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .flash-session-deck-area {
+    width: min(360px, calc(100vw - 24px)) !important;
+  }
+
+  .flash-session-deck-area .flashcard-wrapper {
+    width: min(320px, calc(100vw - 72px));
+  }
+}
+
+@media (max-width: 600px) {
+  .flash-session-deck-panel {
+    align-items: stretch !important;
+    flex-direction: column;
+  }
+
+  .flash-session-deck-chip {
+    width: 100%;
+  }
+
+  .flash-session-deck-actions {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .flash-session-deck-actions > button {
+    flex: 1;
+  }
+}

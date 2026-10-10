@@ -11,8 +11,12 @@ import {
   saveSavedDecks,
   loadSavedDecks,
   clearUnknownDeck,
+  clearInProgressSession,
+  loadInProgressSession,
+  saveInProgressSession,
 } from "../services/deckPersistenceService";
 import shuffle from "../utils/shuffle";
+import "../styles/session.css";
 
 function MiniStack({ title, count }) {
   return (
@@ -43,20 +47,31 @@ export default function HomonymsHomophonesSession({
   onGoHome,
   onUpdateConfig,
 }) {
-  const [activeDeck, setActiveDeck] = useState([]);
-  const [originalDeck, setOriginalDeck] = useState([]);
-  const [knownDeck, setKnownDeck] = useState([]);
-  const [unknownDeck, setUnknownDeck] = useState([]);
+  const [savedProgress] = useState(() => loadInProgressSession("homonyms"));
+  const [activeDeck, setActiveDeck] = useState(() => savedProgress?.activeDeck || []);
+  const [originalDeck, setOriginalDeck] = useState(
+    () => savedProgress?.originalDeck || savedProgress?.activeDeck || []
+  );
+  const [knownDeck, setKnownDeck] = useState(() => savedProgress?.knownDeck || []);
+  const [unknownDeck, setUnknownDeck] = useState(() => savedProgress?.unknownDeck || []);
+  const [lastAction, setLastAction] = useState(() => savedProgress?.lastAction || null);
 
   const [savedDecks, setSavedDecks] = useState([]);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
   const [progressLoaded, setProgressLoaded] = useState(false);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => !savedProgress);
   const [isShuffling, setIsShuffling] = useState(false);
+  const [isResumingProgress, setIsResumingProgress] = useState(() => Boolean(savedProgress));
+  const [isProgressSaved, setIsProgressSaved] = useState(() => Boolean(savedProgress));
 
   useEffect(() => {
     if (!config || !progressLoaded) return;
+
+    if (isResumingProgress) {
+      setLoading(false);
+      return;
+    }
 
     setLoading(true);
     fetchHomonymsHomophones(config.start, config.limit)
@@ -69,6 +84,7 @@ export default function HomonymsHomophonesSession({
         }
         setKnownDeck([]);
         setUnknownDeck([]);
+        setLastAction(null);
         setLoading(false);
       })
       .catch((error) => {
@@ -80,6 +96,12 @@ export default function HomonymsHomophonesSession({
   useEffect(() => {
     const persistedUnknownDeck = loadUnknownDeck('homonyms');
     const persistedSavedDecks = loadSavedDecks('homonyms');
+
+    if (isResumingProgress) {
+      setSavedDecks(persistedSavedDecks);
+      setProgressLoaded(true);
+      return;
+    }
 
     if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
       setUnknownDeck(persistedUnknownDeck);
@@ -100,27 +122,72 @@ export default function HomonymsHomophonesSession({
   }, [reviewUnknownDeck]);
 
   useEffect(() => {
-    if (unknownDeck.length > 0) {
-      saveUnknownDeck(unknownDeck, 'homonyms');
-    }
-  }, [unknownDeck]);
+    if (!progressLoaded) return;
+    saveUnknownDeck(unknownDeck, 'homonyms');
+  }, [unknownDeck, progressLoaded]);
 
   useEffect(() => {
-    if (savedDecks.length > 0) {
-      saveSavedDecks(savedDecks, 'homonyms');
+    if (!progressLoaded) return;
+    saveSavedDecks(savedDecks, 'homonyms');
+  }, [savedDecks, progressLoaded]);
+
+  useEffect(() => {
+    if (!isProgressSaved) return;
+
+    if (activeDeck.length === 0) {
+      clearInProgressSession("homonyms");
+      setIsProgressSaved(false);
+      return;
     }
-  }, [savedDecks]);
+
+    saveInProgressSession(
+      { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
+      "homonyms"
+    );
+  }, [activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, isProgressSaved]);
 
   const handleKnown = () => {
     const card = activeDeck[0];
+    if (!card) return;
     setKnownDeck((p) => [...p, card]);
     setActiveDeck((p) => p.slice(1));
+    setLastAction({ card, deck: "known" });
   };
 
   const handleUnknown = () => {
     const card = activeDeck[0];
+    if (!card) return;
     setUnknownDeck((p) => [...p, card]);
     setActiveDeck((p) => p.slice(1));
+    setLastAction({ card, deck: "unknown" });
+  };
+
+  const handleUndo = () => {
+    if (!lastAction) return;
+
+    setActiveDeck((p) => [lastAction.card, ...p]);
+    if (lastAction.deck === "known") {
+      setKnownDeck((p) => p.slice(0, -1));
+    } else {
+      setUnknownDeck((p) => p.slice(0, -1));
+    }
+    setLastAction(null);
+  };
+
+  const handleSaveProgress = () => {
+    if (activeDeck.length === 0) return;
+
+    const saved = saveInProgressSession(
+      { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
+      "homonyms"
+    );
+    setIsProgressSaved(saved);
+  };
+
+  const clearSavedProgress = () => {
+    clearInProgressSession("homonyms");
+    setIsProgressSaved(false);
+    setIsResumingProgress(false);
   };
 
   const shuffleDeck = () => {
@@ -137,19 +204,24 @@ export default function HomonymsHomophonesSession({
 
   const unshuffleDeck = () => {
     setActiveDeck(originalDeck);
+    setLastAction(null);
   };
 
   const handleReviseUnknown = () => {
+    clearSavedProgress();
     const shuffled = shuffle(unknownDeck);
     setActiveDeck(shuffled);
     setOriginalDeck([...unknownDeck]);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
     clearUnknownDeck('homonyms');
   };
 
   const handleAddDeck = () => {
     if (unknownDeck.length === 0) return;
+
+    clearSavedProgress();
 
     setSavedDecks((p) => [
       ...p,
@@ -160,20 +232,24 @@ export default function HomonymsHomophonesSession({
     setOriginalDeck([]);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
     clearUnknownDeck('homonyms');
   };
 
   const reviseSingleDeck = (deck) => {
+    clearSavedProgress();
     setActiveDeck(deck.unknownCards);
     setOriginalDeck(deck.unknownCards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
 
     setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
     setSelectedDeckIds([]);
   };
 
   const reviseSelectedDecks = () => {
+    clearSavedProgress();
     const cards = savedDecks
       .filter((d) => selectedDeckIds.includes(d.id))
       .flatMap((d) => d.unknownCards);
@@ -182,18 +258,21 @@ export default function HomonymsHomophonesSession({
     setOriginalDeck(cards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
 
     setSavedDecks((p) => p.filter((d) => !selectedDeckIds.includes(d.id)));
     setSelectedDeckIds([]);
   };
 
   const reviseAllDecks = () => {
+    clearSavedProgress();
     const cards = savedDecks.flatMap((d) => d.unknownCards);
 
     setActiveDeck(cards);
     setOriginalDeck(cards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
 
     setSavedDecks([]);
     setSelectedDeckIds([]);
@@ -210,7 +289,11 @@ export default function HomonymsHomophonesSession({
     }
   };
 
-  const handleApplyRange = (c) => onUpdateConfig(c);
+  const handleApplyRange = (c) => {
+    clearSavedProgress();
+    setLastAction(null);
+    onUpdateConfig(c);
+  };
 
   if (loading) return <p style={{ textAlign: "center" }}>Loading…</p>;
 
@@ -230,6 +313,9 @@ export default function HomonymsHomophonesSession({
           <p>Known: {knownDeck.length} | Unknown: {unknownDeck.length}</p>
 
           <div style={{ display: "flex", gap: "14px" }}>
+            <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+              ↩ Undo Last Card
+            </button>
             {unknownDeck.length > 0 && (
               <button style={secondaryBtn} onClick={handleReviseUnknown}>
                 🔁 Revise Unknown
@@ -299,13 +385,16 @@ export default function HomonymsHomophonesSession({
         onGoHome={onGoHome}
       />
 
-      <div style={container}>
-        <div style={{ ...stats, marginTop: "120px" }}>
+      <div style={container} className="flash-session-layout">
+        <div
+          style={{ ...stats, marginTop: "120px" }}
+          className="flash-session-stats flash-session-stats--unknown"
+        >
           <MiniStack title="❌ Unknown" count={unknownDeck.length} />
         </div>
 
-        <div style={deckWrapper}>
-          <div style={deckArea}>
+        <div style={deckWrapper} className="flash-session-deck-wrapper">
+          <div style={deckArea} className="flash-session-deck-area">
             {activeDeck.slice(0, 6).map((card, index) => (
               <div
                 key={card.id}
@@ -331,17 +420,23 @@ export default function HomonymsHomophonesSession({
             ))}
           </div>
 
-          <div style={shuffleBar}>
+          <div style={shuffleBar} className="flash-session-controls">
             <button style={secondaryBtn} onClick={shuffleDeck}>
               🔀 Shuffle
             </button>
             <button style={secondaryBtn} onClick={unshuffleDeck}>
               ↩️ Unshuffle
             </button>
+            <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+              ↩ Undo
+            </button>
+            <button style={secondaryBtn} onClick={handleSaveProgress}>
+              {isProgressSaved ? "✓ Progress Saved" : "💾 Save Progress"}
+            </button>
           </div>
         </div>
 
-        <div style={stats}>
+        <div style={stats} className="flash-session-stats flash-session-stats--summary">
           <MiniStack title="Known" count={knownDeck.length} />
           <MiniStack title="Remaining" count={activeDeck.length} />
         </div>

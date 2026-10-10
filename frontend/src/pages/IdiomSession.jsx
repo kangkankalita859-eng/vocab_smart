@@ -8,9 +8,13 @@ import {
   saveSavedDecks,
   loadSavedDecks,
   clearUnknownDeck,
+  clearInProgressSession,
+  loadInProgressSession,
+  saveInProgressSession,
   hasPersistedData
 } from "../services/deckPersistenceService";
 import shuffle from "../utils/shuffle";
+import "../styles/session.css";
 
 /* ---------------- MINI STACK ---------------- */
 
@@ -45,23 +49,34 @@ export default function IdiomSession({
   onGoHome,
   onUpdateConfig,
 }) {
-  const [activeDeck, setActiveDeck] = useState([]);
-  const [originalDeck, setOriginalDeck] = useState([]);
-  const [knownDeck, setKnownDeck] = useState([]);
-  const [unknownDeck, setUnknownDeck] = useState([]);
+  const [savedProgress] = useState(() => loadInProgressSession("idiom"));
+  const [activeDeck, setActiveDeck] = useState(() => savedProgress?.activeDeck || []);
+  const [originalDeck, setOriginalDeck] = useState(
+    () => savedProgress?.originalDeck || savedProgress?.activeDeck || []
+  );
+  const [knownDeck, setKnownDeck] = useState(() => savedProgress?.knownDeck || []);
+  const [unknownDeck, setUnknownDeck] = useState(() => savedProgress?.unknownDeck || []);
+  const [lastAction, setLastAction] = useState(() => savedProgress?.lastAction || null);
 
   const [savedDecks, setSavedDecks] = useState([]);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
   const [showPersistedNotification, setShowPersistedNotification] = useState(false);
   const [progressLoaded, setProgressLoaded] = useState(false);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => !savedProgress);
   const [isShuffling, setIsShuffling] = useState(false);
+  const [isResumingProgress, setIsResumingProgress] = useState(() => Boolean(savedProgress));
+  const [isProgressSaved, setIsProgressSaved] = useState(() => Boolean(savedProgress));
 
   /* ---------------- FETCH IDIOMS ---------------- */
 
   useEffect(() => {
     if (!config || !progressLoaded) return;
+
+    if (isResumingProgress) {
+      setLoading(false);
+      return;
+    }
 
     setLoading(true);
     fetchIdioms(config.start, config.limit)
@@ -74,6 +89,7 @@ export default function IdiomSession({
         }
         setKnownDeck([]);
         setUnknownDeck([]);
+        setLastAction(null);
         setLoading(false);
       })
       .catch((error) => {
@@ -89,6 +105,12 @@ export default function IdiomSession({
     const persistedUnknownDeck = loadUnknownDeck('idiom');
     const persistedSavedDecks = loadSavedDecks('idiom');
     
+    if (isResumingProgress) {
+      setSavedDecks(persistedSavedDecks);
+      setProgressLoaded(true);
+      return;
+    }
+
     if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
       setUnknownDeck(persistedUnknownDeck);
       setSavedDecks(persistedSavedDecks);
@@ -118,32 +140,77 @@ export default function IdiomSession({
 
   useEffect(() => {
     // Auto-save unknown deck whenever it changes
-    if (unknownDeck.length > 0) {
-      saveUnknownDeck(unknownDeck, 'idiom');
-    }
-  }, [unknownDeck]);
+    if (!progressLoaded) return;
+    saveUnknownDeck(unknownDeck, 'idiom');
+  }, [unknownDeck, progressLoaded]);
 
   /* ---------------- AUTO-SAVE SAVED DECKS ---------------- */
 
   useEffect(() => {
     // Auto-save saved decks whenever they change
-    if (savedDecks.length > 0) {
-      saveSavedDecks(savedDecks, 'idiom');
+    if (!progressLoaded) return;
+    saveSavedDecks(savedDecks, 'idiom');
+  }, [savedDecks, progressLoaded]);
+
+  useEffect(() => {
+    if (!isProgressSaved) return;
+
+    if (activeDeck.length === 0) {
+      clearInProgressSession("idiom");
+      setIsProgressSaved(false);
+      return;
     }
-  }, [savedDecks]);
+
+    saveInProgressSession(
+      { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
+      "idiom"
+    );
+  }, [activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, isProgressSaved]);
 
   /* ---------------- CARD ACTIONS ---------------- */
 
   const handleKnown = () => {
     const card = activeDeck[0];
+    if (!card) return;
     setKnownDeck((p) => [...p, card]);
     setActiveDeck((p) => p.slice(1));
+    setLastAction({ card, deck: "known" });
   };
 
   const handleUnknown = () => {
     const card = activeDeck[0];
+    if (!card) return;
     setUnknownDeck((p) => [...p, card]);
     setActiveDeck((p) => p.slice(1));
+    setLastAction({ card, deck: "unknown" });
+  };
+
+  const handleUndo = () => {
+    if (!lastAction) return;
+
+    setActiveDeck((p) => [lastAction.card, ...p]);
+    if (lastAction.deck === "known") {
+      setKnownDeck((p) => p.slice(0, -1));
+    } else {
+      setUnknownDeck((p) => p.slice(0, -1));
+    }
+    setLastAction(null);
+  };
+
+  const handleSaveProgress = () => {
+    if (activeDeck.length === 0) return;
+
+    const saved = saveInProgressSession(
+      { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
+      "idiom"
+    );
+    setIsProgressSaved(saved);
+  };
+
+  const clearSavedProgress = () => {
+    clearInProgressSession("idiom");
+    setIsProgressSaved(false);
+    setIsResumingProgress(false);
   };
 
   /* ---------------- SHUFFLE (ANIMATED) ---------------- */
@@ -162,16 +229,19 @@ export default function IdiomSession({
 
   const unshuffleDeck = () => {
     setActiveDeck(originalDeck);
+    setLastAction(null);
   };
 
   /* ---------------- REVISION ---------------- */
 
   const handleReviseUnknown = () => {
+    clearSavedProgress();
     const shuffled = shuffle(unknownDeck);
     setActiveDeck(shuffled);
     setOriginalDeck([...unknownDeck]);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
     // Clear persisted unknown deck since we're now revising it
     clearUnknownDeck('idiom');
   };
@@ -180,6 +250,8 @@ export default function IdiomSession({
 
   const handleAddDeck = () => {
     if (unknownDeck.length === 0) return;
+
+    clearSavedProgress();
 
     setSavedDecks((p) => [
       ...p,
@@ -190,15 +262,18 @@ export default function IdiomSession({
     setOriginalDeck([]);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
   };
 
   /* ---------------- SAVED DECK REVISION ---------------- */
 
   const reviseSingleDeck = (deck) => {
+    clearSavedProgress();
     setActiveDeck(deck.unknownCards);
     setOriginalDeck(deck.unknownCards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
 
     setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
     setSelectedDeckIds([]);
@@ -212,6 +287,7 @@ export default function IdiomSession({
   };
 
   const reviseSelectedDecks = () => {
+    clearSavedProgress();
     const cards = savedDecks
       .filter((d) => selectedDeckIds.includes(d.id))
       .flatMap((d) => d.unknownCards);
@@ -220,6 +296,7 @@ export default function IdiomSession({
     setOriginalDeck(cards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
 
     setSavedDecks((p) =>
       p.filter((d) => !selectedDeckIds.includes(d.id))
@@ -228,18 +305,24 @@ export default function IdiomSession({
   };
 
   const reviseAllDecks = () => {
+    clearSavedProgress();
     const cards = savedDecks.flatMap((d) => d.unknownCards);
     setActiveDeck(cards);
     setOriginalDeck(cards);
     setKnownDeck([]);
     setUnknownDeck([]);
+    setLastAction(null);
     setSavedDecks([]);
     setSelectedDeckIds([]);
   };
 
   /* ---------------- RANGE APPLY ---------------- */
 
-  const handleApplyRange = (c) => onUpdateConfig(c);
+  const handleApplyRange = (c) => {
+    clearSavedProgress();
+    setLastAction(null);
+    onUpdateConfig(c);
+  };
 
   /* ---------------- LOADING ---------------- */
 
@@ -263,6 +346,9 @@ export default function IdiomSession({
           <p>Known: {knownDeck.length} | Unknown: {unknownDeck.length}</p>
 
           <div style={{ display: "flex", gap: "14px" }}>
+            <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+              ↩ Undo Last Card
+            </button>
             {unknownDeck.length > 0 && (
               <button style={secondaryBtn} onClick={handleReviseUnknown}>
                 🔁 Revise Unknown
@@ -303,9 +389,9 @@ export default function IdiomSession({
       )}
 
       {savedDecks.length > 0 && (
-        <div style={deckPanel}>
+        <div style={deckPanel} className="flash-session-deck-panel">
           {savedDecks.map((d, i) => (
-            <div key={d.id} style={deckChip}>
+            <div key={d.id} style={deckChip} className="flash-session-deck-chip">
               <label>
                 <input
                   type="checkbox"
@@ -340,7 +426,10 @@ export default function IdiomSession({
             </div>
           ))}
 
-          <div style={{ marginLeft: "auto", display: "flex", gap: 10 }}>
+          <div
+            className="flash-session-deck-actions"
+            style={{ marginLeft: "auto", display: "flex", gap: 10 }}
+          >
             <button
               style={secondaryBtn}
               disabled={!selectedDeckIds.length}
@@ -355,11 +444,13 @@ export default function IdiomSession({
         </div>
       )}
 
-      <div style={container}>
-        <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+      <div style={container} className="flash-session-layout">
+        <div className="flash-session-stats flash-session-stats--unknown">
+          <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+        </div>
 
-        <div style={deckWrapper}>
-          <div style={deckArea}>
+        <div style={deckWrapper} className="flash-session-deck-wrapper">
+          <div style={deckArea} className="flash-session-deck-area">
             {activeDeck.slice(0, 6).map((card, index) => (
               <div
                 key={card.id}
@@ -385,17 +476,25 @@ export default function IdiomSession({
             ))}
           </div>
 
-          <div style={shuffleBar}>
+          <div style={shuffleBar} className="flash-session-controls">
             <button style={secondaryBtn} onClick={shuffleDeck}>
               🔀 Shuffle
             </button>
             <button style={secondaryBtn} onClick={unshuffleDeck}>
               ↩ Unshuffle
             </button>
+            <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+              ↩ Undo
+            </button>
+            <button style={secondaryBtn} onClick={handleSaveProgress}>
+              {isProgressSaved ? "✓ Progress Saved" : "💾 Save Progress"}
+            </button>
           </div>
         </div>
 
-        <MiniStack title="✅ Known" count={knownDeck.length} />
+        <div className="flash-session-stats flash-session-stats--summary">
+          <MiniStack title="✅ Known" count={knownDeck.length} />
+        </div>
       </div>
     </>
   );
