@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useMobile from "../hooks/useMobile";
 
 import HomonymsHomophonesFlashCard from "../components/HomonymsHomophonesFlashCard";
 import SessionNav from "../components/SessionNav";
@@ -47,6 +48,8 @@ export default function HomonymsHomophonesSession({
   onGoHome,
   onUpdateConfig,
 }) {
+  const { isMobile, isTablet } = useMobile();
+  const isCompactNav = isMobile || isTablet;
   const [savedProgress] = useState(() => loadInProgressSession("homonyms"));
   const [activeDeck, setActiveDeck] = useState(() => savedProgress?.activeDeck || []);
   const [originalDeck, setOriginalDeck] = useState(
@@ -302,6 +305,7 @@ export default function HomonymsHomophonesSession({
       <>
         <SessionNav
           mode="Cards"
+          isMobile={isCompactNav}
           config={config}
           onApplyRange={handleApplyRange}
           onGoRead={onGoRead}
@@ -379,6 +383,7 @@ export default function HomonymsHomophonesSession({
     <>
       <SessionNav
         mode="Cards"
+        isMobile={isCompactNav}
         config={config}
         onApplyRange={handleApplyRange}
         onGoRead={onGoRead}

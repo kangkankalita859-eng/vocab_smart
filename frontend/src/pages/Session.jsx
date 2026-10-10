@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useMobile from "../hooks/useMobile";
 import FlashCard from "../components/FlashCard";
 import SessionNav from "../components/SessionNav";
 import { fetchVocab } from "../services/vocabService";
@@ -50,6 +51,8 @@ export default function Session({
   onGoHome,
   onUpdateConfig,
 }) {
+  const { isMobile, isTablet } = useMobile();
+  const isCompactNav = isMobile || isTablet;
   const [savedProgress] = useState(() => loadInProgressSession("vocab"));
   const [activeDeck, setActiveDeck] = useState(() => savedProgress?.activeDeck || []);
   const [originalDeck, setOriginalDeck] = useState(
@@ -344,6 +347,7 @@ export default function Session({
       <>
         <SessionNav
           mode="Cards"
+          isMobile={isCompactNav}
           config={config}
           onApplyRange={handleApplyRange}
           onGoRead={onGoRead}
@@ -378,6 +382,7 @@ export default function Session({
     <>
       <SessionNav
         mode="Cards"
+        isMobile={isCompactNav}
         config={config}
         onApplyRange={handleApplyRange}
         onGoRead={onGoRead}

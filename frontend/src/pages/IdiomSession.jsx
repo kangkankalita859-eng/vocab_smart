@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useMobile from "../hooks/useMobile";
 import IdiomFlashCard from "../components/IdiomFlashCard";
 import SessionNav from "../components/SessionNav";
 import { fetchIdioms } from "../services/idiomsService";
@@ -49,6 +50,8 @@ export default function IdiomSession({
   onGoHome,
   onUpdateConfig,
 }) {
+  const { isMobile, isTablet } = useMobile();
+  const isCompactNav = isMobile || isTablet;
   const [savedProgress] = useState(() => loadInProgressSession("idiom"));
   const [activeDeck, setActiveDeck] = useState(() => savedProgress?.activeDeck || []);
   const [originalDeck, setOriginalDeck] = useState(
@@ -335,6 +338,7 @@ export default function IdiomSession({
       <>
         <SessionNav
           mode="Idiom Cards"
+          isMobile={isCompactNav}
           config={config}
           onApplyRange={handleApplyRange}
           onGoRead={onGoRead}
@@ -369,6 +373,7 @@ export default function IdiomSession({
     <>
       <SessionNav
         mode="Idiom Cards"
+        isMobile={isCompactNav}
         config={config}
         onApplyRange={handleApplyRange}
         onGoRead={onGoRead}

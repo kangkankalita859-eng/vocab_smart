@@ -16,11 +16,13 @@ export default function SessionNav({
   isMobile,
   onMenuToggle,
 }) {
+  const showMobileMenu = Boolean(isMobile && onMenuToggle);
+
   return (
     <div style={isMobile ? mobileNav : nav}>
       {/* LEFT : HOME + MODE */}
-      <div style={isMobile ? mobileLeft : left}>
-        {isMobile && (
+      <div style={isMobile ? { ...mobileLeft, minWidth: showMobileMenu ? "80px" : "40px" } : left}>
+        {showMobileMenu && (
           <button 
             style={{...homeBtn, marginRight: "8px"}} 
             onClick={() => onMenuToggle && onMenuToggle()}
@@ -214,7 +216,7 @@ const homeBtn = {
 const mobileNav = {
   ...nav,
   height: "50px",
-  padding: "0 8px",
+  padding: "0 4px",
   flexWrap: "nowrap",
   overflow: "hidden",
   minWidth: "100%", // Ensure full width
@@ -230,6 +232,7 @@ const mobileLeft = {
 const mobileCenter = {
   ...center,
   flex: 1,
+  gap: "4px",
   justifyContent: "center",
   minWidth: "60px",
 };
@@ -291,8 +294,9 @@ const mobileApplyBtn = {
 };
 
 const mobileInput = {
-  width: "50px",
-  padding: "4px",
+  boxSizing: "border-box",
+  width: "42px",
+  padding: "3px",
   borderRadius: "4px",
   border: "1px solid #ccc",
   fontSize: "12px",
