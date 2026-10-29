@@ -1,0 +1,8 @@
+{
+  "title": "Schedules of the Constitution",
+  "blocks": [
+    { "type": "paragraph", "text": "Schedules provide supporting details for provisions in the main text of the Constitution. They cover subjects such as the States and Union Territories, oaths, allocation of seats, and administration of certain areas." },
+    { "type": "table", "columns": ["Schedule", "Subject"], "rows": [["First", "States and Union Territories."], ["Second", "Pay and allowances of specified constitutional offices."], ["Third", "Forms of oaths and affirmations."], ["Seventh", "Union List, State List, and Concurrent List."], ["Eighth", "Languages recognized by the Constitution."], ["Tenth", "Disqualification on the ground of defection."], ["Twelfth", "Powers and responsibilities of municipalities."]] },
+    { "type": "paragraph", "text": "The Constitution currently has twelve Schedules. The table above highlights selected Schedules that are commonly discussed in introductory study notes." }
+  ]
+}

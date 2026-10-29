@@ -1,0 +1,9 @@
+{
+  "title": "Fundamental Duties",
+  "blocks": [
+    { "type": "paragraph", "text": "Fundamental Duties describe civic responsibilities of citizens. They appear in Part IVA of the Constitution and encourage respect for constitutional values and responsible participation in public life." },
+    { "type": "heading", "text": "Examples of duties" },
+    { "type": "list", "items": ["Respect the Constitution, the National Flag, and the National Anthem.", "Protect the sovereignty, unity, and integrity of India.", "Promote harmony and respect the dignity of all people.", "Protect the natural environment and show compassion for living creatures.", "Develop scientific temper, humanism, and a spirit of inquiry."] },
+    { "type": "paragraph", "text": "For exam preparation, connect the duties with the values they support: constitutional respect, national unity, social harmony, and care for the environment." }
+  ]
+}

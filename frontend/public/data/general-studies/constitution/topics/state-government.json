@@ -1,0 +1,9 @@
+{
+  "title": "State Government",
+  "blocks": [
+    { "type": "paragraph", "text": "State governments have a parliamentary structure similar to the Union, with constitutional roles for the Governor and an elected ministry led by the Chief Minister." },
+    { "type": "heading", "text": "Main parts" },
+    { "type": "list", "items": ["The Governor is the constitutional head of the State.", "The Chief Minister leads the Council of Ministers.", "The Council of Ministers is collectively responsible to the State Legislative Assembly.", "State legislatures make laws on matters assigned to them by the Constitution."] },
+    { "type": "table", "columns": ["Union level", "State level"], "rows": [["President", "Governor"], ["Prime Minister", "Chief Minister"], ["Parliament", "State Legislature"]] }
+  ]
+}

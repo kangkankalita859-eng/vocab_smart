@@ -1,0 +1,10 @@
+{
+  "title": "Union Government",
+  "blocks": [
+    { "type": "paragraph", "text": "The Union government consists of constitutional institutions that make laws, administer them, and interpret the Constitution. The parliamentary system places the Council of Ministers, led by the Prime Minister, at the centre of day-to-day executive work." },
+    { "type": "heading", "text": "Key institutions" },
+    { "type": "table", "columns": ["Institution", "Main role"], "rows": [["President", "Constitutional head of the Union; exercises functions under the Constitution."], ["Prime Minister and Council of Ministers", "Lead the Union executive and are collectively responsible to the Lok Sabha."], ["Parliament", "The President and two Houses make up Parliament; it legislates and holds government accountable."], ["Supreme Court", "The highest court in India and guardian of the Constitution."]] },
+    { "type": "heading", "text": "A useful distinction" },
+    { "type": "paragraph", "text": "The constitutional head and the political executive have different roles. Study the relevant articles and conventions together to understand how the parliamentary executive works." }
+  ]
+}

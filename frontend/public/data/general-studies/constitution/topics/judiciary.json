@@ -1,0 +1,9 @@
+{
+  "title": "The Judiciary",
+  "blocks": [
+    { "type": "paragraph", "text": "India has an integrated judicial system headed by the Supreme Court, followed by High Courts and subordinate courts. Courts resolve disputes and help uphold the Constitution and the rule of law." },
+    { "type": "heading", "text": "Functions to remember" },
+    { "type": "list", "items": ["Interpret the Constitution and laws.", "Decide disputes between individuals, governments, and institutions.", "Protect Fundamental Rights through constitutional remedies.", "Review the constitutionality of laws and executive actions."] },
+    { "type": "callout", "title": "Key idea", "text": "Judicial independence helps courts decide cases impartially and check whether public authorities act within constitutional limits." }
+  ]
+}

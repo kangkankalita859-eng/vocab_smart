@@ -1,0 +1,13 @@
+{
+  "title": "Making of the Constitution",
+  "blocks": [
+    { "type": "paragraph", 
+    "text": "The Constituent Assembly debated and framed the Constitution after independence. Its members considered India’s conditions, the freedom movement, and constitutional ideas from several countries." 
+    },
+    { "type": "heading", "text": "A brief timeline" },
+    { "type": "list", "ordered": true, "items": ["The Constituent Assembly first met in December 1946.", "The Drafting Committee was formed in 1947, with Dr. B. R. Ambedkar as its chairperson.", "The Assembly adopted the Constitution on 26 November 1949.", "The Constitution came into force on 26 January 1950."] },
+    { "type": "heading", "text": "How to study this topic" },
+    { "type": "paragraph", "text": "For revision, connect each date to the event it marks: the Assembly’s first meeting, adoption, and commencement. Adoption and commencement are different milestones." },
+    { "type": "table", "columns": ["Milestone", "Date"], "rows": [["Constituent Assembly first met", "December 1946"], ["Adoption", "26 November 1949"], ["Commencement", "26 January 1950"]] }
+  ]
+}

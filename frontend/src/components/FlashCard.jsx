@@ -35,6 +35,13 @@ export default function FlashCard({ card, onKnown, onUnknown, showActions }) {
             <div className="meaning-english">
               {card.meaning}
             </div>
+
+            {card.example && (
+              <div className="flashcard-example">
+                <span className="flashcard-example-label"></span>
+                <span>{card.example}</span>
+              </div>
+            )}
           </div>
         </div>
       </div>

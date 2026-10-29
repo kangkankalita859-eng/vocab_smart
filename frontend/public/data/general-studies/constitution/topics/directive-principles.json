@@ -1,0 +1,9 @@
+{
+  "title": "Directive Principles of State Policy",
+  "blocks": [
+    { "type": "paragraph", "text": "Directive Principles guide the state when it makes laws and policies. They express social and economic goals for governance and are intended to be applied by legislatures and governments." },
+    { "type": "heading", "text": "Commonly studied themes" },
+    { "type": "list", "items": ["Social and economic justice.", "Adequate means of livelihood and fair working conditions.", "Organization of village panchayats.", "Protection of the environment and public health.", "Promotion of international peace and security."] },
+    { "type": "callout", "title": "How they relate to rights", "text": "Fundamental Rights are enforceable in court. Directive Principles are not directly enforceable, but they guide lawmaking and governance." }
+  ]
+}

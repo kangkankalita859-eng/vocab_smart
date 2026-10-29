@@ -1,0 +1,11 @@
+{
+  "title": "The Preamble",
+  "blocks": [
+    { "type": "paragraph", "text": "The Preamble introduces the Constitution and states the ideals and objectives that guide the Indian state. It begins with the words “We, the People of India”, expressing that constitutional authority comes from the people." },
+    { "type": "heading", "text": "Key words and their meaning" },
+    { "type": "table", "columns": ["Word", "Meaning in brief"], "rows": [["Sovereign", "India is independent in its internal and external affairs."], ["Socialist", "The state aims to reduce social and economic inequality."], ["Secular", "The state treats all religions with equal respect."], ["Democratic", "People choose their representatives through elections."], ["Republic", "The head of state is elected, not a hereditary monarch."]] },
+    { "type": "heading", "text": "The objectives" },
+    { "type": "list", "items": ["Justice: social, economic and political.", "Liberty: thought, expression, belief, faith and worship.", "Equality: status and opportunity.", "Fraternity: dignity of the individual and unity of the nation."] },
+    { "type": "callout", "title": "Remember", "text": "The Preamble is a concise statement of the Constitution’s guiding values. Use its keywords to organize revision notes." }
+  ]
+}

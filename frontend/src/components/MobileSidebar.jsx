@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { constitutionTopics } from '../data/constitutionTopics';
 
 // Data structure for subjects and their subtopics
 const subjectsData = {
@@ -16,12 +17,20 @@ const subjectsData = {
   },
   gs: {
     name: '🌍 General Studies',
-    subtopics: ['Constitution of India', 'Geography', 'Polity', 'Science', 'Current Affairs']
+    subtopics: [
+      {
+        id: 'constitution',
+        name: 'Constitution of India',
+        children: constitutionTopics.map(({ id, title }) => ({ id: `constitution:${id}`, name: title })),
+      },
+      'Geography', 'Polity', 'Science', 'Current Affairs'
+    ]
   }
 };
 
 function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
   const [expandedSubject, setExpandedSubject] = useState(null);
+  const [expandedSubtopic, setExpandedSubtopic] = useState(null);
   const [selectedSubtopic, setSelectedSubtopic] = useState(null);
 
   const handleSubjectClick = (subjectKey) => {
@@ -32,9 +41,14 @@ function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
   };
 
   const handleSubtopicClick = (subtopic) => {
-    setSelectedSubtopic(subtopic);
+    if (typeof subtopic === 'object' && subtopic.children) {
+      setExpandedSubtopic(expandedSubtopic === subtopic.id ? null : subtopic.id);
+      return;
+    }
+    const id = typeof subtopic === 'object' ? subtopic.id : subtopic;
+    setSelectedSubtopic(id);
     if (onSubtopicSelect) {
-      onSubtopicSelect(subtopic);
+      onSubtopicSelect(id);
     }
     onClose();
   };
@@ -119,25 +133,40 @@ function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
                 {subject.name}
               </div>
               
-              {isExpanded && subject.subtopics.map((subtopic, index) => (
-                <div
-                  key={`${subjectKey}-subtopic-${index}`}
-                  style={{
-                    marginLeft: '10px',
-                    marginTop: '5px',
-                    padding: '12px',
-                    backgroundColor: selectedSubtopic === subtopic ? '#f3e5f5' : '#fff',
-                    border: selectedSubtopic === subtopic ? '1px solid #9c27b0' : '1px solid #e0e0e0',
-                    borderRadius: '6px',
-                    cursor: 'pointer',
-                    fontSize: '14px',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onClick={() => handleSubtopicClick(subtopic)}
-                >
-                  • {subtopic}
-                </div>
-              ))}
+              {isExpanded && subject.subtopics.map((subtopic, index) => {
+                const subtopicId = typeof subtopic === 'object' ? subtopic.id : subtopic;
+                const subtopicName = typeof subtopic === 'object' ? subtopic.name : subtopic;
+                const isNestedExpanded = expandedSubtopic === subtopicId;
+                return (
+                  <React.Fragment key={`${subjectKey}-subtopic-${subtopicId || index}`}>
+                    <div
+                      style={{
+                        marginLeft: '10px', marginTop: '5px', padding: '12px',
+                        backgroundColor: selectedSubtopic === subtopicId || isNestedExpanded ? '#f3f7ff' : '#fff',
+                        border: selectedSubtopic === subtopicId || isNestedExpanded ? '1px solid #9c27b0' : '1px solid #e0e0e0',
+                        borderRadius: '6px', cursor: 'pointer', fontSize: '14px',
+                      }}
+                      onClick={() => handleSubtopicClick(subtopic)}
+                    >
+                      • {subtopicName}{typeof subtopic === 'object' && subtopic.children ? (isNestedExpanded ? '  ▾' : '  ▸') : ''}
+                    </div>
+                    {isNestedExpanded && subtopic.children.map((child) => (
+                      <div
+                        key={child.id}
+                        style={{
+                          marginLeft: '25px', marginTop: '4px', padding: '10px',
+                          backgroundColor: selectedSubtopic === child.id ? '#f3e5f5' : '#fff',
+                          border: selectedSubtopic === child.id ? '1px solid #9c27b0' : '1px solid #e0e0e0',
+                          borderRadius: '6px', cursor: 'pointer', fontSize: '13px',
+                        }}
+                        onClick={() => handleSubtopicClick(child)}
+                      >
+                        · {child.name}
+                      </div>
+                    ))}
+                  </React.Fragment>
+                );
+              })}
             </div>
           );
         })}

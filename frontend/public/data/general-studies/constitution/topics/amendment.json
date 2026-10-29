@@ -1,0 +1,9 @@
+{
+  "title": "Amendment Procedure",
+  "blocks": [
+    { "type": "paragraph", "text": "Article 368 sets out the general procedure for amending the Constitution. Different provisions may follow different requirements, so identify the type of majority and whether State ratification is required." },
+    { "type": "heading", "text": "Broad categories for revision" },
+    { "type": "list", "items": ["Some changes are made by a simple majority of Parliament and are not treated as amendments under Article 368.", "Many constitutional amendments require a special majority in each House of Parliament.", "Changes affecting specified federal provisions also require ratification by at least half of the State Legislatures."] },
+    { "type": "callout", "title": "Exam tip", "text": "Do not treat every constitutional change as using the same voting rule. Learn examples of provisions in each category." }
+  ]
+}

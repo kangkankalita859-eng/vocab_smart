@@ -1,9 +1,11 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import MobileSidebar from "../components/MobileSidebar";
 import PYQDisplay from "../components/PYQDisplay";
 import useMobile from "../hooks/useMobile";
 import Constitution from "./Constitution";
+import StudyContent from "../components/StudyContent";
+import "../styles/study-content.css";
 
 // Data structure for subject-specific content
 const subjectContent = {
@@ -134,6 +136,13 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isMobile } = useMobile();
   const topicSectionRef = useRef(null);
+  const contentPanelRef = useRef(null);
+
+  useEffect(() => {
+    if (selectedTopic.startsWith("constitution:")) {
+      contentPanelRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [selectedTopic]);
 
   const handleSubjectSelect = (subject) => {
     setSelectedSubject(subject);
@@ -270,8 +279,13 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
       )}
       
       {/* MAIN CONTENT */}
-      <div style={content}>
-        {showPYQ ? (
+      <div ref={contentPanelRef} style={content}>
+        {selectedSubject === "gs" && selectedTopic.startsWith("constitution:") ? (
+          <StudyContent
+            topicId={selectedTopic.split(":")[1]}
+            onBack={() => setSelectedTopic("")}
+          />
+        ) : showPYQ ? (
           <PYQDisplay 
             subject={selectedSubject}
             topic={selectedTopic}

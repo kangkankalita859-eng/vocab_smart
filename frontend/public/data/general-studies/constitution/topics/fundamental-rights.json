@@ -1,0 +1,10 @@
+{
+  "title": "Fundamental Rights",
+  "blocks": [
+    { "type": "paragraph", "text": "Fundamental Rights are constitutional guarantees that protect individual liberty and equality. They place limits on public power and can be enforced through the courts, subject to the Constitution’s provisions." },
+    { "type": "heading", "text": "Six broad groups" },
+    { "type": "table", "columns": ["Group", "Articles", "Focus"], "rows": [["Right to Equality", "14–18", "Equality before law and prohibition of discrimination."], ["Right to Freedom", "19–22", "Specified freedoms and protections of life and liberty."], ["Right against Exploitation", "23–24", "Prohibits trafficking, forced labour, and certain forms of child labour."], ["Freedom of Religion", "25–28", "Freedom of conscience and religious practice, subject to limits."], ["Cultural and Educational Rights", "29–30", "Protects cultural interests and minority educational institutions."], ["Constitutional Remedies", "32", "Allows people to approach the Supreme Court to enforce rights."]] },
+    { "type": "heading", "level": 3, "text": "Revision prompt" },
+    { "type": "paragraph", "text": "When revising a right, note who it protects, what it guarantees, and whether the Constitution permits reasonable restrictions." }
+  ]
+}

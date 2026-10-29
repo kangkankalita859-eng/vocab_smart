@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { constitutionTopics } from '../data/constitutionTopics';
 
 // Data structure for subjects and their subtopics
 const subjectsData = {
@@ -16,12 +17,20 @@ const subjectsData = {
   },
   gs: {
     name: '🌍 General Studies',
-    subtopics: ['Constitution of India', 'Geography', 'Polity', 'Science', 'Current Affairs']
+    subtopics: [
+      {
+        id: 'constitution',
+        name: 'Constitution of India',
+        children: constitutionTopics.map(({ id, title }) => ({ id: `constitution:${id}`, name: title })),
+      },
+      'Geography', 'Polity', 'Science', 'Current Affairs'
+    ]
   }
 };
 
 function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
   const [expandedSubject, setExpandedSubject] = useState(null);
+  const [expandedSubtopic, setExpandedSubtopic] = useState(null);
   const [selectedSubtopic, setSelectedSubtopic] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -33,11 +42,15 @@ function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
   };
 
   const handleSubtopicClick = (subtopic) => {
-    setSelectedSubtopic(subtopic);
-    if (onSubtopicSelect) {
-      onSubtopicSelect(subtopic);
+    if (typeof subtopic === 'object' && subtopic.children) {
+      setExpandedSubtopic(expandedSubtopic === subtopic.id ? null : subtopic.id);
+      return;
     }
-    console.log('Selected subtopic:', subtopic);
+    const id = typeof subtopic === 'object' ? subtopic.id : subtopic;
+    setSelectedSubtopic(id);
+    if (onSubtopicSelect) {
+      onSubtopicSelect(id);
+    }
   };
 
   const toggleCollapse = () => {
@@ -61,7 +74,8 @@ function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
         borderRight: isCollapsed ? "none" : "1px solid #e9ecef",
         padding: isCollapsed ? "0px" : "20px",
         transition: "all 0.3s ease",
-        overflow: "hidden",
+        overflowX: "hidden",
+        overflowY: isCollapsed ? "hidden" : "auto",
         opacity: isCollapsed ? 0 : 1,
         pointerEvents: isCollapsed ? "none" : "auto",
         zIndex: 1001,
@@ -102,23 +116,38 @@ function Sidebar({ onSubjectSelect, onSubtopicSelect }) {
           }, subject.name)),
           
           // Subtopics (shown when subject is expanded)
-          ...(isExpanded ? subject.subtopics.map((subtopic, index) => 
+          ...(isExpanded ? subject.subtopics.map((subtopic, index) => {
+            const subtopicId = typeof subtopic === 'object' ? subtopic.id : subtopic;
+            const subtopicName = typeof subtopic === 'object' ? subtopic.name : subtopic;
+            const isNestedExpanded = expandedSubtopic === subtopicId;
+            return [
             React.createElement('div', {
-              key: `${subjectKey}-subtopic-${index}`,
+              key: `${subjectKey}-subtopic-${subtopicId || index}`,
               style: {
                 marginLeft: "20px",
                 marginTop: "5px",
                 padding: "8px 12px",
-                backgroundColor: selectedSubtopic === subtopic ? "#f3e5f5" : "#fff",
-                border: selectedSubtopic === subtopic ? "1px solid #9c27b0" : "1px solid #e0e0e0",
+                backgroundColor: selectedSubtopic === subtopicId || isNestedExpanded ? "#f3f7ff" : "#fff",
+                border: selectedSubtopic === subtopicId || isNestedExpanded ? "1px solid #9c27b0" : "1px solid #e0e0e0",
                 borderRadius: "6px",
                 cursor: "pointer",
                 fontSize: "14px",
                 transition: "all 0.2s ease"
               },
               onClick: () => handleSubtopicClick(subtopic)
-            }, `• ${subtopic}`)
-          ) : [])
+            }, `• ${subtopicName}${typeof subtopic === 'object' && subtopic.children ? (isNestedExpanded ? '  ▾' : '  ▸') : ''}`),
+            ...(isNestedExpanded ? subtopic.children.map((child) => React.createElement('div', {
+              key: child.id,
+              style: {
+                marginLeft: "34px", marginTop: "4px", padding: "7px 10px",
+                backgroundColor: selectedSubtopic === child.id ? "#f3e5f5" : "#fff",
+                border: selectedSubtopic === child.id ? "1px solid #9c27b0" : "1px solid #e0e0e0",
+                borderRadius: "6px", cursor: "pointer", fontSize: "13px", lineHeight: 1.35,
+              },
+              onClick: () => handleSubtopicClick(child),
+            }, `· ${child.name}`)) : [])
+          ];
+          }) : [])
         ];
       }).flat())
     ]),

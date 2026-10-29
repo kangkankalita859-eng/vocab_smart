@@ -1,0 +1,9 @@
+{
+  "title": "Emergency Provisions",
+  "blocks": [
+    { "type": "paragraph", "text": "The Constitution provides special procedures for exceptional situations that may threaten national security, constitutional governance in a State, or financial stability." },
+    { "type": "table", "columns": ["Type", "Constitutional basis", "Broad situation"], "rows": [["National Emergency", "Article 352", "War, external aggression, or armed rebellion."], ["President’s Rule in a State", "Article 356", "A State government cannot be carried on in accordance with the Constitution."], ["Financial Emergency", "Article 360", "A threat to the financial stability or credit of India or a part of it."]] },
+    { "type": "heading", "text": "What to compare" },
+    { "type": "list", "items": ["The grounds for proclamation.", "Who issues the proclamation and the role of Parliament.", "The effect on Union–State relations and fundamental rights.", "The safeguards and time limits in the relevant constitutional provisions."] }
+  ]
+}

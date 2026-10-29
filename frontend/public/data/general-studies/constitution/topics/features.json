@@ -1,0 +1,10 @@
+{
+  "title": "Salient Features of the Constitution",
+  "blocks": [
+    { "type": "paragraph", "text": "The Constitution establishes the institutions of government, distributes public powers, and sets limits that protect rights. Its framework combines a strong Union with elected governments at the Union and State levels." },
+    { "type": "heading", "text": "Major features" },
+    { "type": "list", "items": ["A written and detailed constitutional document.", "A parliamentary form of government.", "A federal system with a strong Union.", "Fundamental Rights and Directive Principles.", "An independent judiciary with power to review laws.", "A universal adult franchise for elections."] },
+    { "type": "diagram", "id": "constitution-levels-of-government", "caption": "The Constitution provides for government at Union, State, and local levels." },
+    { "type": "callout", "title": "Study connection", "text": "Link each feature to the part of the Constitution that explains it—for example, rights to Part III and Directive Principles to Part IV." }
+  ]
+}
