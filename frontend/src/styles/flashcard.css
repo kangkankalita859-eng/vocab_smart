@@ -145,6 +145,19 @@
   overflow-wrap: anywhere;
 }
 
+@media (max-width: 600px) {
+  .flashcard-back {
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .flashcard-back > * {
+    flex-shrink: 0;
+  }
+}
+
 /* ---------- SLIDE ANIMATION ---------- */
 
 .flashcard.to-known {
@@ -248,4 +261,3 @@
     transform: translateX(0) rotate(0deg);
   }
 }
-
