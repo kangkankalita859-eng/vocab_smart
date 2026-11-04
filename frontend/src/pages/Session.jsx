@@ -65,7 +65,7 @@ export default function Session({
   const [savedDecks, setSavedDecks] = useState([]);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
 
-  const [loading, setLoading] = useState(() => !savedProgress);
+  const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
   const [showPersistedNotification, setShowPersistedNotification] = useState(false);
   const [persistenceLoaded, setPersistenceLoaded] = useState(false);
@@ -127,7 +127,7 @@ export default function Session({
   }, [savedDecks, persistenceLoaded]);
 
   useEffect(() => {
-    if (!isProgressSaved) return;
+    if (!isProgressSaved || loading) return;
 
     if (activeDeck.length === 0) {
       clearInProgressSession("vocab");
@@ -139,14 +139,53 @@ export default function Session({
       { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
       "vocab"
     );
-  }, [activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, isProgressSaved]);
+  }, [activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, isProgressSaved, loading]);
 
   /* ---------------- FETCH VOCAB ---------------- */
 
   useEffect(() => {
     if (isResumingProgress) {
-      setLoading(false);
-      return;
+      let isCurrent = true;
+
+      fetchVocab(0, null)
+        .then((data) => {
+          if (!isCurrent) return;
+          if (data.status !== "success") {
+            console.error("Failed to refresh saved flashcards:", data.message);
+            setLoading(false);
+            return;
+          }
+
+          const currentCardsById = new Map(data.data.map((card) => [card.id, card]));
+          const refreshCards = (cards = []) =>
+            cards.map((card) => {
+              const currentCard = currentCardsById.get(card.id);
+              return currentCard
+                ? { ...currentCard, ...card, synonyms: currentCard.synonyms }
+                : card;
+            });
+
+          setActiveDeck(refreshCards(savedProgress.activeDeck));
+          setOriginalDeck(refreshCards(savedProgress.originalDeck || savedProgress.activeDeck));
+          setKnownDeck(refreshCards(savedProgress.knownDeck || []));
+          setUnknownDeck(refreshCards(savedProgress.unknownDeck || []));
+          if (savedProgress.lastAction?.card) {
+            setLastAction({
+              ...savedProgress.lastAction,
+              card: refreshCards([savedProgress.lastAction.card])[0],
+            });
+          }
+          setLoading(false);
+        })
+        .catch((error) => {
+          if (!isCurrent) return;
+          console.error("Failed to refresh saved flashcards:", error);
+          setLoading(false);
+        });
+
+      return () => {
+        isCurrent = false;
+      };
     }
 
     if (!config) return;
@@ -169,7 +208,7 @@ export default function Session({
         console.error('Fetch error:', error);
         setLoading(false);
       });
-  }, [config]);
+  }, [config, isResumingProgress, savedProgress]);
 
   /* ---------------- CARD ACTIONS ---------------- */
 
