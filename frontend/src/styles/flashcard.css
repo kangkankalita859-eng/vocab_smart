@@ -110,6 +110,41 @@
   text-transform: uppercase;
 }
 
+.flashcard-synonyms {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.flashcard-synonyms-label {
+  color: #6B7280;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.flashcard-synonym-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  max-height: 48px;
+  margin-top: 6px;
+  overflow-y: auto;
+}
+
+.flashcard-synonym {
+  max-width: 100%;
+  padding: 4px 8px;
+  border: 1px solid #E5E7EB;
+  border-radius: 999px;
+  background: #F9FAFB;
+  color: #4B5563;
+  font-size: 11px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
 /* ---------- SLIDE ANIMATION ---------- */
 
 .flashcard.to-known {
@@ -213,5 +248,4 @@
     transform: translateX(0) rotate(0deg);
   }
 }
-
 

@@ -204,6 +204,7 @@ export default function ReadVocab({
                 <th style={th}>Hindi</th>
                 <th style={th}>Exam Count</th>
                 <th style={th}>Example Sentence</th>
+                <th style={th}>Synonyms</th>
               </tr>
             </thead>
 
@@ -228,6 +229,13 @@ export default function ReadVocab({
                     }}
                   >
                     {item.example ? item.example : "—" }
+                  </td>
+                  <td style={{ ...td, maxWidth: "150px" }}>
+                    {item.synonyms.map((synonym, index) => (
+                      <div key={index} style={{ fontSize: "0.85rem" }}>
+                        {synonym}
+                      </div>
+                    ))}
                   </td>
                 </tr>
               ))}

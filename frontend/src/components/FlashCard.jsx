@@ -42,6 +42,19 @@ export default function FlashCard({ card, onKnown, onUnknown, showActions }) {
                 <span>{card.example}</span>
               </div>
             )}
+
+            {Array.isArray(card.synonyms) && card.synonyms.length > 0 && (
+              <section className="flashcard-synonyms" aria-label="Synonyms">
+                <span className="flashcard-synonyms-label">Synonyms</span>
+                <div className="flashcard-synonym-list">
+                  {card.synonyms.map((synonym, index) => (
+                    <span className="flashcard-synonym" key={`${synonym}-${index}`}>
+                      {synonym}
+                    </span>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         </div>
       </div>
@@ -59,5 +72,4 @@ export default function FlashCard({ card, onKnown, onUnknown, showActions }) {
     </div>
   );
 }
-
 
