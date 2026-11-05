@@ -7,7 +7,6 @@ import { fetchVocab } from "../services/vocabService";
 import { hasPersistedData, getDeckStats } from "../services/deckPersistenceService";
 
 import useMobile from "../hooks/useMobile";
-import "../styles/read-vocab.css";
 
 
 
@@ -152,7 +151,7 @@ export default function ReadVocab({
         onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
-      <div className="read-vocab-page">
+      <div style={page}>
         {/* PERSISTED DATA INFO */}
         {showPersistedInfo && (
           <div style={persistedInfo}>
@@ -193,38 +192,45 @@ export default function ReadVocab({
           </div>
         )}
         
-        <div className="read-vocab-container">
-          <h2 className="read-vocab-heading">Read & Memorize Vocabulary</h2>
+        <div style={container}>
+          <h2 style={heading}>Read & Memorize Vocabulary</h2>
 
-          <table className="read-vocab-table">
+          <table style={table}>
             <thead>
               <tr>
-                <th>SN</th>
-                <th>Phrase / Meaning</th>
-                <th>One Word</th>
-                <th>Hindi</th>
-                <th>Exam Count</th>
-                <th>Example Sentence</th>
-                <th>Synonyms</th>
+                <th style={th}>SN</th>
+                <th style={th}>Phrase / Meaning</th>
+                <th style={th}>One Word</th>
+                <th style={th}>Hindi</th>
+                <th style={th}>Exam Count</th>
+                <th style={th}>Example Sentence</th>
+                <th style={th}>Synonyms</th>
               </tr>
             </thead>
 
             <tbody>
               {displayedVocab.map((item) => (
                 <tr key={item.id}>
-                  <td data-label="SN">{item.id}</td>
-                  <td data-label="Phrase / Meaning">{item.meaning}</td>
-                  <td data-label="One Word" className="read-vocab-word">
+                  <td style={td}>{item.id}</td>
+                  <td style={td}>{item.meaning}</td>
+                  <td style={{ ...td, fontWeight: "600" }}>
                     {item.word}
                   </td>
-                  <td data-label="Hindi">{item.hindiMeaning}</td>
-                  <td data-label="Exam Count" className="read-vocab-exam-count">
+                  <td style={td}>{item.hindiMeaning}</td>
+                  <td style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
                     {Number(item.sscCount || 0)} ({Number(item.otherExamCount || 0)})
                   </td>
-                  <td data-label="Example Sentence" className="read-vocab-example">
+                  <td
+                    style={{
+                      ...td,
+                      fontStyle: "italic",
+                      color: "#444",
+                      maxWidth: "300px",
+                    }}
+                  >
                     {item.example ? item.example : "—" }
                   </td>
-                  <td data-label="Synonyms">
+                  <td style={{ ...td, maxWidth: "150px" }}>
                     {item.synonyms.map((synonym, index) => (
                       <div key={index} style={{ fontSize: "0.85rem" }}>
                         {synonym}
@@ -261,7 +267,45 @@ export default function ReadVocab({
 
 /* ---------------- STYLES ---------------- */
 
+const page = {
+  minHeight: "calc(100vh - 60px)",
+  background: "#f5f5f5",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  paddingTop: "80px",
+  marginLeft: "0px",
+};
 
+const container = {
+  width: "95%",
+  maxWidth: "1200px",
+  padding: "24px",
+  boxSizing: "border-box",
+};
+
+const heading = {
+  marginBottom: "16px",
+};
+
+const table = {
+  width: "100%",
+  borderCollapse: "collapse",
+  fontSize: "14px",
+};
+
+const th = {
+  border: "1px solid #ccc",
+  padding: "8px",
+  background: "#eee",
+  textAlign: "left",
+};
+
+const td = {
+  border: "1px solid #ccc",
+  padding: "8px",
+  verticalAlign: "top",
+};
 
 const persistedInfo = {
   background: "#e3f2fd",
@@ -319,8 +363,6 @@ const persistedInfoButton = {
   fontWeight: "500",
   transition: "background 0.2s ease",
 };
-
-
 
 
 
