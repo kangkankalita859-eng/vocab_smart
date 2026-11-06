@@ -22,8 +22,10 @@ import "../styles/session.css";
 function MiniStack({ title, count }) {
   return (
     <div style={miniStack}>
-      <h4>{title}</h4>
-      <div style={{ position: "relative", height: "90px", margin: "8px 0" }}>
+      <h4>
+        <span>{count}</span> {title}
+      </h4>
+      <div style={{ position: "relative", width: "90px", height: "90px", margin: "8px auto" }}>
         {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
           <div
             key={i}
@@ -31,12 +33,11 @@ function MiniStack({ title, count }) {
               ...miniCard,
               top: i * 6,
               left: i * 4,
-              zIndex: i,
+              zIndex: Math.min(count, 5) - i,
             }}
           />
         ))}
       </div>
-      <p>{count}</p>
     </div>
   );
 }
@@ -504,7 +505,7 @@ export default function Session({
           style={{ ...stats, marginTop: "120px" }}
           className="flash-session-stats flash-session-stats--unknown"
         >
-          <MiniStack title="❌ Unknown" count={unknownDeck.length} />
+          <MiniStack title="Unknown" count={unknownDeck.length} />
         </div>
 
         <div style={deckWrapper} className="flash-session-deck-wrapper">
@@ -601,7 +602,7 @@ const miniStack = { width: 140, textAlign: "center" };
 const miniCard = {
   position: "absolute",
   width: 70,
-  height: 45,
+  height: 59,
   background: "#e0e0e0",
   borderRadius: 6,
   boxShadow: "0 3px 8px rgba(0,0,0,.2)",
