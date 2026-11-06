@@ -35,29 +35,26 @@
     margin-top: 0 !important;
   }
 
-  .flash-session-stats--unknown {
-    display: contents;
+  .flash-session-stats--unknown,
+  .flash-session-stats--summary {
+    display: contents !important;
+  }
+
+  .flash-session-mini-stack--unknown {
+    grid-area: unknown;
+  }
+
+  .flash-session-mini-stack--known {
+    grid-area: known;
+  }
+
+  .flash-session-mini-stack--remaining {
+    grid-area: remaining;
   }
 
   .flash-session-deck-wrapper {
     grid-area: deck;
     width: 100%;
-  }
-
-  .flash-session-stats--summary {
-    display: contents;
-  }
-
-  .flash-session-stats--unknown > div {
-    grid-area: unknown;
-  }
-
-  .flash-session-stats--summary > div:first-child {
-    grid-area: known;
-  }
-
-  .flash-session-stats--summary > div:last-child {
-    grid-area: remaining;
   }
 
   .flash-session-deck-area {
@@ -76,15 +73,8 @@
     column-gap: 4px;
   }
 
-  .flash-session-stats--unknown > div {
+  .flash-session-mini-stack {
     width: 100% !important;
-  }
-
-  .flash-session-stats--summary > div {
-    width: 100% !important;
-  }
-
-  .flash-session-stats > div {
     box-sizing: border-box;
     min-width: 0;
   }

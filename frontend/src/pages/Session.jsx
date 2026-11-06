@@ -19,9 +19,9 @@ import "../styles/session.css";
 
 /* ---------------- MINI STACK ---------------- */
 
-function MiniStack({ title, count }) {
+function MiniStack({ title, count, className }) {
   return (
-    <div style={miniStack}>
+    <div style={miniStack} className={`flash-session-mini-stack ${className}`}>
       <h4>
         <span>{count}</span> {title}
       </h4>
@@ -505,7 +505,7 @@ export default function Session({
           style={{ ...stats, marginTop: "120px" }}
           className="flash-session-stats flash-session-stats--unknown"
         >
-          <MiniStack title="Unknown" count={unknownDeck.length} />
+          <MiniStack title="Unknown" count={unknownDeck.length} className="flash-session-mini-stack--unknown" />
         </div>
 
         <div style={deckWrapper} className="flash-session-deck-wrapper">
@@ -552,8 +552,8 @@ export default function Session({
         </div>
 
         <div style={stats} className="flash-session-stats flash-session-stats--summary">
-          <MiniStack title="Known" count={knownDeck.length} />
-          <MiniStack title="Remaining" count={activeDeck.length} />
+          <MiniStack title="Known" count={knownDeck.length} className="flash-session-mini-stack--known" />
+          <MiniStack title="Remaining" count={activeDeck.length} className="flash-session-mini-stack--remaining" />
         </div>
       </div>
     </>
