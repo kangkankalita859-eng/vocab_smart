@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { constitutionTopics } from '../data/constitutionTopics';
 
 // Data structure for subjects and their subtopics
@@ -33,6 +33,26 @@ function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
   const [expandedSubtopic, setExpandedSubtopic] = useState(null);
   const [selectedSubtopic, setSelectedSubtopic] = useState(null);
 
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
   const handleSubjectClick = (subjectKey) => {
     setExpandedSubject(expandedSubject === subjectKey ? null : subjectKey);
     if (onSubjectSelect) {
@@ -58,18 +78,16 @@ function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
   return (
     <div style={{
       position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100vw',
-      height: '100vh',
+      inset: 0,
       backgroundColor: 'rgba(0, 0, 0, 0.5)',
       zIndex: 2000,
       display: 'flex'
     }}>
 
       <div style={{
-        width: '280px',
-        height: '100vh',
+        width: 'min(280px, 85vw)',
+        height: '100%',
+        boxSizing: 'border-box',
         backgroundColor: '#f8f9fa',
         borderRight: '1px solid #e9ecef',
         borderLeft: 'none',
@@ -172,13 +190,7 @@ function MobileSidebar({ isOpen, onClose, onSubjectSelect, onSubtopicSelect }) {
         })}
       </div>
       
-      <div
-        style={{
-          flex: 1,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        }}
-        onClick={onClose}
-      />
+      <div style={{ flex: 1 }} onClick={onClose} />
     </div>
   );
 }

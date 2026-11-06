@@ -151,7 +151,7 @@ export default function ReadVocab({
         onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
-      <div style={page}>
+      <div style={{ ...page, background: isMobile ? "#fff" : page.background }}>
         {/* PERSISTED DATA INFO */}
         {showPersistedInfo && (
           <div style={persistedInfo}>
@@ -363,7 +363,6 @@ const persistedInfoButton = {
   fontWeight: "500",
   transition: "background 0.2s ease",
 };
-
 
 
 
