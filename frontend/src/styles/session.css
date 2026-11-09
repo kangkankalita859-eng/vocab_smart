@@ -102,3 +102,68 @@
     flex: 1;
   }
 }
+
+.flash-vocab-deck-panel {
+  flex-wrap: nowrap !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  overflow: hidden;
+}
+
+.flash-vocab-deck-scroll {
+  display: flex;
+  flex: 1 1 0;
+  gap: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+
+.flash-vocab-deck-chip {
+  flex: 0 0 170px;
+  width: auto !important;
+  min-width: 170px;
+}
+
+.flash-vocab-deck-chip--main {
+  flex-basis: 150px;
+  min-width: 150px;
+}
+
+.flash-vocab-deck-chip button {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.flash-vocab-deck-card-actions {
+  min-width: 0;
+}
+
+.flash-vocab-deck-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flash-vocab-deck-actions button {
+  min-width: 116px;
+}
+
+@media (max-width: 600px) {
+  .flash-vocab-deck-chip {
+    flex: 0 0 150px;
+    min-width: 150px;
+    padding: 7px !important;
+  }
+
+  .flash-vocab-deck-chip--main {
+    flex-basis: 130px;
+    min-width: 130px;
+  }
+}

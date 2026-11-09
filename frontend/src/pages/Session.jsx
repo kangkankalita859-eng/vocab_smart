@@ -1,23 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import useMobile from "../hooks/useMobile";
 import FlashCard from "../components/FlashCard";
 import SessionNav from "../components/SessionNav";
 import { fetchVocab } from "../services/vocabService";
 import {
-  saveUnknownDeck,
   loadUnknownDeck,
-  saveSavedDecks,
   loadSavedDecks,
-  clearUnknownDeck,
-  clearInProgressSession,
   loadInProgressSession,
-  saveInProgressSession,
-  hasPersistedData
 } from "../services/deckPersistenceService";
+import {
+  activateVocabDeck,
+  classifyVocabCard,
+  createVocabDeckCollection,
+  extractVocabRange,
+  getVocabDeckSessionCards,
+  loadVocabDeckCollection,
+  mergeVocabDecks,
+  removeVocabDeck,
+  reorderVocabDeckSession,
+  saveVocabDeckCollection,
+  undoVocabDeckAction,
+} from "../services/vocabDeckCollectionService";
 import shuffle from "../utils/shuffle";
 import "../styles/session.css";
-
-/* ---------------- MINI STACK ---------------- */
 
 function MiniStack({ title, count, className }) {
   return (
@@ -26,14 +31,14 @@ function MiniStack({ title, count, className }) {
         <span>{count}</span> {title}
       </h4>
       <div style={{ position: "relative", width: "90px", height: "90px", margin: "8px auto" }}>
-        {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
+        {Array.from({ length: Math.min(count, 5) }).map((_, index) => (
           <div
-            key={i}
+            key={index}
             style={{
               ...miniCard,
-              top: i * 6,
-              left: i * 4,
-              zIndex: Math.min(count, 5) - i,
+              top: index * 6,
+              left: index * 4,
+              zIndex: Math.min(count, 5) - index,
             }}
           />
         ))}
@@ -41,8 +46,6 @@ function MiniStack({ title, count, className }) {
     </div>
   );
 }
-
-/* ---------------- MAIN SESSION ---------------- */
 
 export default function Session({
   config,
@@ -54,369 +57,317 @@ export default function Session({
 }) {
   const { isMobile, isTablet } = useMobile();
   const isCompactNav = isMobile || isTablet;
-  const [savedProgress] = useState(() => loadInProgressSession("vocab"));
-  const [activeDeck, setActiveDeck] = useState(() => savedProgress?.activeDeck || []);
-  const [originalDeck, setOriginalDeck] = useState(
-    () => savedProgress?.originalDeck || savedProgress?.activeDeck || []
-  );
-  const [knownDeck, setKnownDeck] = useState(() => savedProgress?.knownDeck || []);
-  const [unknownDeck, setUnknownDeck] = useState(() => savedProgress?.unknownDeck || []);
-  const [lastAction, setLastAction] = useState(() => savedProgress?.lastAction || null);
-
-  const [savedDecks, setSavedDecks] = useState([]);
+  const collectionRef = useRef(null);
+  const [collection, setCollection] = useState(null);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
-
+  const [deckPanelVisible, setDeckPanelVisible] = useState(true);
   const [loading, setLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
-  const [showPersistedNotification, setShowPersistedNotification] = useState(false);
-  const [persistenceLoaded, setPersistenceLoaded] = useState(false);
-  const [isResumingProgress, setIsResumingProgress] = useState(() => Boolean(savedProgress));
-  const [isProgressSaved, setIsProgressSaved] = useState(() => Boolean(savedProgress));
-
-  /* ---------------- LOAD PERSISTED DATA ---------------- */
+  const [isProgressSaved, setIsProgressSaved] = useState(true);
+  const [notice, setNotice] = useState("");
+  const [persistenceError, setPersistenceError] = useState("");
 
   useEffect(() => {
-    // Load persisted data on component mount
-    const persistedUnknownDeck = loadUnknownDeck('vocab');
-    const persistedSavedDecks = loadSavedDecks('vocab');
-    
-    if (isResumingProgress) {
-      setSavedDecks(persistedSavedDecks);
-      setPersistenceLoaded(true);
-      return;
-    }
+    let isCurrent = true;
 
-    if (persistedUnknownDeck.length > 0 || persistedSavedDecks.length > 0) {
-      setUnknownDeck(persistedUnknownDeck);
-      setSavedDecks(persistedSavedDecks);
-      
-      // If user is coming from "Go to Flash Cards" to review unknown deck
-      if (reviewUnknownDeck && persistedUnknownDeck.length > 0) {
-        setActiveDeck(persistedUnknownDeck);
-        setOriginalDeck(persistedUnknownDeck);
-        setKnownDeck([]);
-        setUnknownDeck([]);
-        
-        // Clear persisted unknown deck since we're now using it
-        clearUnknownDeck('vocab');
-      } else {
-        setShowPersistedNotification(true);
-        
-        // Hide notification after 5 seconds
-        setTimeout(() => {
-          setShowPersistedNotification(false);
-        }, 5000);
-      }
-    }
-    setPersistenceLoaded(true);
-  }, [reviewUnknownDeck]);
-
-  /* ---------------- AUTO-SAVE UNKNOWN DECK ---------------- */
-
-  useEffect(() => {
-    if (!persistenceLoaded) return;
-    // Auto-save unknown deck whenever it changes
-    saveUnknownDeck(unknownDeck, 'vocab');
-  }, [unknownDeck, persistenceLoaded]);
-
-  /* ---------------- AUTO-SAVE SAVED DECKS ---------------- */
-
-  useEffect(() => {
-    if (!persistenceLoaded) return;
-    // Auto-save saved decks whenever they change
-    saveSavedDecks(savedDecks, 'vocab');
-  }, [savedDecks, persistenceLoaded]);
-
-  useEffect(() => {
-    if (!isProgressSaved || loading) return;
-
-    if (activeDeck.length === 0) {
-      clearInProgressSession("vocab");
-      setIsProgressSaved(false);
-      return;
-    }
-
-    saveInProgressSession(
-      { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
-      "vocab"
-    );
-  }, [activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, isProgressSaved, loading]);
-
-  /* ---------------- FETCH VOCAB ---------------- */
-
-  useEffect(() => {
-    if (isResumingProgress) {
-      let isCurrent = true;
-
-      fetchVocab(0, null)
-        .then((data) => {
-          if (!isCurrent) return;
-          if (data.status !== "success") {
-            console.error("Failed to refresh saved flashcards:", data.message);
-            setLoading(false);
-            return;
+    const initialize = async () => {
+      try {
+        let next = loadVocabDeckCollection();
+        if (!next) {
+          const response = await fetchVocab(0, null);
+          if (response.status !== "success") {
+            throw new Error(response.message || "Unable to load vocabulary.");
           }
 
-          const currentCardsById = new Map(data.data.map((card) => [card.id, card]));
-          const refreshCards = (cards = []) =>
-            cards.map((card) => {
-              const currentCard = currentCardsById.get(card.id);
-              return currentCard
-                ? { ...currentCard, ...card, synonyms: currentCard.synonyms }
-                : card;
-            });
-
-          setActiveDeck(refreshCards(savedProgress.activeDeck));
-          setOriginalDeck(refreshCards(savedProgress.originalDeck || savedProgress.activeDeck));
-          setKnownDeck(refreshCards(savedProgress.knownDeck || []));
-          setUnknownDeck(refreshCards(savedProgress.unknownDeck || []));
-          if (savedProgress.lastAction?.card) {
-            setLastAction({
-              ...savedProgress.lastAction,
-              card: refreshCards([savedProgress.lastAction.card])[0],
-            });
+          next = createVocabDeckCollection(response.data, {
+            unknownDeck: loadUnknownDeck("vocab"),
+            savedDecks: loadSavedDecks("vocab"),
+            inProgressSession: loadInProgressSession("vocab"),
+          });
+          const initialRange = extractVocabRange(next, config);
+          next = initialRange.collection;
+          if (reviewUnknownDeck) {
+            const unknownDeck = next.decks.find(
+              (deck) => deck.kind === "unknown" && deck.cards.length > 0
+            );
+            if (unknownDeck) next = activateVocabDeck(next, unknownDeck.id);
           }
-          setLoading(false);
-        })
-        .catch((error) => {
-          if (!isCurrent) return;
-          console.error("Failed to refresh saved flashcards:", error);
-          setLoading(false);
-        });
-
-      return () => {
-        isCurrent = false;
-      };
-    }
-
-    if (!config) return;
-
-    setLoading(true);
-    fetchVocab(config.start, config.limit)
-      .then((data) => {
-        if (data.status === 'success') {
-          setActiveDeck(data.data);
-          setOriginalDeck(data.data);
+          if (initialRange.extractedCount === 0 && !next.activeDeckId) {
+            next.activeDeckId =
+              next.decks.find((deck) => deck.kind === "current" && deck.cards.length)?.id ||
+              next.decks.find((deck) => deck.kind !== "main" && deck.cards.length)?.id ||
+              null;
+          }
+          saveVocabDeckCollection(next);
+          if (next.history.some((event) => event.type === "legacy-import")) {
+            setNotice("Your previously saved vocabulary decks were restored.");
+          }
         } else {
-          console.error('API Error:', data.message);
+          const requestedUnknownDeck = reviewUnknownDeck
+            ? next.decks.find(
+                (deck) =>
+                  deck.kind === "unknown" &&
+                  deck.cards.length > 0
+              )
+            : null;
+          if (requestedUnknownDeck) {
+            next = activateVocabDeck(next, requestedUnknownDeck.id);
+            saveVocabDeckCollection(next);
+          } else if (!next.activeDeckId) {
+            const availableDeck =
+              next.decks.find((deck) => deck.kind === "current" && deck.cards.length > 0) ||
+              next.decks.find((deck) => deck.kind !== "main" && deck.cards.length > 0);
+            if (availableDeck) {
+              next = activateVocabDeck(next, availableDeck.id);
+              saveVocabDeckCollection(next);
+            } else {
+              const extracted = extractVocabRange(next, config);
+              next = extracted.collection;
+              if (extracted.extractedCount > 0) saveVocabDeckCollection(next);
+            }
+          }
         }
-        setKnownDeck([]);
-        setUnknownDeck([]);
-        setLastAction(null);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Fetch error:', error);
-        setLoading(false);
-      });
-  }, [config, isResumingProgress, savedProgress]);
 
-  /* ---------------- CARD ACTIONS ---------------- */
+        if (isCurrent) {
+          collectionRef.current = next;
+          setCollection(next);
+        }
+      } catch (error) {
+        console.error("Failed to load saved vocabulary decks:", error);
+        if (isCurrent) setPersistenceError(error.message);
+      } finally {
+        if (isCurrent) setLoading(false);
+      }
+    };
 
-  const handleKnown = () => {
-    const card = activeDeck[0];
-    if (!card) return;
-    setKnownDeck((p) => [...p, card]);
-    setActiveDeck((p) => p.slice(1));
-    setLastAction({ card, deck: "known" });
+    initialize();
+    return () => {
+      isCurrent = false;
+    };
+  }, []);
+
+  const activeDeck = collection?.decks.find(
+    (deck) => deck.id === collection.activeDeckId
+  );
+  const activeSession = collection?.sessions.find(
+    (session) => session.sourceDeckId === collection.activeDeckId
+  );
+  const activeCards = useMemo(
+    () =>
+      collection && collection.activeDeckId
+        ? getVocabDeckSessionCards(collection, collection.activeDeckId)
+        : [],
+    [collection]
+  );
+  const visibleDecks = collection
+    ? [
+        ...collection.decks.filter((deck) => deck.kind === "main"),
+        ...collection.decks.filter(
+          (deck) => deck.kind !== "main" && deck.cards.length > 0
+        ),
+      ]
+    : [];
+  const lastAction = activeSession?.lastAction || null;
+  const isDeckFinished = Boolean(activeDeck && activeCards.length === 0);
+
+  const commit = (next) => {
+    try {
+      saveVocabDeckCollection(next);
+      collectionRef.current = next;
+      setCollection(next);
+      setPersistenceError("");
+      setIsProgressSaved(true);
+      return true;
+    } catch (error) {
+      console.error("Failed to save vocabulary deck changes:", error);
+      setPersistenceError(`Could not save deck changes: ${error.message}`);
+      return false;
+    }
   };
 
-  const handleUnknown = () => {
-    const card = activeDeck[0];
-    if (!card) return;
-    setUnknownDeck((p) => [...p, card]);
-    setActiveDeck((p) => p.slice(1));
-    setLastAction({ card, deck: "unknown" });
+  const handleApplyRange = (range) => {
+    onUpdateConfig(range);
+    const currentCollection = collectionRef.current;
+    if (!currentCollection) return;
+
+    const result = extractVocabRange(currentCollection, range);
+    if (result.matchedCount === 0) {
+      setNotice("No cards in this range are available to move into Current Deck.");
+      return;
+    }
+    setSelectedDeckIds([]);
+    setNotice(
+      result.extractedCount > 0
+        ? `${result.extractedCount} cards gathered into Current Deck.`
+        : "Matching cards are already in Current Deck."
+    );
+    commit(result.collection);
+  };
+
+  const reviseDeck = (deck) => {
+    if (deck.kind === "main") return;
+    const currentCollection = collectionRef.current;
+    if (!currentCollection) return;
+    commit(activateVocabDeck(currentCollection, deck.id));
+    setIsProgressSaved(true);
+  };
+
+  const handleKnown = (cardId, deckId) => {
+    const currentCollection = collectionRef.current;
+    const card = currentCollection && getVocabDeckSessionCards(currentCollection, deckId)[0];
+    if (card && currentCollection.activeDeckId === deckId && card.id === cardId) {
+      commit(classifyVocabCard(currentCollection, deckId, cardId, "known"));
+    }
+  };
+
+  const handleUnknown = (cardId, deckId) => {
+    const currentCollection = collectionRef.current;
+    const card = currentCollection && getVocabDeckSessionCards(currentCollection, deckId)[0];
+    if (card && currentCollection.activeDeckId === deckId && card.id === cardId) {
+      commit(classifyVocabCard(currentCollection, deckId, cardId, "unknown"));
+    }
   };
 
   const handleUndo = () => {
-    if (!lastAction) return;
-
-    setActiveDeck((p) => [lastAction.card, ...p]);
-    if (lastAction.deck === "known") {
-      setKnownDeck((p) => p.slice(0, -1));
-    } else {
-      setUnknownDeck((p) => p.slice(0, -1));
+    const currentCollection = collectionRef.current;
+    const currentSession = currentCollection?.sessions.find(
+      (session) => session.sourceDeckId === currentCollection.activeDeckId
+    );
+    if (currentCollection?.activeDeckId && currentSession?.lastAction) {
+      commit(undoVocabDeckAction(currentCollection, currentCollection.activeDeckId));
     }
-    setLastAction(null);
   };
 
   const handleSaveProgress = () => {
-    if (activeDeck.length === 0) return;
+    if (collectionRef.current) commit(collectionRef.current);
+  };
 
-    const saved = saveInProgressSession(
-      { activeDeck, originalDeck, knownDeck, unknownDeck, lastAction, savedAt: Date.now() },
-      "vocab"
+  const handleRemoveDeck = (deck) => {
+    if (deck.kind === "main") return;
+    const confirmed = window.confirm(
+      `Remove ${deck.name}? Its ${deck.cards.length} remaining cards will return to Main Deck.`
     );
-    setIsProgressSaved(saved);
+    if (!confirmed) return;
+
+    setSelectedDeckIds((ids) => ids.filter((id) => id !== deck.id));
+    if (collectionRef.current) {
+      commit(removeVocabDeck(collectionRef.current, deck.id));
+    }
   };
 
-  const clearSavedProgress = () => {
-    clearInProgressSession("vocab");
-    setIsProgressSaved(false);
-    setIsResumingProgress(false);
+  const handleMerge = () => {
+    const currentCollection = collectionRef.current;
+    if (!currentCollection || selectedDeckIds.length < 2) return;
+    const result = mergeVocabDecks(currentCollection, selectedDeckIds);
+    if (!result.mergedDeckId) return;
+    setSelectedDeckIds([]);
+    setNotice("Selected decks were merged into a new independent deck.");
+    commit(result.collection);
   };
 
-  /* ---------------- SHUFFLE (ANIMATED) ---------------- */
+  const handleReviseSelected = () => {
+    if (selectedDeckIds.length !== 1) return;
+    const deck = visibleDecks.find((item) => item.id === selectedDeckIds[0]);
+    if (deck && deck.kind !== "main") reviseDeck(deck);
+  };
 
   const shuffleDeck = () => {
-    if (activeDeck.length <= 1) return;
-
+    const currentCollection = collectionRef.current;
+    const deckId = currentCollection?.activeDeckId;
+    const cards = currentCollection && deckId
+      ? getVocabDeckSessionCards(currentCollection, deckId)
+      : [];
+    if (cards.length <= 1 || !deckId) return;
     setIsShuffling(true);
-
-    setTimeout(() => {
-      const shuffled = shuffle(activeDeck);
-      setActiveDeck(shuffled);
+    window.setTimeout(() => {
+      const latestCollection = collectionRef.current;
+      if (latestCollection?.activeDeckId === deckId) {
+        const latestCards = getVocabDeckSessionCards(latestCollection, deckId);
+        commit(
+          reorderVocabDeckSession(latestCollection, deckId, shuffle(latestCards))
+        );
+      }
       setIsShuffling(false);
     }, 650);
   };
 
   const unshuffleDeck = () => {
-    setActiveDeck(originalDeck);
-    setLastAction(null);
-  };
-
-  /* ---------------- REVISION ---------------- */
-
-  const handleReviseUnknown = () => {
-    clearSavedProgress();
-    const shuffled = shuffle(unknownDeck);
-    setActiveDeck(shuffled);
-    setOriginalDeck([...unknownDeck]);
-    setKnownDeck([]);
-    setUnknownDeck([]);
-    setLastAction(null);
-    
-    // Clear persisted unknown deck since we're now using it
-    clearUnknownDeck('vocab');
-  };
-
-  /* ---------------- SAVE DECK ---------------- */
-
-  const handleAddDeck = () => {
-    if (unknownDeck.length === 0) return;
-
-    clearSavedProgress();
-
-    const newSavedDecks = [
-      ...savedDecks,
-      { id: Date.now(), unknownCards: [...unknownDeck] },
-    ];
-    
-    setSavedDecks(newSavedDecks);
-    
-    setActiveDeck([]);
-    setOriginalDeck([]);
-    setKnownDeck([]);
-    setUnknownDeck([]);
-    setLastAction(null);
-    
-    // Clear persisted unknown deck since it's now saved
-    clearUnknownDeck('vocab');
-    
-    // Auto-save is handled by useEffect
-  };
-
-  /* ---------------- SAVED DECK REVISION ---------------- */
-
-  const reviseSingleDeck = (deck) => {
-    clearSavedProgress();
-    setActiveDeck(deck.unknownCards);
-    setOriginalDeck(deck.unknownCards);
-    setKnownDeck([]);
-    setUnknownDeck([]);
-    setLastAction(null);
-
-    setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
-    setSelectedDeckIds([]);
-  };
-
-  const removeDeck = (deck) => {
-    if (window.confirm(`Are you sure you want to remove Deck ${savedDecks.indexOf(deck) + 1} with ${deck.unknownCards.length} cards?`)) {
-      setSavedDecks((p) => p.filter((d) => d.id !== deck.id));
-      setSelectedDeckIds((p) => p.filter((id) => id !== deck.id));
-    }
-  };
-
-  const reviseSelectedDecks = () => {
-    clearSavedProgress();
-    const cards = savedDecks
-      .filter((d) => selectedDeckIds.includes(d.id))
-      .flatMap((d) => d.unknownCards);
-
-    setActiveDeck(cards);
-    setOriginalDeck(cards);
-    setKnownDeck([]);
-    setUnknownDeck([]);
-    setLastAction(null);
-
-    setSavedDecks((p) =>
-      p.filter((d) => !selectedDeckIds.includes(d.id))
+    const currentCollection = collectionRef.current;
+    const deckId = currentCollection?.activeDeckId;
+    const deck = currentCollection?.decks.find((item) => item.id === deckId);
+    if (!deckId || !deck) return;
+    commit(
+      reorderVocabDeckSession(currentCollection, deckId, deck.cards)
     );
-    setSelectedDeckIds([]);
   };
-
-  const reviseAllDecks = () => {
-    clearSavedProgress();
-    const cards = savedDecks.flatMap((d) => d.unknownCards);
-    setActiveDeck(cards);
-    setOriginalDeck(cards);
-    setKnownDeck([]);
-    setUnknownDeck([]);
-    setLastAction(null);
-    setSavedDecks([]);
-    setSelectedDeckIds([]);
-  };
-
-  /* ---------------- RANGE APPLY ---------------- */
-
-  const handleApplyRange = (c) => {
-    clearSavedProgress();
-    setLastAction(null);
-    onUpdateConfig(c);
-  };
-
-  /* ---------------- LOADING ---------------- */
 
   if (loading) return <p style={{ textAlign: "center" }}>Loading…</p>;
 
-  /* ---------------- DECK FINISHED ---------------- */
-
-  if (activeDeck.length === 0 && originalDeck.length > 0) {
-    return (
-      <>
-        <SessionNav
-          mode="Cards"
-          isMobile={isCompactNav}
-          config={config}
-          onApplyRange={handleApplyRange}
-          onGoRead={onGoRead}
-          onGoHome={onGoHome}
-        />
-
-        <div style={center}>
-          <h2>Deck Finished</h2>
-          <p>Known: {knownDeck.length} | Unknown: {unknownDeck.length}</p>
-
-          <div style={{ display: "flex", gap: "14px" }}>
-            <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
-              ↩ Undo Last Card
-            </button>
-            {unknownDeck.length > 0 && (
-              <button style={secondaryBtn} onClick={handleReviseUnknown}>
-                🔁 Revise Unknown
-              </button>
+  const deckManager = (
+    <div style={deckPanel} className="flash-session-deck-panel flash-vocab-deck-panel">
+      <div className="flash-vocab-deck-scroll">
+        {visibleDecks.map((deck) => (
+          <div
+            key={deck.id}
+            style={deckChip}
+            className={`flash-session-deck-chip flash-vocab-deck-chip${deck.kind === "main" ? " flash-vocab-deck-chip--main" : ""}`}
+          >
+            <label style={deckLabel}>
+              <input
+                type="checkbox"
+                checked={selectedDeckIds.includes(deck.id)}
+                onChange={(event) =>
+                  setSelectedDeckIds((ids) =>
+                    event.target.checked
+                      ? [...ids, deck.id]
+                      : ids.filter((id) => id !== deck.id)
+                  )
+                }
+              />
+              <strong>{deck.name}</strong>
+            </label>
+            <div style={deckCount}>🗂️ {deck.cards.length} cards</div>
+            {deck.kind !== "main" && (
+              <div
+                style={deckCardActions}
+                className="flash-vocab-deck-card-actions"
+              >
+                <button style={deckActionBtn} onClick={() => reviseDeck(deck)}>
+                  ▶ Revise
+                </button>
+                <button
+                  style={removeBtn}
+                  onClick={() => handleRemoveDeck(deck)}
+                >
+                  Remove
+                </button>
+              </div>
             )}
-            <button style={primaryBtn} onClick={handleAddDeck}>
-              ➕ Add Deck
-            </button>
           </div>
-        </div>
-      </>
-    );
-  }
-
-  /* ---------------- UI ---------------- */
+        ))}
+      </div>
+      <div className="flash-vocab-deck-actions">
+        <button
+          style={secondaryBtn}
+          disabled={
+            selectedDeckIds.length !== 1 ||
+            visibleDecks.find((deck) => deck.id === selectedDeckIds[0])?.kind === "main"
+          }
+          title="Select one saved deck to revise; select two or more decks to merge."
+          onClick={handleReviseSelected}
+        >
+          Revise Selected
+        </button>
+        <button
+          style={primaryBtn}
+          disabled={selectedDeckIds.length < 2}
+          onClick={handleMerge}
+        >
+          Merge
+        </button>
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -427,168 +378,160 @@ export default function Session({
         onApplyRange={handleApplyRange}
         onGoRead={onGoRead}
         onGoHome={onGoHome}
+        deckPanelVisible={deckPanelVisible}
+        onToggleDeckPanel={() => setDeckPanelVisible((visible) => !visible)}
       />
 
-      {/* PERSISTED DATA NOTIFICATION */}
-      {showPersistedNotification && (
-        <div style={notification}>
-          <span>📚 Previous unknown deck data restored!</span>
-          <button 
-            style={notificationClose}
-            onClick={() => setShowPersistedNotification(false)}
+      {deckPanelVisible && deckManager}
+
+      {(notice || persistenceError) && (
+        <div style={persistenceError ? errorNotice : statusNotice} role="status">
+          {persistenceError || notice}
+          <button
+            style={noticeClose}
+            aria-label="Dismiss message"
+            onClick={() => {
+              setNotice("");
+              setPersistenceError("");
+            }}
           >
             ✕
           </button>
         </div>
       )}
 
-      {/* DECK PANEL - OUTSIDE CONTAINER */}
-      {savedDecks.length > 0 && (
-        <div style={deckPanel} className="flash-session-deck-panel">
-          {savedDecks.map((d, i) => (
-            <div key={d.id} style={deckChip} className="flash-session-deck-chip">
-              <label>
-                <input
-                  type="checkbox"
-                  checked={selectedDeckIds.includes(d.id)}
-                  onChange={(e) =>
-                    setSelectedDeckIds((p) =>
-                      e.target.checked
-                        ? [...p, d.id]
-                        : p.filter((id) => id !== d.id)
-                    )
-                  }
-                />
-                <strong style={{ marginLeft: 6 }}>Deck {i + 1}</strong>
-              </label>
-
-              <div style={{ fontSize: 12 }}>❌ {d.unknownCards.length}</div>
-
-              <div style={{ display: "flex", gap: "6px", marginTop: 6 }}>
-                <button
-                  style={{ ...secondaryBtn, flex: 1 }}
-                  onClick={() => reviseSingleDeck(d)}
-                >
-                  ▶ Revise
-                </button>
-                <button
-                  style={{ ...secondaryBtn, backgroundColor: "#ffebee", borderColor: "#f44336", color: "#c62828", flex: 1 }}
-                  onClick={() => removeDeck(d)}
-                >
-                  🗑️ Remove
-                </button>
-              </div>
-            </div>
-          ))}
-
+      {isDeckFinished ? (
+        <div style={center}>
+          <h2>Deck Finished</h2>
+          <p>
+            Known: {activeSession?.knownCount || 0} | Unknown:{" "}
+            {activeSession?.unknownCount || 0}
+          </p>
+          <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+            ↩ Undo Last Card
+          </button>
+        </div>
+      ) : (
+        <div style={container} className="flash-session-layout">
           <div
-            className="flash-session-deck-actions"
-            style={{ marginLeft: "auto", display: "flex", gap: 10 }}
+            style={{ ...stats, marginTop: deckPanelVisible ? "120px" : "60px" }}
+            className="flash-session-stats flash-session-stats--unknown"
           >
-            <button
-              style={secondaryBtn}
-              disabled={!selectedDeckIds.length}
-              onClick={reviseSelectedDecks}
-            >
-              🔀 Revise Selected
-            </button>
-            <button style={primaryBtn} onClick={reviseAllDecks}>
-              🔁 Revise All
-            </button>
+            <MiniStack
+              title="Unknown"
+              count={activeSession?.unknownCount || 0}
+              className="flash-session-mini-stack--unknown"
+            />
+          </div>
+
+          <div style={deckWrapper} className="flash-session-deck-wrapper">
+            <div style={deckArea} className="flash-session-deck-area">
+              {activeCards.slice(0, 6).map((card, index) => (
+                <div
+                  key={card.id}
+                  style={{
+                    position: "absolute",
+                    top: index * 10 + (isShuffling ? Math.random() * 12 : 0),
+                    left: index * 8 + (isShuffling ? Math.random() * 24 - 12 : 0),
+                    transform: isShuffling
+                      ? `rotate(${Math.random() * 20 - 10}deg)`
+                      : "rotate(0deg)",
+                    transition: "all 0.65s cubic-bezier(.4,0,.2,1)",
+                    zIndex: 100 - index,
+                    pointerEvents: index === 0 ? "auto" : "none",
+                  }}
+                >
+                  <FlashCard
+                    card={card}
+                    onKnown={() => handleKnown(card.id, collection.activeDeckId)}
+                    onUnknown={() => handleUnknown(card.id, collection.activeDeckId)}
+                    showActions={index === 0}
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div style={shuffleBar} className="flash-session-controls">
+              <button style={secondaryBtn} onClick={shuffleDeck}>
+                🔀 Shuffle
+              </button>
+              <button style={secondaryBtn} onClick={unshuffleDeck}>
+                ↩️ Unshuffle
+              </button>
+              <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+                ↩ Undo
+              </button>
+              <button style={secondaryBtn} onClick={handleSaveProgress}>
+                {isProgressSaved ? "✓ Progress Saved" : "💾 Save Progress"}
+              </button>
+            </div>
+          </div>
+
+          <div style={stats} className="flash-session-stats flash-session-stats--summary">
+            <MiniStack
+              title="Known"
+              count={activeSession?.knownCount || 0}
+              className="flash-session-mini-stack--known"
+            />
+            <MiniStack
+              title="Remaining"
+              count={activeCards.length}
+              className="flash-session-mini-stack--remaining"
+            />
           </div>
         </div>
       )}
-
-      {/* MAIN CONTAINER */}
-      <div style={container} className="flash-session-layout">
-        <div
-          style={{ ...stats, marginTop: "120px" }}
-          className="flash-session-stats flash-session-stats--unknown"
-        >
-          <MiniStack title="Unknown" count={unknownDeck.length} className="flash-session-mini-stack--unknown" />
-        </div>
-
-        <div style={deckWrapper} className="flash-session-deck-wrapper">
-          <div style={deckArea} className="flash-session-deck-area">
-            {activeDeck.slice(0, 6).map((card, index) => (
-              <div
-                key={card.id}
-                style={{
-                  position: "absolute",
-                  top: index * 10 + (isShuffling ? Math.random() * 12 : 0),
-                  left: index * 8 + (isShuffling ? Math.random() * 24 - 12 : 0),
-                  transform: isShuffling
-                    ? `rotate(${Math.random() * 20 - 10}deg)`
-                    : "rotate(0deg)",
-                  transition: "all 0.65s cubic-bezier(.4,0,.2,1)",
-                  zIndex: 100 - index,
-                  pointerEvents: index === 0 ? "auto" : "none",
-                }}
-              >
-                <FlashCard
-                  card={card}
-                  onKnown={handleKnown}
-                  onUnknown={handleUnknown}
-                  showActions={index === 0}
-                />
-              </div>
-            ))}
-          </div>
-
-          <div style={shuffleBar} className="flash-session-controls">
-            <button style={secondaryBtn} onClick={shuffleDeck}>
-              🔀 Shuffle
-            </button>
-            <button style={secondaryBtn} onClick={unshuffleDeck}>
-              ↩️ Unshuffle
-            </button>
-            <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
-              ↩ Undo
-            </button>
-            <button style={secondaryBtn} onClick={handleSaveProgress}>
-              {isProgressSaved ? "✓ Progress Saved" : "💾 Save Progress"}
-            </button>
-          </div>
-        </div>
-
-        <div style={stats} className="flash-session-stats flash-session-stats--summary">
-          <MiniStack title="Known" count={knownDeck.length} className="flash-session-mini-stack--known" />
-          <MiniStack title="Remaining" count={activeDeck.length} className="flash-session-mini-stack--remaining" />
-        </div>
-      </div>
     </>
   );
 }
 
-/* ---------------- STYLES ---------------- */
-
 const deckPanel = {
   display: "flex",
-  gap: 10,
-  padding: "10px 24px",
+  gap: 8,
+  padding: "8px 12px",
   borderBottom: "1px solid #ddd",
   background: "#fafafa",
   alignItems: "center",
-  marginTop: "60px", // Add margin to avoid navbar overlap
+  marginTop: "60px",
   position: "relative",
   zIndex: 999,
+  minWidth: 0,
 };
 
 const deckChip = {
-  padding: "6px 10px",
+  padding: "7px 10px",
   borderRadius: 6,
   background: "#e3f2fd",
   fontSize: 12,
-  minWidth: 120,
+};
+
+const deckLabel = {
+  display: "flex",
+  gap: 6,
+  alignItems: "center",
+  whiteSpace: "nowrap",
+};
+
+const deckCount = {
+  fontSize: 12,
+  marginTop: 4,
+  whiteSpace: "nowrap",
+};
+
+const deckCardActions = {
+  display: "flex",
+  gap: 4,
+  marginTop: 6,
+  minWidth: 0,
 };
 
 const container = {
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "flex-start", // Change from center to flex-start
+  alignItems: "flex-start",
   height: "calc(100vh - 60px)",
   padding: 40,
-  paddingTop: "80px", // Ensure content clears 60px navbar
+  paddingTop: "80px",
 };
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
@@ -623,6 +566,7 @@ const primaryBtn = {
   background: "#1976d2",
   color: "#fff",
   cursor: "pointer",
+  whiteSpace: "nowrap",
 };
 
 const secondaryBtn = {
@@ -631,40 +575,54 @@ const secondaryBtn = {
   border: "1px solid #aaa",
   background: "#fff",
   cursor: "pointer",
+  whiteSpace: "nowrap",
+};
+
+const deckActionBtn = {
+  ...secondaryBtn,
+  padding: "7px 4px",
+  fontSize: 11,
+  minWidth: 0,
+};
+
+const removeBtn = {
+  ...deckActionBtn,
+  color: "#c62828",
+  backgroundColor: "#ffebee",
+  borderColor: "#f44336",
 };
 
 const stats = {
   display: "flex",
   flexDirection: "column",
   gap: 20,
-  marginTop: "100px", // Add top margin to align with flashcard area
+  marginTop: "100px",
 };
 
-const notification = {
+const statusNotice = {
   position: "fixed",
-  top: "70px",
+  top: "126px",
   left: "50%",
   transform: "translateX(-50%)",
-  background: "#4caf50",
-  color: "white",
-  padding: "12px 20px",
-  borderRadius: "8px",
-  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+  background: "#e3f2fd",
+  color: "#174a73",
+  padding: "10px 14px",
+  borderRadius: 8,
   zIndex: 1001,
   display: "flex",
   alignItems: "center",
-  gap: "12px",
-  fontSize: "14px",
-  fontWeight: "500",
+  gap: 12,
 };
 
-const notificationClose = {
-  background: "rgba(255,255,255,0.2)",
+const errorNotice = {
+  ...statusNotice,
+  background: "#ffebee",
+  color: "#b71c1c",
+};
+
+const noticeClose = {
+  background: "transparent",
   border: "none",
-  color: "white",
-  borderRadius: "4px",
-  padding: "4px 8px",
   cursor: "pointer",
-  fontSize: "12px",
-  fontWeight: "bold",
+  color: "inherit",
 };

@@ -15,6 +15,8 @@ export default function SessionNav({
   onToggleSortByExamFrequency,
   isMobile,
   onMenuToggle,
+  deckPanelVisible,
+  onToggleDeckPanel,
 }) {
   const showMobileMenu = Boolean(isMobile && onMenuToggle);
 
@@ -48,7 +50,7 @@ export default function SessionNav({
         <input
           type="number"
           placeholder="End"
-          defaultValue={config?.limit}
+          defaultValue={mode === "Cards" ? (config?.rangeEnd ?? config?.limit) : config?.limit}
           id="limitInput"
           style={isMobile ? mobileInput : input}
         />
@@ -62,7 +64,11 @@ export default function SessionNav({
               document.getElementById("limitInput").value
             );
             const limit = end - start + 1; // Calculate correct limit
-            onApplyRange({ start, limit });
+            onApplyRange(
+              mode === "Cards"
+                ? { start, limit, rangeEnd: end }
+                : { start, limit }
+            );
           }}
         >
           Apply
@@ -107,6 +113,33 @@ export default function SessionNav({
         >
           🃏 {isMobile ? "Cards" : "Flash Cards"}
         </button>
+        {mode.includes("Cards") && onToggleDeckPanel && (
+          <button
+            style={isMobile ? mobileDeckToggleBtn : linkBtn}
+            onClick={onToggleDeckPanel}
+            aria-expanded={Boolean(deckPanelVisible)}
+            aria-label={deckPanelVisible ? "Hide deck bar" : "Show deck bar"}
+            title={deckPanelVisible ? "Hide decks" : "Show decks"}
+          >
+            {isMobile ? (
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d={deckPanelVisible ? "m6 15 6-6 6 6" : "m6 9 6 6 6-6"} />
+              </svg>
+            ) : (
+              deckPanelVisible ? "Hide Deck Bar" : "Show Deck Bar"
+            )}
+          </button>
+        )}
         {onGoTest && (
           <button
             style={isMobile ? mobileLinkBtn : (mode === "Test" ? activeBtn : linkBtn)}
@@ -281,6 +314,16 @@ const mobileLinkBtn = {
   flexShrink: "0", // Prevent shrinking
 };
 
+const mobileDeckToggleBtn = {
+  ...mobileLinkBtn,
+  minWidth: "38px",
+  minHeight: "36px",
+  padding: "4px 8px",
+  border: "1px solid #d5dce5",
+  background: "#f8fafc",
+  color: "#475569",
+};
+
 const mobileApplyBtn = {
   padding: "6px 8px",
   borderRadius: "6px",
@@ -315,7 +358,3 @@ const mobileFilterPill = {
   userSelect: "none",
   whiteSpace: "nowrap",
 };
-
-
-
-
