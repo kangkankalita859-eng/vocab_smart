@@ -6,6 +6,99 @@
   box-sizing: border-box;
 }
 
+.flash-session {
+  min-height: calc(100vh + 16px);
+  margin: -8px;
+  background: #fff;
+  color: #111827;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.flash-session--dark {
+  color-scheme: dark;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.flash-session--dark .flash-session-deck-panel,
+.flash-session--dark .flash-session-deck-chip {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #e5e7eb;
+}
+
+.flash-session--dark .flash-session-deck-panel button,
+.flash-session--dark .flash-session-controls button {
+  border-color: #4b5563 !important;
+  background: #273449 !important;
+  color: #e5e7eb !important;
+}
+
+.flash-session--dark .flash-session-deck-panel button:hover,
+.flash-session--dark .flash-session-controls button:hover {
+  background: #374151 !important;
+}
+
+.flash-session--dark .flash-session-remove-button {
+  background: #482b32 !important;
+  border-color: #7f3b46 !important;
+  color: #fca5a5 !important;
+}
+
+.flash-session--dark .flash-session-deck-panel input,
+.flash-session--dark .flash-session-controls input,
+.flash-session--dark .flash-session-nav input {
+  color-scheme: dark;
+}
+
+.flash-session--dark input {
+  border-color: #4b5563 !important;
+  background-color: #1f2937 !important;
+  color: #e5e7eb !important;
+}
+
+.flash-session--dark .unknown-btn,
+.flash-session--dark .known-btn {
+  background: #1f2937;
+}
+
+.flash-session--dark .flash-session-mini-stack > div > div {
+  background: #374151 !important;
+}
+
+.flash-session--dark [role="status"] {
+  background: #1e3a5f !important;
+  color: #dbeafe !important;
+}
+
+.flash-session--dark .flash-session-notice--error {
+  background: #4a252b !important;
+  color: #fecaca !important;
+}
+
+.flash-session--dark .flashcard-front,
+.flash-session--dark .flashcard-back {
+  background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+  border-color: #374151;
+}
+
+.flash-session--dark .flashcard-front h2,
+.flash-session--dark .meaning-english,
+.flash-session--dark .flashcard-example {
+  color: #f3f4f6;
+}
+
+.flash-session--dark .flashcard-example-label,
+.flash-session--dark .flashcard-synonyms-label {
+  color: #9ca3af;
+}
+
+.flash-session--dark .flashcard-synonym {
+  border-color: #4b5563;
+  background: #273449;
+  color: #d1d5db;
+}
+
 .flash-session-controls {
   flex-wrap: wrap;
   justify-content: center;

@@ -66,6 +66,13 @@ export default function Session({
   const [isProgressSaved, setIsProgressSaved] = useState(true);
   const [notice, setNotice] = useState("");
   const [persistenceError, setPersistenceError] = useState("");
+  const [isDarkTheme, setIsDarkTheme] = useState(
+    () => localStorage.getItem("vocab-theme") === "dark"
+  );
+
+  useEffect(() => {
+    localStorage.setItem("vocab-theme", isDarkTheme ? "dark" : "light");
+  }, [isDarkTheme]);
 
   useEffect(() => {
     let isCurrent = true;
@@ -337,6 +344,7 @@ export default function Session({
                 </button>
                 <button
                   style={removeBtn}
+                  className="flash-session-remove-button"
                   onClick={() => handleRemoveDeck(deck)}
                 >
                   Remove
@@ -370,10 +378,12 @@ export default function Session({
   );
 
   return (
-    <>
+    <div className={`flash-session${isDarkTheme ? " flash-session--dark" : ""}`}>
       <SessionNav
         mode="Cards"
         isMobile={isCompactNav}
+        isDarkTheme={isDarkTheme}
+        onToggleTheme={() => setIsDarkTheme((isDark) => !isDark)}
         config={config}
         onApplyRange={handleApplyRange}
         onGoRead={onGoRead}
@@ -385,7 +395,11 @@ export default function Session({
       {deckPanelVisible && deckManager}
 
       {(notice || persistenceError) && (
-        <div style={persistenceError ? errorNotice : statusNotice} role="status">
+        <div
+          style={persistenceError ? errorNotice : statusNotice}
+          className={persistenceError ? "flash-session-notice--error" : ""}
+          role="status"
+        >
           {persistenceError || notice}
           <button
             style={noticeClose}
@@ -481,7 +495,7 @@ export default function Session({
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

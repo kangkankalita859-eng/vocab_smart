@@ -17,11 +17,20 @@ export default function SessionNav({
   onMenuToggle,
   deckPanelVisible,
   onToggleDeckPanel,
+  isDarkTheme,
+  onToggleTheme,
 }) {
   const showMobileMenu = Boolean(isMobile && onMenuToggle);
 
   return (
-    <div style={isMobile ? mobileNav : nav}>
+    <div
+      className="flash-session-nav"
+      style={
+        isMobile
+          ? { ...mobileNav, ...(isDarkTheme ? darkNav : {}) }
+          : { ...nav, ...(isDarkTheme ? darkNav : {}) }
+      }
+    >
       {/* LEFT : HOME + MODE */}
       <div style={isMobile ? { ...mobileLeft, minWidth: showMobileMenu ? "80px" : "40px" } : left}>
         {showMobileMenu && (
@@ -146,6 +155,22 @@ export default function SessionNav({
             onClick={onGoTest}
           >
             {isMobile ? "📝 Test" : (testLabel || "📝 Test")}
+          </button>
+        )}
+        {onToggleTheme && (
+          <button
+            style={
+              isMobile
+                ? { ...mobileLinkBtn, ...themeToggleBtn }
+                : { ...linkBtn, ...themeToggleBtn }
+            }
+            onClick={onToggleTheme}
+            aria-label={`Switch to ${isDarkTheme ? "light" : "dark"} theme`}
+            aria-pressed={Boolean(isDarkTheme)}
+            title={`Switch to ${isDarkTheme ? "light" : "dark"} theme`}
+          >
+            {isDarkTheme ? "☀️" : "🌙"}
+            {!isMobile && ` ${isDarkTheme ? "Light" : "Dark"}`}
           </button>
         )}
       </div>
@@ -356,5 +381,16 @@ const mobileFilterPill = {
   cursor: "pointer",
   fontSize: "10px",
   userSelect: "none",
+  whiteSpace: "nowrap",
+};
+
+const darkNav = {
+  background: "#111827",
+  color: "#f3f4f6",
+  borderBottom: "1px solid #374151",
+  boxShadow: "0 2px 4px rgba(0,0,0,0.35)",
+};
+
+const themeToggleBtn = {
   whiteSpace: "nowrap",
 };
