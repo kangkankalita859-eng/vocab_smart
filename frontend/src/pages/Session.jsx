@@ -9,6 +9,10 @@ import {
   loadInProgressSession,
 } from "../services/deckPersistenceService";
 import {
+  loadCloudVocabCollection,
+  saveCloudVocabCollection,
+} from "../services/cloudProgressService";
+import {
   activateVocabDeck,
   classifyVocabCard,
   createVocabDeckCollection,
@@ -23,6 +27,8 @@ import {
 } from "../services/vocabDeckCollectionService";
 import shuffle from "../utils/shuffle";
 import "../styles/session.css";
+
+const VOCAB_LOCAL_OWNER_KEY = "vocab_deck_collection_owner";
 
 function MiniStack({ title, count, className }) {
   return (
@@ -48,6 +54,7 @@ function MiniStack({ title, count, className }) {
 }
 
 export default function Session({
+  user,
   config,
   reviewUnknownDeck,
   onComplete,
@@ -58,6 +65,7 @@ export default function Session({
   const { isMobile, isTablet } = useMobile();
   const isCompactNav = isMobile || isTablet;
   const collectionRef = useRef(null);
+  const saveVersionRef = useRef(0);
   const [collection, setCollection] = useState(null);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
   const [deckPanelVisible, setDeckPanelVisible] = useState(true);
@@ -79,7 +87,17 @@ export default function Session({
 
     const initialize = async () => {
       try {
-        let next = loadVocabDeckCollection();
+        const cloudCollection = await loadCloudVocabCollection(user.id);
+        const localOwner = localStorage.getItem(VOCAB_LOCAL_OWNER_KEY);
+        const canUseLocalProgress = !localOwner || localOwner === user.id;
+        let next;
+        if (cloudCollection) {
+          saveVocabDeckCollection(cloudCollection);
+          next = loadVocabDeckCollection();
+        } else {
+          next = canUseLocalProgress ? loadVocabDeckCollection() : null;
+        }
+
         if (!next) {
           const response = await fetchVocab(0, null);
           if (response.status !== "success") {
@@ -87,9 +105,11 @@ export default function Session({
           }
 
           next = createVocabDeckCollection(response.data, {
-            unknownDeck: loadUnknownDeck("vocab"),
-            savedDecks: loadSavedDecks("vocab"),
-            inProgressSession: loadInProgressSession("vocab"),
+            unknownDeck: canUseLocalProgress ? loadUnknownDeck("vocab") : [],
+            savedDecks: canUseLocalProgress ? loadSavedDecks("vocab") : [],
+            inProgressSession: canUseLocalProgress
+              ? loadInProgressSession("vocab")
+              : null,
           });
           const initialRange = extractVocabRange(next, config);
           next = initialRange.collection;
@@ -135,6 +155,17 @@ export default function Session({
           }
         }
 
+        saveVocabDeckCollection(next);
+        localStorage.setItem(VOCAB_LOCAL_OWNER_KEY, user.id);
+        try {
+          await saveCloudVocabCollection(user.id, next);
+        } catch (error) {
+          if (isCurrent) {
+            setPersistenceError(`Could not sync vocabulary progress: ${error.message}`);
+            setIsProgressSaved(false);
+          }
+        }
+
         if (isCurrent) {
           collectionRef.current = next;
           setCollection(next);
@@ -151,7 +182,7 @@ export default function Session({
     return () => {
       isCurrent = false;
     };
-  }, []);
+  }, [user.id]);
 
   const activeDeck = collection?.decks.find(
     (deck) => deck.id === collection.activeDeckId
@@ -183,7 +214,22 @@ export default function Session({
       collectionRef.current = next;
       setCollection(next);
       setPersistenceError("");
-      setIsProgressSaved(true);
+      setIsProgressSaved(false);
+      const saveVersion = saveVersionRef.current + 1;
+      saveVersionRef.current = saveVersion;
+      saveCloudVocabCollection(user.id, next)
+        .then(() => {
+          if (saveVersionRef.current === saveVersion) {
+            setIsProgressSaved(true);
+            setPersistenceError("");
+          }
+        })
+        .catch((error) => {
+          console.error("Failed to sync vocabulary progress:", error);
+          if (saveVersionRef.current === saveVersion) {
+            setPersistenceError(`Could not sync vocabulary progress: ${error.message}`);
+          }
+        });
       return true;
     } catch (error) {
       console.error("Failed to save vocabulary deck changes:", error);
@@ -216,7 +262,6 @@ export default function Session({
     const currentCollection = collectionRef.current;
     if (!currentCollection) return;
     commit(activateVocabDeck(currentCollection, deck.id));
-    setIsProgressSaved(true);
   };
 
   const handleKnown = (cardId, deckId) => {

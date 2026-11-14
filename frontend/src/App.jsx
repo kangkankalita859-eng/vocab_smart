@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import Login from "./pages/Login";
+import { authService } from "./services/authService";
+import { isSupabaseConfigured } from "./services/supabaseClient";
 import Home from "./pages/Home";
 import Session from "./pages/Session";
 import ReadVocab from "./pages/ReadVocab";
@@ -38,6 +41,76 @@ import "./styles/flashcard.css";
 window.setAppStage = null;
 
 export default function App() {
+  const [user, setUser] = useState(null);
+  const [authReady, setAuthReady] = useState(false);
+  const [authError, setAuthError] = useState("");
+
+  useEffect(() => {
+    if (!isSupabaseConfigured) {
+      setAuthReady(true);
+      return undefined;
+    }
+
+    let active = true;
+    const { data: { subscription } } = authService.onAuthStateChange((_event, session) => {
+      if (active) {
+        setUser(session?.user || null);
+        setAuthError("");
+      }
+    });
+
+    authService.getSession()
+      .then(({ data, error }) => {
+        if (error) throw error;
+        if (active) setUser(data.session?.user || null);
+      })
+      .catch((error) => {
+        if (active) setAuthError(`Could not check your sign-in status: ${error.message}`);
+      })
+      .finally(() => {
+        if (active) setAuthReady(true);
+      });
+
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  if (!isSupabaseConfigured) return <Login />;
+  if (!authReady) return <p style={{ textAlign: "center", marginTop: 48 }}>Checking sign-in…</p>;
+  if (!user) {
+    return (
+      <>
+        <Login />
+        {authError && <p role="alert" style={authErrorStyle}>{authError}</p>}
+      </>
+    );
+  }
+
+  const handleLogout = async () => {
+    const { error } = await authService.logout();
+    if (error) setAuthError(`Could not sign out: ${error.message}`);
+  };
+
+  return (
+    <>
+      <AppNavigation user={user} />
+      <div style={accountMenu}>
+        <span
+          title={user.email}
+          style={{ maxWidth: "min(42vw, 260px)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
+        >
+          {user.email}
+        </span>
+        <button type="button" onClick={handleLogout} style={logoutButton}>Sign out</button>
+        {authError && <span role="alert">{authError}</span>}
+      </div>
+    </>
+  );
+}
+
+function AppNavigation({ user }) {
   const [stage, setStage] = useState("home");
   const [config, setConfig] = useState({ start: 0, limit: 20 });
   const [reviewUnknownDeck, setReviewUnknownDeck] = useState(false);
@@ -166,6 +239,7 @@ export default function App() {
   if (stage === "session")
     return (
       <Session
+        user={user}
         config={config}
         reviewUnknownDeck={reviewUnknownDeck}
         onComplete={() => setStage("complete")}
@@ -523,3 +597,41 @@ export default function App() {
 
   return <Complete />;
 }
+
+const accountMenu = {
+  position: "fixed",
+  right: 12,
+  bottom: 12,
+  zIndex: 2000,
+  display: "flex",
+  alignItems: "center",
+  gap: 8,
+  maxWidth: "calc(100vw - 24px)",
+  padding: "8px 10px",
+  border: "1px solid #d5dce5",
+  borderRadius: 10,
+  background: "#fff",
+  color: "#334155",
+  boxShadow: "0 3px 12px rgba(0,0,0,.12)",
+  fontSize: 12,
+};
+
+const logoutButton = {
+  padding: "6px 9px",
+  border: "1px solid #cbd5e1",
+  borderRadius: 6,
+  background: "#fff",
+  color: "inherit",
+  cursor: "pointer",
+};
+
+const authErrorStyle = {
+  position: "fixed",
+  left: "50%",
+  bottom: 18,
+  transform: "translateX(-50%)",
+  padding: 12,
+  borderRadius: 8,
+  background: "#ffebee",
+  color: "#b71c1c",
+};

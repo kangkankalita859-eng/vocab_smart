@@ -47,8 +47,17 @@ Features:
 ## Environment Variables
 
 ### Frontend (.env.local)
-Copy `frontend/.env.example` to `frontend/.env.local` and configure:
-- No backend dependencies required
+Copy `frontend/.env.example` to `frontend/.env.local` and add your Supabase project URL and anon key.
+
+### Cloud flashcard sync setup
+
+1. Create a Supabase project and enable email sign-in in **Authentication → Providers**.
+2. In **Authentication → URL Configuration**, set the site URL to your deployed app and add the local and deployed app URLs as allowed redirect URLs.
+3. Run [`supabase/schema.sql`](./supabase/schema.sql) in the Supabase SQL Editor.
+4. Copy the project URL and anon key into `frontend/.env.local` as `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. Add the same variables to your Vercel project settings for production.
+5. Restart/redeploy the frontend. Sign in with an email link; use the same email on each device.
+
+Vocabulary deck collections are saved to the signed-in user's protected cloud row. Existing unassigned local vocabulary decks are uploaded for the first account that opens the flashcard session on that browser; later accounts cannot claim another account's marked local data. Later saves sync automatically. Do not put a Supabase `service_role` key in frontend variables.
 
 ## Technologies Used
 
