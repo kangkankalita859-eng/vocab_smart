@@ -116,12 +116,14 @@ export default function SessionNav({
             📘 {isMobile ? "Vocab" : "Vocab List"}
           </button>
         )}
-        <button
-          style={isMobile ? mobileLinkBtn : (mode === "Cards" ? activeBtn : linkBtn)}
-          onClick={onGoCards}
-        >
-          🃏 {isMobile ? "Cards" : "Flash Cards"}
-        </button>
+        {!mode.includes("Cards") && (
+          <button
+            style={isMobile ? mobileLinkBtn : linkBtn}
+            onClick={onGoCards}
+          >
+            🃏 {isMobile ? "Cards" : "Flash Cards"}
+          </button>
+        )}
         {mode.includes("Cards") && onToggleDeckPanel && (
           <button
             style={isMobile ? mobileDeckToggleBtn : linkBtn}
@@ -189,7 +191,7 @@ const nav = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  padding: "0 24px",
+  padding: "0 68px 0 24px",
   borderBottom: "1px solid #e0e0e0",
   background: "#ffffff",
   zIndex: 1000,
@@ -274,7 +276,7 @@ const homeBtn = {
 const mobileNav = {
   ...nav,
   height: "50px",
-  padding: "0 4px",
+  padding: "0 62px 0 4px",
   flexWrap: "nowrap",
   overflow: "hidden",
   minWidth: "100%", // Ensure full width
@@ -291,7 +293,7 @@ const mobileCenter = {
   ...center,
   flex: 1,
   gap: "4px",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   minWidth: "60px",
 };
 
@@ -305,7 +307,7 @@ const mobileRight = {
   scrollbarWidth: "thin", // Thin scrollbar for better UX
   msOverflowStyle: "none", // Hide scrollbar in IE/Edge
   minWidth: "0", // Allow shrinking
-  maxWidth: "60%", // Limit max width to prevent overlap
+  maxWidth: "calc(60% - 58px)", // Leave room for the fixed account button
   "&::-webkit-scrollbar": {
     height: "4px", // Thin horizontal scrollbar
   },
