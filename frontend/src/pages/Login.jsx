@@ -4,32 +4,68 @@ import { isSupabaseConfigured } from "../services/supabaseClient";
 
 export default function Login() {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [mode, setMode] = useState("login");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-  const [isSending, setIsSending] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setMessage("");
     setError("");
-    setIsSending(true);
+    setIsSubmitting(true);
 
     try {
-      const { error: loginError } = await authService.login(email.trim());
-      if (loginError) throw loginError;
-      setMessage("Check your email for a secure sign-in link. Open it on this device to continue.");
-    } catch (loginError) {
-      setError(loginError.message || "Unable to send a sign-in link.");
+      if (mode === "reset") {
+        const { error: resetError } = await authService.requestPasswordReset(email.trim());
+        if (resetError) throw resetError;
+        setMessage("If an account exists for that email, a password reset link is on its way.");
+      } else if (mode === "signup") {
+        if (password !== confirmPassword) {
+          throw new Error("Passwords do not match.");
+        }
+        const { data, error: signUpError } = await authService.signUp(
+          email.trim(),
+          password
+        );
+        if (signUpError) throw signUpError;
+        setMessage(
+          data.session
+            ? "Your account has been created."
+            : "Account created. If sign-in is not immediate, turn off email confirmation in Supabase Auth settings."
+        );
+      } else {
+        const { error: loginError } = await authService.login(email.trim(), password);
+        if (loginError) throw loginError;
+      }
+    } catch (submitError) {
+      setError(submitError.message || "Unable to complete your request.");
     } finally {
-      setIsSending(false);
+      setIsSubmitting(false);
     }
+  };
+
+  const setFormMode = (nextMode) => {
+    setMode(nextMode);
+    setMessage("");
+    setError("");
+    setPassword("");
+    setConfirmPassword("");
   };
 
   return (
     <main style={page}>
       <section style={card}>
         <h1 style={{ marginTop: 0 }}>Vocab Smart</h1>
-        <p>Sign in with the same email on each device to sync your vocabulary flashcards.</p>
+        <p>
+          {mode === "signup"
+            ? "Create an account with your email and a password."
+            : mode === "reset"
+              ? "Enter your email and we’ll send a password reset link."
+              : "Sign in with your email and password."}
+        </p>
         {!isSupabaseConfigured ? (
           <div role="alert" style={errorBox}>
             Cloud sign-in is not configured. Add <code>VITE_SUPABASE_URL</code> and{" "}
@@ -47,12 +83,67 @@ export default function Login() {
               onChange={(event) => setEmail(event.target.value)}
               style={input}
             />
-            <button type="submit" disabled={isSending} style={button}>
-              {isSending ? "Sending…" : "Email me a sign-in link"}
+            {mode !== "reset" && (
+              <>
+                <label htmlFor="login-password" style={label}>Password</label>
+                <input
+                  id="login-password"
+                  type="password"
+                  autoComplete={mode === "signup" ? "new-password" : "current-password"}
+                  required
+                  minLength={6}
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  style={input}
+                />
+              </>
+            )}
+            {mode === "signup" && (
+              <>
+                <label htmlFor="confirm-password" style={label}>Confirm password</label>
+                <input
+                  id="confirm-password"
+                  type="password"
+                  autoComplete="new-password"
+                  required
+                  minLength={6}
+                  value={confirmPassword}
+                  onChange={(event) => setConfirmPassword(event.target.value)}
+                  style={input}
+                />
+              </>
+            )}
+            <button type="submit" disabled={isSubmitting} style={button}>
+              {isSubmitting
+                ? "Please wait…"
+                : mode === "signup"
+                  ? "Create account"
+                  : mode === "reset"
+                    ? "Send reset link"
+                    : "Sign in"}
             </button>
             {message && <p role="status" style={successBox}>{message}</p>}
             {error && <p role="alert" style={errorBox}>{error}</p>}
           </form>
+        )}
+        {isSupabaseConfigured && (
+          <div style={authActions}>
+            {mode === "login" && (
+              <>
+                <button type="button" style={textButton} onClick={() => setFormMode("reset")}>
+                  Forgot password?
+                </button>
+                <button type="button" style={textButton} onClick={() => setFormMode("signup")}>
+                  Create an account
+                </button>
+              </>
+            )}
+            {mode !== "login" && (
+              <button type="button" style={textButton} onClick={() => setFormMode("login")}>
+                Back to sign in
+              </button>
+            )}
+          </div>
         )}
       </section>
     </main>
@@ -99,6 +190,23 @@ const button = {
   color: "#fff",
   fontSize: 15,
   fontWeight: 600,
+  cursor: "pointer",
+};
+
+const authActions = {
+  display: "flex",
+  justifyContent: "space-between",
+  gap: 12,
+  flexWrap: "wrap",
+  marginTop: 12,
+};
+
+const textButton = {
+  padding: 0,
+  border: 0,
+  background: "none",
+  color: "#1976d2",
+  fontSize: 14,
   cursor: "pointer",
 };
 

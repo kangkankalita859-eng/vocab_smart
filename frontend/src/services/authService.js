@@ -1,11 +1,28 @@
 import { getSupabaseClient } from "./supabaseClient";
 
 export const authService = {
-  login(email) {
-    return getSupabaseClient().auth.signInWithOtp({
+  login(email, password) {
+    return getSupabaseClient().auth.signInWithPassword({
       email,
-      options: { emailRedirectTo: window.location.origin },
+      password,
     });
+  },
+
+  signUp(email, password) {
+    return getSupabaseClient().auth.signUp({
+      email,
+      password,
+    });
+  },
+
+  requestPasswordReset(email) {
+    return getSupabaseClient().auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin,
+    });
+  },
+
+  updatePassword(password) {
+    return getSupabaseClient().auth.updateUser({ password });
   },
 
   getSession() {

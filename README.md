@@ -51,11 +51,11 @@ Copy `frontend/.env.example` to `frontend/.env.local` and add your Supabase proj
 
 ### Cloud flashcard sync setup
 
-1. Create a Supabase project and enable email sign-in in **Authentication → Providers**.
-2. In **Authentication → URL Configuration**, set the site URL to your deployed app and add the local and deployed app URLs as allowed redirect URLs.
+1. Create a Supabase project and enable the email provider in **Authentication → Providers → Email**. Disable email confirmation to allow immediate password sign-in after account creation.
+2. In **Authentication → URL Configuration**, set the site URL to your deployed app and add the local and deployed app URLs as allowed redirect URLs for password resets.
 3. Run [`supabase/schema.sql`](./supabase/schema.sql) in the Supabase SQL Editor.
 4. Copy the project URL and anon key into `frontend/.env.local` as `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. Add the same variables to your Vercel project settings for production.
-5. Restart/redeploy the frontend. Sign in with an email link; use the same email on each device.
+5. Restart/redeploy the frontend. Create an account or sign in with email and password; use the same account on each device. Existing email-link users can use **Forgot password?** once to set a password.
 
 Vocabulary deck collections are saved to the signed-in user's protected cloud row. Existing unassigned local vocabulary decks are uploaded for the first account that opens the flashcard session on that browser; later accounts cannot claim another account's marked local data. Later saves sync automatically. Do not put a Supabase `service_role` key in frontend variables.
 

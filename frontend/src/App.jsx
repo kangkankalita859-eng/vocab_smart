@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Login from "./pages/Login";
+import UpdatePassword from "./pages/UpdatePassword";
 import { authService } from "./services/authService";
 import { isSupabaseConfigured } from "./services/supabaseClient";
 import Home from "./pages/Home";
@@ -44,6 +45,8 @@ export default function App() {
   const [user, setUser] = useState(null);
   const [authReady, setAuthReady] = useState(false);
   const [authError, setAuthError] = useState("");
+  const [isPasswordRecovery, setIsPasswordRecovery] = useState(false);
+  const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
 
   useEffect(() => {
     if (!isSupabaseConfigured) {
@@ -52,10 +55,11 @@ export default function App() {
     }
 
     let active = true;
-    const { data: { subscription } } = authService.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = authService.onAuthStateChange((event, session) => {
       if (active) {
         setUser(session?.user || null);
         setAuthError("");
+        if (event === "PASSWORD_RECOVERY") setIsPasswordRecovery(true);
       }
     });
 
@@ -79,6 +83,9 @@ export default function App() {
 
   if (!isSupabaseConfigured) return <Login />;
   if (!authReady) return <p style={{ textAlign: "center", marginTop: 48 }}>Checking sign-in…</p>;
+  if (isPasswordRecovery) {
+    return <UpdatePassword onComplete={() => setIsPasswordRecovery(false)} />;
+  }
   if (!user) {
     return (
       <>
@@ -97,14 +104,23 @@ export default function App() {
     <>
       <AppNavigation user={user} />
       <div style={accountMenu}>
-        <span
-          title={user.email}
-          style={{ maxWidth: "min(42vw, 260px)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
+        <button
+          type="button"
+          aria-label="Open account menu"
+          aria-expanded={isAccountMenuOpen}
+          aria-controls="account-menu"
+          onClick={() => setIsAccountMenuOpen((isOpen) => !isOpen)}
+          style={profileButton}
         >
-          {user.email}
-        </span>
-        <button type="button" onClick={handleLogout} style={logoutButton}>Sign out</button>
-        {authError && <span role="alert">{authError}</span>}
+          {user.email?.trim().charAt(0).toUpperCase() || "A"}
+        </button>
+        {isAccountMenuOpen && (
+          <div id="account-menu" style={accountDropdown}>
+            <span title={user.email} style={accountEmail}>{user.email}</span>
+            <button type="button" onClick={handleLogout} style={logoutButton}>Sign out</button>
+            {authError && <span role="alert" style={accountError}>{authError}</span>}
+          </div>
+        )}
       </div>
     </>
   );
@@ -600,29 +616,63 @@ function AppNavigation({ user }) {
 
 const accountMenu = {
   position: "fixed",
+  top: 12,
   right: 12,
-  bottom: 12,
   zIndex: 2000,
+};
+
+const profileButton = {
   display: "flex",
   alignItems: "center",
-  gap: 8,
-  maxWidth: "calc(100vw - 24px)",
-  padding: "8px 10px",
+  justifyContent: "center",
+  width: 42,
+  height: 42,
+  padding: 0,
+  border: "2px solid #fff",
+  borderRadius: "50%",
+  background: "#388e3c",
+  color: "#fff",
+  boxShadow: "0 2px 8px rgba(0,0,0,.2)",
+  fontSize: 18,
+  fontWeight: 700,
+  cursor: "pointer",
+};
+
+const accountDropdown = {
+  position: "absolute",
+  top: 50,
+  right: 0,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "stretch",
+  gap: 10,
+  width: "min(280px, calc(100vw - 24px))",
+  padding: 14,
   border: "1px solid #d5dce5",
-  borderRadius: 10,
+  borderRadius: 12,
   background: "#fff",
   color: "#334155",
-  boxShadow: "0 3px 12px rgba(0,0,0,.12)",
-  fontSize: 12,
+  boxShadow: "0 4px 16px rgba(0,0,0,.16)",
+  fontSize: 14,
+};
+
+const accountEmail = {
+  overflowWrap: "anywhere",
 };
 
 const logoutButton = {
-  padding: "6px 9px",
+  alignSelf: "flex-start",
+  padding: "8px 12px",
   border: "1px solid #cbd5e1",
-  borderRadius: 6,
+  borderRadius: 8,
   background: "#fff",
-  color: "inherit",
+  color: "#334155",
   cursor: "pointer",
+};
+
+const accountError = {
+  color: "#b71c1c",
+  fontSize: 12,
 };
 
 const authErrorStyle = {
