@@ -27,7 +27,10 @@ export default function SessionNav({
       className="flash-session-nav"
       style={
         isMobile
-          ? { ...mobileNav, ...(isDarkTheme ? darkNav : {}) }
+          ? {
+              ...(mode === "Read" ? mobileReadNav : mobileNav),
+              ...(isDarkTheme ? darkNav : {}),
+            }
           : { ...nav, ...(isDarkTheme ? darkNav : {}) }
       }
     >
@@ -35,13 +38,23 @@ export default function SessionNav({
       <div style={isMobile ? { ...mobileLeft, minWidth: showMobileMenu ? "80px" : "40px" } : left}>
         {showMobileMenu && (
           <button 
-            style={{...homeBtn, marginRight: "8px"}} 
+            style={{
+              ...(mode === "Read" ? mobileReadHomeBtn : homeBtn),
+              marginRight: mode === "Read" ? "4px" : "8px",
+            }}
             onClick={() => onMenuToggle && onMenuToggle()}
           >
             ☰
           </button>
         )}
-        <button style={isMobile ? mobileHomeBtn : homeBtn} onClick={() => onGoHome && onGoHome()}>
+        <button
+          style={
+            isMobile
+              ? (mode === "Read" ? mobileReadHomeBtn : mobileHomeBtn)
+              : homeBtn
+          }
+          onClick={() => onGoHome && onGoHome()}
+        >
           🏠 {isMobile ? "" : "Home"}
         </button>
         {!isMobile && <strong style={{ marginLeft: "12px" }}>{mode}</strong>}
@@ -54,17 +67,29 @@ export default function SessionNav({
           placeholder="Start"
           defaultValue={config?.start}
           id="startInput"
-          style={isMobile ? mobileInput : input}
+          style={
+            isMobile
+              ? (mode === "Read" ? mobileReadInput : mobileInput)
+              : input
+          }
         />
         <input
           type="number"
           placeholder="End"
           defaultValue={mode === "Cards" ? (config?.rangeEnd ?? config?.limit) : config?.limit}
           id="limitInput"
-          style={isMobile ? mobileInput : input}
+          style={
+            isMobile
+              ? (mode === "Read" ? mobileReadInput : mobileInput)
+              : input
+          }
         />
         <button
-          style={isMobile ? mobileApplyBtn : applyBtn}
+          style={
+            isMobile
+              ? (mode === "Read" ? mobileReadApplyBtn : mobileApplyBtn)
+              : applyBtn
+          }
           onClick={() => {
             const start = Number(
               document.getElementById("startInput").value
@@ -85,7 +110,13 @@ export default function SessionNav({
       </div>
 
       {/* RIGHT : MODES */}
-      <div style={isMobile ? mobileRight : right}>
+      <div
+        style={
+          isMobile
+            ? (mode === "Read" ? mobileReadRight : mobileRight)
+            : right
+        }
+      >
         {showSscFilter && (
           <label style={isMobile ? mobileFilterPill : filterPill}>
             <input
@@ -285,6 +316,15 @@ const mobileNav = {
   maxWidth: "100vw", // Prevent overflow
 };
 
+const mobileReadNav = {
+  ...mobileNav,
+  height: "108px",
+  padding: "4px 58px 4px 4px",
+  flexWrap: "wrap",
+  alignContent: "center",
+  rowGap: "4px",
+};
+
 const mobileLeft = {
   ...left,
   flexShrink: 0,
@@ -320,12 +360,24 @@ const mobileRight = {
   },
 };
 
+const mobileReadRight = {
+  ...mobileRight,
+  flex: "1 1 100%",
+  maxWidth: "100%",
+};
+
 const mobileHomeBtn = {
   ...homeBtn,
   padding: "8px",
   fontSize: "16px",
   minWidth: "40px",
   minHeight: "40px",
+};
+
+const mobileReadHomeBtn = {
+  ...mobileHomeBtn,
+  minWidth: "36px",
+  padding: "6px 4px",
 };
 
 const mobileLinkBtn = {
@@ -342,6 +394,17 @@ const mobileLinkBtn = {
   justifyContent: "center",
   whiteSpace: "nowrap",
   flexShrink: "0", // Prevent shrinking
+};
+
+const mobileReadInput = {
+  ...mobileInput,
+  width: "36px",
+};
+
+const mobileReadApplyBtn = {
+  ...mobileApplyBtn,
+  minWidth: "42px",
+  padding: "4px 6px",
 };
 
 const mobileDeckToggleBtn = {

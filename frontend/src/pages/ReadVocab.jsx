@@ -152,7 +152,13 @@ export default function ReadVocab({
         onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
-      <div style={{ ...page, background: isMobile ? "#fff" : page.background }}>
+      <div
+        style={{
+          ...page,
+          background: isMobile ? "#fff" : page.background,
+          paddingTop: isCompactNav ? "138px" : page.paddingTop,
+        }}
+      >
         {/* PERSISTED DATA INFO */}
         {showPersistedInfo && (
           <div style={persistedInfo}>
@@ -252,7 +258,7 @@ export default function ReadVocab({
       </div>
 
       {/* Mobile sidebar only - no desktop sidebar */}
-      {isMobile && (
+      {isCompactNav && (
         <MobileSidebar
           isOpen={mobileMenuOpen}
           onClose={() => setMobileMenuOpen(false)}
