@@ -396,17 +396,6 @@ const mobileLinkBtn = {
   flexShrink: "0", // Prevent shrinking
 };
 
-const mobileReadInput = {
-  ...mobileInput,
-  width: "36px",
-};
-
-const mobileReadApplyBtn = {
-  ...mobileApplyBtn,
-  minWidth: "42px",
-  padding: "4px 6px",
-};
-
 const mobileDeckToggleBtn = {
   ...mobileLinkBtn,
   minWidth: "38px",
@@ -437,6 +426,17 @@ const mobileInput = {
   border: "1px solid #ccc",
   fontSize: "12px",
   minHeight: "30px",
+};
+
+const mobileReadInput = {
+  ...mobileInput,
+  width: "36px",
+};
+
+const mobileReadApplyBtn = {
+  ...mobileApplyBtn,
+  minWidth: "42px",
+  padding: "4px 6px",
 };
 
 const mobileFilterPill = {
