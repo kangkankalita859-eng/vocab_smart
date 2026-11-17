@@ -187,6 +187,7 @@ const nav = {
   top: 0,
   left: 0,
   right: 0,
+  boxSizing: "border-box",
   height: "60px",
   display: "flex",
   alignItems: "center",
@@ -279,7 +280,6 @@ const mobileNav = {
   padding: "0 62px 0 4px",
   flexWrap: "nowrap",
   overflow: "hidden",
-  minWidth: "100%", // Ensure full width
   maxWidth: "100vw", // Prevent overflow
 };
 
