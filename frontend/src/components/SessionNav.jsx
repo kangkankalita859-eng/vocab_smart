@@ -278,6 +278,8 @@ const mobileNav = {
   ...nav,
   height: "50px",
   padding: "0 62px 0 4px",
+  justifyContent: "flex-start",
+  gap: "4px",
   flexWrap: "nowrap",
   overflow: "hidden",
   maxWidth: "100vw", // Prevent overflow
@@ -291,23 +293,24 @@ const mobileLeft = {
 
 const mobileCenter = {
   ...center,
-  flex: 1,
+  flex: "0 0 auto",
   gap: "4px",
   justifyContent: "flex-start",
-  minWidth: "60px",
+  minWidth: "0",
 };
 
 const mobileRight = {
   ...right,
   display: "flex",
+  flex: "1 1 0",
   gap: "2px", // Reduced gap to prevent overlapping
-  flexShrink: 0,
+  justifyContent: "flex-start",
   overflowX: "auto", // Enable horizontal scrolling
   overflowY: "hidden", // Hide vertical overflow
   scrollbarWidth: "thin", // Thin scrollbar for better UX
   msOverflowStyle: "none", // Hide scrollbar in IE/Edge
   minWidth: "0", // Allow shrinking
-  maxWidth: "calc(60% - 58px)", // Leave room for the fixed account button
+  maxWidth: "none",
   "&::-webkit-scrollbar": {
     height: "4px", // Thin horizontal scrollbar
   },

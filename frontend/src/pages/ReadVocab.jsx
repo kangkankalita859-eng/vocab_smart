@@ -28,7 +28,8 @@ export default function ReadVocab({
 
   const [loading, setLoading] = useState(true);
 
-  const { isMobile } = useMobile();
+  const { isMobile, isTablet } = useMobile();
+  const isCompactNav = isMobile || isTablet;
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -147,7 +148,7 @@ export default function ReadVocab({
         showExamFrequencySort
         sortByExamFrequency={sortByExamFrequency}
         onToggleSortByExamFrequency={setSortByExamFrequency}
-        isMobile={isMobile}
+        isMobile={isCompactNav}
         onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
