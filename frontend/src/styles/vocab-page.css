@@ -10,40 +10,23 @@
 @media (max-width: 768px) {
   .vocab-page-container {
     width: 100%;
-    padding: 16px 10px;
+    padding: 8px 4px;
   }
 
   .vocab-table-wrapper {
-    overflow-x: visible;
+    overflow-x: auto;
+    width: 100%;
   }
 
   .vocab-table {
-    width: 100%;
-    table-layout: fixed;
-    font-size: 13px;
+    width: max-content;
+    min-width: 900px;
+    table-layout: auto;
+    font-size: 12px;
   }
 
   .vocab-table th,
   .vocab-table td {
-    padding: 8px 6px;
-  }
-
-  .vocab-table th:nth-child(2),
-  .vocab-table td:nth-child(2) {
-    width: 36%;
-  }
-
-  .vocab-table th:nth-child(3),
-  .vocab-table td:nth-child(3) {
-    width: 26%;
-  }
-
-  .vocab-table th:nth-child(4),
-  .vocab-table td:nth-child(4) {
-    width: 28%;
-  }
-
-  .vocab-secondary-column {
-    display: none;
+    padding: 4px;
   }
 }

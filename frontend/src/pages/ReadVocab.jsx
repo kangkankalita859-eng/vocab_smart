@@ -136,7 +136,7 @@ export default function ReadVocab({
         style={{
           ...page,
           background: isMobile ? "#fff" : page.background,
-          paddingTop: isCompactNav ? "138px" : page.paddingTop,
+          paddingTop: isCompactNav ? "60px" : page.paddingTop,
         }}
       >
         <div className="vocab-page-container" style={container}>
@@ -150,9 +150,9 @@ export default function ReadVocab({
                   <th style={th}>Phrase / Meaning</th>
                   <th style={th}>One Word</th>
                   <th style={th}>Hindi</th>
-                  <th className="vocab-secondary-column" style={th}>Exam Count</th>
-                  <th className="vocab-secondary-column" style={th}>Example Sentence</th>
-                  <th className="vocab-secondary-column" style={th}>Synonyms</th>
+                  <th style={th}>Exam Count</th>
+                  <th style={th}>Example Sentence</th>
+                  <th style={th}>Synonyms</th>
                 </tr>
               </thead>
 
@@ -165,11 +165,10 @@ export default function ReadVocab({
                       {item.word}
                     </td>
                     <td style={td}>{item.hindiMeaning}</td>
-                    <td className="vocab-secondary-column" style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
+                    <td style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
                       {Number(item.sscCount || 0)} ({Number(item.otherExamCount || 0)})
                     </td>
                     <td
-                      className="vocab-secondary-column"
                       style={{
                         ...td,
                         fontStyle: "italic",
@@ -179,7 +178,7 @@ export default function ReadVocab({
                     >
                       {item.example ? item.example : "—" }
                     </td>
-                    <td className="vocab-secondary-column" style={{ ...td, maxWidth: "150px" }}>
+                    <td style={{ ...td, maxWidth: "150px" }}>
                       {item.synonyms.map((synonym, index) => (
                         <div key={index} style={{ fontSize: "0.85rem" }}>
                           {synonym}
