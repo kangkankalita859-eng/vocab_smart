@@ -308,19 +308,22 @@ const homeBtn = {
 const mobileNav = {
   ...nav,
   width: "100vw",
-  height: "56px",
-  padding: "4px",
+  height: "50px",
+  padding: "0 16px 0 4px",
   justifyContent: "flex-start",
   gap: "4px",
   flexWrap: "nowrap",
-  overflowX: "auto",
-  overflowY: "hidden",
+  overflow: "hidden",
   maxWidth: "100vw", // Prevent overflow
 };
 
 const mobileReadNav = {
   ...mobileNav,
-  height: "56px",
+  height: "108px",
+  padding: "4px 16px 4px 4px",
+  flexWrap: "wrap",
+  alignContent: "center",
+  rowGap: "4px",
 };
 
 const mobileLeft = {
@@ -340,10 +343,10 @@ const mobileCenter = {
 const mobileRight = {
   ...right,
   display: "flex",
-  flex: "0 0 auto",
+  flex: "1 1 0",
   gap: "2px", // Reduced gap to prevent overlapping
   justifyContent: "flex-start",
-  overflowX: "visible",
+  overflowX: "auto",
   overflowY: "hidden", // Hide vertical overflow
   scrollbarWidth: "thin", // Thin scrollbar for better UX
   msOverflowStyle: "none", // Hide scrollbar in IE/Edge
@@ -360,7 +363,8 @@ const mobileRight = {
 
 const mobileReadRight = {
   ...mobileRight,
-  flex: "0 0 auto",
+  flex: "1 1 100%",
+  maxWidth: "100%",
 };
 
 const mobileHomeBtn = {

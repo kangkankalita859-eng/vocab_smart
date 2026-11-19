@@ -136,7 +136,7 @@ export default function ReadVocab({
         style={{
           ...page,
           background: isMobile ? "#fff" : page.background,
-          paddingTop: isCompactNav ? "60px" : page.paddingTop,
+          paddingTop: isCompactNav ? "138px" : page.paddingTop,
         }}
       >
         <div className="vocab-page-container" style={container}>
