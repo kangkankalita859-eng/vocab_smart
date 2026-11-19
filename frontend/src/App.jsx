@@ -100,33 +100,32 @@ export default function App() {
     if (error) setAuthError(`Could not sign out: ${error.message}`);
   };
 
-  return (
-    <>
-      <AppNavigation user={user} />
-      <div style={accountMenu}>
-        <button
-          type="button"
-          aria-label="Open account menu"
-          aria-expanded={isAccountMenuOpen}
-          aria-controls="account-menu"
-          onClick={() => setIsAccountMenuOpen((isOpen) => !isOpen)}
-          style={profileButton}
-        >
-          {user.email?.trim().charAt(0).toUpperCase() || "A"}
-        </button>
-        {isAccountMenuOpen && (
-          <div id="account-menu" style={accountDropdown}>
-            <span title={user.email} style={accountEmail}>{user.email}</span>
-            <button type="button" onClick={handleLogout} style={logoutButton}>Sign out</button>
-            {authError && <span role="alert" style={accountError}>{authError}</span>}
-          </div>
-        )}
-      </div>
-    </>
+  const accountMenuContent = (
+    <div style={accountMenu}>
+      <button
+        type="button"
+        aria-label="Open account menu"
+        aria-expanded={isAccountMenuOpen}
+        aria-controls="account-menu"
+        onClick={() => setIsAccountMenuOpen((isOpen) => !isOpen)}
+        style={profileButton}
+      >
+        {user.email?.trim().charAt(0).toUpperCase() || "A"}
+      </button>
+      {isAccountMenuOpen && (
+        <div id="account-menu" style={accountDropdown}>
+          <span title={user.email} style={accountEmail}>{user.email}</span>
+          <button type="button" onClick={handleLogout} style={logoutButton}>Sign out</button>
+          {authError && <span role="alert" style={accountError}>{authError}</span>}
+        </div>
+      )}
+    </div>
   );
+
+  return <AppNavigation user={user} accountMenu={accountMenuContent} />;
 }
 
-function AppNavigation({ user }) {
+function AppNavigation({ user, accountMenu }) {
   const [stage, setStage] = useState("home");
   const [config, setConfig] = useState({ start: 0, limit: 20 });
   const [reviewUnknownDeck, setReviewUnknownDeck] = useState(false);
@@ -190,6 +189,7 @@ function AppNavigation({ user }) {
   if (stage === "home")
     return (
       <Home
+        accountMenu={accountMenu}
         onStart={(c) => {
           setConfig(c);
           // If limit is 250, go directly to read mode

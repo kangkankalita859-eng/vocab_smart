@@ -128,7 +128,7 @@ const subjectContent = {
   }
 };
 
-export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onError, onSentenceImprovement, onVocabTest, onGeometry, onGeography, onIndiaMap, onMapDrawing, onConstitution, onSchedules, onParts }) {
+export default function Home({ accountMenu, onStart, onIdioms, onSynonymsAntonyms, onHomonymsHomophones, onEnglishVocab, onGrammar, onNarration, onVoiceChange, onError, onSentenceImprovement, onVocabTest, onGeometry, onGeography, onIndiaMap, onMapDrawing, onConstitution, onSchedules, onParts }) {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("");
   const [showPYQ, setShowPYQ] = useState(false);
@@ -263,6 +263,7 @@ export default function Home({ onStart, onIdioms, onSynonymsAntonyms, onHomonyms
 
   return (
     <div style={mainContainer}>
+      {accountMenu}
       {/* SIDEBAR - Desktop or Mobile */}
       {isMobile ? (
         <MobileSidebar

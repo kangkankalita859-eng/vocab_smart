@@ -202,52 +202,54 @@ export default function ReadVocab({
         <div style={container}>
           <h2 style={heading}>Read & Memorize Vocabulary</h2>
 
-          <table style={table}>
-            <thead>
-              <tr>
-                <th style={th}>SN</th>
-                <th style={th}>Phrase / Meaning</th>
-                <th style={th}>One Word</th>
-                <th style={th}>Hindi</th>
-                <th style={th}>Exam Count</th>
-                <th style={th}>Example Sentence</th>
-                <th style={th}>Synonyms</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {displayedVocab.map((item) => (
-                <tr key={item.id}>
-                  <td style={td}>{item.id}</td>
-                  <td style={td}>{item.meaning}</td>
-                  <td style={{ ...td, fontWeight: "600" }}>
-                    {item.word}
-                  </td>
-                  <td style={td}>{item.hindiMeaning}</td>
-                  <td style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
-                    {Number(item.sscCount || 0)} ({Number(item.otherExamCount || 0)})
-                  </td>
-                  <td
-                    style={{
-                      ...td,
-                      fontStyle: "italic",
-                      color: "#444",
-                      maxWidth: "300px",
-                    }}
-                  >
-                    {item.example ? item.example : "—" }
-                  </td>
-                  <td style={{ ...td, maxWidth: "150px" }}>
-                    {item.synonyms.map((synonym, index) => (
-                      <div key={index} style={{ fontSize: "0.85rem" }}>
-                        {synonym}
-                      </div>
-                    ))}
-                  </td>
+          <div style={tableWrapper}>
+            <table style={table}>
+              <thead>
+                <tr>
+                  <th style={th}>SN</th>
+                  <th style={th}>Phrase / Meaning</th>
+                  <th style={th}>One Word</th>
+                  <th style={th}>Hindi</th>
+                  <th style={th}>Exam Count</th>
+                  <th style={th}>Example Sentence</th>
+                  <th style={th}>Synonyms</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody>
+                {displayedVocab.map((item) => (
+                  <tr key={item.id}>
+                    <td style={td}>{item.id}</td>
+                    <td style={td}>{item.meaning}</td>
+                    <td style={{ ...td, fontWeight: "600" }}>
+                      {item.word}
+                    </td>
+                    <td style={td}>{item.hindiMeaning}</td>
+                    <td style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
+                      {Number(item.sscCount || 0)} ({Number(item.otherExamCount || 0)})
+                    </td>
+                    <td
+                      style={{
+                        ...td,
+                        fontStyle: "italic",
+                        color: "#444",
+                        maxWidth: "300px",
+                      }}
+                    >
+                      {item.example ? item.example : "—" }
+                    </td>
+                    <td style={{ ...td, maxWidth: "150px" }}>
+                      {item.synonyms.map((synonym, index) => (
+                        <div key={index} style={{ fontSize: "0.85rem" }}>
+                          {synonym}
+                        </div>
+                      ))}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           {displayedVocab.length === 0 && (
             <p style={{ marginTop: "16px", color: "#777" }}>
@@ -299,6 +301,11 @@ const table = {
   width: "100%",
   borderCollapse: "collapse",
   fontSize: "14px",
+};
+
+const tableWrapper = {
+  maxWidth: "100%",
+  overflowX: "auto",
 };
 
 const th = {

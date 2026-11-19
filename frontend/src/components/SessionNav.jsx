@@ -223,7 +223,7 @@ const nav = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  padding: "0 68px 0 24px",
+  padding: "0 16px 0 24px",
   borderBottom: "1px solid #e0e0e0",
   background: "#ffffff",
   zIndex: 1000,
@@ -308,7 +308,7 @@ const homeBtn = {
 const mobileNav = {
   ...nav,
   height: "50px",
-  padding: "0 62px 0 4px",
+  padding: "0 16px 0 4px",
   justifyContent: "flex-start",
   gap: "4px",
   flexWrap: "nowrap",
@@ -319,7 +319,7 @@ const mobileNav = {
 const mobileReadNav = {
   ...mobileNav,
   height: "108px",
-  padding: "4px 58px 4px 4px",
+  padding: "4px 16px 4px 4px",
   flexWrap: "wrap",
   alignContent: "center",
   rowGap: "4px",
