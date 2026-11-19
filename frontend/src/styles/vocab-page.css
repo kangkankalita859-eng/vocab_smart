@@ -14,19 +14,54 @@
   }
 
   .vocab-table-wrapper {
-    overflow-x: auto;
+    overflow-x: visible;
     width: 100%;
   }
 
   .vocab-table {
-    width: max-content;
-    min-width: 900px;
-    table-layout: auto;
-    font-size: 12px;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 10px;
   }
 
   .vocab-table th,
   .vocab-table td {
-    padding: 4px;
+    padding: 3px 2px;
+    line-height: 1.25;
+  }
+
+  .vocab-table th:nth-child(1),
+  .vocab-table td:nth-child(1) {
+    width: 5%;
+  }
+
+  .vocab-table th:nth-child(2),
+  .vocab-table td:nth-child(2) {
+    width: 20%;
+  }
+
+  .vocab-table th:nth-child(3),
+  .vocab-table td:nth-child(3) {
+    width: 13%;
+  }
+
+  .vocab-table th:nth-child(4),
+  .vocab-table td:nth-child(4) {
+    width: 12%;
+  }
+
+  .vocab-table th:nth-child(5),
+  .vocab-table td:nth-child(5) {
+    width: 10%;
+  }
+
+  .vocab-table th:nth-child(6),
+  .vocab-table td:nth-child(6) {
+    width: 24%;
+  }
+
+  .vocab-table th:nth-child(7),
+  .vocab-table td:nth-child(7) {
+    width: 16%;
   }
 }
