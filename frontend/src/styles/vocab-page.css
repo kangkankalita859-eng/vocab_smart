@@ -10,7 +10,7 @@
 @media (max-width: 768px) {
   .vocab-page-container {
     width: 95%;
-    padding: 16px 10px;
+    padding: 9px 6px;
   }
 
   .vocab-table-wrapper {
@@ -21,7 +21,7 @@
   .vocab-table {
     width: 100%;
     table-layout: fixed;
-    font-size: 12px;
+    font-size: 5px;
   }
 
   .vocab-table th,
