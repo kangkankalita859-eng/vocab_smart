@@ -21,12 +21,12 @@
   .vocab-table {
     width: 100%;
     table-layout: fixed;
-    font-size: 5px;
+    font-size: 1px;
   }
 
   .vocab-table th,
   .vocab-table td {
-    padding: 4px;
+    padding: 2px;
     line-height: 1.3;
   }
 
