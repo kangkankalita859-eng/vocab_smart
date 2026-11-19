@@ -4,10 +4,10 @@ import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
 
 import { fetchVocab } from "../services/vocabService";
-import { hasPersistedData, getDeckStats } from "../services/deckPersistenceService";
 
 import useMobile from "../hooks/useMobile";
 
+import "../styles/vocab-page.css";
 
 
 export default function ReadVocab({
@@ -36,26 +36,6 @@ export default function ReadVocab({
   const [sscOnly, setSscOnly] = useState(false);
 
   const [sortByExamFrequency, setSortByExamFrequency] = useState(false);
-
-  const [showPersistedInfo, setShowPersistedInfo] = useState(false);
-
-  const [deckStats, setDeckStats] = useState({
-    unknownCount: 0,
-    savedDeckCount: 0,
-    inProgressCount: 0,
-  });
-
-
-
-  /* -------- CHECK PERSISTED DATA -------- */
-
-  useEffect(() => {
-    if (hasPersistedData('vocab')) {
-      const stats = getDeckStats('vocab');
-      setDeckStats(stats);
-      setShowPersistedInfo(true);
-    }
-  }, []);
 
   /* -------- FETCH VOCAB BASED ON RANGE -------- */
 
@@ -159,60 +139,20 @@ export default function ReadVocab({
           paddingTop: isCompactNav ? "138px" : page.paddingTop,
         }}
       >
-        {/* PERSISTED DATA INFO */}
-        {showPersistedInfo && (
-          <div style={persistedInfo}>
-            <div style={persistedInfoContent}>
-              <span style={persistedInfoIcon}>📚</span>
-              <div>
-                <strong>You have saved vocabulary to review!</strong>
-                <div style={persistedInfoDetails}>
-                  {deckStats.unknownCount > 0 && (
-                    <span>• {deckStats.unknownCount} unknown cards ready for revision</span>
-                  )}
-                  {deckStats.savedDeckCount > 0 && (
-                    <span>• {deckStats.savedDeckCount} saved decks</span>
-                  )}
-                  {deckStats.inProgressCount > 0 && (
-                    <span>• Continue your saved session with {deckStats.inProgressCount} cards remaining</span>
-                  )}
-                </div>
-              </div>
-              <button 
-                style={persistedInfoClose}
-                onClick={() => setShowPersistedInfo(false)}
-              >
-                ✕
-              </button>
-            </div>
-            <div style={persistedInfoActions}>
-              <button 
-                style={persistedInfoButton}
-                onClick={() => {
-                  onGoCards();
-                  setShowPersistedInfo(false);
-                }}
-              >
-                🃏 Go to Flash Cards
-              </button>
-            </div>
-          </div>
-        )}
-        
-        <div style={container}>
+        <div className="vocab-page-container" style={container}>
           <h2 style={heading}>Read & Memorize Vocabulary</h2>
 
-          <div style={tableWrapper}>
-            <table style={table}>
+          <div className="vocab-table-wrapper" style={tableWrapper}>
+            <table className="vocab-table" style={table}>
               <thead>
                 <tr>
                   <th style={th}>SN</th>
                   <th style={th}>Phrase / Meaning</th>
                   <th style={th}>One Word</th>
                   <th style={th}>Hindi</th>
-                  <th style={th}>Exam Count</th>
-                  <th style={th}>Example Sentence</th>
-                  <th style={th}>Synonyms</th>
+                  <th className="vocab-secondary-column" style={th}>Exam Count</th>
+                  <th className="vocab-secondary-column" style={th}>Example Sentence</th>
+                  <th className="vocab-secondary-column" style={th}>Synonyms</th>
                 </tr>
               </thead>
 
@@ -225,10 +165,11 @@ export default function ReadVocab({
                       {item.word}
                     </td>
                     <td style={td}>{item.hindiMeaning}</td>
-                    <td style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
+                    <td className="vocab-secondary-column" style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
                       {Number(item.sscCount || 0)} ({Number(item.otherExamCount || 0)})
                     </td>
                     <td
+                      className="vocab-secondary-column"
                       style={{
                         ...td,
                         fontStyle: "italic",
@@ -238,7 +179,7 @@ export default function ReadVocab({
                     >
                       {item.example ? item.example : "—" }
                     </td>
-                    <td style={{ ...td, maxWidth: "150px" }}>
+                    <td className="vocab-secondary-column" style={{ ...td, maxWidth: "150px" }}>
                       {item.synonyms.map((synonym, index) => (
                         <div key={index} style={{ fontSize: "0.85rem" }}>
                           {synonym}
@@ -320,65 +261,4 @@ const td = {
   padding: "8px",
   verticalAlign: "top",
 };
-
-const persistedInfo = {
-  background: "#e3f2fd",
-  border: "1px solid #2196f3",
-  borderRadius: "8px",
-  padding: "16px",
-  marginBottom: "20px",
-  boxShadow: "0 2px 8px rgba(33, 150, 243, 0.15)",
-};
-
-const persistedInfoContent = {
-  display: "flex",
-  alignItems: "flex-start",
-  gap: "12px",
-  marginBottom: "12px",
-};
-
-const persistedInfoIcon = {
-  fontSize: "20px",
-  marginTop: "2px",
-};
-
-const persistedInfoDetails = {
-  fontSize: "13px",
-  color: "#666",
-  marginTop: "4px",
-  display: "flex",
-  flexDirection: "column",
-  gap: "2px",
-};
-
-const persistedInfoClose = {
-  marginLeft: "auto",
-  background: "none",
-  border: "none",
-  fontSize: "16px",
-  cursor: "pointer",
-  color: "#666",
-  padding: "4px",
-};
-
-const persistedInfoActions = {
-  display: "flex",
-  gap: "10px",
-};
-
-const persistedInfoButton = {
-  background: "#2196f3",
-  color: "white",
-  border: "none",
-  padding: "8px 16px",
-  borderRadius: "6px",
-  cursor: "pointer",
-  fontSize: "14px",
-  fontWeight: "500",
-  transition: "background 0.2s ease",
-};
-
-
-
-
 

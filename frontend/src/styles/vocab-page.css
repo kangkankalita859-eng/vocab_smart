@@ -1,0 +1,49 @@
+.vocab-table-wrapper {
+  overflow-x: auto;
+}
+
+.vocab-table th,
+.vocab-table td {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  .vocab-page-container {
+    width: 100%;
+    padding: 16px 10px;
+  }
+
+  .vocab-table-wrapper {
+    overflow-x: visible;
+  }
+
+  .vocab-table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 13px;
+  }
+
+  .vocab-table th,
+  .vocab-table td {
+    padding: 8px 6px;
+  }
+
+  .vocab-table th:nth-child(2),
+  .vocab-table td:nth-child(2) {
+    width: 36%;
+  }
+
+  .vocab-table th:nth-child(3),
+  .vocab-table td:nth-child(3) {
+    width: 26%;
+  }
+
+  .vocab-table th:nth-child(4),
+  .vocab-table td:nth-child(4) {
+    width: 28%;
+  }
+
+  .vocab-secondary-column {
+    display: none;
+  }
+}
