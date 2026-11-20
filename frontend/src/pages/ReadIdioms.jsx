@@ -6,6 +6,7 @@ import MobileSidebar from "../components/MobileSidebar";
 import { fetchIdioms } from "../services/idiomsService";
 
 import useMobile from "../hooks/useMobile";
+import "../styles/vocab-page.css";
 
 export default function ReadIdioms({
   config,
@@ -83,7 +84,8 @@ export default function ReadIdioms({
         <div style={isMobile ? mobileContainer : container}>
           <h2 style={isMobile ? mobileHeading : heading}>Read & Memorize Idioms & Phrases</h2>
 
-          <table style={isMobile ? mobileTable : table}>
+          <div className="vocab-table-wrapper idiom-table-wrapper">
+          <table className="idiom-table" style={isMobile ? mobileTable : table}>
             <thead>
               <tr>
                 <th style={isMobile ? { ...mobileTh, width: "6%" } : th}>SN</th>
@@ -121,6 +123,7 @@ export default function ReadIdioms({
               ))}
             </tbody>
           </table>
+          </div>
 
           {filteredIdioms.length === 0 && (
             <p style={{ marginTop: "16px", color: "#777" }}>

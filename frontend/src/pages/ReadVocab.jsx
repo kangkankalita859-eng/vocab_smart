@@ -7,6 +7,7 @@ import { fetchVocab } from "../services/vocabService";
 import { hasPersistedData, getDeckStats } from "../services/deckPersistenceService";
 
 import useMobile from "../hooks/useMobile";
+import "../styles/vocab-page.css";
 
 
 
@@ -213,7 +214,8 @@ export default function ReadVocab({
             </label>
           )}
 
-          <table style={isMobile ? mobileTable : table}>
+          <div className="vocab-table-wrapper">
+          <table className="vocab-table" style={isMobile ? mobileTable : table}>
             <thead>
               <tr>
                 <th style={isMobile ? { ...mobileTh, width: "6%" } : th}>SN</th>
@@ -259,6 +261,7 @@ export default function ReadVocab({
               ))}
             </tbody>
           </table>
+          </div>
 
           {displayedVocab.length === 0 && (
             <p style={{ marginTop: "16px", color: "#777" }}>

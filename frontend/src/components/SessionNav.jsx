@@ -1,11 +1,13 @@
 export default function SessionNav({
   mode,
+  mobileReadNavLayout,
   config,
   onApplyRange,
   onGoRead,
   onGoCards,
   onGoTest,
   onGoHome,
+  showVocabLink,
   testLabel,
   showSscFilter,
   sscOnly,
@@ -21,6 +23,16 @@ export default function SessionNav({
   onToggleTheme,
 }) {
   const showMobileMenu = Boolean(isMobile && onMenuToggle);
+  const useCompactMobileNav = Boolean(isMobile && mode.includes("Cards"));
+  const useReferenceMobileReadNav = Boolean(
+    isMobile && mobileReadNavLayout === "reference"
+  );
+  const useWrappedMobileReadNav = Boolean(
+    isMobile &&
+      mode === "Read" &&
+      mobileReadNavLayout !== "standard" &&
+      mobileReadNavLayout !== "reference"
+  );
 
   return (
     <div
@@ -28,20 +40,50 @@ export default function SessionNav({
       style={
         isMobile
           ? {
-              ...(mode === "Read" ? mobileReadNav : mobileNav),
+              ...(useWrappedMobileReadNav
+                ? wrappedMobileReadNav
+                : useReferenceMobileReadNav
+                  ? referenceMobileReadNav
+                  : useCompactMobileNav
+                    ? compactMobileNav
+                    : mobileNav),
               ...(isDarkTheme ? darkNav : {}),
             }
           : { ...nav, ...(isDarkTheme ? darkNav : {}) }
       }
     >
       {/* LEFT : HOME + MODE */}
-      <div style={isMobile ? { ...mobileLeft, minWidth: showMobileMenu ? "80px" : "40px" } : left}>
+      <div
+        style={
+          isMobile
+            ? {
+                ...mobileLeft,
+                ...(useWrappedMobileReadNav ? wrappedMobileReadLeft : {}),
+                ...(useReferenceMobileReadNav ? referenceMobileReadLeft : {}),
+                minWidth: showMobileMenu
+                  ? useWrappedMobileReadNav
+                    ? "88px"
+                    : useReferenceMobileReadNav
+                      ? "76px"
+                      : useCompactMobileNav
+                        ? "88px"
+                        : "max-content"
+                  : "40px",
+              }
+            : left
+        }
+      >
         {showMobileMenu && (
           <button 
-            style={{
-              ...(mode === "Read" ? mobileReadHomeBtn : homeBtn),
-              marginRight: mode === "Read" ? "4px" : "8px",
-            }}
+            style={
+              useWrappedMobileReadNav
+                ? wrappedMobileReadMenuBtn
+                : useReferenceMobileReadNav
+                  ? referenceMobileReadMenuBtn
+                  : useCompactMobileNav
+                    ? compactMobileMenuBtn
+                    : { ...homeBtn, marginRight: "8px", flexShrink: 0 }
+            }
             onClick={() => onMenuToggle && onMenuToggle()}
           >
             ☰
@@ -50,7 +92,13 @@ export default function SessionNav({
         <button
           style={
             isMobile
-              ? (mode === "Read" ? mobileReadHomeBtn : mobileHomeBtn)
+              ? useWrappedMobileReadNav
+                ? wrappedMobileReadHomeBtn
+                : useReferenceMobileReadNav
+                  ? referenceMobileReadHomeBtn
+                  : useCompactMobileNav
+                    ? compactMobileHomeBtn
+                    : mobileHomeBtn
               : homeBtn
           }
           onClick={() => onGoHome && onGoHome()}
@@ -61,7 +109,19 @@ export default function SessionNav({
       </div>
 
       {/* CENTER : RANGE SELECT */}
-      <div style={isMobile ? mobileCenter : center}>
+      <div
+        style={
+          isMobile
+            ? useWrappedMobileReadNav
+              ? wrappedMobileReadCenter
+              : useReferenceMobileReadNav
+                ? referenceMobileReadCenter
+                : useCompactMobileNav
+                  ? compactMobileCenter
+                  : mobileCenter
+            : center
+        }
+      >
         <input
           type="number"
           placeholder="Start"
@@ -69,7 +129,11 @@ export default function SessionNav({
           id="startInput"
           style={
             isMobile
-              ? (mode === "Read" ? mobileReadInput : mobileInput)
+              ? useWrappedMobileReadNav
+                ? wrappedMobileReadInput
+                : useReferenceMobileReadNav
+                  ? referenceMobileReadInput
+                  : mobileInput
               : input
           }
         />
@@ -80,14 +144,24 @@ export default function SessionNav({
           id="limitInput"
           style={
             isMobile
-              ? (mode === "Read" ? mobileReadInput : mobileInput)
+              ? useWrappedMobileReadNav
+                ? wrappedMobileReadInput
+                : useReferenceMobileReadNav
+                  ? referenceMobileReadInput
+                  : mobileInput
               : input
           }
         />
         <button
           style={
             isMobile
-              ? (mode === "Read" ? mobileReadApplyBtn : mobileApplyBtn)
+              ? useWrappedMobileReadNav
+                ? wrappedMobileReadApplyBtn
+                : useReferenceMobileReadNav
+                  ? referenceMobileReadApplyBtn
+                  : useCompactMobileNav
+                    ? compactMobileApplyBtn
+                    : mobileApplyBtn
               : applyBtn
           }
           onClick={() => {
@@ -113,48 +187,95 @@ export default function SessionNav({
       <div
         style={
           isMobile
-            ? (mode === "Read" ? mobileReadRight : mobileRight)
+            ? useWrappedMobileReadNav
+              ? wrappedMobileReadRight
+              : useReferenceMobileReadNav
+                ? referenceMobileReadRight
+                : useCompactMobileNav
+                  ? {
+                      ...compactMobileRight,
+                      maxWidth: `calc(100% - ${showMobileMenu ? "230px" : "182px"})`,
+                    }
+                  : mobileRight
             : right
         }
       >
         {showSscFilter && (
-          <label style={isMobile ? mobileFilterPill : filterPill}>
+          <label
+            style={
+              isMobile
+                ? useWrappedMobileReadNav
+                  ? wrappedMobileReadFilterPill
+                  : useReferenceMobileReadNav
+                    ? referenceMobileReadFilterPill
+                    : mobileFilterPill
+                : filterPill
+            }
+          >
             <input
               type="checkbox"
               checked={!!sscOnly}
               onChange={(e) => onToggleSscOnly && onToggleSscOnly(e.target.checked)}
-              style={{ marginRight: 6 }}
+              style={{ marginRight: useWrappedMobileReadNav || useReferenceMobileReadNav ? 3 : 6 }}
             />
             {isMobile ? "SSC" : "SSC (≥1)"}
           </label>
         )}
-        {showExamFrequencySort && (
-          <label style={isMobile ? mobileFilterPill : filterPill}>
-            <input
-              type="checkbox"
-              checked={!!sortByExamFrequency}
-              onChange={(e) => onToggleSortByExamFrequency && onToggleSortByExamFrequency(e.target.checked)}
-              style={{ marginRight: 6 }}
-            />
-            {isMobile ? "By Freq" : "By Frequency"}
-          </label>
-        )}
-        {mode !== "Read" && (
+        {(mode !== "Read" || (showVocabLink && isMobile)) && (
           <button
-            style={isMobile ? mobileLinkBtn : (mode === "Read" ? activeBtn : linkBtn)}
+            style={
+              isMobile
+                ? useWrappedMobileReadNav
+                  ? wrappedMobileReadLinkBtn
+                  : useReferenceMobileReadNav
+                    ? referenceMobileReadLinkBtn
+                    : useCompactMobileNav
+                      ? compactMobileLinkBtn
+                      : mobileLinkBtn
+                : (mode === "Read" ? activeBtn : linkBtn)
+            }
             onClick={onGoRead}
           >
             📘 {isMobile ? "Vocab" : "Vocab List"}
           </button>
         )}
-        {!mode.includes("Cards") && (
-          <button
-            style={isMobile ? mobileLinkBtn : linkBtn}
-            onClick={onGoCards}
+        {showExamFrequencySort && !useReferenceMobileReadNav && (
+          <label
+            style={
+              isMobile
+                ? useWrappedMobileReadNav
+                  ? wrappedMobileReadFilterPill
+                  : useReferenceMobileReadNav
+                    ? referenceMobileReadFilterPill
+                    : mobileFilterPill
+                : filterPill
+            }
           >
-            🃏 {isMobile ? "Cards" : "Flash Cards"}
-          </button>
+            <input
+              type="checkbox"
+              checked={!!sortByExamFrequency}
+              onChange={(e) => onToggleSortByExamFrequency && onToggleSortByExamFrequency(e.target.checked)}
+              style={{ marginRight: useWrappedMobileReadNav || useReferenceMobileReadNav ? 3 : 6 }}
+            />
+            {isMobile ? "By Freq" : "By Frequency"}
+          </label>
         )}
+        <button
+          style={
+            isMobile
+              ? useWrappedMobileReadNav
+                ? wrappedMobileReadLinkBtn
+                : useReferenceMobileReadNav
+                  ? referenceMobileReadLinkBtn
+                  : useCompactMobileNav
+                    ? compactMobileLinkBtn
+                    : mobileLinkBtn
+              : (mode === "Cards" ? activeBtn : linkBtn)
+          }
+          onClick={onGoCards}
+        >
+          🃏 {isMobile ? "Cards" : "Flash Cards"}
+        </button>
         {mode.includes("Cards") && onToggleDeckPanel && (
           <button
             style={isMobile ? mobileDeckToggleBtn : linkBtn}
@@ -184,7 +305,15 @@ export default function SessionNav({
         )}
         {onGoTest && (
           <button
-            style={isMobile ? mobileLinkBtn : (mode === "Test" ? activeBtn : linkBtn)}
+            style={
+              isMobile
+                ? useReferenceMobileReadNav
+                  ? referenceMobileReadLinkBtn
+                  : useCompactMobileNav
+                    ? compactMobileLinkBtn
+                    : mobileLinkBtn
+                : (mode === "Test" ? activeBtn : linkBtn)
+            }
             onClick={onGoTest}
           >
             {isMobile ? "📝 Test" : (testLabel || "📝 Test")}
@@ -194,7 +323,11 @@ export default function SessionNav({
           <button
             style={
               isMobile
-                ? { ...mobileLinkBtn, ...themeToggleBtn }
+                ? useWrappedMobileReadNav
+                  ? wrappedMobileReadLinkBtn
+                  : useCompactMobileNav
+                  ? { ...compactMobileLinkBtn, ...themeToggleBtn, minWidth: "38px", padding: "6px 4px" }
+                  : { ...mobileLinkBtn, ...themeToggleBtn }
                 : { ...linkBtn, ...themeToggleBtn }
             }
             onClick={onToggleTheme}
@@ -218,12 +351,11 @@ const nav = {
   top: 0,
   left: 0,
   right: 0,
-  boxSizing: "border-box",
   height: "60px",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  padding: "0 16px 0 24px",
+  padding: "0 24px",
   borderBottom: "1px solid #e0e0e0",
   background: "#ffffff",
   zIndex: 1000,
@@ -307,23 +439,28 @@ const homeBtn = {
 // Mobile-specific styles
 const mobileNav = {
   ...nav,
-  width: "100vw",
   height: "50px",
-  padding: "0 16px 0 4px",
-  justifyContent: "flex-start",
-  gap: "4px",
+  padding: "0 4px",
   flexWrap: "nowrap",
   overflow: "hidden",
-  maxWidth: "100vw", // Prevent overflow
+  minWidth: "100%",
+  maxWidth: "100vw",
 };
 
-const mobileReadNav = {
+const referenceMobileReadNav = {
   ...mobileNav,
-  height: "108px",
-  padding: "4px 16px 4px 4px",
-  flexWrap: "wrap",
-  alignContent: "center",
-  rowGap: "4px",
+  boxSizing: "border-box",
+  width: "100%",
+  minWidth: 0,
+  padding: "0 4px",
+  gap: "4px",
+};
+
+const compactMobileNav = {
+  ...mobileNav,
+  boxSizing: "border-box",
+  width: "100%",
+  minWidth: 0,
 };
 
 const mobileLeft = {
@@ -332,28 +469,95 @@ const mobileLeft = {
   minWidth: "80px",
 };
 
+const referenceMobileReadLeft = {
+  ...mobileLeft,
+  minWidth: 0,
+  gap: "4px",
+};
+
+const referenceMobileReadMenuBtn = {
+  ...homeBtn,
+  boxSizing: "border-box",
+  width: "36px",
+  minWidth: "36px",
+  height: "36px",
+  minHeight: "36px",
+  padding: 0,
+  marginRight: 0,
+  flexShrink: 0,
+};
+
+const referenceMobileReadHomeBtn = {
+  ...referenceMobileReadMenuBtn,
+  padding: "4px",
+  fontSize: "14px",
+};
+
 const mobileCenter = {
   ...center,
-  flex: "0 0 auto",
+  flex: 1,
   gap: "4px",
+  justifyContent: "center",
+  minWidth: "60px",
+};
+
+const referenceMobileReadCenter = {
+  ...mobileCenter,
+  flex: "0 0 auto",
+  gap: "3px",
+  minWidth: 0,
   justifyContent: "flex-start",
-  minWidth: "0",
+};
+
+const referenceMobileReadInput = {
+  boxSizing: "border-box",
+  width: "34px",
+  padding: "2px",
+  borderRadius: "4px",
+  border: "1px solid #ccc",
+  minHeight: "30px",
+  fontSize: "11px",
+};
+
+const referenceMobileReadApplyBtn = {
+  boxSizing: "border-box",
+  borderRadius: "6px",
+  border: "1px solid #1976d2",
+  background: "#1976d2",
+  color: "#fff",
+  cursor: "pointer",
+  minWidth: "42px",
+  minHeight: "30px",
+  padding: "4px 2px",
+  fontSize: "11px",
+};
+
+const referenceMobileReadRight = {
+  display: "flex",
+  flex: "1 1 auto",
+  alignItems: "center",
+  gap: "1px",
+  minWidth: 0,
+  maxWidth: "none",
+  flexShrink: 1,
+  overflowX: "auto",
+  overflowY: "hidden",
+  scrollbarWidth: "none",
 };
 
 const mobileRight = {
   ...right,
   display: "flex",
-  flex: "1 1 0",
-  gap: "2px", // Reduced gap to prevent overlapping
-  justifyContent: "flex-start",
-  overflowX: "auto",
+  gap: "2px",
+  flexShrink: 0,
+  overflowX: "auto", // Enable horizontal scrolling
   overflowY: "hidden", // Hide vertical overflow
   scrollbarWidth: "thin", // Thin scrollbar for better UX
   msOverflowStyle: "none", // Hide scrollbar in IE/Edge
-  minWidth: "0",
-  maxWidth: "none",
+  minWidth: "0", // Allow shrinking
+  maxWidth: "60%",
   "&::-webkit-scrollbar": {
-    height: "4px", // Thin horizontal scrollbar
+    height: "4px",
   },
   "&::-webkit-scrollbar-thumb": {
     backgroundColor: "#ccc",
@@ -361,10 +565,58 @@ const mobileRight = {
   },
 };
 
-const mobileReadRight = {
-  ...mobileRight,
-  flex: "1 1 100%",
+const wrappedMobileReadNav = {
+  ...mobileNav,
+  boxSizing: "border-box",
+  height: "94px",
+  alignContent: "flex-start",
+  alignItems: "center",
+  flexWrap: "wrap",
+  gap: "4px 0",
+  padding: "4px",
+};
+
+const wrappedMobileReadLeft = {
+  ...mobileLeft,
+  height: "40px",
+};
+
+const wrappedMobileReadCenter = {
+  ...mobileCenter,
+  flex: "1 1 auto",
+  minWidth: "132px",
+  height: "40px",
+  justifyContent: "flex-end",
+  paddingRight: "4px",
+};
+
+const wrappedMobileReadRight = {
+  ...right,
+  boxSizing: "border-box",
+  display: "flex",
+  flexShrink: 0,
+  width: "100%",
   maxWidth: "100%",
+  minWidth: 0,
+  height: "42px",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: "4px",
+  overflowX: "hidden",
+  overflowY: "hidden",
+  padding: "0 2px",
+};
+
+const compactMobileCenter = {
+  ...mobileCenter,
+  flex: "0 0 auto",
+  minWidth: 0,
+};
+
+const compactMobileRight = {
+  ...mobileRight,
+  gap: "1px",
+  overscrollBehaviorX: "contain",
 };
 
 const mobileHomeBtn = {
@@ -373,22 +625,17 @@ const mobileHomeBtn = {
   fontSize: "16px",
   minWidth: "40px",
   minHeight: "40px",
-};
-
-const mobileReadHomeBtn = {
-  ...mobileHomeBtn,
-  minWidth: "36px",
-  padding: "6px 4px",
+  flexShrink: 0,
 };
 
 const mobileLinkBtn = {
-  padding: "6px 8px", // Reduced padding
+  padding: "6px 8px",
   borderRadius: "6px",
   border: "1px solid #ccc",
   background: "#fff",
   cursor: "pointer",
-  fontSize: "11px", // Reduced font size
-  minWidth: "60px", // Reduced minimum width
+  fontSize: "11px",
+  minWidth: "60px",
   minHeight: "36px", // Reduced height
   display: "flex",
   alignItems: "center",
@@ -397,8 +644,35 @@ const mobileLinkBtn = {
   flexShrink: "0", // Prevent shrinking
 };
 
-const mobileDeckToggleBtn = {
+const compactMobileHomeBtn = {
+  ...mobileHomeBtn,
+  boxSizing: "border-box",
+  width: "40px",
+  maxWidth: "40px",
+  height: "40px",
+};
+
+const compactMobileLinkBtn = {
   ...mobileLinkBtn,
+  boxSizing: "border-box",
+  padding: "6px 3px",
+  fontSize: "10px",
+  minWidth: "50px",
+};
+
+const compactMobileMenuBtn = {
+  ...homeBtn,
+  boxSizing: "border-box",
+  width: "40px",
+  minWidth: "40px",
+  height: "40px",
+  minHeight: "40px",
+  padding: 0,
+  marginRight: "8px",
+};
+
+const mobileDeckToggleBtn = {
+  ...compactMobileLinkBtn,
   minWidth: "38px",
   minHeight: "36px",
   padding: "4px 8px",
@@ -419,6 +693,11 @@ const mobileApplyBtn = {
   minHeight: "30px",
 };
 
+const compactMobileApplyBtn = {
+  ...mobileApplyBtn,
+  boxSizing: "border-box",
+};
+
 const mobileInput = {
   boxSizing: "border-box",
   width: "42px",
@@ -427,17 +706,6 @@ const mobileInput = {
   border: "1px solid #ccc",
   fontSize: "12px",
   minHeight: "30px",
-};
-
-const mobileReadInput = {
-  ...mobileInput,
-  width: "36px",
-};
-
-const mobileReadApplyBtn = {
-  ...mobileApplyBtn,
-  minWidth: "42px",
-  padding: "4px 6px",
 };
 
 const mobileFilterPill = {
@@ -451,6 +719,89 @@ const mobileFilterPill = {
   fontSize: "10px",
   userSelect: "none",
   whiteSpace: "nowrap",
+};
+
+const referenceMobileReadFilterPill = {
+  display: "flex",
+  alignItems: "center",
+  boxSizing: "border-box",
+  borderRadius: "999px",
+  border: "1px solid #ccc",
+  background: "#fff",
+  cursor: "pointer",
+  padding: "3px 4px",
+  fontSize: "9px",
+  userSelect: "none",
+  whiteSpace: "nowrap",
+  flexShrink: 0,
+};
+
+const referenceMobileReadLinkBtn = {
+  boxSizing: "border-box",
+  borderRadius: "6px",
+  border: "1px solid #ccc",
+  background: "#fff",
+  cursor: "pointer",
+  minWidth: 0,
+  minHeight: "30px",
+  padding: "3px 1px",
+  fontSize: "9px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  whiteSpace: "nowrap",
+  flexShrink: 0,
+};
+
+const wrappedMobileReadMenuBtn = {
+  ...compactMobileMenuBtn,
+  width: "36px",
+  minWidth: "36px",
+  height: "36px",
+  minHeight: "36px",
+  marginRight: "4px",
+};
+
+const wrappedMobileReadHomeBtn = {
+  ...compactMobileHomeBtn,
+  width: "36px",
+  maxWidth: "36px",
+  height: "36px",
+  minWidth: "36px",
+  minHeight: "36px",
+  padding: "4px",
+  fontSize: "14px",
+};
+
+const wrappedMobileReadInput = {
+  ...mobileInput,
+  width: "38px",
+  minHeight: "28px",
+  fontSize: "11px",
+};
+
+const wrappedMobileReadApplyBtn = {
+  ...compactMobileApplyBtn,
+  minWidth: "48px",
+  minHeight: "28px",
+  padding: "4px 6px",
+  fontSize: "11px",
+};
+
+const wrappedMobileReadFilterPill = {
+  ...mobileFilterPill,
+  boxSizing: "border-box",
+  minHeight: "30px",
+  padding: "4px 5px",
+  fontSize: "9px",
+};
+
+const wrappedMobileReadLinkBtn = {
+  ...compactMobileLinkBtn,
+  minWidth: "48px",
+  minHeight: "30px",
+  padding: "4px",
+  fontSize: "9px",
 };
 
 const darkNav = {

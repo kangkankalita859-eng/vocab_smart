@@ -7,6 +7,19 @@
   overflow-wrap: anywhere;
 }
 
+.idiom-table-wrapper {
+  width: 100%;
+}
+
+.idiom-table {
+  border-collapse: collapse;
+}
+
+.idiom-table th,
+.idiom-table td {
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 768px) {
   .vocab-page-container {
     width: 95%;
@@ -21,11 +34,27 @@
   .vocab-table {
     width: 100%;
     table-layout: fixed;
-    font-size: 1px;
+    font-size: 7.5px;
   }
 
   .vocab-table th,
   .vocab-table td {
+    padding: 2px;
+    line-height: 1.3;
+  }
+
+  .idiom-table-wrapper {
+    overflow-x: visible;
+  }
+
+  .idiom-table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 7.5px;
+  }
+
+  .idiom-table th,
+  .idiom-table td {
     padding: 2px;
     line-height: 1.3;
   }
@@ -63,5 +92,35 @@
   .vocab-table th:nth-child(7),
   .vocab-table td:nth-child(7) {
     width: 18%;
+  }
+
+  .idiom-table th:nth-child(1),
+  .idiom-table td:nth-child(1) {
+    width: 6%;
+  }
+
+  .idiom-table th:nth-child(2),
+  .idiom-table td:nth-child(2) {
+    width: 19%;
+  }
+
+  .idiom-table th:nth-child(3),
+  .idiom-table td:nth-child(3) {
+    width: 22%;
+  }
+
+  .idiom-table th:nth-child(4),
+  .idiom-table td:nth-child(4) {
+    width: 15%;
+  }
+
+  .idiom-table th:nth-child(5),
+  .idiom-table td:nth-child(5) {
+    width: 10%;
+  }
+
+  .idiom-table th:nth-child(6),
+  .idiom-table td:nth-child(6) {
+    width: 28%;
   }
 }
