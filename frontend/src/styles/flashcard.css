@@ -3,7 +3,7 @@
    ========================= */
 
 .flashcard-wrapper {
-  width: 320px;
+  width: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
 /* ---------- CARD ---------- */
 
 .flashcard {
-  width: 100%;
+  width: min(320px, calc(100vw - 72px));
   height: 270px;
   perspective: 1200px;
 }

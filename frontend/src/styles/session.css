@@ -196,6 +196,10 @@
   }
 
   .flash-session-deck-area .flashcard-wrapper {
+    width: min(340px, calc(100vw - 32px));
+  }
+
+  .flash-session-deck-area .flashcard {
     width: min(320px, calc(100vw - 72px));
   }
 }
