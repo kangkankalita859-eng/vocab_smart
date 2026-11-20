@@ -59,6 +59,7 @@ export default function ReadIdioms({
       {/* NAV BAR */}
       <SessionNav
         mode="Read Idioms"
+        mobileReadNavLayout="reference"
         config={config}
         onApplyRange={onUpdateConfig}
         onGoRead={() => {}}
@@ -72,40 +73,46 @@ export default function ReadIdioms({
         onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
-      <div style={page}>
-        <div style={container}>
-          <h2 style={heading}>Read & Memorize Idioms & Phrases</h2>
+      <div
+        style={{
+          ...page,
+          ...(!isMobile ? {} : mobilePage),
+          background: isMobile ? "#fff" : page.background,
+        }}
+      >
+        <div style={isMobile ? mobileContainer : container}>
+          <h2 style={isMobile ? mobileHeading : heading}>Read & Memorize Idioms & Phrases</h2>
 
-          <table style={table}>
+          <table style={isMobile ? mobileTable : table}>
             <thead>
               <tr>
-                <th style={th}>SN</th>
-                <th style={th}>Idiom / Phrase</th>
-                <th style={th}>English Meaning</th>
-                <th style={th}>Hindi Meaning</th>
-                <th style={th}>SSC Count</th>
-                <th style={th}>Example Sentence</th>
+                <th style={isMobile ? { ...mobileTh, width: "6%" } : th}>SN</th>
+                <th style={isMobile ? { ...mobileTh, width: "19%" } : th}>Idiom / Phrase</th>
+                <th style={isMobile ? { ...mobileTh, width: "22%" } : th}>English Meaning</th>
+                <th style={isMobile ? { ...mobileTh, width: "15%" } : th}>Hindi Meaning</th>
+                <th style={isMobile ? { ...mobileTh, width: "10%" } : th}>SSC Count</th>
+                <th style={isMobile ? { ...mobileTh, width: "28%" } : th}>Example Sentence</th>
               </tr>
             </thead>
 
             <tbody>
               {filteredIdioms.map((item) => (
                 <tr key={item.id}>
-                  <td style={td}>{item.id}</td>
-                  <td style={{ ...td, fontWeight: "600", color: "#2c3e50" }}>
+                  <td style={isMobile ? mobileTd : td}>{item.id}</td>
+                  <td style={{ ...(isMobile ? mobileTd : td), fontWeight: "600", color: "#2c3e50" }}>
                     {item.phrase}
                   </td>
-                  <td style={td}>{item.meaning}</td>
-                  <td style={td}>{item.hindiMeaning}</td>
-                  <td style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
+                  <td style={isMobile ? mobileTd : td}>{item.meaning}</td>
+                  <td style={isMobile ? mobileTd : td}>{item.hindiMeaning}</td>
+                  <td style={{ ...(isMobile ? mobileTd : td), textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
                     {item.sscCount}
                   </td>
                   <td
                     style={{
-                      ...td,
+                      ...(isMobile ? mobileTd : td),
                       fontStyle: "italic",
                       color: "#444",
-                      maxWidth: "300px",
+                      ...(!isMobile ? { maxWidth: "300px" } : {}),
                     }}
                   >
                     {item.example ? item.example : "—"}
@@ -150,15 +157,32 @@ const page = {
 
 const container = {
   width: "95%",
-  maxWidth: "1400px",
-  background: "#fff",
+  maxWidth: "1200px",
   padding: "24px",
-  borderRadius: "10px",
-  boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+  boxSizing: "border-box",
+};
+
+const mobilePage = {
+  minHeight: "calc(100vh - 50px)",
+  flexDirection: "column",
+  alignItems: "center",
+  paddingTop: "40px",
+};
+
+const mobileContainer = {
+  width: "100%",
+  padding: "12px 4px",
+  boxSizing: "border-box",
 };
 
 const heading = {
   marginBottom: "16px",
+};
+
+const mobileHeading = {
+  margin: "0 6px 10px",
+  fontSize: "18px",
+  lineHeight: "1.15",
 };
 
 const table = {
@@ -167,16 +191,41 @@ const table = {
   fontSize: "14px",
 };
 
+const mobileTable = {
+  width: "100%",
+  tableLayout: "fixed",
+  borderCollapse: "collapse",
+  fontSize: "7.5px",
+  lineHeight: "1.25",
+};
+
 const th = {
   border: "1px solid #ccc",
-  padding: "10px",
+  padding: "8px",
   background: "#eee",
   textAlign: "left",
-  fontWeight: "600",
 };
 
 const td = {
   border: "1px solid #ccc",
   padding: "8px",
   verticalAlign: "top",
+};
+
+const mobileTh = {
+  border: "1px solid #ccc",
+  padding: "3px 1px",
+  background: "#eee",
+  textAlign: "left",
+  overflowWrap: "break-word",
+  wordBreak: "break-word",
+  verticalAlign: "middle",
+};
+
+const mobileTd = {
+  border: "1px solid #ccc",
+  padding: "4px 2px",
+  verticalAlign: "top",
+  overflowWrap: "break-word",
+  wordBreak: "break-word",
 };

@@ -4,10 +4,10 @@ import SessionNav from "../components/SessionNav";
 import MobileSidebar from "../components/MobileSidebar";
 
 import { fetchVocab } from "../services/vocabService";
+import { hasPersistedData, getDeckStats } from "../services/deckPersistenceService";
 
 import useMobile from "../hooks/useMobile";
 
-import "../styles/vocab-page.css";
 
 
 export default function ReadVocab({
@@ -28,14 +28,33 @@ export default function ReadVocab({
 
   const [loading, setLoading] = useState(true);
 
-  const { isMobile, isTablet } = useMobile();
-  const isCompactNav = isMobile || isTablet;
+  const { isMobile } = useMobile();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [sscOnly, setSscOnly] = useState(false);
 
   const [sortByExamFrequency, setSortByExamFrequency] = useState(false);
+
+  const [showPersistedInfo, setShowPersistedInfo] = useState(false);
+
+  const [deckStats, setDeckStats] = useState({
+    unknownCount: 0,
+    savedDeckCount: 0,
+    inProgressCount: 0,
+  });
+
+
+
+  /* -------- CHECK PERSISTED DATA -------- */
+
+  useEffect(() => {
+    if (hasPersistedData('vocab')) {
+      const stats = getDeckStats('vocab');
+      setDeckStats(stats);
+      setShowPersistedInfo(true);
+    }
+  }, []);
 
   /* -------- FETCH VOCAB BASED ON RANGE -------- */
 
@@ -115,6 +134,7 @@ export default function ReadVocab({
       {/* NAV BAR */}
       <SessionNav
         mode="Read"
+        mobileReadNavLayout="reference"
         config={config}
         onApplyRange={onUpdateConfig}
         onGoRead={() => {}}
@@ -122,74 +142,123 @@ export default function ReadVocab({
         onGoTest={onGoTest}
         testLabel="📝 Exam"
         onGoHome={onGoHome}
+        showVocabLink
         showSscFilter
         sscOnly={sscOnly}
         onToggleSscOnly={setSscOnly}
-        showExamFrequencySort
+        showExamFrequencySort={!isMobile}
         sortByExamFrequency={sortByExamFrequency}
         onToggleSortByExamFrequency={setSortByExamFrequency}
-        isMobile={isCompactNav}
+        isMobile={isMobile}
         onMenuToggle={() => setMobileMenuOpen(true)}
       />
 
       <div
         style={{
           ...page,
+          ...(!isMobile ? {} : mobilePage),
           background: isMobile ? "#fff" : page.background,
-          paddingTop: isCompactNav ? "138px" : page.paddingTop,
         }}
       >
-        <div className="vocab-page-container" style={container}>
-          <h2 style={heading}>Read & Memorize Vocabulary</h2>
-
-          <div className="vocab-table-wrapper" style={tableWrapper}>
-            <table className="vocab-table" style={table}>
-              <thead>
-                <tr>
-                  <th style={th}>SN</th>
-                  <th style={th}>Phrase / Meaning</th>
-                  <th style={th}>One Word</th>
-                  <th style={th}>Hindi</th>
-                  <th style={th}>Exam Count</th>
-                  <th style={th}>Example Sentence</th>
-                  <th style={th}>Synonyms</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {displayedVocab.map((item) => (
-                  <tr key={item.id}>
-                    <td style={td}>{item.id}</td>
-                    <td style={td}>{item.meaning}</td>
-                    <td style={{ ...td, fontWeight: "600" }}>
-                      {item.word}
-                    </td>
-                    <td style={td}>{item.hindiMeaning}</td>
-                    <td style={{ ...td, textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
-                      {Number(item.sscCount || 0)} ({Number(item.otherExamCount || 0)})
-                    </td>
-                    <td
-                      style={{
-                        ...td,
-                        fontStyle: "italic",
-                        color: "#444",
-                        maxWidth: "300px",
-                      }}
-                    >
-                      {item.example ? item.example : "—" }
-                    </td>
-                    <td style={{ ...td, maxWidth: "150px" }}>
-                      {item.synonyms.map((synonym, index) => (
-                        <div key={index} style={{ fontSize: "0.85rem" }}>
-                          {synonym}
-                        </div>
-                      ))}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        {/* PERSISTED DATA INFO */}
+        {showPersistedInfo && (
+          <div style={persistedInfo}>
+            <div style={persistedInfoContent}>
+              <span style={persistedInfoIcon}>📚</span>
+              <div>
+                <strong>You have saved vocabulary to review!</strong>
+                <div style={persistedInfoDetails}>
+                  {deckStats.unknownCount > 0 && (
+                    <span>• {deckStats.unknownCount} unknown cards ready for revision</span>
+                  )}
+                  {deckStats.savedDeckCount > 0 && (
+                    <span>• {deckStats.savedDeckCount} saved decks</span>
+                  )}
+                  {deckStats.inProgressCount > 0 && (
+                    <span>• Continue your saved session with {deckStats.inProgressCount} cards remaining</span>
+                  )}
+                </div>
+              </div>
+              <button 
+                style={persistedInfoClose}
+                onClick={() => setShowPersistedInfo(false)}
+              >
+                ✕
+              </button>
+            </div>
+            <div style={persistedInfoActions}>
+              <button 
+                style={persistedInfoButton}
+                onClick={() => {
+                  onGoCards();
+                  setShowPersistedInfo(false);
+                }}
+              >
+                🃏 Go to Flash Cards
+              </button>
+            </div>
           </div>
+        )}
+        
+        <div style={isMobile ? mobileContainer : container}>
+          <h2 style={isMobile ? mobileHeading : heading}>Read & Memorize Vocabulary</h2>
+          {isMobile && (
+            <label style={mobileSortFilter}>
+              <input
+                type="checkbox"
+                checked={sortByExamFrequency}
+                onChange={(event) => setSortByExamFrequency(event.target.checked)}
+              />
+              By Frequency
+            </label>
+          )}
+
+          <table style={isMobile ? mobileTable : table}>
+            <thead>
+              <tr>
+                <th style={isMobile ? { ...mobileTh, width: "6%" } : th}>SN</th>
+                <th style={isMobile ? { ...mobileTh, width: "19%" } : th}>Phrase / Meaning</th>
+                <th style={isMobile ? { ...mobileTh, width: "12%" } : th}>One Word</th>
+                <th style={isMobile ? { ...mobileTh, width: "12%" } : th}>Hindi</th>
+                <th style={isMobile ? { ...mobileTh, width: "11%" } : th}>Exam Count</th>
+                <th style={isMobile ? { ...mobileTh, width: "22%" } : th}>Example Sentence</th>
+                <th style={isMobile ? { ...mobileTh, width: "18%" } : th}>Synonyms</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {displayedVocab.map((item) => (
+                <tr key={item.id}>
+                  <td style={isMobile ? mobileTd : td}>{item.id}</td>
+                  <td style={isMobile ? mobileTd : td}>{item.meaning}</td>
+                  <td style={{ ...(isMobile ? mobileTd : td), fontWeight: "600" }}>
+                    {item.word}
+                  </td>
+                  <td style={isMobile ? mobileTd : td}>{item.hindiMeaning}</td>
+                  <td style={{ ...(isMobile ? mobileTd : td), textAlign: "center", fontWeight: "600", color: "#e74c3c" }}>
+                    {Number(item.sscCount || 0)} ({Number(item.otherExamCount || 0)})
+                  </td>
+                  <td
+                    style={{
+                      ...(isMobile ? mobileTd : td),
+                      fontStyle: "italic",
+                      color: "#444",
+                      ...(isMobile ? {} : { maxWidth: "300px" }),
+                    }}
+                  >
+                    {item.example ? item.example : "—" }
+                  </td>
+                  <td style={{ ...(isMobile ? mobileTd : td), ...(isMobile ? {} : { maxWidth: "150px" }) }}>
+                    {item.synonyms.map((synonym, index) => (
+                      <div key={index} style={{ fontSize: isMobile ? "7px" : "0.85rem" }}>
+                        {synonym}
+                      </div>
+                    ))}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
           {displayedVocab.length === 0 && (
             <p style={{ marginTop: "16px", color: "#777" }}>
@@ -200,7 +269,7 @@ export default function ReadVocab({
       </div>
 
       {/* Mobile sidebar only - no desktop sidebar */}
-      {isCompactNav && (
+      {isMobile && (
         <MobileSidebar
           isOpen={mobileMenuOpen}
           onClose={() => setMobileMenuOpen(false)}
@@ -226,6 +295,61 @@ const page = {
   marginLeft: "0px",
 };
 
+const mobilePage = {
+  minHeight: "calc(100vh - 50px)",
+  flexDirection: "column",
+  alignItems: "center",
+  paddingTop: "40px",
+};
+
+const mobileContainer = {
+  width: "100%",
+  padding: "12px 4px",
+  boxSizing: "border-box",
+};
+
+const mobileHeading = {
+  margin: "0 6px 10px",
+  fontSize: "18px",
+  lineHeight: "1.15",
+};
+
+const mobileSortFilter = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  gap: "4px",
+  margin: "0 6px 8px",
+  fontSize: "10px",
+  whiteSpace: "nowrap",
+};
+
+const mobileTable = {
+  width: "100%",
+  tableLayout: "fixed",
+  borderCollapse: "collapse",
+  fontSize: "7.5px",
+  lineHeight: "1.25",
+};
+
+const mobileTh = {
+  border: "1px solid #ccc",
+  padding: "3px 1px",
+  background: "#eee",
+  textAlign: "left",
+  overflowWrap: "break-word",
+  wordBreak: "break-word",
+  verticalAlign: "middle",
+};
+
+const mobileTd = {
+  border: "1px solid #ccc",
+  padding: "4px 2px",
+  verticalAlign: "top",
+  overflowWrap: "break-word",
+  wordBreak: "break-word",
+};
+
 const container = {
   width: "95%",
   maxWidth: "1200px",
@@ -243,11 +367,6 @@ const table = {
   fontSize: "14px",
 };
 
-const tableWrapper = {
-  maxWidth: "100%",
-  overflowX: "auto",
-};
-
 const th = {
   border: "1px solid #ccc",
   padding: "8px",
@@ -259,5 +378,62 @@ const td = {
   border: "1px solid #ccc",
   padding: "8px",
   verticalAlign: "top",
+};
+
+const persistedInfo = {
+  background: "#e3f2fd",
+  border: "1px solid #2196f3",
+  borderRadius: "8px",
+  padding: "16px",
+  marginBottom: "20px",
+  boxShadow: "0 2px 8px rgba(33, 150, 243, 0.15)",
+};
+
+const persistedInfoContent = {
+  display: "flex",
+  alignItems: "flex-start",
+  gap: "12px",
+  marginBottom: "12px",
+};
+
+const persistedInfoIcon = {
+  fontSize: "20px",
+  marginTop: "2px",
+};
+
+const persistedInfoDetails = {
+  fontSize: "13px",
+  color: "#666",
+  marginTop: "4px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "2px",
+};
+
+const persistedInfoClose = {
+  marginLeft: "auto",
+  background: "none",
+  border: "none",
+  fontSize: "16px",
+  cursor: "pointer",
+  color: "#666",
+  padding: "4px",
+};
+
+const persistedInfoActions = {
+  display: "flex",
+  gap: "10px",
+};
+
+const persistedInfoButton = {
+  background: "#2196f3",
+  color: "white",
+  border: "none",
+  padding: "8px 16px",
+  borderRadius: "6px",
+  cursor: "pointer",
+  fontSize: "14px",
+  fontWeight: "500",
+  transition: "background 0.2s ease",
 };
 
