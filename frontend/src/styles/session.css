@@ -100,8 +100,49 @@
 }
 
 .flash-session-controls {
-  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.flash-session-control-button {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  padding: 8px 10px !important;
+  border-color: #cbd5e1 !important;
+  border-radius: 8px !important;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.flash-session-control-button:hover:not(:disabled) {
+  border-color: #94a3b8 !important;
+  background: #f1f5f9 !important;
+}
+
+.flash-session-control-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.flash-session-control-button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.flash-session-control-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.flash-session--dark .flash-session-control-button:hover:not(:disabled) {
+  background: #374151 !important;
 }
 
 @media (max-width: 960px) {

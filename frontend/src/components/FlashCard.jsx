@@ -61,10 +61,10 @@ export default function FlashCard({ card, onKnown, onUnknown, showActions }) {
 
       {showActions && (
         <div className="action-buttons">
-          <button className="unknown-btn" onClick={handleUnknown}>
+          <button className="unknown-btn" type="button" onClick={handleUnknown}>
             ❌ Unknown
           </button>
-          <button className="known-btn" onClick={handleKnown}>
+          <button className="known-btn" type="button" onClick={handleKnown}>
             ✅ Known
           </button>
         </div>

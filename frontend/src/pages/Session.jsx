@@ -466,16 +466,16 @@ export default function Session({
             </div>
 
             <div style={shuffleBar} className="flash-session-controls">
-              <button style={secondaryBtn} onClick={shuffleDeck}>
+              <button className="flash-session-control-button" style={secondaryBtn} onClick={shuffleDeck}>
                 🔀 Shuffle
               </button>
-              <button style={secondaryBtn} onClick={unshuffleDeck}>
+              <button className="flash-session-control-button" style={secondaryBtn} onClick={unshuffleDeck}>
                 ↩️ Unshuffle
               </button>
-              <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
+              <button className="flash-session-control-button" style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>
                 ↩ Undo
               </button>
-              <button style={secondaryBtn} onClick={handleSaveProgress}>
+              <button className="flash-session-control-button" style={secondaryBtn} onClick={handleSaveProgress}>
                 {isProgressSaved ? "✓ Progress Saved" : "💾 Save Progress"}
               </button>
             </div>
@@ -552,7 +552,14 @@ const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "cen
 
 const deckArea = { position: "relative", width: 340, height: 440 };
 
-const shuffleBar = { marginTop: 18, display: "flex", gap: 12 };
+const shuffleBar = {
+  marginTop: 18,
+  display: "grid",
+  gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+  gap: 10,
+  width: "min(340px, calc(100vw - 32px))",
+  boxSizing: "border-box",
+};
 
 const miniStack = { width: 140, textAlign: "center" };
 

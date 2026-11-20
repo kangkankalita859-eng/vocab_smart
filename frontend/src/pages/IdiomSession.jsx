@@ -438,10 +438,10 @@ export default function IdiomSession({
               ))}
             </div>
             <div style={shuffleBar} className="flash-session-controls">
-              <button style={secondaryBtn} onClick={shuffleDeck}>🔀 Shuffle</button>
-              <button style={secondaryBtn} onClick={unshuffleDeck}>↩️ Unshuffle</button>
-              <button style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>↩ Undo</button>
-              <button style={secondaryBtn} onClick={() => collectionRef.current && commit(collectionRef.current)}>
+              <button className="flash-session-control-button" style={secondaryBtn} onClick={shuffleDeck}>🔀 Shuffle</button>
+              <button className="flash-session-control-button" style={secondaryBtn} onClick={unshuffleDeck}>↩️ Unshuffle</button>
+              <button className="flash-session-control-button" style={secondaryBtn} disabled={!lastAction} onClick={handleUndo}>↩ Undo</button>
+              <button className="flash-session-control-button" style={secondaryBtn} onClick={() => collectionRef.current && commit(collectionRef.current)}>
                 ✓ Save Progress
               </button>
             </div>
@@ -516,7 +516,14 @@ const container = {
 
 const deckWrapper = { display: "flex", flexDirection: "column", alignItems: "center" };
 const deckArea = { position: "relative", width: 340, height: 440 };
-const shuffleBar = { marginTop: 18, display: "flex", gap: 12 };
+const shuffleBar = {
+  marginTop: 18,
+  display: "grid",
+  gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+  gap: 10,
+  width: "min(340px, calc(100vw - 32px))",
+  boxSizing: "border-box",
+};
 const miniStack = { width: 140, textAlign: "center" };
 
 const miniCard = {

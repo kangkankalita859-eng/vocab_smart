@@ -174,18 +174,24 @@
 .action-buttons {
   margin-top: 130px;
   display: flex;
-  gap: 16px;
+  width: 100%;
+  gap: 12px;
 }
 
 /* FLAT, PROFESSIONAL CONTROLS */
 
 .unknown-btn,
 .known-btn {
-  padding: 10px 22px;
+  box-sizing: border-box;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  white-space: nowrap;
 
   background: #ffffff;
   box-shadow: none;
@@ -218,6 +224,12 @@
 .unknown-btn:active,
 .known-btn:active {
   transform: scale(0.97);
+}
+
+.unknown-btn:focus-visible,
+.known-btn:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
 }
 
 
