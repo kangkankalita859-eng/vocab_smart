@@ -4,6 +4,10 @@ import FlashCard from "../components/FlashCard";
 import SessionNav from "../components/SessionNav";
 import { fetchVocab } from "../services/vocabService";
 import {
+  loadCloudVocabCollection,
+  saveCloudVocabCollection,
+} from "../services/cloudProgressService";
+import {
   loadUnknownDeck,
   loadSavedDecks,
   loadInProgressSession,
@@ -14,6 +18,8 @@ import {
   createVocabDeckCollection,
   extractVocabRange,
   getVocabDeckSessionCards,
+  claimLegacyVocabDeckCollection,
+  getLegacyVocabDeckCollectionOwner,
   loadVocabDeckCollection,
   mergeVocabDecks,
   removeVocabDeck,
@@ -48,6 +54,7 @@ function MiniStack({ title, count, className }) {
 }
 
 export default function Session({
+  user,
   config,
   reviewUnknownDeck,
   onComplete,
@@ -55,9 +62,12 @@ export default function Session({
   onGoHome,
   onUpdateConfig,
 }) {
+  const userId = user?.id;
   const { isMobile, isTablet } = useMobile();
   const isCompactNav = isMobile || isTablet;
   const collectionRef = useRef(null);
+  const cloudReadyRef = useRef(false);
+  const cloudSaveVersionRef = useRef(0);
   const [collection, setCollection] = useState(null);
   const [selectedDeckIds, setSelectedDeckIds] = useState([]);
   const [deckPanelVisible, setDeckPanelVisible] = useState(true);
@@ -78,8 +88,41 @@ export default function Session({
     let isCurrent = true;
 
     const initialize = async () => {
+      setLoading(true);
+      setCollection(null);
+      collectionRef.current = null;
+      cloudReadyRef.current = false;
+
       try {
-        let next = loadVocabDeckCollection();
+        let cloudCollection = null;
+        let cloudLoaded = false;
+        if (userId) {
+          try {
+            cloudCollection = await loadCloudVocabCollection(userId);
+            cloudLoaded = true;
+            cloudReadyRef.current = true;
+          } catch (error) {
+            console.error("Failed to load vocabulary decks from the cloud:", error);
+            throw new Error(
+              `Could not load your decks from the cloud: ${error.message}. Check your connection and retry.`
+            );
+          }
+        }
+
+        const legacyOwner = userId
+          ? getLegacyVocabDeckCollectionOwner()
+          : null;
+        const canUseLegacyData =
+          !userId || !legacyOwner || legacyOwner === userId;
+        let next = cloudCollection;
+        let shouldSaveToCloud = cloudLoaded && !cloudCollection;
+
+        if (cloudCollection) {
+          saveVocabDeckCollection(cloudCollection, userId);
+        } else {
+          next = loadVocabDeckCollection(userId);
+        }
+
         if (!next) {
           const response = await fetchVocab(0, null);
           if (response.status !== "success") {
@@ -87,9 +130,11 @@ export default function Session({
           }
 
           next = createVocabDeckCollection(response.data, {
-            unknownDeck: loadUnknownDeck("vocab"),
-            savedDecks: loadSavedDecks("vocab"),
-            inProgressSession: loadInProgressSession("vocab"),
+            unknownDeck: canUseLegacyData ? loadUnknownDeck("vocab") : [],
+            savedDecks: canUseLegacyData ? loadSavedDecks("vocab") : [],
+            inProgressSession: canUseLegacyData
+              ? loadInProgressSession("vocab")
+              : null,
           });
           const initialRange = extractVocabRange(next, config);
           next = initialRange.collection;
@@ -105,7 +150,6 @@ export default function Session({
               next.decks.find((deck) => deck.kind !== "main" && deck.cards.length)?.id ||
               null;
           }
-          saveVocabDeckCollection(next);
           if (next.history.some((event) => event.type === "legacy-import")) {
             setNotice("Your previously saved vocabulary decks were restored.");
           }
@@ -119,25 +163,44 @@ export default function Session({
             : null;
           if (requestedUnknownDeck) {
             next = activateVocabDeck(next, requestedUnknownDeck.id);
-            saveVocabDeckCollection(next);
+            shouldSaveToCloud = cloudLoaded;
           } else if (!next.activeDeckId) {
             const availableDeck =
               next.decks.find((deck) => deck.kind === "current" && deck.cards.length > 0) ||
               next.decks.find((deck) => deck.kind !== "main" && deck.cards.length > 0);
             if (availableDeck) {
               next = activateVocabDeck(next, availableDeck.id);
-              saveVocabDeckCollection(next);
+              shouldSaveToCloud = cloudLoaded;
             } else {
               const extracted = extractVocabRange(next, config);
               next = extracted.collection;
-              if (extracted.extractedCount > 0) saveVocabDeckCollection(next);
+              if (extracted.extractedCount > 0) {
+                shouldSaveToCloud = cloudLoaded;
+              }
             }
           }
         }
 
         if (isCurrent) {
+          saveVocabDeckCollection(next, userId);
+          if (userId && cloudLoaded && !legacyOwner) {
+            claimLegacyVocabDeckCollection(userId);
+          }
           collectionRef.current = next;
           setCollection(next);
+          if (userId && shouldSaveToCloud) {
+            try {
+              await saveCloudVocabCollection(userId, next);
+            } catch (error) {
+              console.error("Failed to save vocabulary decks to the cloud:", error);
+              if (isCurrent) {
+                setIsProgressSaved(false);
+                setPersistenceError(
+                  `Decks are saved on this device, but cloud sync failed: ${error.message}. Use Save Progress to retry.`
+                );
+              }
+            }
+          }
         }
       } catch (error) {
         console.error("Failed to load saved vocabulary decks:", error);
@@ -151,7 +214,7 @@ export default function Session({
     return () => {
       isCurrent = false;
     };
-  }, []);
+  }, [userId]);
 
   const activeDeck = collection?.decks.find(
     (deck) => deck.id === collection.activeDeckId
@@ -179,11 +242,39 @@ export default function Session({
 
   const commit = (next) => {
     try {
-      saveVocabDeckCollection(next);
+      saveVocabDeckCollection(next, userId);
       collectionRef.current = next;
       setCollection(next);
-      setPersistenceError("");
-      setIsProgressSaved(true);
+      if (userId && cloudReadyRef.current) {
+        const saveVersion = ++cloudSaveVersionRef.current;
+        setPersistenceError("");
+        setIsProgressSaved(false);
+        saveCloudVocabCollection(userId, next)
+          .then(() => {
+            if (cloudSaveVersionRef.current === saveVersion) {
+              setIsProgressSaved(true);
+              setPersistenceError("");
+            }
+          })
+          .catch((error) => {
+            console.error("Failed to sync vocabulary deck changes:", error);
+            if (cloudSaveVersionRef.current === saveVersion) {
+              setIsProgressSaved(false);
+              setPersistenceError(
+                `Decks are saved on this device, but cloud sync failed: ${error.message}. Use Save Progress to retry.`
+              );
+            }
+          });
+      } else {
+        setIsProgressSaved(true);
+        if (userId && !cloudReadyRef.current) {
+          setPersistenceError(
+            "Decks are saved on this device, but cloud sync is unavailable."
+          );
+        } else {
+          setPersistenceError("");
+        }
+      }
       return true;
     } catch (error) {
       console.error("Failed to save vocabulary deck changes:", error);
@@ -216,7 +307,6 @@ export default function Session({
     const currentCollection = collectionRef.current;
     if (!currentCollection) return;
     commit(activateVocabDeck(currentCollection, deck.id));
-    setIsProgressSaved(true);
   };
 
   const handleKnown = (cardId, deckId) => {
@@ -309,6 +399,16 @@ export default function Session({
   };
 
   if (loading) return <p style={{ textAlign: "center" }}>Loading…</p>;
+  if (!collection && persistenceError) {
+    return (
+      <div style={{ ...center, padding: 24 }} role="alert">
+        <p>{persistenceError}</p>
+        <button type="button" onClick={() => window.location.reload()}>
+          Retry
+        </button>
+      </div>
+    );
+  }
 
   const deckManager = (
     <div style={deckPanel} className="flash-session-deck-panel flash-vocab-deck-panel">

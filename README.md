@@ -57,7 +57,7 @@ Copy `frontend/.env.example` to `frontend/.env.local` and add your Supabase proj
 4. Copy the project URL and anon key into `frontend/.env.local` as `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. Add the same variables to your Vercel project settings for production.
 5. Restart/redeploy the frontend. Create an account or sign in with email and password; use the same account on each device. Existing email-link users can use **Forgot password?** once to set a password.
 
-Vocabulary deck collections are saved to the signed-in user's protected cloud row. Existing unassigned local vocabulary decks are uploaded for the first account that opens the flashcard session on that browser; later accounts cannot claim another account's marked local data. Later saves sync automatically. Do not put a Supabase `service_role` key in frontend variables.
+Vocabulary deck collections are loaded from and saved to the signed-in user's protected cloud row, so use the same account on each device. Changes are also cached locally per account. Existing unassigned local vocabulary decks are uploaded for the first account that opens the flashcard session on that browser; later accounts cannot claim another account's marked local data. Cloud saves happen automatically after deck changes; if a save fails, the app reports the error and **Save Progress** retries it. Do not put a Supabase `service_role` key in frontend variables.
 
 ## Technologies Used
 

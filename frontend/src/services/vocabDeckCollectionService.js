@@ -1,7 +1,11 @@
 const STORAGE_KEYS = {
   vocab: "vocab_deck_collection_v2",
   idiom: "idiom_deck_collection_v2",
+  vocabOwner: "vocab_deck_collection_owner_v2",
 };
+
+const userVocabStorageKey = (userId) =>
+  `${STORAGE_KEYS.vocab}:user:${userId}`;
 
 const cardKey = (id) => String(id);
 
@@ -185,11 +189,32 @@ const saveDeckCollection = (collection, storageKey) => {
   localStorage.setItem(storageKey, JSON.stringify(collection));
 };
 
-export const loadVocabDeckCollection = () =>
-  loadDeckCollection(STORAGE_KEYS.vocab);
+export const loadVocabDeckCollection = (userId) => {
+  if (!userId) return loadDeckCollection(STORAGE_KEYS.vocab);
 
-export const saveVocabDeckCollection = (collection) =>
-  saveDeckCollection(collection, STORAGE_KEYS.vocab);
+  const userCollection = loadDeckCollection(userVocabStorageKey(userId));
+  if (userCollection) return userCollection;
+
+  const owner = localStorage.getItem(STORAGE_KEYS.vocabOwner);
+  return owner && owner !== userId
+    ? null
+    : loadDeckCollection(STORAGE_KEYS.vocab);
+};
+
+export const saveVocabDeckCollection = (collection, userId) =>
+  saveDeckCollection(
+    collection,
+    userId ? userVocabStorageKey(userId) : STORAGE_KEYS.vocab
+  );
+
+export const getLegacyVocabDeckCollectionOwner = () =>
+  localStorage.getItem(STORAGE_KEYS.vocabOwner);
+
+export const claimLegacyVocabDeckCollection = (userId) => {
+  if (!localStorage.getItem(STORAGE_KEYS.vocabOwner)) {
+    localStorage.setItem(STORAGE_KEYS.vocabOwner, userId);
+  }
+};
 
 export const loadIdiomDeckCollection = () =>
   loadDeckCollection(STORAGE_KEYS.idiom);
